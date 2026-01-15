@@ -4,9 +4,9 @@ Welcome to the documentation for Webla Shopware Plugins.
 
 ## Available Plugins
 
-| Plugin                                                | Description                        |
-| ----------------------------------------------------- | ---------------------------------- |
-| [WebLa_Produktberater](plugins/WebLa_Produktberater/) | Admin extensions for Shopware 6    |
+| Plugin                                                        | Description                     |
+| ------------------------------------------------------------- | ------------------------------- |
+| [WebLa_Produktberater](plugins/WebLa_Produktberater/index.md) | Admin extensions for Shopware 6 |
 
 ## Quick Start
 
