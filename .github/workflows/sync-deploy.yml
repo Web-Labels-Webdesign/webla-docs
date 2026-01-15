@@ -1,0 +1,97 @@
+name: Sync & Deploy Documentation
+
+on:
+    schedule:
+        - cron: "0 */6 * * *" # Every 6 hours
+    push:
+        branches:
+            - main
+    workflow_dispatch:
+    repository_dispatch:
+        types: [docs-updated]
+
+permissions:
+    contents: write
+    pages: write
+
+jobs:
+    sync-and-deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Sync plugin documentation
+              env:
+                  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: |
+                  # Define plugins (repo-name:folder-name)
+                  declare -A PLUGINS=(
+                    ["WeblaAdminhelper"]="WeblaAdminhelper"
+                    ["WeblaMediaBooster"]="WeblaMediaBooster"
+                    # Add more: ["RepoName"]="FolderName"
+                  )
+
+                  # Supported languages
+                  LANGUAGES=("de" "en")
+
+                  for repo in "${!PLUGINS[@]}"; do
+                    folder="${PLUGINS[$repo]}"
+                    echo "📦 Syncing $repo"
+
+                    # Clean existing plugin docs in all language folders
+                    for lang in "${LANGUAGES[@]}"; do
+                      rm -rf "docs/$lang/plugins/$folder"
+                      mkdir -p "docs/$lang/plugins/$folder"
+                    done
+
+                    git clone --depth 1 --filter=blob:none --sparse \
+                      "https://github.com/YourOrg/$repo.git" temp-$repo
+
+                    cd temp-$repo
+                    git sparse-checkout set docs
+                    cd ..
+
+                    if [ -d "temp-$repo/docs" ]; then
+                      # Sync each language folder to the correct location
+                      for lang in "${LANGUAGES[@]}"; do
+                        if [ -d "temp-$repo/docs/$lang" ]; then
+                          cp -r "temp-$repo/docs/$lang/"* "docs/$lang/plugins/$folder/"
+                          echo "✅ Synced $repo ($lang)"
+                        else
+                          echo "⚠️ No $lang docs in $repo"
+                        fi
+                      done
+                    else
+                      echo "⚠️ No docs folder in $repo"
+                    fi
+
+                    rm -rf "temp-$repo"
+                  done
+
+            - name: Commit synced docs
+              run: |
+                  git config user.name "github-actions[bot]"
+                  git config user.email "github-actions[bot]@users.noreply.github.com"
+                  git add -A
+                  git diff --staged --quiet || git commit -m "docs: sync plugin documentation"
+                  git push
+
+            - name: Setup Python
+              uses: actions/setup-python@v5
+              with:
+                  python-version: "3.11"
+                  cache: "pip"
+
+            - name: Install dependencies
+              run: pip install -r requirements.txt
+
+            - name: Build documentation
+              run: mkdocs build
+
+            - name: Deploy to GitHub Pages
+              uses: peaceiris/actions-gh-pages@v4
+              with:
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  publish_dir: ./site
+                  force_orphan: true
