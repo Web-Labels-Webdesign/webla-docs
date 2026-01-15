@@ -1,16 +1,22 @@
-site_name: Webla Shopware Plugins
+site_name: Web Labels Shopware Plugins
 site_url: https://yourusername.github.io
-site_description: Dokumentation für Webla Shopware Plugins
+site_description: Dokumentation für Web Labels Shopware Plugins
 
 theme:
   name: material
   language: de
+  logo: assets/logo.png
+  favicon: assets/favicon.png
   palette:
-    - scheme: teal
+    - scheme: default
+      primary: white
+      accent: white
       toggle:
         icon: material/brightness-7
         name: Dunkelmodus aktivieren
     - scheme: slate
+      primary: black
+      accent: black
       toggle:
         icon: material/brightness-4
         name: Hellmodus aktivieren
@@ -22,8 +28,6 @@ theme:
     - search.highlight
     - search.suggest
     - content.code.copy
-  icon:
-    repo: fontawesome/brands/github
 
 plugins:
   - search:
@@ -58,7 +62,7 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Plugins:
-      - WebLa Produktberater:
+      - Produktberater:
           - Übersicht: plugins/WebLa_Produktberater/index.md
           - Anleitung: plugins/WebLa_Produktberater/how_to.md
           - Verwendung:
