@@ -57,7 +57,7 @@ jobs:
               "https://x-access-token:${SYNC_TOKEN}@github.com/Web-Labels-Webdesign/$repo.git" temp-$repo
 
             cd temp-$repo
-            git sparse-checkout set docs composer.json
+            git sparse-checkout set docs "$local_folder"
             cd ..
 
             if [ -d "temp-$repo/docs" ]; then
@@ -80,7 +80,11 @@ jobs:
               if [ -n "$VERSION" ]; then
                 echo "📌 Version: $VERSION"
                 yq -i "(.plugins[] | select(.id == \"$folder\")).version = \"$VERSION\"" data/plugins.yml
+              else
+                echo "⚠️ No version field in composer.json"
               fi
+            else
+              echo "⚠️ composer.json not found at temp-$repo/$local_folder/composer.json"
             fi
 
             rm -rf "temp-$repo"
