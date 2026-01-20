@@ -1,9 +1,10 @@
 site_name: Web Labels Shopware Plugins
-site_url: https://yourusername.github.io
+site_url: https://docs.web-labels.de/
 site_description: Dokumentation für Web Labels Shopware Plugins
 
 theme:
   name: material
+  custom_dir: overrides
   language: de
   logo: assets/logo.png
   favicon: assets/favicon.png
@@ -34,18 +35,27 @@ plugins:
       lang:
         - de
         - en
+  - awesome-pages
+  - optimize
+  - privacy
+  - macros:
+      include_yaml:
+        - data/plugins.yml
   - i18n:
       docs_structure: folder
       fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
       languages:
         - locale: de
           name: Deutsch
           default: true
           build: true
+          site_name: Web Labels Shopware Plugins
         - locale: en
           name: English
           build: true
-  - awesome-pages
+          site_name: Web Labels Shopware Plugins
 
 markdown_extensions:
   - admonition
@@ -58,6 +68,24 @@ markdown_extensions:
       alternate_style: true
   - toc:
       permalink: true
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://web-labels.de
+      name: Web Labels Website
+    - icon: fontawesome/solid/shop
+      link: https://store.shopware.com/web-labels-webdesign-gmbh.html
+      name: Shopware Store
+    - icon: fontawesome/solid/scale-balanced
+      link: https://web-labels.de/impressum
+      name: Impressum
+    - icon: fontawesome/solid/user-shield
+      link: https://web-labels.de/datenschutz
+      name: Datenschutz
+
+copyright: "&copy; 2026 Web Labels Webdesign GmbH"
 
 nav:
   - Home: index.md

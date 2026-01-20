@@ -21,6 +21,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Install yq
+        run: |
+          sudo wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
+          sudo chmod +x /usr/local/bin/yq
+
       - name: Sync plugin documentation
         env:
           SYNC_TOKEN: ${{ secrets.SYNC_TOKEN }}
@@ -47,7 +52,7 @@ jobs:
               "https://x-access-token:${SYNC_TOKEN}@github.com/Web-Labels-Webdesign/$repo.git" temp-$repo
 
             cd temp-$repo
-            git sparse-checkout set docs
+            git sparse-checkout set docs composer.json
             cd ..
 
             if [ -d "temp-$repo/docs" ]; then
@@ -62,6 +67,15 @@ jobs:
               done
             else
               echo "⚠️ No docs folder in $repo"
+            fi
+
+            # Extract version from composer.json and update plugins.yml
+            if [ -f "temp-$repo/composer.json" ]; then
+              VERSION=$(jq -r '.version // empty' "temp-$repo/composer.json")
+              if [ -n "$VERSION" ]; then
+                echo "📌 Version: $VERSION"
+                yq -i "(.plugins[] | select(.id == \"$folder\")).version = \"$VERSION\"" data/plugins.yml
+              fi
             fi
 
             rm -rf "temp-$repo"
@@ -82,10 +96,14 @@ jobs:
           cache: "pip"
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          sudo apt-get install -y pngquant
+          pip install -r requirements.txt
 
       - name: Build documentation
-        run: mkdocs build
+        run: |
+          mkdocs build
+          cp site/sitemap.xml site/en/sitemap.xml
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4

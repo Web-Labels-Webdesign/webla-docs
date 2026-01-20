@@ -28,10 +28,14 @@ jobs:
                   cache: "pip"
 
             - name: Install dependencies
-              run: pip install -r requirements.txt
+              run: |
+                  sudo apt-get install -y pngquant
+                  pip install -r requirements.txt
 
             - name: Build documentation
-              run: mkdocs build
+              run: |
+                  mkdocs build
+                  cp site/sitemap.xml site/en/sitemap.xml
 
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v4

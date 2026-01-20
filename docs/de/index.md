@@ -1,13 +1,16 @@
 # Webla Shopware Plugins
 
-Willkommen zur Dokumentation der Webla Shopware Plugins.
+Willkommen zur offiziellen Dokumentation der Shopware 6 Plugins von **Web Labels Webdesign GmbH**.
+
+Hier finden Sie Installationsanleitungen, Konfigurationsoptionen und Best Practices für alle unsere Plugins.
 
 ## Verfügbare Plugins
 
-| Plugin                                                        | Beschreibung                       |
-| ------------------------------------------------------------- | ---------------------------------- |
-| [WebLa_Produktberater](plugins/WebLa_Produktberater/index.md) | Admin-Erweiterungen für Shopware 6 |
+| Plugin | Beschreibung | Version | Voraussetzungen |
+|--------|--------------|---------|-----------------|
+{% for plugin in plugins %}| [{{ plugin.name.de }}](plugins/{{ plugin.id }}/index.md) | {{ plugin.short.de }} | {{ plugin.version or "–" }} | {{ plugin.requirements }} |
+{% endfor %}
 
-## Schnellstart
+## Support
 
-Wählen Sie ein Plugin aus der Navigation, um die Dokumentation zu lesen.
+Bei Fragen oder Problemen erreichen Sie uns unter **plugin@web-labels.de** oder über den [Shopware Store](https://store.shopware.com/web-labels-webdesign-gmbh.html).
