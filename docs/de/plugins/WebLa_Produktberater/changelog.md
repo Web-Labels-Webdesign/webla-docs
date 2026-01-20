@@ -50,6 +50,10 @@ Alle wichtigen Änderungen am Produkt Berater Plugin für Endbenutzer.
 
 - **Shopware-Kompatibilität**: Unterstützt jetzt Shopware 6.5.0 bis 6.8.0
 
+### Breaking Changes
+
+- **CMS-Block-Neukonfiguration erforderlich**: Aufgrund interner Komponentennamen-Korrekturen werden bestehende Produktberater-Blöcke in Erlebniswelten nicht mehr angezeigt. Sie müssen den Produktberater-Block in jeder betroffenen Erlebniswelt **entfernen und erneut hinzufügen**. Ihre Berater-Konfigurationen (Fragen, Antworten, Einstellungen) bleiben erhalten.
+
 ---
 
 ## [6.0.3] - 2025-08-15
@@ -168,8 +172,9 @@ Das Plugin wurde auf eine Multi-Version-Architektur umgestellt. Beim Upgrade von
 3. Installieren Sie die neue Version
 4. Aktivieren Sie das Plugin
 5. Leeren Sie den Cache
+6. **Produktberater-Blöcke erneut hinzufügen** in Ihren Erlebniswelten (siehe Breaking Changes oben)
 
-Bestehende Produktberater, Fragen und Antworten bleiben erhalten.
+Bestehende Produktberater, Fragen und Antworten bleiben erhalten. Nur die CMS-Block-Platzierung muss aktualisiert werden.
 
 ### Kompatibilität
 

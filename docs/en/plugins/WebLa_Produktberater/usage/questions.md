@@ -270,7 +270,7 @@ This way, technical criteria are weighted more heavily than visual ones.
 
 ---
 
-## Jump Logic (Jump Targets)
+## Jump Logic (Jump To)
 
 Jump logic allows skipping questions based on previous answers.
 

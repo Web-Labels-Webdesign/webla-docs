@@ -50,6 +50,10 @@ All notable changes to the Product Advisor Plugin for end users.
 
 - **Shopware compatibility**: Now supports Shopware 6.5.0 to 6.8.0
 
+### Breaking Changes
+
+- **CMS Block re-configuration required**: Due to internal component naming fixes, existing Product Advisor blocks in Shopping Experiences will no longer display. You must **remove and re-add** the Product Advisor block in each affected Shopping Experience. Your advisor configurations (questions, answers, settings) are preserved.
+
 ---
 
 ## [6.0.3] - 2025-08-15
@@ -168,8 +172,9 @@ The plugin has been converted to a multi-version architecture. When upgrading fr
 3. Install the new version
 4. Activate the plugin
 5. Clear the cache
+6. **Re-add Product Advisor blocks** in your Shopping Experiences (see Breaking Changes above)
 
-Existing product advisors, questions and answers are preserved.
+Existing product advisors, questions and answers are preserved. Only the CMS block placement needs to be refreshed.
 
 ### Compatibility
 

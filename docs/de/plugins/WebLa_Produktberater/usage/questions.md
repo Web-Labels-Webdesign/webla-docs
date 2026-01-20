@@ -270,7 +270,7 @@ So werden technische Kriterien stärker gewichtet als optische.
 
 ---
 
-## Sprunglogik (Jump Targets)
+## Sprunglogik (Jump To)
 
 Die Sprunglogik ermöglicht es, Fragen basierend auf vorherigen Antworten zu überspringen.
 
