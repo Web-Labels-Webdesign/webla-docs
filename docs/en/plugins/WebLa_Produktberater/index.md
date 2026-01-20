@@ -47,4 +47,6 @@ The plugin allows you to create any number of product advisors that can be flexi
 
 For questions or issues, contact us at **plugin@web-labels.de** or use the Shopware ticket support.
 
+**Plugin in Shopware Store:** [Product Advisor Plugin](https://store.shopware.com/en/webla72165263311m/product-advisor-plugin.html)
+
 **Manufacturer:** [Web Labels Webdesign GmbH](https://store.shopware.com/web-labels-webdesign-gmbh.html)

@@ -47,4 +47,6 @@ Das Plugin ermöglicht es Ihnen, beliebig viele Produktberater zu erstellen, die
 
 Bei Fragen oder Problemen erreichen Sie uns unter **plugin@web-labels.de** oder über den Shopware Ticket-Support.
 
+**Plugin im Shopware Store:** [Produkt Berater Plugin](https://store.shopware.com/de/webla72165263311m/produkt-berater-plugin.html)
+
 **Hersteller:** [Web Labels Webdesign GmbH](https://store.shopware.com/web-labels-webdesign-gmbh.html)
