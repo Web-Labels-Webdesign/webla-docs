@@ -35,11 +35,16 @@ jobs:
             ["WebLa_Produktberater"]="WebLa_Produktberater"
           )
 
+          declare -A PLUGIN_FOLDERS=(
+            ["WebLa_Produktberater"]="WebLa_Produktberater"
+          )
+
           # Supported languages
           LANGUAGES=("de" "en")
 
           for repo in "${!PLUGINS[@]}"; do
             folder="${PLUGINS[$repo]}"
+            local_folder="${PLUGIN_FOLDERS[$repo]}"
             echo "📦 Syncing $repo"
 
             # Clean existing plugin docs in all language folders
@@ -70,8 +75,8 @@ jobs:
             fi
 
             # Extract version from composer.json and update plugins.yml
-            if [ -f "temp-$repo/composer.json" ]; then
-              VERSION=$(jq -r '.version // empty' "temp-$repo/composer.json")
+            if [ -f "temp-$repo/$local_folder/composer.json" ]; then
+              VERSION=$(jq -r '.version // empty' "temp-$repo/$local_folder/composer.json")
               if [ -n "$VERSION" ]; then
                 echo "📌 Version: $VERSION"
                 yq -i "(.plugins[] | select(.id == \"$folder\")).version = \"$VERSION\"" data/plugins.yml
