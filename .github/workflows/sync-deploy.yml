@@ -23,7 +23,7 @@ jobs:
 
       - name: Sync plugin documentation
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SYNC_TOKEN: ${{ secrets.SYNC_TOKEN }}
         run: |
           # Define plugins (repo-name:folder-name)
           declare -A PLUGINS=(
@@ -44,7 +44,7 @@ jobs:
             done
 
             git clone --depth 1 --filter=blob:none --sparse \
-              "https://github.com/YourOrg/$repo.git" temp-$repo
+              "https://x-access-token:${SYNC_TOKEN}@github.com/Web-Labels-Webdesign/$repo.git" temp-$repo
 
             cd temp-$repo
             git sparse-checkout set docs
