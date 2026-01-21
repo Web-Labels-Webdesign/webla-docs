@@ -12,7 +12,6 @@ on:
 
 permissions:
   contents: write
-  pages: write
 
 jobs:
   sync-and-deploy:
@@ -114,9 +113,12 @@ jobs:
           mkdocs build
           cp site/sitemap.xml site/en/sitemap.xml
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Deploy to server
+        uses: easingthemes/ssh-deploy@main
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site
-          force_orphan: true
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
+          REMOTE_HOST: ${{ secrets.SERVER_HOST }}
+          REMOTE_USER: ${{ secrets.SERVER_USER }}
+          SOURCE: "site/"
+          TARGET: ${{ secrets.SERVER_TARGET_PATH }}
+          ARGS: "-avz --delete"

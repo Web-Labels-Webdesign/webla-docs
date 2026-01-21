@@ -99,3 +99,5 @@ nav:
               - Antworten: plugins/WebLa_Produktberater/usage/answers.md
           - Konfiguration: plugins/WebLa_Produktberater/configuration/settings.md
           - Changelog: plugins/WebLa_Produktberater/changelog.md
+  - Intern:
+      - Übersicht: internal/index.md
