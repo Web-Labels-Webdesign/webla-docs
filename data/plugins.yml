@@ -16,4 +16,4 @@ plugins:
       de: Automatische Bildoptimierung für Shopware 6. Komprimiert Bilder, konvertiert zu WebP/AVIF und optimiert SEO-Metadaten für schnellere Ladezeiten und bessere Rankings.
       en: Automatic image optimization for Shopware 6. Compresses images, converts to WebP/AVIF and optimizes SEO metadata for faster loading times and better search rankings.
     requirements: Shopware 6.5–6.8, PHP 8.1+
-    version: "1.0.1"
+    version: "1.0.2"
