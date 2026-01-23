@@ -38,7 +38,7 @@ jobs:
 
           declare -A PLUGIN_FOLDERS=(
             ["WebLa_Produktberater"]="WebLa_Produktberater"
-            ["WebLa_MediaBooster"]="WebLaMediaBooster"
+            ["WebLa_MediaBooster"]="WeblaMediaBooster"
           )
 
           # Supported languages
