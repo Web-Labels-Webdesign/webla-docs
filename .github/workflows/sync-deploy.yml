@@ -33,7 +33,7 @@ jobs:
           # Define plugins (repo-name:folder-name)
           declare -A PLUGINS=(
             ["WebLa_Produktberater"]="WebLa_Produktberater"
-            ["WebLa_MediaBooster"]="WebLa_MediaBooster"
+            ["WebLa_MediaBooster"]="WebLaMediaBooster"
           )
 
           declare -A PLUGIN_FOLDERS=(
