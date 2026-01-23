@@ -32,11 +32,13 @@ jobs:
         run: |
           # Define plugins (repo-name:folder-name)
           declare -A PLUGINS=(
-            ["WebLa_Produktberater"]="WebLa_Produktberater"
+            ["WebLa_Produktberater"]="WebLa_Produktberater",
+            ["WebLa_MediaBooster"]="WebLa_MediaBooster"
           )
 
           declare -A PLUGIN_FOLDERS=(
             ["WebLa_Produktberater"]="WebLa_Produktberater"
+            ["WebLa_MediaBooster"]="WebLaMediaBooster"
           )
 
           # Supported languages
