@@ -125,6 +125,8 @@ Dieses Dokument beschreibt alle verfügbaren Einstellungen für Media Booster.
 - `WebP - JPG, JPEG, PNG in WebP umwandeln`: Konvertiert alle geeigneten Bilder in das WebP-Format. WebP wird von allen modernen Browsern unterstützt.
 - `AVIF - JPG, JPEG, PNG, WebP in AVIF umwandeln`: Konvertiert Bilder in das AVIF-Format. AVIF bietet noch bessere Kompression als WebP, wird aber von älteren Browsern nicht unterstützt.
 
+**Hinweis zur AVIF-Performance**: AVIF-Konvertierung funktioniert am besten mit Imagick. Bei Verwendung der GD-Bibliothek als Fallback werden Bilder größer als 4 Megapixel (z.B. 2000x2000) übersprungen, da der GD AVIF-Encoder deutlich langsamer ist. Falls viele Bilder bei der AVIF-Konvertierung übersprungen werden, empfehlen wir Imagick mit AVIF-Unterstützung zu installieren oder stattdessen WebP zu verwenden.
+
 **Wichtig**: Die Originalbilder werden NICHT gelöscht! Media Booster erstellt zusätzliche WebP/AVIF-Dateien neben den Originalen. Die Storefront liefert dann automatisch das optimierte Format aus, wenn der Browser es unterstützt.
 
 **Anwendungsbeispiel**: Wählen Sie "WebP" für maximale Browserkompatibilität oder "AVIF" für bestmögliche Kompression bei modernen Browsern.

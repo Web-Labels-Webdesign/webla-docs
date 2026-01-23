@@ -244,6 +244,23 @@ Media Booster processes images in three independent steps:
 
 6. **Clear cache**: Clear Shopware cache and any CDN cache after processing.
 
+## Troubleshooting
+
+### Large images skipped during AVIF conversion
+
+**Symptom**: Many images are marked as failed/skipped when converting to AVIF.
+
+**Cause**: Your server uses the GD library instead of Imagick for AVIF conversion. GD's AVIF encoder is significantly slower (10-50x) than Imagick, so images larger than 4 megapixels are automatically skipped to prevent timeouts.
+
+**Solutions**:
+1. **Install Imagick with AVIF support** (recommended): Ask your hosting provider to install or upgrade Imagick with AVIF format support
+2. **Use WebP instead**: WebP offers good compression and works reliably with both Imagick and GD
+3. **Reduce image sizes first**: Use the resize function to reduce images to under 2000x2000 pixels before AVIF conversion
+
+**How to check**: The dashboard's "Server Information" section shows which library is being used and displays a warning if GD is used for AVIF.
+
+---
+
 ## What to Avoid
 
 - **No backups**: Never start image resizing without a prior backup
@@ -251,3 +268,4 @@ Media Booster processes images in three independent steps:
 - **Too small dimensions**: Below 1500px can affect quality on Retina displays
 - **Overwrite all without checking**: Can destroy manually maintained SEO data
 - **Large batches on weak servers**: Can lead to timeouts and aborted processing
+- **AVIF with GD on large images**: Use WebP or install Imagick for reliable AVIF conversion of large images

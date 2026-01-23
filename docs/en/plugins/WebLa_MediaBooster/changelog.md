@@ -4,6 +4,24 @@ All notable changes to Media Booster for end users.
 
 ---
 
+## [1.0.3] - 2026-01-23
+
+### Added
+- **Automatic AVIF/WebP delivery**: Logos and theme images now automatically use converted versions without requiring template changes
+- AVIF support in Twig filter with priority order: AVIF > WebP > Original
+- Warning in server status when GD is used for AVIF conversion (recommends Imagick)
+
+### Fixed
+- Fixed progress counters resetting on every batch instead of only at run start
+- Fixed total counts changing mid-run when new media is uploaded
+- Fixed PHP timeout during AVIF conversion with GD library on large images (>4 megapixels now skipped)
+
+### Changed
+- Dashboard labels now clearly distinguish "All-Time Statistics" from "Current Run Progress"
+- Twig filter now checks for AVIF first, then WebP, for optimal compression
+
+---
+
 ## [1.0.2] - 2026-01-23
 
 ### Fixed

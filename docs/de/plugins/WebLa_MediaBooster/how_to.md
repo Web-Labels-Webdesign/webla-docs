@@ -244,6 +244,23 @@ Media Booster verarbeitet Bilder in drei unabhängigen Schritten:
 
 6. **Cache leeren**: Leeren Sie nach der Verarbeitung den Shopware-Cache und ggf. CDN-Cache.
 
+## Fehlerbehebung
+
+### Große Bilder werden bei AVIF-Konvertierung übersprungen
+
+**Symptom**: Viele Bilder werden bei der AVIF-Konvertierung als fehlgeschlagen/übersprungen markiert.
+
+**Ursache**: Ihr Server verwendet die GD-Bibliothek anstelle von Imagick für die AVIF-Konvertierung. Der GD AVIF-Encoder ist deutlich langsamer (10-50x) als Imagick, daher werden Bilder größer als 4 Megapixel automatisch übersprungen, um Timeouts zu vermeiden.
+
+**Lösungen**:
+1. **Imagick mit AVIF-Unterstützung installieren** (empfohlen): Bitten Sie Ihren Hosting-Anbieter, Imagick mit AVIF-Format-Unterstützung zu installieren oder zu aktualisieren
+2. **Stattdessen WebP verwenden**: WebP bietet gute Kompression und funktioniert zuverlässig mit Imagick und GD
+3. **Bildgrößen vorher reduzieren**: Verwenden Sie die Resize-Funktion, um Bilder vor der AVIF-Konvertierung auf unter 2000x2000 Pixel zu reduzieren
+
+**So prüfen Sie**: Der Bereich "Server-Informationen" im Dashboard zeigt, welche Bibliothek verwendet wird, und zeigt eine Warnung an, wenn GD für AVIF verwendet wird.
+
+---
+
 ## Was Sie vermeiden sollten
 
 - **Keine Backups**: Starten Sie die Bildgrößenänderung niemals ohne vorheriges Backup
@@ -251,3 +268,4 @@ Media Booster verarbeitet Bilder in drei unabhängigen Schritten:
 - **Zu kleine Maximalmaße**: Unter 1500px kann die Qualität auf Retina-Displays leiden
 - **Alle überschreiben ohne Prüfung**: Kann manuell gepflegte SEO-Daten zerstören
 - **Große Stapel auf schwachen Servern**: Kann zu Timeouts und abgebrochenen Verarbeitungen führen
+- **AVIF mit GD bei großen Bildern**: Verwenden Sie WebP oder installieren Sie Imagick für zuverlässige AVIF-Konvertierung großer Bilder
