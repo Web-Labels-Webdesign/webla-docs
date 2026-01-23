@@ -4,6 +4,25 @@ All notable changes to Media Booster for end users.
 
 ---
 
+## [1.0.2] - 2026-01-23
+
+### Fixed
+- Fixed "Palette image not supported by webp" error when converting PNG images with indexed colors (logos, icons, simple graphics)
+- Fixed GIF to WebP/AVIF conversion (GIF images are always palette-based)
+- Fixed progress percentage showing >100% when running conversion multiple times
+- Fixed progress not updating when all images are already converted (skipped)
+- Improved alpha channel handling for transparent PNG images
+
+### Added
+- Display failed image count in admin dashboard progress section
+- Error message when resize is started without max dimensions configured
+
+### Changed
+- Progress counters now reset when starting a new processing run
+- Enhanced error messages for conversion failures now include the actual warning
+
+---
+
 ## [1.0.1] - 2026-01-23
 
 ### Documentation

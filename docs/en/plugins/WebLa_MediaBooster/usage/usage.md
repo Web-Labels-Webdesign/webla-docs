@@ -264,6 +264,30 @@ Contact your hosting provider and ask for:
 
 ---
 
+### "Palette image not supported" or "Output file is empty" Error
+
+**Symptom**: Certain PNG images (especially logos, icons, or simple graphics) fail to convert with errors like:
+- "Warning: imagewebp(): Palette image not supported by webp"
+- "Conversion failed - output file is empty"
+
+**Cause**: This occurs when the server uses the GD library (instead of Imagick) for conversion. GD cannot directly convert **palette images** (PNGs with indexed colors) to WebP or AVIF format.
+
+**What are palette images?**
+Palette images use a limited color table (like GIF files) instead of full RGB color information. They are common in:
+- Logos and brand graphics
+- Icons and simple illustrations
+- Screenshots with limited colors
+- Graphics exported from design tools with "indexed color" option
+
+**Solution**: This issue has been fixed in Media Booster v1.0.2+. The plugin now automatically converts palette images to true color before WebP/AVIF conversion.
+
+**If you still encounter this error**:
+1. Make sure you are using Media Booster v1.0.2 or later
+2. Ask your hosting provider to install Imagick with WebP/AVIF support (Imagick handles palette images automatically)
+3. As a workaround, open the problematic PNG in an image editor and save it as "RGB Color" or "True Color" instead of "Indexed Color"
+
+---
+
 ### SEO Changes Are Not Applied
 
 **Symptom**: Alt tags or titles remain empty after processing

@@ -264,6 +264,30 @@ Kontaktieren Sie Ihren Hosting-Anbieter und bitten Sie um:
 
 ---
 
+### "Palette image not supported" oder "Output file is empty" Fehler
+
+**Symptom**: Bestimmte PNG-Bilder (besonders Logos, Icons oder einfache Grafiken) können nicht konvertiert werden. Fehlermeldungen wie:
+- "Warning: imagewebp(): Palette image not supported by webp"
+- "Conversion failed - output file is empty"
+
+**Ursache**: Dieser Fehler tritt auf, wenn der Server die GD-Bibliothek (anstatt Imagick) für die Konvertierung verwendet. GD kann **Palettenbilder** (PNGs mit indizierten Farben) nicht direkt in WebP oder AVIF konvertieren.
+
+**Was sind Palettenbilder?**
+Palettenbilder verwenden eine begrenzte Farbtabelle (wie GIF-Dateien) anstatt voller RGB-Farbinformationen. Sie sind häufig bei:
+- Logos und Markengrafiken
+- Icons und einfachen Illustrationen
+- Screenshots mit wenigen Farben
+- Grafiken, die aus Design-Tools mit der Option "Indizierte Farben" exportiert wurden
+
+**Lösung**: Dieses Problem wurde in Media Booster v1.0.2+ behoben. Das Plugin konvertiert Palettenbilder jetzt automatisch in True Color, bevor sie zu WebP/AVIF konvertiert werden.
+
+**Falls dieser Fehler weiterhin auftritt**:
+1. Stellen Sie sicher, dass Sie Media Booster v1.0.2 oder neuer verwenden
+2. Bitten Sie Ihren Hosting-Anbieter, Imagick mit WebP/AVIF-Unterstützung zu installieren (Imagick verarbeitet Palettenbilder automatisch)
+3. Als Workaround: Öffnen Sie das problematische PNG in einem Bildbearbeitungsprogramm und speichern Sie es als "RGB-Farbe" oder "True Color" anstatt "Indizierte Farben"
+
+---
+
 ### SEO-Änderungen werden nicht übernommen
 
 **Symptom**: Alt-Tags oder Title bleiben nach der Verarbeitung leer
