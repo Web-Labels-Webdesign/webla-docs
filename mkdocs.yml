@@ -23,8 +23,8 @@ theme:
         name: Hellmodus aktivieren
   features:
     - navigation.tabs
-    - navigation.sections
-    - navigation.expand
+    - navigation.prune
+    - navigation.indexes
     - navigation.top
     - search.highlight
     - search.suggest
@@ -86,16 +86,3 @@ extra:
       name: Datenschutz
 
 copyright: "&copy; 2026 Web Labels Webdesign GmbH"
-
-nav:
-  - Home: index.md
-  - Plugins:
-      - Produktberater:
-          - Übersicht: plugins/WebLa_Produktberater/index.md
-          - Anleitung: plugins/WebLa_Produktberater/how_to.md
-          - Verwendung:
-              - Allgemein: plugins/WebLa_Produktberater/usage/usage.md
-              - Fragen: plugins/WebLa_Produktberater/usage/questions.md
-              - Antworten: plugins/WebLa_Produktberater/usage/answers.md
-          - Konfiguration: plugins/WebLa_Produktberater/configuration/settings.md
-          - Changelog: plugins/WebLa_Produktberater/changelog.md
