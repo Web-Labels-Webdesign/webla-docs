@@ -4,6 +4,14 @@ All notable changes to the Product Advisor Plugin for end users.
 
 ---
 
+## [7.0.5] - 2026-01-26
+
+### Bug Fixes
+
+- **Shopware 6.6 compatibility**: Plugin now works immediately after installation without requiring manual `bin/build-storefront`. Compiled storefront assets are now included in the plugin package.
+
+---
+
 ## [7.0.4] - 2026-01-15
 
 ### Improvements
@@ -146,6 +154,7 @@ All notable changes to the Product Advisor Plugin for end users.
 
 | Version | Release Date | Highlights |
 |---------|--------------|------------|
+| 7.0.5 | 2026-01-26 | Shopware 6.6 ready-to-use fix |
 | 7.0.4 | 2026-01-15 | Changelog improvements |
 | 7.0.3 | 2026-01-13 | Store image correction |
 | 7.0.2 | 2026-01-13 | Performance optimisation |

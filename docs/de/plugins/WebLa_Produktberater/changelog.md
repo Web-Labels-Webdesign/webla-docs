@@ -4,6 +4,14 @@ Alle wichtigen Änderungen am Produkt Berater Plugin für Endbenutzer.
 
 ---
 
+## [7.0.5] - 2026-01-26
+
+### Fehlerbehebungen
+
+- **Shopware 6.6 Kompatibilität**: Das Plugin funktioniert jetzt sofort nach der Installation ohne manuelles `bin/build-storefront`. Kompilierte Storefront-Assets sind jetzt im Plugin-Paket enthalten.
+
+---
+
 ## [7.0.4] - 2026-01-15
 
 ### Verbesserungen
@@ -146,6 +154,7 @@ Alle wichtigen Änderungen am Produkt Berater Plugin für Endbenutzer.
 
 | Version | Veröffentlichung | Highlights |
 |---------|-----------------|------------|
+| 7.0.5 | 2026-01-26 | Shopware 6.6 Sofort-Einsatz-Fix |
 | 7.0.4 | 2026-01-15 | Changelog-Verbesserungen |
 | 7.0.3 | 2026-01-13 | Store-Bild-Korrektur |
 | 7.0.2 | 2026-01-13 | Performance-Optimierung |

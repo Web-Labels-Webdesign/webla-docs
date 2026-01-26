@@ -1,0 +1,206 @@
+# Konfigurationseinstellungen
+
+Dieses Dokument beschreibt alle verfügbaren Einstellungen für Kundenspezifische Rabatte.
+
+**Navigation**: Erweiterungen → Meine Erweiterungen → Kundenspezifische Rabatte → Konfigurieren
+
+---
+
+## Rabatt-Einstellungen
+
+### Rabatt-Bezeichnung
+
+| Eigenschaft      | Wert                                  |
+| ---------------- | ------------------------------------- |
+| **Typ**          | Text                                  |
+| **Standard**     | `{category} - {discount}`             |
+| **Erforderlich** | Nein                                  |
+
+**Beschreibung**: Legt fest, wie der Rabatt im Warenkorb und an der Kasse bezeichnet wird. Sie können verschiedene Variablen verwenden, um die Bezeichnung dynamisch zu gestalten.
+
+**Verfügbare Variablen**:
+- `{category}`: Name der Kategorie oder Dynamischen Produktgruppe
+- `{customer}`: Name des Kunden
+- `{customerGroup}`: Name der Kundengruppe
+- `{discount}`: Das übersetzte Wort "Rabatt"
+- `{value}`: Der Rabattwert in Prozent
+
+**Anwendungsbeispiel**: Für B2B-Kunden könnte die Bezeichnung `{customerGroup} - {value}` lauten, um z.B. "Händler - 15%" anzuzeigen.
+
+---
+
+### Rabatt als eigenes Lineitem hinzufügen
+
+| Eigenschaft      | Wert     |
+| ---------------- | -------- |
+| **Typ**          | Schalter |
+| **Standard**     | Aus      |
+| **Erforderlich** | Nein     |
+
+**Beschreibung**: Wenn aktiviert, wird der Rabatt als separate Position im Warenkorb angezeigt. Wenn deaktiviert, wird der Produktpreis direkt reduziert.
+
+**Optionen**:
+- `Aktiviert`: Der Rabatt erscheint als eigene Zeile im Warenkorb (z.B. "Händlerrabatt -15%")
+- `Deaktiviert`: Der Produktpreis wird direkt reduziert und zeigt den durchgestrichenen Originalpreis
+
+**Anwendungsbeispiel**: Aktivieren Sie diese Option, wenn Sie möchten, dass Kunden den Rabatt als separate Position sehen und nicht nur den reduzierten Preis.
+
+---
+
+### Rabatt nur für ein Produkt anwenden
+
+| Eigenschaft      | Wert     |
+| ---------------- | -------- |
+| **Typ**          | Schalter |
+| **Standard**     | An       |
+| **Erforderlich** | Nein     |
+
+**Beschreibung**: Bestimmt, ob ein Rabatt nur einmal pro Produkt angewendet wird, auch wenn das Produkt in mehreren rabattberechtigten Kategorien oder Produktgruppen enthalten ist.
+
+**Optionen**:
+- `Aktiviert`: Jedes Produkt erhält maximal einen Rabatt, auch wenn es in mehreren rabattberechtigten Bereichen liegt
+- `Deaktiviert`: Rabatte können mehrfach auf dasselbe Produkt angewendet werden
+
+**Anwendungsbeispiel**: Lassen Sie diese Option aktiviert, um zu verhindern, dass ein Produkt mehrfach rabattiert wird.
+
+---
+
+### Rabatt-Prioritätsmodus
+
+| Eigenschaft      | Wert    |
+| ---------------- | ------- |
+| **Typ**          | Auswahl |
+| **Standard**     | Individuell zuerst |
+| **Erforderlich** | Nein    |
+
+**Beschreibung**: Bestimmt, welcher Rabatt angewendet wird, wenn mehrere Rabattquellen für ein Produkt existieren.
+
+**Optionen**:
+- `Spezifischster zuerst (Produkt > Individuell > Kunde > Gruppe)`: Der spezifischste Rabatt hat Vorrang. Produktrabatte vor individuellen Kundenrabatten vor globalen Kundenrabatten vor Gruppenrabatten.
+- `Individuell zuerst, dann Kunde, dann Gruppe`: Individuelle Kundenrabatte (auf Kategorien/Produktgruppen) haben Vorrang, globale Kundenrabatte als Fallback, Gruppenrabatte als letzter Fallback.
+- `Höherer Rabatt gewinnt (kundenfreundlich)`: Der höchste verfügbare Rabatt wird angewendet - ideal wenn Sie Ihren Kunden den besten Preis geben möchten.
+- `Niedrigerer Rabatt gewinnt (shopfreundlich)`: Der niedrigste verfügbare Rabatt wird angewendet - ideal wenn Sie Rabatte konservativ handhaben möchten.
+
+**Anwendungsbeispiel**: Für einen kundenfreundlichen B2B-Shop wählen Sie "Höherer Rabatt gewinnt". Für maximale Kontrolle über Rabatte wählen Sie "Spezifischster zuerst".
+
+---
+
+### Kundengruppen-Rabatte aktivieren
+
+| Eigenschaft      | Wert     |
+| ---------------- | -------- |
+| **Typ**          | Schalter |
+| **Standard**     | An       |
+| **Erforderlich** | Nein     |
+
+**Beschreibung**: Aktiviert oder deaktiviert die globalen Rabatte, die über die Kundengruppen-Einstellungen (Custom Fields) vergeben werden.
+
+**Optionen**:
+- `Aktiviert`: Der globale Rabatt aus den Kundengruppen-Custom-Fields wird angewendet
+- `Deaktiviert`: Globale Kundengruppen-Rabatte werden ignoriert
+
+**Anwendungsbeispiel**: Deaktivieren Sie diese Option temporär, wenn Sie Gruppenrabatte pausieren möchten, ohne sie zu löschen.
+
+---
+
+### Produktspezifische Rabatte aktivieren
+
+| Eigenschaft      | Wert     |
+| ---------------- | -------- |
+| **Typ**          | Schalter |
+| **Standard**     | An       |
+| **Erforderlich** | Nein     |
+
+**Beschreibung**: Ermöglicht das Setzen von Rabatten direkt auf einzelne Produkte über Custom Fields.
+
+**Optionen**:
+- `Aktiviert`: Produktspezifische Rabatte aus Custom Fields werden berücksichtigt
+- `Deaktiviert`: Produktspezifische Rabatte werden ignoriert
+
+**Anwendungsbeispiel**: Aktivieren Sie diese Option, wenn Sie bestimmte Produkte mit einem festen Rabatt versehen möchten.
+
+---
+
+### Globale Kundenrabatte aktivieren
+
+| Eigenschaft      | Wert     |
+| ---------------- | -------- |
+| **Typ**          | Schalter |
+| **Standard**     | An       |
+| **Erforderlich** | Nein     |
+
+**Beschreibung**: Ermöglicht das Setzen eines globalen Rabatts auf einzelne Kunden über Custom Fields im Kundenprofil.
+
+**Optionen**:
+- `Aktiviert`: Globale Kundenrabatte aus Custom Fields werden berücksichtigt
+- `Deaktiviert`: Globale Kundenrabatte werden ignoriert
+
+**Anwendungsbeispiel**: Aktivieren Sie diese Option, um VIP-Kunden einen pauschalen Rabatt auf alle Produkte zu geben.
+
+---
+
+### Gesamtersparnis im Checkout anzeigen
+
+| Eigenschaft      | Wert     |
+| ---------------- | -------- |
+| **Typ**          | Schalter |
+| **Standard**     | Aus      |
+| **Erforderlich** | Nein     |
+
+**Beschreibung**: Zeigt eine "Sie sparen X" Nachricht im Warenkorb und an der Kasse an.
+
+**Optionen**:
+- `Aktiviert`: Die Gesamtersparnis wird prominent angezeigt
+- `Deaktiviert`: Keine zusätzliche Sparanzeige
+
+**Anwendungsbeispiel**: Aktivieren Sie diese Option, um Kunden den Wert ihrer Rabatte deutlich zu machen.
+
+---
+
+### Originalpreis durchgestrichen anzeigen
+
+| Eigenschaft      | Wert     |
+| ---------------- | -------- |
+| **Typ**          | Schalter |
+| **Standard**     | Aus      |
+| **Erforderlich** | Nein     |
+
+**Beschreibung**: Zeigt den Originalpreis durchgestrichen neben dem reduzierten Preis in Checkout-Positionen an.
+
+**Optionen**:
+- `Aktiviert`: Originalpreis wird durchgestrichen angezeigt
+- `Deaktiviert`: Nur der reduzierte Preis wird angezeigt
+
+**Anwendungsbeispiel**: Aktivieren Sie diese Option, um den Rabatt visuell hervorzuheben.
+
+---
+
+## Empfohlene Konfigurationen
+
+### Für B2B-Shops mit Händlerrabatten
+
+| Einstellung                     | Empfohlener Wert                    |
+| ------------------------------- | ----------------------------------- |
+| Rabatt-Bezeichnung              | `{customerGroup} - {value}`         |
+| Rabatt als Lineitem             | Aus                                 |
+| Rabatt-Prioritätsmodus          | Höherer Rabatt gewinnt              |
+| Kundengruppen-Rabatte aktivieren| An                                  |
+| Originalpreis durchgestrichen   | An                                  |
+
+### Für Stammkundenpreise
+
+| Einstellung                     | Empfohlener Wert                    |
+| ------------------------------- | ----------------------------------- |
+| Rabatt-Bezeichnung              | `Stammkundenrabatt {value}`         |
+| Rabatt als Lineitem             | An                                  |
+| Rabatt-Prioritätsmodus          | Individuell zuerst                  |
+| Globale Kundenrabatte aktivieren| An                                  |
+| Gesamtersparnis anzeigen        | An                                  |
+
+### Für strenge Rabattkontrolle
+
+| Einstellung                     | Empfohlener Wert                    |
+| ------------------------------- | ----------------------------------- |
+| Rabatt nur einmal anwenden      | An                                  |
+| Rabatt-Prioritätsmodus          | Niedrigerer Rabatt gewinnt          |
+| Originalpreis durchgestrichen   | Aus                                 |
