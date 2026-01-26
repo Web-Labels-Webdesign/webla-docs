@@ -17,3 +17,12 @@ plugins:
       en: Automatic image optimization for Shopware 6. Compresses images, converts to WebP/AVIF and optimizes SEO metadata for faster loading times and better search rankings.
     requirements: Shopware 6.5–6.8, PHP 8.1+
     version: "1.0.3"
+  - id: WebLa_CustomerSpecificDiscounts
+    name:
+      de: Kundenspezifische Rabatte
+      en: Customer Specific Discounts
+    short:
+      de: Vergeben Sie individuelle Rabatte pro Kunde auf Kategorien, Produktgruppen oder die gesamte Kundengruppe.
+      en: Assign individual discounts per customer on categories, product groups, or entire customer groups.
+    requirements: Shopware 6.5–6.8, PHP 8.1+
+    version: "1.2.0"

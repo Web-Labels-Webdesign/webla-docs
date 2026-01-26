@@ -34,11 +34,13 @@ jobs:
           declare -A PLUGINS=(
             ["WebLa_Produktberater"]="WebLa_Produktberater"
             ["WebLa_MediaBooster"]="WebLa_MediaBooster"
+            ["WebLa_CustomerSpecificDiscounts"]="WebLa_CustomerSpecificDiscounts"
           )
 
           declare -A PLUGIN_FOLDERS=(
             ["WebLa_Produktberater"]="WebLa_Produktberater"
             ["WebLa_MediaBooster"]="WeblaMediaBooster"
+            ["WebLa_CustomerSpecificDiscounts"]="WebLaCustomerSpecificDiscounts"
           )
 
           # Supported languages
