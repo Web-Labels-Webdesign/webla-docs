@@ -35,12 +35,14 @@ jobs:
             ["WebLa_Produktberater"]="WebLa_Produktberater"
             ["WebLa_MediaBooster"]="WebLa_MediaBooster"
             ["WebLa_CustomerSpecificDiscounts"]="WebLa_CustomerSpecificDiscounts"
+            ["WebLa_IntelligentCrossSelling"]="WebLa_IntelligentCrossSelling"
           )
 
           declare -A PLUGIN_FOLDERS=(
             ["WebLa_Produktberater"]="WebLa_Produktberater"
             ["WebLa_MediaBooster"]="WeblaMediaBooster"
             ["WebLa_CustomerSpecificDiscounts"]="WebLaCustomerSpecificDiscounts"
+            ["WebLa_IntelligentCrossSelling"]="WebLa_IntelligentCrossSelling"
           )
 
           # Supported languages
