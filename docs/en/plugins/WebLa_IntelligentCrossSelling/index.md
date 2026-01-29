@@ -48,5 +48,5 @@ Intelligent product recommendations will now automatically appear on your produc
 
 For questions or issues, please contact:
 
-- **Manufacturer**: Web Labels Webdesign GmbH & BuildIT Consulting
+- **Manufacturer**: Web Labels Webdesign GmbH
 - **Support**: [Shopware Store - Web Labels](https://store.shopware.com/web-labels-webdesign-gmbh.html)
