@@ -103,6 +103,26 @@ This document describes all available settings for Customer Specific Discounts.
 
 ---
 
+### Apply Default Group Discounts to Guests
+
+| Property     | Value  |
+| ------------ | ------ |
+| **Type**     | Switch |
+| **Default**  | Off    |
+| **Required** | No     |
+
+**Description**: When enabled, non-logged-in visitors will see prices with the default customer group's discount applied. This allows you to show promotional prices to all visitors without requiring them to log in.
+
+**Options**:
+- `Enabled`: Guests see prices with default group discounts applied
+- `Disabled`: Only logged-in customers see discounted prices
+
+**Example Use Case**: Enable this option if you want to display promotional prices to all visitors, encouraging them to browse your shop even without an account.
+
+**Note**: This setting only applies to global group discounts from the default customer group. Individual customer discounts and category-specific discounts still require the customer to be logged in.
+
+---
+
 ### Enable Product-Specific Discounts
 
 | Property     | Value  |

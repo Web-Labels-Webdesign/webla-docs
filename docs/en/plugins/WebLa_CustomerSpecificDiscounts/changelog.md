@@ -4,6 +4,18 @@ All notable changes to Customer Specific Discounts for end users.
 
 ---
 
+## [1.4.0] - 2026-01-28
+
+### New Features
+
+- **Guest Discounts**: Apply default customer group discounts to non-logged-in users. Enable via the new "Apply default group discounts to guests" config option. Perfect for showing promotional prices to all visitors without requiring login.
+
+### Improvements
+
+- **Shopware 6.7+ Compatibility**: Improved caching implementation using the new HttpCacheCookieEvent for better compatibility with Shopware 6.7 and future versions.
+
+---
+
 ## [1.2.0] - 2026-01-26
 
 ### New Features
@@ -59,6 +71,7 @@ All notable changes to Customer Specific Discounts for end users.
 
 | Version | Release Date | Highlights |
 | ------- | ------------ | ---------- |
+| 1.4.0   | 2026-01-28   | Guest discounts, Shopware 6.7+ caching improvements |
 | 1.2.0   | 2026-01-26   | Customer group discounts on categories/product groups |
 | 1.1.0   | 2026-01-25   | Product discounts, global customer discounts, extended priority modes |
 | 1.0.1   | 2026-01-20   | Bug fixes for PHP and JS validation |
@@ -67,6 +80,13 @@ All notable changes to Customer Specific Discounts for end users.
 ---
 
 ## Upgrade Notes
+
+### Upgrading to 1.4.0
+
+After updating:
+1. Clear the cache under Settings → System → Caches & Indexes
+2. The new "Apply default group discounts to guests" setting is available in the plugin configuration
+3. No action required for the Shopware 6.7+ compatibility improvements - they are applied automatically
 
 ### Upgrading to 1.2.0
 
@@ -85,6 +105,7 @@ After updating:
 
 | Plugin Version | Shopware Version | PHP Version |
 | -------------- | ---------------- | ----------- |
+| 1.4.0          | 6.5.0 - 6.7.x    | 8.1+        |
 | 1.2.0          | 6.5.0 - 6.7.x    | 8.1+        |
 | 1.1.0          | 6.5.0 - 6.7.x    | 8.1+        |
 | 1.0.x          | 6.5.0 - 6.7.x    | 8.1+        |

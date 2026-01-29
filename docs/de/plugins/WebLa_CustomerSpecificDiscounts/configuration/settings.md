@@ -103,6 +103,26 @@ Dieses Dokument beschreibt alle verfügbaren Einstellungen für Kundenspezifisch
 
 ---
 
+### Standard-Gruppenrabatte für Gäste anwenden
+
+| Eigenschaft      | Wert     |
+| ---------------- | -------- |
+| **Typ**          | Schalter |
+| **Standard**     | Aus      |
+| **Erforderlich** | Nein     |
+
+**Beschreibung**: Wenn aktiviert, sehen nicht eingeloggte Besucher Preise mit dem Rabatt der Standard-Kundengruppe. Dies ermöglicht es, Aktionspreise allen Besuchern zu zeigen, ohne dass eine Anmeldung erforderlich ist.
+
+**Optionen**:
+- `Aktiviert`: Gäste sehen Preise mit Standard-Gruppenrabatten
+- `Deaktiviert`: Nur eingeloggte Kunden sehen rabattierte Preise
+
+**Anwendungsbeispiel**: Aktivieren Sie diese Option, wenn Sie Aktionspreise allen Besuchern anzeigen möchten, um sie zum Stöbern in Ihrem Shop zu ermutigen, auch ohne ein Konto.
+
+**Hinweis**: Diese Einstellung gilt nur für globale Gruppenrabatte der Standard-Kundengruppe. Individuelle Kundenrabatte und kategoriespezifische Rabatte erfordern weiterhin, dass der Kunde eingeloggt ist.
+
+---
+
 ### Produktspezifische Rabatte aktivieren
 
 | Eigenschaft      | Wert     |

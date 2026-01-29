@@ -12,6 +12,7 @@ Diese Anleitung behandelt alle Funktionen und Möglichkeiten von Kundenspezifisc
 - [Produktspezifische Rabatte](#produktspezifische-rabatte)
 - [Globale Kundenrabatte](#globale-kundenrabatte)
 - [Globale Gruppenrabatte](#globale-gruppenrabatte)
+- [Gast-Rabatte](#gast-rabatte)
 - [Storefront-Anzeige](#storefront-anzeige)
 - [Fehlerbehebung](#fehlerbehebung)
 
@@ -154,6 +155,42 @@ Ein globaler Gruppenrabatt gilt für ALLE Produkte im Shop für ALLE Mitglieder 
 
 - Diese Funktion muss in den Plugin-Einstellungen aktiviert sein
 - Der Rabatt gilt als Fallback, wenn kein spezifischerer Rabatt existiert
+
+---
+
+## Gast-Rabatte
+
+### Was sie bewirken
+
+Gast-Rabatte ermöglichen es, den globalen Rabatt der Standard-Kundengruppe für nicht eingeloggte Besucher anzuzeigen. Dies ist nützlich, um Aktionspreise allen Besuchern zu zeigen, ohne dass sie ein Konto erstellen oder sich anmelden müssen.
+
+### So verwenden Sie sie
+
+1. Navigieren Sie zu **Erweiterungen → Meine Erweiterungen → Kundenspezifische Rabatte → Konfigurieren**
+2. Aktivieren Sie die Option **Standard-Gruppenrabatte für Gäste anwenden**
+3. Stellen Sie sicher, dass Sie einen globalen Rabatt auf Ihre Standard-Kundengruppe gesetzt haben (siehe [Globale Gruppenrabatte](#globale-gruppenrabatte))
+4. Speichern Sie die Einstellungen und leeren Sie den Cache
+
+### So funktioniert es
+
+Wenn aktiviert, prüft das Plugin auf Besucher, die nicht eingeloggt sind, und wendet den globalen Rabatt der Standard-Kundengruppe des Shops an. Das bedeutet:
+- Alle Besucher sehen die gleichen Aktionspreise
+- Keine Kontoerstellung oder Anmeldung erforderlich
+- Der Rabatt wird konsistent in Produktlisten, Produktseiten und im Checkout angewendet
+
+### Anwendungsbeispiel
+
+**Szenario**: Sie haben eine 10%-Rabattaktion für alle Kunden und möchten, dass jeder die reduzierten Preise sofort sieht.
+
+1. Setzen Sie einen 10% globalen Rabatt auf Ihre Standard-Kundengruppe
+2. Aktivieren Sie "Standard-Gruppenrabatte für Gäste anwenden"
+3. Alle Besucher sehen nun Preise mit dem 10% Rabatt
+
+### Wichtige Hinweise
+
+- Nur globale Gruppenrabatte der Standard-Kundengruppe werden auf Gäste angewendet
+- Kategoriespezifische und individuelle Kundenrabatte erfordern weiterhin eine Anmeldung
+- Wenn sich ein Gast anmeldet, haben seine spezifischen Kunden- oder Gruppenrabatte Vorrang
 
 ---
 

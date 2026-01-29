@@ -12,6 +12,7 @@ This guide covers all features and functionality of Customer Specific Discounts.
 - [Product-Specific Discounts](#product-specific-discounts)
 - [Global Customer Discounts](#global-customer-discounts)
 - [Global Group Discounts](#global-group-discounts)
+- [Guest Discounts](#guest-discounts)
 - [Storefront Display](#storefront-display)
 - [Troubleshooting](#troubleshooting)
 
@@ -154,6 +155,42 @@ A global group discount applies to ALL products in the shop for ALL members of a
 
 - This feature must be enabled in the plugin settings
 - The discount acts as a fallback if no more specific discount exists
+
+---
+
+## Guest Discounts
+
+### What They Do
+
+Guest discounts allow you to display the default customer group's global discount to non-logged-in visitors. This is useful for showing promotional prices to all visitors without requiring them to create an account or log in.
+
+### How to Use
+
+1. Navigate to **Extensions → My Extensions → Customer Specific Discounts → Configure**
+2. Enable the option **Apply default group discounts to guests**
+3. Make sure you have set a global discount on your default customer group (see [Global Group Discounts](#global-group-discounts))
+4. Save the settings and clear the cache
+
+### How It Works
+
+When enabled, the plugin checks for visitors who are not logged in and applies the global discount from the shop's default customer group. This means:
+- All visitors see the same promotional pricing
+- No account creation or login is required
+- The discount is applied consistently across product listings, product pages, and checkout
+
+### Example Use Case
+
+**Scenario**: You have a 10% off promotion for all customers and want everyone to see the discounted prices immediately.
+
+1. Set a 10% global discount on your default customer group
+2. Enable "Apply default group discounts to guests"
+3. All visitors now see prices with the 10% discount applied
+
+### Important Notes
+
+- Only global group discounts from the default customer group are applied to guests
+- Category-specific and individual customer discounts still require login
+- When a guest logs in, their specific customer or group discounts take precedence
 
 ---
 

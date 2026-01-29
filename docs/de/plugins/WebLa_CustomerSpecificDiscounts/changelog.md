@@ -4,6 +4,18 @@ Alle wichtigen Änderungen an Kundenspezifische Rabatte für Endbenutzer.
 
 ---
 
+## [1.4.0] - 2026-01-28
+
+### Neue Funktionen
+
+- **Gast-Rabatte**: Wende Standard-Kundengruppen-Rabatte auf nicht eingeloggte Benutzer an. Aktiviere dies über die neue Einstellung "Standard-Gruppenrabatte für Gäste anwenden". Perfekt, um Aktionspreise allen Besuchern zu zeigen, ohne dass eine Anmeldung erforderlich ist.
+
+### Verbesserungen
+
+- **Shopware 6.7+ Kompatibilität**: Verbesserte Caching-Implementierung mit dem neuen HttpCacheCookieEvent für bessere Kompatibilität mit Shopware 6.7 und zukünftigen Versionen.
+
+---
+
 ## [1.2.0] - 2026-01-26
 
 ### Neue Funktionen
@@ -59,6 +71,7 @@ Alle wichtigen Änderungen an Kundenspezifische Rabatte für Endbenutzer.
 
 | Version | Veröffentlichung | Highlights |
 | ------- | ---------------- | ---------- |
+| 1.4.0   | 2026-01-28       | Gast-Rabatte, Shopware 6.7+ Caching-Verbesserungen |
 | 1.2.0   | 2026-01-26       | Kundengruppen-Rabatte auf Kategorien/Produktgruppen |
 | 1.1.0   | 2026-01-25       | Produktrabatte, globale Kundenrabatte, erweiterte Prioritätsmodi |
 | 1.0.1   | 2026-01-20       | Bugfixes für PHP- und JS-Validierung |
@@ -67,6 +80,13 @@ Alle wichtigen Änderungen an Kundenspezifische Rabatte für Endbenutzer.
 ---
 
 ## Upgrade-Hinweise
+
+### Upgrade auf 1.4.0
+
+Nach dem Update:
+1. Leeren Sie den Cache unter Einstellungen → System → Caches & Indizes
+2. Die neue Einstellung "Standard-Gruppenrabatte für Gäste anwenden" ist in der Plugin-Konfiguration verfügbar
+3. Für die Shopware 6.7+ Kompatibilitätsverbesserungen ist keine Aktion erforderlich - sie werden automatisch angewendet
 
 ### Upgrade auf 1.2.0
 
@@ -85,6 +105,7 @@ Nach dem Update:
 
 | Plugin-Version | Shopware-Version | PHP-Version |
 | -------------- | ---------------- | ----------- |
+| 1.4.0          | 6.5.0 - 6.7.x    | 8.1+        |
 | 1.2.0          | 6.5.0 - 6.7.x    | 8.1+        |
 | 1.1.0          | 6.5.0 - 6.7.x    | 8.1+        |
 | 1.0.x          | 6.5.0 - 6.7.x    | 8.1+        |
