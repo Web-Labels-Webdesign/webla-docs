@@ -93,6 +93,17 @@ jobs:
               echo "⚠️ composer.json not found at temp-$repo/$local_folder/composer.json"
             fi
 
+            # Generate .pages files with friendly names from plugins.yml
+            for lang in "${LANGUAGES[@]}"; do
+              if [ -d "docs/$lang/plugins/$folder" ]; then
+                NAME=$(yq ".plugins[] | select(.id == \"$folder\") | .name.$lang" data/plugins.yml)
+                if [ -n "$NAME" ]; then
+                  echo "title: $NAME" > "docs/$lang/plugins/$folder/.pages"
+                  echo "📝 Created .pages for $folder ($lang): $NAME"
+                fi
+              fi
+            done
+
             rm -rf "temp-$repo"
           done
 
