@@ -4,6 +4,19 @@ Alle wichtigen Änderungen am Produkt Berater Plugin für Endbenutzer.
 
 ---
 
+## [7.0.6] - 2026-01-30
+
+### Neue Funktionen
+
+- **Plug-and-Play Installation**: Das Plugin funktioniert jetzt sofort auf Shopware 6.5, 6.6 und 6.7 ohne `bin/build-storefront.sh`. Ein eigenständiges JavaScript-Bundle wird automatisch per Script-Injection geladen.
+
+### Fehlerbehebungen
+
+- **Admin Auswahlfelder (6.7)**: Anzeigeproblem behoben, bei dem Format- und Typ-Dropdowns "Auswählen..." statt des gewählten Wertes in der Shopware 6.7 Administration anzeigten
+- **Multi-Version-Kompatibilität**: Verbesserte Komponenten-Bindings für korrekte Funktion auf allen unterstützten Shopware-Versionen
+
+---
+
 ## [7.0.5] - 2026-01-26
 
 ### Fehlerbehebungen
@@ -154,6 +167,7 @@ Alle wichtigen Änderungen am Produkt Berater Plugin für Endbenutzer.
 
 | Version | Veröffentlichung | Highlights |
 |---------|-----------------|------------|
+| 7.0.6 | 2026-01-30 | Plug-and-Play für 6.5/6.6/6.7 |
 | 7.0.5 | 2026-01-26 | Shopware 6.6 Sofort-Einsatz-Fix |
 | 7.0.4 | 2026-01-15 | Changelog-Verbesserungen |
 | 7.0.3 | 2026-01-13 | Store-Bild-Korrektur |

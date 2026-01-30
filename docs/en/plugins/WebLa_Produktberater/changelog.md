@@ -4,6 +4,19 @@ All notable changes to the Product Advisor Plugin for end users.
 
 ---
 
+## [7.0.6] - 2026-01-30
+
+### New Features
+
+- **Plug-and-play installation**: The plugin now works immediately on Shopware 6.5, 6.6, and 6.7 without requiring `bin/build-storefront.sh`. A standalone JavaScript bundle is automatically loaded via script injection.
+
+### Bug Fixes
+
+- **Admin select fields (6.7)**: Fixed display issue where Format and Type dropdowns showed "Select..." instead of the selected value in Shopware 6.7 admin
+- **Multi-version compatibility**: Improved component bindings to work correctly across all supported Shopware versions
+
+---
+
 ## [7.0.5] - 2026-01-26
 
 ### Bug Fixes
@@ -154,6 +167,7 @@ All notable changes to the Product Advisor Plugin for end users.
 
 | Version | Release Date | Highlights |
 |---------|--------------|------------|
+| 7.0.6 | 2026-01-30 | Plug-and-play for 6.5/6.6/6.7 |
 | 7.0.5 | 2026-01-26 | Shopware 6.6 ready-to-use fix |
 | 7.0.4 | 2026-01-15 | Changelog improvements |
 | 7.0.3 | 2026-01-13 | Store image correction |
