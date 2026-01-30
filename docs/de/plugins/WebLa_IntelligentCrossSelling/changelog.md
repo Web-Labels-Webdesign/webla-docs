@@ -4,6 +4,23 @@ Alle wichtigen Änderungen an Intelligentes Cross-Selling für Endbenutzer.
 
 ---
 
+## [5.0.1] - 2026-01-29
+
+### Fehlerbehebungen
+
+- **Empfehlungsgenauigkeit verbessert**: Kritischen Fehler behoben, bei dem Produktfilter über Eigenschafts-Iterationen akkumulierten und zunehmend falsche Ergebnisse lieferten
+- **Absturz bei fehlenden Produkten behoben**: Null-Prüfungen hinzugefügt, um Fehler zu verhindern, wenn ein Produkt nicht existiert oder keine Eigenschaften hat
+- **Variantenausschluss korrigiert**: Hauptartikel zeigen nun nicht mehr fälschlicherweise ihre eigenen Varianten im Cross-Selling
+- **Leere Kategorien behandelt**: Edge-Case behoben, bei dem leere Kategoriebäume Filterfehler verursachen konnten
+
+### Verbesserungen
+
+- **Performance optimiert**: Gewichtungs-Lookups verwenden nun O(1) Hash-Map statt O(n) linearer Suche
+- **Bessere Cache-Invalidierung**: Cache wird nun korrekt geleert, wenn Eigenschaftsgewichtungen oder Einstellungen geändert werden
+- **Verbesserte Gewichtungsvalidierung**: Ungültige Gewichtungen (null, Null, negativ) werden nun übersprungen
+
+---
+
 ## [5.0.0] - 2026-01-29
 
 ### Neu
@@ -59,6 +76,7 @@ Alle wichtigen Änderungen an Intelligentes Cross-Selling für Endbenutzer.
 
 | Version | Veröffentlichung | Highlights |
 |---------|------------------|------------|
+| 5.0.1 | 2026-01-29 | Kritische Bugfixes, Performance-Optimierung |
 | 5.0.0 | 2026-01-29 | Multi-Version-Support (SW 6.5-6.7) |
 | 4.1.0 | 2026-01-16 | Mehrsprachige Titel |
 | 4.0.1 | 2025-10-17 | Migrations-Bugfix |
