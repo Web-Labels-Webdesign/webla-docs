@@ -44,3 +44,12 @@ plugins:
       en: Capture and analyze UTM parameters and marketing referrals for your Shopware 6 orders.
     requirements: Shopware 6.5–6.8, PHP 8.1+
     version: "5.0.0"
+  - id: WebLa_BeautifiedSearch
+    name:
+      de: Suche als Overlay
+      en: Search as Overlay
+    short:
+      de: Erweitert die Shopware-Suche mit einem modernen Overlay. Zeigt Produkte, Kategorien, Blog-Artikel und Hersteller in einer benutzerfreundlichen Oberfläche.
+      en: Enhances Shopware search with a modern overlay interface. Displays products, categories, blog articles and manufacturers in user-friendly tabbed results.
+    requirements: Shopware 6.5–6.8, PHP 8.1+
+    version: "4.2.1"

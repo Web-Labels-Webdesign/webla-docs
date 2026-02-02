@@ -37,6 +37,7 @@ jobs:
             ["WebLa_CustomerSpecificDiscounts"]="WebLa_CustomerSpecificDiscounts"
             ["WebLa_IntelligentCrossSelling"]="WebLa_IntelligentCrossSelling"
             ["WebLa_UTMHandler"]="WebLa_UTMHandler"
+            ["WebLa_BeautifiedSearch"]="WebLa_BeautifiedSearch"
           )
 
           declare -A PLUGIN_FOLDERS=(
@@ -45,6 +46,7 @@ jobs:
             ["WebLa_CustomerSpecificDiscounts"]="WebLaCustomerSpecificDiscounts"
             ["WebLa_IntelligentCrossSelling"]="WebLa_IntelligentCrossSelling"
             ["WebLa_UTMHandler"]="WebLa_UTMHandler"
+            ["WebLa_BeautifiedSearch"]="WebLa_BeautifiedSearch"
           )
 
           # Supported languages
