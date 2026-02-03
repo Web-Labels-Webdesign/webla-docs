@@ -52,16 +52,20 @@ Price Comparison Site → Feed URL with source parameter → Shop recognizes sou
 3. **Customize export template**
    - Scroll to the **Template** section
    - Adjust the product URL (the `source` parameter is integrated into the seoUrl function):
+     {% raw %}
      ```twig
      {{ seoUrl('frontend.detail.page', {'productId': product.id, 'source': export.id}) }}
      ```
+     {% endraw %}
    - Add the sale price:
+     {% raw %}
      ```twig
      {% if 'discount' in product.extensions|keys %}
          {% set newPrice = product.extensions.discount['discount'].last %}
          {{ newPrice.unitPrice|number_format(context.currency.itemRounding.decimals, '.', '') }} {{ context.currency.isoCode }}
      {% endif %}
      ```
+     {% endraw %}
 
 4. **Test feed**
    - Click **Show Preview** at the bottom of the page
@@ -95,6 +99,7 @@ Price Comparison Site → Feed URL with source parameter → Shop recognizes sou
    - Scroll to the **Template** section
    - Use the following body template:
 
+{% raw %}
 ```xml
 <item>
 <g:id>{{ product.productNumber }}</g:id>
@@ -114,6 +119,7 @@ Price Comparison Site → Feed URL with source parameter → Shop recognizes sou
 <g:condition>new</g:condition>
 </item>
 ```
+{% endraw %}
 
 3. **Generate and test feed**
    - Click **Save**

@@ -60,25 +60,30 @@ Um die rabattierten Preise im Export-Feed anzuzeigen, müssen Sie Ihr Export-Tem
 
 Die URL muss den `source`-Parameter enthalten. Dieser wird direkt in die `seoUrl`-Funktion integriert:
 
+{% raw %}
 ```twig
 {{ seoUrl('frontend.detail.page', {'productId': product.id, 'source': export.id}) }}
 ```
+{% endraw %}
 
 Der `source`-Parameter ist entscheidend - er enthält die Export-ID und ermöglicht dem Plugin zu erkennen, von welchem Feed der Besucher kommt.
 
 **Für den rabattierten Preis (Sale Price):**
 
+{% raw %}
 ```twig
 {% if 'discount' in product.extensions|keys %}
     {% set newPrice = product.extensions.discount['discount'].last %}
     {{ newPrice.unitPrice|number_format(context.currency.itemRounding.decimals, '.', '') }} {{ context.currency.isoCode }}
 {% endif %}
 ```
+{% endraw %}
 
 ### Beispiel: Google Shopping Feed
 
 Fügen Sie folgenden Code in den **Product Row** Bereich Ihres Templates ein:
 
+{% raw %}
 ```xml
 <item>
     <g:id>{{ product.productNumber }}</g:id>
@@ -91,6 +96,7 @@ Fügen Sie folgenden Code in den **Product Row** Bereich Ihres Templates ein:
     {% endif %}
 </item>
 ```
+{% endraw %}
 
 ### Tipps & Best Practices
 

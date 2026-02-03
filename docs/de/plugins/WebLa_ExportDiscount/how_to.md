@@ -52,16 +52,20 @@ Preissuchmaschine → Feed-URL mit source-Parameter → Shop erkennt Quelle → 
 3. **Export-Template anpassen**
    - Scrollen Sie zum Bereich **Template**
    - Passen Sie die Produkt-URL an (der `source`-Parameter wird in die seoUrl-Funktion integriert):
+     {% raw %}
      ```twig
      {{ seoUrl('frontend.detail.page', {'productId': product.id, 'source': export.id}) }}
      ```
+     {% endraw %}
    - Fügen Sie den Sale-Preis hinzu:
+     {% raw %}
      ```twig
      {% if 'discount' in product.extensions|keys %}
          {% set newPrice = product.extensions.discount['discount'].last %}
          {{ newPrice.unitPrice|number_format(context.currency.itemRounding.decimals, '.', '') }} {{ context.currency.isoCode }}
      {% endif %}
      ```
+     {% endraw %}
 
 4. **Feed testen**
    - Klicken Sie auf **Vorschau anzeigen** am Ende der Seite
@@ -95,6 +99,7 @@ Preissuchmaschine → Feed-URL mit source-Parameter → Shop erkennt Quelle → 
    - Scrollen Sie zum **Template**-Bereich
    - Verwenden Sie folgendes Body-Template:
 
+{% raw %}
 ```xml
 <item>
 <g:id>{{ product.productNumber }}</g:id>
@@ -114,6 +119,7 @@ Preissuchmaschine → Feed-URL mit source-Parameter → Shop erkennt Quelle → 
 <g:condition>new</g:condition>
 </item>
 ```
+{% endraw %}
 
 3. **Feed generieren und testen**
    - Klicken Sie auf **Speichern**

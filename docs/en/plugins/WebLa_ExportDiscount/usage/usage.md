@@ -60,25 +60,30 @@ To display the discounted prices in the export feed, you need to customize your 
 
 The URL must contain the `source` parameter. This is integrated directly into the `seoUrl` function:
 
+{% raw %}
 ```twig
 {{ seoUrl('frontend.detail.page', {'productId': product.id, 'source': export.id}) }}
 ```
+{% endraw %}
 
 The `source` parameter is crucial - it contains the export ID and allows the plugin to identify which feed the visitor came from.
 
 **For the discounted price (Sale Price):**
 
+{% raw %}
 ```twig
 {% if 'discount' in product.extensions|keys %}
     {% set newPrice = product.extensions.discount['discount'].last %}
     {{ newPrice.unitPrice|number_format(context.currency.itemRounding.decimals, '.', '') }} {{ context.currency.isoCode }}
 {% endif %}
 ```
+{% endraw %}
 
 ### Example: Google Shopping Feed
 
 Add the following code to the **Product Row** section of your template:
 
+{% raw %}
 ```xml
 <item>
     <g:id>{{ product.productNumber }}</g:id>
@@ -91,6 +96,7 @@ Add the following code to the **Product Row** section of your template:
     {% endif %}
 </item>
 ```
+{% endraw %}
 
 ### Tips & Best Practices
 
