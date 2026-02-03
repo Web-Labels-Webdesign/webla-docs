@@ -38,6 +38,7 @@ jobs:
             ["WebLa_IntelligentCrossSelling"]="WebLa_IntelligentCrossSelling"
             ["WebLa_UTMHandler"]="WebLa_UTMHandler"
             ["WebLa_BeautifiedSearch"]="WebLa_BeautifiedSearch"
+            ["WebLa_ExportDiscount"]="WebLa_ExportDiscount"
           )
 
           declare -A PLUGIN_FOLDERS=(
@@ -47,6 +48,7 @@ jobs:
             ["WebLa_IntelligentCrossSelling"]="WebLa_IntelligentCrossSelling"
             ["WebLa_UTMHandler"]="WebLa_UTMHandler"
             ["WebLa_BeautifiedSearch"]="WebLa_BeautifiedSearch"
+            ["WebLa_ExportDiscount"]="WebLa_ExportDiscount"
           )
 
           # Supported languages
