@@ -233,14 +233,14 @@ Preissuchmaschine → Feed-URL mit source-Parameter → Shop erkennt Quelle → 
 
 ## Schnellreferenz
 
-| Aufgabe                       | Wichtige Schritte                                    | Erforderliche Einstellungen                |
-| ----------------------------- | ---------------------------------------------------- | ------------------------------------------ |
-| Globalen Rabatt einrichten    | Verkaufskanäle → Export → Rabatttyp/Wert             | Rabatttyp, Rabattwert                      |
-| Feed-Template anpassen        | Verkaufskanäle → Export → Template                   | URL mit source-Parameter, Preis-Variable   |
-| Artikel-Preis setzen          | Kataloge → Produkt → Zusatzfelder                    | Neuer Preis im Export (Brutto)             |
-| Nur Einzelkäufe               | Erweiterungen → Plugin → Konfigurieren               | Rabatt nur bei Einzelkäufen                |
-| Mehrere Produkte erlauben     | Erweiterungen → Plugin → Konfigurieren               | Mehrere rabattierte Produkte pro Session   |
-| API-Sessions löschen          | Erweiterungen → Plugin → Konfigurieren               | API-Sessions löschen Button                |
+| Aufgabe                    | Wichtige Schritte                        | Erforderliche Einstellungen              |
+| -------------------------- | ---------------------------------------- | ---------------------------------------- |
+| Globalen Rabatt einrichten | Verkaufskanäle → Export → Rabatttyp/Wert | Rabatttyp, Rabattwert                    |
+| Feed-Template anpassen     | Verkaufskanäle → Export → Template       | URL mit source-Parameter, Preis-Variable |
+| Artikel-Preis setzen       | Kataloge → Produkt → Zusatzfelder        | Neuer Preis im Export (Brutto)           |
+| Nur Einzelkäufe            | Erweiterungen → Plugin → Konfigurieren   | Rabatt nur bei Einzelkäufen              |
+| Mehrere Produkte erlauben  | Erweiterungen → Plugin → Konfigurieren   | Mehrere rabattierte Produkte pro Session |
+| API-Sessions löschen       | Erweiterungen → Plugin → Konfigurieren   | API-Sessions löschen Button              |
 
 ---
 

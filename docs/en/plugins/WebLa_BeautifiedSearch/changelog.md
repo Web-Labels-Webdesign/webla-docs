@@ -4,6 +4,14 @@ All notable changes to the "Search as Overlay" plugin for end users.
 
 ---
 
+## [4.2.2] - 2026-02-03
+
+### :bug: Bug Fixes
+
+- **Category Search**: Fixed inactive categories appearing in search results, which caused 404 errors when clicked
+
+---
+
 ## [4.2.1] - 2026-02-02
 
 ### :bug: Bug Fixes
@@ -116,6 +124,7 @@ All notable changes to the "Search as Overlay" plugin for end users.
 
 | Version | Release Date | Highlights                               |
 | ------- | ------------ | ---------------------------------------- |
+| 4.2.2   | 2026-02-03   | Fix inactive categories in search results |
 | 4.2.1   | 2026-02-02   | LibSass compatibility fix for Shopware 6.5 |
 | 4.2.0   | 2026-02-02   | Modern view mode with side-by-side layout |
 | 4.1.0   | 2026-01-30   | Category sidebar on search results page  |

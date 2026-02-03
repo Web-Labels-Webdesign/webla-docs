@@ -233,14 +233,14 @@ Price Comparison Site → Feed URL with source parameter → Shop recognizes sou
 
 ## Quick Reference
 
-| Task                          | Key Steps                                              | Required Settings                           |
-| ----------------------------- | ------------------------------------------------------ | ------------------------------------------- |
-| Set up global discount        | Sales Channels → Export → Discount Type/Value          | Discount Type, Discount Value               |
-| Customize feed template       | Sales Channels → Export → Template                     | URL with source parameter, Price variable   |
-| Set item price                | Catalogues → Product → Custom Fields                   | New price in export (gross)                 |
-| Single purchases only         | Extensions → Plugin → Configure                        | Discount only for single-unit purchases     |
-| Allow multiple products       | Extensions → Plugin → Configure                        | Allow multiple discounted products per session |
-| Delete API sessions           | Extensions → Plugin → Configure                        | Delete API sessions button                  |
+| Task                    | Key Steps                                     | Required Settings                              |
+| ----------------------- | --------------------------------------------- | ---------------------------------------------- |
+| Set up global discount  | Sales Channels → Export → Discount Type/Value | Discount Type, Discount Value                  |
+| Customize feed template | Sales Channels → Export → Template            | URL with source parameter, Price variable      |
+| Set item price          | Catalogues → Product → Custom Fields          | New price in export (gross)                    |
+| Single purchases only   | Extensions → Plugin → Configure               | Discount only for single-unit purchases        |
+| Allow multiple products | Extensions → Plugin → Configure               | Allow multiple discounted products per session |
+| Delete API sessions     | Extensions → Plugin → Configure               | Delete API sessions button                     |
 
 ---
 
