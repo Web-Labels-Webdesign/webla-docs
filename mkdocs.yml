@@ -37,7 +37,6 @@ plugins:
         - en
   - awesome-pages
   - optimize
-  - privacy
   - macros:
       include_yaml:
         - data/plugins.yml
