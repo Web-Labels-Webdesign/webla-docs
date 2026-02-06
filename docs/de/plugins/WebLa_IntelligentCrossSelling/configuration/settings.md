@@ -2,13 +2,49 @@
 
 Dieses Dokument beschreibt alle verfügbaren Einstellungen für Intelligentes Cross-Selling.
 
+---
+
+## Plugin-Konfiguration
+
+**Navigation**: Erweiterungen → Meine Erweiterungen → Intelligentes Cross Selling → Konfigurieren
+
+Dies sind globale Plugin-Einstellungen, die alle Cross-Selling-Konfigurationen betreffen.
+
+### Alle passenden Konfigurationen anzeigen
+
+| Eigenschaft      | Wert     |
+| ---------------- | -------- |
+| **Typ**          | Schalter |
+| **Standard**     | Aus      |
+| **Erforderlich** | Nein     |
+
+**Beschreibung**: Wenn aktiviert, werden bei Produkten, die mehreren Cross-Selling-Konfigurationen entsprechen, alle angezeigt. Wenn deaktiviert, wird nur die Konfiguration mit der höchsten Priorität angezeigt.
+
+**Anwendungsbeispiel**: Aktivieren Sie diese Option, wenn Sie mehrere Cross-Selling-Strategien haben (z.B. eine für Farbabstimmung, eine andere für Materialabstimmung) und alle relevanten Empfehlungen zeigen möchten.
+
+---
+
+## Cross-Selling-Konfigurationen
+
 **Navigation**: Erweiterungen → Intelligentes Cross Selling
+
+Ab Version 5.1.0 können Sie mehrere Cross-Selling-Konfigurationen erstellen, jede mit eigenen Einstellungen, Eigenschaftsgewichtungen und Zuweisungsregeln.
+
+### Konfigurationsliste
+
+Die Hauptseite zeigt alle Ihre Cross-Selling-Konfigurationen mit:
+- **Titel**: Der Name der Konfiguration
+- **Zuweisungstyp**: Global, Kategorie oder Dynamische Produktgruppe
+- **Priorität**: Bestimmt, welche Konfiguration gewinnt, wenn ein Produkt mehreren entspricht
+- **Aktiv**: Ob diese Konfiguration aktiviert ist
+
+Klicken Sie auf eine Konfiguration, um sie zu bearbeiten, oder verwenden Sie **"Konfiguration hinzufügen"**, um eine neue zu erstellen.
 
 ---
 
 ## Cross Selling Einstellungen
 
-Diese Einstellungen steuern das grundlegende Verhalten des Plugins.
+Diese Einstellungen steuern das Verhalten jeder einzelnen Cross-Selling-Konfiguration.
 
 ### Titel
 
@@ -50,9 +86,67 @@ Diese Einstellungen steuern das grundlegende Verhalten des Plugins.
 | **Standard**     | Aus      |
 | **Erforderlich** | Nein     |
 
-**Beschreibung**: Aktiviert oder deaktiviert das intelligente Cross-Selling. Wenn deaktiviert, werden nur die nativen Shopware Cross-Selling-Regeln verwendet.
+**Beschreibung**: Aktiviert oder deaktiviert diese Cross-Selling-Konfiguration. Wenn deaktiviert, wird diese Konfiguration nicht für Empfehlungen verwendet.
 
 **Anwendungsbeispiel**: Deaktivieren Sie diese Option vorübergehend, wenn Sie die Gewichtungen anpassen möchten, ohne dass Kunden unvollständige Empfehlungen sehen.
+
+---
+
+### Priorität
+
+| Eigenschaft      | Wert       |
+| ---------------- | ---------- |
+| **Typ**          | Zahlenfeld |
+| **Standard**     | 0          |
+| **Erforderlich** | Nein       |
+| **Minimum**      | 0          |
+
+**Beschreibung**: Bestimmt die Reihenfolge, in der Konfigurationen ausgewertet werden. Konfigurationen mit höherer Priorität werden zuerst geprüft. Wenn ein Produkt mehreren Konfigurationen entspricht, gewinnt die mit der höchsten Priorität (es sei denn, "Alle passenden Konfigurationen anzeigen" ist aktiviert).
+
+**Anwendungsbeispiel**: Setzen Sie Priorität 100 für kategoriespezifische Regeln, 50 für Produktgruppen-Regeln und 0 für globale Fallback-Regeln.
+
+---
+
+### Zuweisungstyp
+
+| Eigenschaft      | Wert                                              |
+| ---------------- | ------------------------------------------------- |
+| **Typ**          | Auswahl                                           |
+| **Standard**     | Global                                            |
+| **Optionen**     | Global, Kategorie, Dynamische Produktgruppe       |
+| **Erforderlich** | Ja                                                |
+
+**Beschreibung**: Bestimmt, für welche Produkte diese Konfiguration gilt.
+
+- **Global**: Diese Konfiguration gilt für alle Produkte (Fallback)
+- **Kategorie**: Diese Konfiguration gilt nur für Produkte in ausgewählten Kategorien
+- **Dynamische Produktgruppe**: Diese Konfiguration gilt nur für Produkte, die ausgewählten dynamischen Produktgruppen (Product Streams) entsprechen
+
+**Anwendungsbeispiel**: Erstellen Sie eine "Mode"-Konfiguration mit farbbetonten Gewichtungen für Ihre Bekleidungskategorie und eine "Technik"-Konfiguration mit markenbetonten Gewichtungen für Ihre Elektronikkategorie.
+
+---
+
+### Kategorien (bei Zuweisungstyp = Kategorie)
+
+| Eigenschaft      | Wert                    |
+| ---------------- | ----------------------- |
+| **Typ**          | Mehrfachauswahl         |
+| **Standard**     | (leer)                  |
+| **Erforderlich** | Bei Typ=Kategorie       |
+
+**Beschreibung**: Wählen Sie, für welche Kategorien diese Konfiguration gelten soll. Produkte in diesen Kategorien (einschließlich Unterkategorien) verwenden diese Cross-Selling-Konfiguration.
+
+---
+
+### Dynamische Produktgruppen (bei Zuweisungstyp = Dynamische Produktgruppe)
+
+| Eigenschaft      | Wert                              |
+| ---------------- | --------------------------------- |
+| **Typ**          | Mehrfachauswahl                   |
+| **Standard**     | (leer)                            |
+| **Erforderlich** | Bei Typ=Dynamische Produktgruppe  |
+
+**Beschreibung**: Wählen Sie, für welche dynamischen Produktgruppen (Product Streams) diese Konfiguration gelten soll. Produkte, die diesen Streams entsprechen, verwenden diese Cross-Selling-Konfiguration.
 
 ---
 

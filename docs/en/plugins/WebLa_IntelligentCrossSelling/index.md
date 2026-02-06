@@ -12,6 +12,9 @@ The more properties a product shares with another and the higher the weighting o
 
 ## Key Features
 
+- **Multiple Configurations**: Create separate cross-selling configurations for different product groups with individual settings and weights
+- **Category & Product Stream Assignment**: Assign configurations to categories or dynamic product groups for targeted recommendations
+- **Priority-Based Resolution**: Control which configuration applies when products match multiple rules
 - **Automatic Product Recommendations**: No more manual maintenance of cross-selling rules – the plugin automatically identifies matching products
 - **Weighted Properties**: Define which product properties (color, material, size, etc.) should be weighted and how strongly
 - **Flexible Filter Options**: Restrict recommendations to the same category, main articles only, or variants only

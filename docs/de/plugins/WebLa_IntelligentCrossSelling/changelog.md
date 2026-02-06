@@ -4,6 +4,28 @@ Alle wichtigen Änderungen an Intelligentes Cross-Selling für Endbenutzer.
 
 ---
 
+## [5.1.0] - 2026-02-05
+
+### Neu
+
+- **Mehrere Konfigurationen**: Erstellen Sie mehrere Cross-Selling-Konfigurationen, jede mit eigenen Eigenschaftsgewichtungen und Einstellungen
+- **Kategoriezuweisung**: Weisen Sie Konfigurationen bestimmten Kategorien zu - Produkte in diesen Kategorien verwenden diese Konfiguration
+- **Dynamische Produktgruppen-Zuweisung**: Weisen Sie Konfigurationen dynamischen Produktgruppen (Product Streams) für flexible Ausrichtung zu
+- **Prioritätsbasierte Auflösung**: Setzen Sie Prioritäten, um zu steuern, welche Konfiguration gewinnt, wenn ein Produkt mehreren entspricht
+- **Alle passenden anzeigen**: Neue Plugin-Einstellung, um alle passenden Konfigurationen statt nur der höchsten Priorität anzuzeigen
+
+### Fehlerbehebungen
+
+- **Shopware 6.7 Kompatibilität**: Entity-Multi-Select-Komponenten funktionieren nun korrekt in Shopware 6.7 (Vue 3)
+- **Versionsübergreifende Unterstützung**: Entity-Selektoren funktionieren jetzt korrekt auf Shopware 6.5, 6.6 und 6.7
+
+### Verbesserungen
+
+- **Überarbeitete Admin-Oberfläche**: Neues Listen-/Detail-Muster zur Verwaltung mehrerer Konfigurationen
+- **Bessere Organisation**: Gruppieren Sie Cross-Selling-Regeln nach Produktkategorien oder dynamischen Gruppen
+
+---
+
 ## [5.0.1] - 2026-01-29
 
 ### Fehlerbehebungen
@@ -76,6 +98,7 @@ Alle wichtigen Änderungen an Intelligentes Cross-Selling für Endbenutzer.
 
 | Version | Veröffentlichung | Highlights |
 |---------|------------------|------------|
+| 5.1.0 | 2026-02-05 | Mehrere Konfigurationen, Kategorie-/Stream-Zuweisung |
 | 5.0.1 | 2026-01-29 | Kritische Bugfixes, Performance-Optimierung |
 | 5.0.0 | 2026-01-29 | Multi-Version-Support (SW 6.5-6.7) |
 | 4.1.0 | 2026-01-16 | Mehrsprachige Titel |

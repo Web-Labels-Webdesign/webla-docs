@@ -12,6 +12,9 @@ Je mehr Eigenschaften ein Produkt mit einem anderen teilt und je höher die Gewi
 
 ## Hauptfunktionen
 
+- **Mehrere Konfigurationen**: Erstellen Sie separate Cross-Selling-Konfigurationen für verschiedene Produktgruppen mit individuellen Einstellungen und Gewichtungen
+- **Kategorie- & Produktgruppen-Zuweisung**: Weisen Sie Konfigurationen Kategorien oder dynamischen Produktgruppen für gezielte Empfehlungen zu
+- **Prioritätsbasierte Auflösung**: Steuern Sie, welche Konfiguration gilt, wenn Produkte mehreren Regeln entsprechen
 - **Automatische Produktempfehlungen**: Keine manuelle Pflege von Cross-Selling-Regeln mehr – das Plugin erkennt automatisch zusammenpassende Produkte
 - **Gewichtete Eigenschaften**: Definieren Sie selbst, welche Produkteigenschaften (Farbe, Material, Größe etc.) wie stark gewichtet werden
 - **Flexible Filteroptionen**: Beschränken Sie Empfehlungen auf dieselbe Kategorie, nur Hauptartikel oder nur Varianten

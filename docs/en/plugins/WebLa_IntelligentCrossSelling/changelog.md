@@ -4,6 +4,28 @@ All notable changes to Intelligent Cross-Selling for end users.
 
 ---
 
+## [5.1.0] - 2026-02-05
+
+### New Features
+
+- **Multiple Configurations**: Create multiple cross-selling configurations, each with its own property weights and settings
+- **Category Assignment**: Assign configurations to specific categories - products in those categories use that configuration
+- **Dynamic Product Group Assignment**: Assign configurations to dynamic product groups (Product Streams) for flexible targeting
+- **Priority-Based Resolution**: Set priorities to control which configuration wins when a product matches multiple
+- **Show All Matching**: New plugin setting to show all matching configurations instead of just the highest priority one
+
+### Bug Fixes
+
+- **Shopware 6.7 Compatibility**: Fixed entity multi-select components not working in Shopware 6.7 (Vue 3)
+- **Cross-Version Support**: Entity selectors now work correctly on Shopware 6.5, 6.6, and 6.7
+
+### Improvements
+
+- **Restructured Admin UI**: New list/detail pattern for managing multiple configurations
+- **Better Organization**: Group cross-selling rules by product categories or dynamic groups
+
+---
+
 ## [5.0.1] - 2026-01-29
 
 ### Bug Fixes
@@ -76,6 +98,7 @@ All notable changes to Intelligent Cross-Selling for end users.
 
 | Version | Release Date | Highlights |
 |---------|--------------|------------|
+| 5.1.0 | 2026-02-05 | Multiple configurations, category/stream assignment |
 | 5.0.1 | 2026-01-29 | Critical bug fixes, performance optimization |
 | 5.0.0 | 2026-01-29 | Multi-version support (SW 6.5-6.7) |
 | 4.1.0 | 2026-01-16 | Multilingual titles |

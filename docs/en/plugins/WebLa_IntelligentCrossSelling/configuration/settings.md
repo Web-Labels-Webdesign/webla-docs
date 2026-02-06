@@ -2,13 +2,49 @@
 
 This document describes all available settings for Intelligent Cross-Selling.
 
+---
+
+## Plugin Configuration
+
+**Navigation**: Extensions → My Extensions → Intelligent Cross Selling → Configure
+
+These are global plugin settings that affect all cross-selling configurations.
+
+### Show All Matching Configurations
+
+| Property     | Value  |
+| ------------ | ------ |
+| **Type**     | Switch |
+| **Default**  | Off    |
+| **Required** | No     |
+
+**Description**: When enabled, products that match multiple cross-selling configurations will show all of them. When disabled, only the highest priority configuration is displayed.
+
+**Example Use Case**: Enable this option when you have multiple cross-selling strategies (e.g., one for color matching, another for material matching) and want to show all relevant recommendations to customers.
+
+---
+
+## Cross-Selling Configurations
+
 **Navigation**: Extensions → Intelligent Cross Selling
+
+Starting with version 5.1.0, you can create multiple cross-selling configurations, each with its own settings, property weights, and assignment rules.
+
+### Configuration List
+
+The main page shows all your cross-selling configurations with:
+- **Title**: The name of the configuration
+- **Assignment Type**: Global, Category, or Dynamic Product Group
+- **Priority**: Determines which configuration wins when a product matches multiple
+- **Active**: Whether this configuration is enabled
+
+Click on a configuration to edit it, or use **"Add configuration"** to create a new one.
 
 ---
 
 ## Cross Selling Settings
 
-These settings control the basic behavior of the plugin.
+These settings control the behavior of each individual cross-selling configuration.
 
 ### Title
 
@@ -50,9 +86,67 @@ These settings control the basic behavior of the plugin.
 | **Default**  | Off    |
 | **Required** | No     |
 
-**Description**: Enables or disables intelligent cross-selling. When disabled, only native Shopware cross-selling rules will be used.
+**Description**: Enables or disables this cross-selling configuration. When disabled, this configuration will not be used for recommendations.
 
 **Example Use Case**: Temporarily disable this option when adjusting weights without customers seeing incomplete recommendations.
+
+---
+
+### Priority
+
+| Property     | Value        |
+| ------------ | ------------ |
+| **Type**     | Number field |
+| **Default**  | 0            |
+| **Required** | No           |
+| **Minimum**  | 0            |
+
+**Description**: Determines the order in which configurations are evaluated. Higher priority configurations are checked first. When a product matches multiple configurations, the one with the highest priority wins (unless "Show all matching configurations" is enabled).
+
+**Example Use Case**: Set priority 100 for category-specific rules, 50 for product stream rules, and 0 for global fallback rules.
+
+---
+
+### Assignment Type
+
+| Property     | Value                                          |
+| ------------ | ---------------------------------------------- |
+| **Type**     | Select                                         |
+| **Default**  | Global                                         |
+| **Options**  | Global, Category, Dynamic Product Group        |
+| **Required** | Yes                                            |
+
+**Description**: Determines which products this configuration applies to.
+
+- **Global**: This configuration applies to all products (fallback)
+- **Category**: This configuration applies only to products in selected categories
+- **Dynamic Product Group**: This configuration applies only to products matching selected dynamic product groups (Product Streams)
+
+**Example Use Case**: Create a "Fashion" configuration with color-heavy weights assigned to your Clothing category, and a "Technical" configuration with brand-heavy weights assigned to your Electronics category.
+
+---
+
+### Categories (when Assignment Type = Category)
+
+| Property     | Value              |
+| ------------ | ------------------ |
+| **Type**     | Multi-select       |
+| **Default**  | (empty)            |
+| **Required** | When type=Category |
+
+**Description**: Select which categories this configuration should apply to. Products in these categories (including subcategories) will use this cross-selling configuration.
+
+---
+
+### Dynamic Product Groups (when Assignment Type = Dynamic Product Group)
+
+| Property     | Value                       |
+| ------------ | --------------------------- |
+| **Type**     | Multi-select                |
+| **Default**  | (empty)                     |
+| **Required** | When type=Dynamic Product Group |
+
+**Description**: Select which dynamic product groups (Product Streams) this configuration should apply to. Products matching these streams will use this cross-selling configuration.
 
 ---
 
