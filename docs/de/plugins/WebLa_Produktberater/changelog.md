@@ -4,6 +4,14 @@ Alle wichtigen Änderungen am Produkt Berater Plugin für Endbenutzer.
 
 ---
 
+## [7.0.7] - 2026-02-09
+
+### Fehlerbehebungen
+
+- :bug: **Sprunglogik-Bearbeitung**: Das Feld „Springe zu Frage (Position)" in der Antwortliste war nicht editierbar. Das Feld unterstützt jetzt die Inline-Bearbeitung wie vorgesehen.
+
+---
+
 ## [7.0.6] - 2026-01-30
 
 ### Neue Funktionen
@@ -167,6 +175,7 @@ Alle wichtigen Änderungen am Produkt Berater Plugin für Endbenutzer.
 
 | Version | Veröffentlichung | Highlights |
 |---------|-----------------|------------|
+| 7.0.7 | 2026-02-09 | Sprunglogik-Bearbeitungs-Fix |
 | 7.0.6 | 2026-01-30 | Plug-and-Play für 6.5/6.6/6.7 |
 | 7.0.5 | 2026-01-26 | Shopware 6.6 Sofort-Einsatz-Fix |
 | 7.0.4 | 2026-01-15 | Changelog-Verbesserungen |

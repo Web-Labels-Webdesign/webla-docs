@@ -4,6 +4,14 @@ All notable changes to the Product Advisor Plugin for end users.
 
 ---
 
+## [7.0.7] - 2026-02-09
+
+### Bug Fixes
+
+- :bug: **Jump logic editing**: Fixed the "Jump to Question (Position)" field in the answer list being non-editable. The field now supports inline editing as intended.
+
+---
+
 ## [7.0.6] - 2026-01-30
 
 ### New Features
@@ -167,6 +175,7 @@ All notable changes to the Product Advisor Plugin for end users.
 
 | Version | Release Date | Highlights |
 |---------|--------------|------------|
+| 7.0.7 | 2026-02-09 | Jump logic editing fix |
 | 7.0.6 | 2026-01-30 | Plug-and-play for 6.5/6.6/6.7 |
 | 7.0.5 | 2026-01-26 | Shopware 6.6 ready-to-use fix |
 | 7.0.4 | 2026-01-15 | Changelog improvements |
