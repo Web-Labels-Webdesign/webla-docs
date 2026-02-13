@@ -4,6 +4,14 @@ All notable changes to Customer Specific Discounts for end users.
 
 ---
 
+## [1.4.1] - 2026-02-13
+
+### Improvements
+
+- **Set Konfigurator Compatibility**: Added support for product sets from the Set Konfigurator plugin. Product sets now receive customer-specific discounts and display savings correctly in cart and checkout.
+
+---
+
 ## [1.4.0] - 2026-01-28
 
 ### New Features
@@ -71,6 +79,7 @@ All notable changes to Customer Specific Discounts for end users.
 
 | Version | Release Date | Highlights |
 | ------- | ------------ | ---------- |
+| 1.4.1   | 2026-02-13   | Set Konfigurator compatibility |
 | 1.4.0   | 2026-01-28   | Guest discounts, Shopware 6.7+ caching improvements |
 | 1.2.0   | 2026-01-26   | Customer group discounts on categories/product groups |
 | 1.1.0   | 2026-01-25   | Product discounts, global customer discounts, extended priority modes |
@@ -105,6 +114,7 @@ After updating:
 
 | Plugin Version | Shopware Version | PHP Version |
 | -------------- | ---------------- | ----------- |
+| 1.4.1          | 6.5.0 - 6.7.x    | 8.1+        |
 | 1.4.0          | 6.5.0 - 6.7.x    | 8.1+        |
 | 1.2.0          | 6.5.0 - 6.7.x    | 8.1+        |
 | 1.1.0          | 6.5.0 - 6.7.x    | 8.1+        |

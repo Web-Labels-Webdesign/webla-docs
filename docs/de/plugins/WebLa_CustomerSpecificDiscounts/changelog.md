@@ -4,6 +4,14 @@ Alle wichtigen Änderungen an Kundenspezifische Rabatte für Endbenutzer.
 
 ---
 
+## [1.4.1] - 2026-02-13
+
+### Verbesserungen
+
+- **Set Konfigurator Kompatibilität**: Unterstützung für Produkt-Sets des Set Konfigurator Plugins hinzugefügt. Produkt-Sets erhalten nun kundenspezifische Rabatte und zeigen Ersparnisse korrekt im Warenkorb und Checkout an.
+
+---
+
 ## [1.4.0] - 2026-01-28
 
 ### Neue Funktionen
@@ -71,6 +79,7 @@ Alle wichtigen Änderungen an Kundenspezifische Rabatte für Endbenutzer.
 
 | Version | Veröffentlichung | Highlights |
 | ------- | ---------------- | ---------- |
+| 1.4.1   | 2026-02-13       | Set Konfigurator Kompatibilität |
 | 1.4.0   | 2026-01-28       | Gast-Rabatte, Shopware 6.7+ Caching-Verbesserungen |
 | 1.2.0   | 2026-01-26       | Kundengruppen-Rabatte auf Kategorien/Produktgruppen |
 | 1.1.0   | 2026-01-25       | Produktrabatte, globale Kundenrabatte, erweiterte Prioritätsmodi |
@@ -105,6 +114,7 @@ Nach dem Update:
 
 | Plugin-Version | Shopware-Version | PHP-Version |
 | -------------- | ---------------- | ----------- |
+| 1.4.1          | 6.5.0 - 6.7.x    | 8.1+        |
 | 1.4.0          | 6.5.0 - 6.7.x    | 8.1+        |
 | 1.2.0          | 6.5.0 - 6.7.x    | 8.1+        |
 | 1.1.0          | 6.5.0 - 6.7.x    | 8.1+        |

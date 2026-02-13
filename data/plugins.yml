@@ -25,7 +25,7 @@ plugins:
       de: Vergeben Sie individuelle Rabatte pro Kunde auf Kategorien, Produktgruppen oder die gesamte Kundengruppe.
       en: Assign individual discounts per customer on categories, product groups, or entire customer groups.
     requirements: Shopware 6.5–6.8, PHP 8.1+
-    version: "1.4.0"
+    version: "1.4.1"
   - id: WebLa_IntelligentCrossSelling
     name:
       de: Intelligentes Cross-Selling
@@ -72,11 +72,11 @@ plugins:
     requirements: Shopware 6.5–6.8, PHP 8.1+
     version: "5.0.3"
   - id: WebLa_Zusatzoptionen
-    name: 
+    name:
       de: Zusatzoptionen
       en: Additional Options
     short:
       de: Erweitern Sie Produkte mit konfigurierbaren Zusatzoptionen, individueller Preisgestaltung, Versandbeschränkungen und automatischer Zuweisung durch Produktströme für mehr Flexibilität.
       en: Add flexible additional options to products with custom pricing, shipping restrictions, and automated assignment via product streams for enhanced product configuration.
     requirements: Shopware 6.6–6.8, PHP 8.1+
-    version: "1.0.0"
+    version: "5.0.0"
