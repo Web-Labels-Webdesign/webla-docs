@@ -40,6 +40,7 @@ jobs:
             ["WebLa_BeautifiedSearch"]="WebLa_BeautifiedSearch"
             ["WebLa_ExportDiscount"]="WebLa_ExportDiscount"
             ["WebLa_ProductSliderAdvanced"]="WebLa_ProductSliderAdvanced"
+            ["WebLa_Zusatzoptionen"]="WebLa_Zusatzoptionen"
           )
 
           declare -A PLUGIN_FOLDERS=(
@@ -51,6 +52,7 @@ jobs:
             ["WebLa_BeautifiedSearch"]="WebLa_BeautifiedSearch"
             ["WebLa_ExportDiscount"]="WebLa_ExportDiscount"
             ["WebLa_ProductSliderAdvanced"]="WebLa_ProductSliderAdvanced"
+            ["WebLa_Zusatzoptionen"]="webla_zusatzoptionen"
           )
 
           # Supported languages
