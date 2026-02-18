@@ -4,6 +4,34 @@ Alle wichtigen Änderungen an Kundenspezifische Rabatte für Endbenutzer.
 
 ---
 
+## [1.5.2] - 2026-02-17
+
+### Fehlerbehebungen
+
+- **Warenkorb-Produktladen**: Fehler behoben, bei dem Produktentitäten nach Seitenneuladen oder aus dem Cache nicht zuverlässig in den Warenkorbdaten verfügbar waren, wodurch die Zuordnung von Kategorie-/Produktstrom-Rabatten fehlschlug. Lädt nun Produkte direkt aus dem Repository als Fallback, um eine konsistente Rabattanwendung zu gewährleisten.
+
+### Verbesserungen
+
+- **Performance**: Produktladen optimiert, um nur notwendige IDs abzurufen, ohne vollständige Kategorie- und Stream-Assoziationen zu laden, wodurch die Datenbankbelastung reduziert wird.
+
+---
+
+## [1.5.1] - 2026-02-17
+
+### Fehlerbehebungen
+
+- **Warenkorb-Rabatt-Zuordnung**: Fehler behoben, bei dem Kundengruppen-Kategorie-/Produktstrom-Rabatte im Warenkorb nicht korrekt erkannt wurden, wodurch der globale Gruppenrabatt anstelle des spezifischeren gezielten Rabatts angewendet wurde. Der Warenkorb lädt nun korrekt Produktentitäten, um Kategorie- und Produktstrom-IDs abzugleichen, was ein konsistentes Rabattverhalten zwischen Produktseiten und Warenkorb gewährleistet.
+
+---
+
+## [1.5.0] - 2026-02-17
+
+### Neue Funktionen
+
+- **Kundengruppen-Kategorie-Priorität-Einstellung**: Neue Konfigurationsoption, um Kundengruppen-Kategorie-/Produktstrom-Rabatten absolute Priorität zu geben. Wenn aktiviert, haben gezielte Kategorie- oder Produktstrom-Rabatte, die Kundengruppen zugewiesen sind, Vorrang vor allen anderen Rabattarten und umgehen den Rabatt-Prioritätsmodus. Dies stellt sicher, dass speziell zugewiesene Gruppenrabatte immer gelten, unabhängig von den globalen Einstellungen.
+
+---
+
 ## [1.4.1] - 2026-02-13
 
 ### Verbesserungen

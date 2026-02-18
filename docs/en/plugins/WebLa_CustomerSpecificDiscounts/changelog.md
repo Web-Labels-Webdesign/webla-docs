@@ -4,6 +4,34 @@ All notable changes to Customer Specific Discounts for end users.
 
 ---
 
+## [1.5.2] - 2026-02-17
+
+### Bug Fixes
+
+- **Cart Product Loading**: Fixed issue where product entities were not reliably available in cart data after page reload or from cache, causing category/product stream discount matching to fail. Now fetches products directly from repository as fallback to ensure consistent discount application.
+
+### Improvements
+
+- **Performance**: Optimized product loading to only fetch necessary IDs without loading full category and stream associations, reducing database overhead.
+
+---
+
+## [1.5.1] - 2026-02-17
+
+### Bug Fixes
+
+- **Cart Discount Matching**: Fixed an issue where customer group category/product stream discounts were not properly detected in the cart, causing the global group discount to be applied instead of the more specific targeted discount. The cart now correctly loads product entities to match category and product stream IDs, ensuring consistent discount behavior between product pages and cart.
+
+---
+
+## [1.5.0] - 2026-02-17
+
+### New Features
+
+- **Customer Group Category Priority Setting**: New configuration option to give absolute priority to customer group category/product stream discounts. When enabled, targeted category or product stream discounts assigned to customer groups take precedence over all other discount types, bypassing the discount priority mode. This ensures specifically assigned group discounts always apply, regardless of global settings.
+
+---
+
 ## [1.4.1] - 2026-02-13
 
 ### Improvements

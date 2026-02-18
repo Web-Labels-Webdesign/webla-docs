@@ -85,6 +85,26 @@ Dieses Dokument beschreibt alle verfügbaren Einstellungen für Kundenspezifisch
 
 ---
 
+### Dyn. Produktgruppe/Kategorie von Kundengruppen haben Priorität
+
+| Eigenschaft      | Wert     |
+| ---------------- | -------- |
+| **Typ**          | Schalter |
+| **Standard**     | Aus      |
+| **Erforderlich** | Nein     |
+
+**Beschreibung**: Wenn aktiviert, haben Kategorie- oder Produktstrom-Rabatte, die Kundengruppen zugewiesen sind, absolute Priorität vor allen anderen Rabattarten und umgehen den Rabatt-Prioritätsmodus.
+
+**Optionen**:
+- `Aktiviert`: Wenn ein Produkt mit einer Kundengruppen-Kategorie-/Produktstrom-Rabattregel übereinstimmt, gewinnt dieser Rabatt immer, unabhängig von der Prioritätsmodus-Einstellung
+- `Deaktiviert`: Alle Rabattarten werden gemäß dem Rabatt-Prioritätsmodus ausgewertet (Standardverhalten)
+
+**Anwendungsbeispiel**: Sie haben eine Kundengruppe mit sowohl einem globalen 20%-Rabatt als auch einem 25%-Rabatt auf bestimmte Kategorien. Mit Prioritätsmodus "Niedrigerer Rabatt gewinnt" würde normalerweise der 20%-Rabatt gelten. Aktivieren Sie diese Einstellung, um sicherzustellen, dass der gezielter definierte 25%-Kategorierabatt immer Vorrang hat.
+
+**Hinweis**: Diese Einstellung wirkt sich nur auf Produkte aus, die mit einer Kategorie- oder Produktstrom-Rabattregel übereinstimmen, die der Kundengruppe zugewiesen ist. Für Produkte, die mit keiner gezielten Regel übereinstimmen, gilt die normale Prioritätsmodus-Logik.
+
+---
+
 ### Kundengruppen-Rabatte aktivieren
 
 | Eigenschaft      | Wert     |

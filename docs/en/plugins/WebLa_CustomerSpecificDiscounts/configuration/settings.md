@@ -85,6 +85,26 @@ This document describes all available settings for Customer Specific Discounts.
 
 ---
 
+### Dynamic Product Group/Category from Customer Groups Have Priority
+
+| Property     | Value  |
+| ------------ | ------ |
+| **Type**     | Switch |
+| **Default**  | Off    |
+| **Required** | No     |
+
+**Description**: When enabled, category or product stream discounts assigned to customer groups take absolute priority over all other discount types, bypassing the discount priority mode.
+
+**Options**:
+- `Enabled`: If a product matches a customer group category/product stream discount rule, that discount always wins regardless of the priority mode setting
+- `Disabled`: All discount types are evaluated according to the discount priority mode (default behavior)
+
+**Example Use Case**: You have a customer group with both a 20% global discount and a 25% discount on specific categories. With priority mode set to "Lower discount wins", the 20% would normally apply. Enable this setting to ensure the more targeted 25% category discount always takes precedence.
+
+**Note**: This setting only affects products that match a category or product stream discount rule assigned to the customer group. For products not matching any targeted rule, the normal priority mode logic applies.
+
+---
+
 ### Enable Customer Group Discounts
 
 | Property     | Value  |
