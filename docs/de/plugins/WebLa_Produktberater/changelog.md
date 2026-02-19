@@ -4,6 +4,14 @@ Alle wichtigen Änderungen am Produkt Berater Plugin für Endbenutzer.
 
 ---
 
+## [7.0.8] - 2026-02-19
+
+### Fehlerbehebungen
+
+- :bug: **Produktstream liefert keine Produkte (Shopware 6.7)**: Problem behoben, bei dem Berater mit konfiguriertem Produktstream auf Shopware 6.7 keine Produkte zurücklieferten. Ursache war ein Registry-Initialisierungsfehler durch direkte `ProductDefinition`-Injektion. Die Lösung ersetzt das manuelle Filter-Parsing durch Shopwares offizielle `ProductStreamBuilderInterface::buildFilters()`-API, die mit Shopware 6.5, 6.6 und 6.7 kompatibel ist.
+
+---
+
 ## [7.0.7] - 2026-02-09
 
 ### Fehlerbehebungen

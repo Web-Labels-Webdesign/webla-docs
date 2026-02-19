@@ -1,6 +1,6 @@
 # Nutzungsanleitung
 
-Diese Anleitung behandelt alle Funktionen und Möglichkeiten des WebLa Zusatzoptionen Plugins.
+Diese Anleitung behandelt alle Funktionen und Möglichkeiten des Zusatzoptionen Plugins.
 
 ---
 
@@ -47,14 +47,14 @@ Optionen-Sets sind Container für zusammengehörige Zusatzoptionen. Ein Set kann
 
 | Einstellung             | Beschreibung                                                                  |
 | ----------------------- | ----------------------------------------------------------------------------- |
-| **Name**                | Wird dem Kunden auf der Produktseite und im Warenkorb angezeigt              |
+| **Name**                | Wird dem Kunden auf der Produktseite und im Warenkorb angezeigt               |
 | **Beschreibung**        | Optional: Zusatztext unter dem Namen                                          |
-| **Typ**                 | `Produkte` für produktbasierte Optionen oder `Textfeld` für Eingabefelder    |
+| **Typ**                 | `Produkte` für produktbasierte Optionen oder `Textfeld` für Eingabefelder     |
 | **Mehrfachauswahl**     | Erlaubt Auswahl mehrerer Optionen statt nur einer                             |
-| **Sortierung**          | Reihenfolge, in der die Sets angezeigt werden (niedrigere Zahl = weiter oben)|
+| **Sortierung**          | Reihenfolge, in der die Sets angezeigt werden (niedrigere Zahl = weiter oben) |
 | **Bild anzeigen**       | Zeigt Produktbilder bei den Optionen an                                       |
 | **Hersteller anzeigen** | Zeigt Herstellernamen bei den Optionen an                                     |
-| **Mengenauswahl**       | Erlaubt dem Kunden, die Menge für alle Optionen in diesem Set zu wählen      |
+| **Mengenauswahl**       | Erlaubt dem Kunden, die Menge für alle Optionen in diesem Set zu wählen       |
 | **Container geöffnet**  | Set ist standardmäßig aufgeklappt (empfohlen bei Pflichtfeldern)              |
 
 ### Tipps & Best Practices
@@ -292,6 +292,7 @@ Der Optionen Seeder ermöglicht es Ihnen, Optionen-Sets automatisch mehreren Pro
    - **Aktiv**: Aktivieren, um die automatische Zuweisung zu starten
    - **Priorität**: Bei mehreren Seedern bestimmt die Priorität die Reihenfolge
    - **Datum (Von/Bis)**: Optional zeitgesteuerte Zuweisung
+   - **Produkte ausschließen**: Wählen Sie bestimmte Produkte aus, die das Optionen-Set NICHT erhalten sollen, auch wenn sie dem Produktstream entsprechen
 
 ### Produktstreams nutzen
 
@@ -332,12 +333,27 @@ Produktstreams:
 - Werkzeuge Premium-Kategorie
 ```
 
+### Massen-Aktionen für Seeder
+
+Die Seeder-Liste unterstützt Massenaktionen zur Verwaltung mehrerer Seeder auf einmal:
+
+1. Wählen Sie einen oder mehrere Seeder über die Checkboxen in der Liste aus
+2. Öffnen Sie das Massenaktionen-Menü und wählen Sie:
+   - **Jetzt synchronisieren**: Löst die Synchronisation für die ausgewählten Seeder sofort aus — ohne auf den stündlichen Scheduled Task warten zu müssen
+   - **Seeder zurücksetzen**: Entfernt alle vom Seeder erstellten Optionen-Set-Zuweisungen und stellt sie zur erneuten Synchronisation in die Warteschlange. Vor dem Zurücksetzen wird ein Bestätigungsdialog angezeigt.
+
+**Wann Zurücksetzen verwenden**:
+- Nach Änderungen der Produktstream-Bedingungen eines Seeders
+- Wenn Zuweisungen nicht mehr synchron sind und neu aufgebaut werden müssen
+- Nach dem Ausschließen von Produkten, um zuvor zugewiesene Optionen zu entfernen
+
 ### Tipps & Best Practices
 
 - Testen Sie Produktstreams zunächst unter `Kataloge → Dynamische Produktgruppen`, bevor Sie sie im Seeder verwenden
 - Verwenden Sie aussagekräftige Namen für Seeder, um sie später leicht zuordnen zu können
 - Prüfen Sie nach der Synchronisation einzelne Produkte, um sicherzustellen, dass die Zuweisung korrekt funktioniert
 - Nutzen Sie das Datum-Feld für zeitlich begrenzte Aktionen (z.B. "Weihnachts-Service-Paket")
+- Verwenden Sie **Produkte ausschließen** für individuelle Ausnahmen statt komplexer Stream-Bedingungen
 
 ---
 

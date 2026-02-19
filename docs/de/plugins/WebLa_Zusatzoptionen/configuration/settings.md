@@ -1,6 +1,6 @@
 # Konfigurationseinstellungen
 
-Dieses Dokument beschreibt alle verfügbaren Einstellungen für das WebLa Zusatzoptionen Plugin.
+Dieses Dokument beschreibt alle verfügbaren Einstellungen für das Zusatzoptionen Plugin.
 
 **Navigation**: Erweiterungen → Meine Erweiterungen → Produkt Zusatzoptionen Plugin → Konfigurieren
 
@@ -10,11 +10,11 @@ Dieses Dokument beschreibt alle verfügbaren Einstellungen für das WebLa Zusatz
 
 ### Rabatte auf Optionen anwenden, auch wenn sie nicht zutreffen
 
-| Eigenschaft      | Wert        |
-| ---------------- | ----------- |
-| **Typ**          | Schalter    |
-| **Standard**     | Aktiviert   |
-| **Erforderlich** | Nein        |
+| Eigenschaft      | Wert      |
+| ---------------- | --------- |
+| **Typ**          | Schalter  |
+| **Standard**     | Aktiviert |
+| **Erforderlich** | Nein      |
 
 **Beschreibung**: Diese Einstellung steuert, ob Rabatte und Aktionen auf Zusatzoptionen angewendet werden sollen, selbst wenn die Aktionsbedingungen die Optionen nicht explizit einschließen.
 
@@ -32,11 +32,11 @@ Dieses Dokument beschreibt alle verfügbaren Einstellungen für das WebLa Zusatz
 
 ### Position auf Product-Detail Seite
 
-| Eigenschaft      | Wert                                                |
-| ---------------- | --------------------------------------------------- |
-| **Typ**          | Auswahl (Dropdown)                                  |
-| **Standard**     | Unter "In den Warenkorb" Button                     |
-| **Erforderlich** | Nein                                                |
+| Eigenschaft      | Wert                            |
+| ---------------- | ------------------------------- |
+| **Typ**          | Auswahl (Dropdown)              |
+| **Standard**     | Unter "In den Warenkorb" Button |
+| **Erforderlich** | Nein                            |
 
 **Beschreibung**: Legt fest, wo die Zusatzoptionen auf der Produktdetailseite angezeigt werden - oberhalb oder unterhalb des "In den Warenkorb"-Buttons.
 
@@ -56,11 +56,11 @@ Dieses Dokument beschreibt alle verfügbaren Einstellungen für das WebLa Zusatz
 
 ### Mengenbehandlung von Bestellpositionen
 
-| Eigenschaft      | Wert                                       |
-| ---------------- | ------------------------------------------ |
-| **Typ**          | Auswahl (Dropdown)                         |
-| **Standard**     | Alle Positionen in Menge 1 aufteilen       |
-| **Erforderlich** | Nein                                       |
+| Eigenschaft      | Wert                                 |
+| ---------------- | ------------------------------------ |
+| **Typ**          | Auswahl (Dropdown)                   |
+| **Standard**     | Alle Positionen in Menge 1 aufteilen |
+| **Erforderlich** | Nein                                 |
 
 **Beschreibung**: Diese Einstellung steuert, wie Bestellpositionen mit unterschiedlichen Zusatzoptionen im Warenkorb und in der Bestellung dargestellt werden.
 
@@ -91,11 +91,11 @@ Position 2: Laptop + Garantie 3 Jahre (Menge: 1) - 1.149 €
 
 ### Bestellpositionen anpassen
 
-| Eigenschaft      | Wert                                                          |
-| ---------------- | ------------------------------------------------------------- |
-| **Typ**          | Auswahl (Dropdown)                                            |
+| Eigenschaft      | Wert                                                            |
+| ---------------- | --------------------------------------------------------------- |
+| **Typ**          | Auswahl (Dropdown)                                              |
 | **Standard**     | Neuberechnung von Positionen, um individuelle Preise anzuzeigen |
-| **Erforderlich** | Nein                                                          |
+| **Erforderlich** | Nein                                                            |
 
 **Beschreibung**: Steuert, ob die Preise der Bestellpositionen beim Übergang vom Warenkorb zur Bestellung neu berechnet werden oder ob die Warenkorb-Preise beibehalten werden.
 
@@ -118,12 +118,12 @@ Position 2: Laptop + Garantie 3 Jahre (Menge: 1) - 1.149 €
 
 Alle oben genannten Einstellungen können pro Verkaufskanal individuell konfiguriert werden.
 
-| Einstellung                     | Geltungsbereich            | Beschreibung                                                     |
-| ------------------------------- | -------------------------- | ---------------------------------------------------------------- |
-| Rabatte anwenden                | Global/Pro Verkaufskanal   | Kann pro Verkaufskanal unterschiedlich aktiviert werden          |
-| Position auf Produktdetailseite | Global/Pro Verkaufskanal   | Kann pro Verkaufskanal unterschiedlich positioniert werden       |
-| Mengenbehandlung                | Global/Pro Verkaufskanal   | Kann pro Verkaufskanal unterschiedliche Darstellung haben        |
-| Bestellpositionen anpassen      | Global/Pro Verkaufskanal   | Kann pro Verkaufskanal unterschiedliche Preislogik verwenden     |
+| Einstellung                     | Geltungsbereich          | Beschreibung                                                 |
+| ------------------------------- | ------------------------ | ------------------------------------------------------------ |
+| Rabatte anwenden                | Global/Pro Verkaufskanal | Kann pro Verkaufskanal unterschiedlich aktiviert werden      |
+| Position auf Produktdetailseite | Global/Pro Verkaufskanal | Kann pro Verkaufskanal unterschiedlich positioniert werden   |
+| Mengenbehandlung                | Global/Pro Verkaufskanal | Kann pro Verkaufskanal unterschiedliche Darstellung haben    |
+| Bestellpositionen anpassen      | Global/Pro Verkaufskanal | Kann pro Verkaufskanal unterschiedliche Preislogik verwenden |
 
 **So konfigurieren Sie verkaufskanalspezifische Einstellungen**:
 
@@ -138,12 +138,12 @@ Alle oben genannten Einstellungen können pro Verkaufskanal individuell konfigur
 
 ### Für B2C-Shops mit Aktionen und Rabatten
 
-| Einstellung                     | Empfohlener Wert                          |
-| ------------------------------- | ----------------------------------------- |
-| Rabatte anwenden                | Aktiviert                                 |
-| Position auf Produktdetailseite | Unter "In den Warenkorb" Button           |
-| Mengenbehandlung                | Zusammenfassen                            |
-| Bestellpositionen anpassen      | Neuberechnung                             |
+| Einstellung                     | Empfohlener Wert                |
+| ------------------------------- | ------------------------------- |
+| Rabatte anwenden                | Aktiviert                       |
+| Position auf Produktdetailseite | Unter "In den Warenkorb" Button |
+| Mengenbehandlung                | Zusammenfassen                  |
+| Bestellpositionen anpassen      | Neuberechnung                   |
 
 **Begründung**: Kunden profitieren auch bei Zusatzoptionen von Rabatten, die Darstellung ist übersichtlich und Preise sind immer aktuell.
 
@@ -151,12 +151,12 @@ Alle oben genannten Einstellungen können pro Verkaufskanal individuell konfigur
 
 ### Für B2B-Shops mit festen Preisen
 
-| Einstellung                     | Empfohlener Wert                          |
-| ------------------------------- | ----------------------------------------- |
-| Rabatte anwenden                | Deaktiviert                               |
-| Position auf Produktdetailseite | Über "In den Warenkorb" Button            |
-| Mengenbehandlung                | Aufteilen (Menge 1)                       |
-| Bestellpositionen anpassen      | Beibehalten                               |
+| Einstellung                     | Empfohlener Wert               |
+| ------------------------------- | ------------------------------ |
+| Rabatte anwenden                | Deaktiviert                    |
+| Position auf Produktdetailseite | Über "In den Warenkorb" Button |
+| Mengenbehandlung                | Aufteilen (Menge 1)            |
+| Bestellpositionen anpassen      | Beibehalten                    |
 
 **Begründung**: Zusatzoptionen haben feste Preise, sind gut sichtbar vor dem Kaufabschluss, jede Position wird einzeln für ERP-Systeme aufgeführt und Preise bleiben garantiert.
 
@@ -164,12 +164,12 @@ Alle oben genannten Einstellungen können pro Verkaufskanal individuell konfigur
 
 ### Für Shops mit Pflicht-Zusatzoptionen (z.B. Versicherungen)
 
-| Einstellung                     | Empfohlener Wert                          |
-| ------------------------------- | ----------------------------------------- |
-| Rabatte anwenden                | Deaktiviert                               |
-| Position auf Produktdetailseite | Über "In den Warenkorb" Button            |
-| Mengenbehandlung                | Nach Bedarf                               |
-| Bestellpositionen anpassen      | Neuberechnung                             |
+| Einstellung                     | Empfohlener Wert               |
+| ------------------------------- | ------------------------------ |
+| Rabatte anwenden                | Deaktiviert                    |
+| Position auf Produktdetailseite | Über "In den Warenkorb" Button |
+| Mengenbehandlung                | Nach Bedarf                    |
+| Bestellpositionen anpassen      | Neuberechnung                  |
 
 **Begründung**: Pflicht-Zusatzoptionen (z.B. gesetzlich vorgeschriebene Versicherungen) sollten ohne Rabatt verkauft werden, prominent platziert sein und aktuelle Preise haben.
 

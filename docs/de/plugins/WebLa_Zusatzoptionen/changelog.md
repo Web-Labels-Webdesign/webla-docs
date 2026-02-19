@@ -1,6 +1,25 @@
 # Änderungsprotokoll
 
-Alle wichtigen Änderungen am WebLa Zusatzoptionen Plugin für Endbenutzer.
+Alle wichtigen Änderungen am Zusatzoptionen Plugin für Endbenutzer.
+
+---
+
+## [5.1.0] - 2026-02-19
+
+### ✨ Neue Funktionen
+
+- **Produkte vom Seeder ausschließen**: Bestimmte Produkte können jetzt von der automatischen Optionen-Set-Zuweisung eines Seeders ausgeschlossen werden — nützlich für Ausnahmen und Sonderprodukte, die die zugewiesenen Optionen nicht erhalten sollen
+- **Massen-Aktionen für Seeder-Verwaltung**: Neue "Jetzt synchronisieren"- und "Seeder zurücksetzen"-Massenaktionen in der Seeder-Liste ermöglichen die Verwaltung mehrerer Seeder auf einmal, ohne jeden einzeln zu öffnen
+
+### 🔧 Verbesserungen
+
+- **Zurücksetzen-Bestätigungsdialog**: Das Zurücksetzen eines Seeders zeigt nun einen Bestätigungsdialog, um versehentlichen Datenverlust zu verhindern
+- **Verbesserte Fehlerbehandlung**: Besseres Fehler-Feedback und Validierung in der Seeder-Admin-Oberfläche
+
+### 🐛 Fehlerbehebungen
+
+- **Options-Position "Unter"**: Optionen, die "unter dem 'In den Warenkorb'-Button" angezeigt werden sollen, erscheinen jetzt korrekt direkt unterhalb des Buttons — vor Wunschliste und Artikelnummer — entsprechend der Einstellungsbeschreibung
+- **Standard-Position-Darstellung**: Optionen werden jetzt korrekt angezeigt, wenn die Positions-Einstellung nie konfiguriert wurde (Standard: "Unter")
 
 ---
 
@@ -8,7 +27,7 @@ Alle wichtigen Änderungen am WebLa Zusatzoptionen Plugin für Endbenutzer.
 
 ### ✨ Neue Funktionen
 
-- **Mehrfachauswahl bei Optionen Seeder**: Sie können nun mehrere Produktströme in einem Seeder auswählen, um Optionen-Sets effizienter mehreren Produktgruppen zuzuweisen
+- **Mehrfachauswahl bei Optionen Seeder**: Sie können nun mehrere dynamische Produktgruppen in einem Seeder auswählen, um Optionen-Sets effizienter mehreren Produktgruppen zuzuweisen
 - **Synchronisationsstatus für Seeder**: Neuer Status-Indikator zeigt an, ob die Seeder-Synchronisation läuft, abgeschlossen ist oder fehlgeschlagen ist
 - **Container automatisch öffnen**: Neue Option "Container geöffnet" bei Optionen-Sets - ideal für Pflichtfelder, damit Kunden diese sofort sehen
 
@@ -76,7 +95,7 @@ Alle wichtigen Änderungen am WebLa Zusatzoptionen Plugin für Endbenutzer.
 
 ### ✨ Neue Funktionen
 
-- **Optionen Seeder**: Automatische Zuweisung von Optionen-Sets über Produktströme
+- **Optionen Seeder**: Automatische Zuweisung von Optionen-Sets über dynamische Produktgruppen
 - **Scheduled Task**: Automatische stündliche Synchronisation von Seedern
 - **Message Queue Integration**: Asynchrone Verarbeitung großer Produkt-Zuweisungen
 - **Sortierung**: Optionen und Sets können nun manuell sortiert werden
@@ -149,17 +168,18 @@ Alle wichtigen Änderungen am WebLa Zusatzoptionen Plugin für Endbenutzer.
 
 ## Versionsübersicht
 
-| Version | Veröffentlichung | Highlights                                                  |
-| ------- | ---------------- | ----------------------------------------------------------- |
-| 5.0.0   | 2026-02-10       | Mehrfachauswahl Seeder, Container-Öffnung, 8 kritische Fixes |
-| 3.1.15  | 2026-02-10       | Datenintegrität & Performance-Fixes                         |
-| 3.1.14  | 2026-01-29       | Checkout-Optimierungen                                      |
-| 3.1.5   | 2025-11          | Mengenauswahl, Textfelder, Rule-Builder                     |
-| 3.0.0   | 2025-06          | Optionen Seeder, Automatische Zuweisung                     |
-| 2.5.0   | 2024-12          | Inkompatibilitäten, Pflichtfelder, Abhängigkeiten           |
-| 2.0.0   | 2024-06          | Länderspezifische Preise, Versandbeschränkungen             |
-| 1.5.0   | 2024-02          | Mehrfachauswahl, Bilder, Hersteller-Anzeige                 |
-| 1.0.0   | 2023-12          | Erste Veröffentlichung                                      |
+| Version | Veröffentlichung | Highlights                                                         |
+| ------- | ---------------- | ------------------------------------------------------------------ |
+| 5.1.0   | 2026-02-19       | Produkte ausschließen, Massen-Sync/Reset, Positions-Fehlerbehebung |
+| 5.0.0   | 2026-02-10       | Mehrfachauswahl Seeder, Container-Öffnung, 8 kritische Fixes       |
+| 3.1.15  | 2026-02-10       | Datenintegrität & Performance-Fixes                                |
+| 3.1.14  | 2026-01-29       | Checkout-Optimierungen                                             |
+| 3.1.5   | 2025-11          | Mengenauswahl, Textfelder, Rule-Builder                            |
+| 3.0.0   | 2025-06          | Optionen Seeder, Automatische Zuweisung                            |
+| 2.5.0   | 2024-12          | Inkompatibilitäten, Pflichtfelder, Abhängigkeiten                  |
+| 2.0.0   | 2024-06          | Länderspezifische Preise, Versandbeschränkungen                    |
+| 1.5.0   | 2024-02          | Mehrfachauswahl, Bilder, Hersteller-Anzeige                        |
+| 1.0.0   | 2023-12          | Erste Veröffentlichung                                             |
 
 ---
 
@@ -198,7 +218,7 @@ Alle wichtigen Änderungen am WebLa Zusatzoptionen Plugin für Endbenutzer.
 5. Neue Admin-Sektion "Optionen Seeder" wird verfügbar unter `Erweiterungen → Optionen Seeder`
 
 **Neue Features nutzen**:
-- Erstellen Sie Produktströme unter `Kataloge → Dynamische Produktgruppen`
+- Erstellen Sie dynamische Produktgruppen unter `Kataloge → Dynamische Produktgruppen`
 - Richten Sie Seeder ein für automatische Optionen-Zuweisung
 - Nutzen Sie zeitgesteuerte Zuweisungen für saisonale Angebote
 
@@ -215,16 +235,17 @@ Alle wichtigen Änderungen am WebLa Zusatzoptionen Plugin für Endbenutzer.
 
 ## Kompatibilität
 
-| Plugin-Version | Shopware-Version | PHP-Version | Besonderheiten                  |
-| -------------- | ---------------- | ----------- | ------------------------------- |
-| 5.0.0          | 6.6.0 - 6.7.0    | 8.1+        | Aktuelle Version                |
-| 3.1.15         | 6.6.0 - 6.7.0    | 8.1+        | Bugfixes                        |
-| 3.1.14         | 6.5.0 - 6.6.9    | 8.0+        | Checkout-Optimierungen          |
-| 3.1.5          | 6.5.0 - 6.6.0    | 8.0+        | Mengenauswahl, Rule-Builder     |
-| 3.0.0          | 6.5.0 - 6.6.0    | 8.0+        | Optionen Seeder                 |
+| Plugin-Version | Shopware-Version | PHP-Version | Besonderheiten                    |
+| -------------- | ---------------- | ----------- | --------------------------------- |
+| 5.1.0          | 6.6.0 - 6.7.0    | 8.1+        | Aktuelle Version                  |
+| 5.0.0          | 6.6.0 - 6.7.0    | 8.1+        | Großes Rewrite                    |
+| 3.1.15         | 6.6.0 - 6.7.0    | 8.1+        | Bugfixes                          |
+| 3.1.14         | 6.5.0 - 6.6.9    | 8.0+        | Checkout-Optimierungen            |
+| 3.1.5          | 6.5.0 - 6.6.0    | 8.0+        | Mengenauswahl, Rule-Builder       |
+| 3.0.0          | 6.5.0 - 6.6.0    | 8.0+        | Optionen Seeder                   |
 | 2.5.0          | 6.4.0 - 6.5.0    | 7.4+        | Inkompatibilitäten, Pflichtfelder |
-| 2.0.0          | 6.4.0 - 6.5.0    | 7.4+        | Länderspezifische Preise        |
-| 1.x            | 6.4.0+           | 7.4+        | Basis-Funktionalität            |
+| 2.0.0          | 6.4.0 - 6.5.0    | 7.4+        | Länderspezifische Preise          |
+| 1.x            | 6.4.0+           | 7.4+        | Basis-Funktionalität              |
 
 ---
 

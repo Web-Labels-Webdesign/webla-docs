@@ -1,10 +1,10 @@
-# WebLa Additional Options
+# Additional Options
 
 > Add flexible additional options to products with custom pricing, shipping restrictions, and automated assignment via product streams for enhanced product configuration.
 
 ## Overview
 
-With the WebLa Additional Options plugin, you can extend your Shopware 6 products with flexible additional options. Offer your customers warranty extensions, services, accessories, or individual configuration options directly during the product purchase.
+With the Additional Options plugin, you can extend your Shopware 6 products with flexible additional options. Offer your customers warranty extensions, services, accessories, or individual configuration options directly during the product purchase.
 
 The plugin allows you to create option sets that can be selected individually or multiple times. You can define dependencies between options, set country-specific prices, and automatically assign options via product streams. Options appear on both the product detail page and in the shopping cart and can be adjusted by the customer at any time.
 

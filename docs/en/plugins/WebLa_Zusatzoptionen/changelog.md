@@ -1,6 +1,25 @@
 # Changelog
 
-All notable changes to the WebLa Additional Options Plugin for end users.
+All notable changes to the Additional Options Plugin for end users.
+
+---
+
+## [5.1.0] - 2026-02-19
+
+### ✨ New Features
+
+- **Exclude Products from Seeder**: Specific products can now be excluded from a seeder's automatic option set assignment — useful for exceptions and special products that should not receive the assigned options
+- **Bulk Seeder Management Actions**: New "Sync Now" and "Reset Seeder" bulk actions in the seeder list allow managing multiple seeders at once without opening each one individually
+
+### 🔧 Improvements
+
+- **Reset Confirmation Dialog**: Resetting a seeder now shows a confirmation dialog to prevent accidental data loss
+- **Improved Error Handling**: Better error feedback and validation in the seeder admin interface
+
+### 🐛 Bug Fixes
+
+- **Options Position "Below"**: Options configured to display "below the Add to Cart button" now correctly appear directly below the cart button — before the wishlist and article number — matching the setting description
+- **Default Position Rendering**: Options now render correctly when the position setting has never been configured (defaults to "below")
 
 ---
 
@@ -151,6 +170,7 @@ All notable changes to the WebLa Additional Options Plugin for end users.
 
 | Version | Release Date | Highlights                                                     |
 | ------- | ------------ | -------------------------------------------------------------- |
+| 5.1.0   | 2026-02-19   | Exclude products from seeder, bulk sync/reset actions, position fix |
 | 5.0.0   | 2026-02-10   | Multiple selection seeder, container opening, 8 critical fixes |
 | 3.1.15  | 2026-02-10   | Data integrity & performance fixes                             |
 | 3.1.14  | 2026-01-29   | Checkout optimizations                                         |
@@ -215,16 +235,17 @@ All notable changes to the WebLa Additional Options Plugin for end users.
 
 ## Compatibility
 
-| Plugin Version | Shopware Version | PHP Version | Notes                           |
-| -------------- | ---------------- | ----------- | ------------------------------- |
-| 5.0.0          | 6.6.0 - 6.7.0    | 8.1+        | Current version                 |
-| 3.1.15         | 6.6.0 - 6.7.0    | 8.1+        | Bugfixes                        |
-| 3.1.14         | 6.5.0 - 6.6.9    | 8.0+        | Checkout optimizations          |
-| 3.1.5          | 6.5.0 - 6.6.0    | 8.0+        | Quantity selection, rule builder |
-| 3.0.0          | 6.5.0 - 6.6.0    | 8.0+        | Option Seeder                   |
+| Plugin Version | Shopware Version | PHP Version | Notes                              |
+| -------------- | ---------------- | ----------- | ---------------------------------- |
+| 5.1.0          | 6.6.0 - 6.7.0    | 8.1+        | Current version                    |
+| 5.0.0          | 6.6.0 - 6.7.0    | 8.1+        | Major rewrite                      |
+| 3.1.15         | 6.6.0 - 6.7.0    | 8.1+        | Bugfixes                           |
+| 3.1.14         | 6.5.0 - 6.6.9    | 8.0+        | Checkout optimizations             |
+| 3.1.5          | 6.5.0 - 6.6.0    | 8.0+        | Quantity selection, rule builder   |
+| 3.0.0          | 6.5.0 - 6.6.0    | 8.0+        | Option Seeder                      |
 | 2.5.0          | 6.4.0 - 6.5.0    | 7.4+        | Incompatibilities, required fields |
-| 2.0.0          | 6.4.0 - 6.5.0    | 7.4+        | Country-specific prices         |
-| 1.x            | 6.4.0+           | 7.4+        | Basic functionality             |
+| 2.0.0          | 6.4.0 - 6.5.0    | 7.4+        | Country-specific prices            |
+| 1.x            | 6.4.0+           | 7.4+        | Basic functionality                |
 
 ---
 

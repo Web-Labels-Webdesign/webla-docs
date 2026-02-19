@@ -1,12 +1,12 @@
-# WebLa Zusatzoptionen
+# Zusatzoptionen
 
-> Erweitern Sie Produkte mit konfigurierbaren Zusatzoptionen, individueller Preisgestaltung, Versandbeschränkungen und automatischer Zuweisung durch Produktströme für mehr Flexibilität.
+> Erweitern Sie Produkte mit konfigurierbaren Zusatzoptionen, individueller Preisgestaltung, Versandbeschränkungen und automatischer Zuweisung durch dynamische Produktgruppen für mehr Flexibilität.
 
 ## Übersicht
 
-Mit dem WebLa Zusatzoptionen Plugin können Sie Ihre Shopware 6 Produkte um flexible Zusatzoptionen erweitern. Bieten Sie Ihren Kunden beispielsweise Garantieverlängerungen, Serviceleistungen, Zubehör oder individuelle Konfigurationsmöglichkeiten direkt beim Produktkauf an.
+Mit dem Zusatzoptionen Plugin können Sie Ihre Shopware 6 Produkte um flexible Zusatzoptionen erweitern. Bieten Sie Ihren Kunden beispielsweise Garantieverlängerungen, Serviceleistungen, Zubehör oder individuelle Konfigurationsmöglichkeiten direkt beim Produktkauf an.
 
-Das Plugin ermöglicht es Ihnen, Optionen-Sets zu erstellen, die einzeln oder mehrfach auswählbar sind. Sie können Abhängigkeiten zwischen Optionen definieren, länderspezifische Preise festlegen und Optionen automatisch über Produktströme zuweisen. Die Optionen erscheinen sowohl auf der Produktdetailseite als auch im Warenkorb und können jederzeit vom Kunden angepasst werden.
+Das Plugin ermöglicht es Ihnen, Optionen-Sets zu erstellen, die einzeln oder mehrfach auswählbar sind. Sie können Abhängigkeiten zwischen Optionen definieren, länderspezifische Preise festlegen und Optionen automatisch über dynamische Produktgruppen zuweisen. Die Optionen erscheinen sowohl auf der Produktdetailseite als auch im Warenkorb und können jederzeit vom Kunden angepasst werden.
 
 Ideal für Shop-Betreiber, die ihre Produkte um Zusatzleistungen ergänzen möchten, ohne separate Produkte anlegen zu müssen. Das Plugin integriert sich nahtlos in Shopware 6 und unterstützt alle wichtigen Funktionen wie dynamische Steuersätze (OSS), Aktionen, Regeln und API-Zugriff.
 
@@ -14,7 +14,7 @@ Ideal für Shop-Betreiber, die ihre Produkte um Zusatzleistungen ergänzen möch
 
 - **Flexible Optionen-Sets**: Erstellen Sie unbegrenzt viele Optionen-Sets mit Einzel- oder Mehrfachauswahl für jedes Produkt
 - **Produktbasierte Optionen**: Nutzen Sie bestehende Produkte als Zusatzoptionen oder erstellen Sie textbasierte Eingabefelder
-- **Automatische Zuweisung**: Weisen Sie Optionen automatisch über Produktströme zu, ohne jedes Produkt manuell konfigurieren zu müssen
+- **Automatische Zuweisung**: Weisen Sie Optionen automatisch über dynamische Produktgruppen zu, ohne jedes Produkt manuell konfigurieren zu müssen
 - **Länderspezifische Preise**: Definieren Sie unterschiedliche Preise und Verfügbarkeiten je nach Lieferland des Kunden
 - **Mengenstaffelung**: Ermöglichen Sie Mengenauswahl für Optionen mit automatischer Preisstaffelung
 - **Versandbeschränkungen**: Beschränken Sie Optionen auf bestimmte Versandarten oder schließen Sie diese aus
@@ -40,7 +40,7 @@ Ideal für Shop-Betreiber, die ihre Produkte um Zusatzleistungen ergänzen möch
 3. Konfigurieren Sie die Grundeinstellungen unter **Erweiterungen → Meine Erweiterungen → Produkt Zusatzoptionen Plugin → Konfigurieren**
 4. Erstellen Sie Ihr erstes Optionen-Set: Navigieren Sie zu **Kataloge → Produkte**, wählen Sie ein Produkt aus und wechseln Sie zum Tab **Zusatzoptionen**
 5. Fügen Sie Optionen hinzu und legen Sie Preise, Versandbeschränkungen und Abhängigkeiten fest
-6. Optional: Nutzen Sie den **Optionen Seeder** unter **Erweiterungen → Optionen Seeder** für automatische Zuweisung über Produktströme
+6. Optional: Nutzen Sie den **Optionen Seeder** unter **Erweiterungen → Optionen Seeder** für automatische Zuweisung über dynamische Produktgruppen
 
 ## Dokumentationsinhalt
 

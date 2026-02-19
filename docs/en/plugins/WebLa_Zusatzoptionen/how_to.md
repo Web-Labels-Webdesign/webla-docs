@@ -1,6 +1,6 @@
 # How-To Guide
 
-This guide provides step-by-step workflows for common tasks with the WebLa Additional Options Plugin.
+This guide provides step-by-step workflows for common tasks with the Additional Options Plugin.
 
 ---
 
@@ -530,16 +530,16 @@ Customer buys 11+ laptops    → Warranty costs €39.90 per piece
 
 ## Quick Reference
 
-| Task                                | Key Steps                                                                 | Required Settings                            |
-| ----------------------------------- | ------------------------------------------------------------------------- | -------------------------------------------- |
-| Add simple options                  | Open product → Additional Options tab → Create set → Add options          | Active, Sorting                              |
-| Country-specific prices             | Open option → Country configuration → Add country + price                 | Country, Price                               |
-| Automatic assignment                | Create product stream → Create seeder → Synchronize                       | Active, Product Stream                       |
-| Dependent options                   | Create parent option → Link child option with Parent ID                   | Parent ID, Requirement Selected              |
-| Incompatible options                | Option A → Add incompatibility to B → Option B → Add incompatibility to A | Incompatible Products (both directions)      |
-| Quantity tier pricing               | Open option → Price tiering → Multiple tiers with From/To quantity        | From/To Quantity, Price                      |
-| Required options                    | Open option → Enable "Required" → Set "Container Open"                    | Required, Container Open                     |
-| Shipping restrictions               | Open option → Shipping methods → Select allowed methods                   | Shipping Methods                             |
+| Task                    | Key Steps                                                                 | Required Settings                       |
+| ----------------------- | ------------------------------------------------------------------------- | --------------------------------------- |
+| Add simple options      | Open product → Additional Options tab → Create set → Add options          | Active, Sorting                         |
+| Country-specific prices | Open option → Country configuration → Add country + price                 | Country, Price                          |
+| Automatic assignment    | Create product stream → Create seeder → Synchronize                       | Active, Product Stream                  |
+| Dependent options       | Create parent option → Link child option with Parent ID                   | Parent ID, Requirement Selected         |
+| Incompatible options    | Option A → Add incompatibility to B → Option B → Add incompatibility to A | Incompatible Products (both directions) |
+| Quantity tier pricing   | Open option → Price tiering → Multiple tiers with From/To quantity        | From/To Quantity, Price                 |
+| Required options        | Open option → Enable "Required" → Set "Container Open"                    | Required, Container Open                |
+| Shipping restrictions   | Open option → Shipping methods → Select allowed methods                   | Shipping Methods                        |
 
 ---
 

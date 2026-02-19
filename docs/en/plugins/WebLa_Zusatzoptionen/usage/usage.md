@@ -1,6 +1,6 @@
 # Usage Guide
 
-This guide covers all features and functionality of the WebLa Additional Options Plugin.
+This guide covers all features and functionality of the Additional Options Plugin.
 
 ---
 
@@ -45,17 +45,17 @@ Option sets are containers for related additional options. For example, a set mi
 
 **Location**: Catalogues → Products → [Product] → Additional Options
 
-| Setting                 | Description                                                               |
-| ----------------------- | ------------------------------------------------------------------------- |
-| **Name**                | Displayed to the customer on the product page and in the cart             |
-| **Description**         | Optional: Additional text under the name                                  |
-| **Type**                | `Products` for product-based options or `Text Field` for input fields     |
-| **Multiple Selection**  | Allows selection of multiple options instead of just one                  |
-| **Sorting**             | Order in which sets are displayed (lower number = higher up)              |
-| **Show Image**          | Displays product images with the options                                  |
-| **Show Manufacturer**   | Displays manufacturer names with the options                              |
-| **Quantity Selection**  | Allows the customer to choose quantity for all options in this set        |
-| **Container Open**      | Set is expanded by default (recommended for required fields)              |
+| Setting                | Description                                                           |
+| ---------------------- | --------------------------------------------------------------------- |
+| **Name**               | Displayed to the customer on the product page and in the cart         |
+| **Description**        | Optional: Additional text under the name                              |
+| **Type**               | `Products` for product-based options or `Text Field` for input fields |
+| **Multiple Selection** | Allows selection of multiple options instead of just one              |
+| **Sorting**            | Order in which sets are displayed (lower number = higher up)          |
+| **Show Image**         | Displays product images with the options                              |
+| **Show Manufacturer**  | Displays manufacturer names with the options                          |
+| **Quantity Selection** | Allows the customer to choose quantity for all options in this set    |
+| **Container Open**     | Set is expanded by default (recommended for required fields)          |
 
 ### Tips & Best Practices
 
@@ -292,6 +292,7 @@ The Option Seeder allows you to automatically assign option sets to multiple pro
    - **Active**: Enable to start automatic assignment
    - **Priority**: With multiple seeders, priority determines the order
    - **Date (From/To)**: Optional time-controlled assignment
+   - **Exclude Products**: Select specific products that should NOT receive the option set, even if they match the product stream
 
 ### Using Product Streams
 
@@ -332,12 +333,27 @@ Product Streams:
 - Premium Tools Category
 ```
 
+### Bulk Seeder Management
+
+The seeder list supports bulk actions to manage multiple seeders at once:
+
+1. Select one or more seeders using the checkboxes in the list
+2. Open the bulk actions menu and choose:
+   - **Sync Now**: Immediately triggers synchronization for the selected seeders — no need to wait for the hourly scheduled task
+   - **Reset Seeder**: Removes all option set assignments created by the selected seeders and re-queues them for re-synchronization. A confirmation dialog is shown before the reset.
+
+**When to use Reset**:
+- After changing the product stream conditions on a seeder
+- When assignments are out of sync and need to be rebuilt from scratch
+- After excluding products to remove previously assigned options
+
 ### Tips & Best Practices
 
 - Test product streams first under `Catalogues → Dynamic Product Groups` before using them in a seeder
 - Use meaningful names for seeders to easily identify them later
 - Check individual products after synchronization to ensure the assignment worked correctly
 - Use the date field for time-limited promotions (e.g., "Christmas Service Package")
+- Use **Exclude Products** for individual exceptions instead of creating complex stream conditions
 
 ---
 

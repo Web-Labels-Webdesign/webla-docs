@@ -1,6 +1,6 @@
 # Anleitungen
 
-Diese Anleitung bietet Schritt-für-Schritt-Workflows für häufige Aufgaben mit dem WebLa Zusatzoptionen Plugin.
+Diese Anleitung bietet Schritt-für-Schritt-Workflows für häufige Aufgaben mit dem Zusatzoptionen Plugin.
 
 ---
 
@@ -159,7 +159,7 @@ Das Plugin erweitert den Standard-Shopware-Bestellprozess um konfigurierbare Zus
 
 ---
 
-### Anleitung: Automatische Zuweisung mit Produktströmen
+### Anleitung: Automatische Zuweisung mit dynamischen Produktgruppen
 
 **Ziel**: Optionen-Set automatisch allen Produkten einer Kategorie zuweisen
 
@@ -168,7 +168,7 @@ Das Plugin erweitert den Standard-Shopware-Bestellprozess um konfigurierbare Zus
 **Voraussetzungen**:
 - Optionen-Set ist bereits erstellt
 - Produkte sind kategorisiert
-- Sie verstehen die Grundlagen von Produktströmen
+- Sie verstehen die Grundlagen von dynamischen Produktgruppen
 
 **Schritte**:
 
@@ -530,16 +530,16 @@ Kunde kauft 11+ Laptops    → Garantie kostet 39,90 € pro Stück
 
 ## Schnellreferenz
 
-| Aufgabe                                   | Wichtige Schritte                                                               | Erforderliche Einstellungen                    |
-| ----------------------------------------- | ------------------------------------------------------------------------------- | ---------------------------------------------- |
-| Einfache Optionen hinzufügen              | Produkt öffnen → Zusatzoptionen-Tab → Set erstellen → Optionen hinzufügen       | Aktiv, Sortierung                              |
-| Länderspezifische Preise                  | Option öffnen → Länderkonfiguration → Land + Preis hinzufügen                   | Land, Preis                                    |
-| Automatische Zuweisung                    | Produktstream erstellen → Seeder erstellen → Synchronisieren                    | Aktiv, Produktstream                           |
-| Abhängige Optionen                        | Parent-Option erstellen → Kind-Option mit Parent ID verknüpfen                  | Parent ID, Anforderung ausgewählt              |
-| Inkompatible Optionen                     | Option A → Inkompatibilität zu B hinzufügen → Option B → Inkompatibilität zu A | Inkompatible Produkte (beide Richtungen)       |
-| Mengenstaffel-Preise                      | Option öffnen → Preisstaffelung → Mehrere Staffeln mit Von/Bis-Menge           | Von/Bis Menge, Preis                           |
-| Pflichtoptionen                           | Option öffnen → "Erforderlich" aktivieren → Set "Container geöffnet" aktivieren | Erforderlich, Container geöffnet               |
-| Versandbeschränkungen                     | Option öffnen → Versandmethoden → Erlaubte Methoden auswählen                   | Versandmethoden                                |
+| Aufgabe                      | Wichtige Schritte                                                               | Erforderliche Einstellungen              |
+| ---------------------------- | ------------------------------------------------------------------------------- | ---------------------------------------- |
+| Einfache Optionen hinzufügen | Produkt öffnen → Zusatzoptionen-Tab → Set erstellen → Optionen hinzufügen       | Aktiv, Sortierung                        |
+| Länderspezifische Preise     | Option öffnen → Länderkonfiguration → Land + Preis hinzufügen                   | Land, Preis                              |
+| Automatische Zuweisung       | Produktstream erstellen → Seeder erstellen → Synchronisieren                    | Aktiv, Produktstream                     |
+| Abhängige Optionen           | Parent-Option erstellen → Kind-Option mit Parent ID verknüpfen                  | Parent ID, Anforderung ausgewählt        |
+| Inkompatible Optionen        | Option A → Inkompatibilität zu B hinzufügen → Option B → Inkompatibilität zu A  | Inkompatible Produkte (beide Richtungen) |
+| Mengenstaffel-Preise         | Option öffnen → Preisstaffelung → Mehrere Staffeln mit Von/Bis-Menge            | Von/Bis Menge, Preis                     |
+| Pflichtoptionen              | Option öffnen → "Erforderlich" aktivieren → Set "Container geöffnet" aktivieren | Erforderlich, Container geöffnet         |
+| Versandbeschränkungen        | Option öffnen → Versandmethoden → Erlaubte Methoden auswählen                   | Versandmethoden                          |
 
 ---
 

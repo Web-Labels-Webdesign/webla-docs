@@ -1,6 +1,6 @@
 # Configuration Settings
 
-This document describes all available settings for the WebLa Additional Options Plugin.
+This document describes all available settings for the Additional Options Plugin.
 
 **Navigation**: Extensions → My Extensions → Product Additional Options Plugin → Configure
 
@@ -10,11 +10,11 @@ This document describes all available settings for the WebLa Additional Options 
 
 ### Apply discounts to options even if they don't apply
 
-| Property     | Value    |
-| ------------ | -------- |
-| **Type**     | Switch   |
-| **Default**  | Enabled  |
-| **Required** | No       |
+| Property     | Value   |
+| ------------ | ------- |
+| **Type**     | Switch  |
+| **Default**  | Enabled |
+| **Required** | No      |
 
 **Description**: This setting controls whether discounts and promotions should be applied to additional options, even if the promotion conditions don't explicitly include the options.
 
@@ -32,11 +32,11 @@ This document describes all available settings for the WebLa Additional Options 
 
 ### Position on product detail page
 
-| Property     | Value                                     |
-| ------------ | ----------------------------------------- |
-| **Type**     | Select (Dropdown)                         |
-| **Default**  | Below "Add to cart" button                |
-| **Required** | No                                        |
+| Property     | Value                      |
+| ------------ | -------------------------- |
+| **Type**     | Select (Dropdown)          |
+| **Default**  | Below "Add to cart" button |
+| **Required** | No                         |
 
 **Description**: Determines where the additional options are displayed on the product detail page - above or below the "Add to cart" button.
 
@@ -56,11 +56,11 @@ This document describes all available settings for the WebLa Additional Options 
 
 ### Quantity handling of line items
 
-| Property     | Value                                  |
-| ------------ | -------------------------------------- |
-| **Type**     | Select (Dropdown)                      |
-| **Default**  | Split all items into quantity 1        |
-| **Required** | No                                     |
+| Property     | Value                           |
+| ------------ | ------------------------------- |
+| **Type**     | Select (Dropdown)               |
+| **Default**  | Split all items into quantity 1 |
+| **Required** | No                              |
 
 **Description**: This setting controls how order items with different additional options are displayed in the shopping cart and order.
 
@@ -91,11 +91,11 @@ Item 2: Laptop + 3-year warranty (Qty: 1) - €1,149
 
 ### Adjust order line items
 
-| Property     | Value                                                |
-| ------------ | ---------------------------------------------------- |
-| **Type**     | Select (Dropdown)                                    |
-| **Default**  | Recalculate line items to show individual prices     |
-| **Required** | No                                                   |
+| Property     | Value                                            |
+| ------------ | ------------------------------------------------ |
+| **Type**     | Select (Dropdown)                                |
+| **Default**  | Recalculate line items to show individual prices |
+| **Required** | No                                               |
 
 **Description**: Controls whether the prices of order items are recalculated when transitioning from cart to order or whether cart prices are retained.
 
@@ -118,12 +118,12 @@ Item 2: Laptop + 3-year warranty (Qty: 1) - €1,149
 
 All settings mentioned above can be configured individually per sales channel.
 
-| Setting                     | Scope                      | Description                                                |
-| --------------------------- | -------------------------- | ---------------------------------------------------------- |
-| Apply discounts             | Global/Per Sales Channel   | Can be enabled differently per sales channel               |
-| Position on product page    | Global/Per Sales Channel   | Can be positioned differently per sales channel            |
-| Quantity handling           | Global/Per Sales Channel   | Can have different display per sales channel               |
-| Adjust order items          | Global/Per Sales Channel   | Can use different pricing logic per sales channel          |
+| Setting                  | Scope                    | Description                                       |
+| ------------------------ | ------------------------ | ------------------------------------------------- |
+| Apply discounts          | Global/Per Sales Channel | Can be enabled differently per sales channel      |
+| Position on product page | Global/Per Sales Channel | Can be positioned differently per sales channel   |
+| Quantity handling        | Global/Per Sales Channel | Can have different display per sales channel      |
+| Adjust order items       | Global/Per Sales Channel | Can use different pricing logic per sales channel |
 
 **How to configure sales channel-specific settings**:
 
@@ -138,12 +138,12 @@ All settings mentioned above can be configured individually per sales channel.
 
 ### For B2C Shops with Promotions and Discounts
 
-| Setting                     | Recommended Value                        |
-| --------------------------- | ---------------------------------------- |
-| Apply discounts             | Enabled                                  |
-| Position on product page    | Below "Add to cart" button               |
-| Quantity handling           | Merge                                    |
-| Adjust order items          | Recalculate                              |
+| Setting                  | Recommended Value          |
+| ------------------------ | -------------------------- |
+| Apply discounts          | Enabled                    |
+| Position on product page | Below "Add to cart" button |
+| Quantity handling        | Merge                      |
+| Adjust order items       | Recalculate                |
 
 **Rationale**: Customers benefit from discounts on additional options, the display is clear, and prices are always current.
 
@@ -151,12 +151,12 @@ All settings mentioned above can be configured individually per sales channel.
 
 ### For B2B Shops with Fixed Prices
 
-| Setting                     | Recommended Value                        |
-| --------------------------- | ---------------------------------------- |
-| Apply discounts             | Disabled                                 |
-| Position on product page    | Above "Add to cart" button               |
-| Quantity handling           | Split (Quantity 1)                       |
-| Adjust order items          | Keep                                     |
+| Setting                  | Recommended Value          |
+| ------------------------ | -------------------------- |
+| Apply discounts          | Disabled                   |
+| Position on product page | Above "Add to cart" button |
+| Quantity handling        | Split (Quantity 1)         |
+| Adjust order items       | Keep                       |
 
 **Rationale**: Additional options have fixed prices, are clearly visible before purchase completion, each item is listed individually for ERP systems, and prices remain guaranteed.
 
@@ -164,12 +164,12 @@ All settings mentioned above can be configured individually per sales channel.
 
 ### For Shops with Mandatory Additional Options (e.g., Insurance)
 
-| Setting                     | Recommended Value                        |
-| --------------------------- | ---------------------------------------- |
-| Apply discounts             | Disabled                                 |
-| Position on product page    | Above "Add to cart" button               |
-| Quantity handling           | As needed                                |
-| Adjust order items          | Recalculate                              |
+| Setting                  | Recommended Value          |
+| ------------------------ | -------------------------- |
+| Apply discounts          | Disabled                   |
+| Position on product page | Above "Add to cart" button |
+| Quantity handling        | As needed                  |
+| Adjust order items       | Recalculate                |
 
 **Rationale**: Mandatory additional options (e.g., legally required insurance) should be sold without discounts, prominently positioned, and have current prices.
 

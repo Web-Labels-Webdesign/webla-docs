@@ -4,6 +4,14 @@ All notable changes to the Product Advisor Plugin for end users.
 
 ---
 
+## [7.0.8] - 2026-02-19
+
+### Bug Fixes
+
+- :bug: **Product stream returning no products (Shopware 6.7)**: Fixed an issue where advisors with a configured product stream would return zero products on Shopware 6.7. The root cause was a registry initialization error triggered by direct `ProductDefinition` injection. The fix replaces the manual filter parsing with Shopware's official `ProductStreamBuilderInterface::buildFilters()` API, which is compatible with Shopware 6.5, 6.6, and 6.7.
+
+---
+
 ## [7.0.7] - 2026-02-09
 
 ### Bug Fixes
