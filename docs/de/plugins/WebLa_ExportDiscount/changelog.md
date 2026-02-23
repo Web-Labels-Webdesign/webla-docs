@@ -4,6 +4,22 @@ Alle wichtigen Änderungen an Shopping Feed mit einzigartigen Rabatten für Endb
 
 ---
 
+## [v5.0.3] - 2026-02-20
+
+### Fehlerbehebungen
+
+- :bug: **Rabatt bei mehreren Produkten hintereinander**: Behoben: Bei aktivierter Option `allowMultiple=true` wurde nur das erste über einen Feed-Deeplink aufgerufene Produkt mit dem Rabattpreis angezeigt. Weitere Produkte zeigten fälschlicherweise den vollen Preis. Der Preisrechner ermittelt nun die passende Rabatt-Session pro Produkt innerhalb der Schleife, statt eine einzelne vorgeladene Session für alle Produkte zu verwenden.
+
+---
+
+## [v5.0.2] - 2026-02-19
+
+### Fehlerbehebungen
+
+- :bug: **Preisdaten-Kontamination in der Datenbank**: Behoben: `listPrice` wurde fälschlicherweise in der Datenbank für Produkte gespeichert, bei denen der Händler keinen Streichpreis gesetzt hatte. Die Ursache lag in PHP-Shallow-Clone-Semantik, die direkte Mutationen an den Price-Objekten der Entität ermöglichte, bevor Shopwares `EntityWrittenEvent` die Entität persistierte. Alle drei Preisberechnungsmethoden erstellen nun neue `Price`-Objekte, anstatt die vorhandenen zu mutieren.
+
+---
+
 ## [v5.0.1] - 2026-02-03
 
 ### Fehlerbehebungen
@@ -132,6 +148,8 @@ Alle wichtigen Änderungen an Shopping Feed mit einzigartigen Rabatten für Endb
 
 | Version | Veröffentlichung | Highlights                                    |
 | ------- | ---------------- | --------------------------------------------- |
+| v5.0.3  | 2026-02-20       | Fehlerbehebung: Rabatt bei mehreren Produkten mit allowMultiple=true |
+| v5.0.2  | 2026-02-19       | Fehlerbehebung: Preisdaten-Kontamination in der DB |
 | v5.0.1  | 2026-02-03       | Fehlerbehebungen basierend auf Kundenfeedback |
 | v5.0.0  | 2026-02-03       | Shopware 6.5/6.6/6.7 Multi-Version-Support    |
 | 2.0.1   | 2023-10-20       | Neue Caching-Strategie                        |

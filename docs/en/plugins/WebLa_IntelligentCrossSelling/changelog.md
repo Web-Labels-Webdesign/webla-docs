@@ -4,6 +4,17 @@ All notable changes to Intelligent Cross-Selling for end users.
 
 ---
 
+## [5.1.1] - 2026-02-19
+
+### Improvements
+
+- **Faster cache hits**: Eliminated all database queries on cached cross-selling requests — the configuration ID lookup that ran on every request (even cache hits) has been removed
+- **Reduced DB queries on cache miss**: Property weights are now read from already-loaded configuration data instead of triggering a separate query per configuration
+- **Product preloading**: The source product is loaded once and reused across all configurations when showing multiple cross-selling groups
+- **Leaner search queries**: Removed unnecessary association loading from ID-only search queries
+
+---
+
 ## [5.1.0] - 2026-02-05
 
 ### New Features
@@ -98,6 +109,7 @@ All notable changes to Intelligent Cross-Selling for end users.
 
 | Version | Release Date | Highlights |
 |---------|--------------|------------|
+| 5.1.1 | 2026-02-19 | Performance: zero DB queries on cache hit |
 | 5.1.0 | 2026-02-05 | Multiple configurations, category/stream assignment |
 | 5.0.1 | 2026-01-29 | Critical bug fixes, performance optimization |
 | 5.0.0 | 2026-01-29 | Multi-version support (SW 6.5-6.7) |

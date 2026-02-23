@@ -4,6 +4,17 @@ Alle wichtigen Änderungen an Intelligentes Cross-Selling für Endbenutzer.
 
 ---
 
+## [5.1.1] - 2026-02-19
+
+### Verbesserungen
+
+- **Schnellere Cache-Treffer**: Alle Datenbankabfragen bei gecachten Cross-Selling-Anfragen eliminiert — die Konfigurations-ID-Abfrage, die bei jeder Anfrage (auch bei Cache-Treffern) ausgeführt wurde, wurde entfernt
+- **Weniger DB-Abfragen bei Cache-Misses**: Eigenschaftsgewichtungen werden nun aus bereits geladenen Konfigurationsdaten gelesen, anstatt eine separate Abfrage pro Konfiguration auszulösen
+- **Produkt-Vorausladen**: Das Quellprodukt wird einmal geladen und bei mehreren Cross-Selling-Gruppen für alle Konfigurationen wiederverwendet
+- **Schlankere Suchabfragen**: Unnötiges Laden von Assoziationen bei reinen ID-Suchabfragen entfernt
+
+---
+
 ## [5.1.0] - 2026-02-05
 
 ### Neu
@@ -98,6 +109,7 @@ Alle wichtigen Änderungen an Intelligentes Cross-Selling für Endbenutzer.
 
 | Version | Veröffentlichung | Highlights |
 |---------|------------------|------------|
+| 5.1.1 | 2026-02-19 | Performance: keine DB-Abfragen bei Cache-Treffer |
 | 5.1.0 | 2026-02-05 | Mehrere Konfigurationen, Kategorie-/Stream-Zuweisung |
 | 5.0.1 | 2026-01-29 | Kritische Bugfixes, Performance-Optimierung |
 | 5.0.0 | 2026-01-29 | Multi-Version-Support (SW 6.5-6.7) |
