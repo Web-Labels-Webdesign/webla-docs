@@ -4,6 +4,14 @@ Alle wichtigen Änderungen am Zusatzoptionen Plugin für Endbenutzer.
 
 ---
 
+## [5.1.1] - 2026-03-02
+
+### 🐛 Fehlerbehebungen
+
+- **Migrations-Kompatibilität**: Seeder-Migrationen sind jetzt vollständig MySQL-kompatibel — die `ADD COLUMN`-Anweisungen sind idempotent und schlagen bei Neuinstallationen oder erneuten Ausführungen nicht mehr fehl
+
+---
+
 ## [5.1.0] - 2026-02-19
 
 ### ✨ Neue Funktionen

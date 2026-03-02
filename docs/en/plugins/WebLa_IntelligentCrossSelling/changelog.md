@@ -4,6 +4,16 @@ All notable changes to Intelligent Cross-Selling for end users.
 
 ---
 
+## [5.1.2] - 2026-03-02
+
+### Bug Fixes
+
+- **Fixed crash on missing translations**: Resolved a TypeError where `getTitle()` crashed when translation rows were missing, causing "something went wrong" errors on product detail pages in the storefront
+- **Fixed incomplete uninstall**: Added missing `DROP TABLE` statements for `webla_cross_selling_category` and `webla_cross_selling_product_stream` tables, which caused FK constraint failures during uninstall — leaving orphaned data that broke reinstallation
+- **Null-safe entity getters**: `isActive()`, `isShowTitle()`, and `getMaxProducts()` now return safe defaults instead of crashing when properties are null
+
+---
+
 ## [5.1.1] - 2026-02-19
 
 ### Improvements
@@ -109,6 +119,7 @@ All notable changes to Intelligent Cross-Selling for end users.
 
 | Version | Release Date | Highlights |
 |---------|--------------|------------|
+| 5.1.2 | 2026-03-02 | Fix crash on missing translations, fix uninstall |
 | 5.1.1 | 2026-02-19 | Performance: zero DB queries on cache hit |
 | 5.1.0 | 2026-02-05 | Multiple configurations, category/stream assignment |
 | 5.0.1 | 2026-01-29 | Critical bug fixes, performance optimization |
