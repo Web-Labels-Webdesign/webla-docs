@@ -226,6 +226,22 @@ These settings control the behavior of each individual cross-selling configurati
 
 ---
 
+### Show One Variant Per Parent
+
+| Property     | Value  |
+| ------------ | ------ |
+| **Type**     | Switch |
+| **Default**  | Off    |
+| **Required** | No     |
+
+**Description**: When enabled, at most one variant per parent product will appear in the cross-selling results. The highest-scoring variant is selected; if a storefront main variant is configured for the parent, that variant is preferred.
+
+**Example Use Case**: Enable this option when your catalog has many variants per product (e.g., sizes or colors) and you want to avoid showing the same base product multiple times under different variant IDs. Customers see one representative variant and can switch to their preferred option on the product page.
+
+**Note**: This option works independently of "Show only main articles" and "Show only variant articles". It does not filter by variant type — it only deduplicates so each parent appears once.
+
+---
+
 ## Cross Selling Weights
 
 The weights determine how strongly individual product properties are considered when calculating recommendations.

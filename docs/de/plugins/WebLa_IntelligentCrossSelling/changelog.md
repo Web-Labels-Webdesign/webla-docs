@@ -4,6 +4,14 @@ Alle wichtigen Änderungen an Intelligentes Cross-Selling für Endbenutzer.
 
 ---
 
+## [5.2.0] - 2026-03-03
+
+### Neue Funktionen
+
+- **Eine Variante pro Hauptartikel anzeigen**: Neue Option, um in Cross-Selling-Ergebnissen nur eine Variante pro Hauptartikel anzuzeigen und so doppelte Hauptartikel in den Empfehlungen zu vermeiden
+
+---
+
 ## [5.1.2] - 2026-03-02
 
 ### Fehlerbehebungen
@@ -119,6 +127,7 @@ Alle wichtigen Änderungen an Intelligentes Cross-Selling für Endbenutzer.
 
 | Version | Veröffentlichung | Highlights |
 |---------|------------------|------------|
+| 5.2.0 | 2026-03-03 | Option: Eine Variante pro Hauptartikel anzeigen |
 | 5.1.2 | 2026-03-02 | Absturz bei fehlenden Übersetzungen behoben, Deinstallation korrigiert |
 | 5.1.1 | 2026-02-19 | Performance: keine DB-Abfragen bei Cache-Treffer |
 | 5.1.0 | 2026-02-05 | Mehrere Konfigurationen, Kategorie-/Stream-Zuweisung |

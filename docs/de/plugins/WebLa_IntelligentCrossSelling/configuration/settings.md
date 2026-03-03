@@ -226,6 +226,22 @@ Diese Einstellungen steuern das Verhalten jeder einzelnen Cross-Selling-Konfigur
 
 ---
 
+### Eine Variante pro Hauptartikel anzeigen
+
+| Eigenschaft      | Wert     |
+| ---------------- | -------- |
+| **Typ**          | Schalter |
+| **Standard**     | Aus      |
+| **Erforderlich** | Nein     |
+
+**Beschreibung**: Wenn aktiviert, erscheint pro Hauptartikel höchstens eine Variante in den Cross-Selling-Ergebnissen. Die Variante mit dem höchsten Ähnlichkeitsscore wird ausgewählt. Wenn für den Hauptartikel im Storefront eine Hauptvariante konfiguriert ist, wird diese bevorzugt angezeigt.
+
+**Anwendungsbeispiel**: Aktivieren Sie diese Option, wenn Ihr Katalog viele Varianten pro Produkt enthält (z.B. Größen oder Farben) und Sie verhindern möchten, dass dasselbe Basisprodukt mehrfach unter verschiedenen Varianten-IDs erscheint. Kunden sehen eine repräsentative Variante und können auf der Produktseite ihre bevorzugte Variante auswählen.
+
+**Hinweis**: Diese Option funktioniert unabhängig von "Nur Hauptartikel anzeigen" und "Nur Variantenartikel anzeigen". Sie filtert nicht nach Variantentyp — sie dedupliziert lediglich, sodass jeder Hauptartikel einmal erscheint.
+
+---
+
 ## Cross Selling Gewichtungen
 
 Die Gewichtungen bestimmen, wie stark einzelne Produkteigenschaften bei der Berechnung der Empfehlungen berücksichtigt werden.

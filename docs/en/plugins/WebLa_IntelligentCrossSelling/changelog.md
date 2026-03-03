@@ -4,6 +4,14 @@ All notable changes to Intelligent Cross-Selling for end users.
 
 ---
 
+## [5.2.0] - 2026-03-03
+
+### New Features
+
+- **Show one variant per parent**: New option to display only one variant per parent product in cross-selling results, preventing duplicate parent products from appearing in recommendations
+
+---
+
 ## [5.1.2] - 2026-03-02
 
 ### Bug Fixes
@@ -119,6 +127,7 @@ All notable changes to Intelligent Cross-Selling for end users.
 
 | Version | Release Date | Highlights |
 |---------|--------------|------------|
+| 5.2.0 | 2026-03-03 | Show one variant per parent option |
 | 5.1.2 | 2026-03-02 | Fix crash on missing translations, fix uninstall |
 | 5.1.1 | 2026-02-19 | Performance: zero DB queries on cache hit |
 | 5.1.0 | 2026-02-05 | Multiple configurations, category/stream assignment |
