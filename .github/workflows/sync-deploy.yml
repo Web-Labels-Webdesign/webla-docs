@@ -41,6 +41,8 @@ jobs:
             ["WebLa_ExportDiscount"]="WebLa_ExportDiscount"
             ["WebLa_ProductSliderAdvanced"]="WebLa_ProductSliderAdvanced"
             ["WebLa_Zusatzoptionen"]="WebLa_Zusatzoptionen"
+            ["WebLa_CategorieQuickFilter"]="WebLa_CategorieQuickFilter"
+            ["WebLa_ContactFormFileUpload"]="WebLa_ContactFormFileUpload"
           )
 
           declare -A PLUGIN_FOLDERS=(
@@ -53,6 +55,9 @@ jobs:
             ["WebLa_ExportDiscount"]="WebLa_ExportDiscount"
             ["WebLa_ProductSliderAdvanced"]="WebLa_ProductSliderAdvanced"
             ["WebLa_Zusatzoptionen"]="webla_zusatzoptionen"
+            ["WebLa_CategorieQuickFilter"]="WebLa_CategorieQuickFilter"
+            ["WebLa_ContactFormFileUpload"]="WebLa_ContactFormFileUpload"
+
           )
 
           # Supported languages

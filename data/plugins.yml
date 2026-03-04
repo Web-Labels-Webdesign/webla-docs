@@ -80,3 +80,21 @@ plugins:
       en: Add flexible additional options to products with custom pricing, shipping restrictions, and automated assignment via product streams for enhanced product configuration.
     requirements: Shopware 6.6–6.8, PHP 8.1+
     version: "5.1.1"
+  - id: WebLa_ContactFormFileUpload
+    name:
+      de: Kontaktformular – Datei-Upload
+      en: Contact Form – File Upload
+    short:
+      de: Erweitert das Kontaktformular in Shopware 6 um eine komfortable Datei-Upload-Funktion mit Drag & Drop Unterstützung.
+      en: Extends the Shopware 6 contact form with a convenient file upload feature including drag & drop support.
+    requirements: Shopware 6.6–6.8, PHP 8.1+
+    version: "5.0.5"
+  - id: WebLa_CategorieQuickFilter
+    name:
+      de: Kategorie Schnellauswahl
+      en: Category Quick Filter
+    short:
+      de: Interaktives mehrstufiges Kategorie-Dropdown für Shopware 6 Erlebniswelten. Führt Kunden schnell durch tiefe Kategoriestrukturen – ideal für Fahrzeugauswahl und Druckerzubehör.
+      en: Interactive multi-level category dropdown for Shopware 6 Shopping Experiences. Guides customers through deep category structures – perfect for vehicle selectors and printer supplies.
+    requirements: Shopware 6.6–6.8, PHP 8.1+
+    version: "5.0.0"
