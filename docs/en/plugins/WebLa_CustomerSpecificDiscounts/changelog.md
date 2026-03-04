@@ -4,6 +4,14 @@ All notable changes to Customer Specific Discounts for end users.
 
 ---
 
+## [1.5.5] - 2026-03-04
+
+### Bug Fixes
+
+- **OscWare Integration**: Added a synthetic `productNumber` (formatted as `DISC-{productNumber}`) to each discount line item's payload, preventing middleware like OscWare from merging all discount positions into a single collective entry (Sammelposition) in Lexoffice/Lexware.
+
+---
+
 ## [1.5.4] - 2026-03-03
 
 ### Bug Fixes

@@ -4,6 +4,14 @@ Alle wichtigen Änderungen an Kundenspezifische Rabatte für Endbenutzer.
 
 ---
 
+## [1.5.5] - 2026-03-04
+
+### Fehlerbehebungen
+
+- **OscWare-Integration**: Dem Payload jeder Rabatt-Position wurde eine synthetische `productNumber` (im Format `DISC-{Produktnummer}`) hinzugefügt. Dies verhindert, dass Middleware wie OscWare alle Rabatt-Positionen zu einem einzigen Sammeleintrag (Sammelposition) in Lexoffice/Lexware zusammenführt.
+
+---
+
 ## [1.5.4] - 2026-03-03
 
 ### Fehlerbehebungen
