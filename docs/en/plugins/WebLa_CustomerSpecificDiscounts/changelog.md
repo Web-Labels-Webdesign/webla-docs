@@ -4,6 +4,22 @@ All notable changes to Customer Specific Discounts for end users.
 
 ---
 
+## [1.5.4] - 2026-03-03
+
+### Bug Fixes
+
+- **Service Configuration**: Fixed an incorrect service ID for the sales channel product repository (`sales_channel_product.repository` → `sales_channel.product.repository`), which caused a dependency injection error on container build.
+
+---
+
+## [1.5.3] - 2026-03-03
+
+### Bug Fixes
+
+- **Cart Hash Mismatch**: Fixed a "cart has changed" error in Shopware 6.7+ when the "Separate Discount" option is active. Discount line items were previously created with random UUIDs on every cart recalculation, causing the cart hash to change between checkout and order placement. Discount line items now use a deterministic, stable ID derived from the product they apply to.
+
+---
+
 ## [1.5.2] - 2026-02-17
 
 ### Bug Fixes

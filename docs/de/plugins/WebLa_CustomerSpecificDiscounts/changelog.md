@@ -4,6 +4,22 @@ Alle wichtigen Änderungen an Kundenspezifische Rabatte für Endbenutzer.
 
 ---
 
+## [1.5.4] - 2026-03-03
+
+### Fehlerbehebungen
+
+- **Service-Konfiguration**: Fehlerhafte Service-ID für das Sales-Channel-Produkt-Repository korrigiert (`sales_channel_product.repository` → `sales_channel.product.repository`), die beim Container-Build zu einem Fehler bei der Abhängigkeitsinjektion führte.
+
+---
+
+## [1.5.3] - 2026-03-03
+
+### Fehlerbehebungen
+
+- **Warenkorb-Hash-Fehler**: Fehler „Warenkorb hat sich geändert" in Shopware 6.7+ behoben, der beim aktivierten „Separater Rabatt"-Modus auftrat. Rabatt-Positionen wurden bei jeder Warenkorbberechnung mit zufälligen UUIDs erstellt, wodurch sich der Warenkorb-Hash zwischen Checkout und Bestellaufgabe änderte. Rabatt-Positionen erhalten nun eine stabile, deterministische ID basierend auf dem zugehörigen Produkt.
+
+---
+
 ## [1.5.2] - 2026-02-17
 
 ### Fehlerbehebungen
