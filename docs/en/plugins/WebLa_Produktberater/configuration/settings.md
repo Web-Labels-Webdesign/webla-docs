@@ -178,6 +178,22 @@ This document describes all available settings for the Product Advisor.
 
 ---
 
+### Show All Variants
+
+| Property     | Value  |
+| ------------ | ------ |
+| **Type**     | Switch |
+| **Default**  | No     |
+| **Required** | No     |
+
+**Description**: When enabled, every individual matching variant is shown in the results. When disabled (default), only one representative product per parent is shown — either the parent product itself or the first matching child variant.
+
+**Example Use Case**: Enable this when a Dynamic Product Group targets specific variant products (e.g. product number starts with `red-`) and you want each matching variant to appear as a separate result entry rather than being collapsed under the parent.
+
+**Note**: This setting is only relevant when the advisor is used together with a Dynamic Product Group that explicitly filters variant/child products.
+
+---
+
 ### End Text
 
 | Property     | Value       |

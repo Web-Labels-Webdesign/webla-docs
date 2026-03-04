@@ -4,6 +4,18 @@ All notable changes to the Product Advisor Plugin for end users.
 
 ---
 
+## [7.1.0] - 2026-03-04
+
+### New Features
+
+- :sparkles: **Show all variants**: New advisor option "Show all variants" displays every individual matching variant in the results instead of one representative product per parent. Useful when a product stream targets variant/child products directly.
+
+### Bug Fixes
+
+- :bug: **Product stream returns 0 results when targeting variants**: Fixed an issue where an advisor with a product stream that filters by variant products (e.g. product number starting with a specific prefix) returned zero results. A hardcoded `childCount < 1` filter was incorrectly excluding all parent-level products the stream was targeting.
+
+---
+
 ## [7.0.8] - 2026-02-19
 
 ### Bug Fixes

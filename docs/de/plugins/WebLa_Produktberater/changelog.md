@@ -4,6 +4,18 @@ Alle wichtigen Änderungen am Produkt Berater Plugin für Endbenutzer.
 
 ---
 
+## [7.1.0] - 2026-03-04
+
+### Neue Funktionen
+
+- :sparkles: **Alle Varianten anzeigen**: Neue Berater-Option „Alle Varianten anzeigen" zeigt jede einzelne passende Variante im Ergebnis an, anstatt nur ein repräsentatives Produkt pro Elternprodukt. Nützlich, wenn ein Produktstream gezielt Varianten/Kindprodukte anspricht.
+
+### Fehlerbehebungen
+
+- :bug: **Produktstream liefert 0 Ergebnisse bei Varianten-Targeting**: Problem behoben, bei dem ein Berater mit einem Produktstream, der nach Variantenprodukten filtert (z.B. Produktnummer beginnt mit einem bestimmten Präfix), keine Ergebnisse lieferte. Ein fest kodierter `childCount < 1`-Filter schloss fälschlicherweise alle Produkte aus, die der Stream gezielt ansprechen sollte.
+
+---
+
 ## [7.0.8] - 2026-02-19
 
 ### Fehlerbehebungen

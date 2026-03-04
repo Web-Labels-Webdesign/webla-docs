@@ -178,6 +178,22 @@ Dieses Dokument beschreibt alle verfügbaren Einstellungen für den Produkt Bera
 
 ---
 
+### Alle Varianten anzeigen
+
+| Eigenschaft      | Wert     |
+| ---------------- | -------- |
+| **Typ**          | Schalter |
+| **Standard**     | Nein     |
+| **Erforderlich** | Nein     |
+
+**Beschreibung**: Wenn aktiviert, wird jede einzelne passende Variante in den Ergebnissen angezeigt. Bei deaktivierter Option (Standard) wird pro Elternprodukt nur ein repräsentatives Produkt angezeigt — entweder das Elternprodukt selbst oder die erste passende Kindvariante.
+
+**Anwendungsbeispiel**: Aktivieren Sie diese Option, wenn eine Dynamische Produktgruppe gezielt Variantenprodukte anspricht (z.B. Produktnummer beginnt mit `rot-`) und jede passende Variante als separater Eintrag im Ergebnis erscheinen soll, anstatt unter dem Elternprodukt zusammengefasst zu werden.
+
+**Hinweis**: Diese Einstellung ist nur relevant, wenn der Berater zusammen mit einer Dynamischen Produktgruppe verwendet wird, die explizit Varianten/Kindprodukte filtert.
+
+---
+
 ### Abschlusstext
 
 | Eigenschaft      | Wert        |
