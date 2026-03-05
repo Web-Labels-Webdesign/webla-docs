@@ -4,6 +4,14 @@ All notable changes to Product Slider Advanced for end users.
 
 ---
 
+## [v5.0.4] - 2026-03-05
+
+### 🐛 Bug Fixes
+
+- **Mobile overflow in column layouts**: Fixed an issue where the slider content overflowed its container on mobile devices when embedded in third-party column layouts (e.g. Themeware 2-column grids). The slider now correctly constrains to its parent container width.
+
+---
+
 ## [v5.0.3] - 2026-02-04
 
 ### 🐛 Bug Fixes
@@ -123,6 +131,7 @@ All notable changes to Product Slider Advanced for end users.
 
 | Version | Release Date | Highlights |
 | ------- | ------------ | ---------- |
+| v5.0.4  | 2026-03-05   | Bugfix for mobile overflow in column layouts |
 | v5.0.3  | 2026-02-04   | Bugfix for CSS inline styles |
 | v5.0.2  | 2026-02-04   | Bugfix for slider functionality |
 | v5.0.1  | 2026-02-04   | Performance optimizations |
@@ -149,6 +158,6 @@ Version 5.0.0 introduces a unified codebase for Shopware 6.5, 6.6, and 6.7. When
 
 | Plugin Version | Shopware Version | PHP Version |
 | -------------- | ---------------- | ----------- |
-| v5.0.3         | 6.5.0 - 6.7.x    | 8.1+        |
+| v5.0.4         | 6.5.0 - 6.7.x    | 8.1+        |
 | v2.0.x         | 6.5.x            | 8.1+        |
 | v1.0.x         | 6.4.x            | 7.4+        |

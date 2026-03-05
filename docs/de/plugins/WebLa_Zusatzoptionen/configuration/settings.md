@@ -38,15 +38,17 @@ Dieses Dokument beschreibt alle verfügbaren Einstellungen für das Zusatzoption
 | **Standard**     | Unter "In den Warenkorb" Button |
 | **Erforderlich** | Nein                            |
 
-**Beschreibung**: Legt fest, wo die Zusatzoptionen auf der Produktdetailseite angezeigt werden - oberhalb oder unterhalb des "In den Warenkorb"-Buttons.
+**Beschreibung**: Legt fest, wo die Zusatzoptionen auf der Produktdetailseite relativ zum "In den Warenkorb"-Button und dem Kaufen-Widget angezeigt werden.
 
 **Optionen**:
 - `Über "In den Warenkorb" Button`: Die Optionen-Auswahl erscheint direkt über dem Warenkorb-Button, sodass Kunden diese vor dem Hinzufügen zum Warenkorb sehen
-- `Unter "In den Warenkorb" Button`: Die Optionen-Auswahl erscheint unterhalb des Warenkorb-Buttons (Standardeinstellung)
+- `Unter "In den Warenkorb" Button`: Die Optionen-Auswahl erscheint unterhalb des Warenkorb-Buttons, aber noch innerhalb des Kaufen-Formulars (Standardeinstellung)
+- `Unter dem gesamten Kaufen-Widget`: Die Optionen-Auswahl erscheint nach dem gesamten Kaufen-Widget — unterhalb von Wunschliste-Button, Artikelnummer und allen anderen Erweiterungen im Kaufen-Bereich
 
 **Anwendungsbeispiel**:
 - **Position "Über"**: Ideal, wenn die Zusatzoptionen wichtig für die Kaufentscheidung sind (z.B. Pflichtfelder wie Garantieverlängerung)
 - **Position "Unter"**: Geeignet für optionale Zusatzleistungen, die der Kunde nach der Hauptentscheidung hinzufügen kann
+- **Position "Unter dem Widget"**: Verwenden Sie diese Option, wenn andere Erweiterungen (z.B. Wunschliste, Konfiguratoren) mit der Position "Unter" in Konflikt stehen, weil sie Inhalte zwischen den Warenkorb-Button und die Optionen einfügen
 
 **UI-Auswirkung**: Diese Einstellung beeinflusst nur die Produktdetailseite. Im Warenkorb erscheinen die Optionen immer direkt unter dem jeweiligen Artikel.
 

@@ -38,15 +38,17 @@ This document describes all available settings for the Additional Options Plugin
 | **Default**  | Below "Add to cart" button |
 | **Required** | No                         |
 
-**Description**: Determines where the additional options are displayed on the product detail page - above or below the "Add to cart" button.
+**Description**: Determines where the additional options are displayed on the product detail page relative to the "Add to cart" button and buy widget.
 
 **Options**:
 - `Show option selection above "Add to cart" Button`: The option selection appears directly above the cart button, so customers see it before adding to cart
-- `Show option selection below "Add to cart" Button`: The option selection appears below the cart button (default setting)
+- `Show option selection below "Add to cart" Button`: The option selection appears below the cart button but still inside the buy form area (default setting)
+- `Show option selection below the entire buy widget`: The option selection appears after the entire buy widget — below the wishlist button, product number, and any other extensions that inject into the buy area
 
 **Example Use Case**:
 - **Position "Above"**: Ideal when additional options are important for the purchase decision (e.g., required fields like warranty extension)
 - **Position "Below"**: Suitable for optional additional services that the customer can add after the main decision
+- **Position "Below Widget"**: Use when other extensions (e.g., wishlist, configurators) conflict with the "Below" position by injecting content between the cart button and the options
 
 **UI Impact**: This setting only affects the product detail page. In the shopping cart, options always appear directly under the respective item.
 

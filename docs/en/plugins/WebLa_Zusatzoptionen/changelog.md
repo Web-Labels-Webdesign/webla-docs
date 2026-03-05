@@ -4,6 +4,30 @@ All notable changes to the Additional Options Plugin for end users.
 
 ---
 
+## [5.2.1] - 2026-03-05
+
+### 🐛 Bug Fixes
+
+- **Admin Menu Items**: Fixed plugin menu items ("Option Seeder" and "Additional Options Configuration") not appearing in the administration — caused by a missing variable declaration in the production JS bundle
+
+---
+
+## [5.2.0] - 2026-03-05
+
+### ✨ New Features
+
+- **"Below Widget" Position Option**: New third position option for the product detail page — places the option selection below the entire buy widget (after wishlist, product number, and other extensions), avoiding conflicts with extensions that inject into the buy form area
+
+---
+
+## [5.1.2] - 2026-03-05
+
+### 🐛 Bug Fixes
+
+- **Seeder Sync**: Changes to seeder settings (e.g. "Open by default") now correctly propagate to all existing product option sets on the next sync cycle — previously, edits to a seeder were never applied to already-seeded products
+
+---
+
 ## [5.1.1] - 2026-03-02
 
 ### 🐛 Bug Fixes

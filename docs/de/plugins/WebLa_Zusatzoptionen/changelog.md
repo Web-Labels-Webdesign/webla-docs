@@ -4,6 +4,30 @@ Alle wichtigen Änderungen am Zusatzoptionen Plugin für Endbenutzer.
 
 ---
 
+## [5.2.1] - 2026-03-05
+
+### 🐛 Fehlerbehebungen
+
+- **Admin-Menüpunkte**: Die Plugin-Menüpunkte („Optionen Seeder" und „Zusatzoptionen Konfiguration") werden nun wieder korrekt in der Administration angezeigt — Ursache war eine fehlende Variablendeklaration im produktiven JS-Bundle
+
+---
+
+## [5.2.0] - 2026-03-05
+
+### ✨ Neue Funktionen
+
+- **Positionsoption „Unter dem Kaufen-Widget"**: Neue dritte Positionsoption für die Produktdetailseite — platziert die Optionsauswahl unterhalb des gesamten Kaufen-Widgets (nach Wunschliste, Artikelnummer und anderen Erweiterungen), um Konflikte mit Erweiterungen zu vermeiden, die in den Kaufen-Bereich einfügen
+
+---
+
+## [5.1.2] - 2026-03-05
+
+### 🐛 Fehlerbehebungen
+
+- **Seeder-Synchronisation**: Änderungen an Seeder-Einstellungen (z.B. „Standardmäßig geöffnet") werden jetzt korrekt bei der nächsten Synchronisation auf alle bestehenden Produkt-Optionen-Sets übertragen — zuvor wurden Änderungen an einem Seeder nie auf bereits geseedete Produkte angewandt
+
+---
+
 ## [5.1.1] - 2026-03-02
 
 ### 🐛 Fehlerbehebungen

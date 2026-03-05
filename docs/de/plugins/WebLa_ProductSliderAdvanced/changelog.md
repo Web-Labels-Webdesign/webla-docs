@@ -4,6 +4,14 @@ Alle wichtigen Änderungen an Product Slider Advanced für Endbenutzer.
 
 ---
 
+## [v5.0.4] - 2026-03-05
+
+### 🐛 Fehlerbehebungen
+
+- **Mobiler Überlauf in Spalten-Layouts**: Ein Problem wurde behoben, bei dem der Slider-Inhalt in der mobilen Ansicht über den Container hinausragte, wenn er in Spalten-Layouts von Drittanbietern eingebettet war (z. B. Themeware 2-Spalten-Raster). Der Slider passt sich jetzt korrekt an die Breite des übergeordneten Containers an.
+
+---
+
 ## [v5.0.3] - 2026-02-04
 
 ### 🐛 Fehlerbehebungen
@@ -123,6 +131,7 @@ Alle wichtigen Änderungen an Product Slider Advanced für Endbenutzer.
 
 | Version | Veröffentlichung | Highlights |
 | ------- | ---------------- | ---------- |
+| v5.0.4  | 2026-03-05       | Bugfix für mobilen Überlauf in Spalten-Layouts |
 | v5.0.3  | 2026-02-04       | Bugfix für CSS-Inline-Styles |
 | v5.0.2  | 2026-02-04       | Bugfix für Slider-Funktionalität |
 | v5.0.1  | 2026-02-04       | Performance-Optimierungen |
@@ -149,6 +158,6 @@ Version 5.0.0 führt eine einheitliche Codebasis für Shopware 6.5, 6.6 und 6.7 
 
 | Plugin-Version | Shopware-Version | PHP-Version |
 | -------------- | ---------------- | ----------- |
-| v5.0.3         | 6.5.0 - 6.7.x    | 8.1+        |
+| v5.0.4         | 6.5.0 - 6.7.x    | 8.1+        |
 | v2.0.x         | 6.5.x            | 8.1+        |
 | v1.0.x         | 6.4.x            | 7.4+        |
