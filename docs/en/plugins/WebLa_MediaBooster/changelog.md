@@ -4,6 +4,65 @@ All notable changes to Media Booster for end users.
 
 ---
 
+## [1.3.5] - 2026-03-06
+
+### Bug Fixes
+- Fixed admin dashboard progress not updating in real-time during processing — switched to direct SQL reads for consistency with background worker writes and added cache-busting to status polling
+- Fixed "Last Run" timestamp showing stale or missing values after starting a new processing run
+
+---
+
+## [1.3.4] - 2026-03-06
+
+### Bug Fixes
+- Fixed sparse images (technical drawings, diagrams) being destroyed by lossy AVIF/WebP compression — now uses lossless mode which is both smaller and pixel-perfect
+- Removed unused `media_version_id` column from log table (media entity has no versioning)
+
+---
+
+## [1.3.3] - 2026-03-06
+
+### Bug Fixes
+- Fixed "Convert All Again" not regenerating AVIF/WebP files — conversion was skipped when the target file already existed on disk, so redo operations had no effect
+
+---
+
+## [1.3.2] - 2026-03-06
+
+### Bug Fixes
+- Fixed queue messages being processed synchronously in the HTTP request instead of in the background — admin UI no longer blocks until all batches complete
+
+---
+
+## [1.3.1] - 2026-03-06
+
+### Bug Fixes
+- Fixed reset task endpoint not dispatching batches after resetting, leaving processing stuck
+- Fixed footer buttons overflowing and reset being blocked after a completed run
+- Renamed buttons for clarity and added confirmations for destructive actions
+
+---
+
+## [1.3.0] - 2026-03-06
+
+### Improvements
+- Replaced fragile chain-dispatch queue architecture with pre-dispatch — all media IDs are now queried upfront, split into batches, and dispatched at once so each batch is independent and the queue can no longer stall mid-run
+- Processing progress is now tracked at batch level instead of per-item, reducing database writes during processing
+- Running state auto-clears when all items are handled, and stuck-state timeout reduced from 30 to 10 minutes for faster recovery
+
+### Bug Fixes
+- Fixed potential queue stall where a single failed batch could stop all subsequent batches from processing
+
+---
+
+## [1.2.1] - 2026-03-06
+
+### Bug Fixes
+- Fixed admin dashboard crash ("createNotificationError is not a function") caused by missing notification mixin
+- Improved progress card footer button layout — actions are now grouped logically with proper spacing
+
+---
+
 ## [1.2.0] - 2026-03-05
 
 ### New Features

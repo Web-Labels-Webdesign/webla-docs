@@ -4,6 +4,65 @@ Alle wichtigen Änderungen an Media Booster für Endbenutzer.
 
 ---
 
+## [1.3.5] - 2026-03-06
+
+### Fehlerbehebungen
+- Fortschrittsanzeige im Admin-Dashboard wurde während der Verarbeitung nicht in Echtzeit aktualisiert — auf direkte SQL-Abfragen umgestellt für Konsistenz mit Hintergrund-Worker-Schreibvorgängen und Cache-Busting zum Status-Polling hinzugefügt
+- „Letzter Lauf"-Zeitstempel zeigte veraltete oder fehlende Werte nach dem Start eines neuen Verarbeitungslaufs
+
+---
+
+## [1.3.4] - 2026-03-06
+
+### Fehlerbehebungen
+- Sparse Bilder (technische Zeichnungen, Diagramme) wurden durch verlustbehaftete AVIF/WebP-Kompression zerstört — verwendet nun verlustfreien Modus der sowohl kleiner als auch pixelgenau ist
+- Unbenutzte `media_version_id`-Spalte aus der Log-Tabelle entfernt (Media-Entity hat keine Versionierung)
+
+---
+
+## [1.3.3] - 2026-03-06
+
+### Fehlerbehebungen
+- „Alles neu konvertieren" hat AVIF/WebP-Dateien nicht neu generiert — Konvertierung wurde übersprungen wenn die Zieldatei bereits auf der Festplatte existierte, sodass Wiederholungen keine Wirkung hatten
+
+---
+
+## [1.3.2] - 2026-03-06
+
+### Fehlerbehebungen
+- Warteschlangen-Nachrichten wurden synchron im HTTP-Request statt im Hintergrund verarbeitet — Admin-Oberfläche blockiert nicht mehr bis alle Batches abgeschlossen sind
+
+---
+
+## [1.3.1] - 2026-03-06
+
+### Fehlerbehebungen
+- Reset-Task-Endpunkt hat nach dem Zurücksetzen keine Batches mehr versendet, wodurch die Verarbeitung stecken blieb
+- Footer-Buttons liefen über und Reset war nach abgeschlossenem Durchlauf blockiert
+- Buttons für Klarheit umbenannt und Bestätigungsdialoge für destruktive Aktionen hinzugefügt
+
+---
+
+## [1.3.0] - 2026-03-06
+
+### Verbesserungen
+- Fragile Ketten-Dispatch-Warteschlangenarchitektur durch Pre-Dispatch ersetzt — alle Medien-IDs werden nun vorab abgefragt, in Batches aufgeteilt und auf einmal versendet, sodass jeder Batch unabhängig ist und die Warteschlange nicht mehr mitten im Lauf stecken bleiben kann
+- Verarbeitungsfortschritt wird nun auf Batch-Ebene statt pro Element erfasst, was Datenbankschreibvorgänge während der Verarbeitung reduziert
+- Laufstatus wird automatisch zurückgesetzt wenn alle Elemente verarbeitet sind, und das Timeout für feststeckende Zustände wurde von 30 auf 10 Minuten reduziert
+
+### Fehlerbehebungen
+- Potenzielles Warteschlangen-Steckenbleiben behoben, bei dem ein einzelner fehlgeschlagener Batch alle nachfolgenden Batches am Verarbeiten hindern konnte
+
+---
+
+## [1.2.1] - 2026-03-06
+
+### Fehlerbehebungen
+- Admin-Dashboard-Absturz behoben ("createNotificationError is not a function") durch fehlendes Notification-Mixin
+- Fortschrittskarten-Footer-Buttons verbessert — Aktionen sind nun logisch gruppiert mit korrektem Abstand
+
+---
+
 ## [1.2.0] - 2026-03-05
 
 ### Neue Funktionen
