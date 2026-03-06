@@ -4,6 +4,14 @@ All notable changes to Intelligent Cross-Selling for end users.
 
 ---
 
+## [5.2.1] - 2026-03-05
+
+### Bug Fixes
+
+- **Fixed fresh installation failure**: Migration `AddOneVariantPerParentSwitch` referenced the old table name `webla_intelligent_cross_selling_settings` instead of the renamed `webla_cross_selling`, causing fresh plugin installations to fail
+
+---
+
 ## [5.2.0] - 2026-03-03
 
 ### New Features
@@ -127,6 +135,7 @@ All notable changes to Intelligent Cross-Selling for end users.
 
 | Version | Release Date | Highlights |
 |---------|--------------|------------|
+| 5.2.1 | 2026-03-05 | Fix fresh installation failure |
 | 5.2.0 | 2026-03-03 | Show one variant per parent option |
 | 5.1.2 | 2026-03-02 | Fix crash on missing translations, fix uninstall |
 | 5.1.1 | 2026-02-19 | Performance: zero DB queries on cache hit |

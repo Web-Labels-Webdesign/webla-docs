@@ -161,6 +161,27 @@ This document describes all available settings for Media Booster.
 
 ---
 
+### Frontend Extension Priority
+
+| Property     | Value                                  |
+| ------------ | -------------------------------------- |
+| **Type**     | Select                                 |
+| **Default**  | Original format (JPG, PNG, etc.)       |
+| **Required** | No                                     |
+
+**Description**: Controls which image format is prioritized when serving images to visitors in the storefront. This determines whether the browser receives the original file or a converted AVIF/WebP version.
+
+**Options**:
+- `AVIF`: Serve AVIF versions when available (best compression, modern browsers)
+- `WebP`: Serve WebP versions when available (good compression, broad browser support)
+- `Original format (JPG, PNG, etc.)`: Always serve the original file, even if converted versions exist
+
+**Note**: If the preferred format is not available for a specific image, the plugin falls back to the next best available format (AVIF → WebP → Original).
+
+**Example Use Case**: Set to "WebP" after running conversion to immediately serve optimized images. Use "Original" to temporarily disable optimized delivery without deleting converted files.
+
+---
+
 ## SEO - Alt Tag
 
 ### Alt Tag Mode

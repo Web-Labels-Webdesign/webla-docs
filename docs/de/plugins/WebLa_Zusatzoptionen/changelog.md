@@ -4,6 +4,17 @@ Alle wichtigen Änderungen am Zusatzoptionen Plugin für Endbenutzer.
 
 ---
 
+## [5.2.2] - 2026-03-05
+
+### 🐛 Fehlerbehebungen
+
+- **Abgewählte Optionen erscheinen erneut**: Optionen, die auf der Produktdetailseite abgewählt wurden, werden beim Aktualisieren der Warenkorbseite nicht mehr automatisch wieder hinzugefügt — Ursache war ein Variablen-Shadowing-Bug, der die Abwahl-Verfolgung verhinderte
+- **Warenkorb-Gesamtpreis aktualisiert sich nicht**: Der Gesamtpreis im Warenkorb spiegelt nun korrekt Änderungen an Zusatzoptionen wider, wenn Services auf der Checkout-Seite an- oder abgewählt werden
+- **Optionsverfügbarkeitsprüfung**: Die `isRequired`-Prüfung im Verfügbarkeitscontroller verwendet nun das korrekte Objekt (Option-Entity statt Extension)
+- **Options-Widget-Container**: Fallback-Kette für die Suche des Zusatzoptionen-Containers auf Produktseiten mit nicht-standardmäßigem Layout hinzugefügt
+
+---
+
 ## [5.2.1] - 2026-03-05
 
 ### 🐛 Fehlerbehebungen

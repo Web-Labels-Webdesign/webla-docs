@@ -4,6 +4,99 @@ All notable changes to Media Booster for end users.
 
 ---
 
+## [1.2.0] - 2026-03-05
+
+### New Features
+- Added configurable frontend extension priority setting — choose whether AVIF, WebP, or original format is served to visitors
+- Processing errors are now persisted to the database and survive across queue worker restarts, making them reliably visible in the admin dashboard
+- Renamed Twig filter from `webla_as_webp` to `webla_as_converted` to reflect AVIF/WebP support
+
+### Bug Fixes
+- Fixed extension priority setting not working due to missing SystemConfigService injection
+- Fixed error timestamps not displaying in admin dashboard (key mismatch between storage and template)
+- Fixed various pipeline issues: infinite loops, race conditions, query performance, data safety, UI polish, deduplication, UTF-8 safety, and dead code cleanup
+
+### Improvements
+- Reduced database queries during batch processing by ~80% — progress counts are now accumulated in memory and flushed once per batch instead of per item
+
+---
+
+## [1.1.1] - 2026-03-05
+
+### New Features
+- Sparse images (diagrams, technical drawings, line art) are now automatically detected and converted at higher quality (minimum 95) to preserve thin lines and text
+- Added per-task "Redo" buttons in admin dashboard — reset and reprocess just Resize, Convert, or SEO individually without clearing all data
+
+### Bug Fixes
+- Fixed AVIF/WebP conversion destroying thin lines on technical drawings and diagrams due to aggressive lossy compression at moderate quality settings
+
+---
+
+## [1.1.0] - 2026-03-05
+
+### New Features
+- Error notifications in admin dashboard now show as user-facing alerts instead of silent console errors
+
+### Bug Fixes
+- Fixed out-of-memory crash (2GB limit) on large media libraries by clearing Doctrine's entity manager between batches
+- Fixed entire processing run aborting when a single batch fails (e.g., due to special characters in filenames) — failed batches are now skipped and processing continues
+- Fixed total media count query triggering Flysystem path validation on media with special characters
+
+### Improvements
+- Shopware Context is now properly passed through the entire service call chain instead of creating default contexts
+- Processing automatically stops after 3 consecutive batch failures to prevent infinite loops
+
+---
+
+## [1.0.8] - 2026-03-05
+
+### Fixed
+- Fixed processing crash when media filenames contain special Unicode characters (soft hyphens, non-breaking spaces) that Flysystem rejects during entity loading — affected items are now skipped and marked as failed
+
+---
+
+## [1.0.7] - 2026-03-05
+
+### Fixed
+- Fixed batch processing getting permanently stuck when a single image fails (corrupted file, unsupported format) — failed items are now logged and skipped instead of causing infinite retry loops
+- Fixed misleading progress display showing "32 / 3468 (41.5%)" — now shows handled/total with breakdown of processed, skipped, and failed items
+
+---
+
+## [1.0.6] - 2026-03-05
+
+### Fixed
+- Fixed SQL syntax error on MariaDB when fetching unprocessed media IDs (LIMIT parameter was quoted as string)
+
+---
+
+## [1.0.5] - 2026-03-05
+
+### Fixed
+- Fixed 500 error on status API caused by missing DBAL Connection dependency in ProgressService
+
+---
+
+## [1.0.4] - 2026-03-05
+
+### Fixed
+- Fixed memory exhaustion on large media libraries by replacing PHP-loaded ID lists with SQL subqueries
+- Fixed memory accumulation in long-running worker by replacing entity search+write with DBAL UPSERT
+- Fixed memory pressure from batch processing by explicitly releasing entities and forcing GC between batches
+- Fixed Imagick pixel cache memory leak by calling clear() before destroy() on instances
+- Fixed infinite processing loop when media files are missing from disk (now logged as skipped)
+- Fixed infinite partial batches when lock failures were not counted toward batch size
+- Fixed slow status API polling by using SQL aggregation instead of loading all log entries
+- Fixed stuck processing state by auto-clearing isRunning state after 30 minutes
+- Fixed counter corruption from concurrent run requests (now rejected with 409)
+- Fixed incorrect AVIF convert total count due to wrong extension list
+- Fixed premature polling stop due to race condition in runTask()
+- Fixed repeated processing of already-converted files (now logged to exclude from future runs)
+- Fixed repeated processing of within-bounds images during resize (now logged to exclude from future runs)
+- Recent processing errors are now collected and surfaced in the status API response
+
+---
+
 ## [1.0.3] - 2026-01-23
 
 ### Added

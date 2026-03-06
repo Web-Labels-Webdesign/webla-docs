@@ -4,6 +4,14 @@ Alle wichtigen Änderungen an Intelligentes Cross-Selling für Endbenutzer.
 
 ---
 
+## [5.2.1] - 2026-03-05
+
+### Fehlerbehebungen
+
+- **Neuinstallation fehlgeschlagen behoben**: Migration `AddOneVariantPerParentSwitch` referenzierte den alten Tabellennamen `webla_intelligent_cross_selling_settings` statt des umbenannten `webla_cross_selling`, was bei einer frischen Plugin-Installation zu einem Fehler führte
+
+---
+
 ## [5.2.0] - 2026-03-03
 
 ### Neue Funktionen
@@ -127,6 +135,7 @@ Alle wichtigen Änderungen an Intelligentes Cross-Selling für Endbenutzer.
 
 | Version | Veröffentlichung | Highlights |
 |---------|------------------|------------|
+| 5.2.1 | 2026-03-05 | Neuinstallation fehlgeschlagen behoben |
 | 5.2.0 | 2026-03-03 | Option: Eine Variante pro Hauptartikel anzeigen |
 | 5.1.2 | 2026-03-02 | Absturz bei fehlenden Übersetzungen behoben, Deinstallation korrigiert |
 | 5.1.1 | 2026-02-19 | Performance: keine DB-Abfragen bei Cache-Treffer |

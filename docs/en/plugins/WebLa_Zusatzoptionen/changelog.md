@@ -4,6 +4,17 @@ All notable changes to the Additional Options Plugin for end users.
 
 ---
 
+## [5.2.2] - 2026-03-05
+
+### 🐛 Bug Fixes
+
+- **Deselected Options Reappearing**: Fixed options that were deselected on the product detail page being automatically re-added on cart page refresh — caused by a variable shadowing bug that prevented deselection tracking
+- **Cart Total Not Updating**: Fixed cart total price not reflecting option changes when toggling services on the checkout page — a downstream effect of the deselection tracking bug
+- **Option Availability Check**: Fixed `isRequired` check in the option availability controller calling the wrong object (extension instead of option entity)
+- **Option Widget Container**: Added fallback chain for finding the additional-items-container on product pages with non-standard layouts
+
+---
+
 ## [5.2.1] - 2026-03-05
 
 ### 🐛 Bug Fixes
