@@ -4,6 +4,14 @@ Alle wichtigen Änderungen am Zusatzoptionen Plugin für Endbenutzer.
 
 ---
 
+## [5.2.3] - 2026-03-10
+
+### 🐛 Fehlerbehebungen
+
+- **Storefront-JS auf Cloud**: Behebt das Problem, dass die Plugin-Optionen auf Shopware Cloud nicht geladen wurden — das IIFE-Bundle und die manuelle Script-Einbindung wurden zugunsten des standardmäßigen `dist/`-Ansatzes entfernt, der von `theme:compile` korrekt erkannt wird
+
+---
+
 ## [5.2.2] - 2026-03-05
 
 ### 🐛 Fehlerbehebungen

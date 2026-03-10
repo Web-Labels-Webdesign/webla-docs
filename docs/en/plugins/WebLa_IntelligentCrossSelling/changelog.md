@@ -4,6 +4,14 @@ All notable changes to Intelligent Cross-Selling for end users.
 
 ---
 
+## [5.2.2] - 2026-03-10
+
+### Bug Fixes
+
+- **Fixed migration crash on reinstall after "keep data" uninstall**: Two early migrations (`Migration1649663958Initialisation` and `Migration1650453780UpdateSettings`) used bare `CREATE TABLE` without `IF NOT EXISTS`. When uninstalling with "keep user data", Shopware removes migration records but leaves tables intact — causing a crash on reinstall that also broke storefront product pages
+
+---
+
 ## [5.2.1] - 2026-03-05
 
 ### Bug Fixes

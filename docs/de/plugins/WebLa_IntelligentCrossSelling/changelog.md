@@ -4,6 +4,14 @@ Alle wichtigen Änderungen an Intelligentes Cross-Selling für Endbenutzer.
 
 ---
 
+## [5.2.2] - 2026-03-10
+
+### Fehlerbehebungen
+
+- **Migration-Absturz bei Neuinstallation nach "Daten behalten"-Deinstallation behoben**: Zwei frühe Migrationen (`Migration1649663958Initialisation` und `Migration1650453780UpdateSettings`) verwendeten `CREATE TABLE` ohne `IF NOT EXISTS`. Bei der Deinstallation mit "Benutzerdaten behalten" entfernt Shopware die Migrations-Einträge, lässt aber die Tabellen bestehen — was bei der Neuinstallation zu einem Absturz führte und auch Storefront-Produktseiten beschädigte
+
+---
+
 ## [5.2.1] - 2026-03-05
 
 ### Fehlerbehebungen

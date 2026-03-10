@@ -4,6 +4,14 @@ All notable changes to the Additional Options Plugin for end users.
 
 ---
 
+## [5.2.3] - 2026-03-10
+
+### 🐛 Bug Fixes
+
+- **Storefront JS on Cloud**: Fixed plugin options not loading on Shopware Cloud — removed the IIFE bundle and manual script injection in favour of the standard pre-built `dist/` approach that is correctly picked up by `theme:compile`
+
+---
+
 ## [5.2.2] - 2026-03-05
 
 ### 🐛 Bug Fixes

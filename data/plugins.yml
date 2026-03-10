@@ -34,7 +34,7 @@ plugins:
       de: Automatisches Cross-Selling basierend auf Kaufverhalten und Produktattributen.
       en: Automatic cross-selling based on purchasing behavior and product attributes.
     requirements: Shopware 6.5–6.8, PHP 8.1+
-    version: "5.2.1"
+    version: "5.2.2"
   - id: WebLa_UTMHandler
     name:
       de: UTM-Handler
@@ -79,7 +79,7 @@ plugins:
       de: Erweitern Sie Produkte mit konfigurierbaren Zusatzoptionen, individueller Preisgestaltung, Versandbeschränkungen und automatischer Zuweisung durch Produktströme für mehr Flexibilität.
       en: Add flexible additional options to products with custom pricing, shipping restrictions, and automated assignment via product streams for enhanced product configuration.
     requirements: Shopware 6.6–6.8, PHP 8.1+
-    version: "5.2.2"
+    version: "5.2.3"
   - id: WebLa_ContactFormFileUpload
     name:
       de: Kontaktformular – Datei-Upload
