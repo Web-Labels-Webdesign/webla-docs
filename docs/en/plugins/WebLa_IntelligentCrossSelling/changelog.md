@@ -4,6 +4,23 @@ All notable changes to Intelligent Cross-Selling for end users.
 
 ---
 
+## [5.2.4] - 2026-03-11
+
+### Bug Fixes
+
+- **Fixed empty cross-selling for products without properties**: Products without any assigned properties now receive cross-selling recommendations based on category, stock, and visibility filters instead of returning an empty result
+- **Added fallback to native cross-selling on error**: If the plugin's recommendation logic encounters an unexpected error, it now gracefully falls back to Shopware's native cross-selling instead of breaking the entire cross-selling section
+
+---
+
+## [5.2.3] - 2026-03-11
+
+### Bug Fixes
+
+- **Fixed migration crash when upgrading from older versions**: Five ALTER TABLE migrations referenced the old table name `webla_intelligent_cross_selling_settings` without checking if it had already been renamed to `webla_cross_selling`. This caused upgrades from versions prior to 5.0 to fail. All migrations now resolve the correct table name dynamically and check for existing columns before altering.
+
+---
+
 ## [5.2.2] - 2026-03-10
 
 ### Bug Fixes
@@ -143,6 +160,9 @@ All notable changes to Intelligent Cross-Selling for end users.
 
 | Version | Release Date | Highlights |
 |---------|--------------|------------|
+| 5.2.4 | 2026-03-11 | Fix empty cross-selling for products without properties, error fallback |
+| 5.2.3 | 2026-03-11 | Fix migration crash on upgrade from older versions |
+| 5.2.2 | 2026-03-10 | Fix migration crash on reinstall after keep-data uninstall |
 | 5.2.1 | 2026-03-05 | Fix fresh installation failure |
 | 5.2.0 | 2026-03-03 | Show one variant per parent option |
 | 5.1.2 | 2026-03-02 | Fix crash on missing translations, fix uninstall |

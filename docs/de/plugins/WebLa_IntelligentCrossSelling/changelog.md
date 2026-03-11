@@ -4,6 +4,23 @@ Alle wichtigen Änderungen an Intelligentes Cross-Selling für Endbenutzer.
 
 ---
 
+## [5.2.4] - 2026-03-11
+
+### Fehlerbehebungen
+
+- **Leeres Cross-Selling bei Produkten ohne Eigenschaften behoben**: Produkte ohne zugewiesene Eigenschaften erhalten nun Cross-Selling-Empfehlungen basierend auf Kategorie-, Lagerbestands- und Sichtbarkeitsfiltern, anstatt ein leeres Ergebnis zurückzugeben
+- **Fallback auf natives Cross-Selling bei Fehler hinzugefügt**: Tritt in der Empfehlungslogik des Plugins ein unerwarteter Fehler auf, wird nun auf Shopwares natives Cross-Selling zurückgefallen, anstatt den gesamten Cross-Selling-Bereich zu beschädigen
+
+---
+
+## [5.2.3] - 2026-03-11
+
+### Fehlerbehebungen
+
+- **Migrations-Absturz beim Upgrade von älteren Versionen behoben**: Fünf ALTER-TABLE-Migrationen referenzierten den alten Tabellennamen `webla_intelligent_cross_selling_settings`, ohne zu prüfen, ob dieser bereits in `webla_cross_selling` umbenannt wurde. Dies führte dazu, dass Upgrades von Versionen vor 5.0 fehlschlugen. Alle Migrationen ermitteln nun dynamisch den korrekten Tabellennamen und prüfen vor der Änderung, ob Spalten bereits existieren.
+
+---
+
 ## [5.2.2] - 2026-03-10
 
 ### Fehlerbehebungen
@@ -143,6 +160,9 @@ Alle wichtigen Änderungen an Intelligentes Cross-Selling für Endbenutzer.
 
 | Version | Veröffentlichung | Highlights |
 |---------|------------------|------------|
+| 5.2.4 | 2026-03-11 | Leeres Cross-Selling bei Produkten ohne Eigenschaften behoben, Fehler-Fallback |
+| 5.2.3 | 2026-03-11 | Migrations-Absturz beim Upgrade von älteren Versionen behoben |
+| 5.2.2 | 2026-03-10 | Migrations-Absturz bei Neuinstallation nach Daten-behalten-Deinstallation behoben |
 | 5.2.1 | 2026-03-05 | Neuinstallation fehlgeschlagen behoben |
 | 5.2.0 | 2026-03-03 | Option: Eine Variante pro Hauptartikel anzeigen |
 | 5.1.2 | 2026-03-02 | Absturz bei fehlenden Übersetzungen behoben, Deinstallation korrigiert |
