@@ -4,6 +4,14 @@ Alle wichtigen Änderungen am Zusatzoptionen Plugin für Endbenutzer.
 
 ---
 
+## [5.2.5] - 2026-03-12
+
+### 🐛 Fehlerbehebungen
+
+- **Rabattberechnung mit Optionen**: Prozentuale Rabatte wurden bei Produkten mit Zusatzoptionen falsch berechnet — ein fehlerhafter Filter führte dazu, dass Optionspreise doppelt in die Rabattbasis einflossen. Außerdem wurde die `applyDiscounts`-Konfiguration korrigiert, sodass Rabatte nun korrekt nur auf das Basisprodukt oder auf Basisprodukt + Optionen angewendet werden können.
+
+---
+
 ## [5.2.4] - 2026-03-11
 
 ### 🐛 Fehlerbehebungen

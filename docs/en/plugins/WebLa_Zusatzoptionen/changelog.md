@@ -4,6 +4,14 @@ All notable changes to the Additional Options Plugin for end users.
 
 ---
 
+## [5.2.5] - 2026-03-12
+
+### 🐛 Bug Fixes
+
+- **Discount Calculation with Options**: Fixed percentage discounts being calculated incorrectly when products have additional options — a broken filter caused option prices to be double-counted in the discount base. Also fixed the `applyDiscounts` config setting being ignored, so discounts can now correctly apply to base product only or base product + options.
+
+---
+
 ## [5.2.4] - 2026-03-11
 
 ### 🐛 Bug Fixes
