@@ -4,6 +4,16 @@ Alle wichtigen Änderungen am Zusatzoptionen Plugin für Endbenutzer.
 
 ---
 
+## [5.2.4] - 2026-03-11
+
+### 🐛 Fehlerbehebungen
+
+- **Option erscheint deaktiviert und nicht abwählbar**: Optionen mit `requiredFromPrice` wurden auf der Produktdetailseite als angehakt aber deaktiviert angezeigt — der Verfügbarkeits-AJAX-Endpunkt gab `active=false` zurück (kein Warenkorb-Kontext), was das JS fälschlicherweise als „Checkbox deaktivieren" interpretierte. Jetzt deaktiviert nur noch die regelbasierte Deaktivierung Optionen.
+- **requiredFromPrice=0 aktiviert immer**: `requiredFromPrice = 0.00` erfüllte trivialerweise alle Warenkorbsummen (0 <= beliebiger Preis), wodurch die Option immer automatisch angehakt wurde. Null wird jetzt als „nicht konfiguriert" behandelt.
+- **Admin-Optionspreis-Modal**: Null-Referenz-Fehler beim Öffnen des Optionspreis-Modals ohne verfügbare Standardwährung behoben
+
+---
+
 ## [5.2.3] - 2026-03-10
 
 ### 🐛 Fehlerbehebungen

@@ -4,6 +4,16 @@ All notable changes to the Additional Options Plugin for end users.
 
 ---
 
+## [5.2.4] - 2026-03-11
+
+### 🐛 Bug Fixes
+
+- **Option Appears Disabled and Non-Deselectable**: Fixed options with `requiredFromPrice` appearing as checked but disabled on the product detail page — the availability AJAX endpoint returned `active=false` (no cart context), which the JS incorrectly interpreted as "disable checkbox". Now only rule-based deactivation disables options.
+- **requiredFromPrice=0 Always Activating**: Fixed `requiredFromPrice = 0.00` trivially matching all cart totals (0 <= any price), causing the option to always be auto-checked. Zero is now treated as "not configured".
+- **Admin Option Price Modal**: Fixed null reference error when opening the option price modal without a default currency available
+
+---
+
 ## [5.2.3] - 2026-03-10
 
 ### 🐛 Bug Fixes
