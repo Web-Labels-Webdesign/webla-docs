@@ -43,6 +43,8 @@ jobs:
             ["WebLa_Zusatzoptionen"]="WebLa_Zusatzoptionen"
             ["WebLa_CategorieQuickFilter"]="WebLa_CategorieQuickFilter"
             ["WebLa_ContactFormFileUpload"]="WebLa_ContactFormFileUpload"
+            ["WebLa_DeliveryDateSelector"]="WebLa_DeliveryDateSelector"
+            ["WebLa_SplitComission"]="WebLa_SplitComission"
           )
 
           declare -A PLUGIN_FOLDERS=(
@@ -57,7 +59,8 @@ jobs:
             ["WebLa_Zusatzoptionen"]="webla_zusatzoptionen"
             ["WebLa_CategorieQuickFilter"]="WebLa_CategorieQuickFilter"
             ["WebLa_ContactFormFileUpload"]="WebLa_ContactFormFileUpload"
-
+            ["WebLa_DeliveryDateSelector"]="WebLa_DeliveryDateSelector"
+            ["WebLa_SplitComission"]="WebLa_SplitComission"
           )
 
           # Supported languages
