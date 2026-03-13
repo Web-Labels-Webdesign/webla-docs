@@ -4,6 +4,14 @@ All notable changes to Intelligent Cross-Selling for end users.
 
 ---
 
+## [5.2.5] - 2026-03-13
+
+### Bug Fixes
+
+- **Fixed crash on variant deduplication**: Resolved `ParentAssociationCanNotBeFetched` exception when the "one variant per parent" option is enabled. The parent association cannot be fetched directly in Shopware's DAL — parent products are now loaded via a separate query instead
+
+---
+
 ## [5.2.4] - 2026-03-11
 
 ### Bug Fixes

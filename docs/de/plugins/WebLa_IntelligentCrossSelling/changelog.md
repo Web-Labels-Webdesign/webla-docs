@@ -4,6 +4,14 @@ Alle wichtigen Änderungen an Intelligentes Cross-Selling für Endbenutzer.
 
 ---
 
+## [5.2.5] - 2026-03-13
+
+### Fehlerbehebungen
+
+- **Absturz bei Varianten-Deduplizierung behoben**: `ParentAssociationCanNotBeFetched`-Ausnahme behoben, die bei aktivierter Option „Eine Variante pro Hauptartikel" auftrat. Die Parent-Assoziation kann in Shopwares DAL nicht direkt geladen werden — Hauptartikel werden nun über eine separate Abfrage geladen
+
+---
+
 ## [5.2.4] - 2026-03-11
 
 ### Fehlerbehebungen
@@ -160,6 +168,7 @@ Alle wichtigen Änderungen an Intelligentes Cross-Selling für Endbenutzer.
 
 | Version | Veröffentlichung | Highlights |
 |---------|------------------|------------|
+| 5.2.5 | 2026-03-13 | Absturz bei Varianten-Deduplizierung behoben |
 | 5.2.4 | 2026-03-11 | Leeres Cross-Selling bei Produkten ohne Eigenschaften behoben, Fehler-Fallback |
 | 5.2.3 | 2026-03-11 | Migrations-Absturz beim Upgrade von älteren Versionen behoben |
 | 5.2.2 | 2026-03-10 | Migrations-Absturz bei Neuinstallation nach Daten-behalten-Deinstallation behoben |
