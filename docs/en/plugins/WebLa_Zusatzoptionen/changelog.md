@@ -4,6 +4,14 @@ All notable changes to the Additional Options Plugin for end users.
 
 ---
 
+## [5.2.6] - 2026-03-12
+
+### 🐛 Bug Fixes
+
+- **Product Edit/Create Error in Administration**: Fixed `TypeError: t.product.isNew is not a function` crashing the product detail page on Shopware 6.6 — caused by our `sw-product-detail-base` override unnecessarily redefining `product` and `isLoading` computed properties, which returned a non-Entity object during Vue's reactive update cycle after the Vuex `setProduct` mutation fired.
+
+---
+
 ## [5.2.5] - 2026-03-12
 
 ### 🐛 Bug Fixes

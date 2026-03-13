@@ -4,6 +4,14 @@ Alle wichtigen Änderungen am Zusatzoptionen Plugin für Endbenutzer.
 
 ---
 
+## [5.2.6] - 2026-03-12
+
+### 🐛 Fehlerbehebungen
+
+- **Fehler bei Produkt bearbeiten/anlegen in der Administration**: Behebt `TypeError: t.product.isNew is not a function`, der die Produktdetailseite in Shopware 6.6 zum Absturz brachte — verursacht durch unsere `sw-product-detail-base`-Überschreibung, die die Computed Properties `product` und `isLoading` unnötigerweise neu definierte und dabei während des reaktiven Update-Zyklus von Vue nach dem Vuex-`setProduct`-Mutation ein Nicht-Entity-Objekt zurückgab.
+
+---
+
 ## [5.2.5] - 2026-03-12
 
 ### 🐛 Fehlerbehebungen
