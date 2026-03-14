@@ -4,6 +4,16 @@ All notable changes to the Additional Options Plugin for end users.
 
 ---
 
+## [5.2.7] - 2026-03-13
+
+### 🐛 Bug Fixes
+
+- **Promotions Disappear After Removing Options**: Fixed discounts/promotions not being restored when all options are removed from a cart line item — Shopware's `CartScopeDiscountPackager` excludes non-stackable items, and the plugin left the item as non-stackable with stale option payload after removal.
+- **Crash When Adding Options (getUnitPrice on null)**: Fixed `Call to a member function getUnitPrice() on null` when adding options to a cart item whose price hasn't been set yet — added null checks after replacing the removed `productDetailRoute` price lookup.
+- **ChildCartProcessor Early Exit**: Fixed `return` instead of `continue` that caused remaining cart products to be skipped when one product had `optionSetId` payload but no children.
+
+---
+
 ## [5.2.6] - 2026-03-12
 
 ### 🐛 Bug Fixes

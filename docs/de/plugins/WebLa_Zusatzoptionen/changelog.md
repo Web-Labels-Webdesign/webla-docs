@@ -4,6 +4,16 @@ Alle wichtigen Änderungen am Zusatzoptionen Plugin für Endbenutzer.
 
 ---
 
+## [5.2.7] - 2026-03-13
+
+### 🐛 Fehlerbehebungen
+
+- **Rabatte verschwinden nach Entfernen von Optionen**: Rabatte/Aktionen wurden nicht wiederhergestellt, wenn alle Optionen von einem Warenkorb-Artikel entfernt wurden — Shopwares `CartScopeDiscountPackager` schließt nicht-stapelbare Artikel aus, und das Plugin hinterließ den Artikel nach dem Entfernen als nicht-stapelbar mit veralteten Options-Payload-Daten.
+- **Absturz beim Hinzufügen von Optionen (getUnitPrice on null)**: Behebt `Call to a member function getUnitPrice() on null` beim Hinzufügen von Optionen zu einem Warenkorb-Artikel, dessen Preis noch nicht gesetzt war — Null-Prüfungen hinzugefügt nach Entfernung der `productDetailRoute`-Preisabfrage.
+- **ChildCartProcessor vorzeitiger Abbruch**: `return` statt `continue` behoben, wodurch verbleibende Warenkorb-Produkte übersprungen wurden, wenn ein Produkt `optionSetId`-Payload aber keine Kinder hatte.
+
+---
+
 ## [5.2.6] - 2026-03-12
 
 ### 🐛 Fehlerbehebungen
