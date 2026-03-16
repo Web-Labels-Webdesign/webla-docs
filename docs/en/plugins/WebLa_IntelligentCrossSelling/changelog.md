@@ -4,6 +4,14 @@ All notable changes to Intelligent Cross-Selling for end users.
 
 ---
 
+## [5.2.6] - 2026-03-16
+
+### Bug Fixes
+
+- **Fixed slow cold load times on product detail pages**: Eliminated N+1 query pattern in the cross-selling recommendation engine. Previously, each weighted property option triggered a separate database query with expensive JOIN-based filters — with 15 weighted options this meant 18+ queries per request. Now uses a single batched query with lightweight JSON column filters and PHP-side scoring, reducing total plugin queries from N+3 to 2-3
+
+---
+
 ## [5.2.5] - 2026-03-13
 
 ### Bug Fixes
@@ -168,6 +176,8 @@ All notable changes to Intelligent Cross-Selling for end users.
 
 | Version | Release Date | Highlights |
 |---------|--------------|------------|
+| 5.2.6 | 2026-03-16 | Performance: eliminate N+1 query pattern, 83% fewer DB queries |
+| 5.2.5 | 2026-03-13 | Fix crash on variant deduplication |
 | 5.2.4 | 2026-03-11 | Fix empty cross-selling for products without properties, error fallback |
 | 5.2.3 | 2026-03-11 | Fix migration crash on upgrade from older versions |
 | 5.2.2 | 2026-03-10 | Fix migration crash on reinstall after keep-data uninstall |

@@ -4,6 +4,14 @@ Alle wichtigen Änderungen an Intelligentes Cross-Selling für Endbenutzer.
 
 ---
 
+## [5.2.6] - 2026-03-16
+
+### Fehlerbehebungen
+
+- **Langsame Ladezeiten auf Artikeldetailseiten behoben**: N+1-Abfragemuster in der Cross-Selling-Empfehlungslogik eliminiert. Bisher löste jede gewichtete Eigenschaftsoption eine separate Datenbankabfrage mit aufwändigen JOIN-basierten Filtern aus — bei 15 gewichteten Optionen waren das über 18 Abfragen pro Anfrage. Nun wird eine einzelne gebündelte Abfrage mit leichtgewichtigen JSON-Spaltenfiltern und PHP-seitiger Bewertung verwendet, wodurch die Plugin-Abfragen von N+3 auf 2-3 reduziert werden
+
+---
+
 ## [5.2.5] - 2026-03-13
 
 ### Fehlerbehebungen
@@ -168,6 +176,7 @@ Alle wichtigen Änderungen an Intelligentes Cross-Selling für Endbenutzer.
 
 | Version | Veröffentlichung | Highlights |
 |---------|------------------|------------|
+| 5.2.6 | 2026-03-16 | Performance: N+1-Abfragemuster eliminiert, 83% weniger DB-Abfragen |
 | 5.2.5 | 2026-03-13 | Absturz bei Varianten-Deduplizierung behoben |
 | 5.2.4 | 2026-03-11 | Leeres Cross-Selling bei Produkten ohne Eigenschaften behoben, Fehler-Fallback |
 | 5.2.3 | 2026-03-11 | Migrations-Absturz beim Upgrade von älteren Versionen behoben |
