@@ -56,6 +56,7 @@ Option sets are containers for related additional options. For example, a set mi
 | **Show Manufacturer**  | Displays manufacturer names with the options                          |
 | **Quantity Selection** | Allows the customer to choose quantity for all options in this set    |
 | **Container Open**     | Set is expanded by default (recommended for required fields)          |
+| **Description Path**   | Product field path (e.g. `description`) to auto-resolve option descriptions from the linked product — shown as a tooltip icon (?) next to the option name |
 
 ### Tips & Best Practices
 
@@ -80,15 +81,24 @@ Option sets are containers for related additional options. For example, a set mi
    - **Required**: Customer must select this option (only works with single selection)
    - **Sorting**: Order within the set
 
-### Custom Option Description
+### Explainer / Description Texts
 
-In addition to the product name, you can provide a specific description for each option:
+Each option can have a description text that is shown as a tooltip icon (?) next to the option name in the storefront. There are two ways to provide descriptions:
 
+**Option-level description** (custom text per option):
 1. Open the option in edit mode
-2. Use the field **Custom Fields** → `webla_zusatzoptionen_option_description`
-3. Enter a description (e.g., "Extends the warranty by 2 additional years")
+2. Enter text in the **Description** field (e.g., "Extends the warranty by 2 additional years")
+3. This text is shown as a tooltip when the customer hovers over the (?) icon
 
-This description is displayed to the customer below the option name.
+**Option set-level description path** (auto-resolved from product):
+1. Open the option set settings
+2. Enter a product field path in **Description Path** (e.g., `description`)
+3. For each option in the set, the plugin automatically resolves the description from the linked product's field
+4. If an option also has a custom description, the custom description takes priority
+
+**Example Use Cases**:
+- Use option-level descriptions for custom explanatory text (e.g., "Includes on-site repair within 48 hours")
+- Use the description path `description` to automatically show product descriptions as tooltips for product-based options
 
 ### Options with Text Field Input
 
@@ -505,7 +515,7 @@ Additional options appear as accordion containers:
 - **Product Image**: Optional if "Show Image" is enabled
 - **Product Name**: Including variant information
 - **Manufacturer Name**: Optional if "Show Manufacturer" is enabled
-- **Description**: From custom field
+- **Tooltip Icon (?)**: Shown on hover if the option has a description (custom or auto-resolved from description path)
 - **Quantity Selection**: If enabled, +/- buttons
 - **Price**: Displayed with currency and tax note (*)
 

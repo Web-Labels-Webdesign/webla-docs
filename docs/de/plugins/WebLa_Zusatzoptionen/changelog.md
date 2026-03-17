@@ -4,6 +4,18 @@ Alle wichtigen Änderungen am Zusatzoptionen Plugin für Endbenutzer.
 
 ---
 
+## [5.3.0] - 2026-03-16
+
+### ✨ Neue Funktionen
+
+- **Beschreibungs-/Erklärungstexte für Optionen**: Optionen und Optionen-Sets unterstützen jetzt Beschreibungstexte, die als Tooltip-Icon (?) neben dem Optionsnamen im Storefront angezeigt werden. Optionen können eine individuelle Beschreibung haben, und Optionen-Sets können einen Produktfeld-Pfad (z.B. `description`) angeben, um Beschreibungen automatisch vom verknüpften Produkt zu übernehmen.
+
+### 🐛 Fehlerbehebungen
+
+- **Warenkorb-Rabatte mit Optionen**: Rabatte wurden bei Produkten mit Zusatzoptionen nicht korrekt angewendet — die CartProcessor-Priorität wurde angepasst, damit Optionspreise vor der Rabattberechnung kombiniert werden, und nicht-stapelbare Options-Positionen werden während der Packager-Auswertung vorübergehend als stapelbar markiert, um den Ausschluss durch Shopwares `CartScopeDiscountPackager` zu verhindern.
+
+---
+
 ## [5.2.7] - 2026-03-13
 
 ### 🐛 Fehlerbehebungen

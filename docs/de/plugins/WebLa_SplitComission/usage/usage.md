@@ -13,6 +13,7 @@ Diese Anleitung beschreibt alle Funktionen von SplitCommission aus Kundensicht u
 - [Anzeige auf der Bestellbestätigungsseite](#anzeige-auf-der-bestellbestatigungsseite)
 - [Admin: Kommissionskommentare in der Bestellübersicht](#admin-kommissionskommentare-in-der-bestellubersicht)
 - [Produktkonfiguration: Kommentar für ausgewählte Produkte aktivieren](#produktkonfiguration-kommentar-fur-ausgewahlte-produkte-aktivieren)
+- [Kommissionsfelder in E-Mail-Templates einbinden](#kommissionsfelder-in-e-mail-templates-einbinden)
 - [Fehlerbehebung](#fehlerbehebung)
 
 ---
@@ -139,6 +140,49 @@ Wenn in den Plugin-Einstellungen **„Aktiv für"** auf **„Ausgewählte Produk
 6. Klicken Sie auf **Speichern**.
 
 Das Kommentarfeld erscheint nun für dieses Produkt im Shop.
+
+---
+
+## Kommissionsfelder in E-Mail-Templates einbinden
+
+### Was es bewirkt
+
+Standardmäßig zeigt das Plugin die Kommissionskommentare auf der Bestellbestätigungsseite, in Dokumenten (Rechnung, Lieferschein) und in der Administration an. In E-Mail-Templates (z.B. Bestellbestätigung) müssen die Felder jedoch manuell eingebunden werden.
+
+### Verfügbare Felder
+
+Es gibt zwei Kommissionsfelder, die in E-Mail-Templates genutzt werden können:
+
+| Feld | Variable | Beschreibung |
+| ---- | -------- | ------------ |
+| Kommissionsnotiz pro Position | `lineItem.payload.commissionNote` | Der Kommissionskommentar einer einzelnen Bestellposition |
+| Globaler Bestellkommentar | `order.customFields.webla_splitcomission_order_comment` | Der übergeordnete Kommissionskommentar der gesamten Bestellung |
+
+### So binden Sie die Felder ein (als Administrator)
+
+1. Navigieren Sie zu **Einstellungen → E-Mail-Templates**.
+2. Öffnen Sie das gewünschte Template (z.B. **Bestellbestätigung**).
+3. Fügen Sie den gewünschten Code im HTML- oder Text-Template ein.
+
+**Kommissionsnotiz pro Bestellposition** (innerhalb einer Positionsschleife):
+
+```twig
+{% for lineItem in order.lineItems %}
+    {% if lineItem.payload.commissionNote is defined and lineItem.payload.commissionNote %}
+        <br>Kommissionskommentar: {{ lineItem.payload.commissionNote }}
+    {% endif %}
+{% endfor %}
+```
+
+**Globaler Bestellkommentar** (z.B. unterhalb der Bestellübersicht):
+
+```twig
+{% if order.customFields.webla_splitcomission_order_comment is defined and order.customFields.webla_splitcomission_order_comment %}
+    <p><strong>Kommissionskommentar:</strong> {{ order.customFields.webla_splitcomission_order_comment }}</p>
+{% endif %}
+```
+
+**Ort**: Einstellungen → E-Mail-Templates → gewünschtes Template bearbeiten
 
 ---
 

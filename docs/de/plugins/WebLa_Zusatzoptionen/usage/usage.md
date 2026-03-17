@@ -56,6 +56,7 @@ Optionen-Sets sind Container für zusammengehörige Zusatzoptionen. Ein Set kann
 | **Hersteller anzeigen** | Zeigt Herstellernamen bei den Optionen an                                     |
 | **Mengenauswahl**       | Erlaubt dem Kunden, die Menge für alle Optionen in diesem Set zu wählen       |
 | **Container geöffnet**  | Set ist standardmäßig aufgeklappt (empfohlen bei Pflichtfeldern)              |
+| **Beschreibungspfad**   | Produktfeld-Pfad (z.B. `description`), um Optionsbeschreibungen automatisch vom verknüpften Produkt zu übernehmen — wird als Tooltip-Icon (?) neben dem Optionsnamen angezeigt |
 
 ### Tipps & Best Practices
 
@@ -80,15 +81,24 @@ Optionen-Sets sind Container für zusammengehörige Zusatzoptionen. Ein Set kann
    - **Erforderlich**: Kunde muss diese Option auswählen (funktioniert nur bei Einzelauswahl)
    - **Sortierung**: Reihenfolge innerhalb des Sets
 
-### Benutzerdefinierte Optionsbeschreibung
+### Erklärungs-/Beschreibungstexte
 
-Zusätzlich zum Produktnamen können Sie eine spezifische Beschreibung für jede Option hinterlegen:
+Jede Option kann einen Beschreibungstext haben, der als Tooltip-Icon (?) neben dem Optionsnamen im Storefront angezeigt wird. Es gibt zwei Wege, Beschreibungen bereitzustellen:
 
+**Beschreibung auf Options-Ebene** (individueller Text pro Option):
 1. Öffnen Sie die Option im Bearbeitungsmodus
-2. Nutzen Sie das Feld **Benutzerdefinierte Felder** → `webla_zusatzoptionen_option_description`
-3. Geben Sie eine Beschreibung ein (z.B. "Verlängert die Garantie um 2 weitere Jahre")
+2. Geben Sie Text im Feld **Beschreibung** ein (z.B. "Verlängert die Garantie um 2 weitere Jahre")
+3. Dieser Text wird als Tooltip angezeigt, wenn der Kunde über das (?)-Icon hovert
 
-Diese Beschreibung wird dem Kunden unter dem Optionsnamen angezeigt.
+**Beschreibungspfad auf Set-Ebene** (automatisch vom Produkt übernommen):
+1. Öffnen Sie die Optionen-Set-Einstellungen
+2. Geben Sie einen Produktfeld-Pfad im Feld **Beschreibungspfad** ein (z.B. `description`)
+3. Für jede Option im Set wird die Beschreibung automatisch vom verknüpften Produkt übernommen
+4. Hat eine Option zusätzlich eine eigene Beschreibung, hat die eigene Beschreibung Vorrang
+
+**Anwendungsbeispiele**:
+- Verwenden Sie Beschreibungen auf Options-Ebene für individuelle Erklärungstexte (z.B. "Beinhaltet Vor-Ort-Reparatur innerhalb von 48 Stunden")
+- Verwenden Sie den Beschreibungspfad `description`, um Produktbeschreibungen automatisch als Tooltips für produktbasierte Optionen anzuzeigen
 
 ### Optionen mit Textfeld-Eingabe
 
@@ -505,7 +515,7 @@ Die Zusatzoptionen erscheinen als Accordion-Container:
 - **Produktbild**: Optional, wenn "Bild anzeigen" aktiviert ist
 - **Produktname**: Inkl. Varianten-Informationen
 - **Herstellername**: Optional, wenn "Hersteller anzeigen" aktiviert ist
-- **Beschreibung**: Aus benutzerdefiniertem Feld
+- **Tooltip-Icon (?)**: Wird beim Hovern angezeigt, wenn die Option eine Beschreibung hat (eigene oder automatisch über den Beschreibungspfad)
 - **Mengenauswahl**: Falls aktiviert, +/- Buttons
 - **Preis**: Angezeigt mit Währung und Steuerhinweis (*)
 

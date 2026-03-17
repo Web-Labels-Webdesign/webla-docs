@@ -13,6 +13,7 @@ This guide covers all features of SplitCommission from both the customer's and a
 - [Display on the Order Confirmation Page](#display-on-the-order-confirmation-page)
 - [Admin: Commission Notes in the Order Overview](#admin-commission-notes-in-the-order-overview)
 - [Product Configuration: Enable Comments for Selected Products](#product-configuration-enable-comments-for-selected-products)
+- [Commission Fields in Email Templates](#commission-fields-in-email-templates)
 - [Troubleshooting](#troubleshooting)
 
 ---
@@ -139,6 +140,49 @@ When the plugin setting **"Active for"** is set to **"Selected products"**, the 
 6. Click **Save**.
 
 The commission comment field will now appear for this product in the storefront.
+
+---
+
+## Commission Fields in Email Templates
+
+### What It Does
+
+By default, the plugin displays commission notes on the order confirmation page, in documents (invoice, delivery note), and in the administration. However, email templates (e.g. order confirmation) require manual integration of the commission fields.
+
+### Available Fields
+
+There are two commission fields that can be used in email templates:
+
+| Field | Variable | Description |
+| ----- | -------- | ----------- |
+| Commission note per line item | `lineItem.payload.commissionNote` | The commission note of an individual order line item |
+| Global order comment | `order.customFields.webla_splitcomission_order_comment` | The overarching commission comment for the entire order |
+
+### How to Add the Fields (as an Administrator)
+
+1. Navigate to **Settings → Email Templates**.
+2. Open the desired template (e.g. **Order confirmation**).
+3. Add the desired code in the HTML or plain text template.
+
+**Commission note per line item** (inside a line item loop):
+
+```twig
+{% for lineItem in order.lineItems %}
+    {% if lineItem.payload.commissionNote is defined and lineItem.payload.commissionNote %}
+        <br>Commission note: {{ lineItem.payload.commissionNote }}
+    {% endif %}
+{% endfor %}
+```
+
+**Global order comment** (e.g. below the order summary):
+
+```twig
+{% if order.customFields.webla_splitcomission_order_comment is defined and order.customFields.webla_splitcomission_order_comment %}
+    <p><strong>Commission note:</strong> {{ order.customFields.webla_splitcomission_order_comment }}</p>
+{% endif %}
+```
+
+**Location**: Settings → Email Templates → edit the desired template
 
 ---
 

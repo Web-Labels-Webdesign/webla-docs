@@ -4,6 +4,18 @@ All notable changes to the Additional Options Plugin for end users.
 
 ---
 
+## [5.3.0] - 2026-03-16
+
+### ✨ New Features
+
+- **Description / Explainer Texts for Options**: Options and option sets now support description texts that are shown as a tooltip icon (?) next to the option name in the storefront. Options can have a custom description, and option sets can specify a product field path (e.g. `description`) to automatically resolve descriptions from the linked product.
+
+### 🐛 Bug Fixes
+
+- **Cart Discounts with Options**: Fixed discounts not applying correctly to products with additional options — CartProcessor priority was adjusted so option prices are combined before discount calculation, and non-stackable option line items are temporarily made stackable during packager evaluation to prevent exclusion by Shopware's `CartScopeDiscountPackager`.
+
+---
+
 ## [5.2.7] - 2026-03-13
 
 ### 🐛 Bug Fixes
