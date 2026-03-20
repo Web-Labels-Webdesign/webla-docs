@@ -4,6 +4,23 @@ All notable changes to Customer Specific Discounts for end users.
 
 ---
 
+## [1.5.7] - 2026-03-20
+
+### Bug Fixes
+
+- **Store Quality Compliance**: Custom database tables (`webla_customer_discount_extension`, `webla_customer_group_discount`) are now properly dropped on full uninstall when "Keep user data" is unchecked. Added `rel="noopener"` to external links in store descriptions. Resized plugin icon to required 112×112 px.
+- **Install Manual**: Replaced disallowed `<code>` HTML tags with `<strong>` in store installation manuals to comply with Shopware Store tag restrictions.
+
+---
+
+## [1.5.6] - 2026-03-20
+
+### Bug Fixes
+
+- **Product Set Discount Display**: Fixed customer-specific discounts not being applied to individual product options within the Set Konfigurator (SwkwebProductSet). Option boxes now show the correct discounted price and the total "Gesamtpreis" reflects the discount. Works for initial page load, AJAX variant switching, and CMS rendering. The integration is fully optional — no dependency on the Set Konfigurator plugin.
+
+---
+
 ## [1.5.5] - 2026-03-04
 
 ### Bug Fixes

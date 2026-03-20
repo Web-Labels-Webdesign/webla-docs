@@ -4,6 +4,23 @@ Alle wichtigen Änderungen an Kundenspezifische Rabatte für Endbenutzer.
 
 ---
 
+## [1.5.7] - 2026-03-20
+
+### Fehlerbehebungen
+
+- **Store-Qualitätsrichtlinien**: Benutzerdefinierte Datenbanktabellen (`webla_customer_discount_extension`, `webla_customer_group_discount`) werden nun bei vollständiger Deinstallation korrekt gelöscht, wenn „Benutzerdaten beibehalten" nicht aktiviert ist. `rel="noopener"` zu externen Links in den Store-Beschreibungen hinzugefügt. Plugin-Icon auf die vorgeschriebene Größe von 112×112 px angepasst.
+- **Installationsanleitung**: Nicht erlaubte `<code>`-HTML-Tags in den Store-Installationsanleitungen durch `<strong>` ersetzt, um die Shopware-Store-Tag-Beschränkungen einzuhalten.
+
+---
+
+## [1.5.6] - 2026-03-20
+
+### Fehlerbehebungen
+
+- **Produkt-Set Rabattanzeige**: Kundenspezifische Rabatte wurden nicht auf einzelne Produktoptionen im Set Konfigurator (SwkwebProductSet) angewendet. Die Optionsboxen zeigen nun den korrekten rabattierten Preis an und der „Gesamtpreis für derzeitige Konfiguration" berücksichtigt den Rabatt. Funktioniert beim Seitenaufruf, bei AJAX-Variantenwechsel und bei CMS-Darstellung. Die Integration ist vollständig optional — keine Abhängigkeit zum Set Konfigurator Plugin.
+
+---
+
 ## [1.5.5] - 2026-03-04
 
 ### Fehlerbehebungen

@@ -4,6 +4,16 @@ Alle wichtigen Änderungen am Zusatzoptionen Plugin für Endbenutzer.
 
 ---
 
+## [5.3.1] - 2026-03-20
+
+### 🐛 Fehlerbehebungen
+
+- **Rabatt auf Optionspreise angewendet**: Aktionen wendeten Rabatte auf den gesamten Produktpreis inklusive Optionen an, auch wenn die Produktregeln der Aktion die Optionen ausschlossen. Der Eltern-Artikel wird jetzt vor der Rabattberechnung immer auf seinen Basispreis zurückgesetzt, sodass Optionspreise nur rabattiert werden, wenn sie explizit einbezogen sind.
+- **Erklärtext-Auflösung für Zusatzfelder**: Beschreibungstexte aus Zusatzfeldern wurden im Storefront nicht angezeigt, wenn das Feld ohne das Präfix `customFields.` eingegeben wurde — das Plugin sucht nun automatisch im Zusatzfeld-Pfad, wenn der direkte Pfad nicht auflösbar ist.
+- **Deinstallations-Stabilität**: `parent::uninstall()` wurde bei vollständiger Deinstallation nicht aufgerufen. Außerdem wird `ALTER TABLE DROP COLUMN` nun gegen fehlende Spalten abgesichert.
+
+---
+
 ## [5.3.0] - 2026-03-16
 
 ### ✨ Neue Funktionen

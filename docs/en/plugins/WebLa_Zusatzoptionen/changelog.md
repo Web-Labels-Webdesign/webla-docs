@@ -4,6 +4,16 @@ All notable changes to the Additional Options Plugin for end users.
 
 ---
 
+## [5.3.1] - 2026-03-20
+
+### 🐛 Bug Fixes
+
+- **Discount Applied to Option Prices**: Fixed promotions applying discounts to the full product price including options, even when the promotion's product rules excluded them. The parent line item is now always reset to its base unit price before discount calculation, so option prices are only discounted when explicitly targeted.
+- **Explainer Text Custom Field Resolution**: Fixed description texts from custom fields not appearing in the storefront when the field was entered without the `customFields.` prefix — the plugin now automatically falls back to looking up the custom field if the direct path doesn't resolve.
+- **Uninstall Stability**: Fixed `parent::uninstall()` not being called on full uninstall, and guarded `ALTER TABLE DROP COLUMN` against missing column errors on fresh install/uninstall.
+
+---
+
 ## [5.3.0] - 2026-03-16
 
 ### ✨ New Features
