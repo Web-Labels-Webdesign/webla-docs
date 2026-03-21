@@ -4,6 +4,13 @@ Alle wichtigen Änderungen an Media Booster für Endbenutzer.
 
 ---
 
+## [1.3.6] - 2026-03-20
+
+### Fehlerbehebungen
+- Nicht-transparente PNGs (z.B. technische Zeichnungen) wurden bei der WebP/AVIF-Konvertierung beschädigt — Alphakanal wurde fälschlicherweise bei RGB-Bildern aktiviert, wodurch die Ausgabe nahezu unsichtbar wurde
+
+---
+
 ## [1.3.5] - 2026-03-06
 
 ### Fehlerbehebungen
