@@ -45,6 +45,7 @@ jobs:
             ["WebLa_ContactFormFileUpload"]="WebLa_ContactFormFileUpload"
             ["WebLa_DeliveryDateSelector"]="WebLa_DeliveryDateSelector"
             ["WebLa_SplitComission"]="WebLa_SplitComission"
+            ["BuildIT_ShareCart"]="BuildIT_ShareCart"
           )
 
           declare -A PLUGIN_FOLDERS=(
@@ -61,6 +62,7 @@ jobs:
             ["WebLa_ContactFormFileUpload"]="WebLa_ContactFormFileUpload"
             ["WebLa_DeliveryDateSelector"]="WebLa_DeliveryDateSelector"
             ["WebLa_SplitComission"]="WebLa_SplitComission"
+            ["BuildIT_ShareCart"]="BuildIT_ShareCart"
           )
 
           # Supported languages
