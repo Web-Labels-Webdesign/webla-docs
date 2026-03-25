@@ -4,6 +4,18 @@ Alle wichtigen Änderungen am Zusatzoptionen Plugin für Endbenutzer.
 
 ---
 
+## [5.3.2] - 2026-03-24
+
+### ✨ Neue Funktionen
+
+- **Konfigurierbares Beschreibungstext-Icon**: Das Tooltip-Icon für Options-Beschreibungstexte ist jetzt in den Plugin-Einstellungen unter „Anzeige-Einstellungen" konfigurierbar. Händler können zwischen einem Fragezeichen (?) und einem Info-Symbol (i) wählen. Beide Varianten verwenden echte Shopware SVG-Icons statt reinem Text.
+
+### ♻️ Verbesserungen
+
+- **SCSS-Bereinigung**: Duplizierte Storefront-Styles wurden durch korrekten Import der `_option-management.scss`-Datei und Entfernung redundanter CSS-Regeln bereinigt.
+
+---
+
 ## [5.3.1] - 2026-03-20
 
 ### 🐛 Fehlerbehebungen

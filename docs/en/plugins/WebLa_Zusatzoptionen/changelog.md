@@ -4,6 +4,18 @@ All notable changes to the Additional Options Plugin for end users.
 
 ---
 
+## [5.3.2] - 2026-03-24
+
+### ✨ New Features
+
+- **Configurable Description Tooltip Icon**: The tooltip icon for option description texts is now configurable in the plugin settings under "Display Settings". Merchants can choose between a question mark (?) and an info icon (i). Both options use proper Shopware SVG icons instead of plain text.
+
+### ♻️ Improvements
+
+- **SCSS Cleanup**: Deduplicated storefront styles by properly importing the `_option-management.scss` partial and removing redundant CSS rules.
+
+---
+
 ## [5.3.1] - 2026-03-20
 
 ### 🐛 Bug Fixes

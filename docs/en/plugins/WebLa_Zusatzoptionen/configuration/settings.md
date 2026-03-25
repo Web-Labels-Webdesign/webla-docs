@@ -30,6 +30,26 @@ This document describes all available settings for the Additional Options Plugin
 
 ---
 
+## Display Settings
+
+### Description tooltip icon
+
+| Property     | Value             |
+| ------------ | ----------------- |
+| **Type**     | Select (Dropdown) |
+| **Default**  | Question mark (?) |
+| **Required** | No                |
+
+**Description**: Determines which icon is displayed next to option names that have a description text configured.
+
+**Options**:
+- `Question mark (?)`: Displays the Shopware `help` icon — a question mark
+- `Info icon (i)`: Displays the Shopware `info` icon — a lowercase "i"
+
+**Example Use Case**: Use the info icon if you consider descriptions as informational hints, or use the question mark if they serve as help/explainer texts.
+
+---
+
 ### Position on product detail page
 
 | Property     | Value                      |
@@ -123,6 +143,7 @@ All settings mentioned above can be configured individually per sales channel.
 | Setting                  | Scope                    | Description                                       |
 | ------------------------ | ------------------------ | ------------------------------------------------- |
 | Apply discounts          | Global/Per Sales Channel | Can be enabled differently per sales channel      |
+| Description tooltip icon | Global/Per Sales Channel | Can use different icon per sales channel           |
 | Position on product page | Global/Per Sales Channel | Can be positioned differently per sales channel   |
 | Quantity handling        | Global/Per Sales Channel | Can have different display per sales channel      |
 | Adjust order items       | Global/Per Sales Channel | Can use different pricing logic per sales channel |

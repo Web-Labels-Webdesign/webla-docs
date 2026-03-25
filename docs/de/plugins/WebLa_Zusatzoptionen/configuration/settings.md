@@ -30,6 +30,26 @@ Dieses Dokument beschreibt alle verfügbaren Einstellungen für das Zusatzoption
 
 ---
 
+## Anzeige-Einstellungen
+
+### Beschreibungstext-Icon
+
+| Eigenschaft      | Wert               |
+| ---------------- | ------------------ |
+| **Typ**          | Auswahl (Dropdown) |
+| **Standard**     | Fragezeichen (?)   |
+| **Erforderlich** | Nein               |
+
+**Beschreibung**: Legt fest, welches Icon neben Optionsnamen angezeigt wird, die einen Beschreibungstext konfiguriert haben.
+
+**Optionen**:
+- `Fragezeichen (?)`: Zeigt das Shopware `help`-Icon an — ein Fragezeichen
+- `Info-Symbol (i)`: Zeigt das Shopware `info`-Icon an — ein kleines „i"
+
+**Anwendungsbeispiel**: Verwenden Sie das Info-Symbol, wenn Beschreibungen als informative Hinweise dienen, oder das Fragezeichen, wenn sie als Hilfe-/Erklärtexte fungieren.
+
+---
+
 ### Position auf Product-Detail Seite
 
 | Eigenschaft      | Wert                            |
@@ -123,6 +143,7 @@ Alle oben genannten Einstellungen können pro Verkaufskanal individuell konfigur
 | Einstellung                     | Geltungsbereich          | Beschreibung                                                 |
 | ------------------------------- | ------------------------ | ------------------------------------------------------------ |
 | Rabatte anwenden                | Global/Pro Verkaufskanal | Kann pro Verkaufskanal unterschiedlich aktiviert werden      |
+| Beschreibungstext-Icon          | Global/Pro Verkaufskanal | Kann pro Verkaufskanal ein anderes Icon verwenden            |
 | Position auf Produktdetailseite | Global/Pro Verkaufskanal | Kann pro Verkaufskanal unterschiedlich positioniert werden   |
 | Mengenbehandlung                | Global/Pro Verkaufskanal | Kann pro Verkaufskanal unterschiedliche Darstellung haben    |
 | Bestellpositionen anpassen      | Global/Pro Verkaufskanal | Kann pro Verkaufskanal unterschiedliche Preislogik verwenden |
