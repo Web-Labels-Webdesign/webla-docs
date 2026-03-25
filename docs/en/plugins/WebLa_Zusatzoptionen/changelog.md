@@ -4,6 +4,20 @@ All notable changes to the Additional Options Plugin for end users.
 
 ---
 
+## [5.3.3] - 2026-03-25
+
+### 🐛 Bug Fixes
+
+- **Seeder Re-Seeds Deleted Option Sets**: Fixed seeded option sets never being re-created after manual deletion from a product. The delete action no longer auto-excludes the product from the seeder — a simple delete allows re-seeding on the next sync cycle.
+- **Seeder Timing Bug**: Fixed scheduled seeder task skipping seeders every other cycle due to sync progress updates bumping the `updated_at` timestamp.
+
+### ♻️ Improvements
+
+- **Delete Modal for Seeded Options**: When deleting a seeded option set, the confirmation dialog now explains the seeder behavior and offers two choices: "Delete" (will be re-seeded) or "Remove permanently" (excludes product from seeder).
+- **Excluded Products Management**: The seeder detail page now shows excluded products as dismissable tags, allowing merchants to re-enable products for seeding directly from the seeder configuration.
+
+---
+
 ## [5.3.2] - 2026-03-24
 
 ### ✨ New Features

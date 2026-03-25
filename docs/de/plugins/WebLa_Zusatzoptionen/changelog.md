@@ -4,6 +4,20 @@ Alle wichtigen Änderungen am Zusatzoptionen Plugin für Endbenutzer.
 
 ---
 
+## [5.3.3] - 2026-03-25
+
+### 🐛 Fehlerbehebungen
+
+- **Seeder erstellt gelöschte Option Sets neu**: Geseedete Option Sets wurden nach manueller Löschung vom Produkt nie wieder erstellt. Die Lösch-Aktion schließt das Produkt nicht mehr automatisch vom Seeder aus — ein einfaches Löschen ermöglicht das erneute Seeden beim nächsten Sync-Zyklus.
+- **Seeder Timing-Bug**: Der geplante Seeder-Task hat jeden zweiten Zyklus Seeder übersprungen, weil Sync-Fortschrittsupdates den `updated_at`-Zeitstempel aktualisiert haben.
+
+### ♻️ Verbesserungen
+
+- **Lösch-Dialog für geseedete Optionen**: Beim Löschen eines geseedeten Option Sets erklärt der Bestätigungsdialog nun das Seeder-Verhalten und bietet zwei Optionen: „Löschen" (wird erneut geseeded) oder „Dauerhaft entfernen" (schließt Produkt vom Seeder aus).
+- **Ausgeschlossene Produkte verwalten**: Die Seeder-Detailseite zeigt ausgeschlossene Produkte als entfernbare Tags an, sodass Händler Produkte direkt aus der Seeder-Konfiguration wieder für das Seeding freigeben können.
+
+---
+
 ## [5.3.2] - 2026-03-24
 
 ### ✨ Neue Funktionen
