@@ -116,6 +116,15 @@ plugins:
       en: Allows customers to add individual commission notes to cart line items and split them into separate positions — while fully preserving tiered/bulk pricing.
     requirements: Shopware 6.6–6.8, PHP 8.1+
     version: "5.0.0"
+  - id: WebLa_UltimativeBundlePlugin
+    name:
+      de: Ultimative Bundle Plugin
+      en: Ultimate Bundle Plugin
+    short:
+      de: Ultimatives Bundle-Plugin für Shopware 6.
+      en: Ultimate bundle plugin for Shopware 6.
+    requirements: Shopware 6.6–6.8, PHP 8.1+
+    version: "1.0.0"
   - id: BuildIT_ShareCart
     name:
       de: Teile deinen Warenkorb

@@ -46,6 +46,7 @@ jobs:
             ["WebLa_DeliveryDateSelector"]="WebLa_DeliveryDateSelector"
             ["WebLa_SplitComission"]="WebLa_SplitComission"
             ["BuildIT_ShareCart"]="BuildIT_ShareCart"
+            ["WebLa_UltimativeBundlePlugin"]="WebLa_UltimativeBundlePlugin"
           )
 
           declare -A PLUGIN_FOLDERS=(
@@ -63,6 +64,7 @@ jobs:
             ["WebLa_DeliveryDateSelector"]="WebLa_DeliveryDateSelector"
             ["WebLa_SplitComission"]="WebLa_SplitComission"
             ["BuildIT_ShareCart"]="BuildIT_ShareCart"
+            ["WebLa_UltimativeBundlePlugin"]="WebLa_UltimativeBundlePlugin"
           )
 
           # Supported languages
