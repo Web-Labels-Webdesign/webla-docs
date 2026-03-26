@@ -4,6 +4,22 @@ All notable changes to the **Category Quick Filter** for end users.
 
 ---
 
+## [5.0.2] – 2026-03-25
+
+### 🐛 Bug Fixes
+
+- **Shopware 6.6.8 compatibility**: Fixed Twig injection on older Shopware 6.6.x versions (e.g. 6.6.8) where the `controller.service_arguments` tag alone did not auto-inject Twig. An explicit `setTwig` call is now applied via the version-specific compatibility layer.
+
+---
+
+## [5.0.1] – 2026-03-25
+
+### 🐛 Bug Fixes
+
+- **Shopware 6.6 Twig injection**: Fixed a crash where the controller threw a `StorefrontException` because Twig was not injected. The controller now uses proper constructor injection with the `controller.service_arguments` tag, compatible with both Shopware 6.6 and 6.7.
+
+---
+
 ## [5.0.0] – 2026-03-04
 
 ### ✨ New Features
@@ -22,6 +38,8 @@ All notable changes to the **Category Quick Filter** for end users.
 
 | Version | Highlights                                         |
 | ------- | -------------------------------------------------- |
+| 5.0.2   | Fix Twig injection on older Shopware 6.6.x         |
+| 5.0.1   | Fix Twig injection crash on Shopware 6.6           |
 | 5.0.0   | Shopware 6.7 support, code modernization           |
 
 ---
@@ -30,4 +48,6 @@ All notable changes to the **Category Quick Filter** for end users.
 
 | Plugin Version | Shopware Version | PHP Version |
 | -------------- | ---------------- | ----------- |
+| 5.0.2          | 6.6.x – 6.7.x    | 8.2+        |
+| 5.0.1          | 6.6.x – 6.7.x    | 8.2+        |
 | 5.0.0          | 6.6.x – 6.7.x    | 8.2+        |
