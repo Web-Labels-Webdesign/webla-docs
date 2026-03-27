@@ -34,7 +34,7 @@ plugins:
       de: Automatisches Cross-Selling basierend auf Kaufverhalten und Produktattributen.
       en: Automatic cross-selling based on purchasing behavior and product attributes.
     requirements: Shopware 6.5–6.8, PHP 8.1+
-    version: "5.2.6"
+    version: "5.2.7"
   - id: WebLa_UTMHandler
     name:
       de: UTM-Handler
@@ -124,7 +124,7 @@ plugins:
       de: Ultimatives Bundle-Plugin für Shopware 6.
       en: Ultimate bundle plugin for Shopware 6.
     requirements: Shopware 6.6–6.8, PHP 8.1+
-    version: "5.1.0"
+    version: "5.1.1"
   - id: BuildIT_ShareCart
     name:
       de: Teile deinen Warenkorb

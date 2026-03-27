@@ -4,6 +4,21 @@ Alle wichtigen Änderungen an Intelligentes Cross-Selling für Endbenutzer.
 
 ---
 
+## [5.2.7] - 2026-03-27
+
+### Fehlerbehebungen
+
+- **Extrem langsamer globaler Cross-Selling-Modus behoben**: Aufwändige ProductStreamBuilder-Abfragen durch speicherinterne `streamIds`-Prüfung ersetzt — eliminiert N Datenbankabfragen pro Produktseite bei Stream-basierten Konfigurationen
+- **Kategorie-basierte Kandidatenabfrage hinzugefügt**: Produkte aus derselben Kategorie werden zuerst abgefragt (schnell), der gesamte Katalog wird nur bei unzureichenden Ergebnissen durchsucht — deutlich reduzierte Abfragelast bei großen Shops
+- **Leeres Cross-Selling bei reinen Varianten-Eigenschaften behoben**: Eigenschaften, die ausschließlich als Varianten-Optionen verwendet werden (z.B. Größe), werden nun neben regulären Produkteigenschaften beim Gewichts-Matching berücksichtigt
+- **Leere Ergebnisse bei fehlenden gewichteten Eigenschaften behoben**: Statt nichts anzuzeigen, zeigt das Plugin nun Produkte aus derselben Kategorie oder dem Katalog an
+
+### Verbesserungen
+
+- **Aktive Konfigurationen pro Request gecacht**: Die Plugin-Konfigurationsabfrage wird nun einmal pro Request statt einmal pro Produkt ausgeführt — weniger redundante Datenbankabfragen
+
+---
+
 ## [5.2.6] - 2026-03-16
 
 ### Fehlerbehebungen

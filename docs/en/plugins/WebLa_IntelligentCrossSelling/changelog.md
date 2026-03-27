@@ -4,6 +4,21 @@ All notable changes to Intelligent Cross-Selling for end users.
 
 ---
 
+## [5.2.7] - 2026-03-27
+
+### Bug Fixes
+
+- **Fixed extremely slow global cross-selling mode**: Replaced expensive ProductStreamBuilder queries with in-memory `streamIds` lookup, eliminating N database queries per product page for stream-based configurations
+- **Added category-first candidate query**: Products from the same category are now queried first (fast), falling back to the full catalog only when insufficient results are found — dramatically reducing query load on large shops
+- **Fixed empty cross-selling for variant-only properties**: Properties used exclusively as variant options (e.g. Size) are now included in weight matching alongside regular product properties
+- **Fixed empty results when product has no matching weighted properties**: Instead of returning nothing, the plugin now falls back to showing products from the same category or catalog
+
+### Improvements
+
+- **Cached active configurations per request**: The plugin configuration query now runs once per request instead of once per product, reducing redundant database queries
+
+---
+
 ## [5.2.6] - 2026-03-16
 
 ### Bug Fixes

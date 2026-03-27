@@ -4,6 +4,14 @@ All notable changes to the Ultimate Bundle Plugin for end users.
 
 ---
 
+## [5.1.1] - 2026-03-27
+
+### :bug: Bug Fixes
+
+- Fixed admin fields (quantity selection, optional groups) not visible on Shopware 6.7 due to stale pre-built assets
+
+---
+
 ## [5.1.0] - 2026-03-26
 
 ### :sparkles: New Features
@@ -127,6 +135,7 @@ All notable changes to the Ultimate Bundle Plugin for end users.
 
 | Version | Release Date | Highlights                                              |
 | ------- | ------------ | ------------------------------------------------------- |
+| 5.1.1   | 2026-03-27   | Fix admin fields on SW 6.7                                                |
 | 5.1.0   | 2026-03-26   | Quantity selection per group, optional bundle groups                       |
 | 5.0.0   | 2026-03-26   | Multi-version support (SW 6.6 & 6.7), single codebase architecture       |
 | 2.0.8   | 2023-09-25   | Per-bundle discount control                             |
