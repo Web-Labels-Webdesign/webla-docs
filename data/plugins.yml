@@ -125,6 +125,15 @@ plugins:
       en: Ultimate bundle plugin for Shopware 6.
     requirements: Shopware 6.6–6.8, PHP 8.1+
     version: "5.1.1"
+  - id: WebLa_Subscriptions
+    name:
+      de: Abonnement Plugin
+      en: Subscription Plugin
+    short:
+      de: Erweiterbares Abonnement-Plugin für Shopware 6 mit automatischer Verlängerung, flexiblen Intervallen, Mollie-Zahlungsanbindung und Kundenportal für wiederkehrende Bestellungen.
+      en: Flexible subscription plugin for Shopware 6 with automatic renewals, configurable intervals, Mollie payment integration, and a self-service customer portal for recurring orders.
+    requirements: Shopware 6.6–6.8, PHP 8.1+
+    version: "1.0.0"
   - id: BuildIT_ShareCart
     name:
       de: Teile deinen Warenkorb
