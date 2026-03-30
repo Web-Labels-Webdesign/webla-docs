@@ -4,6 +4,14 @@ Alle wichtigen Änderungen an BuildIT Share Cart für Endbenutzer.
 
 ---
 
+## [5.0.1] - 2026-03-30
+
+### 🐛 Fehlerbehebungen
+
+- **Datenbankkompatibilität**: Kollations-Konflikt (`utf8_unicode_ci` vs `utf8mb4_unicode_ci`) behoben, der auf Servern mit `utf8mb4_general_ci` als Standard-Kollation zu Abfragefehlern führte
+
+---
+
 ## [5.0.0] - 2026-03-25
 
 ### ✨ Neue Funktionen
@@ -89,6 +97,7 @@ Alle wichtigen Änderungen an BuildIT Share Cart für Endbenutzer.
 
 | Version | Veröffentlichung | Highlights                                          |
 | ------- | ---------------- | --------------------------------------------------- |
+| 5.0.1   | 2026-03-30       | Datenbank-Kollationsfix                              |
 | 5.0.0   | 2026-03-25       | Multi-Version-Support für SW 6.6 + 6.7              |
 | 4.0.0   | 2025-07-31       | Shopware 6.7 Unterstützung                          |
 | 3.0.0   | 2024-12-27       | Shopware 6.6 Unterstützung                          |

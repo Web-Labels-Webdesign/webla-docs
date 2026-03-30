@@ -133,4 +133,4 @@ plugins:
       de: Teile deinen Warenkorb ganz einfach per Link, E-Mail, WhatsApp oder Facebook. Deine Kunden können den geteilten Warenkorb mit einem Klick übernehmen. Automatische Bereinigung.
       en: Share your shopping cart easily via link, email, WhatsApp or Facebook. Your customers can add all shared products to their cart with one click. Includes automatic cleanup.
     requirements: Shopware 6.6–6.8, PHP 8.1+
-    version: "5.0.0"
+    version: "5.0.1"
