@@ -4,6 +4,85 @@ Alle wichtigen Änderungen am WebLa Subscription Plugin für Endbenutzer.
 
 ---
 
+## [1.1.5] - 2026-03-31
+
+### :bug: Fehlerbehebungen
+
+- **Eigenständiger Mollie-Betrieb**: Mollie API 3.9.0 unter eigenem Namespace `WebLa\Subscriptions\Vendor\Mollie\Api\` gebündelt, sodass das Plugin vollständig ohne das offizielle Mollie-Shopware-Plugin funktioniert. Bei gleichzeitiger Installation nutzt jedes Plugin seine eigene isolierte Kopie — keine Konflikte. Makefile-Target (`make mollie-vendor`) zum Aktualisieren der Kopie hinzugefügt.
+
+---
+
+## [1.1.4] - 2026-03-31
+
+### :bug: Fehlerbehebungen
+
+- **Mollie-Abhängigkeitskonflikt**: `mollie/mollie-api-php` komplett aus Composer-Require entfernt. Das offizielle Mollie-Shopware-Plugin bündelt eine eigene Kopie in `vendor_manual/` mit anderen Konstantennamen — die Abhängigkeit in unserem Require verursachte Versionskonflikte bei der Installation. Mollie-API-Klassen werden nun zur Laufzeit vom Mollie-Plugin bereitgestellt.
+- **Mollie als optionale Abhängigkeit**: `MollieOptionalCompilerPass` hinzugefügt, der Mollie-bezogene Services entfernt wenn die Mollie-API-Bibliothek nicht vorhanden ist. Rechnungs- und Vorkasse-Abonnements funktionieren ohne das Mollie-Plugin.
+- **Sequenztyp-Konstanten**: `SequenceType::FIRST`/`RECURRING`-Konstanten durch String-Literale `'first'`/`'recurring'` ersetzt für Kompatibilität mit der gebündelten Bibliotheksversion des Mollie-Plugins.
+
+---
+
+## [1.1.3] - 2026-03-31
+
+### :bug: Fehlerbehebungen
+
+- **Payment-Handler Kompilierfehler auf Shopware < 6.6.5**: Alle Payment-Handler mit bedingten `class_exists()`-Basisklassen und einem gemeinsamen Logic-Trait umstrukturiert, sodass neue Methodensignaturen auf 6.6.5+/6.7 und Legacy-Interface-Signaturen auf 6.6.0–6.6.4 ohne PHP-Kompilierfehler verwendet werden
+
+---
+
+## [1.1.2] - 2026-03-31
+
+### :bug: Fehlerbehebungen
+
+- **Shopware 6.6.0–6.6.4 Kompatibilität**: Payment-Handler nutzen nun `class_exists()`-basierte Basisklassen (wie das offizielle Mollie-Plugin) statt `AbstractPaymentHandler` direkt zu erweitern, das erst ab 6.6.5 existiert
+- **Doppelte Payment-Handler-Tags**: Services registrieren sowohl `shopware.payment.method` (6.6.5+/6.7) als auch Legacy-Tags `shopware.payment.method.async`/`sync` (6.6.0–6.6.4)
+
+---
+
+## [1.1.1] - 2026-03-31
+
+### :bug: Fehlerbehebungen
+
+- **Mollie API Versionskonflikt**: `mollie/mollie-api-php`-Abhängigkeit von `^3.9` auf `^2.0 || ^3.0` erweitert, um Konflikte mit dem offiziellen Mollie-Shopware-Plugin zu vermeiden (`Undefined constant PaymentMethod::BIZUM`)
+- **Deinstallation fehlgeschlagen**: Entfernung von Custom Fields nutzt nun kaskadierende Löschung statt direkter SQL-Abfrage auf nicht existierende Spalte `custom_field_set_id` in Shopware 6.7
+
+---
+
+## [1.1.0] - 2026-03-31
+
+### :sparkles: Neue Funktionen
+
+- **Optionsspezifischer Rabatt**: Produkt-Abonnementoptionen können nun einen eigenen Rabattprozentsatz haben, der den globalen Standard überschreibt. NULL = global. Anzeige im Admin-Produktkarten und Storefront-Selektor.
+- **Kundeneinstellungen-Lebenszyklus**: Kundenabonnement-Einstellungen werden automatisch beim ersten Abonnement erstellt. SEPA-Sperre wird automatisch bei Erreichen der maximalen Fehlversuche gesetzt und beim Admin-Entsperren aufgehoben.
+- **Kundeneinstellungen Admin-UI**: Admin-Kundendetailseite zeigt nun Schalter für „Intervall-Änderung erlaubt" und „SEPA gesperrt" pro Kunde.
+- **Kundeneinstellungen API**: Neue GET/PATCH-Endpunkte zur Verwaltung kundenspezifischer Abonnementeinstellungen.
+- **Webhook-URL-Platzhalter**: Plugin-Konfiguration zeigt die erwartete Webhook-URL-Struktur als Platzhaltertext.
+
+### :bug: Fehlerbehebungen
+
+- **Kundendetail-Karte**: Template-Block-Name korrigiert, damit die Abonnementkarte tatsächlich auf der Kundendetailseite erscheint.
+- **Kundenkarte Zahlungsart**: Zahlungsart-Spalte zeigt nun übersetzte Namen statt technischer Bezeichnungen.
+- **Artikel-hinzufügen-Route**: Fehlende `seo => false`-Option bei der Storefront-Route behoben, die 404-Fehler verursachte.
+- **Storefront-Quellcode-Tracking**: Fehlerhafte `.gitignore`-Regel entfernt, die das Storefront-Controller-Verzeichnis ausschloss.
+
+---
+
+## [1.0.1] - 2026-03-31
+
+### :bug: Fehlerbehebungen
+
+- **Shopware 6.7 Payment Handler**: Einheitliches `shopware.payment.method` Service-Tag statt veralteter `shopware.payment.method.async`/`shopware.payment.method.sync` Tags, behebt `CHECKOUT__UNKNOWN_PAYMENT_METHOD`-Fehler beim Checkout
+- **Shopware 6.7 Admin-Eingabefelder**: `v-model` durch `:value`/`@update:value` bei veralteten Komponenten ersetzt, damit Zahlungsart, Intervall, Notizen und Kündigungsgrund korrekt angezeigt werden
+- **Admin-Detailansicht Header**: Nur relevante Aktions-Buttons für den aktuellen Abonnement-Status anzeigen statt alle Buttons deaktiviert darzustellen
+- **Admin-Detailansicht Header Abstand**: Abstand zwischen Smart-Bar-Aktions-Buttons hinzugefügt
+- **Admin-Artikeltabelle**: `sw-number-field` durch kompaktes natives Eingabefeld für Mengenspalte ersetzt, um vertikale Dehnung zu beheben
+- **Admin-Artikeltabelle Spaltenbreiten**: Explizite Breiten für Mengen- und Einzelpreisspalte gesetzt
+- **Admin-Dashboard Statusüberlauf**: Status-Raster von fester 7-Spalten-Darstellung auf flexibles Wrapping umgestellt
+- **Produktkarte Leerzustand**: Leerzustand mit gestricheltem Rahmen gestaltet, Speichern-Button ausgeblendet wenn keine neuen Optionen vorhanden
+- **Produktkarte Toggle-Feedback**: Erfolgsmeldung beim Umschalten des „Nur als Abonnement"-Schalters
+
+---
+
 ## [1.0.0] - 2026-03-30
 
 ### ✨ Neue Funktionen
@@ -29,8 +108,15 @@ Alle wichtigen Änderungen am WebLa Subscription Plugin für Endbenutzer.
 
 ## Versionsübersicht
 
-| Version | Veröffentlichung | Highlights                            |
-| ------- | ---------------- | ------------------------------------- |
+| Version | Veröffentlichung | Highlights                                                |
+| ------- | ---------------- | --------------------------------------------------------- |
+| 1.1.5   | 2026-03-31       | Eigenständiger Mollie-Betrieb via Namespace-Scoping      |
+| 1.1.4   | 2026-03-31       | Mollie optionale Abhängigkeit, keine Versionskonflikte   |
+| 1.1.3   | 2026-03-31       | Payment-Handler Kompilierfehler auf SW < 6.6.5 behoben   |
+| 1.1.2   | 2026-03-31       | Shopware 6.6.0+ Payment-Handler-Kompatibilität           |
+| 1.1.1   | 2026-03-31       | Mollie-Versionskonflikt und Deinstallation behoben        |
+| 1.1.0   | 2026-03-31       | Optionsrabatte, Kundeneinstellungen, Admin-Korrekturen    |
+| 1.0.1   | 2026-03-31       | Shopware 6.7 Kompatibilitätskorrekturen                   |
 | 1.0.0   | 2026-03-30       | Erstveröffentlichung mit vollem Funktionsumfang |
 
 ---
@@ -39,4 +125,11 @@ Alle wichtigen Änderungen am WebLa Subscription Plugin für Endbenutzer.
 
 | Plugin-Version | Shopware-Version | PHP-Version |
 | -------------- | ---------------- | ----------- |
+| 1.1.5          | 6.6.0 – 6.7.x   | 8.1+        |
+| 1.1.4          | 6.6.0 – 6.7.x   | 8.1+        |
+| 1.1.3          | 6.6.0 – 6.7.x   | 8.1+        |
+| 1.1.2          | 6.6.0 – 6.7.x   | 8.1+        |
+| 1.1.1          | 6.6.0 – 6.7.x   | 8.1+        |
+| 1.1.0          | 6.6.0 – 6.7.x   | 8.1+        |
+| 1.0.1          | 6.6.0 – 6.7.x   | 8.1+        |
 | 1.0.0          | 6.6.0 – 6.7.x   | 8.1+        |

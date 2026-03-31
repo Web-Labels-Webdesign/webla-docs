@@ -79,6 +79,7 @@ Option sets are containers for related additional options. For example, a set mi
    - **Active**: Only active options are displayed and can be selected
    - **Auto-Selected**: Option is pre-selected when loading the page
    - **Required**: Customer must select this option (only works with single selection)
+   - **Preselected**: Option is checked by default when loading the page but can be unchecked by the customer
    - **Sorting**: Order within the set
 
 ### Explainer / Description Texts
@@ -426,9 +427,25 @@ The plugin automatically validates that all required options are selected:
 "Please select an option from the set 'Warranty Extension' for the product 'Laptop XYZ'."
 ```
 
+### Preselected Options (without Requirement)
+
+If you want an option to be checked by default but allow the customer to uncheck it, use the **Preselected** setting instead of **Required**:
+
+1. Open the option in edit mode
+2. Enable **Preselected**
+3. The option is now checked when loading the page but can be unchecked by the customer
+
+**Example Use Cases**:
+- Recommended warranty extension that the customer can opt out of
+- Default service package that most customers want
+- Opt-out instead of opt-in for popular additional services
+
+**Difference from Required**: Required fields cannot be deselected and block checkout. Preselected options are a recommendation that the customer can remove at any time.
+
 ### Best Practices for Required Fields
 
 - Use required fields only when truly necessary (e.g., legal requirements)
+- Use **Preselected** instead of **Required** when the customer should be able to opt out
 - Enable "Container Open" in the set so required fields are immediately visible
 - Don't combine required fields with too many options - keep it simple
 - Inform customers about required fields (e.g., in the set description)

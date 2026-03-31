@@ -79,6 +79,7 @@ Optionen-Sets sind Container für zusammengehörige Zusatzoptionen. Ein Set kann
    - **Aktiv**: Nur aktive Optionen werden angezeigt und können gewählt werden
    - **Automatisch ausgewählt**: Option ist beim Laden der Seite bereits vorausgewählt
    - **Erforderlich**: Kunde muss diese Option auswählen (funktioniert nur bei Einzelauswahl)
+   - **Vorausgewählt**: Option ist beim Laden der Seite angehakt, kann aber vom Kunden abgewählt werden
    - **Sortierung**: Reihenfolge innerhalb des Sets
 
 ### Erklärungs-/Beschreibungstexte
@@ -426,9 +427,25 @@ Das Plugin validiert automatisch, dass alle Pflichtoptionen ausgewählt sind:
 "Bitte wählen Sie eine Option aus dem Set 'Garantieverlängerung' für das Produkt 'Laptop XYZ'."
 ```
 
+### Vorausgewählte Optionen (ohne Pflicht)
+
+Wenn Sie möchten, dass eine Option standardmäßig angehakt ist, der Kunde sie aber abwählen kann, verwenden Sie die Einstellung **Vorausgewählt** statt **Erforderlich**:
+
+1. Öffnen Sie die Option im Bearbeitungsmodus
+2. Aktivieren Sie **Vorausgewählt**
+3. Die Option ist nun beim Laden der Seite angehakt, kann aber vom Kunden abgewählt werden
+
+**Anwendungsbeispiele**:
+- Empfohlene Garantieverlängerung, die der Kunde abwählen kann
+- Standard-Service-Paket, das die meisten Kunden möchten
+- Opt-out statt Opt-in für beliebte Zusatzleistungen
+
+**Unterschied zu Erforderlich**: Pflichtfelder können nicht abgewählt werden und blockieren den Checkout. Vorausgewählte Optionen sind eine Empfehlung, die der Kunde jederzeit entfernen kann.
+
 ### Best Practices für Pflichtfelder
 
 - Nutzen Sie Pflichtfelder nur, wenn wirklich erforderlich (z.B. gesetzliche Vorgaben)
+- Verwenden Sie **Vorausgewählt** statt **Erforderlich**, wenn der Kunde die Option abwählen darf
 - Aktivieren Sie "Container geöffnet" im Set, damit Pflichtfelder sofort sichtbar sind
 - Kombinieren Sie Pflichtfelder nicht mit zu vielen Optionen - halten Sie es übersichtlich
 - Informieren Sie Kunden über Pflichtfelder (z.B. in der Set-Beschreibung)

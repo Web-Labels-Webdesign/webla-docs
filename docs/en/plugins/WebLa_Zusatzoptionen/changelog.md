@@ -4,6 +4,14 @@ All notable changes to the Additional Options Plugin for end users.
 
 ---
 
+## [5.4.0] - 2026-03-31
+
+### ✨ New Features
+
+- **Preselected Options**: New "Preselected" setting for options — allows merchants to display options as checked by default without making them required. Customers can uncheck the option at any time. Configurable in both the option details modal and the option seeder.
+
+---
+
 ## [5.3.3] - 2026-03-25
 
 ### 🐛 Bug Fixes
@@ -305,6 +313,7 @@ All notable changes to the Additional Options Plugin for end users.
 
 | Version | Release Date | Highlights                                                     |
 | ------- | ------------ | -------------------------------------------------------------- |
+| 5.4.0   | 2026-03-31   | Preselected options                                                 |
 | 5.1.0   | 2026-02-19   | Exclude products from seeder, bulk sync/reset actions, position fix |
 | 5.0.0   | 2026-02-10   | Multiple selection seeder, container opening, 8 critical fixes |
 | 3.1.15  | 2026-02-10   | Data integrity & performance fixes                             |
@@ -372,7 +381,8 @@ All notable changes to the Additional Options Plugin for end users.
 
 | Plugin Version | Shopware Version | PHP Version | Notes                              |
 | -------------- | ---------------- | ----------- | ---------------------------------- |
-| 5.1.0          | 6.6.0 - 6.7.0    | 8.1+        | Current version                    |
+| 5.4.0          | 6.6.0 - 6.7.0    | 8.1+        | Current version                    |
+| 5.1.0          | 6.6.0 - 6.7.0    | 8.1+        |                                    |
 | 5.0.0          | 6.6.0 - 6.7.0    | 8.1+        | Major rewrite                      |
 | 3.1.15         | 6.6.0 - 6.7.0    | 8.1+        | Bugfixes                           |
 | 3.1.14         | 6.5.0 - 6.6.9    | 8.0+        | Checkout optimizations             |

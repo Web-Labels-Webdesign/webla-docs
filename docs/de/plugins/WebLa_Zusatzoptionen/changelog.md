@@ -4,6 +4,14 @@ Alle wichtigen Änderungen am Zusatzoptionen Plugin für Endbenutzer.
 
 ---
 
+## [5.4.0] - 2026-03-31
+
+### ✨ Neue Funktionen
+
+- **Vorauswahl für Optionen**: Neue Einstellung „Vorausgewählt" für Optionen — ermöglicht es Händlern, Optionen standardmäßig angehakt anzuzeigen, ohne sie als Pflichtfeld zu markieren. Kunden können die Option jederzeit abwählen. Konfigurierbar sowohl in der Optionen-Detailansicht als auch im Optionen Seeder.
+
+---
+
 ## [5.3.3] - 2026-03-25
 
 ### 🐛 Fehlerbehebungen
@@ -305,6 +313,7 @@ Alle wichtigen Änderungen am Zusatzoptionen Plugin für Endbenutzer.
 
 | Version | Veröffentlichung | Highlights                                                         |
 | ------- | ---------------- | ------------------------------------------------------------------ |
+| 5.4.0   | 2026-03-31       | Vorauswahl für Optionen                                            |
 | 5.1.0   | 2026-02-19       | Produkte ausschließen, Massen-Sync/Reset, Positions-Fehlerbehebung |
 | 5.0.0   | 2026-02-10       | Mehrfachauswahl Seeder, Container-Öffnung, 8 kritische Fixes       |
 | 3.1.15  | 2026-02-10       | Datenintegrität & Performance-Fixes                                |
@@ -372,7 +381,8 @@ Alle wichtigen Änderungen am Zusatzoptionen Plugin für Endbenutzer.
 
 | Plugin-Version | Shopware-Version | PHP-Version | Besonderheiten                    |
 | -------------- | ---------------- | ----------- | --------------------------------- |
-| 5.1.0          | 6.6.0 - 6.7.0    | 8.1+        | Aktuelle Version                  |
+| 5.4.0          | 6.6.0 - 6.7.0    | 8.1+        | Aktuelle Version                  |
+| 5.1.0          | 6.6.0 - 6.7.0    | 8.1+        |                                   |
 | 5.0.0          | 6.6.0 - 6.7.0    | 8.1+        | Großes Rewrite                    |
 | 3.1.15         | 6.6.0 - 6.7.0    | 8.1+        | Bugfixes                          |
 | 3.1.14         | 6.5.0 - 6.6.9    | 8.0+        | Checkout-Optimierungen            |
