@@ -6,10 +6,21 @@ Hier finden Sie Installationsanleitungen, Konfigurationsoptionen und Best Practi
 
 ## Verfügbare Plugins
 
-| Plugin | Beschreibung | Version | Voraussetzungen |
-|--------|--------------|---------|-----------------|
-{% for plugin in plugins %}| [{{ plugin.name.de }}](plugins/{{ plugin.id }}/index.md) | {{ plugin.short.de }} | {{ plugin.version or "–" }} | {{ plugin.requirements }} |
+<input class="plugin-search" type="text" placeholder="Plugin suchen..." aria-label="Plugins filtern">
+
+<div class="plugin-grid">
+{% for plugin in plugins %}
+<a class="plugin-card" href="plugins/{{ plugin.id }}/" data-search="{{ plugin.name.de|lower }} {{ plugin.short.de|lower }}">
+  <div class="plugin-card__title">{{ plugin.name.de }}</div>
+  <div class="plugin-card__description">{{ plugin.short.de }}</div>
+  <div class="plugin-card__meta">
+    <span class="plugin-card__version">v{{ plugin.version }}</span>
+    <span class="plugin-card__req">{{ plugin.requirements }}</span>
+  </div>
+</a>
 {% endfor %}
+</div>
+<div class="plugin-no-results" hidden>Keine Plugins gefunden.</div>
 
 ## Support
 

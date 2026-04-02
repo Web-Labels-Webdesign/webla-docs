@@ -88,3 +88,8 @@ extra:
       name: Datenschutz
 
 copyright: "&copy; 2026 Web Labels Webdesign GmbH"
+
+extra_css:
+  - stylesheets/plugin-cards.css
+extra_javascript:
+  - javascripts/plugin-filter.js
