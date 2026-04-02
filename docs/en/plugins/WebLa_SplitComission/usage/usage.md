@@ -166,7 +166,6 @@ There are two commission fields that can be used in email templates:
 
 **Commission note per line item** (inside a line item loop):
 
-{% raw %}
 ```twig
 {% for lineItem in order.lineItems %}
     {% if lineItem.payload.commissionNote is defined and lineItem.payload.commissionNote %}
@@ -174,17 +173,14 @@ There are two commission fields that can be used in email templates:
     {% endif %}
 {% endfor %}
 ```
-{% endraw %}
 
 **Global order comment** (e.g. below the order summary):
 
-{% raw %}
 ```twig
 {% if order.customFields.webla_splitcomission_order_comment is defined and order.customFields.webla_splitcomission_order_comment %}
     <p><strong>Commission note:</strong> {{ order.customFields.webla_splitcomission_order_comment }}</p>
 {% endif %}
 ```
-{% endraw %}
 
 **Location**: Settings → Email Templates → edit the desired template
 

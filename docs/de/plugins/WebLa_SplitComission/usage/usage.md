@@ -166,7 +166,6 @@ Es gibt zwei Kommissionsfelder, die in E-Mail-Templates genutzt werden können:
 
 **Kommissionsnotiz pro Bestellposition** (innerhalb einer Positionsschleife):
 
-{% raw %}
 ```twig
 {% for lineItem in order.lineItems %}
     {% if lineItem.payload.commissionNote is defined and lineItem.payload.commissionNote %}
@@ -174,17 +173,14 @@ Es gibt zwei Kommissionsfelder, die in E-Mail-Templates genutzt werden können:
     {% endif %}
 {% endfor %}
 ```
-{% endraw %}
 
 **Globaler Bestellkommentar** (z.B. unterhalb der Bestellübersicht):
 
-{% raw %}
 ```twig
 {% if order.customFields.webla_splitcomission_order_comment is defined and order.customFields.webla_splitcomission_order_comment %}
     <p><strong>Kommissionskommentar:</strong> {{ order.customFields.webla_splitcomission_order_comment }}</p>
 {% endif %}
 ```
-{% endraw %}
 
 **Ort**: Einstellungen → E-Mail-Templates → gewünschtes Template bearbeiten
 
