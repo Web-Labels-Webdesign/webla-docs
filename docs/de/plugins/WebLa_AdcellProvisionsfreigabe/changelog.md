@@ -1,5 +1,20 @@
 # Changelog
 
+## 1.2.0 — 2026-04-02
+
+### :sparkles: Neue Funktionen
+
+- Mindest-Bestellalter: Provisionen werden erst freigegeben, wenn die Bestellung mindestens X Tage alt ist — gibt Zeit für Retouren und Stornierungen
+- Vollständiger Shopware-Store-Eintrag mit Beschreibungen, Installationsanleitung, Screenshots, FAQ und Dokumentations-Link
+
+### :recycle: Verbesserungen
+
+- Logging im ReconciliationService für Batch-Vorbereitung und Sende-Ergebnisse hinzugefügt
+- Plugin-Icon auf 112x112 px verkleinert (Store-Konformität)
+- Standardsprache in config.xml auf Englisch mit de-DE-Übersetzungen umgestellt (behebt deutsche Admin-Anzeige)
+- Ungenutzte Benachrichtigungs-E-Mail-Einstellung entfernt
+- Vollständige Plugin-Dokumentation (Übersicht, Einstellungen, Nutzung, Anleitungen) in DE und EN hinzugefügt
+
 ## 1.1.1 — 2026-04-02
 
 ### :bug: Fehlerbehebungen

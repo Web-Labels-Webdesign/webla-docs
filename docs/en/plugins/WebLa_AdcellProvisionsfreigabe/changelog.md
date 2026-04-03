@@ -1,5 +1,20 @@
 # Changelog
 
+## 1.2.0 — 2026-04-02
+
+### :sparkles: New Features
+
+- Minimum order age setting: commissions are only approved once the order is at least X days old, giving time for returns and cancellations
+- Full Shopware Store listing with descriptions, installation manual, screenshots, FAQ, and documentation link
+
+### :recycle: Improvements
+
+- Added logging to ReconciliationService for batch preparation and push results
+- Resized plugin icon to 112x112 px (Store compliance)
+- Switched config.xml default language to English with de-DE translations (fixes German admin display)
+- Removed unused notification email setting
+- Added full plugin documentation (index, settings, usage, how-to guides) in DE and EN
+
 ## 1.1.1 — 2026-04-02
 
 ### :bug: Bug Fixes

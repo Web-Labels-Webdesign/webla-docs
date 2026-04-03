@@ -142,7 +142,6 @@ Bei Brutto-Shops (B2C) wird die Mehrwertsteuer automatisch herausgerechnet. Dies
    - Navigieren zu: `Erweiterungen → Meine Erweiterungen → ADCELL Provisionsfreigabe → Konfigurieren`
    - **Automatische Freigabe aktivieren**: An
    - **Tage vor Auto-Accept-Deadline**: 3 (empfohlen)
-   - Optional: **Benachrichtigungs-E-Mail** eintragen
    - Speichern
 
 2. **Message Queue sicherstellen**
@@ -169,7 +168,7 @@ Bei Brutto-Shops (B2C) wird die Mehrwertsteuer automatisch herausgerechnet. Dies
 1. **Erst testen**: Nutzen Sie den Test-Modus, um Entscheidungen zu prüfen, bevor Sie live gehen
 2. **Regelmäßig abgleichen**: Führen Sie Abgleiche mindestens wöchentlich durch, um vor der Auto-Accept-Deadline zu handeln
 3. **Mappings aktuell halten**: Neue ADCELL-Programme sollten zeitnah einem Verkaufskanal zugeordnet werden
-4. **E-Mail-Benachrichtigungen nutzen**: Bei automatischer Freigabe die Benachrichtigungs-E-Mail aktivieren
+4. **Mindest-Bestellalter setzen**: Nutzen Sie das Mindest-Bestellalter (z.B. 14 Tage), um Provisionen erst nach Ablauf der Widerrufsfrist freizugeben
 
 ## Was Sie vermeiden sollten
 

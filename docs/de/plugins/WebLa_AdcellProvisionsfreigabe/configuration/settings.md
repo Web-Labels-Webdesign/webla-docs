@@ -48,6 +48,18 @@ Dieses Dokument beschreibt alle verfügbaren Einstellungen für ADCELL Provision
 
 **Anwendungsbeispiel**: Bei einem Wert von 3 werden Provisionen verarbeitet, deren Auto-Accept-Deadline in den nächsten 3 Tagen liegt. Ein höherer Wert (z.B. 7) gibt Ihnen mehr Vorlauf, aber einige Bestellungen haben dann möglicherweise noch keinen endgültigen Status.
 
+### Mindest-Bestellalter in Tagen
+
+| Eigenschaft      | Wert  |
+| ---------------- | ----- |
+| **Typ**          | Zahl  |
+| **Standard**     | 0     |
+| **Erforderlich** | Nein  |
+
+**Beschreibung**: Legt fest, wie viele Tage eine Bestellung mindestens alt sein muss, bevor die zugehörige Provision freigegeben wird. Provisionen für jüngere Bestellungen werden als „Überspringen" markiert (Grund: „Bestellung noch zu jung"). Stornierungen und Korrekturen werden unabhängig vom Bestellalter sofort durchgeführt. Bei 0 wird keine Wartezeit erzwungen.
+
+**Anwendungsbeispiel**: Setzen Sie den Wert auf 14, um Provisionen erst nach Ablauf der typischen Widerrufsfrist freizugeben. So haben Kunden Zeit für Retouren und Stornierungen, bevor die Provision endgültig bestätigt wird.
+
 ---
 
 ## Betrags-Toleranz
@@ -75,22 +87,6 @@ Dieses Dokument beschreibt alle verfügbaren Einstellungen für ADCELL Provision
 **Beschreibung**: Absoluter Mindestbetrag für die Toleranzberechnung in Euro. Die tatsächliche Toleranz ist immer der höhere Wert aus prozentualer und absoluter Toleranz. Damit wird verhindert, dass bei kleinen Bestellbeträgen bereits Cent-Differenzen zu Korrekturen führen.
 
 **Anwendungsbeispiel**: Bei einer Bestellung von 10,00 EUR wäre die 1%-Toleranz nur 0,10 EUR — zu wenig für Rundungsdifferenzen. Der absolute Mindestwert von 0,50 EUR stellt sicher, dass erst ab 0,50 EUR Abweichung korrigiert wird.
-
----
-
-## Benachrichtigungen
-
-### Benachrichtigungs-E-Mail
-
-| Eigenschaft      | Wert         |
-| ---------------- | ------------ |
-| **Typ**          | Text (E-Mail)|
-| **Standard**     | (leer)       |
-| **Erforderlich** | Nein         |
-
-**Beschreibung**: E-Mail-Adresse, an die Zusammenfassungen der automatischen Freigabe gesendet werden. Lassen Sie das Feld leer, wenn Sie keine E-Mail-Benachrichtigungen wünschen.
-
-**Anwendungsbeispiel**: Tragen Sie hier Ihre E-Mail-Adresse ein, um nach jedem automatischen Abgleich eine Zusammenfassung zu erhalten. Besonders nützlich, wenn die automatische Freigabe aktiviert ist und Sie über die Ergebnisse informiert bleiben möchten.
 
 ---
 
@@ -125,4 +121,4 @@ Dieses Dokument beschreibt alle verfügbaren Einstellungen für ADCELL Provision
 | Tage vor Deadline              | 3                       |
 | Toleranz Prozent               | 1.0                     |
 | Toleranz absolut               | 0.50                    |
-| Benachrichtigungs-E-Mail       | ihre-email@example.com  |
+| Mindest-Bestellalter           | 14                      |

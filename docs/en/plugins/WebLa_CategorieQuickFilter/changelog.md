@@ -4,6 +4,14 @@ All notable changes to the **Category Quick Filter** for end users.
 
 ---
 
+## [5.0.3] – 2026-04-02
+
+### 🐛 Bug Fixes
+
+- **Top categories not highlighted**: Replaced CSS-based highlighting on native `<option>` elements (unsupported in Chrome, Edge, Safari) with cross-browser `<optgroup>` grouping. Top categories now appear in a clearly labeled "Top" group at the top of the dropdown.
+
+---
+
 ## [5.0.2] – 2026-03-25
 
 ### 🐛 Bug Fixes
@@ -38,6 +46,7 @@ All notable changes to the **Category Quick Filter** for end users.
 
 | Version | Highlights                                         |
 | ------- | -------------------------------------------------- |
+| 5.0.3   | Fix top categories highlighting (cross-browser)    |
 | 5.0.2   | Fix Twig injection on older Shopware 6.6.x         |
 | 5.0.1   | Fix Twig injection crash on Shopware 6.6           |
 | 5.0.0   | Shopware 6.7 support, code modernization           |
@@ -48,6 +57,7 @@ All notable changes to the **Category Quick Filter** for end users.
 
 | Plugin Version | Shopware Version | PHP Version |
 | -------------- | ---------------- | ----------- |
+| 5.0.3          | 6.6.x – 6.7.x    | 8.2+        |
 | 5.0.2          | 6.6.x – 6.7.x    | 8.2+        |
 | 5.0.1          | 6.6.x – 6.7.x    | 8.2+        |
 | 5.0.0          | 6.6.x – 6.7.x    | 8.2+        |

@@ -48,6 +48,18 @@ This document describes all available settings for ADCELL Commission Approval.
 
 **Example Use Case**: With a value of 3, commissions whose auto-accept deadline falls within the next 3 days are processed. A higher value (e.g. 7) gives you more lead time, but some orders may not yet have a final status.
 
+### Minimum order age in days
+
+| Property     | Value  |
+| ------------ | ------ |
+| **Type**     | Number |
+| **Default**  | 0      |
+| **Required** | No     |
+
+**Description**: Specifies how many days old an order must be before its commission can be approved. Commissions for younger orders are marked as "Skip" (reason: "Order too recent"). Cancellations and adjustments are applied immediately regardless of order age. A value of 0 means no waiting period.
+
+**Example Use Case**: Set the value to 14 to only approve commissions after the typical return/cancellation period has passed. This gives customers time for returns and cancellations before the commission is confirmed.
+
 ---
 
 ## Amount Tolerance
@@ -75,22 +87,6 @@ This document describes all available settings for ADCELL Commission Approval.
 **Description**: Absolute minimum amount for the tolerance calculation in euros. The actual tolerance is always the higher value of the percentage and absolute tolerance. This prevents cent-level differences on small orders from triggering adjustments.
 
 **Example Use Case**: For an order of EUR 10.00, the 1% tolerance would only be EUR 0.10 — too small for rounding differences. The absolute minimum of EUR 0.50 ensures adjustments are only triggered from EUR 0.50 deviation upwards.
-
----
-
-## Notifications
-
-### Notification email
-
-| Property     | Value        |
-| ------------ | ------------ |
-| **Type**     | Text (Email) |
-| **Default**  | (empty)      |
-| **Required** | No           |
-
-**Description**: Email address for automatic approval summaries. Leave empty if you do not want email notifications.
-
-**Example Use Case**: Enter your email address to receive a summary after each automatic reconciliation. Particularly useful when automatic approval is enabled and you want to stay informed about the results.
 
 ---
 
@@ -125,4 +121,4 @@ This document describes all available settings for ADCELL Commission Approval.
 | Days before deadline           | 3                      |
 | Tolerance percent              | 1.0                    |
 | Tolerance absolute             | 0.50                   |
-| Notification email             | your-email@example.com |
+| Minimum order age              | 14                     |

@@ -142,7 +142,6 @@ For gross-priced shops (B2C), VAT is automatically deducted. This value is compa
    - Navigate to: `Extensions → My Extensions → ADCELL Commission Approval → Configure`
    - **Enable automatic approval**: On
    - **Days before auto-accept deadline**: 3 (recommended)
-   - Optional: Enter a **notification email**
    - Save
 
 2. **Ensure the message queue is running**
@@ -169,7 +168,7 @@ For gross-priced shops (B2C), VAT is automatically deducted. This value is compa
 1. **Test first**: Use test mode to verify decisions before going live
 2. **Reconcile regularly**: Run reconciliations at least weekly to act before the auto-accept deadline
 3. **Keep mappings current**: New ADCELL programs should be mapped to a sales channel promptly
-4. **Use email notifications**: Enable the notification email when using automatic approval
+4. **Set minimum order age**: Use the minimum order age (e.g. 14 days) to only approve commissions after the return period has passed
 
 ## What to Avoid
 

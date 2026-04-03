@@ -4,6 +4,14 @@ Alle wichtigen Änderungen an der **Kategorie Schnellauswahl** für Endbenutzer.
 
 ---
 
+## [5.0.3] – 2026-04-02
+
+### 🐛 Fehlerbehebungen
+
+- **Top-Kategorien nicht hervorgehoben**: CSS-basierte Hervorhebung auf nativen `<option>`-Elementen (nicht unterstützt in Chrome, Edge, Safari) durch browserübergreifende `<optgroup>`-Gruppierung ersetzt. Top-Kategorien erscheinen nun in einer klar beschrifteten „Top"-Gruppe am Anfang des Dropdowns.
+
+---
+
 ## [5.0.2] – 2026-03-25
 
 ### 🐛 Fehlerbehebungen
@@ -38,6 +46,7 @@ Alle wichtigen Änderungen an der **Kategorie Schnellauswahl** für Endbenutzer.
 
 | Version | Highlights                                       |
 | ------- | ------------------------------------------------ |
+| 5.0.3   | Top-Kategorien-Hervorhebung behoben (browserübergreifend) |
 | 5.0.2   | Twig-Injection auf älteren 6.6.x-Versionen behoben |
 | 5.0.1   | Twig-Injection-Absturz auf Shopware 6.6 behoben |
 | 5.0.0   | Shopware 6.7 Unterstützung, Code-Modernisierung  |
@@ -48,6 +57,7 @@ Alle wichtigen Änderungen an der **Kategorie Schnellauswahl** für Endbenutzer.
 
 | Plugin-Version | Shopware-Version | PHP-Version |
 | -------------- | ---------------- | ----------- |
+| 5.0.3          | 6.6.x – 6.7.x    | 8.2+        |
 | 5.0.2          | 6.6.x – 6.7.x    | 8.2+        |
 | 5.0.1          | 6.6.x – 6.7.x    | 8.2+        |
 | 5.0.0          | 6.6.x – 6.7.x    | 8.2+        |
