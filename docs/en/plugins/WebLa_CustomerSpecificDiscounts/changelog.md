@@ -4,6 +4,16 @@ All notable changes to Customer Specific Discounts for end users.
 
 ---
 
+## [1.5.8] - 2026-04-13
+
+### Bug Fixes
+
+- **Custom Fields on Update**: Product, customer, and customer-group discount custom fields added in 1.5.7 are now installed on plugin update, so existing shops receive them without requiring a reinstall.
+- **Migration Command Context**: The migration command now uses `Context::createCLIContext()` for correct CLI execution.
+- **Documentation**: Removed the support contact section from docs referenced by the store listing to comply with Shopware Store guidelines.
+
+---
+
 ## [1.5.7] - 2026-03-20
 
 ### Bug Fixes

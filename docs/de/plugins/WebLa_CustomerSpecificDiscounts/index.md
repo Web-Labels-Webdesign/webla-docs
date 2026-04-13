@@ -36,7 +36,3 @@ Mit dem flexiblen Prioritätssystem können Sie genau steuern, welcher Rabatt an
 - [Nutzungsanleitung](usage/usage.md) - So nutzen Sie alle Plugin-Funktionen
 - [Anleitungen](how_to.md) - Schritt-für-Schritt-Workflows
 - [Änderungsprotokoll](changelog.md) - Versionshistorie und Updates
-
-## Support
-
-Bei Fragen oder Problemen können Sie uns direkt per E-Mail an plugin@web-labels.de kontaktieren oder den Shopware Ticket-Support nutzen.

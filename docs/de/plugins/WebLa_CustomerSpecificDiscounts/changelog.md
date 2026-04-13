@@ -4,6 +4,16 @@ Alle wichtigen Änderungen an Kundenspezifische Rabatte für Endbenutzer.
 
 ---
 
+## [1.5.8] - 2026-04-13
+
+### Fehlerbehebungen
+
+- **Custom Fields beim Update**: Die in 1.5.7 hinzugefügten Custom Fields für Produkte, Kunden und Kundengruppen-Rabatte werden nun auch bei Plugin-Updates installiert, sodass bestehende Shops diese ohne Neuinstallation erhalten.
+- **Migrations-Befehl Context**: Der Migrations-Befehl verwendet nun `Context::createCLIContext()` für die korrekte CLI-Ausführung.
+- **Dokumentation**: Der Abschnitt mit Support-Kontaktdaten wurde aus den im Store-Listing referenzierten Dokumenten entfernt, um den Shopware-Store-Richtlinien zu entsprechen.
+
+---
+
 ## [1.5.7] - 2026-03-20
 
 ### Fehlerbehebungen

@@ -36,7 +36,3 @@ With the flexible priority system, you can precisely control which discount is a
 - [Usage Guide](usage/usage.md) - How to use all plugin features
 - [How-To Guide](how_to.md) - Step-by-step workflows
 - [Changelog](changelog.md) - Version history and updates
-
-## Support
-
-For questions or issues, you can contact us directly via email at plugin@web-labels.de or use the Shopware ticket support.
