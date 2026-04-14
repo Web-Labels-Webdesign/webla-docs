@@ -4,6 +4,15 @@ Alle wichtigen Änderungen am WebLa Subscription Plugin für Endbenutzer.
 
 ---
 
+## [1.2.0] - 2026-04-13
+
+### :sparkles: Neue Funktionen
+
+- **Mollie PayPal als Abonnement-Zahlungsart**: `webla_subscription_mollie_paypal` als wiederkehrungsfähige Mollie-Zahlungsart hinzugefügt. Abonnements können nun über eine PayPal-Einzugsermächtigung via Mollie-Mandat-API abgebucht werden. Standardmäßig inaktiv registriert — erfordert aktivierte PayPal Reference Transactions in der Mollie/PayPal-Verbindung des Händlers vor Aktivierung.
+- **Versandart aus Erstbestellung bei Verlängerung**: Verlängerungs-Warenkörbe übernehmen nun die Versandart aus der ursprünglichen Abo-Bestellung, sofern diese noch aktiv ist. Andernfalls wird auf die konfigurierte `renewalShippingMethodId` zurückgegriffen. Kunden behalten damit ihre ursprüngliche Versandoption bei Verlängerungen.
+
+---
+
 ## [1.1.5] - 2026-03-31
 
 ### :bug: Fehlerbehebungen

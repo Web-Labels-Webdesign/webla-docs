@@ -4,6 +4,15 @@ All notable changes to the WebLa Subscription Plugin for end users.
 
 ---
 
+## [1.2.0] - 2026-04-13
+
+### :sparkles: New Features
+
+- **Mollie PayPal Subscription Method**: Added `webla_subscription_mollie_paypal` as a recurring-capable Mollie payment method. Subscriptions can now charge against a PayPal Billing Agreement via Mollie's mandate API. Registered inactive by default — requires PayPal Reference Transactions to be enabled on the merchant's Mollie/PayPal connection before activation.
+- **Renewal Shipping Method from Initial Order**: Renewal carts now reuse the shipping method from the subscription's initial order when it is still active, falling back to the configured `renewalShippingMethodId` otherwise. Customers keep their original delivery option across renewals.
+
+---
+
 ## [1.1.5] - 2026-03-31
 
 ### :bug: Bug Fixes

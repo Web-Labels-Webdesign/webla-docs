@@ -4,6 +4,17 @@ Alle wichtigen Änderungen am Produkt Berater Plugin für Endbenutzer.
 
 ---
 
+## [7.1.1] - 2026-04-13
+
+### Fehlerbehebungen
+
+- :bug: **Speichern im Admin bei bestehenden Beratern defekt**: Behoben, dass das Speichern auf der Berater-Detailseite nach dem Update auf 7.1.0 nicht mehr funktionierte — der Speichern-Button reagierte nicht und das Design-Dropdown ließ sich nicht ändern. Das neue Feld `showAllVariants` war fälschlicherweise als Pflichtfeld markiert und blockierte dadurch DAL-Writes auf Beratern, die vor dem Update angelegt wurden.
+- :bug: **Design-Dropdown nicht auswählbar (Shopware 6.7)**: Das Design-Dropdown nutzt jetzt `sw-single-select` statt `sw-select-field`, damit Wertänderungen unter Vue 3 korrekt übernommen werden.
+- :bug: **Storefront-JS-Bundle liefert 404**: Der URL-Pfad zum eigenständigen JavaScript-Bundle des Produktberaters (`/bundles/webla_produktberater/storefront/js/web-la--produktberater.js`) war durch ein doppeltes Pfadsegment defekt, wodurch das Skript nicht geladen wurde. Pfad korrigiert.
+- :bug: **CMS-Slot verschwindet bei Schema-Mismatch**: Der CMS-Element-Resolver degradiert jetzt still, wenn das Berater-Entity nicht geladen werden kann (z. B. nach einem unvollständigen Update, bei dem die Datenbank-Migration noch nicht ausgeführt wurde), anstatt den gesamten Slot abzubrechen.
+
+---
+
 ## [7.1.0] - 2026-03-04
 
 ### Neue Funktionen

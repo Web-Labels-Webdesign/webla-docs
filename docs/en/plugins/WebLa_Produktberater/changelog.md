@@ -4,6 +4,17 @@ All notable changes to the Product Advisor Plugin for end users.
 
 ---
 
+## [7.1.1] - 2026-04-13
+
+### Bug Fixes
+
+- :bug: **Admin save broken on legacy advisors**: Fixed the advisor detail page in the admin where saving was impossible after upgrading to 7.1.0 — the Save button was unresponsive and the Design dropdown could not be changed. The new `showAllVariants` field was incorrectly flagged as required, which blocked DAL writes on advisors created before the upgrade.
+- :bug: **Design dropdown not selectable (Shopware 6.7)**: Replaced the Design dropdown's `sw-select-field` with `sw-single-select` so value changes persist correctly under Vue 3.
+- :bug: **Storefront JS bundle returning 404**: Fixed the standalone Product Advisor JavaScript bundle URL (`/bundles/webla_produktberater/storefront/js/web-la--produktberater.js`) — the Twig path contained a duplicate segment that prevented the script from loading.
+- :bug: **CMS slot disappears on schema mismatch**: The CMS element resolver now degrades silently when the advisor entity cannot be loaded (e.g. after a partial upgrade where the database migration has not yet run), instead of taking the entire slot down.
+
+---
+
 ## [7.1.0] - 2026-03-04
 
 ### New Features
