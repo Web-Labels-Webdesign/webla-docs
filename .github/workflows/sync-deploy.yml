@@ -49,6 +49,7 @@ jobs:
             ["WebLa_UltimativeBundlePlugin"]="WebLa_UltimativeBundlePlugin"
             ["WebLa_Subscriptions"]="WebLa_Subscriptions"
             ["WebLaAdcellProvisionsfreigabe"]="WebLa_AdcellProvisionsfreigabe"
+            ["WebLa_TaxCalculatorAndCountrySwitcher"]="WebLa_TaxCalculatorAndCountrySwitcher"
           )
 
           declare -A PLUGIN_FOLDERS=(
@@ -69,6 +70,7 @@ jobs:
             ["WebLa_UltimativeBundlePlugin"]="WebLa_UltimativeBundlePlugin"
             ["WebLa_Subscriptions"]="WebLa_Subscriptions"
             ["WebLaAdcellProvisionsfreigabe"]="WebLa_AdcellProvisionsfreigabe"
+            ["WebLa_TaxCalculatorAndCountrySwitcher"]="WebLa_TaxCalculatorAndCountrySwitcher"
           )
 
           # Supported languages

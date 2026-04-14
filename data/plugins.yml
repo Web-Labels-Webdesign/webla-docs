@@ -143,6 +143,15 @@ plugins:
       en: Automatic matching and approval of ADCELL affiliate commissions in Shopware 6.
     requirements: Shopware 6.6–6.8, PHP 8.1+
     version: "1.2.0"
+  - id: WebLa_TaxCalculatorAndCountrySwitcher
+    name:
+      de: Steuernachkalkulation und Lieferländer
+      en: Tax Calculator and Country Switcher
+    short:
+      de: Berechnet Produktsteuern und Versandkosten für Besucher aus anderen Ländern neu und ergänzt die Storefront um einen Länderumschalter im Header. Unterstützt Shopware 6.6 und 6.7.
+      en: Recalculates product taxes and shipping costs for visitors from other countries and adds a storefront country switcher. Unified codebase for SW 6.6 and 6.7.
+    requirements: Shopware 6.6–6.7, PHP 8.2+
+    version: "5.0.0"
   - id: BuildIT_ShareCart
     name:
       de: Teile deinen Warenkorb
