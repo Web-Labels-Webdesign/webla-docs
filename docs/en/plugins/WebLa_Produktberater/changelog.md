@@ -4,6 +4,20 @@ All notable changes to the Product Advisor Plugin for end users.
 
 ---
 
+## [7.2.0] - 2026-04-14
+
+### Breaking Changes
+
+- :boom: **Dropped Shopware 6.5 support**: Minimum required Shopware version is now 6.6.0. Shops still on 6.5 must stay on 7.1.x. Composer constraint updated to `>=6.6.0 <6.8.0`.
+
+### Improvements
+
+- :recycle: **Standard storefront plugin loading**: The Product Advisor JavaScript is now registered through Shopware's standard `PluginManager.register()` API instead of a manually injected `<script>` tag. Dropped the custom `base.html.twig` override and `StorefrontAssetExtension` Twig function. Storefront assets are emitted directly to `src/Resources/public/storefront/js/` by `shopware-cli extension build` — no manual copy step needed.
+- :recycle: **Simplified compatibility layer**: Removed all Shopware 6.5 branches from `ShopwareVersionFactory` and `FeatureFlags` (no more `isVersion65()` / `supportsAsyncStorefrontPlugins()`). Admin version detector no longer exposes a 6.5 path.
+- :recycle: **Simplified release workflow**: GitHub Actions no longer needs to manually copy the ESBuild output into `public/` before zipping.
+
+---
+
 ## [7.1.1] - 2026-04-13
 
 ### Bug Fixes

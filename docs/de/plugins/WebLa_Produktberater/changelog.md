@@ -4,6 +4,20 @@ Alle wichtigen Änderungen am Produkt Berater Plugin für Endbenutzer.
 
 ---
 
+## [7.2.0] - 2026-04-14
+
+### Breaking Changes
+
+- :boom: **Shopware 6.5 Unterstützung entfernt**: Die minimal erforderliche Shopware-Version ist jetzt 6.6.0. Shops, die noch auf 6.5 laufen, müssen auf 7.1.x bleiben. Composer-Constraint aktualisiert auf `>=6.6.0 <6.8.0`.
+
+### Verbesserungen
+
+- :recycle: **Standard-Storefront-Plugin-Laden**: Das Produktberater-JavaScript wird jetzt über Shopwares Standard-`PluginManager.register()`-API registriert, statt über einen manuell injizierten `<script>`-Tag. Das eigene `base.html.twig`-Override und die `StorefrontAssetExtension`-Twig-Funktion wurden entfernt. Storefront-Assets werden direkt nach `src/Resources/public/storefront/js/` von `shopware-cli extension build` geschrieben — kein manueller Kopier-Schritt mehr nötig.
+- :recycle: **Vereinfachter Kompatibilitäts-Layer**: Alle Shopware-6.5-Zweige aus `ShopwareVersionFactory` und `FeatureFlags` entfernt (keine `isVersion65()` / `supportsAsyncStorefrontPlugins()` mehr). Der Admin-Version-Detector bietet keinen 6.5-Pfad mehr.
+- :recycle: **Vereinfachter Release-Workflow**: GitHub Actions muss den ESBuild-Output nicht mehr manuell nach `public/` kopieren, bevor gezippt wird.
+
+---
+
 ## [7.1.1] - 2026-04-13
 
 ### Fehlerbehebungen

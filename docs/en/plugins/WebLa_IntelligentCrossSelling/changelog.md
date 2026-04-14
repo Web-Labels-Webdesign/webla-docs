@@ -4,6 +4,20 @@ All notable changes to Intelligent Cross-Selling for end users.
 
 ---
 
+## [5.2.8] - 2026-04-14
+
+### Bug Fixes
+
+- **Massively faster product detail pages on large catalogs**: Cross-selling queries now route through Elasticsearch (when enabled) and the MySQL JSON indices instead of falling back to `LIKE '%uuid%'` full table scans. Replaced `ContainsFilter` on `propertyIds` and `categoryIds` with the ES-compatible `EqualsFilter`, eliminating multi-second cold loads on catalogs with millions of products
+- **Removed duplicate native cross-selling load**: The native Shopware cross-selling route is no longer invoked on every request to merge its results on top of ours. It is now only used as a fallback when our loader yields zero matches, or when explicitly enabled via the new `mergeNativeCrossSelling` config option
+
+### Improvements
+
+- **Slimmer product preload**: The preloaded product entity and `ConfigurationResolverService::loadProduct` no longer request the `properties.group`, `options.group`, or `categories` associations. Scoring relies on denormalized scalar fields (`propertyIds`, `optionIds`, `categoryIds`, `streamIds`), which loads significantly faster on products with many categories or variants
+- **Smaller candidate pool**: Reduced the candidate fetch ceiling from `max(length*10, 200)` to `max(length*5, 50)`, cutting MySQL fallback cost by roughly 4× on shops where Elasticsearch is unavailable
+
+---
+
 ## [5.2.7] - 2026-03-27
 
 ### Bug Fixes
