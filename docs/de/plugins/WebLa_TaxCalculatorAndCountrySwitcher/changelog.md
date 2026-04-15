@@ -4,6 +4,33 @@ Alle wichtigen Änderungen am Plugin *Steuernachkalkulation und Lieferländer* f
 
 ---
 
+## [5.1.0] - 2026-04-15
+
+### ✨ Neue Funktionen
+
+- **Länderauswahl-Popup beim ersten Besuch (PAngV-Konformität)**: Erstbesucher sehen jetzt ein blockierendes Popup, das sie nach ihrem Lieferland fragt, bevor Preise angezeigt werden. Dadurch entspricht der angezeigte Brutto-Preis dem Preis, den der Kunde beim Checkout zahlt — eine gesetzliche Vorgabe der deutschen Preisangabenverordnung.
+- **Optionale GeoIP-Vorauswahl**: Wenn Sie eine MaxMind-GeoLite2-Country-Datenbank bereitstellen, wählt das Popup das Land des Besuchers automatisch vor. Fällt stillschweigend auf das Standardland des Sales Channels zurück, wenn GeoIP deaktiviert ist, die Datenbank fehlt oder das erkannte Land nicht lieferbar ist.
+- **Abgleich bei abweichender Lieferadresse**: Wenn das Lieferland der Kundenadresse vom im Popup gewählten Land abweicht, werden Preise und Länder-Cookie im `/checkout/confirm` automatisch angepasst und eine sichtbare Info-Meldung angezeigt.
+- **Statischer Fallback-Hinweis**: Wenn das Popup deaktiviert ist, erinnert ein kleiner Hinweis neben dem Länderschalter daran, dass die Preise das aktuell ausgewählte Land widerspiegeln.
+- **Automatische Composer-Installation für Abhängigkeiten**: Das Plugin aktiviert `executeComposerCommands()`, sodass Shopware die neue GeoIP-Library automatisch während Plugin-Installation oder -Update installiert — kein manuelles `composer require` nötig.
+
+### 🔧 Verbesserungen
+
+- **Popup vom Länderschalter-Toggle entkoppelt**: Das Popup kann jetzt unabhängig vom Header-Länderschalter verwendet werden. Sie können eines aktivieren, ohne das andere zu brauchen.
+- **Schutz vor veraltetem Cookie**: Zeigt das gespeicherte Länder-Cookie auf ein Land, das nicht mehr lieferbar ist (weil sich die Sales-Channel-Konfiguration geändert hat), wird das Cookie automatisch gelöscht und das Popup erscheint erneut.
+- **Shopware 6.6 und 6.7 Parität**: Die Popup-Daten werden über `StorefrontRenderEvent` bereitgestellt, was auf beiden Majors konsistent funktioniert — 6.7 lädt den Header über einen ESI-Subrequest, wo der bisherige Pagelet-Pfad nicht verfügbar war.
+
+### ⚙️ Konfiguration
+
+Neue Einstellungen in der Plugin-Konfiguration unter **Länderauswahl-Popup**:
+
+- **Länderauswahl-Popup beim ersten Besuch anzeigen** — Umschalter
+- **Gültigkeit des Länder-Cookies (Tage)** — Standard 30
+- **GeoIP-Vorauswahl aktivieren** — Umschalter
+- **Absoluter Pfad zur GeoLite2-Country.mmdb** — Pfad vom Händler bereitgestellt
+
+---
+
 ## [5.0.0] - Unveröffentlicht
 
 ### ✨ Neue Funktionen

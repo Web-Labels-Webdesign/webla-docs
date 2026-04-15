@@ -4,7 +4,7 @@ Dieses Dokument beschreibt alle verfügbaren Einstellungen für das Plugin *Steu
 
 **Navigation**: Erweiterungen → Meine Erweiterungen → Steuernachkalkulation und Lieferländer → Konfigurieren
 
-Die Einstellungen sind in vier Karten gruppiert: **Basis-Konfiguration**, **Styling-Konfiguration**, **Berechnungseinstellungen** und **Versandkosten-Konfiguration**.
+Die Einstellungen sind in fünf Karten gruppiert: **Basis-Konfiguration**, **Styling-Konfiguration**, **Berechnungseinstellungen**, **Versandkosten-Konfiguration** und **Länderauswahl-Popup**.
 
 ---
 
@@ -230,6 +230,68 @@ Passt das Aussehen des Länderumschalters an Ihr Theme an. Alle Werte werden als
 **Beschreibung**: Wenn aktiviert, werden auch die Versandkosten nach dem gleichen Netto-Prinzip neu berechnet wie Produktpreise. Der Netto-Versandkostenbetrag bleibt pro Land konstant, der Bruttobetrag passt sich an den landesspezifischen Steuersatz an.
 
 **Anwendungsbeispiel**: Empfohlen für OSS-konforme Shops, die rechtlich verpflichtet sind, korrekte Bruttoversandkosten je Zielland auszuweisen.
+
+---
+
+## Länderauswahl-Popup
+
+Steuert das Popup zur Länderauswahl beim Erstbesuch, das sicherstellt, dass der angezeigte Bruttopreis dem Preis entspricht, den der Kunde bezahlt — eine gesetzliche Vorgabe der deutschen *Preisangabenverordnung* (PAngV).
+
+### Länderauswahl-Popup beim ersten Besuch anzeigen
+
+| Eigenschaft      | Wert       |
+| ---------------- | ---------- |
+| **Typ**          | Schalter   |
+| **Standard**     | Aktiviert  |
+| **Erforderlich** | Nein       |
+
+**Beschreibung**: Wenn aktiviert, sehen Besucher ohne `sw-switch-country`-Cookie beim Seitenaufruf ein blockierendes Modal und müssen zuerst ein Lieferland bestätigen, bevor Preise sichtbar angezeigt werden. Nach der Auswahl wird das Cookie gesetzt und die Seite mit der korrekten MwSt. neu geladen.
+
+**Anwendungsbeispiel**: Pflicht für jeden Shop, der mehrere Länder mit unterschiedlichen MwSt.-Sätzen bedient. Ohne diese Einstellung kann der zuerst gerenderte Preis mit der falschen MwSt. angezeigt werden und im Checkout nach oben korrigiert werden — ein PAngV-Verstoß.
+
+---
+
+### Gültigkeit des Länder-Cookies (Tage)
+
+| Eigenschaft      | Wert    |
+| ---------------- | ------- |
+| **Typ**          | Zahl    |
+| **Standard**     | 30      |
+| **Erforderlich** | Nein    |
+
+**Beschreibung**: Wie lange das `sw-switch-country`-Cookie gespeichert bleibt, bevor das Popup erneut erscheint.
+
+**Anwendungsbeispiel**: Auf 365 erhöhen für starke Wiederkehr-UX, auf 7 senken für Shops mit kurzen Sitzungserwartungen.
+
+---
+
+### GeoIP-Vorauswahl aktivieren
+
+| Eigenschaft      | Wert        |
+| ---------------- | ----------- |
+| **Typ**          | Schalter    |
+| **Standard**     | Deaktiviert |
+| **Erforderlich** | Nein        |
+
+**Beschreibung**: Wenn aktiviert, schlägt das Plugin die IP des Besuchers in einer vom Händler bereitgestellten MaxMind-GeoLite2-Country-Datenbank nach und wählt das erkannte Land im Popup vor. Fällt stillschweigend auf das Standardland des Sales Channels zurück, wenn GeoIP deaktiviert ist, die Datenbank fehlt/nicht lesbar ist oder das erkannte Land im aktuellen Sales Channel nicht lieferbar ist.
+
+**Anwendungsbeispiel**: Internationale Shops, bei denen die meisten Besucher direkt auf einer Seite mit korrekt vorausgewähltem Land landen — das Popup wird auf einen einzigen Bestätigungsklick reduziert.
+
+**Hinweis**: Der Händler ist verantwortlich für die Aktualisierung der `.mmdb`-Datei gemäß den MaxMind-Lizenzbedingungen (Updates zweimal wöchentlich, 30-Tage-Aktualitätsregel). Das Plugin lädt die Datenbank nicht selbst herunter oder aktualisiert sie.
+
+---
+
+### Absoluter Pfad zur GeoLite2-Country.mmdb
+
+| Eigenschaft      | Wert    |
+| ---------------- | ------- |
+| **Typ**          | Text    |
+| **Standard**     | (leer)  |
+| **Erforderlich** | Nur wenn GeoIP-Vorauswahl aktiviert ist |
+
+**Beschreibung**: Absoluter Dateipfad zur MaxMind-`GeoLite2-Country.mmdb` auf dem Server, auf dem Shopware läuft. Die Datei muss vom PHP-FPM-Benutzer lesbar sein.
+
+**Anwendungsbeispiel**: `/var/www/html/files/geoip/GeoLite2-Country.mmdb`
 
 ---
 

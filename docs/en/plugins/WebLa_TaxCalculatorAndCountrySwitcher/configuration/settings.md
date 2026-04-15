@@ -4,7 +4,7 @@ This document describes all available settings for the *Tax calculator and shipp
 
 **Navigation**: Extensions → My Extensions → Tax calculator and shipping country switch → Configure
 
-Settings are grouped into four cards: **Display configuration**, **Styling configuration**, **Calculation Settings**, and **Shipping cost configuration**.
+Settings are grouped into five cards: **Display configuration**, **Styling configuration**, **Calculation Settings**, **Shipping cost configuration**, and **Country popup**.
 
 ---
 
@@ -230,6 +230,68 @@ Adapts the country switcher's appearance to your theme. All values are rendered 
 **Description**: When enabled, shipping costs are recalculated following the same net-based principle as product prices. The net shipping amount stays constant per country, while the gross amount adjusts to the country's tax rate.
 
 **Example Use Case**: Recommended for OSS-compliant shops that are legally required to display correct gross shipping costs per destination country.
+
+---
+
+## Country Popup
+
+Controls the first-visit country selection popup that ensures the displayed gross price matches the price the customer pays — required by the German *Preisangabenverordnung* (PAngV).
+
+### Show country selection popup on first visit
+
+| Property     | Value     |
+| ------------ | --------- |
+| **Type**     | Switch    |
+| **Default**  | Enabled   |
+| **Required** | No        |
+
+**Description**: When enabled, visitors without a `sw-switch-country` cookie see a blocking modal on page load and must confirm a delivery country before any prices are displayed visually. On selection, the cookie is written and the page reloads with the correct VAT applied.
+
+**Example Use Case**: Mandatory for any shop serving multiple countries with different VAT rates. Without it, the first-rendered price can silently use the wrong VAT and update upward at checkout — a PAngV violation.
+
+---
+
+### Country cookie lifetime (days)
+
+| Property     | Value     |
+| ------------ | --------- |
+| **Type**     | Number    |
+| **Default**  | 30        |
+| **Required** | No        |
+
+**Description**: How long the `sw-switch-country` cookie persists before the popup reappears for the visitor.
+
+**Example Use Case**: Raise to 365 for strong returning-customer UX, lower to 7 for shops with short session expectations.
+
+---
+
+### Enable GeoIP pre-selection
+
+| Property     | Value      |
+| ------------ | ---------- |
+| **Type**     | Switch     |
+| **Default**  | Disabled   |
+| **Required** | No         |
+
+**Description**: When enabled, the plugin looks up the visitor's IP in a merchant-supplied MaxMind GeoLite2-Country database and pre-selects the detected country in the popup. Falls back silently to the sales channel's default country if GeoIP is disabled, the database is missing/unreadable, or the detected country is not shippable in the current sales channel.
+
+**Example Use Case**: International shops where most visitors land on a page with the correct country already selected, reducing the friction of the popup to a single confirmation click.
+
+**Note**: The merchant is responsible for keeping the `.mmdb` file updated per MaxMind's license terms (updates twice weekly, 30-day staleness rule). The plugin does not download or update the database.
+
+---
+
+### Absolute path to GeoLite2-Country.mmdb
+
+| Property     | Value     |
+| ------------ | --------- |
+| **Type**     | Text      |
+| **Default**  | (empty)   |
+| **Required** | Only if GeoIP pre-selection is enabled |
+
+**Description**: Absolute filesystem path to the MaxMind `GeoLite2-Country.mmdb` file on the server running Shopware. The file must be readable by the PHP-FPM user.
+
+**Example Use Case**: `/var/www/html/files/geoip/GeoLite2-Country.mmdb`
 
 ---
 

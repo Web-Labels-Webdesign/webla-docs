@@ -11,6 +11,7 @@ This guide covers all features of the *Tax calculator and shipping country switc
 - [Shipping Cost Adjustment](#shipping-cost-adjustment)
 - [Excluding Countries from the Switcher](#excluding-countries-from-the-switcher)
 - [Checkout Handover](#checkout-handover)
+- [Country Popup (PAngV Compliance)](#country-popup-pangv-compliance)
 - [Customizing the Storefront Integration](#customizing-the-storefront-integration)
 - [Troubleshooting](#troubleshooting)
 
@@ -115,6 +116,52 @@ This feature is always active and requires no separate configuration.
 ### Tips & Best Practices
 
 - Verify that all countries available in the dropdown are also marked as *active* and *shippable* in the sales channel
+
+---
+
+## Country Popup (PAngV Compliance)
+
+### What It Does
+
+First-time visitors see a blocking modal asking for their delivery country **before any prices are shown**. The selection is stored in a cookie (`sw-switch-country`) so returning visitors skip the popup. This ensures the displayed gross price always matches the price the customer pays at checkout — a legal requirement under the German *Preisangabenverordnung* (PAngV).
+
+Additional behavior:
+
+- **Optional GeoIP pre-selection** — if configured, the visitor's country is detected via a MaxMind GeoLite2-Country database and pre-selected in the popup, reducing the interaction to a single confirmation click.
+- **Checkout address reconciliation** — if a customer enters a shipping address whose country differs from the country they picked in the popup, prices and cookie are reconciled automatically at `/checkout/confirm` with an info notice.
+- **Stale cookie handling** — if the persisted country is no longer shippable (because the sales channel was reconfigured), the cookie is cleared and the popup re-appears.
+
+### How to Enable
+
+1. Open the plugin configuration at `Extensions → My Extensions → Tax calculator and shipping country switch → Configure`
+2. Switch to the **Country popup** card
+3. Enable **Show country selection popup on first visit**
+4. (Optional) Adjust **Country cookie lifetime (days)** — default 30
+5. Save and clear the HTTP cache
+
+### How to Enable GeoIP Pre-selection
+
+1. Obtain a MaxMind GeoLite2-Country database (`.mmdb`) — requires a free MaxMind account. See https://dev.maxmind.com/geoip/geolite2-free-geolocation-data
+2. Upload the file to your server, e.g. `/var/www/html/files/geoip/GeoLite2-Country.mmdb`
+3. Make sure the file is readable by the PHP-FPM user (`chmod 644` is usually enough)
+4. In the plugin configuration, under the **Country popup** card, enable **Enable GeoIP pre-selection**
+5. Enter the absolute path in **Absolute path to GeoLite2-Country.mmdb**
+6. Save and clear the HTTP cache
+
+### Keeping the GeoIP Database Fresh
+
+MaxMind updates GeoLite2 twice weekly and the license requires using data no older than 30 days. Recommended: schedule a weekly cron job on your server using MaxMind's `geoipupdate` tool to download a fresh copy to the configured path.
+
+### Disabling the Popup
+
+If you disable the popup, a small static hint appears near the country widget reminding visitors that prices reflect the currently selected delivery country. This is the fallback for shops that cannot legally use a blocking modal or prefer a lighter UX — note that this fallback does **not** fully satisfy PAngV for multi-country shops, since the first-rendered price may still show the wrong VAT.
+
+### Tips & Best Practices
+
+- Leave the popup enabled in every shop serving multiple countries with different VAT rates
+- Use GeoIP only if you can guarantee the database stays updated — a stale DB is still better than none, but a missing/unreadable file silently falls back to the sales channel default
+- Test the popup in incognito mode to simulate a first-time visitor
+- If you use a reverse proxy or Varnish, verify that the `sw-switch-country` cookie is included in the cache key — the plugin already registers it via `HttpCacheKeyEvent`, but proxy layers may need explicit configuration
 
 ---
 

@@ -4,6 +4,33 @@ All notable changes to the *Tax calculator and shipping country switch* plugin f
 
 ---
 
+## [5.1.0] - 2026-04-15
+
+### ✨ New Features
+
+- **Country selection popup on first visit (PAngV compliance)**: First-time visitors now see a blocking popup asking for their delivery country before any prices are rendered. This ensures the displayed gross price matches the price the customer pays at checkout — a legal requirement under the German *Preisangabenverordnung*.
+- **Optional GeoIP pre-selection**: If you supply a MaxMind GeoLite2-Country database, the popup pre-selects the visitor's country automatically. Falls back silently to the sales channel default when GeoIP is disabled, the database is missing, or the detected country is not shippable.
+- **Checkout address mismatch reconciliation**: If a customer's shipping address country differs from the country they selected in the popup, prices and the country cookie are automatically reconciled at `/checkout/confirm` with a visible info notice.
+- **Static fallback hint**: When the popup is disabled, a small notice near the country widget reminds visitors that prices reflect the currently selected country.
+- **Automatic composer install for dependencies**: The plugin's `executeComposerCommands()` is now enabled, so Shopware installs the new GeoIP library automatically during plugin install or update — no manual `composer require` needed.
+
+### 🔧 Improvements
+
+- **Decoupled popup from country widget toggle**: The popup can now be used independently of the header country switcher. You can enable one without the other.
+- **Stale cookie guard**: If the persisted country cookie points to a country that is no longer shippable (because the sales channel configuration changed), the cookie is cleared automatically and the popup re-appears.
+- **Shopware 6.6 and 6.7 parity**: The popup data is attached via `StorefrontRenderEvent`, which works consistently on both majors — 6.7 loads the header via an ESI sub-request where the previous pagelet path was not available.
+
+### ⚙️ Configuration
+
+New settings in the plugin configuration under **Country popup**:
+
+- **Show country selection popup on first visit** — toggle
+- **Country cookie lifetime (days)** — default 30
+- **Enable GeoIP pre-selection** — toggle
+- **Absolute path to GeoLite2-Country.mmdb** — merchant-supplied path
+
+---
+
 ## [5.0.0] - Unreleased
 
 ### ✨ New Features

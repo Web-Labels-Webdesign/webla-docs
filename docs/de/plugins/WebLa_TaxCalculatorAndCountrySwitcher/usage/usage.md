@@ -11,6 +11,7 @@ Diese Anleitung behandelt alle Funktionen des Plugins *Steuernachkalkulation und
 - [Versandkostenanpassung](#versandkostenanpassung)
 - [Länder vom Umschalter ausschließen](#länder-vom-umschalter-ausschließen)
 - [Übergabe ins Checkout](#übergabe-ins-checkout)
+- [Länderauswahl-Popup (PAngV-Konformität)](#länderauswahl-popup-pangv-konformität)
 - [Storefront-Integration anpassen](#storefront-integration-anpassen)
 - [Fehlerbehebung](#fehlerbehebung)
 
@@ -115,6 +116,52 @@ Diese Funktion ist immer aktiv und benötigt keine gesonderte Konfiguration.
 ### Tipps & Best Practices
 
 - Prüfen Sie, dass alle im Dropdown verfügbaren Länder im Verkaufskanal auch als *aktiv* und *versandfähig* markiert sind
+
+---
+
+## Länderauswahl-Popup (PAngV-Konformität)
+
+### Was es bewirkt
+
+Erstbesucher sehen ein blockierendes Modal, das sie nach ihrem Lieferland fragt — **bevor Preise angezeigt werden**. Die Auswahl wird in einem Cookie (`sw-switch-country`) gespeichert, sodass wiederkehrende Besucher das Popup überspringen. Dadurch entspricht der angezeigte Bruttopreis immer dem Preis, den der Kunde im Checkout zahlt — eine gesetzliche Vorgabe der deutschen Preisangabenverordnung (PAngV).
+
+Zusätzliches Verhalten:
+
+- **Optionale GeoIP-Vorauswahl** — falls konfiguriert, wird das Land des Besuchers über eine MaxMind-GeoLite2-Country-Datenbank erkannt und im Popup vorausgewählt. Reduziert die Interaktion auf einen einzigen Bestätigungsklick.
+- **Checkout-Adressen-Abgleich** — wenn ein Kunde eine Lieferadresse mit einem anderen Land eingibt als im Popup gewählt, werden Preise und Cookie automatisch in `/checkout/confirm` angepasst und eine Info-Meldung angezeigt.
+- **Veraltetes Cookie** — wenn das gespeicherte Land nicht mehr lieferbar ist (weil der Sales Channel neu konfiguriert wurde), wird das Cookie gelöscht und das Popup erscheint erneut.
+
+### Aktivierung
+
+1. Öffnen Sie die Plugin-Konfiguration unter `Erweiterungen → Meine Erweiterungen → Steuernachkalkulation und Lieferländer → Konfigurieren`
+2. Wechseln Sie zur Karte **Länderauswahl-Popup**
+3. Aktivieren Sie **Länderauswahl-Popup beim ersten Besuch anzeigen**
+4. (Optional) Passen Sie **Gültigkeit des Länder-Cookies (Tage)** an — Standard 30
+5. Speichern und HTTP-Cache leeren
+
+### GeoIP-Vorauswahl einrichten
+
+1. Besorgen Sie sich eine MaxMind-GeoLite2-Country-Datenbank (`.mmdb`) — ein kostenloses MaxMind-Konto ist erforderlich. Siehe https://dev.maxmind.com/geoip/geolite2-free-geolocation-data
+2. Laden Sie die Datei auf Ihren Server, z. B. nach `/var/www/html/files/geoip/GeoLite2-Country.mmdb`
+3. Stellen Sie sicher, dass die Datei vom PHP-FPM-Benutzer lesbar ist (`chmod 644` reicht meist)
+4. Aktivieren Sie in der Plugin-Konfiguration unter der Karte **Länderauswahl-Popup** die Option **GeoIP-Vorauswahl aktivieren**
+5. Tragen Sie den absoluten Pfad unter **Absoluter Pfad zur GeoLite2-Country.mmdb** ein
+6. Speichern und HTTP-Cache leeren
+
+### GeoIP-Datenbank aktuell halten
+
+MaxMind aktualisiert GeoLite2 zweimal wöchentlich, und die Lizenz verlangt die Nutzung von Daten, die nicht älter als 30 Tage sind. Empfohlen: Richten Sie auf Ihrem Server einen wöchentlichen Cron-Job mit MaxMinds `geoipupdate`-Tool ein, um eine frische Kopie an den konfigurierten Pfad herunterzuladen.
+
+### Popup deaktivieren
+
+Wenn Sie das Popup deaktivieren, erscheint neben dem Länderschalter ein kleiner statischer Hinweis, dass die Preise das aktuell ausgewählte Lieferland widerspiegeln. Dies ist der Fallback für Shops, die rechtlich kein blockierendes Modal nutzen können oder eine leichtere UX bevorzugen — beachten Sie jedoch, dass dieser Fallback PAngV für Mehrländer-Shops **nicht** vollständig erfüllt, da der zuerst gerenderte Preis noch die falsche MwSt. zeigen kann.
+
+### Tipps & Best Practices
+
+- Lassen Sie das Popup in jedem Shop mit mehreren Ländern und unterschiedlichen MwSt.-Sätzen aktiviert
+- Nutzen Sie GeoIP nur, wenn Sie die Aktualisierung der Datenbank sicherstellen können — eine veraltete DB ist zwar besser als keine, aber eine fehlende/nicht lesbare Datei fällt stillschweigend auf das Sales-Channel-Standardland zurück
+- Testen Sie das Popup im Inkognito-Modus, um einen Erstbesucher zu simulieren
+- Wenn Sie einen Reverse-Proxy oder Varnish verwenden, stellen Sie sicher, dass das `sw-switch-country`-Cookie im Cache-Key enthalten ist — das Plugin registriert es bereits über `HttpCacheKeyEvent`, aber Proxy-Ebenen benötigen möglicherweise zusätzliche Konfiguration
 
 ---
 
