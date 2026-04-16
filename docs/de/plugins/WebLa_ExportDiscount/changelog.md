@@ -4,6 +4,22 @@ Alle wichtigen Änderungen an Shopping Feed mit einzigartigen Rabatten für Endb
 
 ---
 
+## [v5.0.5] - 2026-04-15
+
+### Fehlerbehebungen
+
+- :bug: **Konstruktor-Argument-Fehler (Hotfix für v5.0.4)**: Behoben: Ein fataler Fehler „Too few arguments to function ExportDiscountPriceCalculator::__construct(), 9 passed... 10 expected" legte das Plugin nach der Installation von v5.0.4 komplett lahm. Der Fix in v5.0.4 fügte ein `ProductDefinition`-Konstruktor-Argument über die `services.xml` hinzu, jedoch überschreibt der `CompatibilityCompilerPass` die Service-Argumente beim Container-Build und dessen hart kodierte Argumentliste setzte die `services.xml` stillschweigend außer Kraft — weiterhin wurden nur 9 Argumente übergeben. Der Compiler-Pass übergibt nun in beiden Zweigen (SW 6.5 und SW 6.6+) alle 10 Argumente.
+
+---
+
+## [v5.0.4] - 2026-04-15
+
+### Fehlerbehebungen
+
+- :bug: **Nicht initialisierte EntityDefinition-Registry**: Behoben: Ein fataler Fehler „Typed property `EntityDefinition::$registry` must not be accessed before initialization" trat auf, wenn ein Produkt über einen Rabatt-Link geöffnet wurde — meist im Inkognito-Modus. Der Preisrechner instanziierte `ProductDefinition` manuell per `new`, wodurch eine nicht registrierte Definition entstand, deren `$registry` nie injiziert wurde. `QueryStringParser::fromArray` stürzte daraufhin ab, sobald beim Parsen der Filter auf Felder oder Assoziationen zugegriffen wurde. Die `ProductDefinition` wird jetzt aus dem DI-Container injiziert, sodass die Registry korrekt verdrahtet ist.
+
+---
+
 ## [v5.0.3] - 2026-02-20
 
 ### Fehlerbehebungen

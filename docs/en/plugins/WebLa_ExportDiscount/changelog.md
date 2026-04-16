@@ -4,6 +4,22 @@ All notable changes to Shopping Feed with Unique Discounts for end users.
 
 ---
 
+## [v5.0.5] - 2026-04-15
+
+### Bug Fixes
+
+- :bug: **Constructor Argument Mismatch (Hotfix for v5.0.4)**: Fixed a fatal error "Too few arguments to function ExportDiscountPriceCalculator::__construct(), 9 passed... 10 expected" that broke the plugin completely after installing v5.0.4. The v5.0.4 fix added a `ProductDefinition` constructor argument via `services.xml`, but the `CompatibilityCompilerPass` rebuilds the service arguments at container compile time and its hardcoded argument list silently overrode `services.xml`, still passing only 9 arguments. The compiler pass now passes all 10 arguments for both the SW 6.5 and SW 6.6+ branches.
+
+---
+
+## [v5.0.4] - 2026-04-15
+
+### Bug Fixes
+
+- :bug: **Uninitialized EntityDefinition Registry**: Fixed a fatal error "Typed property `EntityDefinition::$registry` must not be accessed before initialization" that occurred when opening a product via a discount link, mostly in incognito mode. The price calculator instantiated `ProductDefinition` manually via `new`, producing an unregistered definition whose `$registry` was never injected. `QueryStringParser::fromArray` then crashed when filter parsing walked fields or associations. The `ProductDefinition` is now injected from the DI container, so the registry is properly wired.
+
+---
+
 ## [v5.0.3] - 2026-02-20
 
 ### Bug Fixes
