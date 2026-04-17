@@ -50,6 +50,7 @@ jobs:
             ["WebLa_Subscriptions"]="WebLa_Subscriptions"
             ["WebLaAdcellProvisionsfreigabe"]="WebLa_AdcellProvisionsfreigabe"
             ["WebLa_TaxCalculatorAndCountrySwitcher"]="WebLa_TaxCalculatorAndCountrySwitcher"
+            ["WebLa_ImageReviews"]="WebLa_ImageReviews"
           )
 
           declare -A PLUGIN_FOLDERS=(
@@ -71,6 +72,7 @@ jobs:
             ["WebLa_Subscriptions"]="WebLa_Subscriptions"
             ["WebLaAdcellProvisionsfreigabe"]="WebLa_AdcellProvisionsfreigabe"
             ["WebLa_TaxCalculatorAndCountrySwitcher"]="WebLa_TaxCalculatorAndCountrySwitcher"
+            ["WebLa_ImageReviews"]="WebLa_ImageReviews"
           )
 
           # Supported languages
