@@ -88,7 +88,7 @@ plugins:
       de: Erweitert das Kontaktformular in Shopware 6 um eine komfortable Datei-Upload-Funktion mit Drag & Drop Unterstützung.
       en: Extends the Shopware 6 contact form with a convenient file upload feature including drag & drop support.
     requirements: Shopware 6.6–6.8, PHP 8.1+
-    version: "5.0.5"
+    version: "5.0.6"
   - id: WebLa_CategorieQuickFilter
     name:
       de: Kategorie Schnellauswahl

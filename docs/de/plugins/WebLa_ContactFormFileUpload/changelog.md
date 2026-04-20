@@ -4,6 +4,14 @@ Alle wichtigen Änderungen am Plugin „Kontaktformular – Datei-Upload" aus Nu
 
 ---
 
+## [5.0.6] – 2026-04-20
+
+### 🐛 Fehlerbehebungen
+
+- **Kompatibilität mit Shopware 6.7.9.0**: Behebt einen Fehler in Storefronts mit Shopware 6.7.9.0, bei dem das neue Widerrufsformular zur Fehlermeldung „controller is not callable" führte. Das Plugin leitet Widerrufsanfragen nun an Shopwares eigene Verarbeitung weiter und bleibt dabei mit älteren Shopware-Versionen kompatibel.
+
+---
+
 ## [5.0.5] – 2026-03-04
 
 ### 🐛 Fehlerbehebungen

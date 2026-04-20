@@ -4,6 +4,14 @@ All notable changes to the "Contact Form – File Upload" plugin for end users.
 
 ---
 
+## [5.0.6] – 2026-04-20
+
+### 🐛 Bug Fixes
+
+- **Shopware 6.7.9.0 compatibility**: Fixed an error on storefronts running Shopware 6.7.9.0 where the new revocation request form caused a "controller is not callable" exception. The plugin now forwards revocation requests to Shopware's built-in handler while remaining compatible with older Shopware versions.
+
+---
+
 ## [5.0.5] – 2026-03-04
 
 ### 🐛 Bug Fixes
