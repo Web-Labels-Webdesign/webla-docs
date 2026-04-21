@@ -88,6 +88,36 @@ Dieses Dokument beschreibt alle verfügbaren Einstellungen für das WebLa Subscr
 
 **Beschreibung**: Ermöglicht es Kunden, bei einer vorzeitigen Bestellung selbst zu entscheiden, ob der Verlängerungszyklus zurückgesetzt werden soll oder nicht.
 
+### Warenkorb-Abonnement aktivieren
+
+| Eigenschaft      | Wert         |
+| ---------------- | ------------ |
+| **Typ**          | Schalter     |
+| **Standard**     | Deaktiviert  |
+| **Erforderlich** | Nein         |
+
+**Beschreibung**: Fügt bei Aktivierung einen Warenkorb-weiten Intervall-Auswähler zur Warenkorbseite, Offcanvas-Warenkorb, Adress-/Registrierungsschritt und Bestellabschluss hinzu. Kunden können den kompletten Warenkorb in ein Abonnement mit dem gewählten Intervall umwandeln. Alle Produkt-Line-Items — auch solche ohne produktspezifische Abo-Optionen — werden auf dieses Intervall gesetzt; die Auswahl überschreibt jede produktspezifische Auswahl.
+
+**Anwendungsbeispiel**: Ein Boxen-Abo-Shop, in dem Kunden Produkte frei kombinieren und den gesamten Warenkorb im gleichen Rhythmus geliefert bekommen möchten.
+
+### Warenkorb-Abo Intervalle
+
+| Eigenschaft      | Wert                                                               |
+| ---------------- | ------------------------------------------------------------------ |
+| **Typ**          | Repeater (Wochen, Bezeichnung, Rabatt %)                           |
+| **Standard**     | Leer                                                               |
+| **Erforderlich** | Nur wenn **Warenkorb-Abonnement aktivieren** aktiv ist             |
+
+**Beschreibung**: Definiert die Intervalle, die im Warenkorb-Auswähler angeboten werden. Jeder Eintrag hat drei Felder:
+
+- **Intervall (Wochen)**: Anzahl Wochen zwischen Verlängerungen
+- **Bezeichnung**: Anzeigetext im Storefront-Dropdown (z. B. *Alle 4 Wochen*)
+- **Rabatt (%)**: Optionaler Rabatt pro Intervall, der auf alle Line-Items angewendet wird, wenn dieses Intervall gewählt ist
+
+Das Storefront-Dropdown zeigt immer zuerst *Einmalkauf*, gefolgt von jedem konfigurierten Intervall.
+
+**Anwendungsbeispiel**: `4 / "Alle 4 Wochen" / 10` und `8 / "Alle 8 Wochen" / 15` konfigurieren, um zwei Rhythmen mit gestaffelten Rabatten anzubieten.
+
 ---
 
 ## Preise & Rabatte

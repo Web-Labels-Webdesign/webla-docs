@@ -4,6 +4,20 @@ All notable changes to the WebLa Subscription Plugin for end users.
 
 ---
 
+## [1.3.0] - 2026-04-21
+
+### :sparkles: New Features
+
+- **Cart-wide Subscription**: Added an interval selector rendered across the entire checkout (cart page, offcanvas cart, address/register step, confirm step) that turns the whole cart into one subscription. When enabled, all product line items — even those without per-product subscription options — are forced onto the chosen interval. Selection persists as a Cart extension and survives recalculation. The offcanvas updates via AJAX without reloading the page, matching the core promo-code flow.
+- **Cart-wide Interval Editor**: New plugin configuration under *Subscription Intervals* with a dedicated admin editor for managing the list of available cart-wide intervals. Each entry holds weeks, label, and discount percent. Compatible with both Shopware 6.6 (`sw-*` components) and 6.7 (`mt-*` components) via runtime detection.
+
+### :recycle: Improvements
+
+- **Payment Methods Card**: Reordered fields so subscription-capable Mollie methods (Card, SEPA, PayPal) appear before non-recurring methods (Invoice, Prepayment).
+- **Renewal Shipping Method**: Moved from *Payment Methods* to *Renewal Behavior* card where it semantically belongs, with clarified help text explaining the initial-order fallback.
+
+---
+
 ## [1.2.0] - 2026-04-13
 
 ### :sparkles: New Features

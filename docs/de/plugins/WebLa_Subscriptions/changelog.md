@@ -4,6 +4,20 @@ Alle wichtigen Änderungen am WebLa Subscription Plugin für Endbenutzer.
 
 ---
 
+## [1.3.0] - 2026-04-21
+
+### :sparkles: Neue Funktionen
+
+- **Warenkorb-Abonnement**: Neuer Intervall-Auswähler im gesamten Checkout (Warenkorbseite, Offcanvas-Warenkorb, Adress-/Registrierungsschritt, Bestellabschluss), der den kompletten Warenkorb in ein Abonnement umwandelt. Wenn aktiviert, werden alle Produkt-Line-Items — auch ohne produktspezifische Abo-Optionen — auf das gewählte Intervall gesetzt. Die Auswahl wird als Cart-Extension gespeichert und übersteht Neuberechnungen. Der Offcanvas aktualisiert sich per AJAX ohne Seitenreload, analog zur Gutschein-Eingabe im Core.
+- **Editor für Warenkorb-Intervalle**: Neue Plugin-Konfiguration unter *Abonnement-Intervalle* mit eigenem Admin-Editor für die Liste der verfügbaren Warenkorb-Intervalle. Jeder Eintrag enthält Wochen, Bezeichnung und Rabatt-Prozentsatz. Kompatibel mit Shopware 6.6 (`sw-*` Komponenten) und 6.7 (`mt-*` Komponenten) via Laufzeiterkennung.
+
+### :recycle: Verbesserungen
+
+- **Zahlungsarten-Karte**: Felder neu sortiert — abo-fähige Mollie-Methoden (Karte, SEPA, PayPal) stehen vor Nicht-Wiederholungsmethoden (Rechnung, Vorkasse).
+- **Versandart für Verlängerungen**: Von *Zahlungsarten* nach *Verlängerungsverhalten* verschoben, wo sie semantisch hingehört. Hilfetext präzisiert das Fallback-Verhalten auf die Erstbestellung.
+
+---
+
 ## [1.2.0] - 2026-04-13
 
 ### :sparkles: Neue Funktionen

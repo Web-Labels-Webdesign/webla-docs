@@ -88,6 +88,36 @@ This document describes all available settings for the WebLa Subscription Plugin
 
 **Description**: Allows customers to decide themselves whether the renewal cycle should be reset when placing an early order.
 
+### Enable Cart-wide Subscription
+
+| Property     | Value    |
+| ------------ | -------- |
+| **Type**     | Switch   |
+| **Default**  | Disabled |
+| **Required** | No       |
+
+**Description**: When enabled, adds a cart-wide interval selector to the cart page, offcanvas cart, address/register step, and confirm step. Customers can turn the entire cart into one subscription at the selected interval. All product line items — including those without per-product subscription options — are forced to subscribe at that interval; the selection overrides any per-product selections.
+
+**Example Use Case**: A box-subscription shop where customers mix and match products and want the whole basket delivered on the same cycle.
+
+### Cart-wide Subscription Intervals
+
+| Property     | Value                                                      |
+| ------------ | ---------------------------------------------------------- |
+| **Type**     | Repeater (weeks, label, discount %)                        |
+| **Default**  | Empty                                                      |
+| **Required** | Only if **Enable Cart-wide Subscription** is active        |
+
+**Description**: Define the intervals offered in the cart-wide selector. Each entry has three fields:
+
+- **Interval (weeks)**: Number of weeks between renewals
+- **Label**: Display text shown in the storefront dropdown (e.g. *Every 4 weeks*)
+- **Discount (%)**: Optional per-interval discount applied to all line items when this interval is selected
+
+The storefront dropdown always shows *One-time purchase* first, followed by each configured interval.
+
+**Example Use Case**: Configure `4 / "Every 4 weeks" / 10` and `8 / "Every 8 weeks" / 15` to offer two rhythms with escalating discounts.
+
 ---
 
 ## Pricing & Discounts
