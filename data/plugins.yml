@@ -161,6 +161,15 @@ plugins:
       en: Customers upload images with their product reviews. The gallery renders on the product detail page and as a CMS element in Shopping Experiences.
     requirements: Shopware 6.6–6.7, PHP 8.2+
     version: "3.1.1"
+  - id: WebLa_BatchManagement
+    name:
+      de: Charge-Management
+      en: Batch Management
+    short:
+      de: Verwalten Sie Chargen, Verfallsdaten und Lagerbestände im Shopware-Admin. Mit automatischen Restock-Mails, geplanter Bestandsaktualisierung und Chargen-Historie pro Auftrag.
+      en: Manage batches, expiry dates and stock levels from the Shopware admin. Automated restock notifications, scheduled stock updates and per-order batch history.
+    requirements: Shopware 6.6–6.7, PHP 8.1+
+    version: "3.0.0"
   - id: BuildIT_ShareCart
     name:
       de: Teile deinen Warenkorb

@@ -51,6 +51,7 @@ jobs:
             ["WebLaAdcellProvisionsfreigabe"]="WebLa_AdcellProvisionsfreigabe"
             ["WebLa_TaxCalculatorAndCountrySwitcher"]="WebLa_TaxCalculatorAndCountrySwitcher"
             ["WebLa_ImageReviews"]="WebLa_ImageReviews"
+            ["WebLa_BatchManagement"]="WebLa_BatchManagement"
           )
 
           declare -A PLUGIN_FOLDERS=(
@@ -73,6 +74,7 @@ jobs:
             ["WebLaAdcellProvisionsfreigabe"]="WebLa_AdcellProvisionsfreigabe"
             ["WebLa_TaxCalculatorAndCountrySwitcher"]="WebLa_TaxCalculatorAndCountrySwitcher"
             ["WebLa_ImageReviews"]="WebLa_ImageReviews"
+            ["WebLa_BatchManagement"]="WebLa_BatchManagement"
           )
 
           # Supported languages
