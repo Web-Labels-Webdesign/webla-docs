@@ -86,6 +86,24 @@ Bei Produkten mit Zusammensetzung wird die minimal mögliche herstellbare Menge 
 
 ---
 
+### Stückweise Verbrauchsberechnung als Fallback
+
+| Eigenschaft      | Wert         |
+| ---------------- | ------------ |
+| **Typ**          | Schalter     |
+| **Standard**     | Deaktiviert  |
+| **Erforderlich** | Nein         |
+
+**Beschreibung**: Steuert, wie Chargen bei Produkten **ohne Gewicht** und **ohne Komposition** verbraucht werden. Ist der Schalter aus (Standard), wird bei solchen Produkten nichts verbraucht — die Buchung basiert auf `Produktgewicht × Positionsmenge`. Ist der Schalter an, fällt das Plugin auf **1 Chargen-Einheit pro verkauftem Stück** zurück. So können stückweise geführte Shops (Kosmetik, Pharma, Einzelartikel) die Chargen korrekt verbrauchen, ohne ein künstliches Produktgewicht pflegen zu müssen.
+
+Produkte mit Komposition sind nicht betroffen — sie buchen weiterhin nach den Einträgen der Zusammensetzung.
+
+**Anwendungsbeispiel**: Ein Kosmetik-Shop verkauft Einzelartikel ohne Gewichtsangabe. Mit aktiviertem Schalter reduziert eine Bestellung über 3 Stück die passende Charge um 3 Einheiten.
+
+> **Hinweis**: Lassen Sie den Schalter deaktiviert, wenn alle Ihre Produkte bereits ein sinnvolles Gewicht haben — die gewichtsbasierte Berechnung bleibt der Standard.
+
+---
+
 ## Empfohlene Konfigurationen
 
 ### Für Lebensmittelshops mit chargenpflichtiger Ware

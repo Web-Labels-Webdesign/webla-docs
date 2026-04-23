@@ -4,6 +4,24 @@ Alle wichtigen Änderungen an **Charge-Management** für Endbenutzer.
 
 ---
 
+## [3.0.1] — 2026-04-23
+
+### :sparkles: Neue Funktionen
+
+- **Stückweiser Verbrauch als Fallback**: Neue Einstellung *Stückweise Verbrauchsberechnung als Fallback* (Lagerbestandseinstellungen). Bei Aktivierung verbrauchen Produkte ohne Gewicht und ohne Komposition pro verkauftem Stück 1 Chargen-Einheit. Damit funktionieren stückweise geführte Shops (Kosmetik, Pharma, Einzelartikel), ohne ein künstliches Produktgewicht pflegen zu müssen. Standardmäßig deaktiviert — bestehende Installationen verhalten sich unverändert gewichtsbasiert.
+
+### :bug: Fehlerbehebungen
+
+- **Obergrenze bei Chargenmenge entfernt**: Chargen akzeptieren jetzt beliebige Mengen. Das Formular hat zuvor Werte über 100 blockiert, obwohl die Datenbankspalte sie bereits erlaubt hat.
+- **Sortierung der Chargenliste**: Spaltensortierung in der Chargen-Übersicht funktioniert wieder.
+- **Kein 500 mehr bei Statuswechsel**: Der Order-Statusmaschinen-Subscriber fängt Ausnahmen jetzt ab und protokolliert sie, statt den Statuswechsel mit einem Serverfehler abzubrechen.
+
+### :recycle: Verbesserungen
+
+- **Anleitung**: Installationsanleitung enthält jetzt einen technischen Workflow-Abschnitt, damit Händler nachvollziehen können, wann und wie Chargen verbraucht werden.
+
+---
+
 ## [3.0.0] — 2026-04-22
 
 ### ✨ Neue Funktionen

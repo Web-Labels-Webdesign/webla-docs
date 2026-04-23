@@ -23,7 +23,7 @@ This document describes all available settings for **Batch-Management**.
 - `In progress`: Consumption happens when picking starts.
 - `Completed`: Consumption happens when the order is fully processed.
 
-**Example Use Case**: In a food shop batches should only be consumed when goods are picked. Choose `In progress` so that consumption mirrors the real warehouse flow.
+**Example Use Case**: In a food shop batches should only be consumed when goods are picked. Choose `In progress` so that consumption mirrors the real batch consumption workflow.
 
 ---
 
@@ -83,6 +83,24 @@ For products with a composition, the calculation yields the minimum producible q
 **Example Use Case**: Enable this when the stock displayed in your shop should be driven entirely by existing batches. Keep it disabled if you manage stock manually or through another system (ERP, inventory management).
 
 > **Important**: Product weight must be greater than 0. Without a weight, the plugin cannot derive stock quantity.
+
+---
+
+### Fallback to piece-based consumption
+
+| Property     | Value       |
+| ------------ | ----------- |
+| **Type**     | Switch      |
+| **Default**  | Disabled    |
+| **Required** | No          |
+
+**Description**: Controls how batches are consumed for products that have **no weight** and **no composition entry**. When disabled (default), such products consume nothing on order-state change — consumption relies on `product weight × line-item quantity`. When enabled, the plugin falls back to consuming **1 batch-unit per ordered piece**, so shops that track stock by piece (cosmetics, pharma, individual items) still get correct consumption without assigning an artificial product weight.
+
+Products with a composition are not affected — those continue to consume based on the composition entries.
+
+**Example Use Case**: A cosmetics shop sells individual items (no weight set). Enable this setting so that ordering 3 pieces of a product decrements the matching batch by 3 units.
+
+> **Note**: Leave disabled if all your products already have a meaningful weight — the weight-based calculation remains the default behaviour.
 
 ---
 

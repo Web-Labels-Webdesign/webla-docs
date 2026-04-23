@@ -4,6 +4,24 @@ All notable changes to **Batch-Management** for end users.
 
 ---
 
+## [3.0.1] — 2026-04-23
+
+### :sparkles: New Features
+
+- **Piece-based consumption fallback**: New setting *Fallback to piece-based consumption* (Stock Configuration). When enabled, products without a weight and without a composition consume 1 batch-unit per ordered piece. Lets piece-based shops (cosmetics, pharma, individual items) run without assigning artificial product weights. Disabled by default — weight-based behaviour stays the same for existing installations.
+
+### :bug: Bug Fixes
+
+- **Batch quantity cap removed**: Batches now accept any quantity. The form previously blocked values above 100 even though the database column already supported them.
+- **Batch list sorting**: Column sorting in the Batches overview works again.
+- **No more 500 on order-state change**: The order state-machine subscriber now catches and logs exceptions instead of rolling back the state transition with a server error.
+
+### :recycle: Improvements
+
+- **Manual**: Installation manual now includes a technical workflow section so merchants understand when and how batches are consumed.
+
+---
+
 ## [3.0.0] — 2026-04-22
 
 ### ✨ New Features
