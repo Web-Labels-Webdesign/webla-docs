@@ -8,7 +8,7 @@ on:
       - main
   workflow_dispatch:
   repository_dispatch:
-    types: [docs-updated]
+    types: [ docs-updated ]
 
 permissions:
   contents: write
@@ -52,6 +52,7 @@ jobs:
             ["WebLa_TaxCalculatorAndCountrySwitcher"]="WebLa_TaxCalculatorAndCountrySwitcher"
             ["WebLa_ImageReviews"]="WebLa_ImageReviews"
             ["WebLa_BatchManagement"]="WebLa_BatchManagement"
+            ["WebLa_ManufacturerPages"]="WebLa_ManufacturerPages"
           )
 
           declare -A PLUGIN_FOLDERS=(
@@ -75,6 +76,7 @@ jobs:
             ["WebLa_TaxCalculatorAndCountrySwitcher"]="WebLa_TaxCalculatorAndCountrySwitcher"
             ["WebLa_ImageReviews"]="WebLa_ImageReviews"
             ["WebLa_BatchManagement"]="WebLa_BatchManagement"
+            ["WebLa_ManufacturerPages"]="WebLa_ManufacturerPages"
           )
 
           # Supported languages

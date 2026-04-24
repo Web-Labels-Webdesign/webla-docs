@@ -179,3 +179,12 @@ plugins:
       en: Share your shopping cart easily via link, email, WhatsApp or Facebook. Your customers can add all shared products to their cart with one click. Includes automatic cleanup.
     requirements: Shopware 6.6–6.8, PHP 8.1+
     version: "5.0.1"
+  - id: WebLa_ManufacturerPages
+    name:
+      de: Herstellerseiten
+      en: Manufacturer Pages
+    short:
+      de: Erstellt automatisch SEO-optimierte Herstellerseiten mit Übersicht, Detailansicht, Produktfiltern, Sortierung und Sitemap-Integration für Ihren Shopware-Shop.
+      en: Automatically creates SEO-optimized manufacturer pages with overview, detail view, product filters, sorting and sitemap integration for your Shopware store.
+    requirements: Shopware 6.6–6.8, PHP 8.1+
+    version: "5.0.0"
