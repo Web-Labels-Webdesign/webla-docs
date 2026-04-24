@@ -4,7 +4,24 @@ All notable changes to **Images in Product Reviews** for end users.
 
 ---
 
-## [3.1.1] – 2026-04-15
+## 3.1.2
+
+_Released 2026-04-24_
+
+### 🔧 Improvements
+
+- **Technical name alignment**: the plugin technical name is now `WebLa_ImageReviews`, consistent with other Web Labels extensions.
+- **Storefront asset URL fix**: the upload-icon image in the review gallery now points at the correct lowercase bundle path and renders reliably.
+
+### ⚠️ Important Changes
+
+- The plugin technical name changed from `WebLaImageReviews` to `WebLa_ImageReviews`. Shopware treats this as a new plugin, so existing installations must be reinstalled and reconfigured (media folder, promo images, variant-gallery toggle).
+
+---
+
+## 3.1.1
+
+_Released 2026-04-15_
 
 ### 🔧 Improvements
 
@@ -19,7 +36,9 @@ No action required. The media folder is created automatically on update. Existin
 
 ---
 
-## [3.1.0] – 2026-04-15
+## 3.1.0
+
+_Released 2026-04-15_
 
 ### ✨ New Features
 
@@ -44,12 +63,20 @@ No configuration changes required. Existing settings and review media are preser
 
 | Version | Release Date | Highlights                                         |
 | ------- | ------------ | -------------------------------------------------- |
+| 3.1.2   | 2026-04-24   | Technical-name alignment, asset URL fix            |
 | 3.1.1   | 2026-04-15   | Own media folder, clean uninstall, a11y fixes      |
 | 3.1.0   | 2026-04-15   | Unified Shopware 6.6 + 6.7 distribution            |
 
 ---
 
 ## Upgrade Notes
+
+### Upgrading to 3.1.2
+
+1. Uninstall the previous version (choose *Keep user data* if you want existing review images preserved).
+2. Install and activate the new version from the Shopware Store.
+3. Re-enter the plugin settings (media folder override, promo images, gallery variant toggle) — they live under the new plugin identity.
+4. Clear the cache.
 
 ### Upgrading to 3.1.1
 

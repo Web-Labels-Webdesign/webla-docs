@@ -25,7 +25,7 @@ plugins:
       de: Vergeben Sie individuelle Rabatte pro Kunde auf Kategorien, Produktgruppen oder die gesamte Kundengruppe.
       en: Assign individual discounts per customer on categories, product groups, or entire customer groups.
     requirements: Shopware 6.5–6.8, PHP 8.1+
-    version: "1.5.8"
+    version: "1.5.9"
   - id: WebLa_IntelligentCrossSelling
     name:
       de: Intelligentes Cross-Selling
@@ -160,7 +160,7 @@ plugins:
       de: Kunden laden Bilder direkt zu ihren Produktbewertungen hoch. Die Galerie erscheint auf der Produktseite und als CMS-Element in Erlebniswelten.
       en: Customers upload images with their product reviews. The gallery renders on the product detail page and as a CMS element in Shopping Experiences.
     requirements: Shopware 6.6–6.7, PHP 8.2+
-    version: "3.1.1"
+    version: "3.1.2"
   - id: WebLa_BatchManagement
     name:
       de: Charge-Management

@@ -4,7 +4,24 @@ Alle wichtigen Änderungen an **Bilder in Produktbewertungen** für Endbenutzer.
 
 ---
 
-## [3.1.1] – 2026-04-15
+## 3.1.2
+
+_Veröffentlicht am 2026-04-24_
+
+### 🔧 Verbesserungen
+
+- **Technischer Plugin-Name vereinheitlicht**: Der technische Name lautet nun `WebLa_ImageReviews`, einheitlich mit den übrigen Web-Labels-Erweiterungen.
+- **Storefront-Asset-URL korrigiert**: Das Upload-Icon in der Bewertungsgalerie verweist jetzt auf den korrekten, kleingeschriebenen Bundle-Pfad und wird zuverlässig angezeigt.
+
+### ⚠️ Wichtige Änderungen
+
+- Der technische Plugin-Name hat sich von `WebLaImageReviews` zu `WebLa_ImageReviews` geändert. Shopware behandelt dies als neues Plugin, daher sind bestehende Installationen neu zu installieren und neu zu konfigurieren (Medienordner, Werbe-Bilder, Varianten-Galerie-Schalter).
+
+---
+
+## 3.1.1
+
+_Veröffentlicht am 2026-04-15_
 
 ### 🔧 Verbesserungen
 
@@ -19,7 +36,9 @@ Keine Aktion nötig. Der Medienordner wird beim Update automatisch angelegt. Vor
 
 ---
 
-## [3.1.0] – 2026-04-15
+## 3.1.0
+
+_Veröffentlicht am 2026-04-15_
 
 ### ✨ Neue Funktionen
 
@@ -44,12 +63,20 @@ Keine Konfigurationsänderungen erforderlich. Vorhandene Einstellungen und Bewer
 
 | Version | Veröffentlichung | Highlights                                          |
 | ------- | ---------------- | --------------------------------------------------- |
+| 3.1.2   | 2026-04-24       | Technischer Name vereinheitlicht, Asset-URL-Fix     |
 | 3.1.1   | 2026-04-15       | Eigener Medienordner, sauberes Uninstall, a11y      |
 | 3.1.0   | 2026-04-15       | Vereinheitlichung Shopware 6.6 + 6.7                |
 
 ---
 
 ## Upgrade-Hinweise
+
+### Upgrade auf 3.1.2
+
+1. Vorherige Version deinstallieren (Option *Nutzerdaten behalten* wählen, falls bereits vorhandene Bewertungsbilder erhalten bleiben sollen).
+2. Neue Version aus dem Shopware Store installieren und aktivieren.
+3. Plugin-Einstellungen (Medienordner-Override, Werbe-Bilder, Galerie-Varianten-Schalter) erneut eintragen – sie hängen an der neuen Plugin-Identität.
+4. Cache leeren.
 
 ### Upgrade auf 3.1.1
 

@@ -4,6 +4,16 @@ All notable changes to Customer Specific Discounts for end users.
 
 ---
 
+## [1.5.9] - 2026-04-24
+
+### Bug Fixes
+
+- **Discount in product listings**: The customer discount is now applied reliably on every product render path — including CMS product-box / product-slider slots, cross-selling, widgets and quickview. Previously the discount badge was rendered in listings while the displayed price stayed at the original value. The subscriber now hooks `sales_channel.product.loaded` (priority `-100`) and mutates `CalculatedPrice`, tier prices and `CalculatedCheapestPrice` in place.
+- **Plugin update from 1.5.6 / 1.5.7**: Fixed `SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'webla_customer_discount_global_discount' for key 'uniq.custom_field.name'` on plugin update. Existing custom field set, field and relation IDs are now preserved during the upsert so it acts as an update instead of an insert.
+- **Store documentation link**: External documentation link in the Shopware Store description now uses HTTPS.
+
+---
+
 ## [1.5.8] - 2026-04-13
 
 ### Bug Fixes

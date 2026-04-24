@@ -4,6 +4,16 @@ Alle wichtigen Änderungen an Kundenspezifische Rabatte für Endbenutzer.
 
 ---
 
+## [1.5.9] - 2026-04-24
+
+### Fehlerbehebungen
+
+- **Rabatt in Produktlisten**: Der Kundenrabatt wird nun zuverlässig auf jedem Produkt-Ladepfad angewendet — einschließlich CMS-Elementen (Produktbox, Produkt-Slider), Cross-Selling, Widgets und Quickview. Zuvor wurde zwar das Rabatt-Badge in Listen angezeigt, der Preis blieb jedoch unverändert. Der Subscriber hängt sich jetzt an `sales_channel.product.loaded` (Priorität `-100`) und modifiziert `CalculatedPrice`, Staffelpreise und `CalculatedCheapestPrice` direkt in-place.
+- **Plugin-Update von 1.5.6 / 1.5.7**: Behebung von `SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'webla_customer_discount_global_discount' for key 'uniq.custom_field.name'` beim Plugin-Update. Bestehende IDs von Custom-Field-Set, Feldern und Relationen werden beim Upsert nun beibehalten, sodass das Update nicht als Insert ausgeführt wird.
+- **Store-Dokumentationslink**: Externer Dokumentationslink in den Shopware-Store-Beschreibungen verwendet jetzt HTTPS.
+
+---
+
 ## [1.5.8] - 2026-04-13
 
 ### Fehlerbehebungen
