@@ -24,4 +24,4 @@ Hier finden Sie Installationsanleitungen, Konfigurationsoptionen und Best Practi
 
 ## Support
 
-Bei Fragen oder Problemen erreichen Sie uns unter **plugin@web-labels.de** oder über den [Shopware Store](https://store.shopware.com/web-labels-webdesign-gmbh.html).
+Bei Fragen oder Problemen erreichen Sie uns unter **plugins@web-labels.de** oder über den [Shopware Store](https://store.shopware.com/web-labels-webdesign-gmbh.html).
