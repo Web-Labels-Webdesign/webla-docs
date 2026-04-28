@@ -1,196 +1,229 @@
-# Änderungsprotokoll
+**Änderungsprotokoll — Shopping Feed mit einzigartigen Rabatten**
 
-Alle wichtigen Änderungen an Shopping Feed mit einzigartigen Rabatten für Endbenutzer.
-
----
-
-## [v5.0.5] - 2026-04-15
-
-### Fehlerbehebungen
-
-- :bug: **Konstruktor-Argument-Fehler (Hotfix für v5.0.4)**: Behoben: Ein fataler Fehler „Too few arguments to function ExportDiscountPriceCalculator::__construct(), 9 passed... 10 expected" legte das Plugin nach der Installation von v5.0.4 komplett lahm. Der Fix in v5.0.4 fügte ein `ProductDefinition`-Konstruktor-Argument über die `services.xml` hinzu, jedoch überschreibt der `CompatibilityCompilerPass` die Service-Argumente beim Container-Build und dessen hart kodierte Argumentliste setzte die `services.xml` stillschweigend außer Kraft — weiterhin wurden nur 9 Argumente übergeben. Der Compiler-Pass übergibt nun in beiden Zweigen (SW 6.5 und SW 6.6+) alle 10 Argumente.
+Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
-## [v5.0.4] - 2026-04-15
+# 5.1.1
 
-### Fehlerbehebungen
+_Veröffentlicht am 2026-04-28_
 
-- :bug: **Nicht initialisierte EntityDefinition-Registry**: Behoben: Ein fataler Fehler „Typed property `EntityDefinition::$registry` must not be accessed before initialization" trat auf, wenn ein Produkt über einen Rabatt-Link geöffnet wurde — meist im Inkognito-Modus. Der Preisrechner instanziierte `ProductDefinition` manuell per `new`, wodurch eine nicht registrierte Definition entstand, deren `$registry` nie injiziert wurde. `QueryStringParser::fromArray` stürzte daraufhin ab, sobald beim Parsen der Filter auf Felder oder Assoziationen zugegriffen wurde. Die `ProductDefinition` wird jetzt aus dem DI-Container injiziert, sodass die Registry korrekt verdrahtet ist.
+**Fehlerbehebungen**
 
----
-
-## [v5.0.3] - 2026-02-20
-
-### Fehlerbehebungen
-
-- :bug: **Rabatt bei mehreren Produkten hintereinander**: Behoben: Bei aktivierter Option `allowMultiple=true` wurde nur das erste über einen Feed-Deeplink aufgerufene Produkt mit dem Rabattpreis angezeigt. Weitere Produkte zeigten fälschlicherweise den vollen Preis. Der Preisrechner ermittelt nun die passende Rabatt-Session pro Produkt innerhalb der Schleife, statt eine einzelne vorgeladene Session für alle Produkte zu verwenden.
+- SEO: Bei aktivem `?source=`-Parameter wird zusätzlich die Seitenerweiterung `dreiscSeoInstallmentRobotsTagData` von DreiscSeoPro entfernt. Die `meta.html.twig` von DreiscSeoPro liest diese eigene Erweiterung vor `metaInformation.robots`. Ohne diesen Fix zeigte das gerenderte `<meta name="robots">`-Tag in Shops mit DreiscSeoPro weiterhin `index,follow`, obwohl `metaInformation.robots` korrekt auf `noindex, nofollow` gesetzt war. Der `X-Robots-Tag`-HTTP-Header war davon nicht betroffen.
 
 ---
 
-## [v5.0.2] - 2026-02-19
+# 5.1.0
 
-### Fehlerbehebungen
+_Veröffentlicht am 2026-04-28_
 
-- :bug: **Preisdaten-Kontamination in der Datenbank**: Behoben: `listPrice` wurde fälschlicherweise in der Datenbank für Produkte gespeichert, bei denen der Händler keinen Streichpreis gesetzt hatte. Die Ursache lag in PHP-Shallow-Clone-Semantik, die direkte Mutationen an den Price-Objekten der Entität ermöglichte, bevor Shopwares `EntityWrittenEvent` die Entität persistierte. Alle drei Preisberechnungsmethoden erstellen nun neue `Price`-Objekte, anstatt die vorhandenen zu mutieren.
+**Neue Funktionen**
 
----
+- SEO: Seiten, die über den Preisvergleichs-Parameter `?source=...` aufgerufen werden, liefern jetzt `X-Robots-Tag: noindex, nofollow` und ein passendes `<meta name="robots">`-Tag. Google indexiert so keine Deeplink-Varianten der Produktdetailseiten mehr.
 
-## [v5.0.1] - 2026-02-03
+**Fehlerbehebungen**
 
-### Fehlerbehebungen
+- `webla-session`-Cookie gehärtet: explizite Attribute `secure`, `httpOnly` und `SameSite=Lax` (zuvor war `secure` vom Request-Schema abhängig).
 
-- **Kundenfeedback**: Behebung von Problemen basierend auf Kundenfeedback
+**Verbesserungen**
 
----
+- Store-Metadaten verfeinert: explizites `compatibility_date` und längere `meta_description` für eine bessere Darstellung im Such-Snippet.
 
-## [v5.0.0] - 2026-02-03
+**Breaking Changes**
 
-### Neue Funktionen
-
-- **Multi-Version-Unterstützung**: Volle Kompatibilität mit Shopware 6.5, 6.6 und 6.7
-- **Verbesserte Architektur**: Optimierte Kompatibilitätsschicht für verschiedene Shopware-Versionen
+- Unterstützung für Shopware 6.5 entfernt. Das Plugin benötigt jetzt Shopware 6.6 oder 6.7. Händler auf 6.5 müssen auf Plugin v5.0.x bleiben.
 
 ---
 
-## [2.0.1] - 2023-10-20
+# 5.0.5
 
-### Verbesserungen
+_Veröffentlicht am 2026-04-15_
 
-- **Neue Caching-Strategie**: Verbesserte Performance durch optimiertes Caching
+**Fehlerbehebungen**
 
----
-
-## [2.0.0] - 2023-06-13
-
-### Neue Funktionen
-
-- **Shopware 6.5 Unterstützung**: Vollständige Kompatibilität mit Shopware 6.5
+- **Konstruktor-Argument-Fehler (Hotfix für v5.0.4)**: Behoben: Ein fataler Fehler „Too few arguments to function ExportDiscountPriceCalculator::__construct(), 9 passed... 10 expected" legte das Plugin nach der Installation von v5.0.4 komplett lahm. Der Fix in v5.0.4 fügte ein `ProductDefinition`-Konstruktor-Argument über die `services.xml` hinzu, jedoch überschreibt der `CompatibilityCompilerPass` die Service-Argumente beim Container-Build und dessen hart kodierte Argumentliste setzte die `services.xml` stillschweigend außer Kraft — weiterhin wurden nur 9 Argumente übergeben. Der Compiler-Pass übergibt nun in beiden Zweigen (SW 6.5 und SW 6.6+) alle 10 Argumente.
 
 ---
 
-## [1.0.11] - 2023-05-30
+# 5.0.4
 
-### Neue Funktionen
+_Veröffentlicht am 2026-04-15_
 
-- **30-Tage-Preisanzeige**: Automatische Erstellung des günstigsten Preises der letzten 30 Tage, wenn ein Besucher über den Export kommt
+**Fehlerbehebungen**
 
----
-
-## [1.0.10] - 2023-05-16
-
-### Neue Funktionen
-
-- **Neue Produktpreis-Einstellung**: Zusatzfeld für individuelle Exportpreise pro Produkt
+- **Nicht initialisierte EntityDefinition-Registry**: Behoben: Ein fataler Fehler „Typed property `EntityDefinition::$registry` must not be accessed before initialization" trat auf, wenn ein Produkt über einen Rabatt-Link geöffnet wurde — meist im Inkognito-Modus. Der Preisrechner instanziierte `ProductDefinition` manuell per `new`, wodurch eine nicht registrierte Definition entstand, deren `$registry` nie injiziert wurde. `QueryStringParser::fromArray` stürzte daraufhin ab, sobald beim Parsen der Filter auf Felder oder Assoziationen zugegriffen wurde. Die `ProductDefinition` wird jetzt aus dem DI-Container injiziert, sodass die Registry korrekt verdrahtet ist.
 
 ---
 
-## [1.0.9] - 2023-03-22
+# 5.0.3
 
-### Verbesserungen
+_Veröffentlicht am 2026-02-20_
 
-- **Shopware-Anforderungen**: Anpassungen für Shopware-Kompatibilität
+**Fehlerbehebungen**
 
----
-
-## [1.0.8] - 2023-03-09
-
-### Verbesserungen
-
-- **Shopware-Anforderungen**: Weitere Anpassungen für Shopware-Kompatibilität
+- **Rabatt bei mehreren Produkten hintereinander**: Behoben: Bei aktivierter Option `allowMultiple=true` wurde nur das erste über einen Feed-Deeplink aufgerufene Produkt mit dem Rabattpreis angezeigt. Weitere Produkte zeigten fälschlicherweise den vollen Preis. Der Preisrechner ermittelt nun die passende Rabatt-Session pro Produkt innerhalb der Schleife, statt eine einzelne vorgeladene Session für alle Produkte zu verwenden.
 
 ---
 
-## [1.0.7] - 2023-03-09
+# 5.0.2
 
-### Verbesserungen
+_Veröffentlicht am 2026-02-19_
 
-- **Shopware-Anforderungen**: Anpassungen für Shopware-Kompatibilität
+**Fehlerbehebungen**
 
----
-
-## [1.0.6] - 2023-02-15
-
-### Verbesserungen
-
-- **Rundung**: Verbesserte Preisrundung
+- **Preisdaten-Kontamination in der Datenbank**: Behoben: `listPrice` wurde fälschlicherweise in der Datenbank für Produkte gespeichert, bei denen der Händler keinen Streichpreis gesetzt hatte. Die Ursache lag in PHP-Shallow-Clone-Semantik, die direkte Mutationen an den Price-Objekten der Entität ermöglichte, bevor Shopwares `EntityWrittenEvent` die Entität persistierte. Alle drei Preisberechnungsmethoden erstellen nun neue `Price`-Objekte, anstatt die vorhandenen zu mutieren.
 
 ---
 
-## [1.0.5] - 2022-11-21
+# 5.0.1
 
-### Fehlerbehebungen
+_Veröffentlicht am 2026-02-03_
 
-- **Fehlerbehandlung**: Vermeidung von Fehlern in bestimmten Szenarien
+**Fehlerbehebungen**
 
----
-
-## [1.0.4] - 2022-11-10
-
-### Verbesserungen
-
-- **Staffelpreise**: Verbesserte Handhabung von erweiterten Preisen
+- **Kundenfeedback**: Behebung von Problemen basierend auf Kundenfeedback.
 
 ---
 
-## [1.0.3] - 2022-11-03
+# 5.0.0
 
-### Verbesserungen
+_Veröffentlicht am 2026-02-03_
 
-- **Handhabung**: Verbesserte Handhabung und Dokumentation
+**Neue Funktionen**
 
----
-
-## [1.0.1] - 2022-10-05
-
-### Neue Funktionen
-
-- **Automatische Bereinigung**: Scheduled Task für automatische Session-Bereinigung hinzugefügt
+- **Multi-Version-Unterstützung**: Volle Kompatibilität mit Shopware 6.5, 6.6 und 6.7.
+- **Verbesserte Architektur**: Optimierte Kompatibilitätsschicht für verschiedene Shopware-Versionen.
 
 ---
 
-## [1.0.0] - 2022-10-05
+# 2.0.1
 
-### Neue Funktionen
+_Veröffentlicht am 2023-10-20_
 
-- **Erstveröffentlichung**: Initiale Version des Plugins
-- Globaler Rabatt für Produktexporte
-- Session-basierte Rabattanzeige im Storefront
-- Unterstützung für Google Shopping, idealo, billiger.de
+**Verbesserungen**
 
----
-
-## Versionsübersicht
-
-| Version | Veröffentlichung | Highlights                                    |
-| ------- | ---------------- | --------------------------------------------- |
-| v5.0.3  | 2026-02-20       | Fehlerbehebung: Rabatt bei mehreren Produkten mit allowMultiple=true |
-| v5.0.2  | 2026-02-19       | Fehlerbehebung: Preisdaten-Kontamination in der DB |
-| v5.0.1  | 2026-02-03       | Fehlerbehebungen basierend auf Kundenfeedback |
-| v5.0.0  | 2026-02-03       | Shopware 6.5/6.6/6.7 Multi-Version-Support    |
-| 2.0.1   | 2023-10-20       | Neue Caching-Strategie                        |
-| 2.0.0   | 2023-06-13       | Shopware 6.5 Unterstützung                    |
-| 1.0.11  | 2023-05-30       | 30-Tage-Preisanzeige                          |
-| 1.0.10  | 2023-05-16       | Individuelle Produktpreise                    |
-| 1.0.0   | 2022-10-05       | Erstveröffentlichung                          |
+- **Neue Caching-Strategie**: Verbesserte Performance durch optimiertes Caching.
 
 ---
 
-## Upgrade-Hinweise
+# 2.0.0
 
-### Upgrade auf v5.0.0
+_Veröffentlicht am 2023-06-13_
 
-Diese Version bietet vollständige Kompatibilität mit Shopware 6.5, 6.6 und 6.7. Ein Upgrade von Version 2.x ist ohne Datenmigration möglich.
+**Neue Funktionen**
 
-**Wichtig**: Nach dem Upgrade sollten Sie:
-1. Den Cache leeren
-2. Die Plugin-Konfiguration überprüfen
-3. Ihre Export-Templates testen
+- **Shopware 6.5 Unterstützung**: Vollständige Kompatibilität mit Shopware 6.5.
 
-### Kompatibilität
+---
 
-| Plugin-Version | Shopware-Version      | PHP-Version |
-| -------------- | --------------------- | ----------- |
-| 5.0.x          | 6.5.0 - 6.7.x         | 8.1+        |
-| 2.0.x          | 6.5.0 - 6.5.x         | 8.1+        |
-| 1.0.x          | 6.4.x                 | 7.4+        |
+# 1.0.11
+
+_Veröffentlicht am 2023-05-30_
+
+**Neue Funktionen**
+
+- **30-Tage-Preisanzeige**: Automatische Erstellung des günstigsten Preises der letzten 30 Tage, wenn ein Besucher über den Export kommt.
+
+---
+
+# 1.0.10
+
+_Veröffentlicht am 2023-05-16_
+
+**Neue Funktionen**
+
+- **Neue Produktpreis-Einstellung**: Zusatzfeld für individuelle Exportpreise pro Produkt.
+
+---
+
+# 1.0.9
+
+_Veröffentlicht am 2023-03-22_
+
+**Verbesserungen**
+
+- **Shopware-Anforderungen**: Anpassungen für Shopware-Kompatibilität.
+
+---
+
+# 1.0.8
+
+_Veröffentlicht am 2023-03-09_
+
+**Verbesserungen**
+
+- **Shopware-Anforderungen**: Weitere Anpassungen für Shopware-Kompatibilität.
+
+---
+
+# 1.0.7
+
+_Veröffentlicht am 2023-03-09_
+
+**Verbesserungen**
+
+- **Shopware-Anforderungen**: Anpassungen für Shopware-Kompatibilität.
+
+---
+
+# 1.0.6
+
+_Veröffentlicht am 2023-02-15_
+
+**Verbesserungen**
+
+- **Rundung**: Verbesserte Preisrundung.
+
+---
+
+# 1.0.5
+
+_Veröffentlicht am 2022-11-21_
+
+**Fehlerbehebungen**
+
+- **Fehlerbehandlung**: Vermeidung von Fehlern in bestimmten Szenarien.
+
+---
+
+# 1.0.4
+
+_Veröffentlicht am 2022-11-10_
+
+**Verbesserungen**
+
+- **Staffelpreise**: Verbesserte Handhabung von erweiterten Preisen.
+
+---
+
+# 1.0.3
+
+_Veröffentlicht am 2022-11-03_
+
+**Verbesserungen**
+
+- **Handhabung**: Verbesserte Handhabung und Dokumentation.
+
+---
+
+# 1.0.1
+
+_Veröffentlicht am 2022-10-05_
+
+**Neue Funktionen**
+
+- **Automatische Bereinigung**: Scheduled Task für automatische Session-Bereinigung hinzugefügt.
+
+---
+
+# 1.0.0
+
+_Veröffentlicht am 2022-10-05_
+
+**Neue Funktionen**
+
+- **Erstveröffentlichung**: Initiale Version des Plugins.
+- Globaler Rabatt für Produktexporte.
+- Session-basierte Rabattanzeige im Storefront.
+- Unterstützung für Google Shopping, idealo, billiger.de.

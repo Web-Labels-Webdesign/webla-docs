@@ -1,196 +1,229 @@
-# Changelog
+**Changelog — Shopping Feed with Unique Discounts**
 
-All notable changes to Shopping Feed with Unique Discounts for end users.
-
----
-
-## [v5.0.5] - 2026-04-15
-
-### Bug Fixes
-
-- :bug: **Constructor Argument Mismatch (Hotfix for v5.0.4)**: Fixed a fatal error "Too few arguments to function ExportDiscountPriceCalculator::__construct(), 9 passed... 10 expected" that broke the plugin completely after installing v5.0.4. The v5.0.4 fix added a `ProductDefinition` constructor argument via `services.xml`, but the `CompatibilityCompilerPass` rebuilds the service arguments at container compile time and its hardcoded argument list silently overrode `services.xml`, still passing only 9 arguments. The compiler pass now passes all 10 arguments for both the SW 6.5 and SW 6.6+ branches.
+All notable changes for end users.
 
 ---
 
-## [v5.0.4] - 2026-04-15
+# 5.1.1
 
-### Bug Fixes
+_Released 2026-04-28_
 
-- :bug: **Uninitialized EntityDefinition Registry**: Fixed a fatal error "Typed property `EntityDefinition::$registry` must not be accessed before initialization" that occurred when opening a product via a discount link, mostly in incognito mode. The price calculator instantiated `ProductDefinition` manually via `new`, producing an unregistered definition whose `$registry` was never injected. `QueryStringParser::fromArray` then crashed when filter parsing walked fields or associations. The `ProductDefinition` is now injected from the DI container, so the registry is properly wired.
+**Bug Fixes**
 
----
-
-## [v5.0.3] - 2026-02-20
-
-### Bug Fixes
-
-- :bug: **Sequential Product Discounts**: Fixed a bug where only the first product visited via a feed deeplink received the discounted price when `allowMultiple=true`. Subsequent products incorrectly showed the full price. The price calculator now resolves the matching discount session per product inside the loop, rather than using a single pre-loaded session for all products.
+- SEO: also drop the DreiscSeoPro `dreiscSeoInstallmentRobotsTagData` page extension when `?source=` is present. DreiscSeoPro's `meta.html.twig` reads its own extension before `metaInformation.robots`, so without this fix the rendered `<meta name="robots">` tag still showed `index,follow` on shops using DreiscSeoPro, even though `metaInformation.robots` was correctly set to `noindex, nofollow`. The `X-Robots-Tag` HTTP header was unaffected.
 
 ---
 
-## [v5.0.2] - 2026-02-19
+# 5.1.0
 
-### Bug Fixes
+_Released 2026-04-28_
 
-- :bug: **Price DB Contamination**: Fixed a bug where `listPrice` was incorrectly written to the database for products where the merchant never set one. The root cause was shallow-clone semantics allowing entity Price objects to be mutated before Shopware's `EntityWrittenEvent` flushed the entity. All three price calculation methods now build new `Price` objects instead of mutating the entity's own objects, preventing any unintended DB writes.
+**New Features**
 
----
+- SEO: pages reached via the price-comparison feed parameter `?source=...` now return `X-Robots-Tag: noindex, nofollow` and a matching `<meta name="robots">` tag, so Google no longer indexes deeplink variants of product detail pages.
 
-## [v5.0.1] - 2026-02-03
+**Bug Fixes**
 
-### Bug Fixes
+- Hardened the `webla-session` cookie with explicit `secure`, `httpOnly`, and `SameSite=Lax` attributes (previously secure depended on the request scheme).
 
-- **Customer Feedback**: Fixed issues based on customer feedback
+**Improvements**
 
----
+- Polished store listing metadata: explicit `compatibility_date` and longer `meta_description` for better search-snippet rendering.
 
-## [v5.0.0] - 2026-02-03
+**Breaking Changes**
 
-### New Features
-
-- **Multi-Version Support**: Full compatibility with Shopware 6.5, 6.6 and 6.7
-- **Improved Architecture**: Optimized compatibility layer for different Shopware versions
+- Dropped support for Shopware 6.5. The plugin now requires Shopware 6.6 or 6.7. Merchants on 6.5 must stay on plugin v5.0.x.
 
 ---
 
-## [2.0.1] - 2023-10-20
+# 5.0.5
 
-### Improvements
+_Released 2026-04-15_
 
-- **New Caching Strategy**: Improved performance through optimized caching
+**Bug Fixes**
 
----
-
-## [2.0.0] - 2023-06-13
-
-### New Features
-
-- **Shopware 6.5 Support**: Full compatibility with Shopware 6.5
+- **Constructor Argument Mismatch (Hotfix for v5.0.4)**: Fixed a fatal error "Too few arguments to function ExportDiscountPriceCalculator::__construct(), 9 passed... 10 expected" that broke the plugin completely after installing v5.0.4. The v5.0.4 fix added a `ProductDefinition` constructor argument via `services.xml`, but the `CompatibilityCompilerPass` rebuilds the service arguments at container compile time and its hardcoded argument list silently overrode `services.xml`, still passing only 9 arguments. The compiler pass now passes all 10 arguments for both the SW 6.5 and SW 6.6+ branches.
 
 ---
 
-## [1.0.11] - 2023-05-30
+# 5.0.4
 
-### New Features
+_Released 2026-04-15_
 
-- **30-Day Price Display**: Automatic creation of lowest price in last 30 days when a visitor comes through the export
+**Bug Fixes**
 
----
-
-## [1.0.10] - 2023-05-16
-
-### New Features
-
-- **New Product Price Setting**: Custom field for individual export prices per product
+- **Uninitialized EntityDefinition Registry**: Fixed a fatal error "Typed property `EntityDefinition::$registry` must not be accessed before initialization" that occurred when opening a product via a discount link, mostly in incognito mode. The price calculator instantiated `ProductDefinition` manually via `new`, producing an unregistered definition whose `$registry` was never injected. `QueryStringParser::fromArray` then crashed when filter parsing walked fields or associations. The `ProductDefinition` is now injected from the DI container, so the registry is properly wired.
 
 ---
 
-## [1.0.9] - 2023-03-22
+# 5.0.3
 
-### Improvements
+_Released 2026-02-20_
 
-- **Shopware Requirements**: Adjustments for Shopware compatibility
+**Bug Fixes**
 
----
-
-## [1.0.8] - 2023-03-09
-
-### Improvements
-
-- **Shopware Requirements**: Further adjustments for Shopware compatibility
+- **Sequential Product Discounts**: Fixed a bug where only the first product visited via a feed deeplink received the discounted price when `allowMultiple=true`. Subsequent products incorrectly showed the full price. The price calculator now resolves the matching discount session per product inside the loop, rather than using a single pre-loaded session for all products.
 
 ---
 
-## [1.0.7] - 2023-03-09
+# 5.0.2
 
-### Improvements
+_Released 2026-02-19_
 
-- **Shopware Requirements**: Adjustments for Shopware compatibility
+**Bug Fixes**
 
----
-
-## [1.0.6] - 2023-02-15
-
-### Improvements
-
-- **Rounding**: Improved price rounding
+- **Price DB Contamination**: Fixed a bug where `listPrice` was incorrectly written to the database for products where the merchant never set one. The root cause was shallow-clone semantics allowing entity Price objects to be mutated before Shopware's `EntityWrittenEvent` flushed the entity. All three price calculation methods now build new `Price` objects instead of mutating the entity's own objects, preventing any unintended DB writes.
 
 ---
 
-## [1.0.5] - 2022-11-21
+# 5.0.1
 
-### Bug Fixes
+_Released 2026-02-03_
 
-- **Error Handling**: Prevention of errors in certain scenarios
+**Bug Fixes**
 
----
-
-## [1.0.4] - 2022-11-10
-
-### Improvements
-
-- **Tiered Pricing**: Improved handling of advanced prices
+- **Customer Feedback**: Fixed issues based on customer feedback.
 
 ---
 
-## [1.0.3] - 2022-11-03
+# 5.0.0
 
-### Improvements
+_Released 2026-02-03_
 
-- **Handling**: Improved handling and documentation
+**New Features**
 
----
-
-## [1.0.1] - 2022-10-05
-
-### New Features
-
-- **Automatic Cleanup**: Added scheduled task for automatic session cleanup
+- **Multi-Version Support**: Full compatibility with Shopware 6.5, 6.6, and 6.7.
+- **Improved Architecture**: Optimized compatibility layer for different Shopware versions.
 
 ---
 
-## [1.0.0] - 2022-10-05
+# 2.0.1
 
-### New Features
+_Released 2023-10-20_
 
-- **Initial Release**: Initial version of the plugin
-- Global discount for product exports
-- Session-based discount display in storefront
-- Support for Google Shopping, idealo, billiger.de
+**Improvements**
 
----
-
-## Version History Summary
-
-| Version | Release Date | Highlights                               |
-| ------- | ------------ | ---------------------------------------- |
-| v5.0.3  | 2026-02-20   | Bug fix: discount for sequential products with allowMultiple=true |
-| v5.0.2  | 2026-02-19   | Bug fix: price DB contamination          |
-| v5.0.1  | 2026-02-03   | Bug fixes based on customer feedback     |
-| v5.0.0  | 2026-02-03   | Shopware 6.5/6.6/6.7 multi-version support |
-| 2.0.1   | 2023-10-20   | New caching strategy                     |
-| 2.0.0   | 2023-06-13   | Shopware 6.5 support                     |
-| 1.0.11  | 2023-05-30   | 30-day price display                     |
-| 1.0.10  | 2023-05-16   | Individual product prices                |
-| 1.0.0   | 2022-10-05   | Initial release                          |
+- **New Caching Strategy**: Improved performance through optimized caching.
 
 ---
 
-## Upgrade Notes
+# 2.0.0
 
-### Upgrading to v5.0.0
+_Released 2023-06-13_
 
-This version provides full compatibility with Shopware 6.5, 6.6 and 6.7. An upgrade from version 2.x is possible without data migration.
+**New Features**
 
-**Important**: After upgrading, you should:
-1. Clear the cache
-2. Review the plugin configuration
-3. Test your export templates
+- **Shopware 6.5 Support**: Full compatibility with Shopware 6.5.
 
-### Compatibility
+---
 
-| Plugin Version | Shopware Version      | PHP Version |
-| -------------- | --------------------- | ----------- |
-| 5.0.x          | 6.5.0 - 6.7.x         | 8.1+        |
-| 2.0.x          | 6.5.0 - 6.5.x         | 8.1+        |
-| 1.0.x          | 6.4.x                 | 7.4+        |
+# 1.0.11
+
+_Released 2023-05-30_
+
+**New Features**
+
+- **30-Day Price Display**: Automatic creation of lowest price in last 30 days when a visitor comes through the export.
+
+---
+
+# 1.0.10
+
+_Released 2023-05-16_
+
+**New Features**
+
+- **New Product Price Setting**: Custom field for individual export prices per product.
+
+---
+
+# 1.0.9
+
+_Released 2023-03-22_
+
+**Improvements**
+
+- **Shopware Requirements**: Adjustments for Shopware compatibility.
+
+---
+
+# 1.0.8
+
+_Released 2023-03-09_
+
+**Improvements**
+
+- **Shopware Requirements**: Further adjustments for Shopware compatibility.
+
+---
+
+# 1.0.7
+
+_Released 2023-03-09_
+
+**Improvements**
+
+- **Shopware Requirements**: Adjustments for Shopware compatibility.
+
+---
+
+# 1.0.6
+
+_Released 2023-02-15_
+
+**Improvements**
+
+- **Rounding**: Improved price rounding.
+
+---
+
+# 1.0.5
+
+_Released 2022-11-21_
+
+**Bug Fixes**
+
+- **Error Handling**: Prevention of errors in certain scenarios.
+
+---
+
+# 1.0.4
+
+_Released 2022-11-10_
+
+**Improvements**
+
+- **Tiered Pricing**: Improved handling of advanced prices.
+
+---
+
+# 1.0.3
+
+_Released 2022-11-03_
+
+**Improvements**
+
+- **Handling**: Improved handling and documentation.
+
+---
+
+# 1.0.1
+
+_Released 2022-10-05_
+
+**New Features**
+
+- **Automatic Cleanup**: Added scheduled task for automatic session cleanup.
+
+---
+
+# 1.0.0
+
+_Released 2022-10-05_
+
+**New Features**
+
+- **Initial Release**: Initial version of the plugin.
+- Global discount for product exports.
+- Session-based discount display in storefront.
+- Support for Google Shopping, idealo, billiger.de.
