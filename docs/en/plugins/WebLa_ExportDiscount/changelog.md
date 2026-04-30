@@ -4,6 +4,16 @@ All notable changes for end users.
 
 ---
 
+# 5.1.2
+
+_Released 2026-04-30_
+
+**Bug Fixes**
+
+- Caching: pages reached via the price-comparison feed parameter `?source=...` are no longer stored in any HTTP cache (Shopware reverse proxy, Symfony HttpCache, external Varnish/CDN) or in Shopware's data-layer route cache. Previously these pages were cached per `source` token and never invalidated when the special price was edited in admin, so visitors could see the old price for hours until the cached entry expired. The cart was always correct because it recalculates live; only the rendered PDP was stale.
+
+---
+
 # 5.1.1
 
 _Released 2026-04-28_

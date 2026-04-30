@@ -4,6 +4,16 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 5.1.2
+
+_Veröffentlicht am 2026-04-30_
+
+**Fehlerbehebungen**
+
+- Caching: Seiten mit dem Preisvergleichs-Parameter `?source=...` werden nicht mehr in HTTP-Caches (Shopware-Reverse-Proxy, Symfony HttpCache, externes Varnish/CDN) oder im Routen-Cache von Shopware gespeichert. Bisher wurden diese Seiten je `source`-Token gecached und beim Ändern des Sonderpreises im Backend nicht invalidiert. Besucher sahen daher stundenlang den alten Preis, bis der Cache ablief. Der Warenkorb war stets korrekt, da er live neu berechnet wird — nur die gerenderte Detailseite war veraltet.
+
+---
+
 # 5.1.1
 
 _Veröffentlicht am 2026-04-28_
