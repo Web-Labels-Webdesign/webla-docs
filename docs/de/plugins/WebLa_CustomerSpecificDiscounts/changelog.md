@@ -4,6 +4,16 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 1.5.11
+
+_Veröffentlicht am 2026-05-11_
+
+**Fehlerbehebungen**
+
+- **Fataler Fehler im Storefront unter Shopware 6.5 / 6.6**: Behebung von `ArgumentCountError: Too few arguments to function CacheSubscriber::__construct(), 0 passed and exactly 1 expected`. Der versionsspezifische Compiler-Pass hat die Abhängigkeit `CacheKeyService` nur für Shopware 6.7 injiziert; unter 6.5 und 6.6 wurde der Subscriber ohne Argumente registriert, wodurch das Storefront beim Cache-Aufbau abstürzte. Die Abhängigkeit wird nun für alle unterstützten Shopware-Versionen injiziert.
+
+---
+
 # 1.5.10
 
 _Veröffentlicht am 2026-04-24_
