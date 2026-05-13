@@ -4,6 +4,59 @@ All notable changes to the WebLa Subscription Plugin for end users.
 
 ---
 
+# 1.3.5
+
+_Released 2026-05-13_
+
+**New Features**
+
+- **Variant Subscription Inheritance**: A product variant now automatically inherits the main product's subscription options when it has none of its own. The admin product detail card shows the inheritance state explicitly with an "Override for this variant" action that clones the parent options into editable variant rows, and a "Revert to main product" action that drops the override and inherits again.
+
+**Bug Fixes**
+
+- **Variant Storefront PDP**: The subscription selector now appears on a variant's product detail page when the main product has subscription options configured. Previously the storefront only queried the variant's own options and showed nothing on variants.
+- **Variant Cart Validation**: Adding a variant subscription to the cart no longer drops the subscription payload because the matched option belongs to the parent product. The cart validator accepts either the variant's own option or one inherited from its parent.
+- **Per-Option Discount Semantics**: A subscription option whose "Discount (%)" is `0` or empty now applies no per-option discount in the storefront, cart, and renewal orders. The plugin's global `aboDiscountPercent` configuration still applies to cart-wide subscriptions but no longer fills in an empty per-option value.
+- **Buy-Widget Layout**: The quantity input and "Add to shopping cart" button stay on the same row (the Shopware default layout) when the subscription selector is rendered. The selector now sits on its own row above the buy controls.
+
+**Improvements**
+
+- One-time `Migration1742000000BackfillNullDiscountPercent` rewrites any pre-existing `NULL` per-option discount values to `0` so admin display and storefront behavior match without requiring a manual touch of every row.
+
+---
+
+# 1.3.4
+
+_Released 2026-05-13_
+
+**Bug Fixes**
+
+- **DAL Entity Field Mappings**: Aligned the entity classes (`SubscriptionEntity`, `SubscriptionItemEntity`, `SubscriptionOrderEntity`, `FreeItemEntity`) with the column names declared in their DAL definitions so the framework no longer reports missing reference-version-field properties.
+- **Mollie Webhook Response**: The Mollie webhook controller now returns a non-empty `200 OK` body. Mollie inspects only the status code, behaviour is unchanged.
+
+**Improvements**
+
+- **Storefront Heading Hierarchy**: Replaced bare `<h1>` – `<h6>` tags in the customer subscription portal templates with `<span class="h*">` equivalents so the plugin no longer introduces its own heading hierarchy on top of the shop theme.
+- **Accessible Anchors**: Added missing `title` attributes to anchor tags in the subscription portal for assistive technologies.
+
+---
+
+# 1.3.3
+
+_Released 2026-05-13_
+
+**Bug Fixes**
+
+- **Payment Method Filtering on Cart Page (Shopware 6.6)**: The cart page payment-method dropdown now hides subscription-only methods when no subscription is in the cart, and hides standard methods when a subscription is present. Previously the filter only ran on the confirm and edit-order pages, leaving the cart page dropdown unfiltered.
+- **Cart-wide Subscriptions Detected Correctly**: When the cart-wide subscription mode is active, payment-method filtering now recognises the cart as a subscription order. Prior detection used `_subscriptionOptionId` which is `null` for cart-wide subscriptions, so subscription-only methods were incorrectly hidden.
+- **Guest Cart Filtering**: Subscription-aware payment-method filtering now applies to guest carts as well. The SEPA-mandate filter still requires a logged-in customer.
+
+**Improvements**
+
+- **Product Detail Page Compatibility**: The subscription interval selector on the product detail page is now injected into a narrower, less commonly contested Twig block (`buy_widget_buy_product_buy_info`), reducing the chance that third-party plugins or themes override the buy widget without preserving the selector. Plugin template priority is raised so our extensions wrap default-priority extensions instead of being wrapped by them. The selector position shifts to between the quantity input and the buy button.
+
+---
+
 # 1.3.2
 
 _Released 2026-04-24_

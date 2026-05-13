@@ -4,6 +4,59 @@ Alle wichtigen Änderungen am WebLa Subscription Plugin für Endbenutzer.
 
 ---
 
+# 1.3.5
+
+_Veröffentlicht am 2026-05-13_
+
+**Neue Funktionen**
+
+- **Abonnement-Vererbung für Varianten**: Eine Produktvariante übernimmt die Abonnement-Optionen des Hauptprodukts jetzt automatisch, solange sie keine eigenen Optionen besitzt. Die Karte in der Produktdetailseite im Admin zeigt den Vererbungszustand klar an und bietet eine Aktion „Für diese Variante überschreiben", die die Optionen des Hauptprodukts in eigene, editierbare Zeilen kopiert, sowie eine Aktion „Auf Hauptprodukt zurücksetzen", die die Überschreibung wieder verwirft.
+
+**Fehlerbehebungen**
+
+- **Variantenanzeige in der Storefront**: Der Abonnement-Auswähler erscheint nun auch auf der Produktdetailseite einer Variante, wenn das Hauptprodukt Abonnement-Optionen konfiguriert hat. Bisher wurde ausschließlich nach den Optionen der Variante gesucht und auf Variantenseiten nichts angezeigt.
+- **Warenkorb-Validierung für Varianten**: Das Hinzufügen einer Varianten-Subscription in den Warenkorb verwirft die Subscription-Information nicht mehr, wenn die zugehörige Option dem Hauptprodukt gehört. Der Warenkorb-Validator akzeptiert nun sowohl die eigene Option der Variante als auch eine vererbte Option vom Hauptprodukt.
+- **Rabattsemantik pro Option**: Ein Abonnement, dessen Rabatt (%) auf `0` steht oder leer ist, wendet jetzt keinen Rabatt mehr in Storefront, Warenkorb und Verlängerungen an. Die globale Plugin-Konfiguration `aboDiscountPercent` greift weiterhin für warenkorbweite Abonnements, füllt aber keine leeren Werte pro Option mehr auf.
+- **Buy-Widget-Layout**: Mengeneingabe und „In den Warenkorb"-Button bleiben jetzt nebeneinander in derselben Zeile (Shopware-Standardlayout), auch wenn der Abonnement-Auswähler angezeigt wird. Der Auswähler liegt in einer eigenen Zeile darüber.
+
+**Verbesserungen**
+
+- Einmalige Migration `Migration1742000000BackfillNullDiscountPercent` setzt vorhandene `NULL`-Werte im Rabatt-Feld pro Option auf `0`, sodass Admin-Anzeige und Storefront-Verhalten ohne manuelles Nacharbeiten übereinstimmen.
+
+---
+
+# 1.3.4
+
+_Veröffentlicht am 2026-05-13_
+
+**Fehlerbehebungen**
+
+- **DAL-Entitätsfelder**: Die Entity-Klassen (`SubscriptionEntity`, `SubscriptionItemEntity`, `SubscriptionOrderEntity`, `FreeItemEntity`) wurden an die Spaltennamen ihrer DAL-Definitionen angeglichen. Das Framework meldet die fehlenden Reference-Version-Felder nicht mehr.
+- **Mollie-Webhook-Antwort**: Der Mollie-Webhook-Controller liefert jetzt einen nicht-leeren `200 OK`-Body. Mollie wertet ausschließlich den Statuscode aus, das Verhalten ändert sich nicht.
+
+**Verbesserungen**
+
+- **Überschriftenhierarchie im Storefront**: Bare `<h1>` – `<h6>`-Tags in den Vorlagen des Abonnement-Portals wurden durch `<span class="h*">` ersetzt, damit das Plugin keine eigene Überschriftenhierarchie über das Shop-Theme hinzufügt.
+- **Barrierefreie Links**: Fehlende `title`-Attribute an Anker-Tags im Abonnement-Portal wurden für Hilfstechnologien ergänzt.
+
+---
+
+# 1.3.3
+
+_Veröffentlicht am 2026-05-13_
+
+**Fehlerbehebungen**
+
+- **Zahlartenfilter im Warenkorb (Shopware 6.6)**: Die Zahlartenauswahl auf der Warenkorbseite blendet jetzt Abonnement-Zahlarten aus, wenn kein Abonnement im Warenkorb liegt — und Standard-Zahlarten, wenn ein Abonnement im Warenkorb ist. Bisher griff der Filter nur auf der Bestellabschluss- und Bestelländerungs-Seite, sodass die Warenkorb-Auswahl ungefiltert blieb.
+- **Korrekte Erkennung warenkorbweiter Abonnements**: Bei aktiviertem warenkorbweitem Abonnement wird der Warenkorb nun korrekt als Abonnement-Bestellung erkannt. Die vorherige Erkennung nutzte `_subscriptionOptionId`, das bei warenkorbweiten Abos `null` ist — Abonnement-Zahlarten wurden dadurch fälschlich ausgeblendet.
+- **Filterung im Gastwarenkorb**: Die abonnementabhängige Zahlartenfilterung greift jetzt auch im Gastwarenkorb. Der SEPA-Mandatsfilter setzt weiterhin einen eingeloggten Kunden voraus.
+
+**Verbesserungen**
+
+- **Kompatibilität auf der Produktdetailseite**: Der Abonnement-Intervallauswähler auf der Produktdetailseite wird nun in einen engeren, seltener von Drittanbietern überschriebenen Twig-Block (`buy_widget_buy_product_buy_info`) eingehängt. Dadurch sinkt das Risiko, dass andere Plugins oder Themes die Buy-Widget-Blöcke ohne `parent()` ersetzen und damit unseren Auswähler entfernen. Zusätzlich wird die Template-Priorität des Plugins erhöht, sodass unsere Erweiterungen Erweiterungen mit Standardpriorität ummanteln. Die Position des Auswählers verschiebt sich zwischen Mengenfeld und Kauf-Button.
+
+---
+
 # 1.3.2
 
 _Veröffentlicht am 2026-04-24_
