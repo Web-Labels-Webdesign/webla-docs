@@ -4,6 +4,16 @@ All notable changes for end users.
 
 ---
 
+# 1.5.12
+
+_Released 2026-05-12_
+
+**Bug Fixes**
+
+- **Empty "Targeted Customer Group Discounts" grid in admin on Shopware 6.5 / 6.6**: The list of customer-group discounts on the customer-group detail page stayed empty even when rows existed in the database. The override of the native customer-group detail component relied on a `customerGroupCriteria` computed property that only exists on Shopware 6.7+, so on 6.5 and 6.6 the `discounts` association was never requested. The plugin now wraps the `customerGroupRepository.get` call to attach the discounts associations on every Shopware version, and existing rows render again.
+
+---
+
 # 1.5.11
 
 _Released 2026-05-11_

@@ -4,6 +4,16 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 1.5.12
+
+_Veröffentlicht am 2026-05-12_
+
+**Fehlerbehebungen**
+
+- **Leere Liste „Gezielte Kundengruppen-Rabatte" in der Administration unter Shopware 6.5 / 6.6**: Die Liste der Kundengruppen-Rabatte auf der Kundengruppen-Detailseite blieb leer, obwohl Einträge in der Datenbank vorhanden waren. Das Override der nativen Kundengruppen-Detail-Komponente verwendete eine `customerGroupCriteria`-Computed-Property, die erst ab Shopware 6.7 existiert. Unter 6.5 und 6.6 wurde die `discounts`-Assoziation daher nie angefordert. Das Plugin umhüllt nun den Aufruf `customerGroupRepository.get`, um die Discounts-Assoziationen unter jeder Shopware-Version mitzuladen, sodass bestehende Einträge wieder angezeigt werden.
+
+---
+
 # 1.5.11
 
 _Veröffentlicht am 2026-05-11_
