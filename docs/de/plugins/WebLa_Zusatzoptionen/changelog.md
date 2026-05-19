@@ -4,6 +4,16 @@ Alle wichtigen Änderungen am Zusatzoptionen Plugin für Endbenutzer.
 
 ---
 
+# 5.4.2
+
+_Veröffentlicht am 2026-05-19_
+
+**Fehlerbehebungen**
+
+- **Storefront-Absturz nach Update auf 5.4.1**: Behebt einen kritischen Fehler, der die Storefront-Darstellung unter Shopware 6.6 unterbrach („Leider ist etwas schiefgelaufen"). Das Plugin übergab einen dynamischen, konfigurierbaren Icon-Namen an den Icon-Tag von Shopware, den Shopware 6.6 nur als festen, literalen Wert akzeptiert. Das konfigurierbare Icon des Beschreibungs-Tooltips wird jetzt so dargestellt, dass es sowohl unter Shopware 6.6 als auch 6.7 funktioniert.
+
+---
+
 # 5.4.1
 
 _Veröffentlicht am 2026-05-06_

@@ -79,7 +79,7 @@ plugins:
       de: Erweitern Sie Produkte mit konfigurierbaren Zusatzoptionen, individueller Preisgestaltung, Versandbeschränkungen und automatischer Zuweisung durch Produktströme für mehr Flexibilität.
       en: Add flexible additional options to products with custom pricing, shipping restrictions, and automated assignment via product streams for enhanced product configuration.
     requirements: Shopware 6.6–6.8, PHP 8.1+
-    version: "5.4.1"
+    version: "5.4.2"
   - id: WebLa_ContactFormFileUpload
     name:
       de: Kontaktformular – Datei-Upload

@@ -4,6 +4,16 @@ All notable changes to the Additional Options Plugin for end users.
 
 ---
 
+# 5.4.2
+
+_Released 2026-05-19_
+
+**Bug Fixes**
+
+- **Storefront Crash After Update to 5.4.1**: Fixed a critical error that broke storefront rendering ("Unfortunately something went wrong") on Shopware 6.6. The plugin passed a dynamic, configurable icon name to Shopware's icon tag, which Shopware 6.6 only accepts as a fixed literal value. The configurable description-tooltip icon is now rendered in a way that works on both Shopware 6.6 and 6.7.
+
+---
+
 # 5.4.1
 
 _Released 2026-05-06_
