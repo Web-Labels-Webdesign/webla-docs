@@ -4,6 +4,17 @@ All notable changes for end users.
 
 ---
 
+# 5.1.4
+
+_Released 2026-05-27_
+
+**Bug Fixes**
+
+- Skip `PartialEntity` instances in the product price calculator. Bundle plugins load products via `Criteria::addFields`, yielding partial entities without typed getters. The decorator previously threw `UndefinedMethodError` on `getTaxId()`, cascading to HTTP 500 on every code path resolving bundle items and saturating PHP-FPM workers until the shop became unreachable. The decorated Shopware calculator now handles those products without recalculation.
+- Coexist with third-party plugins that type-hint the final `CachedSalesChannelContextFactory` on Shopware 6.7. The DI compiler pass now detects the conflicting type-hint and skips the decoration instead of aborting container compilation.
+
+---
+
 # 5.1.3
 
 _Released 2026-05-15_

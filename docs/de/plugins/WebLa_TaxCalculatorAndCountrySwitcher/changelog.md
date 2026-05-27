@@ -4,6 +4,17 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 5.1.4
+
+_Veröffentlicht am 2026-05-27_
+
+**Fehlerbehebungen**
+
+- Im Preisberechner werden `PartialEntity`-Instanzen jetzt übersprungen. Bundle-Plugins laden Produkte über `Criteria::addFields` als Partial-Entities ohne typisierte Getter. Der Dekorator warf zuvor `UndefinedMethodError` beim Aufruf von `getTaxId()` — was alle Code-Pfade rund um Bundle-Artikel auf HTTP 500 laufen ließ, die PHP-FPM-Worker auslastete und schließlich den gesamten Shop unerreichbar machte. Der dekorierte Shopware-Berechner verarbeitet diese Produkte jetzt ohne Neuberechnung.
+- Konflikt mit Drittanbieter-Plugins behoben, die auf Shopware 6.7 den finalen `CachedSalesChannelContextFactory`-Typ als Type-Hint verwenden. Der DI-Compiler-Pass erkennt jetzt den kollidierenden Type-Hint und überspringt die Dekoration, statt die Container-Kompilierung abzubrechen.
+
+---
+
 # 5.1.3
 
 _Veröffentlicht am 2026-05-15_

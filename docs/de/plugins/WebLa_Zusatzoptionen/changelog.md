@@ -4,6 +4,22 @@ Alle wichtigen Änderungen am Zusatzoptionen Plugin für Endbenutzer.
 
 ---
 
+# 5.4.3
+
+_Veröffentlicht am 2026-05-27_
+
+**Fehlerbehebungen**
+
+- **Preisaufschaukeln im Warenkorb beim Umschalten von Optionen**: Behebt ein Problem, bei dem das wiederholte An- und Abwählen einer Option im Warenkorb dazu führte, dass der Preis des Mutterprodukts mit jedem Durchlauf wuchs (z. B. 849,00 → 948,90 → 1.048,80). Das Entfernen der letzten Option aus einer Warenkorbposition setzt den Preis des Mutterprodukts jetzt wieder korrekt auf den Basispreis zurück, sodass ein erneutes Hinzufügen den Optionspreis nicht mehr auf einen bereits erhöhten Gesamtwert addiert.
+
+**Verbesserungen**
+
+- **Zugängliche Akkordeon-Überschriften**: Die wörtliche `<h2>`-Auszeichnung rund um Optionsgruppen-Titel in der Storefront wurde durch einen Container mit Heading-Rolle ersetzt. Damit verschwindet eine ungewollte Überschrift aus der Dokumentstruktur, während Bootstrap-Akkordeon-Styling und Screenreader-Semantik erhalten bleiben.
+- **Indexierung der AJAX-Endpunkte**: Alle Antworten der Option-Handler- und Option-Verfügbarkeits-Endpunkte senden jetzt `X-Robots-Tag: noindex, nofollow`, damit sie nicht versehentlich in Suchmaschinen-Indizes auftauchen.
+- **Plugin-Anzeigename**: Der Anzeigename des Plugins wurde auf „Produkt Zusatzoptionen" / „Product Additional Options" angepasst (das überflüssige Suffix „Plugin" entfernt), passend zu den Namensrichtlinien des Shopware Stores.
+
+---
+
 # 5.4.2
 
 _Veröffentlicht am 2026-05-19_

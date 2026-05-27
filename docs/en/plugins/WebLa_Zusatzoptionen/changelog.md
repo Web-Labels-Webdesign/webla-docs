@@ -4,6 +4,22 @@ All notable changes to the Additional Options Plugin for end users.
 
 ---
 
+# 5.4.3
+
+_Released 2026-05-27_
+
+**Bug Fixes**
+
+- **Cart Price Accumulation When Toggling Options**: Fixed an issue where re-toggling an option in the cart caused the parent product's price to grow with each cycle (e.g. 849,00 -> 948,90 -> 1048,80). Removing the last option from a cart line item now correctly resets the parent product's price to its base value, so re-adding the option no longer stacks the option price on top of an already inflated total.
+
+**Improvements**
+
+- **Accessible Accordion Headings**: Replaced literal `<h2>` markup around option-set titles in the storefront with a heading-role container, removing an unintended document-outline heading while preserving Bootstrap accordion styling and screen-reader semantics.
+- **AJAX Endpoint Indexing**: Added `X-Robots-Tag: noindex, nofollow` to all responses from the option handler and option-availability endpoints so they cannot accidentally appear in search-engine indexes.
+- **Plugin Display Name**: Cleaned up the plugin's display name to "Produkt Zusatzoptionen" / "Product Additional Options" (removed the redundant "Plugin" suffix) to align with the Shopware Store naming guidelines.
+
+---
+
 # 5.4.2
 
 _Released 2026-05-19_

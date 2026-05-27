@@ -79,7 +79,7 @@ plugins:
       de: Erweitern Sie Produkte mit konfigurierbaren Zusatzoptionen, individueller Preisgestaltung, Versandbeschränkungen und automatischer Zuweisung durch Produktströme für mehr Flexibilität.
       en: Add flexible additional options to products with custom pricing, shipping restrictions, and automated assignment via product streams for enhanced product configuration.
     requirements: Shopware 6.6–6.8, PHP 8.1+
-    version: "5.4.2"
+    version: "5.4.3"
   - id: WebLa_ContactFormFileUpload
     name:
       de: Kontaktformular – Datei-Upload
@@ -151,7 +151,7 @@ plugins:
       de: Berechnet Produktsteuern und Versandkosten für Besucher aus anderen Ländern neu und ergänzt die Storefront um einen Länderumschalter im Header. Unterstützt Shopware 6.6 und 6.7.
       en: Recalculates product taxes and shipping costs for visitors from other countries and adds a storefront country switcher. Unified codebase for SW 6.6 and 6.7.
     requirements: Shopware 6.6–6.7, PHP 8.2+
-    version: "5.1.3"
+    version: "5.1.4"
   - id: WebLa_ImageReviews
     name:
       de: Bilder in Produktbewertungen
