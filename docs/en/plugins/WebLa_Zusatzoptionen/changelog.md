@@ -4,6 +4,17 @@ All notable changes to the Additional Options Plugin for end users.
 
 ---
 
+# 5.4.4
+
+_Released 2026-05-27_
+
+**Bug Fixes**
+
+- **Promotion Targets Wrong Cart Line Item**: Fixed an issue where the "10% off the most expensive item" cart promotion picked the wrong cart line item when one of the line items carried an additional option (e.g. an insurance). The promotion now ranks line items by the customer-visible total (base product + selected option) just like the cart display, so the truly most expensive item is selected — while the option price itself remains excluded from the discount basis as before.
+- **Stackable Flag No Longer Mutated During Discount Calculation**: Fixed a side effect in the promotion calculator that turned other cart line items non-stackable while processing a discount. This could cause a second promotion in the same cart to skip valid line items.
+
+---
+
 # 5.4.3
 
 _Released 2026-05-27_

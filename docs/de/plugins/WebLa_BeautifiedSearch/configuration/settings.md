@@ -101,6 +101,22 @@ Diese Einstellungen steuern das Erscheinungsbild des Such-Overlays und welche In
 
 ---
 
+### Anzahl Produkte im Suggest-Overlay
+
+| Eigenschaft      | Wert    |
+| ---------------- | ------- |
+| **Typ**          | Auswahl |
+| **Standard**     | 10      |
+| **Erforderlich** | Nein    |
+
+**Beschreibung**: Maximale Anzahl der im Suggest-Overlay geladenen Produkte. Sobald die Suche mehr Treffer hat als dieses Limit, erscheint unter dem Produktraster ein "Alle Ergebnisse anzeigen"-Button, der zur vollständigen Suchergebnisseite verlinkt.
+
+**Optionen**: `10`, `20`, `30`, `50`
+
+**Anwendungsbeispiel**: Belassen Sie den Standard 10 für ein kompaktes, schnelles Overlay. Erhöhen Sie auf 20 oder 30, wenn Ihre Kunden direkt mehr Treffer sehen sollen, ohne das Overlay verlassen zu müssen. Höhere Limits erhöhen die Suchabfragelast leicht — für stark frequentierte Shops nahe am Standard bleiben.
+
+---
+
 ### Box-Layout
 
 | Eigenschaft      | Wert    |
@@ -234,6 +250,7 @@ Alle Einstellungen können pro Verkaufskanal individuell konfiguriert werden.
 | Blog Suche aktivieren                     | Pro Verkaufskanal  |
 | Breite des Suche-Overlays                 | Pro Verkaufskanal  |
 | Anzahl Produkte pro Spalte                | Pro Verkaufskanal  |
+| Anzahl Produkte im Suggest-Overlay        | Pro Verkaufskanal  |
 | Box-Layout                                | Pro Verkaufskanal  |
 | Zeige Kategoriebilder                     | Pro Verkaufskanal  |
 | Zeige Herstellerbilder                    | Pro Verkaufskanal  |

@@ -4,6 +4,17 @@ Alle wichtigen Änderungen am Zusatzoptionen Plugin für Endbenutzer.
 
 ---
 
+# 5.4.4
+
+_Veröffentlicht am 2026-05-27_
+
+**Fehlerbehebungen**
+
+- **Aktionsrabatt traf die falsche Warenkorbposition**: Behebt ein Problem, bei dem die Warenkorb-Aktion „10 % Rabatt auf den teuersten Artikel" auf die falsche Position angewendet wurde, sobald eine Position eine Zusatzoption (z. B. eine Versicherung) enthielt. Die Aktion vergleicht die Positionen jetzt anhand des kundensichtbaren Gesamtpreises (Grundprodukt + gewählte Option) — genau wie er im Warenkorb steht — sodass tatsächlich die teuerste Position rabattiert wird. Der Optionspreis selbst bleibt wie bisher vom Rabatt ausgenommen.
+- **Stackable-Status wird während der Rabattberechnung nicht mehr verändert**: Behebt einen Nebeneffekt im Promotion-Calculator, der andere Warenkorbpositionen während der Rabattberechnung als nicht-stackable markierte. Eine zweite Aktion im selben Warenkorb konnte dadurch gültige Positionen übergehen.
+
+---
+
 # 5.4.3
 
 _Veröffentlicht am 2026-05-27_

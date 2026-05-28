@@ -1,158 +1,194 @@
-# Changelog
+**Changelog — Search as Overlay**
 
-All notable changes to the "Search as Overlay" plugin for end users.
-
----
-
-## [4.2.2] - 2026-02-03
-
-### :bug: Bug Fixes
-
-- **Category Search**: Fixed inactive categories appearing in search results, which caused 404 errors when clicked
+All notable changes to the plugin for end users.
 
 ---
 
-## [4.2.1] - 2026-02-02
+# 4.3.0
 
-### :bug: Bug Fixes
+_Released 2026-05-27_
 
-- **LibSass Compatibility**: Fixed SCSS compilation error on Shopware 6.5 by replacing `sass:color` module's `color.adjust()` with `lighten()` function for LibSass compatibility
+**New Features**
 
----
+- Configurable product limit in the suggest overlay: choose 10, 20, 30, or 50 products via the new "Number of products in suggest overlay" setting (default 10)
+- "Show all results" button below the product grid that links to the full search results page whenever more results are available than fit into the overlay
 
-## [4.2.0] - 2026-02-02
+**Bug Fixes**
 
-### :sparkles: New Features
-
-- **Modern View Mode**: New "View Mode" setting with two options:
-  - **Standard**: Classic tabbed interface (default)
-  - **Modern**: Side-by-side layout on desktop with products on the left and categories/blog in a sidebar on the right. Mobile devices fall back to tabbed interface.
-
-### :recycle: Improvements
-
-- **Refactored Tab Templates**: Extracted tab navigation and content into reusable partial templates for better maintainability
-- **Fixed Duplicate Blog Tab**: Resolved HTML validation issue when both NetzP and H1Web blog plugins are active
+- Mobile view: the suggest overlay no longer overflows the viewport on small screens. The configured overlay width is now treated as a maximum width so the overlay fills the screen on mobile and is capped at the configured value on desktop
 
 ---
 
-## [4.1.0] - 2026-01-30
+# 4.2.2
 
-### :sparkles: New Features
+_Released 2026-02-03_
 
-- **Category Sidebar on Search Results Page**: New option to replace the filter panel on the search results page with matching category results. Enable via "Replace sidebar filters with category results" in plugin settings.
-- **Configurable Category Limit**: Set the maximum number of categories displayed in the sidebar (5, 10, 15, or 20)
+**Bug Fixes**
 
-### :recycle: Improvements
-
-- **Refactored Category Search**: Extracted category search logic into reusable `CategorySearchService` for better code organization
+- Category Search: inactive categories no longer appear in search results, which previously caused 404 errors when clicked
 
 ---
 
-## [4.0.0] - 2026-01-30
+# 4.2.1
 
-### :boom: Important Changes
+_Released 2026-02-02_
 
-- **Unified Multi-Version Architecture**: The plugin now supports Shopware 6.5, 6.6, and 6.7 with a single codebase. You no longer need different plugin versions for different Shopware versions.
+**Bug Fixes**
 
-### :sparkles: New Features
+- LibSass Compatibility: fixed SCSS compilation error on Shopware 6.5 by replacing the `sass:color` module's `color.adjust()` with the `lighten()` function
 
-- **Complete Search Overlay Functionality**: Tabbed interface with products, categories, blog, and manufacturers
-- **Configurable Display**: Overlay width, column count, and box layout adjustable
-- **Extended Product Search**: Search by EAN, article number, and manufacturer number
+---
 
-### :recycle: Improvements
+# 4.2.0
+
+_Released 2026-02-02_
+
+**New Features**
+
+- Modern View Mode: new "View Mode" setting with two options:
+  - Standard: classic tabbed interface (default)
+  - Modern: side-by-side layout on desktop with products on the left and categories/blog in a sidebar on the right. Mobile devices fall back to the tabbed interface.
+
+**Improvements**
+
+- Refactored tab templates: extracted tab navigation and content into reusable partial templates for better maintainability
+- Fixed duplicate Blog tab: resolved HTML validation issue when both NetzP and H1Web blog plugins are active
+
+---
+
+# 4.1.0
+
+_Released 2026-01-30_
+
+**New Features**
+
+- Category sidebar on search results page: new option to replace the filter panel on the search results page with matching category results. Enable via "Replace sidebar filters with category results" in plugin settings.
+- Configurable category limit: set the maximum number of categories displayed in the sidebar (5, 10, 15, or 20)
+
+**Improvements**
+
+- Refactored category search: extracted category search logic into a reusable `CategorySearchService` for better code organization
+
+---
+
+# 4.0.0
+
+_Released 2026-01-30_
+
+**Breaking Changes**
+
+- Unified multi-version architecture: the plugin now supports Shopware 6.5, 6.6, and 6.7 with a single codebase. You no longer need different plugin versions for different Shopware versions.
+
+**New Features**
+
+- Complete search overlay functionality: tabbed interface with products, categories, blog, and manufacturers
+- Configurable display: overlay width, column count, and box layout adjustable
+- Extended product search: search by EAN, article number, and manufacturer number
+
+**Improvements**
 
 - Optimized build workflow for faster releases
 
 ---
 
-## [3.0.1] - 2026-01-13
+# 3.0.1
 
-### :bug: Bug Fixes
+_Released 2026-01-13_
 
-- **Manufacturer Search**: Fixed typo in variable name that could cause errors
-- **Stability**: Improved null check in SuggestPageSubscriber for more stable operation
+**Bug Fixes**
+
+- Manufacturer Search: fixed typo in variable name that could cause errors
+- Stability: improved null check in SuggestPageSubscriber for more stable operation
 
 ---
 
-## [3.0.0] - 2025-07-31
+# 3.0.0
 
-### :sparkles: New Features
+_Released 2025-07-31_
 
-- **Shopware 6.7 Support**: Full compatibility with Shopware 6.7
+**New Features**
 
-### :boom: Important Changes
+- Shopware 6.7 support: full compatibility with Shopware 6.7
+
+**Breaking Changes**
 
 - This version is specifically designed for Shopware 6.7
 
 ---
 
-## [2.0.5] - 2025-05-09
+# 2.0.5
 
-### :bug: Bug Fixes
+_Released 2025-05-09_
+
+**Bug Fixes**
 
 - Various bug fixes and stability improvements
 
 ---
 
-## [2.0.0] - 2024-12-27
+# 2.0.0
 
-### :sparkles: New Features
+_Released 2024-12-27_
 
-- **Shopware 6.6 Support**: Full compatibility with Shopware 6.6
+**New Features**
 
-### :boom: Important Changes
+- Shopware 6.6 support: full compatibility with Shopware 6.6
+
+**Breaking Changes**
 
 - This version is specifically designed for Shopware 6.6
 
 ---
 
-## [1.0.0] - 2024-02-09
+# 1.0.0
 
-### :sparkles: New Features
+_Released 2024-02-09_
 
-- **Initial Version**: First release of the plugin
-- **Enhanced Search Overlay**: Modern interface with tab navigation
-- **Category Search**: Integration of categories in search results
-- **Blog Article Search**: Support for NetzP Blog and H1 Web Blog
-- **Manufacturer Search**: Integration of manufacturers (with Shopware Commercial)
-- **Configurable Display**: Adjustable column count and layout options
+**New Features**
 
----
-
-## Version History Summary
-
-| Version | Release Date | Highlights                               |
-| ------- | ------------ | ---------------------------------------- |
-| 4.2.2   | 2026-02-03   | Fix inactive categories in search results |
-| 4.2.1   | 2026-02-02   | LibSass compatibility fix for Shopware 6.5 |
-| 4.2.0   | 2026-02-02   | Modern view mode with side-by-side layout |
-| 4.1.0   | 2026-01-30   | Category sidebar on search results page  |
-| 4.0.0   | 2026-01-30   | Multi-version architecture (6.5, 6.6, 6.7) |
-| 3.0.1   | 2026-01-13   | Bugfix for manufacturer search           |
-| 3.0.0   | 2025-07-31   | Shopware 6.7 support                     |
-| 2.0.5   | 2025-05-09   | Stability improvements                   |
-| 2.0.0   | 2024-12-27   | Shopware 6.6 support                     |
-| 1.0.0   | 2024-02-09   | Initial release                          |
+- Initial version: first release of the plugin
+- Enhanced search overlay: modern interface with tab navigation
+- Category search: integration of categories in search results
+- Blog article search: support for NetzP Blog and H1 Web Blog
+- Manufacturer search: integration of manufacturers (with Shopware Commercial)
+- Configurable display: adjustable column count and layout options
 
 ---
 
-## Upgrade Notes
+**Version History Summary**
 
-### Upgrading to Version 4.0.0
+| Version | Release Date | Highlights                                          |
+| ------- | ------------ | --------------------------------------------------- |
+| 4.3.0   | 2026-05-27   | Mobile overlay fix, configurable suggest limit + show-all link |
+| 4.2.2   | 2026-02-03   | Fix inactive categories in search results           |
+| 4.2.1   | 2026-02-02   | LibSass compatibility fix for Shopware 6.5          |
+| 4.2.0   | 2026-02-02   | Modern view mode with side-by-side layout           |
+| 4.1.0   | 2026-01-30   | Category sidebar on search results page             |
+| 4.0.0   | 2026-01-30   | Multi-version architecture (6.5, 6.6, 6.7)          |
+| 3.0.1   | 2026-01-13   | Bugfix for manufacturer search                      |
+| 3.0.0   | 2025-07-31   | Shopware 6.7 support                                |
+| 2.0.5   | 2025-05-09   | Stability improvements                              |
+| 2.0.0   | 2024-12-27   | Shopware 6.6 support                                |
+| 1.0.0   | 2024-02-09   | Initial release                                     |
+
+---
+
+**Upgrade Notes**
+
+**Upgrading to Version 4.0.0**
 
 Version 4.0.0 unifies the codebase for all Shopware 6 versions. Please note:
 
-1. **Uninstall old version**: First uninstall the existing plugin version
-2. **Install new version**: Install version 4.0.0
-3. **Check configuration**: Your settings may need to be reconfigured
-4. **Clear cache**: Clear all caches after the upgrade
+1. Uninstall the existing plugin version
+2. Install version 4.0.0
+3. Verify your settings — they may need to be reconfigured
+4. Clear all caches after the upgrade
 
-### Compatibility
+**Compatibility**
 
 | Plugin Version | Shopware Version | PHP Version |
 | -------------- | ---------------- | ----------- |
-| 4.0.0          | 6.5.0 - 6.7.x    | 8.1+        |
+| 4.0.0+         | 6.5.0 - 6.7.x    | 8.1+        |
 | 3.0.x          | 6.7.x            | 8.1+        |
 | 2.0.x          | 6.6.x            | 8.1+        |
 | 1.0.x          | 6.5.x            | 8.1+        |

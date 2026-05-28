@@ -101,6 +101,22 @@ These settings control the appearance of the search overlay and which content ty
 
 ---
 
+### Number of Products in Suggest Overlay
+
+| Property     | Value  |
+| ------------ | ------ |
+| **Type**     | Select |
+| **Default**  | 10     |
+| **Required** | No     |
+
+**Description**: Maximum number of products loaded into the suggest overlay. Whenever the search has more matches than this limit, a "Show all results" button appears below the product grid that links to the full search results page.
+
+**Options**: `10`, `20`, `30`, `50`
+
+**Example Use Case**: Keep the default of 10 if you want a compact, fast overlay. Raise to 20 or 30 if your customers benefit from seeing more matches directly without leaving the overlay. Higher limits slightly increase the search query load — for high-traffic shops, stay close to the default.
+
+---
+
 ### Box Layout
 
 | Property     | Value  |
@@ -234,6 +250,7 @@ All settings can be configured individually per sales channel.
 | Activate Blog Search                 | Per Sales Channel |
 | Width of the Search Overlay          | Per Sales Channel |
 | Number of Products per Column        | Per Sales Channel |
+| Number of Products in Suggest Overlay| Per Sales Channel |
 | Box Layout                           | Per Sales Channel |
 | Show Category Images                 | Per Sales Channel |
 | Show Manufacturer Images             | Per Sales Channel |
