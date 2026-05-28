@@ -1,34 +1,51 @@
-# Änderungsprotokoll
+**Änderungsprotokoll — SplitCommission**
 
-Alle wichtigen Änderungen an SplitCommission – Aufteilung der Einzelposten in Teile.
-
----
-
-## [5.0.0] – 2026-03-10
-
-### ✨ Neue Funktionen
-
-- **Shopware 6.6 Unterstützung**: Das Plugin ist jetzt kompatibel mit Shopware 6.6 und 6.7 – eine einzige Plugin-Version funktioniert in beiden Shopware-Versionen.
-
-### 🔧 Verbesserungen
-
-- **Vereinfachte Pflege**: Ein einheitlicher Code-Stand für beide Shopware-Versionen – keine separaten Branches mehr nötig.
-- **Modernisierter Release-Prozess**: Neue Versionen werden zuverlässiger und schneller über den Shopware Store bereitgestellt.
-
-### Kompatibilität
-
-| Plugin-Version | Shopware-Version | PHP-Version |
-| -------------- | ---------------- | ----------- |
-| 5.x            | 6.6.0 – 6.7.x   | 8.2+        |
-| 4.x (legacy)   | 6.7.0 – 6.7.x   | 8.2+        |
+Alle wichtigen Änderungen für Endanwender.
 
 ---
 
-## [4.0.0] – 2025-07-28
+# 5.0.1
 
-### ✨ Neue Funktionen
+_Veröffentlicht am 2026-05-28_
 
-- **Initiale stabile Version** für Shopware 6.7.
+**Verbesserungen**
+
+- Shopware Store-Eintrag aktualisiert – Extension-Icon, Beschreibungen und Metadaten werden jetzt korrekt angezeigt.
+
+---
+
+# 5.0.0
+
+_Veröffentlicht am 2026-05-28_
+
+**Neue Funktionen**
+
+- Shopware 6.6 Unterstützung – eine Plugin-Version funktioniert jetzt auf Shopware 6.6 und 6.7.
+
+**Verbesserungen**
+
+- Einheitlicher Code-Stand für Shopware 6.6 und 6.7 – keine separaten Branches mehr nötig.
+- Modernisierter Release-Prozess – schnellere und zuverlässigere Auslieferung über den Shopware Store.
+- Integrationsanleitung für Kommissionsfelder in Shopware E-Mail-Vorlagen ergänzt (Deutsch und Englisch).
+
+**Kompatibilität**
+
+- Plugin 5.x: Shopware 6.6.0–6.7.x, PHP 8.2+
+- Plugin 4.x (Legacy): Shopware 6.7.0–6.7.x, PHP 8.2+
+
+**Upgrade-Hinweise**
+
+- Keine Konfigurationsänderungen erforderlich. Bestehende Einstellungen bleiben erhalten. Installation über Plugin Manager oder Shopware Store und Cache leeren.
+
+---
+
+# 4.0.0
+
+_Veröffentlicht am 2025-07-28_
+
+**Neue Funktionen**
+
+- Initiale stabile Version für Shopware 6.7.
 - Kommissionskommentarfeld auf der Produktdetailseite.
 - Aufteilungsfunktion im Warenkorb und Off-Canvas-Warenkorb.
 - Inline-Bearbeitung von Kommissionskommentaren im Warenkorb.
@@ -37,21 +54,3 @@ Alle wichtigen Änderungen an SplitCommission – Aufteilung der Einzelposten in
 - Anzeige von Kommissionskommentaren in der Admin-Bestellübersicht.
 - Staffelpreiserhalt bei aufgeteilten Positionen.
 - Aktivierbar global oder pro Produkt (per Custom Field).
-
----
-
-## Upgrade-Hinweise
-
-### Upgrade von 4.x auf 5.0.0
-
-Das Upgrade ist nahtlos:
-- Keine Konfigurationsänderungen erforderlich.
-- Alle bestehenden Einstellungen bleiben erhalten.
-- Installieren Sie die neue Version über den Plugin Manager oder den Shopware Store und leeren Sie den Cache.
-
-### Kompatibilitätsübersicht
-
-| Plugin-Version | Shopware-Version | PHP-Version |
-| -------------- | ---------------- | ----------- |
-| 5.x            | 6.6.0 – 6.7.x   | 8.2+        |
-| 4.x (legacy)   | 6.7.0 – 6.7.x   | 8.2+        |
