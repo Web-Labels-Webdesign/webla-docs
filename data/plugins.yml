@@ -97,7 +97,7 @@ plugins:
       de: Interaktives mehrstufiges Kategorie-Dropdown für Shopware 6 Erlebniswelten. Führt Kunden schnell durch tiefe Kategoriestrukturen – ideal für Fahrzeugauswahl und Druckerzubehör.
       en: Interactive multi-level category dropdown for Shopware 6 Shopping Experiences. Guides customers through deep category structures – perfect for vehicle selectors and printer supplies.
     requirements: Shopware 6.6–6.8, PHP 8.1+
-    version: "5.0.4"
+    version: "5.0.5"
   - id: WebLa_DeliveryDateSelector
     name:
       de: Wunsch-Lieferdatum für Kunden
@@ -115,7 +115,7 @@ plugins:
       de: Ermöglicht Kunden, Warenkorb-Positionen mit individuellen Kommissionskommentaren zu versehen und in separate Teile aufzuteilen – bei vollem Erhalt der Staffelpreise.
       en: Allows customers to add individual commission notes to cart line items and split them into separate positions — while fully preserving tiered/bulk pricing.
     requirements: Shopware 6.6–6.8, PHP 8.1+
-    version: "5.0.1"
+    version: "5.1.1"
   - id: WebLa_UltimativeBundlePlugin
     name:
       de: Ultimative Bundle Plugin

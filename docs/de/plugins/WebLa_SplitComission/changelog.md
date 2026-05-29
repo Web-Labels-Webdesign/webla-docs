@@ -4,6 +4,35 @@ Alle wichtigen Änderungen für Endanwender.
 
 ---
 
+# 5.1.1
+
+_Veröffentlicht am 2026-05-29_
+
+**Fehlerbehebungen**
+
+- Das Kommissionskommentar-Feld wurde unter Shopware 6.7 nicht auf der Produktseite angezeigt. Es wird nun wieder korrekt dargestellt (Shopware 6.7 hat die Produkt-Buy-Widget-Templates verschoben).
+- Beim Aufteilen einer Warenkorbposition konnte die falsche Position betroffen sein oder ein Fehler auftreten, wenn mehrere Positionen aufteilbar waren. Die Aufteilung betrifft jetzt immer die ausgelöste Position und schlägt nicht mehr fehl.
+
+**Verbesserungen**
+
+- „Aktiv für alle Produkte" zeigt das Kommentarfeld jetzt wie vorgesehen bei jedem Produkt an, ohne dass zusätzlich der Schalter pro Produkt gesetzt werden muss.
+
+---
+
+# 5.1.0
+
+_Veröffentlicht am 2026-05-29_
+
+**Neue Funktionen**
+
+- Kommissionskommentare in der Wunschliste – wenn das Plugin PremsWishlist installiert ist, werden am Produkt eingegebene Kommissionskommentare jetzt in die Wunschliste übernommen und dort beim Produkt angezeigt. Aktivierbar in den Plugin-Einstellungen („Kommissionskommentare in die Wunschliste übernehmen").
+
+**Kompatibilität**
+
+- Optionale Integration. Erfordert das Plugin PremsWishlist und Shopware 6.7. Ohne PremsWishlist verhält sich das Plugin wie bisher.
+
+---
+
 # 5.0.1
 
 _Veröffentlicht am 2026-05-28_

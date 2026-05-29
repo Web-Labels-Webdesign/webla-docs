@@ -4,6 +4,35 @@ All notable changes for end users.
 
 ---
 
+# 5.1.1
+
+_Released 2026-05-29_
+
+**Bug Fixes**
+
+- The commission comment field did not appear on the product page in Shopware 6.7. It now renders correctly again (Shopware 6.7 moved the product buy-widget templates).
+- Splitting a cart item into parts could target the wrong item or fail with an error when several items were splittable. Splitting now always applies to the item it was triggered on and no longer errors.
+
+**Improvements**
+
+- "Active for all products" now shows the comment field on every product as intended, without also requiring the per-product switch.
+
+---
+
+# 5.1.0
+
+_Released 2026-05-29_
+
+**New Features**
+
+- Wishlist commission notes — when the PremsWishlist plugin is installed, commission comments entered on a product are now carried over to the wishlist and shown next to the product. Enable it under the plugin settings ("Carry commission notes into the wishlist").
+
+**Compatibility**
+
+- Optional integration. Requires the PremsWishlist plugin and Shopware 6.7. Without PremsWishlist the plugin behaves exactly as before.
+
+---
+
 # 5.0.1
 
 _Released 2026-05-28_
