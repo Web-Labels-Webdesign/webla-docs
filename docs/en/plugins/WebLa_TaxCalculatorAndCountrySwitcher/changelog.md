@@ -4,6 +4,16 @@ All notable changes for end users.
 
 ---
 
+# 5.1.5
+
+_Released 2026-05-28_
+
+**Bug Fixes**
+
+- Prevent storefront crash after plugin update when other plugins or Shopware itself contain dormant service classes referencing missing interfaces (e.g. APIs removed in Shopware 6.7, or optional dependencies not installed in the shop's vendor directory such as `nikic/php-parser` used by `symfony/translation`). The internal compatibility compiler pass now silently skips service definitions whose class cannot be loaded, instead of aborting container compilation with a fatal `ClassNotFoundError` that took the entire storefront down after the plugin update completed.
+
+---
+
 # 5.1.4
 
 _Released 2026-05-27_

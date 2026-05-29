@@ -97,7 +97,7 @@ plugins:
       de: Interaktives mehrstufiges Kategorie-Dropdown für Shopware 6 Erlebniswelten. Führt Kunden schnell durch tiefe Kategoriestrukturen – ideal für Fahrzeugauswahl und Druckerzubehör.
       en: Interactive multi-level category dropdown for Shopware 6 Shopping Experiences. Guides customers through deep category structures – perfect for vehicle selectors and printer supplies.
     requirements: Shopware 6.6–6.8, PHP 8.1+
-    version: "5.0.3"
+    version: "5.0.4"
   - id: WebLa_DeliveryDateSelector
     name:
       de: Wunsch-Lieferdatum für Kunden
@@ -151,7 +151,7 @@ plugins:
       de: Berechnet Produktsteuern und Versandkosten für Besucher aus anderen Ländern neu und ergänzt die Storefront um einen Länderumschalter im Header. Unterstützt Shopware 6.6 und 6.7.
       en: Recalculates product taxes and shipping costs for visitors from other countries and adds a storefront country switcher. Unified codebase for SW 6.6 and 6.7.
     requirements: Shopware 6.6–6.7, PHP 8.2+
-    version: "5.1.4"
+    version: "5.1.5"
   - id: WebLa_ImageReviews
     name:
       de: Bilder in Produktbewertungen

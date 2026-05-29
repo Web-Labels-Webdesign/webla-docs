@@ -1,63 +1,59 @@
-# Changelog
+**Changelog — Category Quick Filter**
 
-All notable changes to the **Category Quick Filter** for end users.
-
----
-
-## [5.0.3] – 2026-04-02
-
-### 🐛 Bug Fixes
-
-- **Top categories not highlighted**: Replaced CSS-based highlighting on native `<option>` elements (unsupported in Chrome, Edge, Safari) with cross-browser `<optgroup>` grouping. Top categories now appear in a clearly labeled "Top" group at the top of the dropdown.
+All notable changes for end users.
 
 ---
 
-## [5.0.2] – 2026-03-25
+# 5.0.4
 
-### 🐛 Bug Fixes
+_Released 2026-05-28_
 
-- **Shopware 6.6.8 compatibility**: Fixed Twig injection on older Shopware 6.6.x versions (e.g. 6.6.8) where the `controller.service_arguments` tag alone did not auto-inject Twig. An explicit `setTwig` call is now applied via the version-specific compatibility layer.
+**Bug Fixes**
 
----
-
-## [5.0.1] – 2026-03-25
-
-### 🐛 Bug Fixes
-
-- **Shopware 6.6 Twig injection**: Fixed a crash where the controller threw a `StorefrontException` because Twig was not injected. The controller now uses proper constructor injection with the `controller.service_arguments` tag, compatible with both Shopware 6.6 and 6.7.
+- Storefront plugin failed to initialize with `TypeError: t is not a constructor` when the plugin bundle evaluated before the Shopware Storefront bundle had defined `window.PluginBaseClass`. The plugin class is now created lazily, after both `window.PluginManager` and `window.PluginBaseClass` are available.
 
 ---
 
-## [5.0.0] – 2026-03-04
+# 5.0.3
 
-### ✨ New Features
+_Released 2026-04-02_
 
-- **Shopware 6.7 support**: The plugin is now fully compatible with Shopware 6.7.x.
+**Bug Fixes**
 
-### 🔧 Improvements
-
-- **Improved compatibility**: An internal mechanism for automatic Shopware version detection ensures smooth operation on both 6.6.x and 6.7.x.
-- **Modernized JavaScript**: The storefront widget has been migrated to a standalone, self-contained approach – better performance and no conflicts with other plugins.
-- **Code quality**: All quality checks (PHPStan, ESLint) pass; the code meets the latest Shopware standards.
+- Top categories not highlighted: replaced CSS-based highlighting on native `<option>` elements (unsupported in Chrome, Edge, Safari) with cross-browser `<optgroup>` grouping. Top categories now appear in a clearly labeled "Top" group at the top of the dropdown.
 
 ---
 
-## Version History Summary
+# 5.0.2
 
-| Version | Highlights                                         |
-| ------- | -------------------------------------------------- |
-| 5.0.3   | Fix top categories highlighting (cross-browser)    |
-| 5.0.2   | Fix Twig injection on older Shopware 6.6.x         |
-| 5.0.1   | Fix Twig injection crash on Shopware 6.6           |
-| 5.0.0   | Shopware 6.7 support, code modernization           |
+_Released 2026-03-25_
+
+**Bug Fixes**
+
+- Shopware 6.6.8 compatibility: fixed Twig injection on older Shopware 6.6.x versions (e.g. 6.6.8) where the `controller.service_arguments` tag alone did not auto-inject Twig. An explicit `setTwig` call is now applied via the version-specific compatibility layer.
 
 ---
 
-## Compatibility
+# 5.0.1
 
-| Plugin Version | Shopware Version | PHP Version |
-| -------------- | ---------------- | ----------- |
-| 5.0.3          | 6.6.x – 6.7.x    | 8.2+        |
-| 5.0.2          | 6.6.x – 6.7.x    | 8.2+        |
-| 5.0.1          | 6.6.x – 6.7.x    | 8.2+        |
-| 5.0.0          | 6.6.x – 6.7.x    | 8.2+        |
+_Released 2026-03-25_
+
+**Bug Fixes**
+
+- Shopware 6.6 Twig injection: fixed a crash where the controller threw a `StorefrontException` because Twig was not injected. The controller now uses proper constructor injection with the `controller.service_arguments` tag, compatible with both Shopware 6.6 and 6.7.
+
+---
+
+# 5.0.0
+
+_Released 2026-03-04_
+
+**New Features**
+
+- Shopware 6.7 support: the plugin is now fully compatible with Shopware 6.7.x.
+
+**Improvements**
+
+- Improved compatibility: an internal mechanism for automatic Shopware version detection ensures smooth operation on both 6.6.x and 6.7.x.
+- Modernized JavaScript: the storefront widget has been migrated to a standalone, self-contained approach – better performance and no conflicts with other plugins.
+- Code quality: all quality checks (PHPStan, ESLint) pass; the code meets the latest Shopware standards.

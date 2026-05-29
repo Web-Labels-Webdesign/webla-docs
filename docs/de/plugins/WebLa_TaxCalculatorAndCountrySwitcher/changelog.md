@@ -4,6 +4,16 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 5.1.5
+
+_Veröffentlicht am 2026-05-28_
+
+**Fehlerbehebungen**
+
+- Storefront-Absturz nach Plugin-Update behoben, der auftrat wenn andere Plugins oder Shopware selbst inaktive Service-Klassen mit Verweisen auf fehlende Interfaces enthalten (z. B. in Shopware 6.7 entfernte APIs, oder optionale Pakete die im Shop-Vendor nicht installiert sind wie `nikic/php-parser` aus `symfony/translation`). Der interne Kompatibilitäts-Compiler-Pass überspringt solche Service-Definitionen, deren Klasse sich nicht laden lässt, jetzt still — statt die Container-Kompilierung mit einem fatalen `ClassNotFoundError` abzubrechen, der die gesamte Storefront nach abgeschlossenem Plugin-Update lahmlegte.
+
+---
+
 # 5.1.4
 
 _Veröffentlicht am 2026-05-27_
