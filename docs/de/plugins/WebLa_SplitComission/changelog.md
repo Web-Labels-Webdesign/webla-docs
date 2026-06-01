@@ -4,6 +4,16 @@ Alle wichtigen Änderungen für Endanwender.
 
 ---
 
+# 5.1.2
+
+_Veröffentlicht am 2026-06-01_
+
+**Fehlerbehebungen**
+
+- Das Hinzufügen eines Produkts ohne die Kommissions-Zusatzfelder zum Warenkorb löst keine Warnung mehr aus. Solche Produkte sowie nicht mehr ladbare Produkte werden jetzt korrekt behandelt.
+
+---
+
 # 5.1.1
 
 _Veröffentlicht am 2026-05-29_

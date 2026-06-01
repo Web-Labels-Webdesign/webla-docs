@@ -4,6 +4,16 @@ All notable changes for end users.
 
 ---
 
+# 5.1.2
+
+_Released 2026-06-01_
+
+**Bug Fixes**
+
+- Adding a product without the commission custom fields to the cart no longer triggers a warning. Such products, and products that can no longer be loaded, are now handled gracefully.
+
+---
+
 # 5.1.1
 
 _Released 2026-05-29_
