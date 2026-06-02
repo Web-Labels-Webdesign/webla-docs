@@ -4,6 +4,16 @@ Alle wichtigen Änderungen am Zusatzoptionen Plugin für Endbenutzer.
 
 ---
 
+# 5.4.6
+
+_Veröffentlicht am 2026-06-02_
+
+**Fehlerbehebungen**
+
+- **Duplikat-Bereinigung läuft jetzt zuverlässig**: Die in 5.4.5 eingeführte automatische Bereinigung doppelter Optionspreise lief als einmaliger Hintergrundauftrag, der durch das Plugin-Update ausgelöst wurde. In Shops ohne laufenden Task-Worker wurde dieser nie verarbeitet und nie erneut versucht, sodass die Duplikate nie entfernt wurden. Die Bereinigung läuft jetzt als wiederkehrende tägliche geplante Aufgabe, die von selbst fortgesetzt wird, bis der Shop vollständig bereinigt ist. Betroffene Shops werden so ohne manuelles Eingreifen bereinigt.
+
+---
+
 # 5.4.5
 
 _Veröffentlicht am 2026-06-01_

@@ -4,6 +4,16 @@ All notable changes to the Additional Options Plugin for end users.
 
 ---
 
+# 5.4.6
+
+_Released 2026-06-02_
+
+**Bug Fixes**
+
+- **Duplicate Cleanup Now Runs Reliably**: The automatic cleanup of duplicate option prices introduced in 5.4.5 ran as a one-off background job triggered by the plugin update. On shops without a running task worker it was never processed and never retried, so the duplicates were never removed. The cleanup now runs as a recurring daily scheduled task that resumes on its own until the shop is fully cleaned, so affected shops are healed without manual intervention.
+
+---
+
 # 5.4.5
 
 _Released 2026-06-01_
