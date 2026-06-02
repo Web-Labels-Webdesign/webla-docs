@@ -4,6 +4,22 @@ All notable changes to the Additional Options Plugin for end users.
 
 ---
 
+# 5.4.5
+
+_Released 2026-06-01_
+
+**Bug Fixes**
+
+- **Seeder Created Duplicate Option Prices**: Fixed the dynamic option seeder re-inserting the same option prices on every sync run, which could grow a single option to millions of price rows over time and slow down product pages and the cart. Prices are now written idempotently, and the seeder no longer re-syncs unchanged products on every scheduled run.
+- **Country-Specific Alternative Products**: Fixed alternative products configured per delivery country never being applied. Changing the delivery country now correctly swaps to the configured alternative product again.
+- **Automatic Cleanup of Existing Duplicates**: Existing duplicate option prices left by older versions are now removed automatically in the background after updating, without blocking the update or the storefront.
+
+**Improvements**
+
+- **Faster Product Detail Pages and Cart**: Option availability is now cached per customer context and product data is loaded in fewer queries, noticeably reducing product detail page load time, add-to-cart latency, and database load on shops with many options.
+
+---
+
 # 5.4.4
 
 _Released 2026-05-27_

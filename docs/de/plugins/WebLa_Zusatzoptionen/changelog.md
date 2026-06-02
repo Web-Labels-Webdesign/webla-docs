@@ -4,6 +4,22 @@ Alle wichtigen Änderungen am Zusatzoptionen Plugin für Endbenutzer.
 
 ---
 
+# 5.4.5
+
+_Veröffentlicht am 2026-06-01_
+
+**Fehlerbehebungen**
+
+- **Seeder legte doppelte Optionspreise an**: Behebt ein Problem, bei dem der dynamische Options-Seeder bei jedem Sync-Lauf dieselben Optionspreise erneut anlegte. Dadurch konnten einer einzelnen Option mit der Zeit Millionen von Preiszeilen anwachsen, was Produktseiten und Warenkorb verlangsamte. Preise werden jetzt idempotent geschrieben, und der Seeder synchronisiert unveränderte Produkte nicht mehr bei jedem geplanten Lauf neu.
+- **Länderspezifische Alternativprodukte**: Behebt, dass pro Lieferland konfigurierte Alternativprodukte nie angewendet wurden. Ein Wechsel des Lieferlandes wechselt jetzt wieder korrekt zum konfigurierten Alternativprodukt.
+- **Automatische Bereinigung vorhandener Duplikate**: Vorhandene doppelte Optionspreise aus älteren Versionen werden nach dem Update automatisch im Hintergrund entfernt, ohne das Update oder die Storefront zu blockieren.
+
+**Verbesserungen**
+
+- **Schnellere Produktdetailseiten und Warenkorb**: Die Optionsverfügbarkeit wird jetzt pro Kundenkontext zwischengespeichert und Produktdaten werden in weniger Datenbankabfragen geladen. Das reduziert spürbar die Ladezeit der Produktdetailseiten, die Wartezeit beim In-den-Warenkorb-Legen und die Datenbanklast in Shops mit vielen Optionen.
+
+---
+
 # 5.4.4
 
 _Veröffentlicht am 2026-05-27_
