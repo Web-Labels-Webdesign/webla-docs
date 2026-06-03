@@ -106,7 +106,7 @@ plugins:
       de: Wunschlieferdatum mit konfigurierbaren Pufferzeiten, automatischer Feiertags-Verwaltung je Bundesland und Berücksichtigung von Produkt-Lieferzeiten. Kompatibel mit Shopware 6.6 und 6.7.
       en: Preferred delivery date with configurable buffer times, automatic public holiday management per region and product delivery time calculation. Compatible with Shopware 6.6 and 6.7.
     requirements: Shopware 6.6–6.8, PHP 8.1+
-    version: "4.0.2"
+    version: "4.0.3"
   - id: WebLa_SplitComission
     name:
       de: SplitCommission – Aufteilung der Einzelposten in Teile

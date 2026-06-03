@@ -4,6 +4,16 @@ Alle wichtigen Änderungen am Plugin für Endbenutzer.
 
 ---
 
+# 4.0.3
+
+_Veröffentlicht am 2026-06-02_
+
+**Fehlerbehebungen**
+
+- Die geplante automatische Feiertagsaktualisierung wird nun tatsächlich wieder ausgeführt. Die Korrektur aus 4.0.2 griff nicht — die Hintergrundaufgabe zur Aktualisierung der gesetzlichen Feiertage wurde weiterhin mit dem Fehler "No handler for message" verworfen. Sie läuft jetzt wieder zuverlässig.
+
+---
+
 # 4.0.2
 
 _Veröffentlicht am 2026-06-01_

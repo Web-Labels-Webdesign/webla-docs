@@ -4,6 +4,16 @@ All notable changes to the plugin for end users.
 
 ---
 
+# 4.0.3
+
+_Released 2026-06-02_
+
+**Bug Fixes**
+
+- Actually fix the scheduled automatic holiday update. The fix shipped in 4.0.2 did not take effect — the background task that refreshes public holidays was still discarded with a "No handler for message" error. It now runs reliably again.
+
+---
+
 # 4.0.2
 
 _Released 2026-06-01_
