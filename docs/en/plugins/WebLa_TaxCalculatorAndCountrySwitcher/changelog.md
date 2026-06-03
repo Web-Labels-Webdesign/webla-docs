@@ -4,6 +4,16 @@ All notable changes for end users.
 
 ---
 
+# 5.1.6
+
+_Released 2026-06-03_
+
+**Bug Fixes**
+
+- Restore the country selection in the storefront header and the offcanvas (mobile) menu on Shopware 6.7. Shopware 6.7 loads the header and footer in separate, independently cached fragments and removed the old `page.header` template data, which left the country hint and the mobile country dropdown without their values. Both now read from the header pagelet directly, so the country switcher and the country hint message display correctly again on Shopware 6.7.
+
+---
+
 # 5.1.5
 
 _Released 2026-05-28_

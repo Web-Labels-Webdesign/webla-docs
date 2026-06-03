@@ -4,6 +4,16 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 5.1.6
+
+_Veröffentlicht am 2026-06-03_
+
+**Fehlerbehebungen**
+
+- Länderauswahl im Storefront-Header und im Offcanvas-Menü (mobil) unter Shopware 6.7 wiederhergestellt. Shopware 6.7 lädt Header und Footer in separaten, eigenständig gecachten Fragmenten und hat die bisherige Template-Variable `page.header` entfernt — dadurch fehlten dem Länder-Hinweis und dem mobilen Länder-Dropdown ihre Werte. Beide lesen die Daten jetzt direkt aus dem Header-Pagelet, sodass Länderschalter und Länder-Hinweis unter Shopware 6.7 wieder korrekt angezeigt werden.
+
+---
+
 # 5.1.5
 
 _Veröffentlicht am 2026-05-28_
