@@ -4,6 +4,17 @@ All notable changes for end users.
 
 ---
 
+# 5.1.7
+
+_Released 2026-06-04_
+
+**Bug Fixes**
+
+- Apply the net-based shipping cost adjustment per delivery country when the option is enabled for a specific sales channel. Previously the setting was only read from the global default, so a per-sales-channel configuration was ignored and shipping costs were shown as the plain configured gross regardless of the selected country.
+- Keep the net-based shipping cost adjustment when the AcrisPartialDeliveryCS plugin is active. That plugin recalculated each delivery after our calculator ran and overwrote the country-adjusted shipping cost; the adjusted deliveries are now marked so it preserves them.
+
+---
+
 # 5.1.6
 
 _Released 2026-06-03_

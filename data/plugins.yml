@@ -151,7 +151,7 @@ plugins:
       de: Berechnet Produktsteuern und Versandkosten für Besucher aus anderen Ländern neu und ergänzt die Storefront um einen Länderumschalter im Header. Unterstützt Shopware 6.6 und 6.7.
       en: Recalculates product taxes and shipping costs for visitors from other countries and adds a storefront country switcher. Unified codebase for SW 6.6 and 6.7.
     requirements: Shopware 6.6–6.7, PHP 8.2+
-    version: "5.1.6"
+    version: "5.1.7"
   - id: WebLa_ImageReviews
     name:
       de: Bilder in Produktbewertungen

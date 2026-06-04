@@ -4,6 +4,17 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 5.1.7
+
+_Veröffentlicht am 2026-06-04_
+
+**Fehlerbehebungen**
+
+- Die Versandkosten-Anpassung auf Netto-Basis je Lieferland wird jetzt auch angewendet, wenn die Option für einen einzelnen Verkaufskanal aktiviert ist. Zuvor wurde die Einstellung nur aus dem globalen Standardwert gelesen, sodass eine kanalspezifische Konfiguration ignoriert und die Versandkosten unabhängig vom gewählten Land als reiner Brutto-Betrag angezeigt wurden.
+- Die Netto-basierte Versandkosten-Anpassung bleibt jetzt erhalten, wenn das Plugin AcrisPartialDeliveryCS aktiv ist. Dieses Plugin berechnete jede Lieferung nach unserem Berechner neu und überschrieb die landesabhängig angepassten Versandkosten; die angepassten Lieferungen werden nun markiert, sodass sie erhalten bleiben.
+
+---
+
 # 5.1.6
 
 _Veröffentlicht am 2026-06-03_
