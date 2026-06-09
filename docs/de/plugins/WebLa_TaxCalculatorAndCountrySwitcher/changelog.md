@@ -4,6 +4,20 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 5.1.8
+
+_Veröffentlicht am 2026-06-09_
+
+**Neue Funktionen**
+
+- Neue Einstellungen, um den Preis-/MwSt.-Hinweis unter der Lieferland-Auswahl ein- oder auszublenden und dessen Ausrichtung (links, zentriert, rechts) zu wählen. Der Hinweistext selbst bleibt unter Einstellungen > Textbausteine bearbeitbar.
+
+**Verbesserungen**
+
+- Der Länder-Hinweis wird jetzt als dezenter, rechtsbündiger Text nahe der Lieferland-Auswahl angezeigt statt als vollbreiter, hervorgehobener Balken.
+
+---
+
 # 5.1.7
 
 _Veröffentlicht am 2026-06-04_

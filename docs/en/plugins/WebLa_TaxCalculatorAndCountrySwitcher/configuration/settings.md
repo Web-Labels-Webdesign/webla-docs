@@ -4,7 +4,7 @@ This document describes all available settings for the *Tax calculator and shipp
 
 **Navigation**: Extensions → My Extensions → Tax calculator and shipping country switch → Configure
 
-Settings are grouped into five cards: **Display configuration**, **Styling configuration**, **Calculation Settings**, **Shipping cost configuration**, and **Country popup**.
+Settings are grouped into six cards: **Display configuration**, **Styling configuration**, **Calculation Settings**, **Shipping cost configuration**, **Country popup**, and **Country hint**.
 
 ---
 
@@ -292,6 +292,36 @@ Controls the first-visit country selection popup that ensures the displayed gros
 **Description**: Absolute filesystem path to the MaxMind `GeoLite2-Country.mmdb` file on the server running Shopware. The file must be readable by the PHP-FPM user.
 
 **Example Use Case**: `/var/www/html/files/geoip/GeoLite2-Country.mmdb`
+
+---
+
+## Country Hint
+
+Controls the short hint shown below the country selector, e.g. *"Prices shown incl. VAT for Germany. Select your delivery country for accurate pricing."*
+
+### Show price/VAT hint below the selector
+
+| Property     | Value     |
+| ------------ | --------- |
+| **Type**     | Switch    |
+| **Default**  | Enabled   |
+| **Required** | No        |
+
+**Description**: Shows or hides the hint. The hint text itself is editable under Settings → Snippets (key `webla.countryHint.text`).
+
+**Example Use Case**: Disable if your theme already communicates the active delivery country, or if you find the hint redundant.
+
+---
+
+### Hint alignment
+
+| Property     | Value             |
+| ------------ | ----------------- |
+| **Type**     | Single-select     |
+| **Default**  | Right             |
+| **Required** | No                |
+
+**Description**: Aligns the hint text left, center, or right. Right places it directly under the country selector in the topbar.
 
 ---
 

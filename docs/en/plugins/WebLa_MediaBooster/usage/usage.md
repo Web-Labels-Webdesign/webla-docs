@@ -242,6 +242,37 @@ Contact your hosting provider and ask for:
 
 ---
 
+### Worker Runs Out of Memory on Large Batches (and Crons Stop)
+
+**Symptom**: During a large run (especially AVIF conversion of thousands of
+images) the queue worker dies with `Allowed memory size of ... bytes exhausted`,
+and afterwards **all scheduled tasks / crons appear to hang**.
+
+**Cause**: A long-running `messenger:consume` worker (under Supervisor/systemd)
+processes many messages in one process. Image encoding — AVIF via Imagick in
+particular — grows the process memory over time and does not fully release it.
+After enough images the PHP `memory_limit` is hit and the process is killed
+mid-message. Because Shopware routes scheduled tasks through the same message
+transport, a worker stuck dying on that batch stops draining the queue, so every
+cron stalls.
+
+Raising the PHP `memory_limit` only delays the crash — it does not fix it.
+
+**Solution**:
+1. Stop the worker, then in the dashboard click **Force Reset Running State**.
+2. Run the consumer so it **recycles before** hitting the PHP limit. Set the
+   memory limit *lower* than the PHP CLI `memory_limit` so the worker exits
+   cleanly (finishing the current message) and is restarted fresh:
+   ```
+   bin/console messenger:consume async low_priority --memory-limit=512M --time-limit=300
+   ```
+   Keep `autorestart=true` in your Supervisor/systemd config so a fresh process
+   starts immediately after each clean exit.
+3. For constrained hosts, lower **Batch Size** in the settings (e.g. 25) to
+   reduce per-message load during AVIF conversion.
+
+---
+
 ### "Imagick Extension Not Installed" Warning
 
 **Symptom**: Warning in dashboard, image resizing not available

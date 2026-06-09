@@ -242,6 +242,40 @@ Kontaktieren Sie Ihren Hosting-Anbieter und bitten Sie um:
 
 ---
 
+### Worker läuft bei großen Stapeln voll (und Crons hängen)
+
+**Symptom**: Bei einem großen Durchlauf (besonders AVIF-Konvertierung tausender
+Bilder) stirbt der Queue-Worker mit `Allowed memory size of ... bytes exhausted`,
+und anschließend **hängen alle geplanten Aufgaben / Crons**.
+
+**Ursache**: Ein dauerhaft laufender `messenger:consume`-Worker (unter
+Supervisor/systemd) verarbeitet viele Nachrichten in einem Prozess. Die
+Bildkodierung – besonders AVIF über Imagick – lässt den Prozessspeicher mit der
+Zeit wachsen und gibt ihn nicht vollständig frei. Nach genügend Bildern wird das
+PHP-`memory_limit` erreicht und der Prozess mitten in einer Nachricht beendet. Da
+Shopware geplante Aufgaben über denselben Nachrichten-Transport leitet, leert ein
+ständig sterbender Worker die Queue nicht mehr – alle Crons bleiben hängen.
+
+Das PHP-`memory_limit` zu erhöhen verzögert den Absturz nur, behebt ihn aber nicht.
+
+**Lösung**:
+1. Stoppen Sie den Worker und klicken Sie im Dashboard auf
+   **"Laufstatus zurücksetzen"**.
+2. Lassen Sie den Consumer **rechtzeitig neu starten**, bevor das PHP-Limit
+   erreicht wird. Setzen Sie das Memory-Limit *niedriger* als das PHP-CLI-
+   `memory_limit`, damit der Worker sauber beendet (aktuelle Nachricht wird
+   abgeschlossen) und frisch neu gestartet wird:
+   ```
+   bin/console messenger:consume async low_priority --memory-limit=512M --time-limit=300
+   ```
+   Behalten Sie `autorestart=true` in Ihrer Supervisor-/systemd-Konfiguration,
+   damit nach jedem sauberen Beenden sofort ein frischer Prozess startet.
+3. Auf leistungsschwachen Servern verringern Sie die **Stapelgröße** in den
+   Einstellungen (z.B. 25), um die Last pro Nachricht bei der AVIF-Konvertierung
+   zu reduzieren.
+
+---
+
 ### "Imagick-Erweiterung nicht installiert" Warnung
 
 **Symptom**: Warnung im Dashboard, Bildgrößenänderung nicht verfügbar

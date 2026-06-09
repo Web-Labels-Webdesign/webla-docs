@@ -4,7 +4,7 @@ Dieses Dokument beschreibt alle verfügbaren Einstellungen für das Plugin *Steu
 
 **Navigation**: Erweiterungen → Meine Erweiterungen → Steuernachkalkulation und Lieferländer → Konfigurieren
 
-Die Einstellungen sind in fünf Karten gruppiert: **Basis-Konfiguration**, **Styling-Konfiguration**, **Berechnungseinstellungen**, **Versandkosten-Konfiguration** und **Länderauswahl-Popup**.
+Die Einstellungen sind in sechs Karten gruppiert: **Basis-Konfiguration**, **Styling-Konfiguration**, **Berechnungseinstellungen**, **Versandkosten-Konfiguration**, **Länderauswahl-Popup** und **Länder-Hinweis**.
 
 ---
 
@@ -292,6 +292,36 @@ Steuert das Popup zur Länderauswahl beim Erstbesuch, das sicherstellt, dass der
 **Beschreibung**: Absoluter Dateipfad zur MaxMind-`GeoLite2-Country.mmdb` auf dem Server, auf dem Shopware läuft. Die Datei muss vom PHP-FPM-Benutzer lesbar sein.
 
 **Anwendungsbeispiel**: `/var/www/html/files/geoip/GeoLite2-Country.mmdb`
+
+---
+
+## Länder-Hinweis
+
+Steuert den kurzen Hinweis unter der Lieferland-Auswahl, z. B. *„Preise inkl. MwSt. für Deutschland. Wählen Sie Ihr Lieferland für genaue Preise."*
+
+### Preis-/MwSt.-Hinweis unter der Auswahl anzeigen
+
+| Eigenschaft      | Wert        |
+| ---------------- | ----------- |
+| **Typ**          | Schalter    |
+| **Standard**     | Aktiviert   |
+| **Erforderlich** | Nein        |
+
+**Beschreibung**: Blendet den Hinweis ein oder aus. Der Hinweistext selbst ist unter Einstellungen → Textbausteine bearbeitbar (Schlüssel `webla.countryHint.text`).
+
+**Anwendungsbeispiel**: Deaktivieren, wenn Ihr Theme das aktive Lieferland bereits kommuniziert oder der Hinweis als überflüssig empfunden wird.
+
+---
+
+### Ausrichtung des Hinweises
+
+| Eigenschaft      | Wert              |
+| ---------------- | ----------------- |
+| **Typ**          | Einfachauswahl    |
+| **Standard**     | Rechts            |
+| **Erforderlich** | Nein              |
+
+**Beschreibung**: Richtet den Hinweistext links, zentriert oder rechts aus. Rechts platziert ihn direkt unter der Lieferland-Auswahl in der Topbar.
 
 ---
 

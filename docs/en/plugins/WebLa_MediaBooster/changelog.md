@@ -4,6 +4,16 @@ All notable changes to Media Booster for end users.
 
 ---
 
+## [1.3.7] - 2026-06-09
+
+### Bug Fixes
+- Fixed image processing running out of memory and stalling the queue (and all scheduled tasks) during large AVIF conversions — per-process Imagick memory is now bounded
+- Fixed dashboard statistics showing wrong or reset numbers — progress now reflects the actual processing log, so percentages stay correct across reruns, partial runs and worker restarts
+- Fixed broken (404) storefront images after a media file was replaced — the converted WebP/AVIF version is now verified on disk per request instead of trusting a stale 1-hour cache
+- Fixed broken product gallery images whose thumbnails could not be resolved — invalid and duplicate srcset entries are no longer emitted, so the image correctly falls back to the original
+
+---
+
 ## [1.3.6] - 2026-03-20
 
 ### Bug Fixes

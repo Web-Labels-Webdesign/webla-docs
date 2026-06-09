@@ -4,6 +4,20 @@ All notable changes for end users.
 
 ---
 
+# 5.1.8
+
+_Released 2026-06-09_
+
+**New Features**
+
+- Add settings to show or hide the price/VAT hint below the delivery country selector and to choose its alignment (left, center, right). The hint text itself remains editable under Settings > Snippets.
+
+**Improvements**
+
+- Display the country hint as subtle, right-aligned text near the delivery country selector instead of a full-width highlighted bar.
+
+---
+
 # 5.1.7
 
 _Released 2026-06-04_
