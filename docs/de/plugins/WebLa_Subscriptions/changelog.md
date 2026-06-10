@@ -4,6 +4,34 @@ Alle wichtigen Änderungen am WebLa Subscription Plugin für Endbenutzer.
 
 ---
 
+# 1.5.1
+
+_Veröffentlicht am 2026-06-10_
+
+**Fehlerbehebungen**
+
+- **Doppelter Grundpreis**: Die Grundpreiszeile (z. B. „Inhalt: 0.5 kg (40,00 € / 1 kg)") erscheint unter dem Produktpreis auf der Detailseite nicht mehr doppelt, wenn die dynamische Abo-Preisanzeige aktiv ist. Unter Shopware 6.7 wurde die Preiseinheit in eine eigene Vorlage verschoben, wodurch das Plugin die Zeile ein zweites Mal ausgegeben hat.
+
+---
+
+# 1.5.0
+
+_Veröffentlicht am 2026-06-10_
+
+**Neue Funktionen**
+
+- **Dynamischer Hauptpreis**: Der Produktpreis im Buy-Widget wechselt jetzt live zwischen dem regulären Preis und dem rabattierten Abo-Preis, wenn der Kunde zwischen den Kacheln „Einmalkauf" und „Abonnement" wechselt. Die neue Einstellung `dynamicPriceDisplayEnabled` ermöglicht es, dieses Verhalten bei Bedarf zu deaktivieren.
+- **Konfigurierbarer Standard-Kauftyp**: Die neue Einstellung `defaultPurchaseType` legt fest, welche Kachel beim Laden der Produktdetailseite vorausgewählt ist — Abonnement oder Einmalkauf. Produkte, die als „Nur als Abonnement" markiert sind, werden unabhängig von dieser Einstellung immer mit der Abo-Kachel vorausgewählt.
+- **Zahlungsart-Lebenszyklus**: Die abo-spezifischen Zahlungsarten des Plugins werden automatisch deaktiviert, wenn das Plugin im Shopware-Admin deaktiviert wird, und beim Aktivieren des Plugins wieder aktiviert. So erscheinen die Methoden nicht im Checkout, solange das Plugin nicht aktiv ist.
+
+**Fehlerbehebungen**
+
+- **Kachelauswahl per Klick**: Ein Klick auf eine beliebige Stelle der Kauftyp-Kachel wählt diese jetzt korrekt aus. Zuvor wurde die Auswahl nur registriert, wenn direkt auf den Radiobutton geklickt wurde.
+- **Nur-Abonnement-Kachelstatus**: Produkte, die als „Nur als Abonnement" konfiguriert sind, zeigen die Abo-Kachel beim Seitenaufruf korrekt als ausgewählt an. Der aktive Zustand wurde in der vorherigen Version fälschlicherweise entfernt.
+- **Rabatt-Fallback im Warenkorb**: Abo-Bestellungen, die den Rabattpfad „Alle Artikel mit gleicher Option" verwenden, greifen nun korrekt auf den globalen Rabattprozentsatz zurück, wenn eine einzelne Option keinen eigenen Rabatt konfiguriert hat. Zuvor erhielten diese Bestellungen stattdessen 0 % Rabatt.
+
+---
+
 # 1.3.5
 
 _Veröffentlicht am 2026-05-13_

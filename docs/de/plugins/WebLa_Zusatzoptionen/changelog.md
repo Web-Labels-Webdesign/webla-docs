@@ -4,6 +4,20 @@ Alle wichtigen Änderungen am Zusatzoptionen Plugin für Endbenutzer.
 
 ---
 
+# 5.5.0
+
+_Veröffentlicht am 2026-06-10_
+
+**Neue Funktionen**
+
+- **Mengenauswahl in derselben Zeile**: Eine neue Anzeige-Einstellung zeigt die Mengenauswahl in derselben Zeile wie die Option an – zwischen Auswahlkästchen und Optionsbezeichnung – statt in einer separaten Zeile darunter. Standardmäßig deaktiviert, sodass bestehende Layouts unverändert bleiben.
+
+**Verbesserungen**
+
+- **Aufgeräumtere Optionszeilen ohne Bild**: Optionszeilen ohne Produktbild reservieren keinen leeren Platz mehr an der Stelle des Bildes, wodurch das Layout kompakter wird.
+
+---
+
 # 5.4.6
 
 _Veröffentlicht am 2026-06-02_

@@ -4,6 +4,16 @@ All notable changes to the Product Advisor Plugin for end users.
 
 ---
 
+# 7.2.2
+
+_Released 2026-06-10_
+
+**Bug Fixes**
+
+- **Installation fails on MySQL 8.4**: Removed the foreign keys from the answer and manufacturer tables referencing `product_manufacturer`. MySQL 8.4 rejects these when `restrict_fk_on_non_standard_key` is enabled (the default, e.g. on Azure Database for MySQL Flexible Server), because `product_manufacturer` uses a composite primary key. The relation is still enforced by Shopware's data layer, and a migration removes the foreign keys on existing installations.
+
+---
+
 # 7.2.1
 
 _Released 2026-05-11_

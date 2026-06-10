@@ -4,6 +4,21 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 3.1.3
+
+_Veröffentlicht am 2026-06-10_
+
+**Fehlerbehebungen**
+
+- Die Bewertungs-Bildergalerie – inklusive des konfigurierten Werbebilds „Bewertung hinzufügen" und des Bilds „Noch keine Bewertungen" – wird jetzt auf der Standard-Produktdetailseite angezeigt. Zuvor hatten diese Einstellungen im Standard-Layout von Shopware 6.6 / 6.7 keine Wirkung.
+- Kompatibilität mit Shopware 6.7 wiederhergestellt, wo die Galerie die Bewertungen auf der Produktseite nicht laden konnte.
+
+**Verbesserungen**
+
+- Abstände der Galerie-Überschrift verbessert.
+
+---
+
 # 3.1.2
 
 _Veröffentlicht am 2026-04-24_

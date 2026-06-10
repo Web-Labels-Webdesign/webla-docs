@@ -4,6 +4,21 @@ All notable changes for end users.
 
 ---
 
+# 3.1.3
+
+_Released 2026-06-10_
+
+**Bug Fixes**
+
+- The review image gallery — including the configured "add review" promo image and the "no reviews yet" image — now appears on the default product detail page. Previously these settings had no effect on the standard Shopware 6.6 / 6.7 product layout.
+- Restored compatibility with Shopware 6.7, where the gallery could fail to load reviews on the product page.
+
+**Improvements**
+
+- Tidied the spacing of the review gallery heading.
+
+---
+
 # 3.1.2
 
 _Released 2026-04-24_

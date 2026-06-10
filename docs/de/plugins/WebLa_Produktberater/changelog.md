@@ -4,6 +4,16 @@ Alle wichtigen Änderungen am Produkt Berater Plugin für Endbenutzer.
 
 ---
 
+# 7.2.2
+
+_Veröffentlicht am 2026-06-10_
+
+**Fehlerbehebungen**
+
+- **Installation schlägt unter MySQL 8.4 fehl**: Die Fremdschlüssel von den Antwort- und Herstellertabellen auf `product_manufacturer` wurden entfernt. MySQL 8.4 lehnt diese ab, wenn `restrict_fk_on_non_standard_key` aktiviert ist (Standard, z. B. bei Azure Database for MySQL Flexible Server), da `product_manufacturer` einen zusammengesetzten Primärschlüssel verwendet. Die Beziehung wird weiterhin über die Datenschicht von Shopware sichergestellt, und eine Migration entfernt die Fremdschlüssel auf bestehenden Installationen.
+
+---
+
 # 7.2.1
 
 _Veröffentlicht am 2026-05-11_

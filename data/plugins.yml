@@ -7,7 +7,7 @@ plugins:
       de: Interaktiver Produktberater mit intelligenter Gewichtung
       en: Interactive product advisor with intelligent weighting
     requirements: Shopware 6.5–6.8, PHP 8.1+
-    version: "7.2.1"
+    version: "7.2.2"
   - id: WebLa_MediaBooster
     name:
       de: Media Booster
@@ -79,7 +79,7 @@ plugins:
       de: Erweitern Sie Produkte mit konfigurierbaren Zusatzoptionen, individueller Preisgestaltung, Versandbeschränkungen und automatischer Zuweisung durch Produktströme für mehr Flexibilität.
       en: Add flexible additional options to products with custom pricing, shipping restrictions, and automated assignment via product streams for enhanced product configuration.
     requirements: Shopware 6.6–6.8, PHP 8.1+
-    version: "5.4.6"
+    version: "5.5.0"
   - id: WebLa_ContactFormFileUpload
     name:
       de: Kontaktformular – Datei-Upload
@@ -133,7 +133,7 @@ plugins:
       de: Erweiterbares Abonnement-Plugin für Shopware 6 mit automatischer Verlängerung, flexiblen Intervallen, Mollie-Zahlungsanbindung und Kundenportal für wiederkehrende Bestellungen.
       en: Flexible subscription plugin for Shopware 6 with automatic renewals, configurable intervals, Mollie payment integration, and a self-service customer portal for recurring orders.
     requirements: Shopware 6.6–6.8, PHP 8.1+
-    version: "1.4.2"
+    version: "1.5.1"
   - id: WebLa_AdcellProvisionsfreigabe
     name:
       de: ADCELL Provisionsfreigabe
@@ -160,7 +160,7 @@ plugins:
       de: Kunden laden Bilder direkt zu ihren Produktbewertungen hoch. Die Galerie erscheint auf der Produktseite und als CMS-Element in Erlebniswelten.
       en: Customers upload images with their product reviews. The gallery renders on the product detail page and as a CMS element in Shopping Experiences.
     requirements: Shopware 6.6–6.7, PHP 8.2+
-    version: "3.1.2"
+    version: "3.1.3"
   - id: WebLa_BatchManagement
     name:
       de: Charge-Management

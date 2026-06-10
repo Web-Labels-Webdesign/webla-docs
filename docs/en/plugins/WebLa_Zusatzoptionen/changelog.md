@@ -4,6 +4,20 @@ All notable changes to the Additional Options Plugin for end users.
 
 ---
 
+# 5.5.0
+
+_Released 2026-06-10_
+
+**New Features**
+
+- **Inline Quantity Selector**: A new display setting shows the quantity selector on the same line as the option — between the checkbox and the option name — instead of on a separate line below it. Disabled by default, so existing layouts stay unchanged.
+
+**Improvements**
+
+- **Cleaner Option Rows Without Images**: Option rows without a product image no longer reserve empty space where the image would be, tightening up the layout.
+
+---
+
 # 5.4.6
 
 _Released 2026-06-02_

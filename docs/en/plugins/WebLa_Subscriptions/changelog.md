@@ -4,6 +4,34 @@ All notable changes to the WebLa Subscription Plugin for end users.
 
 ---
 
+# 1.5.1
+
+_Released 2026-06-10_
+
+**Bug Fixes**
+
+- **Duplicate Reference Price**: The base/reference price line (e.g. "Content: 0.5 kg (€40.00 / 1 kg)") no longer appears twice below the product price on the detail page when the dynamic subscription price display is active. On Shopware 6.7 the product price unit moved into its own template, which caused the plugin to render the line a second time.
+
+---
+
+# 1.5.0
+
+_Released 2026-06-10_
+
+**New Features**
+
+- **Dynamic Header Price**: The main product price in the buy widget now switches live between the regular price and the discounted subscription price when the customer toggles between the one-time and subscription tiles. A new `dynamicPriceDisplayEnabled` configuration option lets shop owners disable this behaviour if needed.
+- **Configurable Default Purchase Type**: A new `defaultPurchaseType` configuration option controls which tile is pre-selected when the product detail page loads — subscription or one-time purchase. Products marked as subscription-only always default to subscription regardless of this setting.
+- **Payment Method Lifecycle**: The plugin's subscription-specific payment methods are automatically deactivated when the plugin is deactivated in the Shopware admin and reactivated when the plugin is activated again. This prevents the methods from appearing at checkout when the plugin is not active.
+
+**Bug Fixes**
+
+- **Subscription Tile Interaction**: Clicking anywhere on a purchase-type tile now correctly selects it. Previously only clicking directly on the radio button registered the selection.
+- **Subscription-Only Tile State**: Products configured as subscription-only correctly show the subscription tile as selected on page load. The active highlight was incorrectly removed in the previous release.
+- **Cart Discount Fallback**: Subscription orders using the "all items must have the same option" discount path now correctly fall back to the global discount percentage when an individual option has no per-option discount configured. Previously these orders received a 0 % discount instead.
+
+---
+
 # 1.3.5
 
 _Released 2026-05-13_
