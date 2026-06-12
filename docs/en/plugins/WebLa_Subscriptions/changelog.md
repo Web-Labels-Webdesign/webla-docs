@@ -4,6 +4,23 @@ All notable changes to the WebLa Subscription Plugin for end users.
 
 ---
 
+# 1.6.0
+
+_Released 2026-06-12_
+
+**New Features**
+
+- Subscription notification emails for cancellation and reactivation. Customers are now informed by email when a subscription is cancelled or reactivated (from the backend or the customer account). The required Flow Builder flows and email templates are created automatically.
+- Additional notification triggers are available in the Flow Builder: renewal reminder, renewed, price changed, payment failed, product removed and item out of stock. The situational ones (renewed, product removed, item out of stock) are pre-created as inactive flows you can switch on when needed.
+- Readable trigger names: the subscription triggers now show proper English and German labels in the Flow Builder instead of technical keys.
+
+**Bug Fixes**
+
+- Subscription notification emails were never delivered: the events were not registered as Flow Builder triggers, so any flow using them showed "Unknown trigger" and was deactivated. The triggers are now registered correctly and the flows work.
+- Product detail page: removed a duplicate unit/content line for products that have a purchase unit but no reference price on Shopware 6.6.
+
+---
+
 # 1.5.1
 
 _Released 2026-06-10_

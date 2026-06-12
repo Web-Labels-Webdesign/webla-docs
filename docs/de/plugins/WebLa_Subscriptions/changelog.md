@@ -4,6 +4,23 @@ Alle wichtigen Änderungen am WebLa Subscription Plugin für Endbenutzer.
 
 ---
 
+# 1.6.0
+
+_Veröffentlicht am 2026-06-12_
+
+**Neue Funktionen**
+
+- Benachrichtigungs-E-Mails für Kündigung und Reaktivierung von Abonnements. Kunden werden jetzt per E-Mail informiert, wenn ein Abonnement gekündigt oder reaktiviert wird (über das Backend oder das Kundenkonto). Die benötigten Flow-Builder-Flows und E-Mail-Vorlagen werden automatisch angelegt.
+- Weitere Benachrichtigungs-Trigger stehen im Flow Builder zur Verfügung: Verlängerungserinnerung, Verlängert, Preis geändert, Zahlung fehlgeschlagen, Produkt entfernt und Artikel nicht vorrätig. Die situationsbezogenen Trigger (Verlängert, Produkt entfernt, Artikel nicht vorrätig) werden als inaktive Flows angelegt, die Sie bei Bedarf aktivieren können.
+- Lesbare Trigger-Namen: Die Abo-Trigger werden im Flow Builder jetzt mit deutschen und englischen Bezeichnungen statt technischer Schlüssel angezeigt.
+
+**Fehlerbehebungen**
+
+- Benachrichtigungs-E-Mails wurden nie versendet: Die Events waren nicht als Flow-Builder-Trigger registriert, sodass jeder Flow „Unbekannter Trigger" anzeigte und deaktiviert wurde. Die Trigger werden nun korrekt registriert und die Flows funktionieren.
+- Produktdetailseite: doppelte Einheiten-/Inhaltszeile für Produkte mit Verkaufseinheit ohne Grundpreis unter Shopware 6.6 entfernt.
+
+---
+
 # 1.5.1
 
 _Veröffentlicht am 2026-06-10_
