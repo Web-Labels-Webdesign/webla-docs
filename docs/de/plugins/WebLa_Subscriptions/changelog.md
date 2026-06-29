@@ -4,6 +4,39 @@ Alle wichtigen Änderungen am WebLa Subscription Plugin für Endbenutzer.
 
 ---
 
+# 1.7.2
+
+_Veröffentlicht am 2026-06-29_
+
+**Fehlerbehebungen**
+
+- Entfernt einen irreführenden Hinweis „Für Abonnement-Artikel ist eine Abo-Zahlungsart erforderlich", der auf der Warenkorb- und Checkout-Seite erschien, obwohl bereits die richtige Abo-Zahlungsart ausgewählt war.
+
+# 1.7.1
+
+_Veröffentlicht am 2026-06-29_
+
+**Fehlerbehebungen**
+
+- Behoben: schwerwiegender Startfehler aus 1.7.0, durch den ein interner Zahlungsdienst falsch referenziert wurde und Storefront sowie Admin nicht luden. Die automatische Zahlartenauswahl im Checkout funktioniert wieder.
+
+# 1.7.0
+
+_Veröffentlicht am 2026-06-29_
+
+**Neue Funktionen**
+
+- Die passende Zahlungsart wird im Checkout jetzt automatisch ausgewählt, je nachdem ob der Warenkorb ein Abonnement enthält. Kunden haben dadurch keine leere Zahlartenauswahl mehr, und eine reguläre Bestellung kann nicht mehr mit einer reinen Abo-Zahlart abgeschlossen werden (und umgekehrt).
+- PayPal- und Apple-Pay-Express-Buttons werden ausgeblendet, solange ein Abo-Artikel im Warenkorb liegt (Warenkorb, Off-Canvas-Warenkorb und Registrierungsseite). Der Express-Checkout kann keine Abo-Zahlung einrichten – das Ausblenden verhindert defekte Abonnements.
+
+**Fehlerbehebungen**
+
+- Behoben: Fehler „Zahlungstoken ungültig", der beim Abschluss einer Nicht-Abo-Bestellung auftreten konnte, nachdem ein vorheriger Abo-Kauf eine Abo-Zahlart als Standard des Kunden hinterlegt hatte.
+
+**Verbesserungen**
+
+- Die Abo-Kontoseiten werden jetzt von der Suchmaschinen-Indexierung ausgeschlossen.
+
 # 1.6.0
 
 _Veröffentlicht am 2026-06-12_

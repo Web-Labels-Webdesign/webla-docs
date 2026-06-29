@@ -4,6 +4,39 @@ All notable changes to the WebLa Subscription Plugin for end users.
 
 ---
 
+# 1.7.2
+
+_Released 2026-06-29_
+
+**Bug Fixes**
+
+- Remove a misleading "a subscription payment method is required" notice that appeared on the cart and checkout pages even though the correct subscription payment method was already selected.
+
+# 1.7.1
+
+_Released 2026-06-29_
+
+**Bug Fixes**
+
+- Fix a fatal startup error introduced in 1.7.0 where an internal payment service was referenced incorrectly, preventing the storefront and admin from loading. Automatic checkout payment-method selection works again.
+
+# 1.7.0
+
+_Released 2026-06-29_
+
+**New Features**
+
+- The matching payment method is now selected automatically at checkout based on whether the cart contains a subscription. Customers no longer end up with no payment method selected, and a regular order can no longer be placed with a subscription-only payment method (or vice versa).
+- PayPal and Apple Pay express checkout buttons are now hidden while a subscription product is in the cart (cart, off-canvas cart and registration page). Express checkout cannot set up a subscription payment, so hiding it prevents broken subscriptions.
+
+**Bug Fixes**
+
+- Fixed a "payment token invalidated" error that could occur when placing a non-subscription order after a previous subscription purchase had stored a subscription payment method as the customer default.
+
+**Improvements**
+
+- The subscription account pages are now excluded from search engine indexing.
+
 # 1.6.0
 
 _Released 2026-06-12_
