@@ -4,6 +4,14 @@ All notable changes for end users.
 
 ---
 
+# 5.1.9
+
+_Released 2026-06-30_
+
+**Bug Fixes**
+
+- Fix delivery-country prices leaking between visitors on Shopware 6.6. Product, listing and category pages are now cached separately per selected delivery country, so a price calculated for one country is no longer shown to other shoppers after a page refresh. Shopware 6.7 was not affected.
+
 # 5.1.8
 
 _Released 2026-06-09_

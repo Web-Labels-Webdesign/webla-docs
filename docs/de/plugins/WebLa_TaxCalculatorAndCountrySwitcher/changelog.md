@@ -4,6 +4,14 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 5.1.9
+
+_Veröffentlicht am 2026-06-30_
+
+**Fehlerbehebungen**
+
+- Behebt einen Fehler, durch den unter Shopware 6.6 die Preise des gewählten Lieferlandes an andere Besucher weitergegeben wurden. Produkt-, Listen- und Kategorieseiten werden jetzt getrennt je gewähltem Lieferland zwischengespeichert, sodass ein für ein Land berechneter Preis nach einem Seitenaufruf nicht mehr anderen Kunden angezeigt wird. Shopware 6.7 war nicht betroffen.
+
 # 5.1.8
 
 _Veröffentlicht am 2026-06-09_
