@@ -4,6 +4,21 @@ All notable changes for end users.
 
 ---
 
+# 5.1.3
+
+_Released 2026-07-01_
+
+**Bug Fixes**
+
+- Visiting a price-comparison feed link (`?source=...`) no longer forces the whole shop to be served uncached. Previously a single feed visit set a site-wide cookie that bypassed the cache on every page for 24 hours, so search-engine crawlers or visitors could browse the entire shop uncached. Only the pages that actually show the discounted price are affected now.
+
+**Improvements**
+
+- Discounted pages are now cached per discount instead of per visitor: visitors arriving with the same special price share one cached page, greatly reducing cache load and speeding up delivery.
+- Editing a product stream or discount now immediately clears the affected discounted pages from the cache, so a changed or removed promotion no longer lingers until the cache expires.
+
+---
+
 # 5.1.2
 
 _Released 2026-04-30_

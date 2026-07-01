@@ -4,6 +4,21 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 5.1.3
+
+_Veröffentlicht am 2026-07-01_
+
+**Fehlerbehebungen**
+
+- Der Aufruf eines Preissuchmaschinen-Feed-Links (`?source=...`) führt nicht mehr dazu, dass der gesamte Shop ungecacht ausgeliefert wird. Bisher setzte ein einziger Feed-Besuch ein shop-weites Cookie, das 24 Stunden lang auf jeder Seite den Cache umging, sodass Suchmaschinen-Crawler oder Besucher den kompletten Shop ungecacht durchsuchen konnten. Betroffen sind jetzt nur noch die Seiten, die den rabattierten Preis tatsächlich anzeigen.
+
+**Verbesserungen**
+
+- Rabattierte Seiten werden jetzt pro Rabatt statt pro Besucher gecacht: Besucher mit demselben Sonderpreis teilen sich eine gecachte Seite, was die Cache-Last deutlich reduziert und die Auslieferung beschleunigt.
+- Das Bearbeiten eines Produkt-Streams oder Rabatts leert jetzt sofort die betroffenen rabattierten Seiten aus dem Cache, sodass eine geänderte oder entfernte Aktion nicht mehr bis zum Ablauf des Caches bestehen bleibt.
+
+---
+
 # 5.1.2
 
 _Veröffentlicht am 2026-04-30_

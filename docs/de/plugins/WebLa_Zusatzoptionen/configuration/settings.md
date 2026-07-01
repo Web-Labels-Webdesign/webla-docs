@@ -136,6 +136,26 @@ Position 2: Laptop + Garantie 3 Jahre (Menge: 1) - 1.149 €
 
 ---
 
+## Seeder-Einstellungen
+
+### Geseedete Optionen von ausgeschlossenen Produkten entfernen
+
+| Eigenschaft      | Wert        |
+| ---------------- | ----------- |
+| **Typ**          | Checkbox    |
+| **Standard**     | Deaktiviert |
+| **Erforderlich** | Nein        |
+
+**Beschreibung**: Steuert, was mit Optionen geschieht, die ein Seeder einem Produkt zuvor zugewiesen hat, wenn dieses Produkt vom Seeder ausgeschlossen wird.
+
+**Verhalten**:
+- **Aktiviert**: Beim Ausschließen eines Produkts vom Seeder werden dessen bereits geseedete Optionen bei der nächsten Synchronisierung ebenfalls gelöscht.
+- **Deaktiviert** (Standard): Ausgeschlossene Produkte behalten ihre zuvor geseedeten Optionen; nur Produkte, die die Produktgruppe des Seeders vollständig verlassen, werden bereinigt.
+
+**Hinweis**: Produkte, die die Produktgruppe des Seeders vollständig verlassen, werden bei der nächsten Synchronisierung unabhängig von dieser Einstellung immer bereinigt.
+
+---
+
 ## Verkaufskanal-spezifische Einstellungen
 
 Alle oben genannten Einstellungen können pro Verkaufskanal individuell konfiguriert werden.

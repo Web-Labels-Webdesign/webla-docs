@@ -136,6 +136,26 @@ Item 2: Laptop + 3-year warranty (Qty: 1) - €1,149
 
 ---
 
+## Seeder Settings
+
+### Remove seeded options from excluded products
+
+| Property     | Value    |
+| ------------ | -------- |
+| **Type**     | Checkbox |
+| **Default**  | Disabled |
+| **Required** | No       |
+
+**Description**: Controls what happens to options that a seeder previously assigned to a product when that product becomes excluded from the seeder.
+
+**Behavior**:
+- **Enabled**: Excluding a product from the seeder also deletes its already-seeded options on the next synchronization.
+- **Disabled** (default): Excluded products keep their previously seeded options; only products that leave the seeder's product group entirely are cleaned up.
+
+**Note**: Products that leave the seeder's product group completely are always cleaned up on the next sync, regardless of this setting.
+
+---
+
 ## Sales Channel Specific Settings
 
 All settings mentioned above can be configured individually per sales channel.

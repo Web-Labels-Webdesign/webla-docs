@@ -4,6 +4,22 @@ All notable changes to the Additional Options Plugin for end users.
 
 ---
 
+# 5.6.0
+
+_Released 2026-07-01_
+
+**New Features**
+
+- **Automatic Cleanup of Outdated Options**: When a product no longer matches a seeder's dynamic product group, its automatically assigned option sets are now removed during synchronization, keeping product options in sync with your stream rules.
+- **Optional Removal for Excluded Products**: A new setting controls whether option sets are removed from products that leave a seeder's product group. Disabled by default, so existing assignments stay unchanged unless you enable it.
+
+**Bug Fixes**
+
+- Seeder synchronization now correctly completes for empty product groups instead of stalling.
+- Option-set removal now only affects sets created by the seeder, preventing accidental removal of manually assigned options.
+
+---
+
 # 5.5.0
 
 _Released 2026-06-10_

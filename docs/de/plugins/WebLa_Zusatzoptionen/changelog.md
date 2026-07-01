@@ -4,6 +4,22 @@ Alle wichtigen Änderungen am Zusatzoptionen Plugin für Endbenutzer.
 
 ---
 
+# 5.6.0
+
+_Veröffentlicht am 2026-07-01_
+
+**Neue Funktionen**
+
+- **Automatische Bereinigung veralteter Optionen**: Wenn ein Produkt nicht mehr zur dynamischen Produktgruppe eines Seeders passt, werden die automatisch zugewiesenen Optionssets bei der Synchronisierung nun entfernt. So bleiben die Produktoptionen mit Ihren Stream-Regeln im Einklang.
+- **Optionales Entfernen für ausgeschlossene Produkte**: Eine neue Einstellung steuert, ob Optionssets von Produkten entfernt werden, die eine Seeder-Produktgruppe verlassen. Standardmäßig deaktiviert, sodass bestehende Zuweisungen unverändert bleiben, sofern Sie es nicht aktivieren.
+
+**Fehlerbehebungen**
+
+- Die Seeder-Synchronisierung wird nun auch für leere Produktgruppen korrekt abgeschlossen, anstatt hängen zu bleiben.
+- Das Entfernen von Optionssets betrifft nun nur noch vom Seeder erstellte Sets, wodurch das versehentliche Entfernen manuell zugewiesener Optionen verhindert wird.
+
+---
+
 # 5.5.0
 
 _Veröffentlicht am 2026-06-10_
