@@ -4,6 +4,20 @@ All notable changes for end users.
 
 ---
 
+# 5.1.4
+
+_Released 2026-07-02_
+
+**Bug Fixes**
+
+- Discounted product pages are cached again and shared between visitors who have the same special price. Previously the plugin wrote a strike-through (regulation) price to the product on every render of a discounted page, which invalidated that product's cache on each view — so the discounted page was never served from cache and was rendered from scratch every time. The price is now written only when it actually changes.
+
+**Improvements**
+
+- Visitors who arrived through a price-comparison feed no longer receive a private, uncached copy of unrelated product pages. Only the discounted product's own detail page is cached per discount; every other product page is served from the normal shared cache. Normal prices and normal cache performance are kept on all non-offer pages, including cross-selling.
+
+---
+
 # 5.1.3
 
 _Released 2026-07-01_

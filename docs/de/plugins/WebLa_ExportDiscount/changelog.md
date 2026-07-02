@@ -4,6 +4,20 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 5.1.4
+
+_Veröffentlicht am 2026-07-02_
+
+**Fehlerbehebungen**
+
+- Rabattierte Produktseiten werden wieder gecacht und von Besuchern mit demselben Sonderpreis gemeinsam genutzt. Bisher schrieb das Plugin bei jedem Aufruf einer rabattierten Seite einen Streichpreis (regulationPrice) auf das Produkt, wodurch der Cache dieses Produkts bei jedem Aufruf verworfen wurde – die rabattierte Seite wurde daher nie aus dem Cache ausgeliefert, sondern jedes Mal neu gerendert. Der Preis wird jetzt nur noch geschrieben, wenn er sich tatsächlich ändert.
+
+**Verbesserungen**
+
+- Besucher, die über eine Preissuchmaschine gekommen sind, erhalten nicht mehr für jede unbeteiligte Produktseite eine eigene, ungecachte Kopie. Nur die Detailseite des rabattierten Produkts wird pro Rabatt gecacht; alle anderen Produktseiten werden aus dem normalen gemeinsamen Cache ausgeliefert. Auf allen Nicht-Angebotsseiten – einschließlich Cross-Selling – bleiben so die normalen Preise und die normale Cache-Performance erhalten.
+
+---
+
 # 5.1.3
 
 _Veröffentlicht am 2026-07-01_
