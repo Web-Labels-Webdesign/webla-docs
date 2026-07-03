@@ -4,6 +4,26 @@ All notable changes for end users.
 
 ---
 
+# 5.0.6
+
+_Released 2026-07-03_
+
+**Bug Fixes**
+
+- Category dropdowns loaded after the first selection (for example the model level) were not sorted alphabetically — their order appeared random. All dropdown levels now use the same natural alphabetical sorting as the first level.
+
+---
+
+# 5.0.5
+
+_Released 2026-05-29_
+
+**Bug Fixes**
+
+- Storefront plugin still failed with `TypeError: t is not a constructor` on Shopware 6.7. The plugin called the whole-registry `PluginManager.initializePlugins()`, which races Shopware 6.7's asynchronous core-plugin loading; on a failed lazy import the registry keeps the `() => import()` loader functions, which the initializer then calls with `new`, breaking every async plugin. The plugin now initializes only its own plugin via `PluginManager.initializePlugin('CategorySelectorPlugin', …)`.
+
+---
+
 # 5.0.4
 
 _Released 2026-05-28_

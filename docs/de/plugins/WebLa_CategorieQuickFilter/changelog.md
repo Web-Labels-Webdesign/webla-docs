@@ -4,6 +4,26 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 5.0.6
+
+_Veröffentlicht am 2026-07-03_
+
+**Fehlerbehebungen**
+
+- Kategorie-Dropdowns, die nach der ersten Auswahl geladen werden (zum Beispiel die Modell-Ebene), waren nicht alphabetisch sortiert – die Reihenfolge wirkte zufällig. Alle Dropdown-Ebenen verwenden jetzt dieselbe natürliche alphabetische Sortierung wie die erste Ebene.
+
+---
+
+# 5.0.5
+
+_Veröffentlicht am 2026-05-29_
+
+**Fehlerbehebungen**
+
+- Storefront-Plugin meldete unter Shopware 6.7 weiterhin `TypeError: t is not a constructor`. Das Plugin rief das registrierungsweite `PluginManager.initializePlugins()` auf, was mit dem asynchronen Laden der Core-Plugins in Shopware 6.7 kollidiert; bei einem fehlgeschlagenen Lazy-Import behält die Registry die `() => import()`-Ladefunktionen, die der Initialisierer dann mit `new` aufruft, wodurch jedes Async-Plugin bricht. Das Plugin initialisiert nun nur noch sein eigenes Plugin über `PluginManager.initializePlugin('CategorySelectorPlugin', …)`.
+
+---
+
 # 5.0.4
 
 _Veröffentlicht am 2026-05-28_
