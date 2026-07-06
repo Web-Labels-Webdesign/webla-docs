@@ -4,6 +4,26 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 1.5.14
+
+_Veröffentlicht am 2026-07-06_
+
+**Fehlerbehebungen**
+
+- **Hauptprodukt eines Produktsets wurde mit unrabattiertem Preis an ERP übergeben**: Wenn ein Kundenrabatt auf ein Produktset (SwkwebProductSet) angewendet wurde und die Option „Rabatt als separate Position anzeigen" deaktiviert war, behielt die Hauptprodukt-Position des Sets bei der Übertragung an angebundene Systeme wie ein ERP ihren vollen, unrabattierten Preis — obwohl die Warenkorbsumme korrekt war. Der Rabatt wird nun direkt auf die Hauptprodukt-Position angewendet, sodass externe Systeme den korrekten reduzierten Preis erhalten.
+
+---
+
+# 1.5.13
+
+_Veröffentlicht am 2026-07-01_
+
+**Fehlerbehebungen**
+
+- **Produktset-Preis wird bei deaktivierter separater Rabattposition nicht reduziert**: Bei ausgeschalteter Option „Rabatt als separate Position anzeigen" erhielten Produktsets (SwkwebProductSet) weiterhin eine separate Rabattposition und behielten ihren vollen Preis, anstatt den reduzierten Preis direkt anzuzeigen. Der Rabatt wird nun direkt in den Preis des Produktsets eingerechnet, analog zum Verhalten regulärer Produkte.
+
+---
+
 # 1.5.12
 
 _Veröffentlicht am 2026-05-12_

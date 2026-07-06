@@ -4,6 +4,26 @@ All notable changes for end users.
 
 ---
 
+# 1.5.14
+
+_Released 2026-07-06_
+
+**Bug Fixes**
+
+- **Product set main product transferred to ERP with undiscounted price**: When a customer discount applied to a product set (SwkwebProductSet) and "show discount as separate line item" was disabled, the set's main product kept its full, undiscounted price when the order was transferred to connected systems such as an ERP — even though the cart total was correct. The discount is now applied to the main product line item itself, so external systems receive the correct reduced price.
+
+---
+
+# 1.5.13
+
+_Released 2026-07-01_
+
+**Bug Fixes**
+
+- **Product set price not discounted when "separate discount" is disabled**: With the "show discount as separate line item" setting turned off, product sets (SwkwebProductSet) still received a separate discount position and kept their full price instead of showing the reduced price inline. The discount is now applied directly to the product set's price, matching the behavior of regular products.
+
+---
+
 # 1.5.12
 
 _Released 2026-05-12_
