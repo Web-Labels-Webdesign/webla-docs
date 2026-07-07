@@ -4,6 +4,16 @@ All notable changes to the Ultimate Bundle Plugin for end users.
 
 ---
 
+# 5.1.4
+
+_Released 2026-07-06_
+
+**Bug Fixes**
+
+- Bundles with a pre-order component now show the release date ("Dieses Produkt erscheint am …") on the bundle line in the cart and use it for the delivery date, instead of the bundle's normal delivery time.
+
+---
+
 # 5.1.3
 
 _Released 2026-07-06_

@@ -4,6 +4,16 @@ Alle wichtigen Änderungen am Ultimativen Bundle Plugin für Endbenutzer.
 
 ---
 
+# 5.1.4
+
+_Veröffentlicht am 2026-07-06_
+
+**Fehlerbehebungen**
+
+- Bundles mit einem vorbestellbaren Bestandteil zeigen nun das Erscheinungsdatum ("Dieses Produkt erscheint am …") in der Warenkorbzeile an und verwenden es für das Lieferdatum – statt der normalen Lieferzeit des Bundles.
+
+---
+
 # 5.1.3
 
 _Veröffentlicht am 2026-07-06_
