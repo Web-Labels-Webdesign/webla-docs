@@ -1,12 +1,26 @@
-# Changelog
+**Changelog — Media Booster**
 
 All notable changes to Media Booster for end users.
 
 ---
 
-## [1.3.7] - 2026-06-09
+# 1.3.8
 
-### Bug Fixes
+_Released 2026-07-09_
+
+**Bug Fixes**
+
+- Fixed out-of-memory crash during SEO optimization when a media file is linked to many products — the plugin no longer loads every product assignment into memory, so large catalogs process without stalling the queue worker
+- Fixed a compatibility error with newer Shopware versions that could prevent the storefront image URL filter from loading
+
+---
+
+# 1.3.7
+
+_Released 2026-06-09_
+
+**Bug Fixes**
+
 - Fixed image processing running out of memory and stalling the queue (and all scheduled tasks) during large AVIF conversions — per-process Imagick memory is now bounded
 - Fixed dashboard statistics showing wrong or reset numbers — progress now reflects the actual processing log, so percentages stay correct across reruns, partial runs and worker restarts
 - Fixed broken (404) storefront images after a media file was replaced — the converted WebP/AVIF version is now verified on disk per request instead of trusting a stale 1-hour cache
@@ -14,148 +28,202 @@ All notable changes to Media Booster for end users.
 
 ---
 
-## [1.3.6] - 2026-03-20
+# 1.3.6
 
-### Bug Fixes
+_Released 2026-03-20_
+
+**Bug Fixes**
+
 - Fixed non-transparent PNGs (e.g. technical drawings) being corrupted during WebP/AVIF conversion — alpha channel was incorrectly activated on RGB images, making output nearly invisible
 
 ---
 
-## [1.3.5] - 2026-03-06
+# 1.3.5
 
-### Bug Fixes
+_Released 2026-03-06_
+
+**Bug Fixes**
+
 - Fixed admin dashboard progress not updating in real-time during processing — switched to direct SQL reads for consistency with background worker writes and added cache-busting to status polling
 - Fixed "Last Run" timestamp showing stale or missing values after starting a new processing run
 
 ---
 
-## [1.3.4] - 2026-03-06
+# 1.3.4
 
-### Bug Fixes
+_Released 2026-03-06_
+
+**Bug Fixes**
+
 - Fixed sparse images (technical drawings, diagrams) being destroyed by lossy AVIF/WebP compression — now uses lossless mode which is both smaller and pixel-perfect
 - Removed unused `media_version_id` column from log table (media entity has no versioning)
 
 ---
 
-## [1.3.3] - 2026-03-06
+# 1.3.3
 
-### Bug Fixes
+_Released 2026-03-06_
+
+**Bug Fixes**
+
 - Fixed "Convert All Again" not regenerating AVIF/WebP files — conversion was skipped when the target file already existed on disk, so redo operations had no effect
 
 ---
 
-## [1.3.2] - 2026-03-06
+# 1.3.2
 
-### Bug Fixes
+_Released 2026-03-06_
+
+**Bug Fixes**
+
 - Fixed queue messages being processed synchronously in the HTTP request instead of in the background — admin UI no longer blocks until all batches complete
 
 ---
 
-## [1.3.1] - 2026-03-06
+# 1.3.1
 
-### Bug Fixes
+_Released 2026-03-06_
+
+**Bug Fixes**
+
 - Fixed reset task endpoint not dispatching batches after resetting, leaving processing stuck
 - Fixed footer buttons overflowing and reset being blocked after a completed run
 - Renamed buttons for clarity and added confirmations for destructive actions
 
 ---
 
-## [1.3.0] - 2026-03-06
+# 1.3.0
 
-### Improvements
+_Released 2026-03-06_
+
+**Improvements**
+
 - Replaced fragile chain-dispatch queue architecture with pre-dispatch — all media IDs are now queried upfront, split into batches, and dispatched at once so each batch is independent and the queue can no longer stall mid-run
 - Processing progress is now tracked at batch level instead of per-item, reducing database writes during processing
 - Running state auto-clears when all items are handled, and stuck-state timeout reduced from 30 to 10 minutes for faster recovery
 
-### Bug Fixes
+**Bug Fixes**
+
 - Fixed potential queue stall where a single failed batch could stop all subsequent batches from processing
 
 ---
 
-## [1.2.1] - 2026-03-06
+# 1.2.1
 
-### Bug Fixes
+_Released 2026-03-06_
+
+**Bug Fixes**
+
 - Fixed admin dashboard crash ("createNotificationError is not a function") caused by missing notification mixin
 - Improved progress card footer button layout — actions are now grouped logically with proper spacing
 
 ---
 
-## [1.2.0] - 2026-03-05
+# 1.2.0
 
-### New Features
+_Released 2026-03-05_
+
+**New Features**
+
 - Added configurable frontend extension priority setting — choose whether AVIF, WebP, or original format is served to visitors
 - Processing errors are now persisted to the database and survive across queue worker restarts, making them reliably visible in the admin dashboard
 - Renamed Twig filter from `webla_as_webp` to `webla_as_converted` to reflect AVIF/WebP support
 
-### Bug Fixes
+**Bug Fixes**
+
 - Fixed extension priority setting not working due to missing SystemConfigService injection
 - Fixed error timestamps not displaying in admin dashboard (key mismatch between storage and template)
 - Fixed various pipeline issues: infinite loops, race conditions, query performance, data safety, UI polish, deduplication, UTF-8 safety, and dead code cleanup
 
-### Improvements
+**Improvements**
+
 - Reduced database queries during batch processing by ~80% — progress counts are now accumulated in memory and flushed once per batch instead of per item
 
 ---
 
-## [1.1.1] - 2026-03-05
+# 1.1.1
 
-### New Features
+_Released 2026-03-05_
+
+**New Features**
+
 - Sparse images (diagrams, technical drawings, line art) are now automatically detected and converted at higher quality (minimum 95) to preserve thin lines and text
 - Added per-task "Redo" buttons in admin dashboard — reset and reprocess just Resize, Convert, or SEO individually without clearing all data
 
-### Bug Fixes
+**Bug Fixes**
+
 - Fixed AVIF/WebP conversion destroying thin lines on technical drawings and diagrams due to aggressive lossy compression at moderate quality settings
 
 ---
 
-## [1.1.0] - 2026-03-05
+# 1.1.0
 
-### New Features
+_Released 2026-03-05_
+
+**New Features**
+
 - Error notifications in admin dashboard now show as user-facing alerts instead of silent console errors
 
-### Bug Fixes
+**Bug Fixes**
+
 - Fixed out-of-memory crash (2GB limit) on large media libraries by clearing Doctrine's entity manager between batches
 - Fixed entire processing run aborting when a single batch fails (e.g., due to special characters in filenames) — failed batches are now skipped and processing continues
 - Fixed total media count query triggering Flysystem path validation on media with special characters
 
-### Improvements
+**Improvements**
+
 - Shopware Context is now properly passed through the entire service call chain instead of creating default contexts
 - Processing automatically stops after 3 consecutive batch failures to prevent infinite loops
 
 ---
 
-## [1.0.8] - 2026-03-05
+# 1.0.8
 
-### Fixed
+_Released 2026-03-05_
+
+**Bug Fixes**
+
 - Fixed processing crash when media filenames contain special Unicode characters (soft hyphens, non-breaking spaces) that Flysystem rejects during entity loading — affected items are now skipped and marked as failed
 
 ---
 
-## [1.0.7] - 2026-03-05
+# 1.0.7
 
-### Fixed
+_Released 2026-03-05_
+
+**Bug Fixes**
+
 - Fixed batch processing getting permanently stuck when a single image fails (corrupted file, unsupported format) — failed items are now logged and skipped instead of causing infinite retry loops
 - Fixed misleading progress display showing "32 / 3468 (41.5%)" — now shows handled/total with breakdown of processed, skipped, and failed items
 
 ---
 
-## [1.0.6] - 2026-03-05
+# 1.0.6
 
-### Fixed
+_Released 2026-03-05_
+
+**Bug Fixes**
+
 - Fixed SQL syntax error on MariaDB when fetching unprocessed media IDs (LIMIT parameter was quoted as string)
 
 ---
 
-## [1.0.5] - 2026-03-05
+# 1.0.5
 
-### Fixed
+_Released 2026-03-05_
+
+**Bug Fixes**
+
 - Fixed 500 error on status API caused by missing DBAL Connection dependency in ProgressService
 
 ---
 
-## [1.0.4] - 2026-03-05
+# 1.0.4
 
-### Fixed
+_Released 2026-03-05_
+
+**Bug Fixes**
+
 - Fixed memory exhaustion on large media libraries by replacing PHP-loaded ID lists with SQL subqueries
 - Fixed memory accumulation in long-running worker by replacing entity search+write with DBAL UPSERT
 - Fixed memory pressure from batch processing by explicitly releasing entities and forcing GC between batches
@@ -173,82 +241,102 @@ All notable changes to Media Booster for end users.
 
 ---
 
-## [1.0.3] - 2026-01-23
+# 1.0.3
 
-### Added
-- **Automatic AVIF/WebP delivery**: Logos and theme images now automatically use converted versions without requiring template changes
+_Released 2026-01-23_
+
+**New Features**
+
+- Automatic AVIF/WebP delivery: Logos and theme images now automatically use converted versions without requiring template changes
 - AVIF support in Twig filter with priority order: AVIF > WebP > Original
 - Warning in server status when GD is used for AVIF conversion (recommends Imagick)
 
-### Fixed
+**Bug Fixes**
+
 - Fixed progress counters resetting on every batch instead of only at run start
 - Fixed total counts changing mid-run when new media is uploaded
 - Fixed PHP timeout during AVIF conversion with GD library on large images (>4 megapixels now skipped)
 
-### Changed
+**Improvements**
+
 - Dashboard labels now clearly distinguish "All-Time Statistics" from "Current Run Progress"
 - Twig filter now checks for AVIF first, then WebP, for optimal compression
 
 ---
 
-## [1.0.2] - 2026-01-23
+# 1.0.2
 
-### Fixed
+_Released 2026-01-23_
+
+**Bug Fixes**
+
 - Fixed "Palette image not supported by webp" error when converting PNG images with indexed colors (logos, icons, simple graphics)
 - Fixed GIF to WebP/AVIF conversion (GIF images are always palette-based)
 - Fixed progress percentage showing >100% when running conversion multiple times
 - Fixed progress not updating when all images are already converted (skipped)
 - Improved alpha channel handling for transparent PNG images
 
-### Added
+**New Features**
+
 - Display failed image count in admin dashboard progress section
 - Error message when resize is started without max dimensions configured
 
-### Changed
+**Improvements**
+
 - Progress counters now reset when starting a new processing run
 - Enhanced error messages for conversion failures now include the actual warning
 
 ---
 
-## [1.0.1] - 2026-01-23
+# 1.0.1
 
-### Documentation
+_Released 2026-01-23_
+
+**Documentation**
+
 - Added README with installation and usage instructions
 - Added user documentation (EN/DE)
 
 ---
 
-## [1.0.0] - 2026-01-23
+# 1.0.0
 
-### Initial Release
+_Released 2026-01-23_
 
-**Image Optimization**
+**Initial Release**
+
+Image Optimization
+
 - Automatic resizing of oversized original images to configurable maximum dimensions
 - Flexible resize modes: "Fit" (within both bounds) or "Largest" (limit largest side only)
 - Supports JPG, JPEG, PNG, BMP, and GIF formats
 
-**Modern Format Conversion**
+Modern Format Conversion
+
 - Convert images to WebP for up to 30% smaller file sizes
 - Convert images to AVIF for up to 50% smaller file sizes
 - Original files preserved for full Shopware compatibility
 - Automatic thumbnail conversion included
 - Configurable quality settings for images and thumbnails separately
 
-**SEO Optimization**
+SEO Optimization
+
 - Automatic alt text generation for product and content images
 - Automatic title attribute optimization
 - SEO-friendly filename generation with multiple templates
 - Support for product name, shop name, product number, and manufacturer number
 - Multi-language support
 
-**Administration Dashboard**
+Administration Dashboard
+
 - Real-time progress tracking with percentage and processed images
 - Batch processing with configurable batch size
 - Start/stop processing controls
 - Detailed statistics and error logging
 - Server capability detection (Imagick/GD, WebP/AVIF support)
 
-**Technical Features**
+Technical Features
+
 - Shopware 6.5, 6.6, and 6.7 compatibility
 - Scheduled task support for automatic background processing
 - Message queue integration for async processing
@@ -257,7 +345,7 @@ All notable changes to Media Booster for end users.
 
 ---
 
-## Compatibility
+**Compatibility**
 
 | Plugin Version | Shopware Version | PHP Version |
 | -------------- | ---------------- | ----------- |
