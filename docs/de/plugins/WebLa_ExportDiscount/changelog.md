@@ -4,6 +4,34 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 5.2.1
+
+_Veröffentlicht am 2026-07-10_
+
+**Fehlerbehebungen**
+
+- Mit aktivierter Option „Rabatt nur bei Einzelkäufen anwenden" wird der rabattierte Preis auf der Produktseite jetzt nur noch für Menge 1 angezeigt. Staffelpreise (Mengenrabatte) behalten ihre normalen Preise – passend zu dem, was der Warenkorb bei größeren Mengen berechnet. Bisher zeigten alle Mengenstufen den Einzelstück-Rabatt.
+
+---
+
+# 5.2.0
+
+_Veröffentlicht am 2026-07-10_
+
+**Fehlerbehebungen**
+
+- Der Sonderpreis aus einem Preissuchmaschinen-Link bleibt jetzt zuverlässig bis zum Abschluss der Bestellung im Warenkorb erhalten – auch bei Gastbestellung, Registrierung und Anmeldung in einem bestehenden Konto. Bisher konnte der Rabatt an der Kasse aus dem Warenkorb verschwinden, obwohl er auf der Produktseite angezeigt wurde.
+- Geschäftskunden (Netto/B2B) wird jetzt der korrekte rabattierte Preis berechnet. Bisher wurde, wenn ein Kunde ein rabattiertes Produkt mit Bruttopreisen in den Warenkorb legte und anschließend zum Nettokunden wurde, die Steuer auf den Bruttobetrag aufgeschlagen – der Kunde zahlte zu viel.
+- Der rabattierte Preis zeigt jetzt die korrekte Steueraufschlüsselung und behält die Grundpreisanzeige bei.
+- Produktpreise werden nicht mehr während des Seitenaufbaus in die Datenbank geschrieben. Ein Feed-Besucher kann so den für normale Kunden angezeigten Streich- bzw. Referenzpreis nicht mehr beeinflussen.
+
+**Verbesserungen**
+
+- Das Caching wurde überarbeitet: Für einen Feed-Besucher werden nur noch die Seiten ungecacht ausgeliefert, die tatsächlich einen Sonderpreis anzeigen; der restliche Shop – sowie jeder normale Besucher und Suchmaschinen-Crawler – nutzt weiterhin den vollen Seiten-Cache. Das frühere Verhalten, bei dem ein einziger Feed-Link große Teile des Shops ungecacht auslieferte, entfällt.
+- Der Rabatt folgt jetzt einer stabilen Besucher-Kennung, die Anmeldung, Registrierung sowie Session- oder Token-Wechsel übersteht – der Kunde zahlt, was er gesehen hat.
+
+---
+
 # 5.1.4
 
 _Veröffentlicht am 2026-07-02_

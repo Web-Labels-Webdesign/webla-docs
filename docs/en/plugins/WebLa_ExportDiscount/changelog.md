@@ -4,6 +4,34 @@ All notable changes for end users.
 
 ---
 
+# 5.2.1
+
+_Released 2026-07-10_
+
+**Bug Fixes**
+
+- With "Apply discount only for single-unit purchases" enabled, the discounted price is now shown only for quantity 1 on the product page. Quantity graduations (bulk prices) keep their normal prices, matching what the cart charges for larger quantities. Previously every quantity tier showed the single-unit discount.
+
+---
+
+# 5.2.0
+
+_Released 2026-07-10_
+
+**Bug Fixes**
+
+- The special price from a price-comparison feed link is now reliably kept in the cart all the way through checkout — including guest checkout, registration, and logging into an existing account. Previously the discount could silently disappear from the cart at checkout even though it was shown on the product page.
+- Business (net/B2B) customers are now charged the correct discounted price. Previously, if a customer added a discounted product while seeing gross prices and then became a net customer, tax was added on top of the gross figure and the customer was overcharged.
+- The discounted price now shows the correct tax breakdown and keeps the unit/base-price (Grundpreis) display intact.
+- Product prices are no longer written to the database while a page is rendered, so a feed visitor can no longer affect the strike-through/reference price shown to normal customers.
+
+**Improvements**
+
+- Caching was reworked: for a feed visitor, only the pages that actually show a special price are served uncached; the rest of the shop — and every normal visitor and search-engine crawler — continues to use the full page cache. This ends the earlier behaviour where a single feed link could serve much of the shop uncached.
+- The discount now follows a stable per-visitor identity that survives login, registration, and session or token changes, so what the customer saw on the page is what they pay.
+
+---
+
 # 5.1.4
 
 _Released 2026-07-02_
