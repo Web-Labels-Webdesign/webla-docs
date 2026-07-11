@@ -4,6 +4,17 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 1.5.15
+
+_Veröffentlicht am 2026-07-10_
+
+**Fehlerbehebungen**
+
+- **Prozentualer Rabatt fiel zusammen mit Kundenrabatt zu hoch aus**: Wurde eine prozentuale Rabatt-Aktion mit einem kundenspezifischen Rabatt kombiniert, wurde die Rabatt-Aktion auf den vollen Preis berechnet, bevor der Kundenrabatt angewendet wurde — der Gesamtrabatt fiel dadurch zu hoch aus. Der Kundenrabatt wird nun zuerst angewendet und die Rabatt-Aktion auf den bereits reduzierten Preis berechnet.
+- **Zusatzoptionen (WebLa_Zusatzoptionen) wurden nicht rabattiert dargestellt**: Über WebLa_Zusatzoptionen hinzugefügte Optionen wurden auf der Produktdetailseite und im Warenkorb mit ihrem vollen Preis angezeigt, auch wenn ein kundenspezifischer Rabatt auf das Produkt zutraf. Die Optionspreise zeigen den Rabatt nun überall an und der rabattierte Optionspreis wird auch in die Bestellung für angebundene Systeme wie ein ERP übernommen.
+
+---
+
 # 1.5.14
 
 _Veröffentlicht am 2026-07-06_

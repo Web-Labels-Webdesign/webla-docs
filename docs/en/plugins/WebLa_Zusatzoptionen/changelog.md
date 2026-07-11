@@ -4,6 +4,20 @@ All notable changes to the Additional Options Plugin for end users.
 
 ---
 
+# 5.7.0
+
+_Released 2026-07-10_
+
+**New Features**
+
+- **Required Option Selection**: An option set can now be marked as "selection required", forcing customers to choose at least one option in that set before the product can be added to the cart. Products with a required option set show a "Select options" link in listings that leads to the product page, the chosen option cannot be removed in the cart (switching to a different option in the same set stays possible), and checkout is blocked until a valid selection is made. Available for both manually assigned option sets and the seeder, and disabled by default so existing option sets are unaffected.
+
+**Bug Fixes**
+
+- Prevented duplicate option display in the cart on Shopware 6.7.10.0 and newer, where the platform now renders line-item children automatically.
+
+---
+
 # 5.6.0
 
 _Released 2026-07-01_

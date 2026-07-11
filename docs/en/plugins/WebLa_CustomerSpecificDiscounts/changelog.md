@@ -4,6 +4,17 @@ All notable changes for end users.
 
 ---
 
+# 1.5.15
+
+_Released 2026-07-10_
+
+**Bug Fixes**
+
+- **Percentage promotion discounted too much on top of a customer discount**: When a percentage promotion (discount campaign) was combined with a customer-specific discount, the promotion was calculated on the full price before the customer discount was applied, so the combined discount was too high. The customer discount is now applied first, and the promotion is calculated on the already-reduced price.
+- **Additional options (WebLa_Zusatzoptionen) not shown discounted**: Options added to a product via WebLa_Zusatzoptionen were displayed at their full price on the product detail page and in the cart, even when a customer-specific discount applied to the product. The option prices now show the discount everywhere they appear, and the discounted option price is also carried into the order for connected systems such as an ERP.
+
+---
+
 # 1.5.14
 
 _Released 2026-07-06_

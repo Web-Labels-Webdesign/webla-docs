@@ -4,6 +4,20 @@ Alle wichtigen Änderungen am Zusatzoptionen Plugin für Endbenutzer.
 
 ---
 
+# 5.7.0
+
+_Veröffentlicht am 2026-07-10_
+
+**Neue Funktionen**
+
+- **Pflichtauswahl von Optionen**: Ein Optionsset kann nun als „Auswahl erforderlich" markiert werden, wodurch Kunden mindestens eine Option in diesem Set auswählen müssen, bevor das Produkt in den Warenkorb gelegt werden kann. Produkte mit einem erforderlichen Optionsset zeigen in Listen einen Link „Option wählen", der zur Produktseite führt, die gewählte Option kann im Warenkorb nicht entfernt werden (ein Wechsel zu einer anderen Option im selben Set bleibt möglich) und der Checkout wird blockiert, bis eine gültige Auswahl getroffen wurde. Verfügbar sowohl für manuell zugewiesene Optionssets als auch für den Seeder und standardmäßig deaktiviert, sodass bestehende Optionssets nicht betroffen sind.
+
+**Fehlerbehebungen**
+
+- Doppelte Anzeige von Optionen im Warenkorb unter Shopware 6.7.10.0 und neuer verhindert, wo die Plattform die Positions-Unterelemente nun automatisch rendert.
+
+---
+
 # 5.6.0
 
 _Veröffentlicht am 2026-07-01_
