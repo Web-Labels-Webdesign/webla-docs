@@ -54,6 +54,7 @@ jobs:
             ["WebLa_BatchManagement"]="WebLa_BatchManagement"
             ["WebLa_ManufacturerPages"]="WebLa_ManufacturerPages"
             ["WebLa_CategorySorter"]="WebLa_CategorySorter"
+            ["WebLa_AdminProductFilters"]="WebLa_AdminProductFilters"
           )
 
           declare -A PLUGIN_FOLDERS=(
@@ -79,6 +80,7 @@ jobs:
             ["WebLa_BatchManagement"]="WebLa_BatchManagement"
             ["WebLa_ManufacturerPages"]="WebLa_ManufacturerPages"
             ["WebLa_CategorySorter"]="WebLa_CategorySorter"
+            ["WebLa_AdminProductFilters"]="WebLa_AdminProductFilters"
           )
 
           # Supported languages

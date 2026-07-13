@@ -197,3 +197,12 @@ plugins:
       en: Alphanumerically sorts a category's direct subcategories in the Shopware admin — with a recursive mode, optional multi-category selection and automatic scheduled sorting.
     requirements: Shopware 6.6–6.7, PHP 8.2+
     version: "1.0.0"
+  - id: WebLa_AdminProductFilters
+    name:
+      de: Zusatzfelder in der Admin-Produktübersicht
+      en: Custom fields in the admin product overview
+    short:
+      de: Zeigt jedes Produkt-Zusatzfeld als optionale Spalte in der Produktübersicht des Shopware-Admins an. Spalten frei ein- und ausblenden, Breite anpassen – ganz ohne Konfiguration.
+      en: Shows every product custom field as an optional column in the Shopware admin product overview. Show or hide columns and resize them freely – with no configuration at all.
+    requirements: Shopware 6.6–6.7, PHP 8.1+
+    version: "4.1.0"
