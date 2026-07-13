@@ -4,6 +4,16 @@ Alle wichtigen Änderungen am Zusatzoptionen Plugin für Endbenutzer.
 
 ---
 
+# 5.7.1
+
+_Veröffentlicht am 2026-07-13_
+
+**Fehlerbehebungen**
+
+- Behoben, dass das Plugin-Paket unter Shopware 6.7 ein veraltetes Administrations-Bundle auslieferte. Die Einstellung „Auswahl erforderlich" und die Performance-Verbesserung im Produktformular aus 5.7.0 fehlten dadurch in der Administration, bis die Assets manuell neu gebaut wurden. Ein manueller Rebuild ist nicht mehr nötig.
+
+---
+
 # 5.7.0
 
 _Veröffentlicht am 2026-07-10_

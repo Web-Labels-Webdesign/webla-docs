@@ -4,6 +4,16 @@ All notable changes to the Additional Options Plugin for end users.
 
 ---
 
+# 5.7.1
+
+_Released 2026-07-13_
+
+**Bug Fixes**
+
+- Fixed the plugin package shipping an outdated administration bundle on Shopware 6.7. The "selection required" setting and the product form performance fix from 5.7.0 were missing in the administration until the assets were rebuilt manually. No manual rebuild is needed anymore.
+
+---
+
 # 5.7.0
 
 _Released 2026-07-10_

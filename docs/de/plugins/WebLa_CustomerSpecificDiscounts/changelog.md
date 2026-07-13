@@ -4,6 +4,28 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 1.5.17
+
+_Veröffentlicht am 2026-07-13_
+
+**Fehlerbehebungen**
+
+- **Unrabattierter Hauptproduktpreis in Bestellung, Rechnung und Administration (WebLa_Zusatzoptionen)**: Bei Produkten mit Zusatzoptionen wurde in der Bestellung, auf der Rechnung und in der Bestellübersicht der Administration der volle statt des rabattierten Hauptproduktpreises angezeigt, während die Bestellsumme korrekt war — die einzelnen Positionen ergaben dadurch nicht die Gesamtsumme. Der rabattierte Preis wird nun auch in der Bestellung gespeichert, sodass die Positionen wieder zur Gesamtsumme passen. Betrifft die Zusatzoptionen-Einstellung „Bestellpositionen anpassen" mit dem Wert „Neuberechnung von Positionen, um individuelle Preise anzuzeigen" (Standard). Bereits erfasste Bestellungen behalten ihre gespeicherten Preise und werden nicht nachträglich korrigiert.
+
+---
+
+# 1.5.16
+
+_Veröffentlicht am 2026-07-13_
+
+**Fehlerbehebungen**
+
+- **Zusatzoptionen (WebLa_Zusatzoptionen) wurden ohne passende Rabattregel rabattiert**: Bei einem rabattierten Produkt wurde jede Option reduziert — auch Optionen, die zu keiner rabattierten Kategorie und keiner rabattierten Dynamischen Produktgruppe gehören. Eine Option wird nun nur noch rabattiert, wenn ihr eigenes Produkt einer Rabattregel entspricht; Optionen ohne passende Regel behalten ihren vollen Preis. Damit ist auch die Warenkorbsumme korrekt, in der zuvor alle Optionspreise gemeinsam mit dem Produkt reduziert wurden.
+- **Rabatt, wenn nur die Option berechtigt ist**: Liegt das Produkt der Option in einer rabattierten Kategorie oder Dynamischen Produktgruppe, das Hauptprodukt aber nicht, wird die Option nun ebenfalls rabattiert. Zuvor wurde das gesamte Produkt übersprungen und die Option behielt ihren vollen Preis.
+- **Rabatt als separate Position reduzierte auch Optionen**: Bei aktivierter Einstellung „Rabatt als separate Position anzeigen" wurde die Rabattposition aus dem Produktpreis inklusive aller Optionsaufschläge berechnet, sodass Optionen unabhängig von ihren eigenen Regeln rabattiert wurden. Die Rabattposition umfasst nun nur noch die tatsächlich berechtigten Anteile.
+
+---
+
 # 1.5.15
 
 _Veröffentlicht am 2026-07-10_

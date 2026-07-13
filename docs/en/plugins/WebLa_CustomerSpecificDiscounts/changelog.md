@@ -4,6 +4,28 @@ All notable changes for end users.
 
 ---
 
+# 1.5.17
+
+_Released 2026-07-13_
+
+**Bug Fixes**
+
+- **Undiscounted main product price in the order, invoice and admin (WebLa_Zusatzoptionen)**: For products with additional options, the order, the invoice and the order view in the administration showed the main product's full price instead of the discounted one, while the order total was correct — so the individual positions did not add up to the total. The discounted price is now also stored on the order, and the positions reconcile with the total again. Applies to the Zusatzoptionen setting "Adjust order line items" set to "Recalculate line items in order to show individual prices" (the default). Already placed orders keep their stored prices and are not corrected retroactively.
+
+---
+
+# 1.5.16
+
+_Released 2026-07-13_
+
+**Bug Fixes**
+
+- **Additional options (WebLa_Zusatzoptionen) were discounted without a matching discount rule**: Every option of a discounted product was reduced, even options that belong to no discounted category or dynamic product group. An option is now only discounted when its own product matches a discount rule; options without a matching rule keep their full price. This also corrects the cart total, which previously reduced all option prices together with the product.
+- **Option discounted although only the option qualifies**: If the option's product is in a discounted category or dynamic product group but the main product is not, the option is now discounted as well. Previously the whole product was skipped and the option kept its full price.
+- **Discount as separate line item reduced options too**: With "show discount as separate line item" enabled, the discount position was calculated from the product price including all option surcharges, so options were discounted regardless of their own rules. The discount position now only covers the parts that actually qualify.
+
+---
+
 # 1.5.15
 
 _Released 2026-07-10_
