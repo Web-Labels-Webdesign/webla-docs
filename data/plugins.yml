@@ -206,3 +206,12 @@ plugins:
       en: Shows every product custom field as an optional column in the Shopware admin product overview. Show or hide columns and resize them freely – with no configuration at all.
     requirements: Shopware 6.6–6.7, PHP 8.1+
     version: "4.1.0"
+  - id: WebLa_FlyoutNavigation
+    name:
+      de: Flyout Navigation
+      en: Flyout Navigation
+    short:
+      de: Dieses Plugin ersetzt die klassische Navigation durch eine moderne, mehrstufige Flyout-Navigation, die sich nach rechts aufklappt. Es bietet umfangreiche Konfigurationsmöglichkeiten sowie optionale Features wie Sticky Header und eine benutzerdefinierte Topbar.
+      en: This plugin replaces the classic navigation with a modern, multi-level flyout navigation that opens to the right. It offers extensive configuration options as well as optional features such as a sticky header and a custom top bar.
+    requirements: Shopware 6.7–6.8, PHP 8.2+
+    version: "1.1.4"
