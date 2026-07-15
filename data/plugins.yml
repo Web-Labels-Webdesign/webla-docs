@@ -1,4 +1,13 @@
 plugins:
+  - id: WebLa_CustomerTaxCountry
+    name:
+      de: Customer Tax Country
+      en: Customer Tax Country
+    short:
+      de: Steuert je Kunde, Kundengruppe oder Verkaufskanal, welches Land für die Umsatzsteuer maßgeblich ist – inklusive automatischer 0 %-Berechnung für innergemeinschaftliche B2B-Lieferungen mit gültiger USt-Id.
+      en: Controls which country determines VAT per customer, customer group, or sales channel – including automatic 0% calculation for intra-EU B2B deliveries with a valid VAT ID.
+    requirements: Shopware 6.7, PHP 8.2+
+    version: "1.0.0"
   - id: WebLa_Produktberater
     name:
       de: Produktberater
