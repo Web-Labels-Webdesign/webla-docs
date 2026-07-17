@@ -4,6 +4,26 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 1.5.19
+
+_Veröffentlicht am 2026-07-16_
+
+**Fehlerbehebungen**
+
+- **Preis sank bei jedem Aufruf des Warenkorbs weiter**: Shopware berechnet den Warenkorb pro Seitenaufruf mehrfach, und der Rabatt wurde bei jedem dieser Durchläufe erneut statt nur einmal angewendet. Der Preis fiel dadurch mit jedem Aufruf oder Neuladen des Warenkorbs weiter — ein Produkt für 2.349,00 € mit 20% Rabatt erreichte 315,28 € statt 1.879,20 €. Der Rabatt wird nun immer vom ursprünglichen Produktpreis aus berechnet und genau einmal angewendet, unabhängig davon, wie oft Shopware den Warenkorb neu berechnet. Bestehende Warenkörbe mit einem mehrfach reduzierten Preis korrigieren sich bei der nächsten Warenkorbberechnung selbst. Damit ist die in 1.5.18 begonnene Korrektur abgeschlossen, die nur Produkte mit ausgewählten Zusatzoptionen abdeckte und das Problem daher nicht behoben hat.
+
+---
+
+# 1.5.18
+
+_Veröffentlicht am 2026-07-16_
+
+**Fehlerbehebungen**
+
+- **Preis fiel bei Produkten mit Zusatzoptionen (WebLa_Zusatzoptionen) weit unter den Rabatt**: Wurde ein Produkt mit einem Optionsset in den Warenkorb gelegt, ohne eine Option auszuwählen, wurde der Rabatt bei jeder Warenkorbberechnung erneut statt nur einmal angewendet. Der Preis sank mit jedem Aufruf des Warenkorbs oder des Off-Canvas-Warenkorbs weiter — ein Produkt für 2.349,00 € mit 20% Rabatt landete bei 315,28 € statt bei 1.879,20 €. Der Rabatt wird nun immer vom ursprünglichen Produktpreis aus berechnet und damit genau einmal angewendet, unabhängig davon, wie oft der Warenkorb neu berechnet wird. Warenkörbe mit einem bereits mehrfach reduzierten Preis korrigieren sich mit der nächsten Warenkorbberechnung selbst. Produkte, bei denen eine Option aktiv ausgewählt wurde, waren nicht betroffen.
+
+---
+
 # 1.5.17
 
 _Veröffentlicht am 2026-07-13_

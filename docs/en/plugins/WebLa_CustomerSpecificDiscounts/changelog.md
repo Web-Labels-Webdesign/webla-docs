@@ -4,6 +4,26 @@ All notable changes for end users.
 
 ---
 
+# 1.5.19
+
+_Released 2026-07-16_
+
+**Bug Fixes**
+
+- **Price kept dropping every time the cart was opened**: Shopware recalculates the cart several times per page view, and the discount was applied again on each of those passes instead of only once. The price therefore fell further with every view or reload of the cart — a product at 2,349.00 € with a 20% discount reached 315.28 € instead of 1,879.20 €. The discount is now always calculated from the product's original price and is applied exactly once, no matter how often Shopware recalculates the cart. Existing carts showing a repeatedly reduced price correct themselves the next time the cart is calculated. This completes the correction started in 1.5.18, which only covered products with selected additional options and therefore did not resolve the issue.
+
+---
+
+# 1.5.18
+
+_Released 2026-07-16_
+
+**Bug Fixes**
+
+- **Price fell far below the discount for products with additional options (WebLa_Zusatzoptionen)**: When a product with an option set was placed in the cart without selecting any option, the discount was applied again on every cart calculation instead of only once. The price dropped further with each view of the cart or the off-canvas cart — a product at 2,349.00 € with a 20% discount ended up at 315.28 € instead of 1,879.20 €. The discount is now always calculated from the product's original price, so it is applied exactly once no matter how often the cart is recalculated. Carts that already show a repeatedly reduced price correct themselves with the next cart calculation. Products for which an option was actively selected were not affected.
+
+---
+
 # 1.5.17
 
 _Released 2026-07-13_
