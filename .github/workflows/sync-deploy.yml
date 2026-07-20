@@ -56,6 +56,7 @@ jobs:
             ["WebLa_CategorySorter"]="WebLa_CategorySorter"
             ["WebLa_AdminProductFilters"]="WebLa_AdminProductFilters"
             ["WebLa_FlyoutNavigation"]="WebLa_FlyoutNavigation"
+            ["WebLa_CurrencyChanger"]="WebLa_CurrencyChanger"
           )
 
           declare -A PLUGIN_FOLDERS=(
@@ -83,6 +84,7 @@ jobs:
             ["WebLa_CategorySorter"]="WebLa_CategorySorter"
             ["WebLa_AdminProductFilters"]="WebLa_AdminProductFilters"
             ["WebLa_FlyoutNavigation"]="WebLa_FlyoutNavigation"
+            ["WebLa_CurrencyChanger"]="WebLa_CurrencyChanger"
           )
 
           # Supported languages
