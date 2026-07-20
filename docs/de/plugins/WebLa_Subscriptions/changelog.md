@@ -4,6 +4,28 @@ Alle wichtigen Änderungen am WebLa Subscription Plugin für Endbenutzer.
 
 ---
 
+# 1.7.4
+
+_Veröffentlicht am 2026-07-20_
+
+**Fehlerbehebungen**
+
+- Behoben: Die Schaltflächen „Ändern“ neben Zahlungsart und Intervall in der Abonnement-Detailansicht saßen unterhalb des zugehörigen Feldes statt auf gleicher Höhe.
+
+# 1.7.3
+
+_Veröffentlicht am 2026-07-20_
+
+**Fehlerbehebungen**
+
+- Behoben: Abonnements blieben nach erfolgreicher Zahlung im Status „Zahlung ausstehend“. Enthielt eine Bestellung Produkte mit unterschiedlichen Lieferintervallen, legte das Plugin pro Intervall ein eigenes Abonnement an, aktivierte aber nur eines davon — die übrigen verblieben dauerhaft im ausstehenden Status. Fehlgeschlagene und abgebrochene Zahlungen waren gleichermaßen betroffen und stornieren nun alle Abonnements der Bestellung.
+- Behoben: Die nächste Verlängerung wurde nicht angepasst, wenn das Lieferintervall in der Administration geändert wurde. Eine Intervalländerung berechnet den anstehenden Verlängerungstermin jetzt ausgehend von der letzten Verlängerung neu — ein von 2 auf 8 Wochen umgestelltes Abonnement wird damit 8 Wochen nach der letzten Lieferung fällig statt am alten Termin.
+- Behoben: Bei Abonnements mit PayPal (Mollie) blieb die Auswahl der Zahlungsart leer. PayPal fehlte sowohl in der Detailansicht als auch im Listenfilter unter den wählbaren Zahlungsarten, obwohl die Zahlungsart selbst funktionierte.
+
+**Verbesserungen**
+
+- Die Schaltflächen „Ändern“ neben Zahlungsart und Intervall erscheinen und verschwinden beim Bearbeiten nicht mehr. Sie sind jetzt dauerhaft sichtbar und bleiben deaktiviert, bis der Wert tatsächlich geändert wurde; die Felder ziehen sich außerdem nicht mehr über die gesamte Spaltenbreite.
+
 # 1.7.2
 
 _Veröffentlicht am 2026-06-29_

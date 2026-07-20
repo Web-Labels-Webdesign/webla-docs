@@ -4,6 +4,28 @@ All notable changes to the WebLa Subscription Plugin for end users.
 
 ---
 
+# 1.7.4
+
+_Released 2026-07-20_
+
+**Bug Fixes**
+
+- Fix the "Change" buttons next to the payment method and interval fields on the subscription detail page sitting below the field they belong to instead of level with it.
+
+# 1.7.3
+
+_Released 2026-07-20_
+
+**Bug Fixes**
+
+- Fix subscriptions staying stuck on "Payment pending" after a successful payment. When one order contained products with different delivery intervals, the plugin created one subscription per interval but only activated a single one — the remaining subscriptions never left the pending state. Failed and cancelled payments were affected in the same way and now cancel every subscription of the order.
+- Fix the next renewal date not moving when the delivery interval is changed in the administration. Changing the interval now recalculates the pending renewal from the last renewal date, so a subscription switched from 2 to 8 weeks is scheduled 8 weeks after its last delivery instead of keeping the old date.
+- Fix the payment method dropdown showing up empty for subscriptions paid via PayPal (Mollie). PayPal was missing from the selectable methods in both the subscription detail page and the list filter, even though the payment method itself worked.
+
+**Improvements**
+
+- The "Change" buttons next to the payment method and interval fields no longer appear and disappear while editing. They are now always visible and stay disabled until the value actually changes, and the fields no longer stretch across the full column width.
+
 # 1.7.2
 
 _Released 2026-06-29_
