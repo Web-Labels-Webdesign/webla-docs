@@ -10,6 +10,7 @@ This guide covers every feature and capability of Currency Display.
 - [Custom exchange rate](#custom-exchange-rate)
 - [Automatic rate updates](#automatic-rate-updates)
 - [Storefront features](#storefront-features)
+- [Price update mode](#price-update-mode)
 - [Cookie notice](#cookie-notice)
 - [Troubleshooting](#troubleshooting)
 
@@ -103,6 +104,45 @@ The converted amount is informational only. The following remain in your shop de
 - The amount actually charged
 - The order in the admin area
 - Invoices and all other documents
+
+---
+
+## Price update mode
+
+The plugin can work in one of two modes, controlled by the **Update mode** setting under **Price update mode** in the plugin configuration (**Extensions → My Extensions → Currency Display → Configure**). The mode decides whether currency conversion stays a purely visual addition to the storefront, or becomes real, native multi-currency selling handled by Shopware itself. For the setting itself, see the [settings reference](../configuration/settings.md).
+
+### Storefront display only (default)
+
+This is how the plugin has always worked, and every existing shop keeps this behaviour unchanged after an update.
+
+- Prices are converted for **display only** and shown next to the regular shop price, exactly as described under [Storefront features](#storefront-features) above.
+- Shopware's own currency and price data is never touched.
+- The visitor picks a currency from **the plugin's own currency selector** in the header.
+- **Orders and invoices remain in the shop's default currency.** The conversion shown to the visitor is informational only.
+
+### Update Shopware price data
+
+- The exchange rates are written into **Shopware's own currency and price data**. From then on, Shopware handles pricing natively everywhere: storefront, cart, order, invoices, API and exports.
+- The storefront is left completely untouched by the plugin in this mode — **the plugin's own currency selector is not displayed**.
+- Because Shopware itself now owns pricing, **orders and invoices are placed in the currency the customer selected**. This is a genuine currency switch, not a display conversion — the key practical difference to the default mode, and the point to understand before switching.
+
+A currency price you set by hand for a specific currency, for example a deliberately chosen 9.99, does not survive the next update in this mode. Depending on the strategy chosen in the [settings reference](../configuration/settings.md), it is either removed or overwritten with the converted value — either way, the exchange rate becomes the single source of truth for that price.
+
+### Setting up Shopware's own currency selector
+
+Switching to **Update Shopware price data** does not, by itself, make a currency selector appear in the storefront. Any selector shown in this mode is **Shopware's own**, not the plugin's, and Shopware only displays it once it has been set up correctly.
+
+1. Make sure every currency you want to offer exists under **Settings → Currencies**.
+2. Assign each currency to the relevant sales channel: open **Sales Channel → (select the channel) → General tab**, and add the currencies in the **Currencies** multi-select field. Set the **Default currency** for that sales channel in the same place.
+3. **Shopware only shows a currency selector once at least two currencies are assigned to the sales channel.** With only one currency assigned, no selector appears at all — this is standard Shopware behaviour, not a plugin limitation.
+4. A currency that exists under Settings → Currencies but has not been assigned to the sales channel never appears in the storefront, no matter how many currencies you have created.
+
+> **Tip**: The order of currencies in Shopware's own selector follows Shopware's internal ordering, not alphabetical order.
+
+### Choosing between the modes
+
+- Choose **Storefront display only** to show visitors a price in a familiar currency while continuing to sell and invoice in your own shop currency. Impact is low: nothing in your catalogue or price data changes.
+- Choose **Update Shopware price data** to genuinely sell in multiple currencies, with Shopware itself handling carts, orders and invoices in the currency the customer selected. Impact is higher, since it changes stored price data — see the [settings reference](../configuration/settings.md) for the warnings before switching.
 
 ---
 

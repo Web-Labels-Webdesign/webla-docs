@@ -80,6 +80,48 @@ Alle Einstellungen lassen sich pro Verkaufskanal unterschiedlich setzen. Wählen
 
 ---
 
+## Preis-Aktualisierungsmodus
+
+### Aktualisierungsmodus
+
+| Eigenschaft      | Wert                        |
+| ---------------- | --------------------------- |
+| **Typ**          | Auswahl                     |
+| **Standard**     | `Nur Storefront-Anzeige`    |
+| **Erforderlich** | Ja                          |
+
+**Beschreibung**: Legt fest, ob Preise nur für die Anzeige umgerechnet werden oder ob der Wechselkurs direkt in die Währungs- und Preisdaten von Shopware geschrieben wird.
+
+- `Nur Storefront-Anzeige` — das bisherige Verhalten. Preise werden ausschließlich für die Anzeige umgerechnet. Die Währungs- und Preisdaten von Shopware selbst bleiben unangetastet, Bestellung und Rechnung bleiben in Ihrer Shop-Standardwährung.
+- `Shopware-Preisdaten aktualisieren` — der Wechselkurs wird stattdessen direkt in die Währungs- und Preisdaten von Shopware geschrieben. Die Storefront selbst bleibt vom Plugin vollständig unberührt, und Shopware übernimmt die Preisberechnung nativ überall: in der Storefront, im Warenkorb, in der Bestellung, über die API und in Exporten.
+
+**Anwendungsbeispiel**: Bestehende Shops sind von dieser Einstellung nach einem Update nicht betroffen — der Standardwert erhält das bisherige Verhalten, und der Wechsel zu `Shopware-Preisdaten aktualisieren` ist eine bewusste Entscheidung, die der Shop selbst treffen muss, etwa um umgerechnete Preise auch über die API oder in Exporten bereitzustellen und nicht nur in der Storefront.
+
+---
+
+### Umgang mit währungsspezifischen Preisen
+
+| Eigenschaft      | Wert                                          |
+| ---------------- | ---------------------------------------------- |
+| **Typ**          | Auswahl                                        |
+| **Standard**     | `Entfernen und von Shopware berechnen lassen`  |
+| **Erforderlich** | Ja                                              |
+
+**Beschreibung**: Gilt nur, wenn **Aktualisierungsmodus** auf `Shopware-Preisdaten aktualisieren` steht. Legt fest, was mit einem Preis geschieht, den Sie selbst für eine bestimmte Währung hinterlegt haben — etwa einem bewusst gewählten Preis von 9,99 £.
+
+- `Entfernen und von Shopware berechnen lassen` — der hinterlegte Währungspreis wird entfernt, sodass Shopware jeden Preis aus dem Preis in der Standardwährung und dem Wechselkurs berechnet.
+- `Mit umgerechneten Werten überschreiben` — der hinterlegte Währungspreis bleibt erhalten, sein Wert wird aber bei jeder Aktualisierung durch den umgerechneten Betrag ersetzt.
+
+In beiden Fällen übersteht ein von Hand gewählter Preis die nächste Aktualisierung nicht — der Wechselkurs wird zur einzigen maßgeblichen Quelle für diesen Preis. Das ist der Sinn dieses Modus, das sollte für Sie aber keine Überraschung sein.
+
+Das gilt zusätzlich nur bei der Option „Mit umgerechneten Werten überschreiben": Enthält ein währungsspezifischer Preis einen Streichpreis oder einen „Günstigster Preis (letzten 30 Tage)"-Eintrag, den der Preis in der Standardwährung nicht hat, entfällt dieser Eintrag, da keine Berechnungsgrundlage vorhanden ist. Wenn Sie solche Preise pflegen, wählen Sie stattdessen „Entfernen und von Shopware berechnen lassen".
+
+**Anwendungsbeispiel**: Wählen Sie „Entfernen und von Shopware berechnen lassen", wenn Sie sich auf die Streichpreis- und Günstigster-Preis-Logik von Shopware pro Währung verlassen. Wählen Sie „Mit umgerechneten Werten überschreiben", wenn Sie für jede Währung einen eigenen hinterlegten Preis führen möchten, der stets zum aktuellen Wechselkurs passt.
+
+> **Versionshinweis**: Dies gilt immer, wenn **Aktualisierungsmodus** auf `Shopware-Preisdaten aktualisieren` steht, unabhängig von der gewählten Strategie für währungsspezifische Preise. Unter Shopware-Versionen vor 6.6.10 kann der Cache nach einer Kursänderung nicht automatisch geleert werden. Die Storefront zeigt dann möglicherweise noch die vorherigen Preise an, bis der Cache abläuft — standardmäßig nach bis zu zwei Stunden. Ab Shopware 6.6.10 geschieht dies automatisch.
+
+---
+
 ## Verkaufskanal-spezifische Einstellungen
 
 | Einstellung                    | Geltungsbereich   | Beschreibung                                          |

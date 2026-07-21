@@ -10,6 +10,7 @@ Diese Anleitung behandelt alle Funktionen und Möglichkeiten der Währungsanzeig
 - [Eigener Umrechnungskurs](#eigener-umrechnungskurs)
 - [Automatische Kursaktualisierung](#automatische-kursaktualisierung)
 - [Storefront Funktionen](#storefront-funktionen)
+- [Preis-Aktualisierungsmodus](#preis-aktualisierungsmodus)
 - [Cookie-Hinweis](#cookie-hinweis)
 - [Fehlerbehebung](#fehlerbehebung)
 
@@ -103,6 +104,45 @@ Der umgerechnete Betrag ist reine Information. Unverändert in Ihrer Shop-Standa
 - Der tatsächlich belastete Zahlbetrag
 - Die Bestellung im Admin-Bereich
 - Rechnungen und alle weiteren Belege
+
+---
+
+## Preis-Aktualisierungsmodus
+
+Das Plugin kann in einem von zwei Modi arbeiten, gesteuert über die Einstellung **Aktualisierungsmodus** im Bereich **Preis-Aktualisierungsmodus** der Plugin-Konfiguration (**Erweiterungen → Meine Erweiterungen → Währungsanzeige → Konfigurieren**). Der Modus entscheidet, ob die Währungsumrechnung eine rein optische Ergänzung der Storefront bleibt, oder ob daraus echter, nativer Mehrwährungsverkauf wird, den Shopware selbst übernimmt. Die Einstellung selbst ist in der [Einstellungsreferenz](../configuration/settings.md) beschrieben.
+
+### Nur Storefront-Anzeige (Standard)
+
+So hat das Plugin schon immer gearbeitet, und jeder bestehende Shop behält dieses Verhalten nach einem Update unverändert bei.
+
+- Preise werden ausschließlich **für die Anzeige** umgerechnet und neben dem regulären Shop-Preis eingeblendet — genau wie oben unter [Storefront Funktionen](#storefront-funktionen) beschrieben.
+- Die Währungs- und Preisdaten von Shopware selbst bleiben unangetastet.
+- Der Besucher wählt seine Währung über **die eigene Währungsauswahl des Plugins** im Kopfbereich.
+- **Bestellung und Rechnung bleiben in der Standardwährung des Shops.** Die dem Besucher angezeigte Umrechnung ist reine Information.
+
+### Shopware-Preisdaten aktualisieren
+
+- Die Wechselkurse werden direkt in die **Währungs- und Preisdaten von Shopware** geschrieben. Ab diesem Zeitpunkt übernimmt Shopware die Preisberechnung nativ überall: in der Storefront, im Warenkorb, in der Bestellung, über die API und in Exporten.
+- Die Storefront bleibt in diesem Modus vom Plugin vollständig unberührt — **die eigene Währungsauswahl des Plugins wird nicht mehr angezeigt**.
+- Da Shopware die Preisberechnung nun selbst übernimmt, werden **Bestellung und Rechnung in der vom Kunden gewählten Währung ausgestellt**. Das ist ein echter Währungswechsel und keine reine Anzeige-Umrechnung — der entscheidende praktische Unterschied zum Standardmodus, und der Punkt, den Sie vor dem Umschalten verstanden haben sollten.
+
+Ein von Hand für eine bestimmte Währung hinterlegter Preis — etwa ein bewusst gewählter Preis von 9,99 — übersteht in diesem Modus die nächste Aktualisierung nicht. Je nach der in der [Einstellungsreferenz](../configuration/settings.md) gewählten Strategie wird er entweder entfernt oder mit dem umgerechneten Wert überschrieben — in beiden Fällen wird der Wechselkurs zur einzigen maßgeblichen Quelle für diesen Preis.
+
+### Shopwares eigene Währungsauswahl einrichten
+
+Der Wechsel zu **Shopware-Preisdaten aktualisieren** lässt nicht automatisch eine Währungsauswahl in der Storefront erscheinen. Eine in diesem Modus angezeigte Auswahl ist **Shopwares eigene**, nicht die des Plugins, und Shopware zeigt sie nur an, wenn sie richtig eingerichtet wurde.
+
+1. Legen Sie alle gewünschten Währungen unter **Einstellungen → Währungen** an, falls noch nicht vorhanden.
+2. Weisen Sie jede Währung dem betreffenden Verkaufskanal zu: Öffnen Sie **Verkaufskanal → (Kanal auswählen) → Registerkarte „Allgemein"** und tragen Sie die Währungen im Mehrfachauswahlfeld **Währungen** ein. Legen Sie an derselben Stelle die **Standardwährung** für diesen Verkaufskanal fest.
+3. **Shopware zeigt eine Währungsauswahl erst an, wenn mindestens zwei Währungen dem Verkaufskanal zugewiesen sind.** Ist nur eine Währung zugewiesen, erscheint überhaupt keine Auswahl — das ist reguläres Shopware-Verhalten und keine Einschränkung des Plugins.
+4. Eine Währung, die unter Einstellungen → Währungen existiert, aber keinem Verkaufskanal zugewiesen ist, erscheint niemals in der Storefront — unabhängig davon, wie viele Währungen Sie angelegt haben.
+
+> **Tipp**: Die Reihenfolge der Währungen in Shopwares eigener Auswahl folgt der internen Sortierung von Shopware, nicht dem Alphabet.
+
+### Den passenden Modus wählen
+
+- Wählen Sie **Nur Storefront-Anzeige**, um Besuchern einen Preis in einer vertrauten Währung zu zeigen, während Sie weiterhin in Ihrer eigenen Shop-Währung verkaufen und abrechnen. Die Auswirkung ist gering: An Ihren Katalog- und Preisdaten ändert sich nichts.
+- Wählen Sie **Shopware-Preisdaten aktualisieren**, um tatsächlich in mehreren Währungen zu verkaufen — Shopware wickelt Warenkorb, Bestellung und Rechnung dann in der vom Kunden gewählten Währung ab. Die Auswirkung ist größer, da gespeicherte Preisdaten verändert werden — die Warnhinweise dazu finden Sie in der [Einstellungsreferenz](../configuration/settings.md).
 
 ---
 

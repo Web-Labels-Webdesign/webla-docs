@@ -18,6 +18,24 @@ The plugin suits shops that sell internationally but want to avoid the overhead 
 - **Currency selector in the topbar**: Visitors pick their currency from a dropdown in the header, with country flags or currency symbols.
 - **Custom exchange rate**: A deviating rate can be stored per currency pair, for example to absorb exchange rate fluctuations.
 
+## Price Update Mode
+
+The plugin can operate in two different modes, configured under **Price update mode → Update mode**.
+
+- **Storefront display only** (default): Prices are converted for display in the storefront only. Shopware's own currency and price data are never touched, and orders and invoices stay in your shop default currency. This is how the plugin has always worked, and every existing shop keeps this behaviour after an update — switching modes is a deliberate choice, not something that happens automatically.
+- **Update Shopware price data**: The exchange rate is written into Shopware's own currency and price data instead. The storefront itself is left completely untouched by the plugin, and Shopware handles pricing natively everywhere: storefront, cart, order, API and exports.
+
+**Before switching to the Update Shopware price data mode, understand what happens to prices you set by hand.** A second setting, **Handling of currency-specific prices**, controls what happens to a price you have stored for a specific currency — for example a deliberately chosen £9.99:
+
+- **Remove and let Shopware calculate them** (default): the stored currency price is deleted, and Shopware calculates that price from the default currency price and the exchange rate instead.
+- **Overwrite with converted values**: the stored currency price is kept, but its value is replaced with the converted amount on every update.
+
+Either way, the exchange rate becomes the single source of truth for that price. A manually chosen amount does not survive the next update — that is the purpose of this mode, but it should not come as a surprise.
+
+This applies only under the Overwrite with converted values strategy: if a currency-specific price carries a list price or a "cheapest price (last 30 days)" entry that the default currency price does not have, that entry is dropped rather than guessed at, since there is nothing to convert it from. If you maintain such prices, use Remove and let Shopware calculate them instead.
+
+**Version note**: This applies whenever update mode is Update Shopware price data, under either strategy. On Shopware versions before 6.6.10, the storefront cache cannot be cleared automatically after a rate change, so customers may keep seeing previous prices until the cache expires — by default up to two hours. From Shopware 6.6.10 onward this happens automatically.
+
 ## Requirements
 
 - **Shopware version**: 6.6.0 up to and including 6.7.x

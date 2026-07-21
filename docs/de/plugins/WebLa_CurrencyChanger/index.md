@@ -18,6 +18,24 @@ Das Plugin richtet sich an Shops, die international verkaufen, aber den Aufwand 
 - **Währungsauswahl in der Topbar**: Der Besucher wählt seine Währung über ein Dropdown im Kopfbereich, wahlweise mit Länderflaggen oder Währungssymbolen.
 - **Eigener Umrechnungskurs**: Je Währungspaar kann ein abweichender Kurs hinterlegt werden, etwa um Wechselkursschwankungen abzufedern.
 
+## Preis-Aktualisierungsmodus
+
+Das Plugin kann in zwei Modi arbeiten, die Sie unter **Preis-Aktualisierungsmodus → Aktualisierungsmodus** einstellen.
+
+- **Nur Storefront-Anzeige** (Standard): Preise werden ausschließlich für die Anzeige in der Storefront umgerechnet. Die Währungs- und Preisdaten von Shopware selbst bleiben unangetastet, Bestellung und Rechnung bleiben in Ihrer Shop-Standardwährung. So hat das Plugin schon immer gearbeitet, und jeder bestehende Shop behält dieses Verhalten nach einem Update bei — der Wechsel in den anderen Modus ist eine bewusste Entscheidung und geschieht nicht von selbst.
+- **Shopware-Preisdaten aktualisieren**: Der Wechselkurs wird stattdessen direkt in die Währungs- und Preisdaten von Shopware geschrieben. Die Storefront selbst bleibt vom Plugin vollständig unberührt, und Shopware übernimmt die Preisberechnung nativ überall: in der Storefront, im Warenkorb, in der Bestellung, über die API und in Exporten.
+
+**Bevor Sie in den Modus „Shopware-Preisdaten aktualisieren" wechseln, sollten Sie wissen, was mit Preisen geschieht, die Sie selbst für eine Währung hinterlegt haben.** Eine zweite Einstellung, **Umgang mit währungsspezifischen Preisen**, legt fest, was mit einem solchen Preis passiert — etwa einem bewusst gewählten Preis von 9,99 £:
+
+- **Entfernen und von Shopware berechnen lassen** (Standard): Der hinterlegte Währungspreis wird gelöscht, Shopware berechnet diesen Preis stattdessen aus dem Preis in der Standardwährung und dem Wechselkurs.
+- **Mit umgerechneten Werten überschreiben**: Der hinterlegte Währungspreis bleibt erhalten, sein Wert wird aber bei jeder Aktualisierung durch den umgerechneten Betrag ersetzt.
+
+In beiden Fällen wird der Wechselkurs zur einzigen maßgeblichen Quelle für diesen Preis. Ein von Hand gewählter Betrag übersteht die nächste Aktualisierung nicht — das ist der Sinn dieses Modus, das sollte für Sie aber keine Überraschung sein.
+
+Das gilt zusätzlich nur bei der Strategie „Mit umgerechneten Werten überschreiben": Enthält ein währungsspezifischer Preis einen Streichpreis oder einen „Günstigster Preis (letzten 30 Tage)"-Eintrag, den der Preis in der Standardwährung nicht hat, entfällt dieser Eintrag, da keine Berechnungsgrundlage vorhanden ist. Wenn Sie solche Preise pflegen, verwenden Sie stattdessen „Entfernen und von Shopware berechnen lassen".
+
+**Versionshinweis**: Das gilt immer, wenn der Aktualisierungsmodus auf „Shopware-Preisdaten aktualisieren" steht, unabhängig von der gewählten Strategie. Unter Shopware-Versionen vor 6.6.10 kann der Cache nach einer Kursänderung nicht automatisch geleert werden. Die Storefront zeigt dann möglicherweise noch die vorherigen Preise an, bis der Cache abläuft — standardmäßig nach bis zu zwei Stunden. Ab Shopware 6.6.10 geschieht dies automatisch.
+
 ## Voraussetzungen
 
 - **Shopware-Version**: 6.6.0 bis einschließlich 6.7.x

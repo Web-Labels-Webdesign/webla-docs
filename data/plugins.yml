@@ -232,4 +232,4 @@ plugins:
       de: Zeigt jeden Preis zusätzlich in der Währung Ihrer Besucher, mit tagesaktuellen EZB-Kursen und ohne manuelle Pflege. Bestellung und Rechnung bleiben in Ihrer Shop-Währung.
       en: Shows every price in your visitors' own currency using daily ECB rates, with no manual maintenance. Orders and invoices remain in your shop default currency.
     requirements: Shopware 6.6–6.7, PHP 8.2+
-    version: "4.1.0"
+    version: "4.2.0"
