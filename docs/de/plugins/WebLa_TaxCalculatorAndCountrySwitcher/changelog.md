@@ -4,6 +4,22 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 5.2.0
+
+_Veröffentlicht am 2026-07-21_
+
+**Neue Funktionen**
+
+- Neue Option, um im Willkommens-Popup das Lieferland anhand der Storefront-Sprache vorauszuwählen (z.B. wählt die niederländische Domain die Niederlande vor). Das Land wird aus der Locale-Region der Sprache abgeleitet und muss im Verkaufskanal lieferbar sein. Hat Vorrang vor GeoIP. Standardmäßig deaktiviert; aktivierbar in den Einstellungen des Länderauswahl-Popups. Nur Vorauswahl — Kunden bestätigen weiterhin selbst.
+
+# 5.1.10
+
+_Veröffentlicht am 2026-07-21_
+
+**Fehlerbehebungen**
+
+- Kunden bleiben nach der Auswahl eines Lieferlandes im Willkommens-Popup auf der aktuellen Seite. Zuvor wurde nach der Bestätigung eines Landes immer zur Startseite weitergeleitet, sodass Deep-Links aus Newslettern oder Social Media (zum Beispiel eine Produktseite) ihr Ziel verloren. Das Popup führt Besucher jetzt zurück auf die Seite, auf der sie angekommen sind – analog zur Länderauswahl in der Kopfzeile.
+
 # 5.1.9
 
 _Veröffentlicht am 2026-06-30_

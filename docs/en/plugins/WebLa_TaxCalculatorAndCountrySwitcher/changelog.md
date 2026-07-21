@@ -4,6 +4,22 @@ All notable changes for end users.
 
 ---
 
+# 5.2.0
+
+_Released 2026-07-21_
+
+**New Features**
+
+- Add an option to preselect the delivery country in the first-visit popup based on the storefront language (for example the Dutch domain preselects the Netherlands). The country is derived from the language's locale region and must be shipping-available in the sales channel. Takes precedence over GeoIP. Disabled by default; enable it under the Country popup settings. Preselection only — customers still confirm their choice.
+
+# 5.1.10
+
+_Released 2026-07-21_
+
+**Bug Fixes**
+
+- Keep customers on the current page after selecting a delivery country in the welcome popup. Previously, confirming a country always redirected to the homepage, so deep links from newsletters or social media (for example a product page) lost their target. The popup now returns visitors to the page they arrived on, matching the header country switcher.
+
 # 5.1.9
 
 _Released 2026-06-30_
