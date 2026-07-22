@@ -4,6 +4,18 @@ All notable changes to the WebLa Subscription Plugin for end users.
 
 ---
 
+# 1.7.5
+
+_Released 2026-07-22_
+
+**Bug Fixes**
+
+- Automatic (system-triggered) subscription renewals now apply the subscription discount again. Previously these renewal orders were charged at full price even though the original order received the discount.
+
+**Improvements**
+
+- Remove the unused default loyalty-discount tiers. They had no admin interface and no effect on pricing; the renewal discount now matches the discount from the original order exactly.
+
 # 1.7.4
 
 _Released 2026-07-20_

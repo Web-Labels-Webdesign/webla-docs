@@ -4,6 +4,18 @@ Alle wichtigen Änderungen am WebLa Subscription Plugin für Endbenutzer.
 
 ---
 
+# 1.7.5
+
+_Veröffentlicht am 2026-07-22_
+
+**Fehlerbehebungen**
+
+- Automatische (systemseitig ausgelöste) Abo-Verlängerungen wenden den Abo-Rabatt wieder an. Zuvor wurden diese Verlängerungsbestellungen zum vollen Preis berechnet, obwohl die ursprüngliche Bestellung den Rabatt erhalten hatte.
+
+**Verbesserungen**
+
+- Entfernen der ungenutzten Standard-Treuerabatt-Stufen. Sie hatten keine Verwaltungsoberfläche und keinen Einfluss auf die Preise; der Verlängerungsrabatt entspricht jetzt exakt dem Rabatt der ursprünglichen Bestellung.
+
 # 1.7.4
 
 _Veröffentlicht am 2026-07-20_
