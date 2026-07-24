@@ -2,9 +2,27 @@
 
 Dieses Dokument beschreibt alle verfügbaren Einstellungen für die **Kategorie Schnellauswahl**.
 
-Das Plugin wird nicht über eine globale Plugin-Konfiguration eingestellt, sondern direkt im CMS-Element der Erlebniswelt. Jedes Widget hat seine eigenen Einstellungen, die beim Bearbeiten des Elements im Erlebniswelt-Editor vorgenommen werden.
+Die meisten Einstellungen werden direkt im CMS-Element der Erlebniswelt vorgenommen – jedes Widget hat seine eigenen, unabhängigen Einstellungen. Zusätzlich gibt es eine globale Plugin-Einstellung für die Kompatibilität mit Drittanbieter-Plugins.
 
 **Navigation**: Inhalte → Erlebniswelten → [Ihre Erlebniswelt] → Element bearbeiten
+
+---
+
+## Globale Einstellungen
+
+Zu finden unter **Erweiterungen → Meine Erweiterungen → Kategorie Schnellauswahl → ⋯ → Konfiguration**. Diese Einstellungen gelten shopweit (oder je Verkaufskanal).
+
+### OncoCompatibilityFilter bei Kategorieauswahl zurücksetzen
+
+| Eigenschaft      | Wert               |
+| ---------------- | ------------------ |
+| **Typ**          | Schalter (Ja/Nein) |
+| **Standard**     | Nein               |
+| **Erforderlich** | Nein               |
+
+**Beschreibung**: Kompatibilitätsoption für das Plugin „OncoCompatibilityFilter". Wenn aktiviert, wird beim Abschluss einer Auswahl in der Kategorie-Schnellauswahl die Objektauswahl dieses Plugins (Session und Cookie) zurückgesetzt, sodass der Kunde ohne verbleibenden Produkteigenschafts-Filter auf der neuen Kategorie-Listing-Seite landet.
+
+Lassen Sie diese Option deaktiviert, wenn Sie das Plugin OncoCompatibilityFilter nicht verwenden oder wenn dessen Auswahl über die Kategorie-Schnellauswahl hinweg erhalten bleiben soll.
 
 ---
 

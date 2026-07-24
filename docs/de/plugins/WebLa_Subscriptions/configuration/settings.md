@@ -136,6 +136,18 @@ Das Storefront-Dropdown zeigt immer zuerst *Einmalkauf*, gefolgt von jedem konfi
 
 > **Hinweis**: Zusätzlich zum Basisrabatt können über die Admin-Oberfläche Treue-Staffeln eingerichtet werden, die ab einer bestimmten Anzahl an Verlängerungen greifen.
 
+### Kombination des Abo-Rabatts mit Aktionen verhindern
+
+| Eigenschaft      | Wert        |
+| ---------------- | ----------- |
+| **Typ**          | Schalter    |
+| **Standard**     | Deaktiviert |
+| **Erforderlich** | Nein        |
+
+**Beschreibung**: Ist diese Option aktiviert, lassen sich Rabattcodes nicht mit einem Abonnement kombinieren. Gibt ein Kunde in einem Warenkorb mit Abo einen Rabattcode ein, wird ein Hinweis angezeigt und der Code nicht angewendet; der Bestellvorgang läuft normal weiter. Dies entspricht der Shopware-Standardeinstellung „Kombination mit anderen Aktionen verhindern". Ist die Option deaktiviert (Standard), können Rabattcodes und Abo-Rabatt kombiniert werden.
+
+**Anwendungsbeispiel**: Sie gewähren automatisch einen Abo-Rabatt und kommunizieren im Shop, dass Rabatte nicht kombinierbar sind — aktivieren Sie diese Option, um zu verhindern, dass Kunden zusätzlich einen Rabattcode auf den Abo-Rabatt anwenden.
+
 ---
 
 ## Zahlungsarten

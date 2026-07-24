@@ -4,6 +4,26 @@ All notable changes for end users.
 
 ---
 
+# 5.1.1
+
+_Released 2026-07-23_
+
+**Bug Fixes**
+
+- Fixed the OncoCompatibilityFilter compatibility option: selecting a category through the quick filter now reliably clears that plugin's active product-property filter. The previous version could leave a stale filter applied because the cached listing was not refreshed on the new page.
+
+---
+
+# 5.1.0
+
+_Released 2026-07-23_
+
+**New Features**
+
+- Added a compatibility option for the "OncoCompatibilityFilter" plugin. When enabled in the plugin settings, completing a selection in the category quick filter clears that plugin's object selection (session and cookie), so customers land on the new category listing without a leftover product-property filter applied. Disabled by default.
+
+---
+
 # 5.0.6
 
 _Released 2026-07-03_

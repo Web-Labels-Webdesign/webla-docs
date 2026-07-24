@@ -2,9 +2,27 @@
 
 This document describes all available settings for the **Category Quick Filter**.
 
-The plugin is not configured through a global plugin configuration page. Instead, each widget is configured directly within the CMS element in the Shopping Experience editor. Every widget has its own independent settings.
+Most settings are configured directly within the CMS element in the Shopping Experience editor – every widget has its own independent settings. There is also one global plugin setting for third-party compatibility.
 
 **Navigation**: Content → Shopping Experiences → [Your Shopping Experience] → Edit element
+
+---
+
+## Global Settings
+
+Configured under **Extensions → My extensions → Category Quick Filter → ⋯ → Configuration**. These settings apply shop-wide (or per sales channel).
+
+### Reset OncoCompatibilityFilter on category selection
+
+| Property     | Value           |
+| ------------ | --------------- |
+| **Type**     | Switch (Yes/No) |
+| **Default**  | No              |
+| **Required** | No              |
+
+**Description**: Compatibility option for the "OncoCompatibilityFilter" plugin. When enabled, completing a selection in the category quick filter clears that plugin's object selection (session and cookie), so the customer lands on the new category listing without a leftover product-property filter applied.
+
+Leave this off if you do not use the OncoCompatibilityFilter plugin, or if you want its selection to persist across category quick-filter navigation.
 
 ---
 

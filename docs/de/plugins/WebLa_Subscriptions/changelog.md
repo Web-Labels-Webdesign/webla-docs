@@ -4,6 +4,14 @@ Alle wichtigen Änderungen am WebLa Subscription Plugin für Endbenutzer.
 
 ---
 
+# 1.8.0
+
+_Veröffentlicht am 2026-07-23_
+
+**Neue Funktionen**
+
+- Neue Einstellung „Kombination des Abo-Rabatts mit Aktionen verhindern". Ist sie aktiviert, lassen sich Rabattcodes nicht mehr mit einem Abonnement kombinieren: Gibt ein Kunde in einem Warenkorb mit Abo einen Code ein, erscheint ein Hinweis und der Code wird nicht angewendet — der Bestellvorgang läuft aber normal weiter. Die Einstellung ist standardmäßig deaktiviert, das bisherige Verhalten (Rabattcodes und Abo-Rabatt sind kombinierbar) bleibt also unverändert, und sie ist je Verkaufskanal konfigurierbar.
+
 # 1.7.5
 
 _Veröffentlicht am 2026-07-22_

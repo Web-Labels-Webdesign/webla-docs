@@ -4,6 +4,14 @@ All notable changes to the WebLa Subscription Plugin for end users.
 
 ---
 
+# 1.8.0
+
+_Released 2026-07-23_
+
+**New Features**
+
+- New setting "Prevent combination of subscription discount with promotions". When enabled, promotion codes can no longer be combined with a subscription: entering a code in a cart that contains a subscription shows a notice and the code is not applied, while checkout continues as normal. The setting is off by default, so existing behaviour — promotion codes and the subscription discount stacking — stays unchanged, and it can be configured per sales channel.
+
 # 1.7.5
 
 _Released 2026-07-22_

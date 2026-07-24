@@ -4,6 +4,26 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 5.1.1
+
+_Veröffentlicht am 2026-07-23_
+
+**Fehlerbehebungen**
+
+- Kompatibilitätsoption für „OncoCompatibilityFilter" korrigiert: Die Auswahl einer Kategorie über die Schnellauswahl setzt den aktiven Produkteigenschafts-Filter dieses Plugins nun zuverlässig zurück. In der Vorversion konnte ein veralteter Filter aktiv bleiben, weil die zwischengespeicherte Listing-Ansicht auf der neuen Seite nicht aktualisiert wurde.
+
+---
+
+# 5.1.0
+
+_Veröffentlicht am 2026-07-23_
+
+**Neue Funktionen**
+
+- Kompatibilitätsoption für das Plugin „OncoCompatibilityFilter" hinzugefügt. Wenn in den Plugin-Einstellungen aktiviert, wird beim Abschluss einer Auswahl in der Kategorie-Schnellauswahl die Objektauswahl dieses Plugins (Session und Cookie) zurückgesetzt, sodass Kunden ohne verbleibenden Produkteigenschafts-Filter auf der neuen Kategorie-Listing-Seite landen. Standardmäßig deaktiviert.
+
+---
+
 # 5.0.6
 
 _Veröffentlicht am 2026-07-03_

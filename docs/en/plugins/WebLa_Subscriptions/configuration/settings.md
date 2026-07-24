@@ -136,6 +136,18 @@ The storefront dropdown always shows *One-time purchase* first, followed by each
 
 > **Note**: In addition to the base discount, loyalty tiers can be set up via the admin interface that activate after a certain number of renewals.
 
+### Prevent Combination of Subscription Discount with Promotions
+
+| Property     | Value    |
+| ------------ | -------- |
+| **Type**     | Switch   |
+| **Default**  | Disabled |
+| **Required** | No       |
+
+**Description**: When enabled, promotion codes cannot be combined with a subscription. If a customer enters a promotion code in a cart that contains a subscription, a notice is shown and the code is not applied; checkout continues as normal. This mirrors Shopware's native "Prevent combination with other promotions" promotion setting. When disabled (default), promotion codes and the subscription discount can be combined.
+
+**Example Use Case**: You grant an automatic subscription discount and communicate in your shop that discounts cannot be combined — enable this to stop customers stacking a promotion code on top of the subscription discount.
+
 ---
 
 ## Payment Methods
