@@ -4,6 +4,16 @@ All notable changes for end users.
 
 ---
 
+# 4.2.1
+
+_Released 2026-07-24_
+
+**Bug Fixes**
+
+- Fixed the plugin replacing the storefront header instead of extending it. Changes other plugins or themes made to the header were silently dropped and never appeared in the storefront. Affects Shopware 6.7 only.
+
+---
+
 # 4.2.0
 
 _Released 2026-07-20_

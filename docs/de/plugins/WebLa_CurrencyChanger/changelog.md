@@ -4,6 +4,16 @@ Alle wesentlichen Änderungen für Anwender.
 
 ---
 
+# 4.2.1
+
+_Veröffentlicht am 2026-07-24_
+
+**Fehlerbehebungen**
+
+- Das Plugin hat den Storefront-Header ersetzt, statt ihn zu erweitern. Änderungen anderer Plugins oder Themes am Header wurden dadurch stillschweigend verworfen und erschienen nicht in der Storefront. Das ist behoben. Betrifft nur Shopware 6.7.
+
+---
+
 # 4.2.0
 
 _Veröffentlicht am 2026-07-20_
