@@ -224,6 +224,15 @@ plugins:
       en: This plugin replaces the classic navigation with a modern, multi-level flyout navigation that opens to the right. It offers extensive configuration options as well as optional features such as a sticky header and a custom top bar.
     requirements: Shopware 6.7–6.8, PHP 8.2+
     version: "1.1.4"
+  - id: WebLa_Blog
+    name:
+      de: Blog
+      en: Blog
+    short:
+      de: Vollwertiges Blog-System mit Beiträgen, Kategorien, Inline-Content-Builder, CMS-Bausteinen, Produkt-Slider, SEO-URLs und Theming.
+      en: Full blog system with posts, categories, inline content builder, CMS blocks, product slider, SEO URLs and theming.
+    requirements: Shopware 6.6–6.7, PHP 8.2+
+    version: "1.0.0"
   - id: WebLa_CurrencyChanger
     name:
       de: Währungsanzeige
