@@ -4,6 +4,26 @@ Alle wichtigen Änderungen am WebLa Subscription Plugin für Endbenutzer.
 
 ---
 
+# 1.9.0
+
+_Veröffentlicht am 2026-07-27_
+
+**Neue Funktionen**
+
+- Änderungen an Abonnements werden jetzt protokolliert. Jede Änderung an einem Abonnement wird zusammen mit dem auslösenden Benutzer oder der Integration in einem Verlaufseintrag festgehalten — auch dann, wenn sie außerhalb der Plugin-Oberfläche erfolgt, etwa über die API oder einen Import. Bisher hinterließ eine solche Änderung keinerlei Spur, sodass sich im Nachhinein nicht mehr nachvollziehen ließ, wie ein Abonnement zu unerwarteten Einstellungen gekommen war.
+
+**Fehlerbehebungen**
+
+- Automatische Verlängerungen schlagen nicht mehr fehl, wenn die Nachrichtenverarbeitung über den Admin-Worker läuft. In dieser Konstellation lief eine Verlängerung innerhalb einer Administrations-Anfrage, wodurch Erweiterungen, die für die Storefront entwickelt wurden, die Verlängerung mit einem Fehler abbrachen. Betroffene Abonnements scheiterten bei jedem Versuch erneut, bis es auffiel.
+- Eine fehlgeschlagene wiederkehrende Zahlung erzeugt nicht mehr bei jedem Versuch eine neue unbezahlte Bestellung. Die Verlängerungsbestellung wird vor dem Zahlungseinzug angelegt, sodass eine abgelehnte oder unmögliche Zahlung das Abonnement bisher weiterhin als fällig zurückließ und der nächste Lauf eine weitere Bestellung für denselben Zeitraum anlegte. Das Abonnement wird jetzt markiert und der Kunde benachrichtigt, genau wie bei einer fehlgeschlagenen Lastschrift.
+- Abonnements speichern jetzt die Zahlungsart, mit der tatsächlich bezahlt wurde. Brach ein Kunde beim Zahlungsanbieter ab und schloss die Bestellung mit einer anderen Zahlungsart ab, behielt das Abonnement die zuerst gewählte Zahlungsart — die Verlängerung suchte dann nach einer Zahlungsfreigabe, die nie erteilt worden war.
+- Wiederkehrende Zahlungen scheitern nicht mehr bei Kunden, deren Zahlungsfreigabe gespeichert wurde, während sie noch bestätigt wurde. Eine solche Freigabe wurde danach nie aktualisiert, sodass jede spätere Verlängerung meldete, es liege keine gültige Freigabe vor.
+- Verkaufskanäle mit eigenen Mollie-Zugangsdaten speichern Zahlungsfreigaben jetzt korrekt. Die Bestätigungs-Rückmeldung verwendete die globalen Zugangsdaten, wodurch die Freigabe unbemerkt verloren ging und spätere Verlängerungen fehlschlugen.
+- Eine Verlängerung kann das nächste Verlängerungsdatum nicht mehr in die Vergangenheit setzen. Ein Abonnement, dessen Datum zurückgefallen war, wurde einmal pro Intervall belastet, bis es aufgeholt hatte.
+- Die Intervalländerung verhält sich in der Administration und im Kundenkonto jetzt identisch und bleibt auch dann korrekt, wenn Abonnements auf einen gemeinsamen Liefertermin zusammengelegt oder ein Datum manuell korrigiert wurde.
+- Das Verlängerungsprotokoll weist bewusst übersprungene Abonnements jetzt als übersprungen aus, statt sie als erfolgreich verarbeitet zu zählen.
+- Wird eine Intervalländerung eines Kunden abgelehnt, etwa weil sie das konfigurierte Maximum überschreitet, wird der Grund jetzt protokolliert statt verworfen.
+
 # 1.8.0
 
 _Veröffentlicht am 2026-07-23_

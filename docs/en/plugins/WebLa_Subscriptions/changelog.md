@@ -4,6 +4,26 @@ All notable changes to the WebLa Subscription Plugin for end users.
 
 ---
 
+# 1.9.0
+
+_Released 2026-07-27_
+
+**New Features**
+
+- Subscription changes are now recorded. Every change to a subscription is written to a history record together with the user or integration that made it, including changes made outside the plugin's own screens, such as a direct API edit or an import. Previously such a change left no trace at all, which made it impossible to explain afterwards how a subscription had ended up with unexpected settings.
+
+**Bug Fixes**
+
+- Automatic renewals no longer fail when the message queue is processed by the admin worker. In that setup a renewal ran inside an administration request, which caused extensions built for the storefront to abort the renewal with an error. Affected subscriptions failed on every attempt until it was noticed.
+- A failed recurring payment no longer creates a new unpaid order on every attempt. The renewal order is placed before the payment is charged, so a declined or impossible charge previously left the subscription due and the next run placed another order for the same period. The subscription is now flagged and the customer is notified, exactly as with a failed direct debit.
+- Subscriptions now record the payment method the customer actually paid with. If a customer cancelled at the payment provider and completed the order with a different method, the subscription kept the method chosen first, and renewals then looked for a payment authorisation that had never been created.
+- Recurring payments no longer fail for customers whose payment authorisation was stored while it was still being confirmed. Such an authorisation was never updated afterwards, so every later renewal reported that no valid authorisation existed.
+- Sales channels with their own Mollie credentials now store payment authorisations correctly. The confirmation callback used the global credentials, so the authorisation was silently lost and later renewals failed.
+- A renewal can no longer move the next renewal date into the past. A subscription whose date had fallen behind was charged once per interval until it caught up.
+- The interval change now behaves identically in the administration and in the customer portal, and stays correct after subscriptions have been merged onto a shared delivery date or a date has been corrected by hand.
+- The renewal log now reports subscriptions that were deliberately skipped as skipped instead of counting them as successfully processed.
+- If a customer's interval change is rejected, for example because it exceeds the configured maximum, the reason is now written to the log instead of being discarded.
+
 # 1.8.0
 
 _Released 2026-07-23_
