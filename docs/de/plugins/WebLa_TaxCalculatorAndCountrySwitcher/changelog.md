@@ -4,6 +4,19 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 5.3.0
+
+_Veröffentlicht am 2026-07-28_
+
+**Breaking Changes**
+
+- Die Option „Lieferland aus der Storefront-Sprache vorauswählen" heißt jetzt „Lieferland aus der Storefront-Sprache setzen" und tut genau das: Sie setzt das tatsächliche Lieferland, statt es nur im Popup vorauszuwählen. Preise und Steuern passen ab dem ersten Seitenaufruf zur Sprach-Domain. Wenn Sie diese Option in 5.2.0 in der Erwartung einer reinen Vorauswahl aktiviert haben, ändern sich die Preise auf Ihren Sprach-Domains entsprechend. Die Option bleibt standardmäßig deaktiviert, und sowohl eine ausdrückliche Länderwahl des Kunden als auch die Lieferadresse eines eingeloggten Kunden haben weiterhin Vorrang.
+
+**Fehlerbehebungen**
+
+- Die Länderauswahl im Header zeigte ein anderes Land als der Rest der Seite, wenn ein Lieferland über die URL übergeben wurde. Zusätzlich erhält jedes Land jetzt einen eigenen zwischengespeicherten Header, statt sich einen zu teilen.
+- Ein Serverfehler auf allen Storefront-Seiten wurde behoben, wenn der Länder-Parameter in der URL als Liste statt als einzelner Wert übergeben wurde.
+
 # 5.2.0
 
 _Veröffentlicht am 2026-07-21_

@@ -4,6 +4,19 @@ All notable changes for end users.
 
 ---
 
+# 5.3.0
+
+_Released 2026-07-28_
+
+**Breaking Changes**
+
+- The option "Preselect delivery country from storefront language" is now called "Set delivery country from storefront language" and does what the new name says: it sets the actual delivery country instead of only preselecting it in the popup. Prices and taxes match the language domain from the first page view onwards. If you enabled this option in 5.2.0 expecting a preselection only, prices on your language domains will change accordingly. The option stays disabled by default, and an explicit country choice by the customer as well as a logged-in customer's shipping address still take precedence.
+
+**Bug Fixes**
+
+- Fix the country selector in the header showing a different country than the rest of the page when a delivery country was passed through the URL. Each country now also gets its own cached header instead of sharing one.
+- Fix a server error on every storefront page when the country URL parameter was passed as a list instead of a single value.
+
 # 5.2.0
 
 _Released 2026-07-21_

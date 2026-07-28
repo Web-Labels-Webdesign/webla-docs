@@ -295,7 +295,7 @@ Controls the first-visit country selection popup that ensures the displayed gros
 
 ---
 
-### Preselect delivery country from storefront language
+### Set delivery country from storefront language
 
 | Property     | Value      |
 | ------------ | ---------- |
@@ -303,7 +303,7 @@ Controls the first-visit country selection popup that ensures the displayed gros
 | **Default**  | Disabled   |
 | **Required** | No         |
 
-**Description**: When enabled, the popup preselects the delivery country based on the storefront language's locale region (for example the `nl-NL` domain preselects the Netherlands). The country must be shipping-available in the sales channel; otherwise the popup falls back to GeoIP or the sales channel's default country. Takes precedence over GeoIP. Preselection only — the customer still confirms.
+**Description**: When enabled, the delivery country is set from the storefront language's locale region (for example the `nl-NL` domain selects the Netherlands). The country must be active and shipping-available in the sales channel; otherwise the plugin falls back to GeoIP or the sales channel's default country. Takes precedence over GeoIP. This applies to prices, taxes and the popup preselection from the first page view onwards — the customer does not have to confirm first. An explicit country choice by the customer, and a logged-in customer's shipping address, always take precedence.
 
 **Example Use Case**: A single sales channel with several language domains (e.g. `/nl/`, `/fr/`), where each language should default to its matching delivery country so campaign deep links land on the correct pricing without manual selection.
 

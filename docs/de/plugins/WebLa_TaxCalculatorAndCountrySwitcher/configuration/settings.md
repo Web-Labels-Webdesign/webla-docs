@@ -295,7 +295,7 @@ Steuert das Popup zur Länderauswahl beim Erstbesuch, das sicherstellt, dass der
 
 ---
 
-### Lieferland aus der Storefront-Sprache vorauswählen
+### Lieferland aus der Storefront-Sprache setzen
 
 | Eigenschaft      | Wert        |
 | ---------------- | ----------- |
@@ -303,7 +303,7 @@ Steuert das Popup zur Länderauswahl beim Erstbesuch, das sicherstellt, dass der
 | **Standard**     | Deaktiviert |
 | **Erforderlich** | Nein        |
 
-**Beschreibung**: Wenn aktiviert, wählt das Popup das Lieferland anhand der Locale-Region der Storefront-Sprache vor (z.B. wählt die `nl-NL`-Domain die Niederlande vor). Das Land muss im Sales Channel lieferbar sein; andernfalls fällt das Popup auf GeoIP oder das Standardland des Sales Channels zurück. Hat Vorrang vor GeoIP. Nur Vorauswahl — der Kunde bestätigt weiterhin selbst.
+**Beschreibung**: Wenn aktiviert, wird das Lieferland anhand der Locale-Region der Storefront-Sprache gesetzt (z.B. wählt die `nl-NL`-Domain die Niederlande). Das Land muss im Sales Channel aktiv und lieferbar sein; andernfalls fällt das Plugin auf GeoIP oder das Standardland des Sales Channels zurück. Hat Vorrang vor GeoIP. Das gilt ab dem ersten Seitenaufruf für Preise, Steuern und die Vorauswahl im Popup — der Kunde muss nicht erst bestätigen. Eine ausdrückliche Länderwahl des Kunden sowie die Lieferadresse eines eingeloggten Kunden haben immer Vorrang.
 
 **Anwendungsbeispiel**: Ein einzelner Sales Channel mit mehreren Sprach-Domains (z.B. `/nl/`, `/fr/`), bei dem jede Sprache standardmäßig ihr passendes Lieferland vorgeben soll, damit Kampagnen-Deeplinks ohne manuelle Auswahl auf der korrekten Preisanzeige landen.
 

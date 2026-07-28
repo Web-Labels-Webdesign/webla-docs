@@ -4,6 +4,16 @@ Alle wichtigen Änderungen am Ultimativen Bundle Plugin für Endbenutzer.
 
 ---
 
+# 5.1.6
+
+_Veröffentlicht am 2026-07-28_
+
+**Fehlerbehebungen**
+
+- Bundle-Gruppen auf Basis einer dynamischen Produktgruppe berücksichtigen jetzt auch Produktvarianten. Eine solche Gruppe erfasste bislang nur Produkte mit eigenem Hersteller, eigenem Preis oder eigener Kategorie – Werte, die eine Variante vom Hauptprodukt erbt, statt sie selbst zu speichern. Varianten wurden deshalb beim Aufbau des Bundle-Index übersprungen, und eine Gruppe, die ausschließlich aus Varianten bestand, blieb leer und verbarg damit das gesamte Bundle auf der Produktseite. Gruppen auf Basis einer Kategorie waren genauso betroffen, manuell ausgewählte Produkte nie. Führen Sie nach dem Update den Bundle-Index aus oder warten Sie die geplante Aufgabe ab, damit die fehlenden Varianten erfasst werden.
+
+---
+
 # 5.1.5
 
 _Veröffentlicht am 2026-07-27_

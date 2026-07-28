@@ -4,6 +4,16 @@ All notable changes to the Ultimate Bundle Plugin for end users.
 
 ---
 
+# 5.1.6
+
+_Released 2026-07-28_
+
+**Bug Fixes**
+
+- Bundle groups based on a dynamic product group now include product variants. Such a group only ever collected products that carry their own manufacturer, price or category — values a variant inherits from its main product instead of storing them itself. Variants were therefore skipped while the bundle index was built, and a group made up entirely of variants stayed empty, which hid the whole bundle on the product page. Groups based on a category were affected in the same way. Manually selected products never were. After updating, run the bundle index or wait for the scheduled task so the missing variants are picked up.
+
+---
+
 # 5.1.5
 
 _Released 2026-07-27_
