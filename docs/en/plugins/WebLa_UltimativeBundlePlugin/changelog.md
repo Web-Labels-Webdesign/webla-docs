@@ -4,6 +4,19 @@ All notable changes to the Ultimate Bundle Plugin for end users.
 
 ---
 
+# 5.1.5
+
+_Released 2026-07-27_
+
+**Bug Fixes**
+
+- The bundle display no longer changes on its own. The layout was picked from the visitor's device on the server and then stored in the page cache, so whichever device opened a product page first decided the layout for everyone until that cache entry was refreshed. Because stock and release-date changes refresh it, the display appeared to follow a product's availability. The layout now depends only on the browser window width: the compact view below 992 pixels, the full-width view above it.
+- Removed a leftover debug output that printed internal page data onto every product detail page.
+- Bundle option dialogs now use current Bootstrap 5 attributes, so the "no background overlay" setting takes effect again.
+- On Shopware 6.7.10 and newer, bundle components are no longer listed twice in the cart. Shopware renders them itself in these versions, and the plugin no longer adds a second copy.
+
+---
+
 # 5.1.4
 
 _Released 2026-07-06_

@@ -98,7 +98,7 @@ For groups with multiple products, a **"Select option"** button is shown that op
 
 ### Mobile View
 
-On mobile devices, a more compact, vertical layout is used:
+Below a browser window width of 992 pixels, a more compact, vertical layout is used. The switch depends on the window width alone, not on the device, so the same screen always shows the same layout:
 
 - Bundle preview with small product images
 - Expandable detail view

@@ -4,6 +4,19 @@ Alle wichtigen Änderungen am Ultimativen Bundle Plugin für Endbenutzer.
 
 ---
 
+# 5.1.5
+
+_Veröffentlicht am 2026-07-27_
+
+**Fehlerbehebungen**
+
+- Die Bundle-Darstellung wechselt nicht mehr von selbst. Das Layout wurde serverseitig anhand des Endgeräts gewählt und anschließend im Seiten-Cache abgelegt. Dadurch bestimmte das Gerät, das eine Produktseite als Erstes aufrief, die Darstellung für alle weiteren Besucher, bis dieser Cache-Eintrag erneuert wurde. Da Bestands- und Erscheinungsdatumsänderungen ihn erneuern, wirkte es, als richte sich die Darstellung nach der Verfügbarkeit des Produkts. Das Layout richtet sich jetzt allein nach der Fensterbreite des Browsers: die kompakte Ansicht unter 992 Pixeln, die vollflächige darüber.
+- Eine vergessene Debug-Ausgabe entfernt, die auf jeder Produktdetailseite interne Seitendaten ausgab.
+- Die Options-Dialoge verwenden nun die aktuellen Bootstrap-5-Attribute, wodurch die Einstellung "kein Hintergrund-Overlay" wieder greift.
+- Ab Shopware 6.7.10 werden Bundle-Bestandteile im Warenkorb nicht mehr doppelt aufgeführt. Shopware stellt sie in diesen Versionen selbst dar, das Plugin ergänzt keine zweite Auflistung mehr.
+
+---
+
 # 5.1.4
 
 _Veröffentlicht am 2026-07-06_

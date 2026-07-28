@@ -98,7 +98,7 @@ Bei Gruppen mit mehreren Produkten wird ein **"Option wählen"**-Button angezeig
 
 ### Mobile Ansicht
 
-Auf Mobilgeräten wird eine kompaktere, vertikale Darstellung verwendet:
+Unterhalb einer Browser-Fensterbreite von 992 Pixeln wird eine kompaktere, vertikale Darstellung verwendet. Maßgeblich ist allein die Fensterbreite, nicht das Endgerät – dieselbe Bildschirmgröße zeigt also immer dieselbe Darstellung:
 
 - Bundle-Vorschau mit kleinen Produktbildern
 - Ausklappbare Detailansicht
