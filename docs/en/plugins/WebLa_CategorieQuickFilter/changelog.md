@@ -4,6 +4,16 @@ All notable changes for end users.
 
 ---
 
+# 5.1.2
+
+_Released 2026-07-29_
+
+**Bug Fixes**
+
+- Fixed the category quick filter not working at all on Shopware 6.6. In versions 5.1.0 and 5.1.1 the dropdowns stopped loading on Shopware 6.6 shops, so selecting a category had no effect. Shopware 6.7 shops were not affected. If you are on Shopware 6.6 and running 5.1.0 or 5.1.1, please update.
+
+---
+
 # 5.1.1
 
 _Released 2026-07-23_

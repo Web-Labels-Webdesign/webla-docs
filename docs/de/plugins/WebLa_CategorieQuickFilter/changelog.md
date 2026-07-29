@@ -4,6 +4,16 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 5.1.2
+
+_Veröffentlicht am 2026-07-29_
+
+**Fehlerbehebungen**
+
+- Behoben: Die Kategorie-Schnellauswahl funktionierte unter Shopware 6.6 nicht mehr. In den Versionen 5.1.0 und 5.1.1 wurden die Auswahlfelder in Shops mit Shopware 6.6 nicht mehr geladen, die Auswahl einer Kategorie blieb wirkungslos. Shops mit Shopware 6.7 waren nicht betroffen. Wenn Sie Shopware 6.6 mit Version 5.1.0 oder 5.1.1 einsetzen, aktualisieren Sie bitte.
+
+---
+
 # 5.1.1
 
 _Veröffentlicht am 2026-07-23_

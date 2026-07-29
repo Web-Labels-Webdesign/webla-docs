@@ -106,7 +106,7 @@ plugins:
       de: Interaktives mehrstufiges Kategorie-Dropdown für Shopware 6 Erlebniswelten. Führt Kunden schnell durch tiefe Kategoriestrukturen – ideal für Fahrzeugauswahl und Druckerzubehör.
       en: Interactive multi-level category dropdown for Shopware 6 Shopping Experiences. Guides customers through deep category structures – perfect for vehicle selectors and printer supplies.
     requirements: Shopware 6.6–6.8, PHP 8.1+
-    version: "5.1.1"
+    version: "5.1.2"
   - id: WebLa_DeliveryDateSelector
     name:
       de: Wunsch-Lieferdatum für Kunden
