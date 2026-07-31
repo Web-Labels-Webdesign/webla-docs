@@ -59,6 +59,7 @@ jobs:
             ["WebLa_CurrencyChanger"]="WebLa_CurrencyChanger"
             ["WebLa_Blog"]="WebLa_Blog"
             ["WebLa_PropertyNotes"]="WebLa_PropertyNotes"
+            ["WebLa_CustomerTaxCountry"]="WebLa_CustomerTaxCountry"
           )
 
           declare -A PLUGIN_FOLDERS=(
@@ -89,6 +90,7 @@ jobs:
             ["WebLa_CurrencyChanger"]="WebLa_CurrencyChanger"
             ["WebLa_Blog"]="WebLa_Blog"
             ["WebLa_PropertyNotes"]="WebLa_PropertyNotes"
+            ["WebLa_CustomerTaxCountry"]="WebLa_CustomerTaxCountry"
           )
 
           # Supported languages
