@@ -4,6 +4,16 @@ All notable changes to Intelligent Cross-Selling for end users.
 
 ---
 
+# 5.2.10
+
+_Released 2026-07-31_
+
+**Bug Fixes**
+
+- **Assigned categories and dynamic product groups stay visible after reloading**: On Shopware 6.7, opening or saving a configuration whose assignment type is "Category" or "Dynamic product group" showed an empty selection field, even though the assignment was stored. The values only reappeared after switching the assignment type back and forth. The selection is now filled correctly on load
+
+---
+
 # 5.2.9
 
 _Released 2026-05-19_

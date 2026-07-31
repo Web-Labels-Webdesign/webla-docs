@@ -4,6 +4,22 @@ Alle wesentlichen Änderungen für Anwender.
 
 ---
 
+# 4.3.0
+
+_Veröffentlicht am 2026-07-31_
+
+**Fehlerbehebungen**
+
+- Beim Wechsel der Währung landeten Besucher auf einer fremden Seite oder auf einer 404-Seite. Die Währungsauswahl hat die aktuelle Seite aus dem zwischengespeicherten Header von Shopware gelesen, sodass alle auf die Seite umgeleitet wurden, die diesen Cache zuerst gefüllt hat. Das ist behoben. Betrifft nur Shopware 6.7.
+- Die gewählte Währung bleibt wieder erhalten. Shopware hat allen Besuchern denselben zwischengespeicherten Header ausgeliefert, sodass die Auswahl immer die Standardwährung des Shops zeigte und die eigene Wahl beim nächsten Seitenaufruf überschrieb.
+- Umgerechnete Preise richten sich jetzt nach der Währung des jeweiligen Besuchers, auch wenn der HTTP-Cache aktiv ist. Bisher hat der erste Besucher einer Seite seine Währung für alle nachfolgenden Besucher im Cache festgeschrieben.
+
+**Breaking Changes**
+
+- Der Währungswechsel wird jetzt im Browser ausgeführt statt über eine Route abgeschickt. Die Route `/custom-currency-page` und der Template-Block `webla_currency_widget_form_redirect` wurden entfernt. Themes oder Plugins, die eines von beidem überschreiben, müssen angepasst werden.
+
+---
+
 # 4.2.1
 
 _Veröffentlicht am 2026-07-24_

@@ -4,6 +4,16 @@ Alle wichtigen Änderungen an Intelligentes Cross-Selling für Endbenutzer.
 
 ---
 
+# 5.2.10
+
+_Veröffentlicht am 2026-07-31_
+
+**Fehlerbehebungen**
+
+- **Zugewiesene Kategorien und dynamische Produktgruppen bleiben nach dem Neuladen sichtbar**: Unter Shopware 6.7 wurde beim Öffnen oder Speichern einer Konfiguration mit dem Zuweisungstyp „Kategorie" oder „Dynamische Produktgruppe" ein leeres Auswahlfeld angezeigt, obwohl die Zuweisung gespeichert war. Die Werte erschienen erst nach einem Wechsel des Zuweisungstyps hin und zurück. Die Auswahl wird nun direkt beim Laden korrekt befüllt
+
+---
+
 # 5.2.9
 
 _Veröffentlicht am 2026-05-19_

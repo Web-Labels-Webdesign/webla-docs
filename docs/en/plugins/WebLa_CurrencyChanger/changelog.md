@@ -4,6 +4,22 @@ All notable changes for end users.
 
 ---
 
+# 4.3.0
+
+_Released 2026-07-31_
+
+**Bug Fixes**
+
+- Switching the currency no longer sends visitors to an unrelated page or to a 404. The switcher read the current page out of Shopware's cached header, so everyone was redirected to whichever page happened to fill that cache first. Affects Shopware 6.7 only.
+- The selected currency is kept again. Shopware served one cached header to every visitor, so the switcher always showed the shop default and overwrote the visitor's own choice on the next page view.
+- Converted prices now follow each visitor's currency on shops with the HTTP cache enabled. Previously the first visitor to open a page froze their currency into the cache for everyone after them.
+
+**Breaking Changes**
+
+- The currency switch is applied in the browser instead of being posted to a route. The `/custom-currency-page` route and the `webla_currency_widget_form_redirect` template block were removed. Themes or plugins that override either one need adjusting.
+
+---
+
 # 4.2.1
 
 _Released 2026-07-24_
