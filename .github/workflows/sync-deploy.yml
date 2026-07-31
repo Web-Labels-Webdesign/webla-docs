@@ -58,6 +58,7 @@ jobs:
             ["WebLa_FlyoutNavigation"]="WebLa_FlyoutNavigation"
             ["WebLa_CurrencyChanger"]="WebLa_CurrencyChanger"
             ["WebLa_Blog"]="WebLa_Blog"
+            ["WebLa_PropertyNotes"]="WebLa_PropertyNotes"
           )
 
           declare -A PLUGIN_FOLDERS=(
@@ -87,6 +88,7 @@ jobs:
             ["WebLa_FlyoutNavigation"]="WebLa_FlyoutNavigation"
             ["WebLa_CurrencyChanger"]="WebLa_CurrencyChanger"
             ["WebLa_Blog"]="WebLa_Blog"
+            ["WebLa_PropertyNotes"]="WebLa_PropertyNotes"
           )
 
           # Supported languages
