@@ -4,6 +4,28 @@ All notable changes to the Ultimate Bundle Plugin for end users.
 
 ---
 
+# 5.1.8
+
+_Released 2026-08-03_
+
+**Bug Fixes**
+
+- Deselecting an optional component or changing a quantity no longer rebuilds the entire bundle area. Only the prices are updated, so an opened section on smartphones stays exactly as it was instead of visibly reloading. Choosing a different product alternative still rebuilds the view, because the components themselves change in that case.
+- Changing several components in quick succession can no longer leave an outdated price on screen. A slower earlier calculation is now discarded once a newer one has started.
+
+---
+
+# 5.1.7
+
+_Released 2026-08-03_
+
+**Bug Fixes**
+
+- On smartphones, the opened bundle area no longer closes when an optional component is deselected or a quantity is changed. The area was rebuilt after every price recalculation and fell back to its collapsed state; it now stays open.
+- A bundle no longer grants its discount once every optional component has been deselected. Only the main product remains in that case, so it goes into the cart at its regular price, and the product page stops showing a saving or a crossed-out price.
+
+---
+
 # 5.1.6
 
 _Released 2026-07-28_

@@ -4,6 +4,28 @@ Alle wichtigen Änderungen am Ultimativen Bundle Plugin für Endbenutzer.
 
 ---
 
+# 5.1.8
+
+_Veröffentlicht am 2026-08-03_
+
+**Fehlerbehebungen**
+
+- Das Abwählen einer optionalen Komponente und das Ändern einer Menge bauen den Bundle-Bereich nicht mehr vollständig neu auf. Es werden nur noch die Preise aktualisiert, sodass ein geöffneter Bereich auf Smartphones unverändert bestehen bleibt, statt sichtbar neu zu laden. Bei der Auswahl einer anderen Produktalternative wird die Darstellung weiterhin neu aufgebaut, da sich dort die Komponenten selbst ändern.
+- Werden mehrere Komponenten schnell nacheinander geändert, bleibt kein veralteter Preis mehr stehen. Eine langsamere frühere Berechnung wird jetzt verworfen, sobald eine neuere gestartet wurde.
+
+---
+
+# 5.1.7
+
+_Veröffentlicht am 2026-08-03_
+
+**Fehlerbehebungen**
+
+- Auf Smartphones schließt sich der geöffnete Bundle-Bereich nicht mehr, wenn eine optionale Komponente abgewählt oder eine Menge geändert wird. Der Bereich wurde nach jeder Preisneuberechnung neu aufgebaut und fiel dabei in den zugeklappten Zustand zurück; er bleibt jetzt geöffnet.
+- Ein Bundle gewährt seinen Rabatt nicht mehr, sobald sämtliche optionalen Komponenten abgewählt wurden. Übrig bleibt dann nur der Hauptartikel, der zum regulären Preis in den Warenkorb gelegt wird; auf der Produktseite werden weder Ersparnis noch Streichpreis angezeigt.
+
+---
+
 # 5.1.6
 
 _Veröffentlicht am 2026-07-28_

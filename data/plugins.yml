@@ -133,7 +133,7 @@ plugins:
       de: Ultimatives Bundle-Plugin für Shopware 6.
       en: Ultimate bundle plugin for Shopware 6.
     requirements: Shopware 6.6–6.8, PHP 8.1+
-    version: "5.1.6"
+    version: "5.1.8"
   - id: WebLa_Subscriptions
     name:
       de: Abonnement Plugin
