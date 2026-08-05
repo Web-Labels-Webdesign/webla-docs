@@ -4,6 +4,16 @@ All notable changes for end users.
 
 ---
 
+# 5.2.2
+
+_Released 2026-08-04_
+
+**Improvements**
+
+- New setting "Discount validity after the feed visit (hours)". You now decide yourself how long a visitor arriving from a price comparison keeps the discounted price — and therefore how long the affected pages are served uncached for that visitor. This was previously fixed at 24 hours; that stays the default, and a shorter value takes load off the cache.
+
+---
+
 # 5.2.1
 
 _Released 2026-07-10_

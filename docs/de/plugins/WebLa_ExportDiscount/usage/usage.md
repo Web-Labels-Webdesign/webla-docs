@@ -158,12 +158,12 @@ PATCH /api/product/{id}
 
 ### Was es bewirkt
 
-Das Plugin speichert Sessions, um zu verfolgen, welche Besucher über welchen Export gekommen sind. Diese Sessions werden automatisch nach 24 Stunden bereinigt.
+Das Plugin speichert Sessions, um zu verfolgen, welche Besucher über welchen Export gekommen sind. Diese Sessions werden automatisch nach der eingestellten Gültigkeitsdauer bereinigt (Standard: 24 Stunden).
 
 ### Automatische Bereinigung
 
 - Sessions werden alle 5 Minuten auf Ablauf geprüft
-- Sessions älter als 24 Stunden werden automatisch gelöscht
+- Sessions, die älter als die eingestellte Gültigkeitsdauer sind, werden automatisch gelöscht
 - Die Bereinigung läuft über die Shopware Scheduled Task Warteschlange
 
 ### Manuelle Bereinigung

@@ -158,12 +158,12 @@ PATCH /api/product/{id}
 
 ### What It Does
 
-The plugin stores sessions to track which visitors came from which export. These sessions are automatically cleaned up after 24 hours.
+The plugin stores sessions to track which visitors came from which export. These sessions are automatically cleaned up after the configured validity period (default: 24 hours).
 
 ### Automatic Cleanup
 
 - Sessions are checked for expiration every 5 minutes
-- Sessions older than 24 hours are automatically deleted
+- Sessions older than the configured validity period are automatically deleted
 - Cleanup runs through the Shopware scheduled task queue
 
 ### Manual Cleanup

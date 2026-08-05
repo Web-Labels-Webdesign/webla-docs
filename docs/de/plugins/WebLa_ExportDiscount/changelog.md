@@ -4,6 +4,16 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 5.2.2
+
+_Veröffentlicht am 2026-08-04_
+
+**Verbesserungen**
+
+- Neue Einstellung „Gültigkeit des Rabatts nach dem Feed-Besuch (Stunden)". Damit legen Sie selbst fest, wie lange ein über den Preisvergleich gekommener Besucher den rabattierten Preis behält — und damit auch, wie lange die betroffenen Seiten für diesen Besucher ohne Cache ausgeliefert werden. Bisher waren dies fest 24 Stunden; das bleibt der Standard, ein kürzerer Wert entlastet den Cache.
+
+---
+
 # 5.2.1
 
 _Veröffentlicht am 2026-07-10_

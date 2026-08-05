@@ -36,6 +36,22 @@ Dieses Dokument beschreibt alle verfügbaren Einstellungen für Shopping Feed mi
 
 ---
 
+### Gültigkeit des Rabatts nach dem Feed-Besuch (Stunden)
+
+| Eigenschaft      | Wert                  |
+| ---------------- | --------------------- |
+| **Typ**          | Zahl (Stunden)        |
+| **Standard**     | 24                    |
+| **Erforderlich** | Nein                  |
+
+**Beschreibung**: Legt fest, wie lange ein Besucher, der über den Preisvergleichs-Feed gekommen ist, den rabattierten Preis behält. Nach Ablauf dieser Zeit verfällt das Besucher-Cookie und die zugehörige Session wird bereinigt — der Besucher sieht wieder den regulären Preis.
+
+Solange die Gültigkeit läuft, werden die Seiten mit dem rabattierten Preis für diesen Besucher ohne Cache ausgeliefert. Ein kürzerer Wert bedeutet also weniger ungecachte Seitenaufrufe. Die Einstellung gilt shop-weit und nicht pro Verkaufskanal.
+
+**Anwendungsbeispiel**: Reduzieren Sie den Wert auf 1–3 Stunden, wenn Ihnen die Cache-Wirkung wichtiger ist als eine lange Bedenkzeit der Kunden. Erhöhen Sie ihn, wenn Kunden typischerweise erst Stunden später bestellen.
+
+---
+
 ### API-Sessions löschen (Button)
 
 | Eigenschaft      | Wert                  |
@@ -46,7 +62,7 @@ Dieses Dokument beschreibt alle verfügbaren Einstellungen für Shopping Feed mi
 
 **Beschreibung**: Mit diesem Button können Sie alle aktiven Rabatt-Sessions manuell löschen. Dies entfernt alle gespeicherten Zuordnungen zwischen Besuchern und rabattierten Produkten.
 
-**Anwendungsbeispiel**: Nutzen Sie diese Funktion nach dem Testen des Plugins oder wenn Sie sicherstellen möchten, dass keine alten Sessions mehr aktiv sind. Normalerweise werden Sessions automatisch nach 24 Stunden bereinigt.
+**Anwendungsbeispiel**: Nutzen Sie diese Funktion nach dem Testen des Plugins oder wenn Sie sicherstellen möchten, dass keine alten Sessions mehr aktiv sind. Normalerweise werden Sessions automatisch nach der eingestellten Gültigkeitsdauer bereinigt.
 
 ---
 

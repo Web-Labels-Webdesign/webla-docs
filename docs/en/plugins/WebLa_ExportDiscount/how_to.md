@@ -23,7 +23,7 @@ Price Comparison Site → Feed URL with source parameter → Shop recognizes sou
 5. **Session Creation**: The plugin recognizes the `source` parameter and creates a session
 6. **Price Display**: The discounted price is displayed on the product page, in the cart, and checkout
 7. **Order**: The customer orders at the discounted price
-8. **Cleanup**: The session is automatically deleted after 24 hours
+8. **Cleanup**: The session is automatically deleted after the configured validity period (default: 24 hours)
 
 ---
 

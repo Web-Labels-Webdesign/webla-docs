@@ -23,7 +23,7 @@ Preissuchmaschine → Feed-URL mit source-Parameter → Shop erkennt Quelle → 
 5. **Session-Erstellung**: Das Plugin erkennt den `source`-Parameter und erstellt eine Session
 6. **Preisanzeige**: Der rabattierte Preis wird auf der Produktseite, im Warenkorb und Checkout angezeigt
 7. **Bestellung**: Der Kunde bestellt zum rabattierten Preis
-8. **Bereinigung**: Die Session wird nach 24 Stunden automatisch gelöscht
+8. **Bereinigung**: Die Session wird nach der eingestellten Gültigkeitsdauer automatisch gelöscht (Standard: 24 Stunden)
 
 ---
 

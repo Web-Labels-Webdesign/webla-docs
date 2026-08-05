@@ -36,6 +36,22 @@ This document describes all available settings for Shopping feed with unique dis
 
 ---
 
+### Discount validity after the feed visit (hours)
+
+| Property     | Value           |
+| ------------ | --------------- |
+| **Type**     | Number (hours)  |
+| **Default**  | 24              |
+| **Required** | No              |
+
+**Description**: Sets how long a visitor who arrived through the price comparison feed keeps the discounted price. Once the time is up, the visitor cookie expires and the matching session is cleaned up — the visitor sees the regular price again.
+
+While the validity lasts, the pages showing the discounted price are served uncached for that visitor. A shorter value therefore means fewer uncached page views. The setting applies shop-wide, not per sales channel.
+
+**Example Use Case**: Lower the value to 1–3 hours if cache efficiency matters more to you than giving customers a long window to decide. Raise it if your customers typically order hours after the first visit.
+
+---
+
 ### Delete API Sessions (Button)
 
 | Property     | Value          |
@@ -46,7 +62,7 @@ This document describes all available settings for Shopping feed with unique dis
 
 **Description**: This button allows you to manually delete all active discount sessions. This removes all stored associations between visitors and discounted products.
 
-**Example Use Case**: Use this function after testing the plugin or when you want to ensure no old sessions are still active. Normally, sessions are automatically cleaned up after 24 hours.
+**Example Use Case**: Use this function after testing the plugin or when you want to ensure no old sessions are still active. Normally, sessions are automatically cleaned up after the configured validity period.
 
 ---
 

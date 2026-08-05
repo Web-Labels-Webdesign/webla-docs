@@ -70,7 +70,7 @@ plugins:
       de: Zeigen Sie rabattierte Preise nur Besuchern von Preissuchmaschinen - ideal für Google Shopping, idealo, billiger.de und mehr.
       en: Show discounted prices only to visitors from price comparison sites - ideal for Google Shopping, idealo, billiger.de and more.
     requirements: Shopware 6.5–6.8, PHP 8.1+
-    version: "5.2.1"
+    version: "5.2.2"
   - id: WebLa_ProductSliderAdvanced
     name:
       de: Product Slider Advanced
