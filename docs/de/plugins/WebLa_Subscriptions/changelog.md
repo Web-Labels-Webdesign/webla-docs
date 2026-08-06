@@ -4,6 +4,19 @@ Alle wichtigen Änderungen am WebLa Subscription Plugin für Endbenutzer.
 
 ---
 
+# 1.9.1
+
+_Veröffentlicht am 2026-08-06_
+
+**Fehlerbehebungen**
+
+- Verlängerungen schlagen nicht mehr fehl, wenn die Verfügbarkeit eines Produkts über eine Regel gesteuert wird. Der Warenkorb der Verlängerung wurde ohne initialisiertes Regelwerk aufgebaut, wodurch ein per Regel freigegebenes Produkt als nicht verfügbar galt und die Verlängerung mit einem Warenkorbfehler abgebrochen wurde, obwohl das Produkt aktiv und im Shop bestellbar war. Betroffene Abonnements verlängern sich wieder normal.
+- Eine fehlgeschlagene Verlängerung nennt jetzt das betroffene Produkt im Protokoll statt einer internen Kennung, die an keiner anderen Stelle auftauchte. Die Ursache eines Fehlers lässt sich damit ohne Rätselraten nachvollziehen.
+
+**Verbesserungen**
+
+- Die Verlängerungsaufgabe läuft jetzt zweimal täglich statt einmal, wodurch ein fällig gewordenes Abonnement früher berücksichtigt wird.
+
 # 1.9.0
 
 _Veröffentlicht am 2026-07-27_

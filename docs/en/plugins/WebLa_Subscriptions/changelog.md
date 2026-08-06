@@ -4,6 +4,19 @@ All notable changes to the WebLa Subscription Plugin for end users.
 
 ---
 
+# 1.9.1
+
+_Released 2026-08-06_
+
+**Bug Fixes**
+
+- Renewals no longer fail for products whose availability is controlled by a rule. The renewal cart was built without initialising the rule set, so any product released to customers through a rule looked unavailable and the renewal was refused with a cart error, even though the product was active and orderable in the shop. Affected subscriptions renew normally again.
+- A failed renewal now names the affected product in the log instead of an internal identifier that appeared nowhere else, so the cause of a failure can be traced without guesswork.
+
+**Improvements**
+
+- The renewal task now runs twice a day instead of once, so a subscription that becomes due is picked up sooner.
+
 # 1.9.0
 
 _Released 2026-07-27_
