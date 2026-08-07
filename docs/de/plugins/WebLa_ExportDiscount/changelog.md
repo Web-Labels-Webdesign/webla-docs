@@ -4,6 +4,16 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 5.2.3
+
+_Veröffentlicht am 2026-08-06_
+
+**Verbesserungen**
+
+- Deutlich geringere Datenbanklast im Storefront. Bei jedem Seitenaufruf eines Besuchers, der über einen Preisvergleich gekommen ist, wurden weit mehr Produktdaten gelesen, als für den Rabatt nötig sind. Bei Shops mit viel Feed-Traffic — etwa nächtlichen Crawlern auf den Feed-URLs — führte das zu einer Lastspitze auf dem Server. Die Abfragen lesen jetzt nur noch das Nötige; am Rabatt selbst ändert sich nichts.
+
+---
+
 # 5.2.2
 
 _Veröffentlicht am 2026-08-04_

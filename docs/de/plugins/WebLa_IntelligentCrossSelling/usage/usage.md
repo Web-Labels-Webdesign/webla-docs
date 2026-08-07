@@ -113,6 +113,8 @@ Das Plugin **ergänzt** die nativen Shopware Cross-Selling-Funktionen:
 2. Manuell gepflegte Cross-Selling-Gruppen erscheinen danach
 3. Sie können beide Funktionen parallel nutzen
 
+Gesteuert wird dies über die Plugin-Einstellung **Natives Cross-Selling zusätzlich anzeigen** (standardmäßig aktiviert). Wenn Sie sie deaktivieren, dient das am Produkt gepflegte Cross-Selling nur noch als Rückfallebene — es erscheint dann ausschließlich, wenn die intelligenten Empfehlungen keine Produkte liefern.
+
 ### Cache-Verhalten
 
 - Empfehlungen werden für **1 Stunde** gecacht

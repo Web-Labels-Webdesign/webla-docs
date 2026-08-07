@@ -113,6 +113,8 @@ The plugin **complements** native Shopware cross-selling functionality:
 2. Manually maintained cross-selling groups appear afterward
 3. You can use both features in parallel
 
+This is controlled by the plugin setting **Show native cross-selling as well** (enabled by default). If you switch it off, the cross-selling maintained on the product is only used as a fallback — it appears solely when the intelligent recommendations return no products.
+
 ### Cache Behavior
 
 - Recommendations are cached for **1 hour**

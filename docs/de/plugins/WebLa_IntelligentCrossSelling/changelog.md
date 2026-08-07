@@ -4,6 +4,20 @@ Alle wichtigen Änderungen an Intelligentes Cross-Selling für Endbenutzer.
 
 ---
 
+# 5.2.11
+
+_Veröffentlicht am 2026-08-06_
+
+**Fehlerbehebungen**
+
+- **Am Produkt gepflegtes Cross-Selling ist wieder sichtbar**: Wenn ein Produkt sowohl eigenes Cross-Selling als auch eine passende intelligente Konfiguration hatte, zeigte die Storefront nur die intelligenten Empfehlungen und ließ die manuell gepflegten Slider stillschweigend weg. Beide werden nun gemeinsam angezeigt
+
+**Neue Funktionen**
+
+- **Natives Cross-Selling zusätzlich anzeigen**: Neue Plugin-Einstellung, die steuert, ob das direkt am Produkt gepflegte Cross-Selling zusätzlich zu den intelligenten Empfehlungen angezeigt wird (standardmäßig aktiviert) oder nur als Rückfallebene dient, wenn die intelligenten Empfehlungen leer sind
+
+---
+
 # 5.2.10
 
 _Veröffentlicht am 2026-07-31_

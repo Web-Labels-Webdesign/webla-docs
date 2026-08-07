@@ -4,6 +4,16 @@ All notable changes for end users.
 
 ---
 
+# 5.2.3
+
+_Released 2026-08-06_
+
+**Improvements**
+
+- Noticeably lower database load in the storefront. Every page view by a visitor who arrived from a price comparison site read far more product data than the discount actually needs. On shops with heavy feed traffic — nightly crawlers on the feed URLs, for example — this showed up as a load peak on the server. The queries now read only what is required; the discount itself behaves exactly as before.
+
+---
+
 # 5.2.2
 
 _Released 2026-08-04_

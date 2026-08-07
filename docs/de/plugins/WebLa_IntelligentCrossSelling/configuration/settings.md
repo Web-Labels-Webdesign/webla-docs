@@ -22,6 +22,18 @@ Dies sind globale Plugin-Einstellungen, die alle Cross-Selling-Konfigurationen b
 
 **Anwendungsbeispiel**: Aktivieren Sie diese Option, wenn Sie mehrere Cross-Selling-Strategien haben (z.B. eine für Farbabstimmung, eine andere für Materialabstimmung) und alle relevanten Empfehlungen zeigen möchten.
 
+### Natives Cross-Selling zusätzlich anzeigen
+
+| Eigenschaft      | Wert     |
+| ---------------- | -------- |
+| **Typ**          | Schalter |
+| **Standard**     | An       |
+| **Erforderlich** | Nein     |
+
+**Beschreibung**: Steuert, was mit dem Cross-Selling passiert, das Sie direkt am Produkt pflegen (Kataloge → Produkte → Cross Selling). Wenn aktiviert, werden diese Slider zusätzlich zu den intelligenten Empfehlungen angezeigt. Wenn deaktiviert, erscheinen sie nur dann, wenn die intelligenten Empfehlungen keine Produkte liefern.
+
+**Anwendungsbeispiel**: Deaktivieren Sie die Option, wenn die intelligenten Empfehlungen die Produktdetailseite vollständig übernehmen sollen und Ihr manuell gepflegtes Cross-Selling nur als Rückfallebene dienen soll. Lassen Sie sie aktiviert, wenn kuratierte Sets (z.B. Zubehör oder Ersatzteile) immer sichtbar bleiben müssen.
+
 ---
 
 ## Cross-Selling-Konfigurationen

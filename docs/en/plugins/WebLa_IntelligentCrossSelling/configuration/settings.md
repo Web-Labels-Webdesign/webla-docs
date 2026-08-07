@@ -22,6 +22,18 @@ These are global plugin settings that affect all cross-selling configurations.
 
 **Example Use Case**: Enable this option when you have multiple cross-selling strategies (e.g., one for color matching, another for material matching) and want to show all relevant recommendations to customers.
 
+### Show Native Cross-Selling As Well
+
+| Property     | Value  |
+| ------------ | ------ |
+| **Type**     | Switch |
+| **Default**  | On     |
+| **Required** | No     |
+
+**Description**: Controls what happens to cross-selling that you maintain directly on the product (Catalogues → Products → Cross Selling). When enabled, those sliders are shown in addition to the intelligent recommendations. When disabled, they are only shown if the intelligent recommendations return no products.
+
+**Example Use Case**: Turn this off if you want the intelligent recommendations to fully take over the product detail page, and only fall back to your manually maintained cross-selling where the plugin finds no matches. Leave it on if manually curated sets (e.g. accessories, spare parts) must always stay visible.
+
 ---
 
 ## Cross-Selling Configurations
