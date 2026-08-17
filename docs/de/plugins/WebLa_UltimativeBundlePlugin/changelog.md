@@ -4,6 +4,18 @@ Alle wichtigen Änderungen am Ultimativen Bundle Plugin für Endbenutzer.
 
 ---
 
+# 5.1.9
+
+_Veröffentlicht am 2026-08-17_
+
+**Fehlerbehebungen**
+
+- Zusätzliche Hinweise unterhalb des Komponentenpreises, etwa der Steuerhinweis, erscheinen nicht mehr in der großen, fetten Preisdarstellung.
+- Die mobile Bundle-Vorschau passt ihre Höhe jetzt an den Inhalt an, statt ihn bei einer festen Höhe abzuschneiden.
+- Die Mengenauswahl einer Komponente ist am linken Rand ihres Bereichs ausgerichtet statt zentriert.
+
+---
+
 # 5.1.8
 
 _Veröffentlicht am 2026-08-03_

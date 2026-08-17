@@ -4,6 +4,18 @@ All notable changes to the Ultimate Bundle Plugin for end users.
 
 ---
 
+# 5.1.9
+
+_Released 2026-08-17_
+
+**Bug Fixes**
+
+- Additional notes beneath a component's price, such as the tax hint, no longer appear in the large bold price style.
+- The mobile bundle preview now adjusts its height to its content instead of cutting it off at a fixed height.
+- The quantity control of a component is aligned with the left edge of its box instead of being centered.
+
+---
+
 # 5.1.8
 
 _Released 2026-08-03_
