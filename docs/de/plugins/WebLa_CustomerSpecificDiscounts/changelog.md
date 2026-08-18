@@ -4,6 +4,26 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 1.5.21
+
+_Veröffentlicht am 2026-08-18_
+
+**Fehlerbehebungen**
+
+- **Rabatthinweis lief im Warenkorb in den Gesamtpreis hinein**: In der Spalte "Summe" standen der rabattierte Preis, der Hinweis "Kundenrabatt: 3%" und der durchgestrichene Originalpreis ohne Trennung in einer Zeile, sodass die Spalte als "910,83 €*inkl. Rabatt: 3%939,00" zu lesen war. Der Gesamtpreis steht nun in einer eigenen Zeile, darunter der Originalpreis und der Rabatthinweis in kleinerer, gedämpfter Schrift. Die Darstellung ist nicht mehr vom mitgelieferten Stylesheet des Plugins abhängig und damit auch in Themes korrekt, die Plugin-Styles nicht einbinden.
+
+---
+
+# 1.5.20
+
+_Veröffentlicht am 2026-08-18_
+
+**Fehlerbehebungen**
+
+- **Rabatt wurde bei Produkten mit Zusatzoptionen (WebLa_Zusatzoptionen) unter Shopware 6.5 nicht angewendet**: Im Warenkorb blieb der Preis eines Produkts mit ausgewählter Zusatzoption auf dem vollen Betrag stehen, obwohl an der Position bereits der Rabatt ausgewiesen wurde — ein Set für 939,00 € mit 3% Rabatt kostete weiterhin 939,00 € statt 910,83 €. Unter Shopware 6.5 setzt das Zusatzoptionen-Plugin seinen eigenen zusammengerechneten Preis nach der Rabattberechnung erneut, wodurch die Reduzierung wieder verloren ging. Der rabattierte Preis wird nun an dieses Plugin übergeben, sodass Warenkorb, Bestellung und Summen den reduzierten Betrag anzeigen. Die Einstellung "Rabatt als eigenes Lineitem hinzufügen" war nicht betroffen und rechnete bereits korrekt. Shopware 6.6 und 6.7 sind weder vom Problem noch von der Änderung betroffen.
+
+---
+
 # 1.5.19
 
 _Veröffentlicht am 2026-07-16_

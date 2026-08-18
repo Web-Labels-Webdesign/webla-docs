@@ -4,6 +4,26 @@ All notable changes for end users.
 
 ---
 
+# 1.5.21
+
+_Released 2026-08-18_
+
+**Bug Fixes**
+
+- **Discount note ran into the total price in the cart**: In the "Total" column the discounted price, the note "Customer discount: 3%" and the struck-through original price were printed on a single line without separation, so the column read as "910.83 €*inkl. Rabatt: 3%939,00". The total price now stands on its own line, with the original price and the discount note beneath it in smaller, muted type. The display no longer depends on the plugin's own stylesheet, so it is also correct in themes that do not include plugin styles.
+
+---
+
+# 1.5.20
+
+_Released 2026-08-18_
+
+**Bug Fixes**
+
+- **Discount was not applied to products with additional options (WebLa_Zusatzoptionen) on Shopware 6.5**: In the cart the price of a product with a selected additional option stayed at the full amount, even though the line item already showed the discount — a set at 939.00 € with a 3% discount was still charged at 939.00 € instead of 910.83 €. On Shopware 6.5 the additional options plugin re-applies its own combined price after the discount has been calculated, which silently removed the reduction again. The discounted price is now handed over to it, so the cart, the order and the totals show the reduced amount. The setting "Add discount as separate line item" was not affected and already calculated correctly. Shopware 6.6 and 6.7 are affected by neither the problem nor the change.
+
+---
+
 # 1.5.19
 
 _Released 2026-07-16_
