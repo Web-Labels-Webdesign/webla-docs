@@ -4,6 +4,28 @@ All notable changes to the Additional Options Plugin for end users.
 
 ---
 
+# 5.7.3
+
+_Released 2026-08-19_
+
+**Bug Fixes**
+
+- Fixed the VAT of a percentage discount when the discounted product carries an option. Options are deliberately excluded from the discount amount, but the discount still took its share of the option's VAT, so the order was short on VAT and over on net. On a 40 percent promotion for a 7,604.00 product with a 20.00 option the discount showed 486.91 VAT instead of 485.63. Sales channels using vertical tax calculation are affected as well: their order total looked correct while the positions behind it, and therefore the invoice, did not.
+
+---
+
+# 5.7.2
+
+_Released 2026-08-19_
+
+**Bug Fixes**
+
+- Fixed the VAT of an order not matching the sum of its own positions in sales channels that use horizontal tax calculation. An option price was added to the product line and taxed as one combined amount, while the order stores every option as its own position, so the two rounded differently and the order total ended up a cent off.
+- Fixed an error page instead of a cart when the product behind an option cannot be resolved, for example after its shipping method was removed from the option set or the product was deactivated, sold out or hidden. The option is skipped now.
+- Fixed payment providers rejecting orders while "Recalculate line items" is set to "Skip". Option prices were counted twice in the flat order line item list, so Mollie, Klarna and Adyen saw a higher amount than the order total.
+
+---
+
 # 5.7.1
 
 _Released 2026-07-13_

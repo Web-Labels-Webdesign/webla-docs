@@ -4,6 +4,28 @@ Alle wichtigen Änderungen am Zusatzoptionen Plugin für Endbenutzer.
 
 ---
 
+# 5.7.3
+
+_Veröffentlicht am 2026-08-19_
+
+**Fehlerbehebungen**
+
+- Die Mehrwertsteuer eines prozentualen Rabatts war falsch, sobald das rabattierte Produkt eine Option trägt. Optionen sind vom Rabattbetrag bewusst ausgenommen, der Rabatt zog seinen Anteil aber trotzdem aus der Mehrwertsteuer der Option. Dadurch wies die Bestellung zu wenig Mehrwertsteuer und zu viel Netto aus. Bei einer 40-Prozent-Aktion auf ein Produkt zu 7.604,00 € mit einer Option zu 20,00 € standen 486,91 € Mehrwertsteuer statt 485,63 €. Betroffen sind auch Verkaufskanäle mit vertikaler Steuerberechnung: dort wirkte die Bestellsumme korrekt, während die Positionen dahinter und damit die Rechnung es nicht waren.
+
+---
+
+# 5.7.2
+
+_Veröffentlicht am 2026-08-19_
+
+**Fehlerbehebungen**
+
+- Die Mehrwertsteuer einer Bestellung stimmte in Verkaufskanälen mit horizontaler Steuerberechnung nicht mit der Summe ihrer eigenen Positionen überein. Der Optionspreis wurde in die Produktposition eingerechnet und als ein Betrag versteuert, während die Bestellung jede Option als eigene Position speichert. Beides rundete unterschiedlich, die Bestellsumme lag um einen Cent daneben.
+- Statt des Warenkorbs erschien eine Fehlerseite, wenn das Produkt hinter einer Option nicht auflösbar ist, etwa nachdem dessen Versandart aus dem Optionsset entfernt wurde oder das Produkt deaktiviert, ausverkauft oder ausgeblendet ist. Die Option wird jetzt übersprungen.
+- Zahlungsarten lehnten Bestellungen ab, solange „Positionen neu berechnen" auf „Überspringen" steht. Optionspreise wurden in der flachen Positionsliste der Bestellung doppelt gezählt, wodurch Mollie, Klarna und Adyen einen höheren Betrag als die Bestellsumme sahen.
+
+---
+
 # 5.7.1
 
 _Veröffentlicht am 2026-07-13_
