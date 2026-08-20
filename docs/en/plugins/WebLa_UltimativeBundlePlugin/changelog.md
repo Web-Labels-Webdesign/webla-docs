@@ -4,6 +4,17 @@ All notable changes to the Ultimate Bundle Plugin for end users.
 
 ---
 
+# 5.1.10
+
+_Released 2026-08-20_
+
+**Bug Fixes**
+
+- On smartphones, component images are no longer shrunk to a fraction of their intended size. The image now keeps a fixed width regardless of how long the product name next to it is, and a sharper image file is loaded.
+- In the administration, editing a bundle no longer triggers the same save action twice for a changed field.
+
+---
+
 # 5.1.9
 
 _Released 2026-08-17_

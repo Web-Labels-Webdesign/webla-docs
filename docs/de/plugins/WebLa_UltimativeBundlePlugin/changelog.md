@@ -4,6 +4,17 @@ Alle wichtigen Änderungen am Ultimativen Bundle Plugin für Endbenutzer.
 
 ---
 
+# 5.1.10
+
+_Veröffentlicht am 2026-08-20_
+
+**Fehlerbehebungen**
+
+- Auf Smartphones werden Komponentenbilder nicht mehr auf einen Bruchteil ihrer vorgesehenen Größe verkleinert. Das Bild behält jetzt eine feste Breite, unabhängig von der Länge des daneben stehenden Produktnamens, und es wird eine schärfere Bilddatei geladen.
+- In der Administration löst das Bearbeiten eines Bundles bei einem geänderten Feld nicht mehr zweimal dieselbe Speicheraktion aus.
+
+---
+
 # 5.1.9
 
 _Veröffentlicht am 2026-08-17_

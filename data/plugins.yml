@@ -4,12 +4,8 @@ plugins:
       de: Customer Tax Country
       en: Customer Tax Country
     short:
-      de: Steuert je Kunde, Kundengruppe oder Verkaufskanal, welches Land für die
-        Umsatzsteuer maßgeblich ist – inklusive automatischer 0 %-Berechnung für innergemeinschaftliche
-        B2B-Lieferungen mit gültiger USt-Id.
-      en: Controls which country determines VAT per customer, customer group, or sales
-        channel – including automatic 0% calculation for intra-EU B2B deliveries with
-        a valid VAT ID.
+      de: Steuert je Kunde, Kundengruppe oder Verkaufskanal, welches Land für die Umsatzsteuer maßgeblich ist – inklusive automatischer 0 %-Berechnung für innergemeinschaftliche B2B-Lieferungen mit gültiger USt-Id.
+      en: Controls which country determines VAT per customer, customer group, or sales channel – including automatic 0% calculation for intra-EU B2B deliveries with a valid VAT ID.
     requirements: Shopware 6.7, PHP 8.2+
     version: "1.0.0"
   - id: WebLa_Produktberater
@@ -26,12 +22,8 @@ plugins:
       de: Media Booster
       en: Media Booster
     short:
-      de: Automatische Bildoptimierung für Shopware 6. Komprimiert Bilder, konvertiert
-        zu WebP/AVIF und optimiert SEO-Metadaten für schnellere Ladezeiten und bessere
-        Rankings.
-      en: Automatic image optimization for Shopware 6. Compresses images, converts
-        to WebP/AVIF and optimizes SEO metadata for faster loading times and better
-        search rankings.
+      de: Automatische Bildoptimierung für Shopware 6. Komprimiert Bilder, konvertiert zu WebP/AVIF und optimiert SEO-Metadaten für schnellere Ladezeiten und bessere Rankings.
+      en: Automatic image optimization for Shopware 6. Compresses images, converts to WebP/AVIF and optimizes SEO metadata for faster loading times and better search rankings.
     requirements: Shopware 6.5–6.8, PHP 8.1+
     version: "1.3.8"
   - id: WebLa_CustomerSpecificDiscounts
@@ -39,10 +31,8 @@ plugins:
       de: Kundenspezifische Rabatte
       en: Customer Specific Discounts
     short:
-      de: Vergeben Sie individuelle Rabatte pro Kunde auf Kategorien, Produktgruppen
-        oder die gesamte Kundengruppe.
-      en: Assign individual discounts per customer on categories, product groups,
-        or entire customer groups.
+      de: Vergeben Sie individuelle Rabatte pro Kunde auf Kategorien, Produktgruppen oder die gesamte Kundengruppe.
+      en: Assign individual discounts per customer on categories, product groups, or entire customer groups.
     requirements: Shopware 6.5–6.8, PHP 8.1+
     version: "1.5.21"
   - id: WebLa_IntelligentCrossSelling
@@ -59,10 +49,8 @@ plugins:
       de: UTM-Handler
       en: UTM Handler
     short:
-      de: Erfassen und analysieren Sie UTM-Parameter und Marketing-Verweise für Ihre
-        Shopware 6 Bestellungen.
-      en: Capture and analyze UTM parameters and marketing referrals for your Shopware
-        6 orders.
+      de: Erfassen und analysieren Sie UTM-Parameter und Marketing-Verweise für Ihre Shopware 6 Bestellungen.
+      en: Capture and analyze UTM parameters and marketing referrals for your Shopware 6 orders.
     requirements: Shopware 6.5–6.8, PHP 8.1+
     version: "5.0.0"
   - id: WebLa_BeautifiedSearch
@@ -70,10 +58,8 @@ plugins:
       de: Suche als Overlay
       en: Search as Overlay
     short:
-      de: Erweitert die Shopware-Suche mit einem modernen Overlay. Zeigt Produkte,
-        Kategorien, Blog-Artikel und Hersteller in einer benutzerfreundlichen Oberfläche.
-      en: Enhances Shopware search with a modern overlay interface. Displays products,
-        categories, blog articles and manufacturers in user-friendly tabbed results.
+      de: Erweitert die Shopware-Suche mit einem modernen Overlay. Zeigt Produkte, Kategorien, Blog-Artikel und Hersteller in einer benutzerfreundlichen Oberfläche.
+      en: Enhances Shopware search with a modern overlay interface. Displays products, categories, blog articles and manufacturers in user-friendly tabbed results.
     requirements: Shopware 6.5–6.8, PHP 8.1+
     version: "4.3.0"
   - id: WebLa_ExportDiscount
@@ -81,10 +67,8 @@ plugins:
       de: Shopping Feed mit einzigartigen Rabatten
       en: Shopping Feed with Unique Discounts
     short:
-      de: Zeigen Sie rabattierte Preise nur Besuchern von Preissuchmaschinen - ideal
-        für Google Shopping, idealo, billiger.de und mehr.
-      en: Show discounted prices only to visitors from price comparison sites - ideal
-        for Google Shopping, idealo, billiger.de and more.
+      de: Zeigen Sie rabattierte Preise nur Besuchern von Preissuchmaschinen - ideal für Google Shopping, idealo, billiger.de und mehr.
+      en: Show discounted prices only to visitors from price comparison sites - ideal for Google Shopping, idealo, billiger.de and more.
     requirements: Shopware 6.5–6.8, PHP 8.1+
     version: "5.2.3"
   - id: WebLa_ProductSliderAdvanced
@@ -101,12 +85,8 @@ plugins:
       de: Zusatzoptionen
       en: Additional Options
     short:
-      de: Erweitern Sie Produkte mit konfigurierbaren Zusatzoptionen, individueller
-        Preisgestaltung, Versandbeschränkungen und automatischer Zuweisung durch Produktströme
-        für mehr Flexibilität.
-      en: Add flexible additional options to products with custom pricing, shipping
-        restrictions, and automated assignment via product streams for enhanced product
-        configuration.
+      de: Erweitern Sie Produkte mit konfigurierbaren Zusatzoptionen, individueller Preisgestaltung, Versandbeschränkungen und automatischer Zuweisung durch Produktströme für mehr Flexibilität.
+      en: Add flexible additional options to products with custom pricing, shipping restrictions, and automated assignment via product streams for enhanced product configuration.
     requirements: Shopware 6.6–6.8, PHP 8.1+
     version: "5.7.3"
   - id: WebLa_ContactFormFileUpload
@@ -114,10 +94,8 @@ plugins:
       de: Kontaktformular – Datei-Upload
       en: Contact Form – File Upload
     short:
-      de: Erweitert das Kontaktformular in Shopware 6 um eine komfortable Datei-Upload-Funktion
-        mit Drag & Drop Unterstützung.
-      en: Extends the Shopware 6 contact form with a convenient file upload feature
-        including drag & drop support.
+      de: Erweitert das Kontaktformular in Shopware 6 um eine komfortable Datei-Upload-Funktion mit Drag & Drop Unterstützung.
+      en: Extends the Shopware 6 contact form with a convenient file upload feature including drag & drop support.
     requirements: Shopware 6.6–6.8, PHP 8.1+
     version: "5.0.7"
   - id: WebLa_CategorieQuickFilter
@@ -125,12 +103,8 @@ plugins:
       de: Kategorie Schnellauswahl
       en: Category Quick Filter
     short:
-      de: Interaktives mehrstufiges Kategorie-Dropdown für Shopware 6 Erlebniswelten.
-        Führt Kunden schnell durch tiefe Kategoriestrukturen – ideal für Fahrzeugauswahl
-        und Druckerzubehör.
-      en: Interactive multi-level category dropdown for Shopware 6 Shopping Experiences.
-        Guides customers through deep category structures – perfect for vehicle selectors
-        and printer supplies.
+      de: Interaktives mehrstufiges Kategorie-Dropdown für Shopware 6 Erlebniswelten. Führt Kunden schnell durch tiefe Kategoriestrukturen – ideal für Fahrzeugauswahl und Druckerzubehör.
+      en: Interactive multi-level category dropdown for Shopware 6 Shopping Experiences. Guides customers through deep category structures – perfect for vehicle selectors and printer supplies.
     requirements: Shopware 6.6–6.8, PHP 8.1+
     version: "5.1.2"
   - id: WebLa_DeliveryDateSelector
@@ -138,12 +112,8 @@ plugins:
       de: Wunsch-Lieferdatum für Kunden
       en: Preferred Delivery Date for Customers
     short:
-      de: Wunschlieferdatum mit konfigurierbaren Pufferzeiten, automatischer Feiertags-Verwaltung
-        je Bundesland und Berücksichtigung von Produkt-Lieferzeiten. Kompatibel mit
-        Shopware 6.6 und 6.7.
-      en: Preferred delivery date with configurable buffer times, automatic public
-        holiday management per region and product delivery time calculation. Compatible
-        with Shopware 6.6 and 6.7.
+      de: Wunschlieferdatum mit konfigurierbaren Pufferzeiten, automatischer Feiertags-Verwaltung je Bundesland und Berücksichtigung von Produkt-Lieferzeiten. Kompatibel mit Shopware 6.6 und 6.7.
+      en: Preferred delivery date with configurable buffer times, automatic public holiday management per region and product delivery time calculation. Compatible with Shopware 6.6 and 6.7.
     requirements: Shopware 6.6–6.8, PHP 8.1+
     version: "4.0.3"
   - id: WebLa_SplitComission
@@ -151,10 +121,8 @@ plugins:
       de: SplitCommission – Aufteilung der Einzelposten in Teile
       en: SplitCommission – Division of Line Items into Parts
     short:
-      de: Ermöglicht Kunden, Warenkorb-Positionen mit individuellen Kommissionskommentaren
-        zu versehen und in separate Teile aufzuteilen – bei vollem Erhalt der Staffelpreise.
-      en: Allows customers to add individual commission notes to cart line items and
-        split them into separate positions — while fully preserving tiered/bulk pricing.
+      de: Ermöglicht Kunden, Warenkorb-Positionen mit individuellen Kommissionskommentaren zu versehen und in separate Teile aufzuteilen – bei vollem Erhalt der Staffelpreise.
+      en: Allows customers to add individual commission notes to cart line items and split them into separate positions — while fully preserving tiered/bulk pricing.
     requirements: Shopware 6.6–6.8, PHP 8.1+
     version: "5.1.2"
   - id: WebLa_UltimativeBundlePlugin
@@ -165,18 +133,14 @@ plugins:
       de: Ultimatives Bundle-Plugin für Shopware 6.
       en: Ultimate bundle plugin for Shopware 6.
     requirements: Shopware 6.6–6.8, PHP 8.1+
-    version: "5.1.9"
+    version: "5.1.10"
   - id: WebLa_Subscriptions
     name:
       de: Abonnement Plugin
       en: Subscription Plugin
     short:
-      de: Erweiterbares Abonnement-Plugin für Shopware 6 mit automatischer Verlängerung,
-        flexiblen Intervallen, Mollie-Zahlungsanbindung und Kundenportal für wiederkehrende
-        Bestellungen.
-      en: Flexible subscription plugin for Shopware 6 with automatic renewals, configurable
-        intervals, Mollie payment integration, and a self-service customer portal
-        for recurring orders.
+      de: Erweiterbares Abonnement-Plugin für Shopware 6 mit automatischer Verlängerung, flexiblen Intervallen, Mollie-Zahlungsanbindung und Kundenportal für wiederkehrende Bestellungen.
+      en: Flexible subscription plugin for Shopware 6 with automatic renewals, configurable intervals, Mollie payment integration, and a self-service customer portal for recurring orders.
     requirements: Shopware 6.6–6.8, PHP 8.1+
     version: "1.9.1"
   - id: WebLa_AdcellProvisionsfreigabe
@@ -184,10 +148,8 @@ plugins:
       de: ADCELL Provisionsfreigabe
       en: ADCELL Commission Approval
     short:
-      de: Automatischer Abgleich und Freigabe von ADCELL Affiliate-Provisionen in
-        Shopware 6.
-      en: Automatic matching and approval of ADCELL affiliate commissions in Shopware
-        6.
+      de: Automatischer Abgleich und Freigabe von ADCELL Affiliate-Provisionen in Shopware 6.
+      en: Automatic matching and approval of ADCELL affiliate commissions in Shopware 6.
     requirements: Shopware 6.6–6.8, PHP 8.1+
     version: "1.2.0"
   - id: WebLa_TaxCalculatorAndCountrySwitcher
@@ -195,11 +157,8 @@ plugins:
       de: Steuernachkalkulation und Lieferländer
       en: Tax Calculator and Country Switcher
     short:
-      de: Berechnet Produktsteuern und Versandkosten für Besucher aus anderen Ländern
-        neu und ergänzt die Storefront um einen Länderumschalter im Header. Unterstützt
-        Shopware 6.6 und 6.7.
-      en: Recalculates product taxes and shipping costs for visitors from other countries
-        and adds a storefront country switcher. Unified codebase for SW 6.6 and 6.7.
+      de: Berechnet Produktsteuern und Versandkosten für Besucher aus anderen Ländern neu und ergänzt die Storefront um einen Länderumschalter im Header. Unterstützt Shopware 6.6 und 6.7.
+      en: Recalculates product taxes and shipping costs for visitors from other countries and adds a storefront country switcher. Unified codebase for SW 6.6 and 6.7.
     requirements: Shopware 6.6–6.7, PHP 8.2+
     version: "5.3.0"
   - id: WebLa_ImageReviews
@@ -207,10 +166,8 @@ plugins:
       de: Bilder in Produktbewertungen
       en: Images in Product Reviews
     short:
-      de: Kunden laden Bilder direkt zu ihren Produktbewertungen hoch. Die Galerie
-        erscheint auf der Produktseite und als CMS-Element in Erlebniswelten.
-      en: Customers upload images with their product reviews. The gallery renders
-        on the product detail page and as a CMS element in Shopping Experiences.
+      de: Kunden laden Bilder direkt zu ihren Produktbewertungen hoch. Die Galerie erscheint auf der Produktseite und als CMS-Element in Erlebniswelten.
+      en: Customers upload images with their product reviews. The gallery renders on the product detail page and as a CMS element in Shopping Experiences.
     requirements: Shopware 6.6–6.7, PHP 8.2+
     version: "3.1.3"
   - id: WebLa_BatchManagement
@@ -218,11 +175,8 @@ plugins:
       de: Charge-Management
       en: Batch Management
     short:
-      de: Verwalten Sie Chargen, Verfallsdaten und Lagerbestände im Shopware-Admin.
-        Mit automatischen Restock-Mails, geplanter Bestandsaktualisierung und Chargen-Historie
-        pro Auftrag.
-      en: Manage batches, expiry dates and stock levels from the Shopware admin. Automated
-        restock notifications, scheduled stock updates and per-order batch history.
+      de: Verwalten Sie Chargen, Verfallsdaten und Lagerbestände im Shopware-Admin. Mit automatischen Restock-Mails, geplanter Bestandsaktualisierung und Chargen-Historie pro Auftrag.
+      en: Manage batches, expiry dates and stock levels from the Shopware admin. Automated restock notifications, scheduled stock updates and per-order batch history.
     requirements: Shopware 6.6–6.7, PHP 8.1+
     version: "3.0.1"
   - id: BuildIT_ShareCart
@@ -230,12 +184,8 @@ plugins:
       de: Teile deinen Warenkorb
       en: Share your cart
     short:
-      de: Teile deinen Warenkorb ganz einfach per Link, E-Mail, WhatsApp oder Facebook.
-        Deine Kunden können den geteilten Warenkorb mit einem Klick übernehmen. Automatische
-        Bereinigung.
-      en: Share your shopping cart easily via link, email, WhatsApp or Facebook. Your
-        customers can add all shared products to their cart with one click. Includes
-        automatic cleanup.
+      de: Teile deinen Warenkorb ganz einfach per Link, E-Mail, WhatsApp oder Facebook. Deine Kunden können den geteilten Warenkorb mit einem Klick übernehmen. Automatische Bereinigung.
+      en: Share your shopping cart easily via link, email, WhatsApp or Facebook. Your customers can add all shared products to their cart with one click. Includes automatic cleanup.
     requirements: Shopware 6.6–6.8, PHP 8.1+
     version: "5.0.2"
   - id: WebLa_ManufacturerPages
@@ -243,10 +193,8 @@ plugins:
       de: Herstellerseiten
       en: Manufacturer Pages
     short:
-      de: Erstellt automatisch SEO-optimierte Herstellerseiten mit Übersicht, Detailansicht,
-        Produktfiltern, Sortierung und Sitemap-Integration für Ihren Shopware-Shop.
-      en: Automatically creates SEO-optimized manufacturer pages with overview, detail
-        view, product filters, sorting and sitemap integration for your Shopware store.
+      de: Erstellt automatisch SEO-optimierte Herstellerseiten mit Übersicht, Detailansicht, Produktfiltern, Sortierung und Sitemap-Integration für Ihren Shopware-Shop.
+      en: Automatically creates SEO-optimized manufacturer pages with overview, detail view, product filters, sorting and sitemap integration for your Shopware store.
     requirements: Shopware 6.6–6.8, PHP 8.1+
     version: "5.0.0"
   - id: WebLa_CategorySorter
@@ -254,12 +202,8 @@ plugins:
       de: Kategorie-Sortierer
       en: Category Sorter
     short:
-      de: Sortiert die direkten Unterkategorien einer Kategorie alphanumerisch im
-        Shopware-Admin – mit rekursivem Modus, optionaler Mehrfachauswahl und automatischer
-        geplanter Sortierung.
-      en: Alphanumerically sorts a category's direct subcategories in the Shopware
-        admin — with a recursive mode, optional multi-category selection and automatic
-        scheduled sorting.
+      de: Sortiert die direkten Unterkategorien einer Kategorie alphanumerisch im Shopware-Admin – mit rekursivem Modus, optionaler Mehrfachauswahl und automatischer geplanter Sortierung.
+      en: Alphanumerically sorts a category's direct subcategories in the Shopware admin — with a recursive mode, optional multi-category selection and automatic scheduled sorting.
     requirements: Shopware 6.6–6.7, PHP 8.2+
     version: "1.0.0"
   - id: WebLa_AdminProductFilters
@@ -267,12 +211,8 @@ plugins:
       de: Zusatzfelder in der Admin-Produktübersicht
       en: Custom fields in the admin product overview
     short:
-      de: Zeigt jedes Produkt-Zusatzfeld als optionale Spalte in der Produktübersicht
-        des Shopware-Admins an. Spalten frei ein- und ausblenden, Breite anpassen
-        – ganz ohne Konfiguration.
-      en: Shows every product custom field as an optional column in the Shopware admin
-        product overview. Show or hide columns and resize them freely – with no configuration
-        at all.
+      de: Zeigt jedes Produkt-Zusatzfeld als optionale Spalte in der Produktübersicht des Shopware-Admins an. Spalten frei ein- und ausblenden, Breite anpassen – ganz ohne Konfiguration.
+      en: Shows every product custom field as an optional column in the Shopware admin product overview. Show or hide columns and resize them freely – with no configuration at all.
     requirements: Shopware 6.6–6.7, PHP 8.1+
     version: "4.1.0"
   - id: WebLa_FlyoutNavigation
@@ -280,13 +220,8 @@ plugins:
       de: Flyout Navigation
       en: Flyout Navigation
     short:
-      de: Dieses Plugin ersetzt die klassische Navigation durch eine moderne, mehrstufige
-        Flyout-Navigation, die sich nach rechts aufklappt. Es bietet umfangreiche
-        Konfigurationsmöglichkeiten sowie optionale Features wie Sticky Header und
-        eine benutzerdefinierte Topbar.
-      en: This plugin replaces the classic navigation with a modern, multi-level flyout
-        navigation that opens to the right. It offers extensive configuration options
-        as well as optional features such as a sticky header and a custom top bar.
+      de: Dieses Plugin ersetzt die klassische Navigation durch eine moderne, mehrstufige Flyout-Navigation, die sich nach rechts aufklappt. Es bietet umfangreiche Konfigurationsmöglichkeiten sowie optionale Features wie Sticky Header und eine benutzerdefinierte Topbar.
+      en: This plugin replaces the classic navigation with a modern, multi-level flyout navigation that opens to the right. It offers extensive configuration options as well as optional features such as a sticky header and a custom top bar.
     requirements: Shopware 6.7–6.8, PHP 8.2+
     version: "1.1.4"
   - id: WebLa_Blog
@@ -294,10 +229,8 @@ plugins:
       de: Blog
       en: Blog
     short:
-      de: Vollwertiges Blog-System mit Beiträgen, Kategorien, Inline-Content-Builder,
-        CMS-Bausteinen, Produkt-Slider, SEO-URLs und Theming.
-      en: Full blog system with posts, categories, inline content builder, CMS blocks,
-        product slider, SEO URLs and theming.
+      de: Vollwertiges Blog-System mit Beiträgen, Kategorien, Inline-Content-Builder, CMS-Bausteinen, Produkt-Slider, SEO-URLs und Theming.
+      en: Full blog system with posts, categories, inline content builder, CMS blocks, product slider, SEO URLs and theming.
     requirements: Shopware 6.6–6.7, PHP 8.2+
     version: "1.0.1"
   - id: WebLa_CurrencyChanger
@@ -305,12 +238,8 @@ plugins:
       de: Währungsanzeige
       en: Currency Display
     short:
-      de: Zeigt jeden Preis zusätzlich in der Währung Ihrer Besucher, mit tagesaktuellen
-        EZB-Kursen und ohne manuelle Pflege. Bestellung und Rechnung bleiben in Ihrer
-        Shop-Währung.
-      en: Shows every price in your visitors' own currency using daily ECB rates,
-        with no manual maintenance. Orders and invoices remain in your shop default
-        currency.
+      de: Zeigt jeden Preis zusätzlich in der Währung Ihrer Besucher, mit tagesaktuellen EZB-Kursen und ohne manuelle Pflege. Bestellung und Rechnung bleiben in Ihrer Shop-Währung.
+      en: Shows every price in your visitors' own currency using daily ECB rates, with no manual maintenance. Orders and invoices remain in your shop default currency.
     requirements: Shopware 6.6–6.7, PHP 8.2+
     version: "4.3.0"
   - id: WebLa_PropertyNotes
@@ -318,11 +247,7 @@ plugins:
       de: Hinweise zu Eigenschaften
       en: Property Notes
     short:
-      de: "Kurze Erklärungen direkt neben Ihren Eigenschaften: im Kategoriefilter,
-        in der Eigenschaftstabelle und in der Variantenauswahl. Als Tooltip, Dialog
-        oder Hover-Text."
-      en: "Short explanations right beside your properties: in the category filter,
-        the property table and the variant picker. Shown as a tooltip, a dialog or
-        text on hover."
+      de: "Kurze Erklärungen direkt neben Ihren Eigenschaften: im Kategoriefilter, in der Eigenschaftstabelle und in der Variantenauswahl. Als Tooltip, Dialog oder Hover-Text."
+      en: "Short explanations right beside your properties: in the category filter, the property table and the variant picker. Shown as a tooltip, a dialog or text on hover."
     requirements: Shopware 6.6–6.7, PHP 8.2+
     version: "4.1.0"
