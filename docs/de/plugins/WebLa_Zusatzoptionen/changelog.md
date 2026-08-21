@@ -4,6 +4,17 @@ Alle wichtigen Änderungen am Zusatzoptionen Plugin für Endbenutzer.
 
 ---
 
+# 5.7.4
+
+_Veröffentlicht am 2026-08-21_
+
+**Fehlerbehebungen**
+
+- Behoben, dass ein prozentualer Rabatt den kompletten Positionswert aufgezehrt hat, wenn ein Artikel mit Zusatzoption in einer Menge größer eins in den Warenkorb gelegt wurde. Jede Einheit der Position wurde so oft gezählt wie die Menge, wodurch der Rabatt zu hoch ausfiel und anschließend auf die Warenkorbsumme begrenzt wurde - sichtbar als 100 Prozent Rabatt. Bei einer 40-Prozent-Aktion auf drei Stück eines Artikels für 663,00 mit einer Option für 99,00 wurden 2.286,00 statt 795,60 abgezogen. Eine Menge von eins war nie betroffen.
+- Behoben, dass die Einstellung "Rabatte auf Optionen anwenden, auch wenn sie nicht zutreffen" genau umgekehrt gewirkt hat. Eingeschaltet blieben Optionen vom Rabatt ausgenommen, ausgeschaltet wurden sie einbezogen. Die Einstellung wirkt jetzt wie beschrieben.
+
+---
+
 # 5.7.3
 
 _Veröffentlicht am 2026-08-19_

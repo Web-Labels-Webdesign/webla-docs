@@ -4,6 +4,15 @@ All notable changes to the WebLa Subscription Plugin for end users.
 
 ---
 
+# 1.10.0
+
+_Released 2026-08-21_
+
+**Improvements**
+
+- Payments now carry the Shopware order number, so an order can be found directly in the Mollie dashboard instead of matching it up by amount and date.
+- The bundled Mollie library was updated to the current release.
+
 # 1.9.1
 
 _Released 2026-08-06_

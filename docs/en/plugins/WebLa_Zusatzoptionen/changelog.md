@@ -4,6 +4,17 @@ All notable changes to the Additional Options Plugin for end users.
 
 ---
 
+# 5.7.4
+
+_Released 2026-08-21_
+
+**Bug Fixes**
+
+- Fixed a percentage promotion consuming the whole item total when a product with an option was added with a quantity above one. Each unit of the line was counted as many times as the quantity, so the discount overshot and was then capped at the cart total, showing as 100 percent off. On a 40 percent promotion for three pieces of a 663.00 product with a 99.00 option the discount showed 2,286.00 instead of 795.60. A quantity of one was never affected.
+- Fixed the setting "Apply discounts to options even if they don't apply" working the wrong way round. Switched on, options were left out of the discount, and switched off they were included. The setting now does what it says.
+
+---
+
 # 5.7.3
 
 _Released 2026-08-19_

@@ -4,6 +4,15 @@ Alle wichtigen Änderungen am WebLa Subscription Plugin für Endbenutzer.
 
 ---
 
+# 1.10.0
+
+_Veröffentlicht am 2026-08-21_
+
+**Verbesserungen**
+
+- Zahlungen enthalten jetzt die Shopware-Bestellnummer. Eine Bestellung lässt sich dadurch direkt im Mollie-Dashboard finden, statt sie über Betrag und Datum zuordnen zu müssen.
+- Die mitgelieferte Mollie-Bibliothek wurde auf die aktuelle Version aktualisiert.
+
 # 1.9.1
 
 _Veröffentlicht am 2026-08-06_

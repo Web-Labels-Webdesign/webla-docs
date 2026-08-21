@@ -88,7 +88,7 @@ plugins:
       de: Erweitern Sie Produkte mit konfigurierbaren Zusatzoptionen, individueller Preisgestaltung, Versandbeschränkungen und automatischer Zuweisung durch Produktströme für mehr Flexibilität.
       en: Add flexible additional options to products with custom pricing, shipping restrictions, and automated assignment via product streams for enhanced product configuration.
     requirements: Shopware 6.6–6.8, PHP 8.1+
-    version: "5.7.3"
+    version: "5.7.4"
   - id: WebLa_ContactFormFileUpload
     name:
       de: Kontaktformular – Datei-Upload
@@ -142,7 +142,7 @@ plugins:
       de: Erweiterbares Abonnement-Plugin für Shopware 6 mit automatischer Verlängerung, flexiblen Intervallen, Mollie-Zahlungsanbindung und Kundenportal für wiederkehrende Bestellungen.
       en: Flexible subscription plugin for Shopware 6 with automatic renewals, configurable intervals, Mollie payment integration, and a self-service customer portal for recurring orders.
     requirements: Shopware 6.6–6.8, PHP 8.1+
-    version: "1.9.1"
+    version: "1.10.0"
   - id: WebLa_AdcellProvisionsfreigabe
     name:
       de: ADCELL Provisionsfreigabe
