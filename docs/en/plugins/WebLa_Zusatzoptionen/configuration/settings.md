@@ -156,9 +156,47 @@ Item 2: Laptop + 3-year warranty (Qty: 1) - €1,149
 
 ---
 
+### Deactivate option sets when the seeder is deactivated
+
+| Property     | Value    |
+| ------------ | -------- |
+| **Type**     | Checkbox |
+| **Default**  | Disabled |
+| **Required** | No       |
+
+**Description**: Controls whether deactivating a seeder also deactivates the option sets that seeder created on the products.
+
+**Behavior**:
+- **Enabled**: Deactivating a seeder deactivates every option set it created, so they no longer appear in the storefront. Activating the seeder again re-activates them.
+- **Disabled** (default): The option sets stay active and visible in the storefront even while the seeder is deactivated. The seeder merely stops creating new assignments.
+
+**Note**: The option sets and their options are never deleted, only marked inactive. All settings, prices and configurations are kept and are available unchanged once the seeder is activated again.
+
+---
+
+### Delete option sets when the seeder is deleted
+
+| Property     | Value    |
+| ------------ | -------- |
+| **Type**     | Checkbox |
+| **Default**  | Enabled  |
+| **Required** | No       |
+
+**Description**: Controls what happens to the option sets a seeder created when that seeder is deleted.
+
+**Behavior**:
+- **Enabled** (default): Deleting a seeder also deletes every option set it created, together with their options.
+- **Disabled**: The option sets stay on the products and are no longer managed by any seeder. They can then be edited directly on the product like manually created option sets.
+
+**Caution**: Deleting a seeder cannot be undone. With this setting enabled, the seeded option sets are lost irrecoverably. To take a seeder out of service temporarily, deactivate it instead.
+
+---
+
 ## Sales Channel Specific Settings
 
-All settings mentioned above can be configured individually per sales channel.
+All settings mentioned above can be configured individually per sales channel, with
+one exception: the **Seeder Settings** apply globally. Seeding runs in the background
+without a sales channel context, so only the value set for "All Sales Channels" is used.
 
 | Setting                  | Scope                    | Description                                       |
 | ------------------------ | ------------------------ | ------------------------------------------------- |

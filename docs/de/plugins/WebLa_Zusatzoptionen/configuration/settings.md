@@ -156,9 +156,48 @@ Position 2: Laptop + Garantie 3 Jahre (Menge: 1) - 1.149 €
 
 ---
 
+### Options-Sets bei Deaktivierung des Seeders deaktivieren
+
+| Eigenschaft      | Wert        |
+| ---------------- | ----------- |
+| **Typ**          | Checkbox    |
+| **Standard**     | Deaktiviert |
+| **Erforderlich** | Nein        |
+
+**Beschreibung**: Steuert, ob das Deaktivieren eines Seeders auch die Options-Sets deaktiviert, die dieser Seeder an den Produkten erzeugt hat.
+
+**Verhalten**:
+- **Aktiviert**: Beim Deaktivieren eines Seeders werden alle von ihm erzeugten Options-Sets deaktiviert und erscheinen nicht mehr in der Storefront. Beim erneuten Aktivieren des Seeders werden sie wieder aktiviert.
+- **Deaktiviert** (Standard): Die Options-Sets bleiben aktiv und in der Storefront sichtbar, auch wenn der Seeder deaktiviert ist. Der Seeder erzeugt lediglich keine neuen Zuweisungen mehr.
+
+**Hinweis**: Die Options-Sets und deren Optionen werden nie geloescht, sondern nur auf inaktiv gesetzt. Alle Einstellungen, Preise und Konfigurationen bleiben erhalten und stehen nach erneuter Aktivierung des Seeders unveraendert zur Verfuegung.
+
+---
+
+### Options-Sets beim Loeschen des Seeders loeschen
+
+| Eigenschaft      | Wert      |
+| ---------------- | --------- |
+| **Typ**          | Checkbox  |
+| **Standard**     | Aktiviert |
+| **Erforderlich** | Nein      |
+
+**Beschreibung**: Steuert, was mit den Options-Sets geschieht, die ein Seeder erzeugt hat, wenn dieser Seeder geloescht wird.
+
+**Verhalten**:
+- **Aktiviert** (Standard): Beim Loeschen eines Seeders werden alle von ihm erzeugten Options-Sets samt deren Optionen ebenfalls geloescht.
+- **Deaktiviert**: Die Options-Sets bleiben an den Produkten bestehen und werden von keinem Seeder mehr verwaltet. Sie koennen anschliessend wie manuell angelegte Options-Sets direkt am Produkt bearbeitet werden.
+
+**Achtung**: Das Loeschen eines Seeders laesst sich nicht rueckgaengig machen. Ist diese Einstellung aktiviert, gehen die geseedeten Options-Sets unwiderruflich verloren. Soll ein Seeder nur voruebergehend ausser Kraft gesetzt werden, deaktivieren Sie ihn stattdessen.
+
+---
+
 ## Verkaufskanal-spezifische Einstellungen
 
-Alle oben genannten Einstellungen können pro Verkaufskanal individuell konfiguriert werden.
+Alle oben genannten Einstellungen können pro Verkaufskanal individuell konfiguriert
+werden - mit einer Ausnahme: Die **Seeder-Einstellungen** gelten global. Das Seeding
+läuft im Hintergrund ohne Verkaufskanal-Kontext, daher wird ausschliesslich der für
+"Alle Verkaufskanäle" gesetzte Wert verwendet.
 
 | Einstellung                     | Geltungsbereich          | Beschreibung                                                 |
 | ------------------------------- | ------------------------ | ------------------------------------------------------------ |
