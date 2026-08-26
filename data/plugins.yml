@@ -133,7 +133,7 @@ plugins:
       de: Ultimatives Bundle-Plugin für Shopware 6.
       en: Ultimate bundle plugin for Shopware 6.
     requirements: Shopware 6.6–6.8, PHP 8.1+
-    version: "5.1.10"
+    version: "5.1.11"
   - id: WebLa_Subscriptions
     name:
       de: Abonnement Plugin
@@ -142,7 +142,7 @@ plugins:
       de: Erweiterbares Abonnement-Plugin für Shopware 6 mit automatischer Verlängerung, flexiblen Intervallen, Mollie-Zahlungsanbindung und Kundenportal für wiederkehrende Bestellungen.
       en: Flexible subscription plugin for Shopware 6 with automatic renewals, configurable intervals, Mollie payment integration, and a self-service customer portal for recurring orders.
     requirements: Shopware 6.6–6.8, PHP 8.1+
-    version: "1.10.0"
+    version: "1.10.3"
   - id: WebLa_AdcellProvisionsfreigabe
     name:
       de: ADCELL Provisionsfreigabe

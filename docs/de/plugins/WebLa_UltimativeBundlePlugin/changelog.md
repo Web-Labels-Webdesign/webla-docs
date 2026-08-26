@@ -4,6 +4,18 @@ Alle wichtigen Änderungen am Ultimativen Bundle Plugin für Endbenutzer.
 
 ---
 
+# 5.1.11
+
+_Veröffentlicht am 2026-08-26_
+
+**Fehlerbehebungen**
+
+- Auf Smartphones überlappt der Preis einer Komponente nicht mehr deren Produktnamen. Lange Produktnamen erhalten wieder ausreichend Platz, statt in eine schmale Spalte gequetscht zu werden.
+- Der Grundpreis einer Komponente, etwa der Preis pro Kilogramm, steht jetzt in einer eigenen Zeile über die volle Breite unter der Komponente, statt neben dem Preis über mehrere Zeilen umzubrechen.
+- In Komponentengruppen mit mehreren Optionen überlappt die Schaltfläche zur Optionsauswahl die Komponente nicht mehr, wenn die Gruppe als optional markiert ist.
+
+---
+
 # 5.1.10
 
 _Veröffentlicht am 2026-08-20_

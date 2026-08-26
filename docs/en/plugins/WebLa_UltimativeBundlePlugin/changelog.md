@@ -4,6 +4,18 @@ All notable changes to the Ultimate Bundle Plugin for end users.
 
 ---
 
+# 5.1.11
+
+_Released 2026-08-26_
+
+**Bug Fixes**
+
+- On smartphones, a component's price no longer overlaps its product name. Long product names get enough room again instead of being squeezed into a narrow column.
+- The base price of a component, such as the price per kilogram, now sits on its own full-width line beneath the component instead of wrapping across several lines next to the price.
+- In component groups with several options, the "select option" button no longer overlaps the component when the group is marked as optional.
+
+---
+
 # 5.1.10
 
 _Released 2026-08-20_

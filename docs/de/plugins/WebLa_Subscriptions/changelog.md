@@ -4,6 +4,26 @@ Alle wichtigen Änderungen am WebLa Subscription Plugin für Endbenutzer.
 
 ---
 
+# 1.10.3
+
+_Veröffentlicht am 2026-08-26_
+
+**Fehlerbehebungen**
+
+- Verlängerungen schlagen nicht mehr fehl, wenn das Mollie-Mandat eines Kunden lokal nie gespeichert wurde. Bei älteren Abonnements konnte ein gültiges Mandat bei Mollie vorliegen, das das Plugin nicht sah, sodass jede Verlängerung abgelehnt wurde. Das Mandat wird jetzt aus der Zahlung der ursprünglichen Bestellung wiederhergestellt, betroffene Abonnements verlängern sich wieder ohne manuelles Zutun.
+- Die Filter in der Abonnement-Liste funktionieren wieder. Die Auswahl von Status, Zahlungsart, Intervall oder Datum blieb bisher wirkungslos, der gewählte Wert wurde nicht einmal im Feld angezeigt.
+- Die Suche in der Abonnement-Liste findet Kunden jetzt über Name, E-Mail-Adresse oder Kundennummer. Zuvor lieferte eine Suche keine brauchbaren Treffer.
+- Der Suchtyp für Abonnements wird mit einem sprechenden Namen statt der internen Bezeichnung angezeigt.
+
+# 1.10.1
+
+_Veröffentlicht am 2026-08-26_
+
+**Fehlerbehebungen**
+
+- Die Abonnement-Liste in der Administration zeigt die Seitennavigation wieder an. Bei mehr als 25 Abonnements war nur die erste Seite erreichbar, obwohl die Gesamtzahl in der Überschrift korrekt war.
+- Ein Klick auf eine Spaltenüberschrift in der Abonnement-Liste sortiert die Liste jetzt, statt wirkungslos zu bleiben.
+
 # 1.10.0
 
 _Veröffentlicht am 2026-08-21_

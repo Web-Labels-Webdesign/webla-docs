@@ -4,6 +4,26 @@ All notable changes to the WebLa Subscription Plugin for end users.
 
 ---
 
+# 1.10.3
+
+_Released 2026-08-26_
+
+**Bug Fixes**
+
+- Renewals no longer fail for customers whose Mollie mandate was never recorded locally. Older subscriptions could end up with a valid mandate at Mollie that the plugin could not see, and every renewal was refused as a result. The mandate is now recovered from the original order's payment, so affected subscriptions renew again without anyone having to intervene.
+- The filters in the subscription list work again. Selecting a status, payment method, interval or date had no effect, and the chosen value did not even appear in the field.
+- Searching the subscription list now finds customers by name, email or customer number. Previously a search returned nothing useful.
+- The subscription search type is now shown with a proper name instead of the internal identifier.
+
+# 1.10.1
+
+_Released 2026-08-26_
+
+**Bug Fixes**
+
+- The subscription list in the administration now shows its pagination again. With more than 25 subscriptions only the first page was reachable, even though the total count in the header was correct.
+- Clicking a column header in the subscription list now sorts the list instead of silently doing nothing.
+
 # 1.10.0
 
 _Released 2026-08-21_
