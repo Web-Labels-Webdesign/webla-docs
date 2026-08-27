@@ -4,6 +4,20 @@ All notable changes for end users.
 
 ---
 
+# 5.3.1
+
+_Released 2026-08-26_
+
+**Bug Fixes**
+
+- Fix a server error on the country switch when the page the customer came from could not be resolved as a redirect target. Such requests now lead back to the home page instead of an error page. This also closes an endpoint that could be made to return server errors repeatedly from outside the shop.
+- Fix a server error when switching to a country that no longer exists in the shop, or whose currency is missing from the plugin's currency table. Only applies with "Switch currency" enabled.
+- Fix the storefront HTTP cache being skipped for every visitor. The plugin included the visitor's session in the cache key, so no page was ever served from the cache. Shops running a reverse proxy or Varnish should see a clear improvement in hit rate.
+
+**Improvements**
+
+- The country switch no longer empties the cache for all products, categories and the navigation on every request. Delivery countries have had their own cache entries since 5.1.9, so this work had no effect and only cost time. The larger the catalogue, the more noticeable the difference.
+
 # 5.3.0
 
 _Released 2026-07-28_

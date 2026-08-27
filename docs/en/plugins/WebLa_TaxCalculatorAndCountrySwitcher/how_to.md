@@ -13,7 +13,7 @@ This document provides step-by-step workflows for common tasks with the *Tax cal
                  ↓
 [POST /switch_context with country=ISO]
                  ↓
-[CustomConfigureController sets sw-country cookie & invalidates product cache]
+[CustomConfigureController validates redirect target & sets sw-country cookie]
                  ↓
 [BaseContextFactoryDecorator overrides CountryId in SalesChannelContext]
                  ↓

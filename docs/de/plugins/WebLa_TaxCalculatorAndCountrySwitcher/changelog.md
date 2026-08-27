@@ -4,6 +4,20 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 5.3.1
+
+_Veröffentlicht am 2026-08-26_
+
+**Fehlerbehebungen**
+
+- Ein Serverfehler beim Länderwechsel wurde behoben, wenn die Seite, von der der Kunde kam, nicht als Weiterleitungsziel aufgelöst werden konnte. Solche Anfragen führen jetzt zurück auf die Startseite statt auf eine Fehlerseite. Damit ist auch ein Endpunkt geschlossen, über den sich von außen wiederholt Serverfehler auslösen ließen.
+- Ein Serverfehler wurde behoben, wenn auf ein Land gewechselt wurde, das im Shop nicht mehr existiert oder dessen Währung in der Währungstabelle des Plugins fehlt. Betrifft nur den aktivierten Währungswechsel.
+- Der HTTP-Cache der Storefront wurde für jeden Besucher übergangen. Das Plugin hat die Session des Besuchers in den Cache-Schlüssel aufgenommen, sodass keine Seite je aus dem Cache ausgeliefert wurde. Shops mit Reverse Proxy oder Varnish sollten eine deutlich bessere Trefferquote sehen.
+
+**Verbesserungen**
+
+- Der Länderwechsel leert nicht mehr bei jeder Anfrage den Cache aller Produkte, Kategorien und der Navigation. Lieferländer haben seit 5.1.9 ohnehin eigene Cache-Einträge, diese Arbeit blieb also wirkungslos und kostete nur Zeit. Je größer der Katalog, desto deutlicher der Unterschied.
+
 # 5.3.0
 
 _Veröffentlicht am 2026-07-28_

@@ -13,7 +13,7 @@ Dieses Dokument bietet Schritt-für-Schritt-Workflows für häufige Aufgaben mit
                  ↓
 [POST /switch_context mit country=ISO]
                  ↓
-[CustomConfigureController schreibt sw-country-Cookie & leert Produkt-Cache]
+[CustomConfigureController prüft Redirect-Ziel & schreibt sw-country-Cookie]
                  ↓
 [BaseContextFactoryDecorator überschreibt CountryId im SalesChannelContext]
                  ↓
