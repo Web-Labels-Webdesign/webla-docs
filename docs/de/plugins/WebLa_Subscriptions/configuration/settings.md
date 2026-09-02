@@ -1,8 +1,8 @@
 # Konfigurationseinstellungen
 
-Dieses Dokument beschreibt alle verfügbaren Einstellungen für das WebLa Subscription Plugin.
+Dieses Dokument beschreibt alle verfügbaren Einstellungen für das Abonnement Plugin für Mollie.
 
-**Navigation**: Erweiterungen → Meine Erweiterungen → WebLa Subscription Plugin → Konfigurieren
+**Navigation**: Erweiterungen → Meine Erweiterungen → Abonnement Plugin für Mollie → Konfigurieren
 
 ---
 
@@ -118,6 +118,16 @@ Das Storefront-Dropdown zeigt immer zuerst *Einmalkauf*, gefolgt von jedem konfi
 
 **Anwendungsbeispiel**: `4 / "Alle 4 Wochen" / 10` und `8 / "Alle 8 Wochen" / 15` konfigurieren, um zwei Rhythmen mit gestaffelten Rabatten anzubieten.
 
+### Standardauswahl auf der Produktseite
+
+| Eigenschaft      | Wert                    |
+| ---------------- | ----------------------- |
+| **Typ**          | Auswahl                 |
+| **Standard**     | Abo vorausgewählt       |
+| **Erforderlich** | Nein                    |
+
+**Beschreibung**: Legt fest, welche Kaufart in der Abo-Auswahl auf der Produktdetailseite vorausgewählt ist — *Abo vorausgewählt* oder *Einzelkauf vorausgewählt*.
+
 ---
 
 ## Preise & Rabatte
@@ -134,7 +144,7 @@ Das Storefront-Dropdown zeigt immer zuerst *Einmalkauf*, gefolgt von jedem konfi
 
 **Anwendungsbeispiel**: Setzen Sie den Wert auf 10, um Kunden einen dauerhaften 10%-Rabatt auf Abonnement-Artikel zu gewähren.
 
-> **Hinweis**: Zusätzlich zum Basisrabatt können über die Admin-Oberfläche Treue-Staffeln eingerichtet werden, die ab einer bestimmten Anzahl an Verlängerungen greifen.
+> **Hinweis**: Zusätzlich zum Basisrabatt können Treue-Staffeln ab einer bestimmten Anzahl an Verlängerungen greifen. Es gibt dafür keine Admin-Oberfläche — die Staffeln liegen in der Datenbanktabelle `webla_subscription_discount` und wirken nur auf Verlängerungsbestellungen. Bei der Installation werden keine Staffeln angelegt.
 
 ### Kombination des Abo-Rabatts mit Aktionen verhindern
 
@@ -147,6 +157,16 @@ Das Storefront-Dropdown zeigt immer zuerst *Einmalkauf*, gefolgt von jedem konfi
 **Beschreibung**: Ist diese Option aktiviert, lassen sich Rabattcodes nicht mit einem Abonnement kombinieren. Gibt ein Kunde in einem Warenkorb mit Abo einen Rabattcode ein, wird ein Hinweis angezeigt und der Code nicht angewendet; der Bestellvorgang läuft normal weiter. Dies entspricht der Shopware-Standardeinstellung „Kombination mit anderen Aktionen verhindern". Ist die Option deaktiviert (Standard), können Rabattcodes und Abo-Rabatt kombiniert werden.
 
 **Anwendungsbeispiel**: Sie gewähren automatisch einen Abo-Rabatt und kommunizieren im Shop, dass Rabatte nicht kombinierbar sind — aktivieren Sie diese Option, um zu verhindern, dass Kunden zusätzlich einen Rabattcode auf den Abo-Rabatt anwenden.
+
+### Dynamische Preisanzeige in der Abo-Auswahl
+
+| Eigenschaft      | Wert      |
+| ---------------- | --------- |
+| **Typ**          | Schalter  |
+| **Standard**     | Aktiviert |
+| **Erforderlich** | Nein      |
+
+**Beschreibung**: Zeigt den regulären und rabattierten Preis sowie den Grundpreis in den Auswahl-Kacheln auf der Produktdetailseite und aktualisiert den Hauptpreis, wenn zwischen Einmalkauf und Abo gewechselt wird.
 
 ---
 
@@ -200,7 +220,7 @@ Das Storefront-Dropdown zeigt immer zuerst *Einmalkauf*, gefolgt von jedem konfi
 | **Standard**     | Nicht ausgewählt       |
 | **Erforderlich** | Nein                   |
 
-**Beschreibung**: Die Versandart, die für automatisch erzeugte Verlängerungsbestellungen verwendet wird. Wenn nicht ausgewählt, wird die Standard-Versandart des Verkaufskanals verwendet.
+**Beschreibung**: Fallback-Versandart für automatisch erzeugte Verlängerungsbestellungen. Vorrang hat die Versandart der Erstbestellung, solange sie noch aktiv ist; diese Einstellung greift nur, wenn sie nicht ermittelt werden kann.
 
 ### SEPA-Zahlungsart
 
@@ -221,6 +241,16 @@ Das Storefront-Dropdown zeigt immer zuerst *Einmalkauf*, gefolgt von jedem konfi
 | **Erforderlich** | Nein                    |
 
 **Beschreibung**: Die Shopware-Zahlungsart, die für Kreditkarten-Abonnements über Mollie verwendet wird.
+
+### PayPal-Zahlungsart
+
+| Eigenschaft      | Wert                    |
+| ---------------- | ----------------------- |
+| **Typ**          | Auswahl (Zahlungsarten) |
+| **Standard**     | Nicht ausgewählt        |
+| **Erforderlich** | Nein                    |
+
+**Beschreibung**: Die Shopware-Zahlungsart, die für PayPal-Abonnements über Mollie verwendet wird.
 
 ---
 
@@ -285,9 +315,9 @@ Das Storefront-Dropdown zeigt immer zuerst *Einmalkauf*, gefolgt von jedem konfi
 | **Erforderlich** | Nein                               |
 
 **Optionen**:
-- `Überspringen`: Der Artikel wird bei dieser Verlängerung ausgelassen, die Bestellung wird ohne ihn erstellt
-- `Pausieren und erneut versuchen`: Das Abonnement wird pausiert und beim nächsten Durchlauf erneut geprüft
-- `Ohne Artikel ausführen`: Die Verlängerung wird ohne den nicht vorrätigen Artikel durchgeführt
+- `Verlängerung überspringen`: Die gesamte Verlängerung wird übersprungen und im nächsten Zyklus erneut versucht; es entsteht keine Bestellung
+- `Pausieren und erneut versuchen`: Das Abonnement wird für ein Intervall pausiert und danach erneut geprüft
+- `Ohne Artikel ausführen`: Die Verlängerung wird ohne den nicht vorrätigen Artikel durchgeführt und ein Out-of-Stock-Event ausgelöst
 
 **Anwendungsbeispiel**: Wählen Sie „Pausieren und erneut versuchen", wenn alle Artikel eines Abonnements unbedingt geliefert werden müssen.
 
@@ -296,13 +326,13 @@ Das Storefront-Dropdown zeigt immer zuerst *Einmalkauf*, gefolgt von jedem konfi
 | Eigenschaft      | Wert                               |
 | ---------------- | ---------------------------------- |
 | **Typ**          | Auswahl                            |
-| **Standard**     | Überspringen                       |
+| **Standard**     | Pausieren und erneut versuchen     |
 | **Erforderlich** | Nein                               |
 
 **Optionen**:
-- `Überspringen`: Der gelöschte Artikel wird übersprungen, die restlichen Artikel werden bestellt
-- `Pausieren und erneut versuchen`: Das Abonnement wird pausiert, bis ein Admin eingreift
-- `Ohne Artikel ausführen`: Die Verlängerung wird ohne den gelöschten Artikel durchgeführt
+- `Verlängerung überspringen`: Die gesamte Verlängerung wird übersprungen und im nächsten Zyklus erneut versucht
+- `Pausieren und erneut versuchen`: Das Abonnement wird für ein Intervall pausiert (Standard)
+- `Ohne Artikel ausführen`: Die Verlängerung wird ohne den gelöschten Artikel durchgeführt und ein Event für gelöschte Produkte ausgelöst
 
 **Anwendungsbeispiel**: Wählen Sie „Pausieren und erneut versuchen", wenn Sie bei gelöschten Produkten manuell ein Ersatzprodukt einsetzen möchten.
 

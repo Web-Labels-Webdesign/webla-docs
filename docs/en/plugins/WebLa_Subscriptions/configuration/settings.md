@@ -1,8 +1,8 @@
 # Configuration Settings
 
-This document describes all available settings for the WebLa Subscription Plugin.
+This document describes all available settings for the Subscription Plugin for Mollie.
 
-**Navigation**: Extensions → My Extensions → WebLa Subscription Plugin → Configure
+**Navigation**: Extensions → My Extensions → Subscription Plugin for Mollie → Configure
 
 ---
 
@@ -118,6 +118,16 @@ The storefront dropdown always shows *One-time purchase* first, followed by each
 
 **Example Use Case**: Configure `4 / "Every 4 weeks" / 10` and `8 / "Every 8 weeks" / 15` to offer two rhythms with escalating discounts.
 
+### Default Selection on the Product Page
+
+| Property     | Value                                            |
+| ------------ | ------------------------------------------------ |
+| **Type**     | Select                                           |
+| **Default**  | Subscription preselected                         |
+| **Required** | No                                               |
+
+**Description**: Which purchase type is preselected in the subscription selector on the product detail page — *Subscription preselected* or *Single purchase preselected*.
+
 ---
 
 ## Pricing & Discounts
@@ -134,7 +144,7 @@ The storefront dropdown always shows *One-time purchase* first, followed by each
 
 **Example Use Case**: Set the value to 10 to give customers a permanent 10% discount on subscription items.
 
-> **Note**: In addition to the base discount, loyalty tiers can be set up via the admin interface that activate after a certain number of renewals.
+> **Note**: In addition to the base discount, loyalty tiers can activate after a certain number of renewals. They have no admin interface — tiers live in the database table `webla_subscription_discount` and apply to renewal orders only. No tiers are created on installation.
 
 ### Prevent Combination of Subscription Discount with Promotions
 
@@ -147,6 +157,16 @@ The storefront dropdown always shows *One-time purchase* first, followed by each
 **Description**: When enabled, promotion codes cannot be combined with a subscription. If a customer enters a promotion code in a cart that contains a subscription, a notice is shown and the code is not applied; checkout continues as normal. This mirrors Shopware's native "Prevent combination with other promotions" promotion setting. When disabled (default), promotion codes and the subscription discount can be combined.
 
 **Example Use Case**: You grant an automatic subscription discount and communicate in your shop that discounts cannot be combined — enable this to stop customers stacking a promotion code on top of the subscription discount.
+
+### Show Dynamic Prices in the Subscription Selector
+
+| Property     | Value   |
+| ------------ | ------- |
+| **Type**     | Switch  |
+| **Default**  | Enabled |
+| **Required** | No      |
+
+**Description**: Shows the regular and discounted price plus the base price inside the purchase-type tiles on the product detail page and updates the main price when the customer switches between one-time purchase and subscription.
 
 ---
 
@@ -200,7 +220,7 @@ The storefront dropdown always shows *One-time purchase* first, followed by each
 | **Default**  | Not selected               |
 | **Required** | No                         |
 
-**Description**: The shipping method used for automatically generated renewal orders. If not selected, the sales channel's default shipping method is used.
+**Description**: Fallback shipping method for automatically generated renewal orders. The shipping method of the initial order takes precedence and is used whenever it is still active; this setting only applies when that shipping method cannot be resolved.
 
 ### SEPA Payment Method
 
@@ -221,6 +241,16 @@ The storefront dropdown always shows *One-time purchase* first, followed by each
 | **Required** | No                          |
 
 **Description**: The Shopware payment method used for credit card subscriptions via Mollie.
+
+### PayPal Payment Method
+
+| Property     | Value                       |
+| ------------ | --------------------------- |
+| **Type**     | Select (Payment Methods)    |
+| **Default**  | Not selected                |
+| **Required** | No                          |
+
+**Description**: The Shopware payment method used for PayPal subscriptions via Mollie.
 
 ---
 
@@ -285,24 +315,24 @@ The storefront dropdown always shows *One-time purchase* first, followed by each
 | **Required** | No       |
 
 **Options**:
-- `Skip`: The item is omitted from this renewal, the order is created without it
-- `Pause and retry`: The subscription is paused and checked again on the next run
-- `Execute without item`: The renewal is processed without the out-of-stock item
+- `Skip renewal`: The whole renewal is skipped and retried in the next cycle; no order is created
+- `Pause and retry`: The subscription is paused for one interval and checked again afterwards
+- `Execute without item`: The renewal is processed without the out-of-stock item and an out-of-stock event is dispatched
 
 **Example Use Case**: Choose "Pause and retry" if all items in a subscription must be delivered together.
 
 ### Deleted Product Behaviour
 
-| Property     | Value    |
-| ------------ | -------- |
-| **Type**     | Select   |
-| **Default**  | Skip     |
-| **Required** | No       |
+| Property     | Value           |
+| ------------ | --------------- |
+| **Type**     | Select          |
+| **Default**  | Pause and retry |
+| **Required** | No              |
 
 **Options**:
-- `Skip`: The deleted item is skipped, remaining items are ordered
-- `Pause and retry`: The subscription is paused until an admin intervenes
-- `Execute without item`: The renewal is processed without the deleted item
+- `Skip renewal`: The whole renewal is skipped and retried in the next cycle
+- `Pause and retry`: The subscription is paused for one interval (default)
+- `Execute without item`: The renewal is processed without the deleted item and a deleted-product event is dispatched
 
 **Example Use Case**: Choose "Pause and retry" if you want to manually assign a replacement product for deleted items.
 

@@ -1,6 +1,6 @@
 # Admin-Funktionen
 
-> Teil des WebLa Subscription Plugins — [Siehe Hauptanleitung](./usage.md)
+> Teil des Abonnement Plugins für Mollie — [Siehe Hauptanleitung](./usage.md)
 
 ## Übersicht
 
@@ -18,10 +18,12 @@ Das Dashboard bietet einen Überblick über die wichtigsten Kennzahlen Ihres Abo
 
 | Kennzahl                    | Beschreibung                                                |
 | --------------------------- | ----------------------------------------------------------- |
-| **Aktive Abonnenten**       | Anzahl der Kunden mit mindestens einem aktiven Abonnement   |
-| **Anstehende Verlängerungen** | Verlängerungen, die in den nächsten 7 Tagen fällig sind   |
-| **Monatlicher Umsatz (MRR)** | Geschätzter wiederkehrender monatlicher Umsatz             |
-| **Kündigungsrate (Churn)**  | Prozentuale Kündigungsrate über einen rollierenden Zeitraum |
+| **Aktive Abonnements**      | Anzahl der Abonnements im Status *Aktiv*                    |
+| **Anstehende Verlängerungen** | Aktive Abonnements, die in den nächsten 7 Tagen fällig sind |
+| **Monatlicher Umsatz (MRR)** | Geschätzter wiederkehrender Monatsumsatz — der Grundpreis jedes aktiven Abonnements auf einen Monat (4,33 Wochen) normalisiert |
+| **Kündigungsrate (Churn)**  | In den letzten 30 Tagen gekündigte Abonnements, geteilt durch aktive plus kürzlich gekündigte |
+
+Unterhalb der KPI-Karten schlüsselt das Dashboard alle Abonnements nach Status auf (aktiv, pausiert, gekündigt, abgelaufen, SEPA fehlgeschlagen, Warten auf Vorkasse, Zahlung ausstehend) und blendet Hinweisbanner ein, wenn SEPA-Fehlschläge oder offene Vorkassen existieren.
 
 ---
 
@@ -42,9 +44,16 @@ Das Dashboard bietet einen Überblick über die wichtigsten Kennzahlen Ihres Abo
 
 ### Filtern und Sortieren
 
-- **Status-Filter**: Filtern Sie nach aktiv, pausiert, gekündigt und weiteren Status
+Die Filter liegen in der Seitenleiste (Trichter-Symbol):
+
+- **Status**: aktiv, pausiert, gekündigt, abgelaufen, SEPA fehlgeschlagen, Warten auf Vorkasse, Zahlung ausstehend
+- **Zahlungsart**: Kreditkarte, SEPA, PayPal, Rechnung, Vorkasse
+- **Intervall**: Filter nach Intervall in Wochen
+- **Nächste Verlängerung von / bis**: Zeitraum für das nächste Verlängerungsdatum
 - **Sortierung**: Klicken Sie auf eine Spaltenüberschrift zum Sortieren
-- **Suche**: Suchen Sie nach Kundennamen
+- **Suche**: Die Suchleiste findet Kundenname, E-Mail-Adresse und Kundennummer
+
+> **Hinweis**: Ein CSV-Export existiert als API-Endpunkt (`POST /api/_action/webla-subscription/export`), hat aber keine Schaltfläche in der Administration.
 
 ---
 
@@ -116,7 +125,9 @@ Chronologische Auflistung aller bisherigen Verlängerungen:
 
 1. Öffnen Sie das Abonnement in der Detailansicht
 2. Klicken Sie auf **Kündigen**
-3. Das Abonnement wird endgültig beendet
+3. Das Abonnement wird beendet und ist für den Kunden im Portal nicht mehr verwaltbar
+
+> **Hinweis**: Anders als Kunden können Admins ein gekündigtes Abonnement wieder reaktivieren — Kündigungsdatum und -grund werden dabei zurückgesetzt.
 
 ### Verlängerung erzwingen
 
@@ -156,11 +167,11 @@ Erstellt sofort eine Verlängerungsbestellung, unabhängig vom geplanten Datum.
 
 ### Kundenprofil
 
-Im Kundenprofil (**Kunden → [Kunde]**) wird eine zusätzliche Karte **Abonnements** angezeigt, die alle Abonnements des Kunden auflistet. Von hier können Sie direkt zur Abonnement-Detailansicht navigieren.
+Im Kundenprofil (**Kunden → [Kunde]**) wird eine zusätzliche Karte **Abonnements** angezeigt, die alle Abonnements des Kunden auflistet. Von hier können Sie direkt zur Abonnement-Detailansicht navigieren. Die Karte enthält außerdem den Schalter **Intervallwechsel erlaubt**, der die globale Einstellung für diesen einen Kunden überschreibt.
 
 ### Produktdetails
 
-Auf der Produktseite (**Kataloge → Produkte → [Produkt]**) wird ein Tab **Abonnement** angezeigt, in dem Sie die verfügbaren Abonnement-Optionen für dieses Produkt konfigurieren.
+Auf der Produktseite (**Kataloge → Produkte → [Produkt]**) ergänzt das Plugin am Ende des Tabs **Allgemein** die Karte **Abonnement-Optionen**, in der Sie die verfügbaren Abonnement-Optionen und den Modus *Nur als Abonnement* für dieses Produkt konfigurieren.
 
 ---
 

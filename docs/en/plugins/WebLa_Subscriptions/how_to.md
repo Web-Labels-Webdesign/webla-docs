@@ -1,6 +1,6 @@
 # How-To Guide
 
-This guide provides step-by-step workflows for common tasks with the WebLa Subscription Plugin.
+This guide provides step-by-step workflows for common tasks with the Subscription Plugin for Mollie.
 
 ---
 
@@ -53,12 +53,12 @@ With prepayment, the subscription pauses after renewal and waits for confirmatio
 **Steps**:
 
 1. **Check plugin settings**
-   - Navigate to: `Extensions → My Extensions → WebLa Subscription Plugin → Configure`
+   - Navigate to: `Extensions → My Extensions → Subscription Plugin for Mollie → Configure`
    - Ensure the plugin is enabled and the desired interval limits are set
 
 2. **Edit the product**
    - Navigate to: `Catalogues → Products → [Your Product]`
-   - Switch to the **Subscription** tab
+   - Scroll to the **Subscription Options** card at the bottom of the **General** tab
 
 3. **Add subscription options**
    - Click **Add Option**
@@ -75,7 +75,7 @@ With prepayment, the subscription pauses after renewal and waits for confirmatio
 
 ### How to: Set Up Mollie Payments
 
-**Goal**: Activate credit card and SEPA direct debit for subscriptions
+**Goal**: Activate credit card, SEPA direct debit and PayPal for subscriptions
 
 **Time Required**: Approximately 10 minutes
 
@@ -86,7 +86,7 @@ With prepayment, the subscription pauses after renewal and waits for confirmatio
 **Steps**:
 
 1. **Enter API keys**
-   - Navigate to: `Extensions → My Extensions → WebLa Subscription Plugin → Configure`
+   - Navigate to: `Extensions → My Extensions → Subscription Plugin for Mollie → Configure`
    - Section **Mollie API**
    - Enter the **Test API Key**
    - Click **Test API Connection**
@@ -95,6 +95,7 @@ With prepayment, the subscription pauses after renewal and waits for confirmatio
    - Section **Payment Methods**
    - Select the Mollie credit card payment method for **Credit Card Payment Method**
    - Select the Mollie SEPA payment method for **SEPA Payment Method**
+   - Select the Mollie PayPal payment method for **PayPal Payment Method** (optional)
 
 3. **Configure SEPA**
    - Enable **SEPA Direct Debit**
@@ -110,7 +111,7 @@ With prepayment, the subscription pauses after renewal and waits for confirmatio
    - Disable **Test Mode**
    - Save again
 
-**Result**: Customers can choose credit card or SEPA direct debit for subscription orders. Renewals are processed automatically via Mollie.
+**Result**: Customers can choose credit card, SEPA direct debit or PayPal for subscription orders. Renewals are processed automatically via Mollie.
 
 ---
 
@@ -190,7 +191,7 @@ Discount tiers are managed in the database table `webla_subscription_discount`. 
 - **Discount Percentage**: How much additional discount is granted
 - **Active**: Whether the tier is applied
 
-Default tiers are created during initial installation.
+No tiers are created on installation, and there is no admin interface for them — rows have to be inserted directly. Tier discounts apply to renewal orders only.
 
 ---
 
@@ -198,7 +199,7 @@ Default tiers are created during initial installation.
 
 | Task                        | Key Steps                                                         | Settings Required          |
 | --------------------------- | ----------------------------------------------------------------- | -------------------------- |
-| Offer product as subscription | Product → Subscription tab → Add options                        | Plugin active              |
+| Offer product as subscription | Product → General tab → Subscription Options card → Add options | Plugin active              |
 | Set up Mollie               | Configure → API keys → Assign payment methods                    | Mollie account             |
 | Force renewal               | Subscription → Detail view → Force Renewal                       | —                          |
 | Pause subscription          | Subscription → Detail view → Pause                               | —                          |

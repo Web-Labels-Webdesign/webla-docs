@@ -1,6 +1,6 @@
 # Subscription Management (Customer Portal)
 
-> Part of the WebLa Subscription Plugin — [See main usage guide](./usage.md)
+> Part of the Subscription Plugin for Mollie — [See main usage guide](./usage.md)
 
 ## Overview
 
@@ -69,9 +69,18 @@ In the **Items** section, customers see all products in their subscription:
 
 #### Removing an Item
 
-1. Click the **Remove** icon next to the item
-2. Confirm the removal in the dialog
-3. The item is removed from the subscription
+1. Click **Remove** next to the item
+2. The item is removed from the subscription
+
+The last remaining item cannot be removed — the subscription must always contain at least one product. To end a subscription entirely, cancel it.
+
+#### Adding a Product
+
+1. Use the product search field below the item list
+2. Pick a product from the suggestions and enter a quantity
+3. Click **Add** — if the product is already part of the subscription, its quantity is increased
+
+Items can only be changed while the subscription is active.
 
 ---
 
@@ -137,7 +146,7 @@ In the **Order History** section, customers see all previous renewals:
 ## Frequently Asked Questions
 
 **Q: Can I reactivate a cancelled subscription?**
-A: No, cancellation is permanent. You need to order the product as a new subscription.
+A: Not from the customer portal — a cancelled subscription offers no further actions there, so you need to order the product as a new subscription. The shop team can reactivate it for you on request.
 
 **Q: What happens to my subscription if a product is no longer available?**
 A: This depends on the shop configuration. Possible behaviours: the item is skipped, the subscription is paused, or the order is processed without the item.
@@ -146,4 +155,4 @@ A: This depends on the shop configuration. Possible behaviours: the item is skip
 A: Yes, via the "Consolidate Deliveries" feature on the subscription overview page. The subscriptions remain separate but are synchronised to the same delivery date.
 
 **Q: Why do I only see certain payment methods during checkout?**
-A: When subscription items are in the cart, only payment methods suitable for subscriptions are shown (credit card, SEPA direct debit, invoice, prepayment).
+A: When subscription items are in the cart, only payment methods suitable for subscriptions are shown (credit card, SEPA direct debit, PayPal, invoice, prepayment).

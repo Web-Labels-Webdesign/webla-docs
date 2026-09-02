@@ -1,6 +1,6 @@
 # Usage Guide
 
-This guide covers all features and functionality of the WebLa Subscription Plugin.
+This guide covers all features and functionality of the Subscription Plugin for Mollie.
 
 ---
 
@@ -24,11 +24,12 @@ You can configure individual subscription options for each product. In the store
 ### How to Set It Up
 
 1. Navigate to **Catalogues → Products → [Your Product]**
-2. Switch to the **Subscription** tab (added by the plugin)
-3. Click **Add Subscription Option**
+2. Stay on the **General** tab and scroll to the **Subscription Options** card added by the plugin at the bottom of the page
+3. Click **Add Option**
 4. Configure for each option:
    - **Interval (Weeks)**: The delivery interval for this option
    - **Label**: The displayed name (e.g., "Every 2 weeks")
+   - **Discount (%)**: Optional discount for this option, overriding the general subscription discount
    - **Position**: Display order
    - **Active**: Whether this option is visible
 5. Save the product
@@ -38,10 +39,9 @@ You can configure individual subscription options for each product. In the store
 If a product should only be available as a subscription:
 
 1. Open the product under **Catalogues → Products → [Your Product]**
-2. Switch to the **Specifications** tab
-3. Find the custom field **Subscription only**
-4. Enable the checkbox
-5. Save the product
+2. Scroll to the **Subscription Options** card on the **General** tab
+3. Enable the **Subscription only** switch at the top of the card
+4. Save the product
 
 In the storefront, the one-time purchase option will be hidden and customers can only order the product as a subscription.
 
@@ -59,18 +59,19 @@ On the product detail page, customers see:
 
 ### Supported Payment Methods
 
-The plugin offers four payment methods for subscriptions:
+The plugin offers five payment methods for subscriptions:
 
 | Payment Method        | Automatic | Mollie Required | Description                                     |
 | --------------------- | --------- | --------------- | ----------------------------------------------- |
 | **Credit Card**       | Yes       | Yes             | Automatic charge via Mollie                     |
 | **SEPA Direct Debit** | Yes       | Yes             | Automatic debit via Mollie                      |
+| **PayPal**            | Yes       | Yes             | Automatic charge via Mollie                     |
 | **Invoice**           | No        | No              | Manual payment, subscription stays active       |
 | **Prepayment**        | No        | No              | Waits for payment receipt before activation     |
 
 ### Setting Up Mollie
 
-1. Navigate to **Extensions → My Extensions → WebLa Subscription Plugin → Configure**
+1. Navigate to **Extensions → My Extensions → Subscription Plugin for Mollie → Configure**
 2. Scroll to the **Mollie API** section
 3. Enter your **Test API Key** (starts with `test_`)
 4. Click **Test API Connection**
@@ -84,8 +85,9 @@ The plugin offers four payment methods for subscriptions:
    - Select the Mollie credit card payment method for **Credit Card Payment Method**
    - Select the Mollie SEPA payment method for **SEPA Payment Method**
    - Select your invoice payment method for **Invoice Payment Method** (optional)
+   - Select the Mollie PayPal payment method for **PayPal Payment Method** (optional)
    - Select your prepayment method for **Prepayment Payment Method** (optional)
-3. Select the **Renewal Shipping Method** (optional, otherwise the sales channel default is used)
+3. Select the **Renewal Shipping Method** (optional fallback — renewals reuse the shipping method of the initial order whenever it is still active)
 4. Save the configuration
 
 ### Payment Method Filtering at Checkout
@@ -102,10 +104,7 @@ The percentage set under **Configuration → Pricing & Discounts → Subscriptio
 
 ### Loyalty Tiers
 
-In addition to the base discount, you can set up tiered discounts that activate after a certain number of renewals:
-
-1. Navigate in the admin to **Orders → Subscriptions → Dashboard**
-2. Discount tiers are managed via the database (table `webla_subscription_discount`)
+In addition to the base discount, tiered discounts can activate after a certain number of renewals. There is no admin interface for them: tiers are rows in the database table `webla_subscription_discount` with `discount_type = 'loyalty_tier'`, and no tiers are created on installation. Tier discounts apply to renewal orders only — the initial order uses the base discount.
 
 Example:
 | From Renewal | Additional Discount |
@@ -120,18 +119,17 @@ Example:
 
 You can add free products to subscriptions that are automatically included with every renewal.
 
-Free items are managed per subscription in the detail view:
+There is no admin interface for free items. They are created per subscription through the plugin's admin API:
 
-1. Open a subscription under **Orders → Subscriptions → [Subscription]**
-2. In the **Items** section, free items can be added
-3. Specify product and quantity
-4. Save the changes
+`POST /api/_action/webla-subscription/{subscriptionId}/free-item` with `productId` and `quantity`.
+
+Every free item stored this way is added to each renewal order automatically.
 
 ---
 
 ## Email Notifications
 
-The plugin sends four types of emails:
+The plugin ships eight email templates, each triggered by a Flow Builder flow that is created on installation:
 
 ### Renewal Reminder
 
@@ -145,6 +143,18 @@ The plugin sends four types of emails:
 - **Content**: Cancellation confirmation, optional reason
 - **Template Name**: `webla_subscription.cancelled`
 
+### Reactivation Confirmation
+
+- **When**: When a paused, cancelled or SEPA-failed subscription is reactivated
+- **Content**: Confirmation and next renewal date
+- **Template Name**: `webla_subscription.reactivated`
+
+### Renewal Confirmation
+
+- **When**: After a renewal order has been created
+- **Content**: Renewal number and order reference
+- **Template Name**: `webla_subscription.renewed`
+
 ### SEPA Payment Failed
 
 - **When**: On failed SEPA direct debit
@@ -156,6 +166,18 @@ The plugin sends four types of emails:
 - **When**: When the price of a subscription product changes
 - **Content**: Old and new price, effective date
 - **Template Name**: `webla_subscription.price_changed`
+
+### Out-of-Stock Item
+
+- **When**: On renewal with the *Execute without item* behaviour, when an item is out of stock
+- **Content**: The items left out of the renewal
+- **Template Name**: `webla_subscription.out_of_stock`
+
+### Deleted Product
+
+- **When**: On renewal with the *Execute without item* behaviour, when a product no longer exists
+- **Content**: The items left out of the renewal
+- **Template Name**: `webla_subscription.deleted_product`
 
 ### Customising Email Templates
 
@@ -181,7 +203,7 @@ Queries the current payment status from Mollie to update local order statuses. P
 
 ### Prepayment Monitor
 
-Monitors pending prepayment orders and marks them as unpaid if payment is not received within the configured timeframe. Pauses the associated subscription when payment is outstanding.
+Checks every subscription in the *Awaiting Prepayment* status: when the payment transaction of its latest subscription order has reached the `paid` state, the subscription is set back to *Active* and the next renewal date is moved one interval ahead. Partially paid orders are skipped and logged; subscriptions stay in *Awaiting Prepayment* until payment arrives.
 
 ---
 

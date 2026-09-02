@@ -1,6 +1,6 @@
 # Abonnement-Verwaltung (Kundenportal)
 
-> Teil des WebLa Subscription Plugins — [Siehe Hauptanleitung](./usage.md)
+> Teil des Abonnement Plugins für Mollie — [Siehe Hauptanleitung](./usage.md)
 
 ## Übersicht
 
@@ -69,9 +69,18 @@ Im Abschnitt **Artikel** sehen Kunden alle Produkte ihres Abonnements:
 
 #### Artikel entfernen
 
-1. Klicken Sie auf das **Entfernen**-Symbol neben dem Artikel
-2. Bestätigen Sie im Dialog die Entfernung
-3. Der Artikel wird aus dem Abonnement entfernt
+1. Klicken Sie auf **Entfernen** neben dem Artikel
+2. Der Artikel wird aus dem Abonnement entfernt
+
+Der letzte verbleibende Artikel kann nicht entfernt werden — ein Abonnement muss immer mindestens ein Produkt enthalten. Um ein Abonnement vollständig zu beenden, kündigen Sie es.
+
+#### Produkt hinzufügen
+
+1. Nutzen Sie das Produktsuchfeld unterhalb der Artikelliste
+2. Wählen Sie ein Produkt aus den Vorschlägen und geben Sie eine Menge ein
+3. Klicken Sie auf **Hinzufügen** — ist das Produkt bereits im Abonnement, wird dessen Menge erhöht
+
+Artikel lassen sich nur ändern, solange das Abonnement aktiv ist.
 
 ---
 
@@ -137,7 +146,7 @@ Im Abschnitt **Bestellhistorie** sehen Kunden alle bisherigen Verlängerungen:
 ## Häufig gestellte Fragen
 
 **F: Kann ich ein gekündigtes Abonnement wieder aktivieren?**
-A: Nein, eine Kündigung ist endgültig. Sie müssen das Produkt erneut als Abonnement bestellen.
+A: Nicht über das Kundenportal — dort stehen für gekündigte Abonnements keine Aktionen mehr zur Verfügung, Sie müssen das Produkt erneut als Abonnement bestellen. Das Shop-Team kann es auf Anfrage reaktivieren.
 
 **F: Was passiert mit meinem Abonnement, wenn ein Produkt nicht mehr verfügbar ist?**
 A: Das hängt von der Shop-Konfiguration ab. Mögliche Verhaltensweisen: Der Artikel wird übersprungen, das Abonnement wird pausiert, oder die Bestellung wird ohne den Artikel durchgeführt.
@@ -146,4 +155,4 @@ A: Das hängt von der Shop-Konfiguration ab. Mögliche Verhaltensweisen: Der Art
 A: Ja, über die Funktion „Lieferungen zusammenlegen" auf der Abonnement-Übersichtsseite. Die Abonnements bleiben getrennt, werden aber auf das gleiche Lieferdatum synchronisiert.
 
 **F: Warum sehe ich bei der Bestellung nur bestimmte Zahlungsarten?**
-A: Wenn Abonnement-Artikel im Warenkorb sind, werden nur für Abonnements geeignete Zahlungsarten angezeigt (Kreditkarte, SEPA-Lastschrift, Rechnung, Vorkasse).
+A: Wenn Abonnement-Artikel im Warenkorb sind, werden nur für Abonnements geeignete Zahlungsarten angezeigt (Kreditkarte, SEPA-Lastschrift, PayPal, Rechnung, Vorkasse).

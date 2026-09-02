@@ -1,8 +1,18 @@
-**Changelog — WebLa Subscription Plugin**
+**Changelog — Subscription Plugin for Mollie**
 
-All notable changes to the WebLa Subscription Plugin for end users.
+All notable changes to the Subscription Plugin for Mollie for end users.
 
 ---
+
+# 1.10.4
+
+_Released 2026-09-02_
+
+**Improvements**
+
+- The plugin now identifies itself to Mollie as "WebLabelsSubscriptions" together with the Shopware version, which makes support requests easier to trace.
+- The Shopware Store listing and the documentation now use the plugin name "Subscription Plugin for Mollie" consistently.
+- The store description states that the plugin is developed and supported exclusively by Web Labels Webdesign GmbH and that Mollie is not responsible for it.
 
 # 1.10.3
 

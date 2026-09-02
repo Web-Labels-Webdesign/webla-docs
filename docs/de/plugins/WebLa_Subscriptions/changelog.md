@@ -1,8 +1,18 @@
-**Änderungsprotokoll — WebLa Subscription Plugin**
+**Änderungsprotokoll — Abonnement Plugin für Mollie**
 
-Alle wichtigen Änderungen am WebLa Subscription Plugin für Endbenutzer.
+Alle wichtigen Änderungen am Abonnement Plugin für Mollie für Endbenutzer.
 
 ---
+
+# 1.10.4
+
+_Veröffentlicht am 2026-09-02_
+
+**Verbesserungen**
+
+- Das Plugin meldet sich bei Mollie jetzt als "WebLabelsSubscriptions" zusammen mit der Shopware-Version, wodurch sich Supportanfragen leichter zuordnen lassen.
+- Der Shopware-Store-Eintrag und die Dokumentation verwenden durchgängig den Plugin-Namen "Abonnement Plugin für Mollie".
+- Die Store-Beschreibung weist darauf hin, dass das Plugin ausschließlich von der Web Labels Webdesign GmbH entwickelt und supportet wird und Mollie dafür keine Verantwortung übernimmt.
 
 # 1.10.3
 

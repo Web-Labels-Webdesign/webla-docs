@@ -1,6 +1,6 @@
 # Nutzungsanleitung
 
-Diese Anleitung behandelt alle Funktionen und Möglichkeiten des WebLa Subscription Plugins.
+Diese Anleitung behandelt alle Funktionen und Möglichkeiten des Abonnement Plugins für Mollie.
 
 ---
 
@@ -24,11 +24,12 @@ Sie können für jedes Produkt individuelle Abonnement-Optionen konfigurieren. I
 ### So richten Sie es ein
 
 1. Navigieren Sie zu **Kataloge → Produkte → [Ihr Produkt]**
-2. Wechseln Sie zum Tab **Abonnement** (hinzugefügt durch das Plugin)
-3. Klicken Sie auf **Abonnement-Option hinzufügen**
+2. Bleiben Sie im Tab **Allgemein** und scrollen Sie zur Karte **Abonnement-Optionen**, die das Plugin am Seitenende ergänzt
+3. Klicken Sie auf **Option hinzufügen**
 4. Konfigurieren Sie für jede Option:
    - **Intervall (Wochen)**: Das Lieferintervall für diese Option
    - **Bezeichnung**: Der angezeigte Name (z. B. „Alle 2 Wochen")
+   - **Rabatt (%)**: Optionaler Rabatt für diese Option, der den allgemeinen Abo-Rabatt ersetzt
    - **Position**: Reihenfolge in der Anzeige
    - **Aktiv**: Ob diese Option sichtbar ist
 5. Speichern Sie das Produkt
@@ -38,10 +39,9 @@ Sie können für jedes Produkt individuelle Abonnement-Optionen konfigurieren. I
 Wenn ein Produkt ausschließlich als Abonnement verfügbar sein soll:
 
 1. Öffnen Sie das Produkt unter **Kataloge → Produkte → [Ihr Produkt]**
-2. Wechseln Sie zum Tab **Spezifikationen**
-3. Suchen Sie das Custom Field **Nur als Abonnement**
-4. Aktivieren Sie das Häkchen
-5. Speichern Sie das Produkt
+2. Scrollen Sie im Tab **Allgemein** zur Karte **Abonnement-Optionen**
+3. Aktivieren Sie den Schalter **Nur als Abonnement** oben in der Karte
+4. Speichern Sie das Produkt
 
 In der Storefront wird dann die Einzelkauf-Option ausgeblendet und Kunden können das Produkt nur als Abonnement bestellen.
 
@@ -59,18 +59,19 @@ Auf der Produktdetailseite sehen Kunden:
 
 ### Unterstützte Zahlungsarten
 
-Das Plugin bietet vier Zahlungsarten für Abonnements:
+Das Plugin bietet fünf Zahlungsarten für Abonnements:
 
 | Zahlungsart          | Automatisch | Mollie erforderlich | Beschreibung                                    |
 | -------------------- | ----------- | ------------------- | ----------------------------------------------- |
 | **Kreditkarte**      | Ja          | Ja                  | Automatische Abbuchung per Mollie               |
 | **SEPA-Lastschrift** | Ja          | Ja                  | Automatische Lastschrift per Mollie              |
+| **PayPal**           | Ja          | Ja                  | Automatische Abbuchung per Mollie               |
 | **Rechnung**         | Nein        | Nein                | Manuelle Zahlung, Abonnement bleibt aktiv       |
 | **Vorkasse**         | Nein        | Nein                | Wartet auf Zahlungseingang vor Aktivierung       |
 
 ### Mollie einrichten
 
-1. Navigieren Sie zu **Erweiterungen → Meine Erweiterungen → WebLa Subscription Plugin → Konfigurieren**
+1. Navigieren Sie zu **Erweiterungen → Meine Erweiterungen → Abonnement Plugin für Mollie → Konfigurieren**
 2. Scrollen Sie zum Abschnitt **Mollie API**
 3. Tragen Sie Ihren **Test-API-Schlüssel** ein (beginnt mit `test_`)
 4. Klicken Sie auf **API-Verbindung testen**
@@ -84,8 +85,9 @@ Das Plugin bietet vier Zahlungsarten für Abonnements:
    - Wählen Sie bei **Kreditkarten-Zahlungsart** die entsprechende Mollie-Kreditkarten-Zahlungsart
    - Wählen Sie bei **SEPA-Zahlungsart** die Mollie-SEPA-Lastschrift-Zahlungsart
    - Wählen Sie bei **Rechnungs-Zahlungsart** Ihre Rechnungszahlungsart (optional)
+   - Wählen Sie bei **PayPal-Zahlungsart** die Mollie-PayPal-Zahlungsart (optional)
    - Wählen Sie bei **Vorkasse-Zahlungsart** Ihre Vorkasse-Zahlungsart (optional)
-3. Wählen Sie die **Versandart für Verlängerungen** (optional, sonst wird die Standard-Versandart verwendet)
+3. Wählen Sie die **Versandart für Verlängerungen** (optionaler Fallback — Verlängerungen übernehmen die Versandart der Erstbestellung, solange sie noch aktiv ist)
 4. Speichern Sie die Konfiguration
 
 ### Zahlungsart-Filterung im Checkout
@@ -102,10 +104,7 @@ Der unter **Konfiguration → Preise & Rabatte → Abonnement-Rabatt (%)** einge
 
 ### Treue-Staffeln (Loyalty Discounts)
 
-Zusätzlich zum Basisrabatt können Sie Staffelrabatte einrichten, die ab einer bestimmten Anzahl an Verlängerungen gelten:
-
-1. Navigieren Sie im Admin zu **Bestellungen → Abonnements → Dashboard**
-2. Die Rabatt-Staffeln werden über die Datenbank verwaltet (Tabelle `webla_subscription_discount`)
+Zusätzlich zum Basisrabatt können Staffelrabatte ab einer bestimmten Anzahl an Verlängerungen greifen. Eine Admin-Oberfläche dafür gibt es nicht: Die Staffeln sind Zeilen in der Datenbanktabelle `webla_subscription_discount` mit `discount_type = 'loyalty_tier'`, und bei der Installation werden keine Staffeln angelegt. Staffelrabatte wirken nur auf Verlängerungsbestellungen — die Erstbestellung nutzt den Basisrabatt.
 
 Beispiel:
 | Ab Verlängerung | Zusätzlicher Rabatt |
@@ -120,18 +119,17 @@ Beispiel:
 
 Sie können Abonnements kostenlose Produkte hinzufügen, die bei jeder Verlängerung automatisch mitgeliefert werden.
 
-Gratisartikel werden pro Abonnement in der Detailansicht verwaltet:
+Für Gratisartikel gibt es keine Admin-Oberfläche. Sie werden pro Abonnement über die Admin-API des Plugins angelegt:
 
-1. Öffnen Sie ein Abonnement unter **Bestellungen → Abonnements → [Abonnement]**
-2. Im Abschnitt **Artikel** können Gratisartikel hinzugefügt werden
-3. Geben Sie Produkt und Menge an
-4. Speichern Sie die Änderungen
+`POST /api/_action/webla-subscription/{subscriptionId}/free-item` mit `productId` und `quantity`.
+
+Jeder so hinterlegte Gratisartikel wird automatisch jeder Verlängerungsbestellung beigefügt.
 
 ---
 
 ## E-Mail-Benachrichtigungen
 
-Das Plugin versendet vier Arten von E-Mails:
+Das Plugin liefert acht E-Mail-Templates aus, die jeweils über einen bei der Installation angelegten Flow-Builder-Flow ausgelöst werden:
 
 ### Verlängerungserinnerung
 
@@ -145,6 +143,18 @@ Das Plugin versendet vier Arten von E-Mails:
 - **Inhalt**: Bestätigung der Kündigung, optionaler Kündigungsgrund
 - **Template-Name**: `webla_subscription.cancelled`
 
+### Reaktivierungsbestätigung
+
+- **Wann**: Wenn ein pausiertes, gekündigtes oder SEPA-fehlgeschlagenes Abonnement reaktiviert wird
+- **Inhalt**: Bestätigung und nächstes Verlängerungsdatum
+- **Template-Name**: `webla_subscription.reactivated`
+
+### Verlängerungsbestätigung
+
+- **Wann**: Nachdem eine Verlängerungsbestellung erstellt wurde
+- **Inhalt**: Verlängerungsnummer und Bestellreferenz
+- **Template-Name**: `webla_subscription.renewed`
+
 ### SEPA-Zahlung fehlgeschlagen
 
 - **Wann**: Bei fehlgeschlagener SEPA-Lastschrift
@@ -156,6 +166,18 @@ Das Plugin versendet vier Arten von E-Mails:
 - **Wann**: Wenn sich der Preis eines Abonnement-Produkts ändert
 - **Inhalt**: Alter und neuer Preis, Gültigkeitsdatum
 - **Template-Name**: `webla_subscription.price_changed`
+
+### Nicht vorrätiger Artikel
+
+- **Wann**: Bei einer Verlängerung mit dem Verhalten *Ohne Artikel ausführen*, wenn ein Artikel nicht vorrätig ist
+- **Inhalt**: Die aus der Verlängerung entfernten Artikel
+- **Template-Name**: `webla_subscription.out_of_stock`
+
+### Gelöschtes Produkt
+
+- **Wann**: Bei einer Verlängerung mit dem Verhalten *Ohne Artikel ausführen*, wenn ein Produkt nicht mehr existiert
+- **Inhalt**: Die aus der Verlängerung entfernten Artikel
+- **Template-Name**: `webla_subscription.deleted_product`
 
 ### E-Mail-Templates anpassen
 
@@ -181,7 +203,7 @@ Fragt den aktuellen Zahlungsstatus bei Mollie ab, um lokale Bestellstatus zu akt
 
 ### Vorkasse-Überwachung
 
-Überwacht offene Vorkasse-Bestellungen und markiert diese als unbezahlt, wenn die Zahlung nicht innerhalb des konfigurierten Zeitraums eingeht. Pausiert das zugehörige Abonnement bei ausbleibender Zahlung.
+Prüft alle Abonnements im Status *Warten auf Vorkasse*: Sobald die Zahlungstransaktion der jüngsten Abo-Bestellung den Status `paid` erreicht hat, wird das Abonnement wieder auf *Aktiv* gesetzt und das nächste Verlängerungsdatum um ein Intervall verschoben. Teilweise bezahlte Bestellungen werden übersprungen und protokolliert; die Abonnements bleiben bis zum Zahlungseingang im Status *Warten auf Vorkasse*.
 
 ---
 

@@ -1,6 +1,6 @@
 # Admin Features
 
-> Part of the WebLa Subscription Plugin — [See main usage guide](./usage.md)
+> Part of the Subscription Plugin for Mollie — [See main usage guide](./usage.md)
 
 ## Overview
 
@@ -18,10 +18,12 @@ The dashboard provides an overview of the key metrics for your subscription busi
 
 | Metric                  | Description                                                   |
 | ----------------------- | ------------------------------------------------------------- |
-| **Active Subscribers**  | Number of customers with at least one active subscription     |
-| **Upcoming Renewals**   | Renewals due in the next 7 days                               |
-| **Monthly Revenue (MRR)** | Estimated monthly recurring revenue                        |
-| **Churn Rate**          | Percentage cancellation rate over a rolling period            |
+| **Active Subscriptions**| Number of subscriptions in the *Active* status                |
+| **Upcoming Renewals**   | Active subscriptions due for renewal in the next 7 days       |
+| **Monthly Revenue (MRR)** | Estimated monthly recurring revenue — each active subscription's base price normalised to a month (4.33 weeks) |
+| **Churn Rate**          | Subscriptions cancelled in the last 30 days, divided by active plus recently cancelled ones |
+
+Below the KPI cards, the dashboard breaks down all subscriptions by status (active, paused, cancelled, expired, SEPA failed, awaiting prepayment, payment pending) and shows alert banners when SEPA failures or outstanding prepayments exist.
 
 ---
 
@@ -42,9 +44,16 @@ The dashboard provides an overview of the key metrics for your subscription busi
 
 ### Filtering and Sorting
 
-- **Status Filter**: Filter by active, paused, cancelled, and other statuses
+Filters live in the sidebar (funnel icon):
+
+- **Status**: active, paused, cancelled, expired, SEPA failed, awaiting prepayment, payment pending
+- **Payment Method**: card, SEPA, PayPal, invoice, prepayment
+- **Interval**: filter by interval in weeks
+- **Next Renewal From / To**: date range on the next renewal date
 - **Sorting**: Click on a column header to sort
-- **Search**: Search by customer name
+- **Search**: The search bar matches customer name, email address and customer number
+
+> **Note**: A CSV export exists as an API endpoint (`POST /api/_action/webla-subscription/export`) but has no button in the administration.
 
 ---
 
@@ -116,7 +125,9 @@ Chronological list of all previous renewals:
 
 1. Open the subscription in the detail view
 2. Click **Cancel**
-3. The subscription is permanently ended
+3. The subscription is ended and the customer can no longer manage it in the portal
+
+> **Note**: Unlike customers, an admin can reactivate a cancelled subscription — the cancellation date and reason are cleared.
 
 ### Force Renewal
 
@@ -156,11 +167,11 @@ Creates an immediate renewal order regardless of the scheduled date.
 
 ### Customer Profile
 
-In the customer profile (**Customers → [Customer]**), an additional **Subscriptions** card is displayed that lists all subscriptions for the customer. From here, you can navigate directly to the subscription detail view.
+In the customer profile (**Customers → [Customer]**), an additional **Subscriptions** card is displayed that lists all subscriptions for the customer. From here, you can navigate directly to the subscription detail view. The card also carries an **Interval change allowed** switch that overrides the global setting for this one customer.
 
 ### Product Details
 
-On the product page (**Catalogues → Products → [Product]**), a **Subscription** tab is displayed where you can configure the available subscription options for this product.
+On the product page (**Catalogues → Products → [Product]**), the plugin adds a **Subscription Options** card at the bottom of the **General** tab, where you configure the available subscription options and the *Subscription only* mode for this product.
 
 ---
 

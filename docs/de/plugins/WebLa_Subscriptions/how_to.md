@@ -1,6 +1,6 @@
 # Anleitungen
 
-Diese Anleitung bietet Schritt-für-Schritt-Workflows für häufige Aufgaben mit dem WebLa Subscription Plugin.
+Diese Anleitung bietet Schritt-für-Schritt-Workflows für häufige Aufgaben mit dem Abonnement Plugin für Mollie.
 
 ---
 
@@ -53,12 +53,12 @@ Bei Vorkasse pausiert das Abonnement nach der Verlängerung und wartet auf die B
 **Schritte**:
 
 1. **Plugin-Einstellungen prüfen**
-   - Navigieren zu: `Erweiterungen → Meine Erweiterungen → WebLa Subscription Plugin → Konfigurieren`
+   - Navigieren zu: `Erweiterungen → Meine Erweiterungen → Abonnement Plugin für Mollie → Konfigurieren`
    - Stellen Sie sicher, dass das Plugin aktiviert ist und die gewünschten Intervallgrenzen gesetzt sind
 
 2. **Produkt bearbeiten**
    - Navigieren zu: `Kataloge → Produkte → [Ihr Produkt]`
-   - Wechseln Sie zum Tab **Abonnement**
+   - Scrollen Sie im Tab **Allgemein** zur Karte **Abonnement-Optionen**
 
 3. **Abonnement-Optionen hinzufügen**
    - Klicken Sie auf **Option hinzufügen**
@@ -75,7 +75,7 @@ Bei Vorkasse pausiert das Abonnement nach der Verlängerung und wartet auf die B
 
 ### Anleitung: Mollie-Zahlungen einrichten
 
-**Ziel**: Kreditkarte und SEPA-Lastschrift für Abonnements aktivieren
+**Ziel**: Kreditkarte, SEPA-Lastschrift und PayPal für Abonnements aktivieren
 
 **Zeitaufwand**: ca. 10 Minuten
 
@@ -86,7 +86,7 @@ Bei Vorkasse pausiert das Abonnement nach der Verlängerung und wartet auf die B
 **Schritte**:
 
 1. **API-Schlüssel eintragen**
-   - Navigieren zu: `Erweiterungen → Meine Erweiterungen → WebLa Subscription Plugin → Konfigurieren`
+   - Navigieren zu: `Erweiterungen → Meine Erweiterungen → Abonnement Plugin für Mollie → Konfigurieren`
    - Abschnitt **Mollie API**
    - Tragen Sie den **Test-API-Schlüssel** ein
    - Klicken Sie auf **API-Verbindung testen**
@@ -95,6 +95,7 @@ Bei Vorkasse pausiert das Abonnement nach der Verlängerung und wartet auf die B
    - Abschnitt **Zahlungsarten**
    - Wählen Sie bei **Kreditkarten-Zahlungsart** die Mollie-Kreditkarten-Zahlungsart aus Ihrem Shop
    - Wählen Sie bei **SEPA-Zahlungsart** die Mollie-SEPA-Zahlungsart
+   - Wählen Sie bei **PayPal-Zahlungsart** die Mollie-PayPal-Zahlungsart (optional)
 
 3. **SEPA konfigurieren**
    - Aktivieren Sie **SEPA-Lastschrift aktivieren**
@@ -110,7 +111,7 @@ Bei Vorkasse pausiert das Abonnement nach der Verlängerung und wartet auf die B
    - Deaktivieren Sie den **Testmodus**
    - Speichern Sie erneut
 
-**Ergebnis**: Kunden können bei Abonnement-Bestellungen Kreditkarte oder SEPA-Lastschrift wählen. Verlängerungen werden automatisch über Mollie abgewickelt.
+**Ergebnis**: Kunden können bei Abonnement-Bestellungen Kreditkarte, SEPA-Lastschrift oder PayPal wählen. Verlängerungen werden automatisch über Mollie abgewickelt.
 
 ---
 
@@ -190,7 +191,7 @@ Die Rabatt-Staffeln werden in der Datenbank-Tabelle `webla_subscription_discount
 - **Rabatt-Prozentsatz**: Wie viel zusätzlicher Rabatt gewährt wird
 - **Aktiv**: Ob die Staffel angewendet wird
 
-Bei Erstinstallation werden Standard-Staffeln angelegt.
+Bei der Installation werden keine Staffeln angelegt, und es gibt keine Admin-Oberfläche dafür — die Zeilen müssen direkt eingefügt werden. Staffelrabatte wirken nur auf Verlängerungsbestellungen.
 
 ---
 
@@ -198,7 +199,7 @@ Bei Erstinstallation werden Standard-Staffeln angelegt.
 
 | Aufgabe                          | Wichtige Schritte                                                    | Erforderliche Einstellungen      |
 | -------------------------------- | -------------------------------------------------------------------- | -------------------------------- |
-| Produkt als Abo anbieten         | Produkt → Tab Abonnement → Optionen hinzufügen                      | Plugin aktiv                     |
+| Produkt als Abo anbieten         | Produkt → Tab Allgemein → Karte Abonnement-Optionen → Optionen hinzufügen | Plugin aktiv               |
 | Mollie einrichten                | Konfiguration → API-Schlüssel → Zahlungsarten zuordnen               | Mollie-Konto                     |
 | Verlängerung erzwingen           | Abonnement → Detailansicht → Verlängerung erzwingen                  | —                                |
 | Abonnement pausieren             | Abonnement → Detailansicht → Pausieren                               | —                                |
