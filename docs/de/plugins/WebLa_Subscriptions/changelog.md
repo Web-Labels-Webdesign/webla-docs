@@ -4,6 +4,17 @@ Alle wichtigen Änderungen am Abonnement Plugin für Mollie für Endbenutzer.
 
 ---
 
+# 1.11.0
+
+_Veröffentlicht am 2026-09-02_
+
+**Neue Funktionen**
+
+- Im Rule Builder (**Einstellungen → Regeln**) stehen drei neue Bedingungen zur Verfügung, mit denen Abonnements Versandarten, Zahlungsarten und Rabatte steuern können:
+  - **Warenkorb enthält Abo-Produkt** — trifft zu, sobald eine Position im Warenkorb ein Abonnement ist.
+  - **Position ist ein Abo-Produkt** — bewertet einzelne Warenkorbpositionen, etwa für Rabatte und positionsbezogene Regeln.
+  - **Anzahl aktiver Abos** — vergleicht die Anzahl der aktiven Abonnements des angemeldeten Kunden, zum Beispiel "mindestens 1".
+
 # 1.10.4
 
 _Veröffentlicht am 2026-09-02_

@@ -191,3 +191,19 @@ The plugin defines its own permissions that can be assigned via roles:
 | `webla_product_subscription_option:delete`  | Delete product options          |
 
 Configure these under **Settings → System → Users & Permissions → Roles**.
+
+---
+
+## Rule Builder Conditions
+
+The plugin adds three conditions to the rule builder (**Settings → Rules**). Use them to make shipping methods, payment methods or promotions depend on subscriptions.
+
+| Condition | Group | Description |
+| --------- | ----- | ----------- |
+| **Cart contains subscription product** | Cart | Matches as soon as at least one item in the cart is a subscription — both per-product options and cart-wide subscriptions. |
+| **Item is a subscription product** | Item | Evaluates a single cart item, for use in promotions and item-level rules. |
+| **Number of active subscriptions** | Customer | Compares how many active subscriptions the logged-in customer has, for example "at least 1". |
+
+Typical uses: restrict a payment method to subscription carts, hide express shipping for subscriptions, or grant a promotion only to customers who already have an active subscription.
+
+The **Number of active subscriptions** condition is evaluated while the cart is calculated. It therefore works for shipping methods, payment methods, promotions and cart rules, but not for rules that are evaluated without a cart, such as dynamic product groups or product price rules.

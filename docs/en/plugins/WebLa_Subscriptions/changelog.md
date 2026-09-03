@@ -4,6 +4,17 @@ All notable changes to the Subscription Plugin for Mollie for end users.
 
 ---
 
+# 1.11.0
+
+_Released 2026-09-02_
+
+**New Features**
+
+- Three new conditions are available in the rule builder (**Settings → Rules**), so subscriptions can now control shipping methods, payment methods and promotions:
+  - **Cart contains subscription product** — matches as soon as any item in the cart is a subscription.
+  - **Item is a subscription product** — matches individual cart items, for use in promotions and item-level rules.
+  - **Number of active subscriptions** — compares how many active subscriptions the logged-in customer has, for example "at least 1".
+
 # 1.10.4
 
 _Released 2026-09-02_

@@ -191,3 +191,19 @@ Das Plugin definiert eigene Berechtigungen, die über Rollen zugewiesen werden k
 | `webla_product_subscription_option:delete`  | Produktoptionen löschen     |
 
 Konfigurieren Sie diese unter **Einstellungen → System → Benutzer & Rechte → Rollen**.
+
+---
+
+## Bedingungen im Rule Builder
+
+Das Plugin ergänzt den Rule Builder (**Einstellungen → Regeln**) um drei Bedingungen. Damit lassen sich Versandarten, Zahlungsarten oder Rabatte von Abonnements abhängig machen.
+
+| Bedingung | Gruppe | Beschreibung |
+| --------- | ------ | ------------ |
+| **Warenkorb enthält Abo-Produkt** | Warenkorb | Trifft zu, sobald mindestens eine Position im Warenkorb ein Abonnement ist — sowohl produktbezogene Optionen als auch warenkorb-weite Abos. |
+| **Position ist ein Abo-Produkt** | Position | Bewertet eine einzelne Warenkorbposition, etwa für Rabatte und positionsbezogene Regeln. |
+| **Anzahl aktiver Abos** | Kunde | Vergleicht die Anzahl der aktiven Abonnements des angemeldeten Kunden, zum Beispiel "mindestens 1". |
+
+Typische Anwendungsfälle: eine Zahlungsart auf Abo-Warenkörbe beschränken, Expressversand für Abonnements ausblenden oder einen Rabatt nur an Kunden mit bestehendem Abonnement vergeben.
+
+Die Bedingung **Anzahl aktiver Abos** wird bei der Warenkorbberechnung ausgewertet. Sie funktioniert daher für Versandarten, Zahlungsarten, Rabatte und Warenkorbregeln, nicht jedoch für Regeln ohne Warenkorb wie dynamische Produktgruppen oder Produktpreisregeln.
