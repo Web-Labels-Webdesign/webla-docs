@@ -4,6 +4,26 @@ All notable changes for end users.
 
 ---
 
+# 5.1.4
+
+_Released 2026-09-04_
+
+**Bug Fixes**
+
+- Fixed the category quick filter not working at all after updating to 5.1.3. The 5.1.3 package was published without its compiled storefront JavaScript, so the dropdowns no longer reacted to any selection. Version 5.1.4 ships the complete package again - please update if you are running 5.1.3.
+
+---
+
+# 5.1.3
+
+_Released 2026-09-02_
+
+**Bug Fixes**
+
+- Fixed the category quick filter's select fields (brand, model, variant) not having an accessible name for screen readers and other assistive technology. The fields now receive an `aria-label` with their respective title.
+
+---
+
 # 5.1.2
 
 _Released 2026-07-29_

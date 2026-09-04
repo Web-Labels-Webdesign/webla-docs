@@ -4,6 +4,26 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 5.1.4
+
+_Veröffentlicht am 2026-09-04_
+
+**Fehlerbehebungen**
+
+- Behoben: Nach dem Update auf 5.1.3 funktionierte die Kategorie-Schnellauswahl nicht mehr. Im Paket der Version 5.1.3 fehlte das kompilierte Storefront-JavaScript, dadurch reagierten die Auswahlfelder auf keine Auswahl mehr. Version 5.1.4 enthält wieder das vollständige Paket - bitte aktualisieren Sie, wenn Sie 5.1.3 einsetzen.
+
+---
+
+# 5.1.3
+
+_Veröffentlicht am 2026-09-02_
+
+**Fehlerbehebungen**
+
+- Behoben: Die Auswahlfelder der Kategorie-Schnellauswahl (Marke, Modell, Ausführung) hatten keinen zugänglichen Namen für Screenreader und andere assistive Technologien. Die Felder erhalten nun ein `aria-label` mit der jeweiligen Beschriftung.
+
+---
+
 # 5.1.2
 
 _Veröffentlicht am 2026-07-29_
