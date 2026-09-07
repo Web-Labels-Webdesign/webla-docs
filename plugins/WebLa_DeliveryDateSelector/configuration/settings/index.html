@@ -1,0 +1,3759 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Dokumentation für Web Labels Shopware Plugins">
+      
+      
+      
+        <link rel="canonical" href="https://docs.web-labels.de/plugins/WebLa_DeliveryDateSelector/configuration/settings/">
+      
+      
+        <link rel="prev" href="../../how_to/">
+      
+      
+        <link rel="next" href="../../usage/usage/">
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="de">
+        
+          <link rel="alternate" href="../../../../en/plugins/WebLa_DeliveryDateSelector/configuration/settings/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Konfigurationseinstellungen - Web Labels Shopware Plugins</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/plugin-cards.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+<!-- Privacy-friendly analytics by Plausible -->
+<script defer data-domain="docs.web-labels.de" src="https://plausible.buildit-consulting.com/js/script.file-downloads.hash.outbound-links.pageview-props.tagged-events.js"></script>
+<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="white">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#konfigurationseinstellungen" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="../../../.." title="Web Labels Shopware Plugins" class="md-header__button md-logo" aria-label="Web Labels Shopware Plugins" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Web Labels Shopware Plugins
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Konfigurationseinstellungen
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="white"  aria-label="Dunkelmodus aktivieren"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dunkelmodus aktivieren" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="black"  aria-label="Hellmodus aktivieren"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Hellmodus aktivieren" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Sprache wechseln">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../en/plugins/WebLa_DeliveryDateSelector/configuration/settings/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Hauptnavigation" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../BuildIT_ShareCart/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Plugins
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Web Labels Shopware Plugins" class="md-nav__button md-logo" aria-label="Web Labels Shopware Plugins" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    Web Labels Shopware Plugins
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugins
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Plugins
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../BuildIT_ShareCart/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teile deinen Warenkorb
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_AdcellProvisionsfreigabe/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADCELL Provisionsfreigabe
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_AdminProductFilters/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zusatzfelder in der Admin-Produktübersicht
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_BatchManagement/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Charge-Management
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_BeautifiedSearch/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Suche als Overlay
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_Blog/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_CategorieQuickFilter/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kategorie Schnellauswahl
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_CategorySorter/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kategorie-Sortierer
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_ContactFormFileUpload/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kontaktformular – Datei-Upload
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_CurrencyChanger/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Währungsanzeige
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_CustomerSpecificDiscounts/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kundenspezifische Rabatte
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_CustomerTaxCountry/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Customer Tax Country
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_13" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wunsch-Lieferdatum für Kunden
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_13" id="__nav_2_13_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_13_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Wunsch-Lieferdatum für Kunden
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how_to/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anleitungen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_13_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_13_4" id="__nav_2_13_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_13_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_13_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Configuration
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Konfigurationseinstellungen
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Konfigurationseinstellungen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#grundeinstellungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grundeinstellungen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Grundeinstellungen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bundesland" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bundesland
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aktiv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aktiv
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nur-aktiv-fur-diese-versandarten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nur aktiv für diese Versandarten
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wunschlieferdatum-konfiguration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wunschlieferdatum Konfiguration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wunschlieferdatum Konfiguration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nicht-verfugbare-tage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nicht verfügbare Tage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vorlaufzeit-einheit-fallback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vorlaufzeit Einheit (Fallback)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fallback-lieferdatum-vorlaufzeit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fallback Lieferdatum Vorlaufzeit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lieferdatum-vorlaufzeit-einheit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lieferdatum Vorlaufzeit Einheit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lieferdatum-vorlaufzeit-nutze-nachste-tage-nach-uhrzeit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lieferdatum Vorlaufzeit, nutze nächste Tage nach (Uhrzeit)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maximales-lieferdatum-einheit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maximales Lieferdatum Einheit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maximales-lieferdatum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maximales Lieferdatum
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bestatigungs-button-anzeigen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bestätigungs-Button anzeigen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tag-basierte-uberschreibung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tag-basierte Überschreibung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tag-basierte Überschreibung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uberschreibungs-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Überschreibungs-Tag
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#individuelle-vorlaufzeiten-custom-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Individuelle Vorlaufzeiten (Custom Fields)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Individuelle Vorlaufzeiten (Custom Fields)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#produkt-lieferdatum-vorlaufzeit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Produkt: Lieferdatum Vorlaufzeit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kategorie-lieferdatum-vorlaufzeit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kategorie: Lieferdatum Vorlaufzeit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#versandart-vorlaufzeit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Versandart: Vorlaufzeit
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#empfohlene-konfigurationen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Empfohlene Konfigurationen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Empfohlene Konfigurationen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard-setup-kleine-bis-mittlere-shops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Standard-Setup (kleine bis mittlere Shops)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nur-fur-expresslieferung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nur für Expresslieferung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../usage/usage/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usage
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_ExportDiscount/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shopping Feed mit einzigartigen Rabatten
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_FlyoutNavigation/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flyout Navigation
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_HomePageControl/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Startseiten Steuerung
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_ImageReviews/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bilder in Produktbewertungen
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_IntelligentCrossSelling/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intelligentes Cross-Selling
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_ManufacturerPages/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Herstellerseiten
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_MediaBooster/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Media Booster
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_ProductSliderAdvanced/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product Slider Advanced
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_Produktberater/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produktberater
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_PropertyNotes/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hinweise zu Eigenschaften
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_SplitComission/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SplitCommission – Aufteilung der Einzelposten in Teile
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_Subscriptions/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Abonnement Plugin
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_TaxCalculatorAndCountrySwitcher/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Steuernachkalkulation und Lieferländer
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_UTMHandler/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UTM-Handler
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_UltimativeBundlePlugin/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ultimative Bundle Plugin
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_Zusatzoptionen/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zusatzoptionen
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#grundeinstellungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grundeinstellungen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Grundeinstellungen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bundesland" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bundesland
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aktiv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aktiv
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nur-aktiv-fur-diese-versandarten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nur aktiv für diese Versandarten
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wunschlieferdatum-konfiguration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wunschlieferdatum Konfiguration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wunschlieferdatum Konfiguration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nicht-verfugbare-tage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nicht verfügbare Tage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vorlaufzeit-einheit-fallback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vorlaufzeit Einheit (Fallback)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fallback-lieferdatum-vorlaufzeit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fallback Lieferdatum Vorlaufzeit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lieferdatum-vorlaufzeit-einheit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lieferdatum Vorlaufzeit Einheit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lieferdatum-vorlaufzeit-nutze-nachste-tage-nach-uhrzeit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lieferdatum Vorlaufzeit, nutze nächste Tage nach (Uhrzeit)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maximales-lieferdatum-einheit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maximales Lieferdatum Einheit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maximales-lieferdatum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maximales Lieferdatum
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bestatigungs-button-anzeigen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bestätigungs-Button anzeigen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tag-basierte-uberschreibung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tag-basierte Überschreibung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tag-basierte Überschreibung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uberschreibungs-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Überschreibungs-Tag
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#individuelle-vorlaufzeiten-custom-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Individuelle Vorlaufzeiten (Custom Fields)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Individuelle Vorlaufzeiten (Custom Fields)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#produkt-lieferdatum-vorlaufzeit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Produkt: Lieferdatum Vorlaufzeit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kategorie-lieferdatum-vorlaufzeit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kategorie: Lieferdatum Vorlaufzeit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#versandart-vorlaufzeit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Versandart: Vorlaufzeit
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#empfohlene-konfigurationen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Empfohlene Konfigurationen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Empfohlene Konfigurationen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard-setup-kleine-bis-mittlere-shops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Standard-Setup (kleine bis mittlere Shops)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nur-fur-expresslieferung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nur für Expresslieferung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="konfigurationseinstellungen">Konfigurationseinstellungen<a class="headerlink" href="#konfigurationseinstellungen" title="Permanent link">&para;</a></h1>
+<p>Dieses Dokument beschreibt alle verfügbaren Einstellungen für das Plugin Wunsch-Lieferdatum für Kunden.</p>
+<p><strong>Navigation</strong>: Erweiterungen → Meine Erweiterungen → Wunsch-Lieferdatum für Kunden → Konfigurieren</p>
+<hr />
+<h2 id="grundeinstellungen">Grundeinstellungen<a class="headerlink" href="#grundeinstellungen" title="Permanent link">&para;</a></h2>
+<h3 id="bundesland">Bundesland<a class="headerlink" href="#bundesland" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Auswahl (Einzelauswahl)</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>Nur nationale Feiertage</td>
+</tr>
+<tr>
+<td><strong>Erforderlich</strong></td>
+<td>Nein</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beschreibung</strong>: Legt fest, für welches deutsche Bundesland öffentliche Feiertage automatisch geladen werden. Die Feiertage werden über die externe API <a href="https://openholidaysapi.org">openholidaysapi.org</a> abgerufen und stündlich aktualisiert.</p>
+<p><strong>Optionen</strong>:
+- <code>Nur nationale Feiertage</code>: Es werden ausschließlich bundesweite Feiertage gesperrt (z.B. Weihnachten, Tag der Deutschen Einheit)
+- <code>Brandenburg</code>, <code>Berlin</code>, <code>Baden-Württemberg</code>, <code>Bayern</code>, <code>Bremen</code>, <code>Hessen</code>, <code>Hamburg</code>, <code>Mecklenburg-Vorpommern</code>, <code>Niedersachsen</code>, <code>Nordrhein-Westfalen</code>, <code>Rheinland-Pfalz</code>, <code>Schleswig-Holstein</code>, <code>Saarland</code>, <code>Sachsen</code>, <code>Sachsen-Anhalt</code>, <code>Thüringen</code>: Zusätzlich zu nationalen Feiertagen werden auch die regionalen Feiertage des gewählten Bundeslandes gesperrt</p>
+<p><strong>Anwendungsbeispiel</strong>: Wenn Ihr Lager in Bayern ist, wählen Sie "Bayern", damit z.B. Mariä Himmelfahrt automatisch als Liefertag gesperrt wird.</p>
+<hr />
+<h3 id="aktiv">Aktiv<a class="headerlink" href="#aktiv" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Schalter</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>Aktiv</td>
+</tr>
+<tr>
+<td><strong>Erforderlich</strong></td>
+<td>Nein</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beschreibung</strong>: Aktiviert oder deaktiviert das Plugin für alle Kunden und Versandarten. Wenn deaktiviert, greift die Einstellung "Nur aktiv für diese Versandarten".</p>
+<p><strong>Anwendungsbeispiel</strong>: Deaktivieren Sie diesen Schalter, wenn Sie das Plugin nur für bestimmte Versandarten anbieten möchten (z.B. nur für Expresslieferung).</p>
+<hr />
+<h3 id="nur-aktiv-fur-diese-versandarten">Nur aktiv für diese Versandarten<a class="headerlink" href="#nur-aktiv-fur-diese-versandarten" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Mehrfachauswahl (Versandarten)</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>Leer (keine Einschränkung)</td>
+</tr>
+<tr>
+<td><strong>Erforderlich</strong></td>
+<td>Nein</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beschreibung</strong>: Wenn "Aktiv" deaktiviert ist, können Sie hier gezielt Versandarten auswählen, für die der Wunschliefertermin trotzdem angezeigt wird. Nur anwendbar, wenn der "Aktiv"-Schalter ausgeschaltet ist.</p>
+<p><strong>Anwendungsbeispiel</strong>: Aktivieren Sie diese Option für "Expresslieferung", wenn der Wunschliefertermin nur für Express-Sendungen gelten soll, nicht jedoch für Standard-Pakete.</p>
+<hr />
+<h2 id="wunschlieferdatum-konfiguration">Wunschlieferdatum Konfiguration<a class="headerlink" href="#wunschlieferdatum-konfiguration" title="Permanent link">&para;</a></h2>
+<h3 id="nicht-verfugbare-tage">Nicht verfügbare Tage<a class="headerlink" href="#nicht-verfugbare-tage" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Mehrfachauswahl (Wochentage)</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>Samstag, Sonntag</td>
+</tr>
+<tr>
+<td><strong>Erforderlich</strong></td>
+<td>Nein</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beschreibung</strong>: Wochentage, an denen keine Lieferung möglich ist. Diese Tage werden im Datumsauswahl-Kalender für den Kunden als nicht wählbar markiert.</p>
+<p><strong>Optionen</strong>: Montag, Dienstag, Mittwoch, Donnerstag, Freitag, Samstag, Sonntag</p>
+<p><strong>Anwendungsbeispiel</strong>: Wenn Ihr Logistikpartner nur von Montag bis Freitag liefert, wählen Sie Samstag und Sonntag.</p>
+<hr />
+<h3 id="vorlaufzeit-einheit-fallback">Vorlaufzeit Einheit (Fallback)<a class="headerlink" href="#vorlaufzeit-einheit-fallback" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Auswahl (Einzelauswahl)</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>Tage</td>
+</tr>
+<tr>
+<td><strong>Erforderlich</strong></td>
+<td>Nein</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beschreibung</strong>: Legt die Einheit für die Fallback-Vorlaufzeit fest, die verwendet wird, wenn ein Produkt keine eigene Lieferzeit in Shopware hinterlegt hat.</p>
+<p><strong>Optionen</strong>:
+- <code>Stunden</code>: Die Fallback-Vorlaufzeit wird in Stunden angegeben
+- <code>Tage</code>: Die Fallback-Vorlaufzeit wird in Tagen angegeben
+- <code>Wochen</code>: Die Fallback-Vorlaufzeit wird in Wochen angegeben
+- <code>Monate</code>: Die Fallback-Vorlaufzeit wird in Monaten angegeben</p>
+<hr />
+<h3 id="fallback-lieferdatum-vorlaufzeit">Fallback Lieferdatum Vorlaufzeit<a class="headerlink" href="#fallback-lieferdatum-vorlaufzeit" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Zahl</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>2</td>
+</tr>
+<tr>
+<td><strong>Erforderlich</strong></td>
+<td>Nein</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beschreibung</strong>: Der Standardwert der Vorlaufzeit, der verwendet wird, wenn ein Produkt keine eigene Lieferzeit hinterlegt hat. In Kombination mit der "Vorlaufzeit Einheit (Fallback)" ergibt sich z.B. "2 Tage".</p>
+<p><strong>Anwendungsbeispiel</strong>: Wenn Ihre Produkte generell 2 Tage Vorlaufzeit benötigen, tragen Sie "2" ein und wählen "Tage" als Einheit.</p>
+<hr />
+<h3 id="lieferdatum-vorlaufzeit-einheit">Lieferdatum Vorlaufzeit Einheit<a class="headerlink" href="#lieferdatum-vorlaufzeit-einheit" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Auswahl (Einzelauswahl)</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>Tage</td>
+</tr>
+<tr>
+<td><strong>Erforderlich</strong></td>
+<td>Nein</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beschreibung</strong>: Einheit für die Vorlaufzeiten, die an Produkten, Kategorien und Versandarten als individuelle Pufferzeit hinterlegt werden können (Custom Fields). Diese Einheit gilt für alle diese individuellen Vorlaufzeiten.</p>
+<p><strong>Optionen</strong>: <code>Tage</code>, <code>Stunden</code></p>
+<hr />
+<h3 id="lieferdatum-vorlaufzeit-nutze-nachste-tage-nach-uhrzeit">Lieferdatum Vorlaufzeit, nutze nächste Tage nach (Uhrzeit)<a class="headerlink" href="#lieferdatum-vorlaufzeit-nutze-nachste-tage-nach-uhrzeit" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Uhrzeit</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>23:59</td>
+</tr>
+<tr>
+<td><strong>Erforderlich</strong></td>
+<td>Nein</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beschreibung</strong>: Bestellungen, die nach dieser Uhrzeit eingehen, verschieben das frühestmögliche Lieferdatum um einen weiteren Tag. Standardmäßig auf 23:59 gesetzt, was bedeutet, dass dieser Mechanismus praktisch nie greift. Wenn Sie z.B. einen Bestellschnitt um 14:00 Uhr haben, tragen Sie "14:00" ein.</p>
+<p><strong>Anwendungsbeispiel</strong>: Wenn Sie Bestellungen nur bis 12:00 Uhr am gleichen Tag bearbeiten können, setzen Sie diese Uhrzeit auf "12:00". Bestellungen nach 12:00 Uhr erhalten dann automatisch das nächste verfügbare Datum.</p>
+<hr />
+<h3 id="maximales-lieferdatum-einheit">Maximales Lieferdatum Einheit<a class="headerlink" href="#maximales-lieferdatum-einheit" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Auswahl (Einzelauswahl)</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>Monate</td>
+</tr>
+<tr>
+<td><strong>Erforderlich</strong></td>
+<td>Nein</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beschreibung</strong>: Einheit für den maximalen Lieferzeitraum, bis zu dem Kunden einen Termin wählen dürfen. In Kombination mit "Maximales Lieferdatum" ergibt sich z.B. "3 Monate".</p>
+<p><strong>Optionen</strong>: <code>Tage</code>, <code>Wochen</code>, <code>Monate</code></p>
+<hr />
+<h3 id="maximales-lieferdatum">Maximales Lieferdatum<a class="headerlink" href="#maximales-lieferdatum" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Zahl</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>0 (unbegrenzt)</td>
+</tr>
+<tr>
+<td><strong>Erforderlich</strong></td>
+<td>Nein</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beschreibung</strong>: Maximaler Zeitraum in die Zukunft, bis zu dem Kunden einen Wunschliefertermin wählen dürfen. Bei "0" gibt es keine Obergrenze. Zusammen mit "Maximales Lieferdatum Einheit" bestimmt dieser Wert das späteste wählbare Datum im Kalender.</p>
+<p><strong>Anwendungsbeispiel</strong>: Wenn Sie nicht möchten, dass Kunden Termine mehr als 3 Monate im Voraus buchen, tragen Sie "3" ein und wählen "Monate" als Einheit.</p>
+<hr />
+<h3 id="bestatigungs-button-anzeigen">Bestätigungs-Button anzeigen<a class="headerlink" href="#bestatigungs-button-anzeigen" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Schalter</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>Deaktiviert</td>
+</tr>
+<tr>
+<td><strong>Erforderlich</strong></td>
+<td>Nein</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beschreibung</strong>: Wenn aktiviert, erscheint neben dem Datumsfeld ein Bestätigungs-Button (Häkchen), den der Kunde nach der Datumsauswahl klicken muss. Wenn deaktiviert, wird das Datum automatisch beim Auswählen gespeichert (autoSubmit).</p>
+<p><strong>Anwendungsbeispiel</strong>: Aktivieren Sie diesen Schalter, wenn Ihre Kunden häufig versehentlich ein falsches Datum antippen und dieses sofort gespeichert wird.</p>
+<hr />
+<h2 id="tag-basierte-uberschreibung">Tag-basierte Überschreibung<a class="headerlink" href="#tag-basierte-uberschreibung" title="Permanent link">&para;</a></h2>
+<h3 id="uberschreibungs-tag">Überschreibungs-Tag<a class="headerlink" href="#uberschreibungs-tag" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Mehrfachauswahl (Tags)</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>Leer (deaktiviert)</td>
+</tr>
+<tr>
+<td><strong>Erforderlich</strong></td>
+<td>Nein</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beschreibung</strong>: Wenn hier ein oder mehrere Tags ausgewählt sind und sich Produkte mit diesem Tag im Warenkorb befinden, wird das Lieferdatum <strong>ausschließlich</strong> anhand dieser markierten Produkte berechnet — alle anderen Produkte im Warenkorb werden für die Datumsberechnung ignoriert. Leer lassen, um diese Funktion zu deaktivieren.</p>
+<p><strong>Anwendungsbeispiel</strong>: Sie haben Sonderartikel mit sehr langen Lieferzeiten, die aber für den Kunden keine Rolle spielen sollen. Erstellen Sie dafür einen Tag "Priorität" und weisen Sie ihn den relevanten Produkten zu. Wenn solche Produkte im Warenkorb sind, bestimmen nur diese das frühestmögliche Datum.</p>
+<hr />
+<h2 id="individuelle-vorlaufzeiten-custom-fields">Individuelle Vorlaufzeiten (Custom Fields)<a class="headerlink" href="#individuelle-vorlaufzeiten-custom-fields" title="Permanent link">&para;</a></h2>
+<p>Zusätzlich zur globalen Konfiguration können individuelle Vorlaufzeiten an verschiedenen Stellen hinterlegt werden:</p>
+<h3 id="produkt-lieferdatum-vorlaufzeit">Produkt: Lieferdatum Vorlaufzeit<a class="headerlink" href="#produkt-lieferdatum-vorlaufzeit" title="Permanent link">&para;</a></h3>
+<p><strong>Ort</strong>: Kataloge → Produkte → [Produkt] → Weitere Felder → Lieferdatum Vorlaufzeit</p>
+<p>Legt eine produktspezifische Pufferzeit fest. Der höchste Wert aus Produkt, Kategorie, Versandart und Fallback wird verwendet.</p>
+<h3 id="kategorie-lieferdatum-vorlaufzeit">Kategorie: Lieferdatum Vorlaufzeit<a class="headerlink" href="#kategorie-lieferdatum-vorlaufzeit" title="Permanent link">&para;</a></h3>
+<p><strong>Ort</strong>: Kataloge → Kategorien → [Kategorie] → Weitere Felder → Lieferdatum Vorlaufzeit</p>
+<p>Legt eine kategorieweite Pufferzeit fest. Gilt für alle Produkte in dieser Kategorie, sofern am Produkt selbst keine Vorlaufzeit hinterlegt ist.</p>
+<h3 id="versandart-vorlaufzeit">Versandart: Vorlaufzeit<a class="headerlink" href="#versandart-vorlaufzeit" title="Permanent link">&para;</a></h3>
+<p><strong>Ort</strong>: Einstellungen → Versand → Versandarten → [Versandart] → Weitere Felder → Vorlaufzeit</p>
+<p>Legt eine versandartspezifische Pufferzeit fest. Nützlich, wenn bestimmte Versandarten (z.B. Expresslieferung) eine andere Vorlaufzeit benötigen als andere.</p>
+<hr />
+<h2 id="empfohlene-konfigurationen">Empfohlene Konfigurationen<a class="headerlink" href="#empfohlene-konfigurationen" title="Permanent link">&para;</a></h2>
+<h3 id="standard-setup-kleine-bis-mittlere-shops">Standard-Setup (kleine bis mittlere Shops)<a class="headerlink" href="#standard-setup-kleine-bis-mittlere-shops" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Einstellung</th>
+<th>Empfohlener Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bundesland</td>
+<td>Ihr Bundesland wählen</td>
+</tr>
+<tr>
+<td>Aktiv</td>
+<td>Aktiv</td>
+</tr>
+<tr>
+<td>Nicht verfügbare Tage</td>
+<td>Samstag, Sonntag</td>
+</tr>
+<tr>
+<td>Fallback Vorlaufzeit Einheit</td>
+<td>Tage</td>
+</tr>
+<tr>
+<td>Fallback Vorlaufzeit</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Vorlaufzeit Einheit</td>
+<td>Tage</td>
+</tr>
+<tr>
+<td>Bestellschnitt</td>
+<td>14:00 (oder 23:59)</td>
+</tr>
+<tr>
+<td>Maximales Lieferdatum</td>
+<td>3 (Monate)</td>
+</tr>
+<tr>
+<td>Bestätigungs-Button</td>
+<td>Deaktiviert</td>
+</tr>
+</tbody>
+</table>
+<h3 id="nur-fur-expresslieferung">Nur für Expresslieferung<a class="headerlink" href="#nur-fur-expresslieferung" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Einstellung</th>
+<th>Empfohlener Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aktiv</td>
+<td>Deaktiviert</td>
+</tr>
+<tr>
+<td>Nur aktiv für Versandarten</td>
+<td>[Ihre Express-Versandart]</td>
+</tr>
+<tr>
+<td>Nicht verfügbare Tage</td>
+<td>Samstag, Sonntag</td>
+</tr>
+<tr>
+<td>Fallback Vorlaufzeit</td>
+<td>1 Tag</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Zurück zum Seitenanfang
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2026 Web Labels Webdesign GmbH
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://web-labels.de" target="_blank" rel="noopener" title="Web Labels Website" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://store.shopware.com/web-labels-webdesign-gmbh.html" target="_blank" rel="noopener" title="Shopware Store" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M21.5 181.1 78.3 67.4c10.9-21.7 33-35.4 57.3-35.4h304.9c24.2 0 46.4 13.7 57.2 35.4l56.8 113.7c3.6 7.2 5.5 15.1 5.5 23.2 0 27.3-21.2 49.7-48 51.6V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V256h-96v176c0 26.5-21.5 48-48 48H112c-26.5 0-48-21.5-48-48V255.9c-26.8-1.9-48-24.3-48-51.6 0-8 1.9-16 5.5-23.2M128 256v112c0 8.8 7.2 16 16 16h128c8.8 0 16-7.2 16-16V256z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://web-labels.de/impressum" target="_blank" rel="noopener" title="Impressum" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M384 32h128c17.7 0 32 14.3 32 32s-14.3 32-32 32H398.4c-5.2 25.8-22.9 47.1-46.4 57.3V448h160c17.7 0 32 14.3 32 32s-14.3 32-32 32H128c-17.7 0-32-14.3-32-32s14.3-32 32-32h160V153.3c-23.5-10.3-41.2-31.6-46.4-57.3H128c-17.7 0-32-14.3-32-32s14.3-32 32-32h128c14.6-19.4 37.8-32 64-32s49.4 12.6 64 32m55.6 288h144.8L512 195.8zm72.4 96c-62.9 0-115.2-34-126-78.9-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8L631.3 305c5.7 9.8 9.3 21.1 6.7 32.1-10.8 44.8-63.1 78.9-126 78.9M126.8 195.8 54.4 320h144.9zM.9 337.1c-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8L246.2 305c5.7 9.8 9.3 21.1 6.7 32.1-10.8 44.8-63.1 78.9-126 78.9S11.7 382 .9 337.1"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://web-labels.de/datenschutz" target="_blank" rel="noopener" title="Datenschutz" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M224 248a120 120 0 1 0 0-240 120 120 0 1 0 0 240m-29.7 56C95.8 304 16 383.8 16 482.3c0 16.4 13.3 29.7 29.7 29.7h251.5C261 469.4 240 414.5 240 356.4v-31.1c0-7.3 1-14.5 2.9-21.3zm251 184.5-13.3 6.3V306.7l96 32v19.6c0 55.8-32.2 106.5-82.7 130.3zm-23.4-229-112 37.3c-13.1 4.4-21.9 16.6-21.9 30.4v31.1c0 74.4 43 142.1 110.2 173.7l18.5 8.7c4.8 2.2 10 3.4 15.2 3.4s10.5-1.2 15.2-3.4l18.5-8.7C533 500.3 576 432.6 576 358.2v-31.1c0-13.8-8.8-26-21.9-30.4l-112-37.3c-6.6-2.2-13.7-2.2-20.2 0z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.prune", "navigation.indexes", "navigation.top", "search.highlight", "search.suggest", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../javascripts/plugin-filter.js"></script>
+      
+    
+  </body>
+</html>

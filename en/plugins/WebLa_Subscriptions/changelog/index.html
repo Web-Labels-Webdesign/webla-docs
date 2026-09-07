@@ -1,0 +1,3209 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Dokumentation für Web Labels Shopware Plugins">
+      
+      
+      
+        <link rel="canonical" href="https://docs.web-labels.de/en/plugins/WebLa_Subscriptions/changelog/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../how_to/">
+      
+      
+        
+          <link rel="alternate" href="../../../../plugins/WebLa_Subscriptions/changelog/" hreflang="de">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Changelog - Web Labels Shopware Plugins</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/plugin-cards.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+<!-- Privacy-friendly analytics by Plausible -->
+<script defer data-domain="docs.web-labels.de" src="https://plausible.buildit-consulting.com/js/script.file-downloads.hash.outbound-links.pageview-props.tagged-events.js"></script>
+<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="white">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1110" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../" title="Web Labels Shopware Plugins" class="md-header__button md-logo" aria-label="Web Labels Shopware Plugins" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Web Labels Shopware Plugins
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Changelog
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="white"  aria-label="Dunkelmodus aktivieren"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dunkelmodus aktivieren" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="black"  aria-label="Hellmodus aktivieren"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Hellmodus aktivieren" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../../plugins/WebLa_Subscriptions/changelog/" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../BuildIT_ShareCart/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Plugins
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../" title="Web Labels Shopware Plugins" class="md-nav__button md-logo" aria-label="Web Labels Shopware Plugins" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    Web Labels Shopware Plugins
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugins
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Plugins
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../BuildIT_ShareCart/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Share your cart
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_AdcellProvisionsfreigabe/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADCELL Commission Approval
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_AdminProductFilters/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom fields in the admin product overview
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_BatchManagement/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Batch Management
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_BeautifiedSearch/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Search as Overlay
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_Blog/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_CategorieQuickFilter/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Category Quick Filter
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_CategorySorter/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Category Sorter
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_ContactFormFileUpload/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contact Form – File Upload
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_CurrencyChanger/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Currency Display
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_CustomerSpecificDiscounts/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Customer Specific Discounts
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_CustomerTaxCountry/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Customer Tax Country
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_DeliveryDateSelector/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preferred Delivery Date for Customers
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_ExportDiscount/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shopping Feed with Unique Discounts
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_FlyoutNavigation/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flyout Navigation
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_HomePageControl/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Homepage Configuration
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_ImageReviews/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Images in Product Reviews
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_IntelligentCrossSelling/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intelligent Cross-Selling
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_ManufacturerPages/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manufacturer Pages
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_MediaBooster/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Media Booster
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_ProductSliderAdvanced/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product Slider Advanced
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_Produktberater/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product Advisor
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_PropertyNotes/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Property Notes
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_SplitComission/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SplitCommission – Division of Line Items into Parts
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_25" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Subscription Plugin
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_25" id="__nav_2_25_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_25_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_25">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Subscription Plugin
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how_to/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How-To Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../configuration/settings/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../usage/admin/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usage
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_TaxCalculatorAndCountrySwitcher/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tax Calculator and Country Switcher
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_UTMHandler/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UTM Handler
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_UltimativeBundlePlugin/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ultimate Bundle Plugin
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_Zusatzoptionen/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Additional Options
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p><strong>Changelog — Subscription Plugin for Mollie</strong></p>
+<p>All notable changes to the Subscription Plugin for Mollie for end users.</p>
+<hr />
+<h1 id="1110">1.11.0<a class="headerlink" href="#1110" title="Permanent link">&para;</a></h1>
+<p><em>Released 2026-09-02</em></p>
+<p><strong>New Features</strong></p>
+<ul>
+<li>Three new conditions are available in the rule builder (<strong>Settings → Rules</strong>), so subscriptions can now control shipping methods, payment methods and promotions:</li>
+<li><strong>Cart contains subscription product</strong> — matches as soon as any item in the cart is a subscription.</li>
+<li><strong>Item is a subscription product</strong> — matches individual cart items, for use in promotions and item-level rules.</li>
+<li><strong>Number of active subscriptions</strong> — compares how many active subscriptions the logged-in customer has, for example "at least 1".</li>
+</ul>
+<h1 id="1104">1.10.4<a class="headerlink" href="#1104" title="Permanent link">&para;</a></h1>
+<p><em>Released 2026-09-02</em></p>
+<p><strong>Improvements</strong></p>
+<ul>
+<li>The plugin now identifies itself to Mollie as "WebLabelsSubscriptions" together with the Shopware version, which makes support requests easier to trace.</li>
+<li>The Shopware Store listing and the documentation now use the plugin name "Subscription Plugin for Mollie" consistently.</li>
+<li>The store description states that the plugin is developed and supported exclusively by Web Labels Webdesign GmbH and that Mollie is not responsible for it.</li>
+</ul>
+<h1 id="1103">1.10.3<a class="headerlink" href="#1103" title="Permanent link">&para;</a></h1>
+<p><em>Released 2026-08-26</em></p>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+<li>Renewals no longer fail for customers whose Mollie mandate was never recorded locally. Older subscriptions could end up with a valid mandate at Mollie that the plugin could not see, and every renewal was refused as a result. The mandate is now recovered from the original order's payment, so affected subscriptions renew again without anyone having to intervene.</li>
+<li>The filters in the subscription list work again. Selecting a status, payment method, interval or date had no effect, and the chosen value did not even appear in the field.</li>
+<li>Searching the subscription list now finds customers by name, email or customer number. Previously a search returned nothing useful.</li>
+<li>The subscription search type is now shown with a proper name instead of the internal identifier.</li>
+</ul>
+<h1 id="1101">1.10.1<a class="headerlink" href="#1101" title="Permanent link">&para;</a></h1>
+<p><em>Released 2026-08-26</em></p>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+<li>The subscription list in the administration now shows its pagination again. With more than 25 subscriptions only the first page was reachable, even though the total count in the header was correct.</li>
+<li>Clicking a column header in the subscription list now sorts the list instead of silently doing nothing.</li>
+</ul>
+<h1 id="1100">1.10.0<a class="headerlink" href="#1100" title="Permanent link">&para;</a></h1>
+<p><em>Released 2026-08-21</em></p>
+<p><strong>Improvements</strong></p>
+<ul>
+<li>Payments now carry the Shopware order number, so an order can be found directly in the Mollie dashboard instead of matching it up by amount and date.</li>
+<li>The bundled Mollie library was updated to the current release.</li>
+</ul>
+<h1 id="191">1.9.1<a class="headerlink" href="#191" title="Permanent link">&para;</a></h1>
+<p><em>Released 2026-08-06</em></p>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+<li>Renewals no longer fail for products whose availability is controlled by a rule. The renewal cart was built without initialising the rule set, so any product released to customers through a rule looked unavailable and the renewal was refused with a cart error, even though the product was active and orderable in the shop. Affected subscriptions renew normally again.</li>
+<li>A failed renewal now names the affected product in the log instead of an internal identifier that appeared nowhere else, so the cause of a failure can be traced without guesswork.</li>
+</ul>
+<p><strong>Improvements</strong></p>
+<ul>
+<li>The renewal task now runs twice a day instead of once, so a subscription that becomes due is picked up sooner.</li>
+</ul>
+<h1 id="190">1.9.0<a class="headerlink" href="#190" title="Permanent link">&para;</a></h1>
+<p><em>Released 2026-07-27</em></p>
+<p><strong>New Features</strong></p>
+<ul>
+<li>Subscription changes are now recorded. Every change to a subscription is written to a history record together with the user or integration that made it, including changes made outside the plugin's own screens, such as a direct API edit or an import. Previously such a change left no trace at all, which made it impossible to explain afterwards how a subscription had ended up with unexpected settings.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+<li>Automatic renewals no longer fail when the message queue is processed by the admin worker. In that setup a renewal ran inside an administration request, which caused extensions built for the storefront to abort the renewal with an error. Affected subscriptions failed on every attempt until it was noticed.</li>
+<li>A failed recurring payment no longer creates a new unpaid order on every attempt. The renewal order is placed before the payment is charged, so a declined or impossible charge previously left the subscription due and the next run placed another order for the same period. The subscription is now flagged and the customer is notified, exactly as with a failed direct debit.</li>
+<li>Subscriptions now record the payment method the customer actually paid with. If a customer cancelled at the payment provider and completed the order with a different method, the subscription kept the method chosen first, and renewals then looked for a payment authorisation that had never been created.</li>
+<li>Recurring payments no longer fail for customers whose payment authorisation was stored while it was still being confirmed. Such an authorisation was never updated afterwards, so every later renewal reported that no valid authorisation existed.</li>
+<li>Sales channels with their own Mollie credentials now store payment authorisations correctly. The confirmation callback used the global credentials, so the authorisation was silently lost and later renewals failed.</li>
+<li>A renewal can no longer move the next renewal date into the past. A subscription whose date had fallen behind was charged once per interval until it caught up.</li>
+<li>The interval change now behaves identically in the administration and in the customer portal, and stays correct after subscriptions have been merged onto a shared delivery date or a date has been corrected by hand.</li>
+<li>The renewal log now reports subscriptions that were deliberately skipped as skipped instead of counting them as successfully processed.</li>
+<li>If a customer's interval change is rejected, for example because it exceeds the configured maximum, the reason is now written to the log instead of being discarded.</li>
+</ul>
+<h1 id="180">1.8.0<a class="headerlink" href="#180" title="Permanent link">&para;</a></h1>
+<p><em>Released 2026-07-23</em></p>
+<p><strong>New Features</strong></p>
+<ul>
+<li>New setting "Prevent combination of subscription discount with promotions". When enabled, promotion codes can no longer be combined with a subscription: entering a code in a cart that contains a subscription shows a notice and the code is not applied, while checkout continues as normal. The setting is off by default, so existing behaviour — promotion codes and the subscription discount stacking — stays unchanged, and it can be configured per sales channel.</li>
+</ul>
+<h1 id="175">1.7.5<a class="headerlink" href="#175" title="Permanent link">&para;</a></h1>
+<p><em>Released 2026-07-22</em></p>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+<li>Automatic (system-triggered) subscription renewals now apply the subscription discount again. Previously these renewal orders were charged at full price even though the original order received the discount.</li>
+</ul>
+<p><strong>Improvements</strong></p>
+<ul>
+<li>Remove the unused default loyalty-discount tiers. They had no admin interface and no effect on pricing; the renewal discount now matches the discount from the original order exactly.</li>
+</ul>
+<h1 id="174">1.7.4<a class="headerlink" href="#174" title="Permanent link">&para;</a></h1>
+<p><em>Released 2026-07-20</em></p>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+<li>Fix the "Change" buttons next to the payment method and interval fields on the subscription detail page sitting below the field they belong to instead of level with it.</li>
+</ul>
+<h1 id="173">1.7.3<a class="headerlink" href="#173" title="Permanent link">&para;</a></h1>
+<p><em>Released 2026-07-20</em></p>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+<li>Fix subscriptions staying stuck on "Payment pending" after a successful payment. When one order contained products with different delivery intervals, the plugin created one subscription per interval but only activated a single one — the remaining subscriptions never left the pending state. Failed and cancelled payments were affected in the same way and now cancel every subscription of the order.</li>
+<li>Fix the next renewal date not moving when the delivery interval is changed in the administration. Changing the interval now recalculates the pending renewal from the last renewal date, so a subscription switched from 2 to 8 weeks is scheduled 8 weeks after its last delivery instead of keeping the old date.</li>
+<li>Fix the payment method dropdown showing up empty for subscriptions paid via PayPal (Mollie). PayPal was missing from the selectable methods in both the subscription detail page and the list filter, even though the payment method itself worked.</li>
+</ul>
+<p><strong>Improvements</strong></p>
+<ul>
+<li>The "Change" buttons next to the payment method and interval fields no longer appear and disappear while editing. They are now always visible and stay disabled until the value actually changes, and the fields no longer stretch across the full column width.</li>
+</ul>
+<h1 id="172">1.7.2<a class="headerlink" href="#172" title="Permanent link">&para;</a></h1>
+<p><em>Released 2026-06-29</em></p>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+<li>Remove a misleading "a subscription payment method is required" notice that appeared on the cart and checkout pages even though the correct subscription payment method was already selected.</li>
+</ul>
+<h1 id="171">1.7.1<a class="headerlink" href="#171" title="Permanent link">&para;</a></h1>
+<p><em>Released 2026-06-29</em></p>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+<li>Fix a fatal startup error introduced in 1.7.0 where an internal payment service was referenced incorrectly, preventing the storefront and admin from loading. Automatic checkout payment-method selection works again.</li>
+</ul>
+<h1 id="170">1.7.0<a class="headerlink" href="#170" title="Permanent link">&para;</a></h1>
+<p><em>Released 2026-06-29</em></p>
+<p><strong>New Features</strong></p>
+<ul>
+<li>The matching payment method is now selected automatically at checkout based on whether the cart contains a subscription. Customers no longer end up with no payment method selected, and a regular order can no longer be placed with a subscription-only payment method (or vice versa).</li>
+<li>PayPal and Apple Pay express checkout buttons are now hidden while a subscription product is in the cart (cart, off-canvas cart and registration page). Express checkout cannot set up a subscription payment, so hiding it prevents broken subscriptions.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+<li>Fixed a "payment token invalidated" error that could occur when placing a non-subscription order after a previous subscription purchase had stored a subscription payment method as the customer default.</li>
+</ul>
+<p><strong>Improvements</strong></p>
+<ul>
+<li>The subscription account pages are now excluded from search engine indexing.</li>
+</ul>
+<h1 id="160">1.6.0<a class="headerlink" href="#160" title="Permanent link">&para;</a></h1>
+<p><em>Released 2026-06-12</em></p>
+<p><strong>New Features</strong></p>
+<ul>
+<li>Subscription notification emails for cancellation and reactivation. Customers are now informed by email when a subscription is cancelled or reactivated (from the backend or the customer account). The required Flow Builder flows and email templates are created automatically.</li>
+<li>Additional notification triggers are available in the Flow Builder: renewal reminder, renewed, price changed, payment failed, product removed and item out of stock. The situational ones (renewed, product removed, item out of stock) are pre-created as inactive flows you can switch on when needed.</li>
+<li>Readable trigger names: the subscription triggers now show proper English and German labels in the Flow Builder instead of technical keys.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+<li>Subscription notification emails were never delivered: the events were not registered as Flow Builder triggers, so any flow using them showed "Unknown trigger" and was deactivated. The triggers are now registered correctly and the flows work.</li>
+<li>Product detail page: removed a duplicate unit/content line for products that have a purchase unit but no reference price on Shopware 6.6.</li>
+</ul>
+<hr />
+<h1 id="151">1.5.1<a class="headerlink" href="#151" title="Permanent link">&para;</a></h1>
+<p><em>Released 2026-06-10</em></p>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+<li><strong>Duplicate Reference Price</strong>: The base/reference price line (e.g. "Content: 0.5 kg (€40.00 / 1 kg)") no longer appears twice below the product price on the detail page when the dynamic subscription price display is active. On Shopware 6.7 the product price unit moved into its own template, which caused the plugin to render the line a second time.</li>
+</ul>
+<hr />
+<h1 id="150">1.5.0<a class="headerlink" href="#150" title="Permanent link">&para;</a></h1>
+<p><em>Released 2026-06-10</em></p>
+<p><strong>New Features</strong></p>
+<ul>
+<li><strong>Dynamic Header Price</strong>: The main product price in the buy widget now switches live between the regular price and the discounted subscription price when the customer toggles between the one-time and subscription tiles. A new <code>dynamicPriceDisplayEnabled</code> configuration option lets shop owners disable this behaviour if needed.</li>
+<li><strong>Configurable Default Purchase Type</strong>: A new <code>defaultPurchaseType</code> configuration option controls which tile is pre-selected when the product detail page loads — subscription or one-time purchase. Products marked as subscription-only always default to subscription regardless of this setting.</li>
+<li><strong>Payment Method Lifecycle</strong>: The plugin's subscription-specific payment methods are automatically deactivated when the plugin is deactivated in the Shopware admin and reactivated when the plugin is activated again. This prevents the methods from appearing at checkout when the plugin is not active.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+<li><strong>Subscription Tile Interaction</strong>: Clicking anywhere on a purchase-type tile now correctly selects it. Previously only clicking directly on the radio button registered the selection.</li>
+<li><strong>Subscription-Only Tile State</strong>: Products configured as subscription-only correctly show the subscription tile as selected on page load. The active highlight was incorrectly removed in the previous release.</li>
+<li><strong>Cart Discount Fallback</strong>: Subscription orders using the "all items must have the same option" discount path now correctly fall back to the global discount percentage when an individual option has no per-option discount configured. Previously these orders received a 0 % discount instead.</li>
+</ul>
+<hr />
+<h1 id="135">1.3.5<a class="headerlink" href="#135" title="Permanent link">&para;</a></h1>
+<p><em>Released 2026-05-13</em></p>
+<p><strong>New Features</strong></p>
+<ul>
+<li><strong>Variant Subscription Inheritance</strong>: A product variant now automatically inherits the main product's subscription options when it has none of its own. The admin product detail card shows the inheritance state explicitly with an "Override for this variant" action that clones the parent options into editable variant rows, and a "Revert to main product" action that drops the override and inherits again.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+<li><strong>Variant Storefront PDP</strong>: The subscription selector now appears on a variant's product detail page when the main product has subscription options configured. Previously the storefront only queried the variant's own options and showed nothing on variants.</li>
+<li><strong>Variant Cart Validation</strong>: Adding a variant subscription to the cart no longer drops the subscription payload because the matched option belongs to the parent product. The cart validator accepts either the variant's own option or one inherited from its parent.</li>
+<li><strong>Per-Option Discount Semantics</strong>: A subscription option whose "Discount (%)" is <code>0</code> or empty now applies no per-option discount in the storefront, cart, and renewal orders. The plugin's global <code>aboDiscountPercent</code> configuration still applies to cart-wide subscriptions but no longer fills in an empty per-option value.</li>
+<li><strong>Buy-Widget Layout</strong>: The quantity input and "Add to shopping cart" button stay on the same row (the Shopware default layout) when the subscription selector is rendered. The selector now sits on its own row above the buy controls.</li>
+</ul>
+<p><strong>Improvements</strong></p>
+<ul>
+<li>One-time <code>Migration1742000000BackfillNullDiscountPercent</code> rewrites any pre-existing <code>NULL</code> per-option discount values to <code>0</code> so admin display and storefront behavior match without requiring a manual touch of every row.</li>
+</ul>
+<hr />
+<h1 id="134">1.3.4<a class="headerlink" href="#134" title="Permanent link">&para;</a></h1>
+<p><em>Released 2026-05-13</em></p>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+<li><strong>DAL Entity Field Mappings</strong>: Aligned the entity classes (<code>SubscriptionEntity</code>, <code>SubscriptionItemEntity</code>, <code>SubscriptionOrderEntity</code>, <code>FreeItemEntity</code>) with the column names declared in their DAL definitions so the framework no longer reports missing reference-version-field properties.</li>
+<li><strong>Mollie Webhook Response</strong>: The Mollie webhook controller now returns a non-empty <code>200 OK</code> body. Mollie inspects only the status code, behaviour is unchanged.</li>
+</ul>
+<p><strong>Improvements</strong></p>
+<ul>
+<li><strong>Storefront Heading Hierarchy</strong>: Replaced bare <code>&lt;h1&gt;</code> – <code>&lt;h6&gt;</code> tags in the customer subscription portal templates with <code>&lt;span class="h*"&gt;</code> equivalents so the plugin no longer introduces its own heading hierarchy on top of the shop theme.</li>
+<li><strong>Accessible Anchors</strong>: Added missing <code>title</code> attributes to anchor tags in the subscription portal for assistive technologies.</li>
+</ul>
+<hr />
+<h1 id="133">1.3.3<a class="headerlink" href="#133" title="Permanent link">&para;</a></h1>
+<p><em>Released 2026-05-13</em></p>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+<li><strong>Payment Method Filtering on Cart Page (Shopware 6.6)</strong>: The cart page payment-method dropdown now hides subscription-only methods when no subscription is in the cart, and hides standard methods when a subscription is present. Previously the filter only ran on the confirm and edit-order pages, leaving the cart page dropdown unfiltered.</li>
+<li><strong>Cart-wide Subscriptions Detected Correctly</strong>: When the cart-wide subscription mode is active, payment-method filtering now recognises the cart as a subscription order. Prior detection used <code>_subscriptionOptionId</code> which is <code>null</code> for cart-wide subscriptions, so subscription-only methods were incorrectly hidden.</li>
+<li><strong>Guest Cart Filtering</strong>: Subscription-aware payment-method filtering now applies to guest carts as well. The SEPA-mandate filter still requires a logged-in customer.</li>
+</ul>
+<p><strong>Improvements</strong></p>
+<ul>
+<li><strong>Product Detail Page Compatibility</strong>: The subscription interval selector on the product detail page is now injected into a narrower, less commonly contested Twig block (<code>buy_widget_buy_product_buy_info</code>), reducing the chance that third-party plugins or themes override the buy widget without preserving the selector. Plugin template priority is raised so our extensions wrap default-priority extensions instead of being wrapped by them. The selector position shifts to between the quantity input and the buy button.</li>
+</ul>
+<hr />
+<h1 id="132">1.3.2<a class="headerlink" href="#132" title="Permanent link">&para;</a></h1>
+<p><em>Released 2026-04-24</em></p>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+<li><strong>PHP 8.1 Deprecation in Bundled Mollie Library</strong>: Fixed <code>CreatePaymentRefundRequest::__construct()</code> signature where the optional <code>$description</code> parameter was declared before the required <code>$amount</code>, triggering a deprecation notice under PHP 8.1+ and blocking the Shopware Store's automated review.</li>
+</ul>
+<hr />
+<h1 id="131">1.3.1<a class="headerlink" href="#131" title="Permanent link">&para;</a></h1>
+<p><em>Released 2026-04-24</em></p>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+<li><strong>Mollie PayPal Admin Label</strong>: Added the missing translation for <code>webla_subscription_mollie_paypal</code> in both English and German admin locales. Subscription list and detail views now display "PayPal (Mollie)" instead of the raw snippet key.</li>
+</ul>
+<hr />
+<h1 id="130">1.3.0<a class="headerlink" href="#130" title="Permanent link">&para;</a></h1>
+<p><em>Released 2026-04-21</em></p>
+<p><strong>New Features</strong></p>
+<ul>
+<li><strong>Cart-wide Subscription</strong>: Added an interval selector rendered across the entire checkout (cart page, offcanvas cart, address/register step, confirm step) that turns the whole cart into one subscription. When enabled, all product line items — even those without per-product subscription options — are forced onto the chosen interval. Selection persists as a Cart extension and survives recalculation. The offcanvas updates via AJAX without reloading the page, matching the core promo-code flow.</li>
+<li><strong>Cart-wide Interval Editor</strong>: New plugin configuration under <em>Subscription Intervals</em> with a dedicated admin editor for managing the list of available cart-wide intervals. Each entry holds weeks, label, and discount percent. Compatible with both Shopware 6.6 (<code>sw-*</code> components) and 6.7 (<code>mt-*</code> components) via runtime detection.</li>
+</ul>
+<p><strong>Improvements</strong></p>
+<ul>
+<li><strong>Payment Methods Card</strong>: Reordered fields so subscription-capable Mollie methods (Card, SEPA, PayPal) appear before non-recurring methods (Invoice, Prepayment).</li>
+<li><strong>Renewal Shipping Method</strong>: Moved from <em>Payment Methods</em> to <em>Renewal Behavior</em> card where it semantically belongs, with clarified help text explaining the initial-order fallback.</li>
+</ul>
+<hr />
+<h1 id="120">1.2.0<a class="headerlink" href="#120" title="Permanent link">&para;</a></h1>
+<p><em>Released 2026-04-13</em></p>
+<p><strong>New Features</strong></p>
+<ul>
+<li><strong>Mollie PayPal Subscription Method</strong>: Added <code>webla_subscription_mollie_paypal</code> as a recurring-capable Mollie payment method. Subscriptions can now charge against a PayPal Billing Agreement via Mollie's mandate API. Registered inactive by default — requires PayPal Reference Transactions to be enabled on the merchant's Mollie/PayPal connection before activation.</li>
+<li><strong>Renewal Shipping Method from Initial Order</strong>: Renewal carts now reuse the shipping method from the subscription's initial order when it is still active, falling back to the configured <code>renewalShippingMethodId</code> otherwise. Customers keep their original delivery option across renewals.</li>
+</ul>
+<hr />
+<h1 id="115">1.1.5<a class="headerlink" href="#115" title="Permanent link">&para;</a></h1>
+<p><em>Released 2026-03-31</em></p>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+<li><strong>Standalone Mollie Support</strong>: Bundled Mollie API 3.9.0 under scoped namespace <code>WebLa\Subscriptions\Vendor\Mollie\Api\</code> so the plugin works fully standalone without the official Mollie Shopware plugin. When both are installed, each uses its own isolated copy — zero conflicts. Added Makefile target (<code>make mollie-vendor</code>) for updating the scoped copy.</li>
+</ul>
+<hr />
+<h1 id="114">1.1.4<a class="headerlink" href="#114" title="Permanent link">&para;</a></h1>
+<p><em>Released 2026-03-31</em></p>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+<li><strong>Mollie Dependency Conflict</strong>: Removed <code>mollie/mollie-api-php</code> from Composer require entirely. The official Mollie Shopware plugin bundles its own copy in <code>vendor_manual/</code> with different constant names — having it in our require caused version conflicts on install. Mollie API classes are now provided by the Mollie plugin at runtime.</li>
+<li><strong>Mollie as Soft Dependency</strong>: Added <code>MollieOptionalCompilerPass</code> that removes Mollie-related services when the Mollie API library is absent. Invoice and Prepayment subscriptions work without the Mollie plugin installed.</li>
+<li><strong>Sequence Type Constants</strong>: Replaced <code>SequenceType::FIRST</code>/<code>RECURRING</code> constants with string literals <code>'first'</code>/<code>'recurring'</code> for compatibility with the Mollie plugin's bundled library version.</li>
+</ul>
+<hr />
+<h1 id="113">1.1.3<a class="headerlink" href="#113" title="Permanent link">&para;</a></h1>
+<p><em>Released 2026-03-31</em></p>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+<li><strong>Payment Handler Compile Error on Shopware &lt; 6.6.5</strong>: Restructured all payment handlers using conditional <code>class_exists()</code> base classes and a shared logic trait, so new-style method signatures are used on 6.6.5+/6.7 and legacy interface signatures on 6.6.0–6.6.4 without PHP compile errors.</li>
+</ul>
+<hr />
+<h1 id="112">1.1.2<a class="headerlink" href="#112" title="Permanent link">&para;</a></h1>
+<p><em>Released 2026-03-31</em></p>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+<li><strong>Shopware 6.6.0–6.6.4 Compatibility</strong>: Payment handlers now use <code>class_exists()</code> conditional base classes (like the official Mollie plugin) instead of directly extending <code>AbstractPaymentHandler</code> which only exists from 6.6.5.</li>
+<li><strong>Dual Payment Handler Tags</strong>: Services register both <code>shopware.payment.method</code> (6.6.5+/6.7) and legacy <code>shopware.payment.method.async</code>/<code>sync</code> (6.6.0–6.6.4) tags for full version coverage.</li>
+</ul>
+<hr />
+<h1 id="111">1.1.1<a class="headerlink" href="#111" title="Permanent link">&para;</a></h1>
+<p><em>Released 2026-03-31</em></p>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+<li><strong>Mollie API Version Conflict</strong>: Widened <code>mollie/mollie-api-php</code> constraint from <code>^3.9</code> to <code>^2.0 || ^3.0</code> to avoid downgrading the library when coexisting with the official Mollie Shopware plugin, which caused <code>Undefined constant PaymentMethod::BIZUM</code> errors.</li>
+<li><strong>Uninstallation Failed on Shopware 6.7</strong>: Custom field removal used raw SQL referencing <code>custom_field_set_id</code> column which no longer exists in Shopware 6.7; now uses cascading delete on the set instead.</li>
+</ul>
+<hr />
+<h1 id="110">1.1.0<a class="headerlink" href="#110" title="Permanent link">&para;</a></h1>
+<p><em>Released 2026-03-31</em></p>
+<p><strong>New Features</strong></p>
+<ul>
+<li><strong>Per-Option Discount Override</strong>: Product subscription options can now have their own discount percentage, overriding the global default. NULL = use global. Shown in admin product card and storefront selector.</li>
+<li><strong>Customer Settings Lifecycle</strong>: Customer subscription settings are now automatically created on first subscription. SEPA lock is set automatically when max failures are reached and cleared on admin unlock.</li>
+<li><strong>Customer Settings Admin UI</strong>: Admin customer detail page now shows toggles for "Interval change allowed" and "SEPA locked" per customer.</li>
+<li><strong>Customer Settings API</strong>: New GET/PATCH endpoints for managing per-customer subscription settings.</li>
+<li><strong>Webhook URL Placeholder</strong>: Plugin config shows the expected webhook URL structure as placeholder text.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+<li><strong>Customer Detail Card</strong>: Fixed override template block name so the subscription card actually appears on the customer detail page.</li>
+<li><strong>Customer Card Payment Method</strong>: Payment method column now shows translated names instead of raw technical names.</li>
+<li><strong>Add Item Route</strong>: Fixed missing <code>seo =&gt; false</code> option on the storefront add-item route causing 404 errors.</li>
+<li><strong>Storefront Source Tracking</strong>: Removed erroneous <code>.gitignore</code> entry that excluded the Storefront controller directory.</li>
+</ul>
+<hr />
+<h1 id="101">1.0.1<a class="headerlink" href="#101" title="Permanent link">&para;</a></h1>
+<p><em>Released 2026-03-31</em></p>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+<li><strong>Shopware 6.7 Payment Handlers</strong>: Use unified <code>shopware.payment.method</code> service tag instead of deprecated <code>shopware.payment.method.async</code>/<code>shopware.payment.method.sync</code> tags, fixing <code>CHECKOUT__UNKNOWN_PAYMENT_METHOD</code> error during checkout.</li>
+<li><strong>Shopware 6.7 Admin Input Bindings</strong>: Replace <code>v-model</code> with <code>:value</code>/<code>@update:value</code> on deprecated components so payment method, interval, notes, and cancel reason fields display correctly.</li>
+<li><strong>Admin Detail Header</strong>: Only show relevant action buttons for the current subscription status instead of showing all buttons disabled.</li>
+<li><strong>Admin Detail Header Spacing</strong>: Add gap between smart bar action buttons.</li>
+<li><strong>Admin Items Table</strong>: Replace <code>sw-number-field</code> with compact native input for quantity column to fix vertical stretching.</li>
+<li><strong>Admin Items Table Column Widths</strong>: Set explicit widths on quantity and unit price columns to prevent disproportionate sizing.</li>
+<li><strong>Admin Dashboard Status Overflow</strong>: Switch status grid from fixed 7-column layout to flexible wrapping for long German labels.</li>
+<li><strong>Product Card Empty State</strong>: Styled empty state with dashed border box, hide save button when no new options exist.</li>
+<li><strong>Product Card Toggle Feedback</strong>: Show success notification when toggling "Subscription only" switch.</li>
+</ul>
+<hr />
+<h1 id="100">1.0.0<a class="headerlink" href="#100" title="Permanent link">&para;</a></h1>
+<p><em>Released 2026-03-30</em></p>
+<p><strong>New Features</strong></p>
+<ul>
+<li><strong>Subscription System</strong>: Complete subscription system for Shopware 6 with automatic renewals.</li>
+<li><strong>Customer Portal</strong>: Self-service area in the customer account for managing subscriptions (pause, cancel, change interval, manage items).</li>
+<li><strong>Admin Dashboard</strong>: Overview with KPIs — active subscribers, monthly revenue, upcoming renewals, churn rate.</li>
+<li><strong>Admin Management</strong>: List of all subscriptions with filters, detail view with editing capabilities.</li>
+<li><strong>Mollie Integration</strong>: Automatic recurring payments via credit card and SEPA direct debit.</li>
+<li><strong>Offline Payment Methods</strong>: Invoice and prepayment as alternative payment methods.</li>
+<li><strong>Flexible Intervals</strong>: Configurable delivery intervals from 1 to 8 weeks.</li>
+<li><strong>Subscription Discounts</strong>: Percentage base discount plus loyalty tiers.</li>
+<li><strong>Free Items</strong>: Free products with renewals.</li>
+<li><strong>Product Configuration</strong>: Subscription options directly on the product, including "subscription only" mode.</li>
+<li><strong>Email Notifications</strong>: Renewal reminder, cancellation, SEPA failure, price change.</li>
+<li><strong>Delivery Consolidation</strong>: Synchronise multiple subscriptions to a shared date.</li>
+<li><strong>Payment Status Polling</strong>: Automatic status updates via Mollie polling.</li>
+<li><strong>Prepayment Monitoring</strong>: Automatic detection of outstanding prepayments.</li>
+<li><strong>Change Log</strong>: Complete audit trail of all subscription changes.</li>
+<li><strong>Cart Integration</strong>: Subscription hints and payment method filtering at checkout.</li>
+</ul>
+<hr />
+<h2 id="version-history-summary">Version History Summary<a class="headerlink" href="#version-history-summary" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Release Date</th>
+<th>Highlights</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.3.2</td>
+<td>2026-04-24</td>
+<td>Fix PHP 8.1 deprecation in bundled Mollie library</td>
+</tr>
+<tr>
+<td>1.3.1</td>
+<td>2026-04-24</td>
+<td>Store release, PayPal admin label fix</td>
+</tr>
+<tr>
+<td>1.3.0</td>
+<td>2026-04-21</td>
+<td>Cart-wide subscription selector</td>
+</tr>
+<tr>
+<td>1.2.0</td>
+<td>2026-04-13</td>
+<td>Mollie PayPal + renewal shipping from initial order</td>
+</tr>
+<tr>
+<td>1.1.5</td>
+<td>2026-03-31</td>
+<td>Standalone Mollie via scoped vendor namespace</td>
+</tr>
+<tr>
+<td>1.1.4</td>
+<td>2026-03-31</td>
+<td>Mollie soft dependency, no more version conflicts</td>
+</tr>
+<tr>
+<td>1.1.3</td>
+<td>2026-03-31</td>
+<td>Fix payment handler compile error on SW &lt; 6.6.5</td>
+</tr>
+<tr>
+<td>1.1.2</td>
+<td>2026-03-31</td>
+<td>Shopware 6.6.0+ payment handler compatibility</td>
+</tr>
+<tr>
+<td>1.1.1</td>
+<td>2026-03-31</td>
+<td>Fix Mollie API version conflict</td>
+</tr>
+<tr>
+<td>1.1.0</td>
+<td>2026-03-31</td>
+<td>Per-option discounts, customer settings, admin fixes</td>
+</tr>
+<tr>
+<td>1.0.1</td>
+<td>2026-03-31</td>
+<td>Shopware 6.7 compatibility fixes</td>
+</tr>
+<tr>
+<td>1.0.0</td>
+<td>2026-03-30</td>
+<td>Initial release with full feature set</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="compatibility">Compatibility<a class="headerlink" href="#compatibility" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Plugin Version</th>
+<th>Shopware Version</th>
+<th>PHP Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.3.2</td>
+<td>6.6.0 – 6.7.x</td>
+<td>8.1+</td>
+</tr>
+<tr>
+<td>1.3.1</td>
+<td>6.6.0 – 6.7.x</td>
+<td>8.1+</td>
+</tr>
+<tr>
+<td>1.3.0</td>
+<td>6.6.0 – 6.7.x</td>
+<td>8.1+</td>
+</tr>
+<tr>
+<td>1.2.0</td>
+<td>6.6.0 – 6.7.x</td>
+<td>8.1+</td>
+</tr>
+<tr>
+<td>1.1.5</td>
+<td>6.6.0 – 6.7.x</td>
+<td>8.1+</td>
+</tr>
+<tr>
+<td>1.1.4</td>
+<td>6.6.0 – 6.7.x</td>
+<td>8.1+</td>
+</tr>
+<tr>
+<td>1.1.3</td>
+<td>6.6.0 – 6.7.x</td>
+<td>8.1+</td>
+</tr>
+<tr>
+<td>1.1.2</td>
+<td>6.6.0 – 6.7.x</td>
+<td>8.1+</td>
+</tr>
+<tr>
+<td>1.1.1</td>
+<td>6.6.0 – 6.7.x</td>
+<td>8.1+</td>
+</tr>
+<tr>
+<td>1.1.0</td>
+<td>6.6.0 – 6.7.x</td>
+<td>8.1+</td>
+</tr>
+<tr>
+<td>1.0.1</td>
+<td>6.6.0 – 6.7.x</td>
+<td>8.1+</td>
+</tr>
+<tr>
+<td>1.0.0</td>
+<td>6.6.0 – 6.7.x</td>
+<td>8.1+</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2026 Web Labels Webdesign GmbH
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://web-labels.de" target="_blank" rel="noopener" title="Web Labels Website" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://store.shopware.com/web-labels-webdesign-gmbh.html" target="_blank" rel="noopener" title="Shopware Store" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M21.5 181.1 78.3 67.4c10.9-21.7 33-35.4 57.3-35.4h304.9c24.2 0 46.4 13.7 57.2 35.4l56.8 113.7c3.6 7.2 5.5 15.1 5.5 23.2 0 27.3-21.2 49.7-48 51.6V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V256h-96v176c0 26.5-21.5 48-48 48H112c-26.5 0-48-21.5-48-48V255.9c-26.8-1.9-48-24.3-48-51.6 0-8 1.9-16 5.5-23.2M128 256v112c0 8.8 7.2 16 16 16h128c8.8 0 16-7.2 16-16V256z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://web-labels.de/impressum" target="_blank" rel="noopener" title="Impressum" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M384 32h128c17.7 0 32 14.3 32 32s-14.3 32-32 32H398.4c-5.2 25.8-22.9 47.1-46.4 57.3V448h160c17.7 0 32 14.3 32 32s-14.3 32-32 32H128c-17.7 0-32-14.3-32-32s14.3-32 32-32h160V153.3c-23.5-10.3-41.2-31.6-46.4-57.3H128c-17.7 0-32-14.3-32-32s14.3-32 32-32h128c14.6-19.4 37.8-32 64-32s49.4 12.6 64 32m55.6 288h144.8L512 195.8zm72.4 96c-62.9 0-115.2-34-126-78.9-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8L631.3 305c5.7 9.8 9.3 21.1 6.7 32.1-10.8 44.8-63.1 78.9-126 78.9M126.8 195.8 54.4 320h144.9zM.9 337.1c-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8L246.2 305c5.7 9.8 9.3 21.1 6.7 32.1-10.8 44.8-63.1 78.9-126 78.9S11.7 382 .9 337.1"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://web-labels.de/datenschutz" target="_blank" rel="noopener" title="Datenschutz" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M224 248a120 120 0 1 0 0-240 120 120 0 1 0 0 240m-29.7 56C95.8 304 16 383.8 16 482.3c0 16.4 13.3 29.7 29.7 29.7h251.5C261 469.4 240 414.5 240 356.4v-31.1c0-7.3 1-14.5 2.9-21.3zm251 184.5-13.3 6.3V306.7l96 32v19.6c0 55.8-32.2 106.5-82.7 130.3zm-23.4-229-112 37.3c-13.1 4.4-21.9 16.6-21.9 30.4v31.1c0 74.4 43 142.1 110.2 173.7l18.5 8.7c4.8 2.2 10 3.4 15.2 3.4s10.5-1.2 15.2-3.4l18.5-8.7C533 500.3 576 432.6 576 358.2v-31.1c0-13.8-8.8-26-21.9-30.4l-112-37.3c-6.6-2.2-13.7-2.2-20.2 0z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.prune", "navigation.indexes", "navigation.top", "search.highlight", "search.suggest", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../javascripts/plugin-filter.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,3834 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Dokumentation für Web Labels Shopware Plugins">
+      
+      
+      
+        <link rel="canonical" href="https://docs.web-labels.de/en/plugins/WebLa_Zusatzoptionen/how_to/">
+      
+      
+        <link rel="prev" href="../changelog/">
+      
+      
+        <link rel="next" href="../configuration/settings/">
+      
+      
+        
+          <link rel="alternate" href="../../../../plugins/WebLa_Zusatzoptionen/how_to/" hreflang="de">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>How-To Guide - Web Labels Shopware Plugins</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/plugin-cards.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+<!-- Privacy-friendly analytics by Plausible -->
+<script defer data-domain="docs.web-labels.de" src="https://plausible.buildit-consulting.com/js/script.file-downloads.hash.outbound-links.pageview-props.tagged-events.js"></script>
+<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="white">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#how-to-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../" title="Web Labels Shopware Plugins" class="md-header__button md-logo" aria-label="Web Labels Shopware Plugins" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Web Labels Shopware Plugins
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              How-To Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="white"  aria-label="Dunkelmodus aktivieren"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dunkelmodus aktivieren" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="black"  aria-label="Hellmodus aktivieren"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Hellmodus aktivieren" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../../plugins/WebLa_Zusatzoptionen/how_to/" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../BuildIT_ShareCart/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Plugins
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../" title="Web Labels Shopware Plugins" class="md-nav__button md-logo" aria-label="Web Labels Shopware Plugins" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    Web Labels Shopware Plugins
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugins
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Plugins
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../BuildIT_ShareCart/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Share your cart
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_AdcellProvisionsfreigabe/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADCELL Commission Approval
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_AdminProductFilters/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom fields in the admin product overview
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_BatchManagement/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Batch Management
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_BeautifiedSearch/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Search as Overlay
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_Blog/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_CategorieQuickFilter/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Category Quick Filter
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_CategorySorter/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Category Sorter
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_ContactFormFileUpload/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contact Form – File Upload
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_CurrencyChanger/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Currency Display
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_CustomerSpecificDiscounts/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Customer Specific Discounts
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_CustomerTaxCountry/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Customer Tax Country
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_DeliveryDateSelector/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preferred Delivery Date for Customers
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_ExportDiscount/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shopping Feed with Unique Discounts
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_FlyoutNavigation/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flyout Navigation
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_HomePageControl/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Homepage Configuration
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_ImageReviews/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Images in Product Reviews
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_IntelligentCrossSelling/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intelligent Cross-Selling
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_ManufacturerPages/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manufacturer Pages
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_MediaBooster/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Media Booster
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_ProductSliderAdvanced/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product Slider Advanced
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_Produktberater/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product Advisor
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_PropertyNotes/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Property Notes
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_SplitComission/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SplitCommission – Division of Line Items into Parts
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_Subscriptions/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Subscription Plugin
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_TaxCalculatorAndCountrySwitcher/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tax Calculator and Country Switcher
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_UTMHandler/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UTM Handler
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../WebLa_UltimativeBundlePlugin/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ultimate Bundle Plugin
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_29" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Additional Options
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_29" id="__nav_2_29_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_29_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_29">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Additional Options
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How-To Guide
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How-To Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-the-plugin-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the Plugin Works
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How the Plugin Works">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-flow-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Flow Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Workflows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Workflows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-set-up-simple-additional-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to: Set Up Simple Additional Options
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-set-up-country-specific-prices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to: Set Up Country-Specific Prices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-automatic-assignment-with-product-streams" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to: Automatic Assignment with Product Streams
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-create-dependent-options-multi-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to: Create Dependent Options (Multi-Level)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-define-incompatible-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to: Define Incompatible Options
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-set-up-quantity-based-prices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to: Set Up Quantity-Based Prices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-set-up-required-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to: Set Up Required Options
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Workflows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Workflows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#time-controlled-options-with-seeder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Time-Controlled Options with Seeder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rule-based-dynamic-pricing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rule-Based Dynamic Pricing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-to-avoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What to Avoid
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../configuration/settings/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../usage/usage/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usage
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-the-plugin-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the Plugin Works
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How the Plugin Works">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-flow-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Flow Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Workflows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Workflows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-set-up-simple-additional-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to: Set Up Simple Additional Options
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-set-up-country-specific-prices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to: Set Up Country-Specific Prices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-automatic-assignment-with-product-streams" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to: Automatic Assignment with Product Streams
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-create-dependent-options-multi-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to: Create Dependent Options (Multi-Level)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-define-incompatible-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to: Define Incompatible Options
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-set-up-quantity-based-prices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to: Set Up Quantity-Based Prices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-set-up-required-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to: Set Up Required Options
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Workflows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Workflows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#time-controlled-options-with-seeder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Time-Controlled Options with Seeder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rule-based-dynamic-pricing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rule-Based Dynamic Pricing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-to-avoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What to Avoid
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="how-to-guide">How-To Guide<a class="headerlink" href="#how-to-guide" title="Permanent link">&para;</a></h1>
+<p>This guide provides step-by-step workflows for common tasks with the Additional Options Plugin.</p>
+<hr />
+<h2 id="how-the-plugin-works">How the Plugin Works<a class="headerlink" href="#how-the-plugin-works" title="Permanent link">&para;</a></h2>
+<h3 id="data-flow-overview">Data Flow Overview<a class="headerlink" href="#data-flow-overview" title="Permanent link">&para;</a></h3>
+<p>The plugin extends the standard Shopware order process with configurable additional options:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[Customer selects product]
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    → [Option sets are loaded and displayed]
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    → [Customer selects options]
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    → [Options are added to cart]
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    → [Prices are calculated and validated]
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    → [Order is created with all options]
+</code></pre></div>
+<p><strong>Example Flow</strong>:</p>
+<ol>
+<li><strong>Product Page</strong>: Customer opens the detail page of a laptop</li>
+<li><strong>Load Options</strong>: Plugin checks if option sets are defined for this product</li>
+<li><strong>Filtering</strong>: Plugin filters options based on:</li>
+<li>Customer's delivery country</li>
+<li>Selected shipping method (if already chosen)</li>
+<li>Active rules</li>
+<li>Product incompatibilities</li>
+<li><strong>Display</strong>: Filtered options are displayed in accordion containers</li>
+<li><strong>Selection</strong>: Customer selects "2-Year Warranty" and "Assembly Service"</li>
+<li><strong>Cart</strong>: Customer clicks "Add to Cart"</li>
+<li>Main product is added</li>
+<li>Selected options are added as child items</li>
+<li><strong>Price Calculation</strong>: Plugin calculates total price:</li>
+<li>Laptop: €999.00</li>
+<li>
+<ul>
+<li>2-Year Warranty: €49.90</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>Assembly Service: €29.90</li>
+</ul>
+</li>
+<li>= Total: €1,078.80</li>
+<li><strong>Checkout</strong>: Customer completes order</li>
+<li><strong>Order</strong>: All items (main product + options) are saved in the order</li>
+</ol>
+<p><strong>Special Features</strong>:
+- Options can be changed in the cart at any time
+- When changing shipping method, options are automatically filtered again
+- When changing delivery country, prices are automatically adjusted
+- Required options are validated and prevent checkout if not selected</p>
+<hr />
+<h2 id="common-workflows">Common Workflows<a class="headerlink" href="#common-workflows" title="Permanent link">&para;</a></h2>
+<h3 id="how-to-set-up-simple-additional-options">How to: Set Up Simple Additional Options<a class="headerlink" href="#how-to-set-up-simple-additional-options" title="Permanent link">&para;</a></h3>
+<p><strong>Goal</strong>: Add additional options to a product (e.g., warranty extension)</p>
+<p><strong>Time Required</strong>: 5-10 minutes</p>
+<p><strong>Prerequisites</strong>:
+- Plugin is installed and activated
+- You have admin access to Shopware
+- Products are already created</p>
+<p><strong>Steps</strong>:</p>
+<ol>
+<li><strong>Open Product</strong></li>
+<li>Navigate to: <code>Catalogues → Products</code></li>
+<li>
+<p>Select the desired product from the list</p>
+</li>
+<li>
+<p><strong>Switch to Additional Options Tab</strong></p>
+</li>
+<li>Click on the <strong>Additional Options</strong> tab in the product view</li>
+<li>
+<p>If the tab is not visible: Check plugin installation and clear cache</p>
+</li>
+<li>
+<p><strong>Create Option Set</strong></p>
+</li>
+<li>Click <strong>Add Option Set</strong></li>
+<li>Enter a name: e.g., "Warranty Extension"</li>
+<li>Description (optional): e.g., "Extend your warranty by additional years"</li>
+<li>Type: Select <strong>Products</strong></li>
+<li>Multiple Selection: <strong>Disabled</strong> (only one warranty option should be selectable)</li>
+<li>
+<p>Click <strong>Save</strong></p>
+</li>
+<li>
+<p><strong>Add Options</strong></p>
+</li>
+<li>In the newly created set: Click <strong>Add Option</strong></li>
+<li>Select an existing product (e.g., "2-Year Warranty - €49.90")</li>
+<li>Enable <strong>Active</strong></li>
+<li>Set <strong>Sorting</strong> to 1</li>
+<li>Click <strong>Save</strong></li>
+<li>
+<p>Repeat the process for additional options (e.g., "3-Year Warranty - €79.90") with sorting 2</p>
+</li>
+<li>
+<p><strong>Clear Cache</strong></p>
+</li>
+<li>Navigate to: <code>Settings → System → Caches &amp; Indexes</code></li>
+<li>
+<p>Click <strong>Clear Cache</strong></p>
+</li>
+<li>
+<p><strong>Test</strong></p>
+</li>
+<li>Open the product page in the storefront</li>
+<li>Check if the options are displayed</li>
+<li>Test the selection and add the product to the cart</li>
+<li>Check in the cart if options are displayed correctly</li>
+</ol>
+<p><strong>Result</strong>: The product now shows an option set "Warranty Extension" with selectable warranty options. Customers can choose one option and the price is automatically added.</p>
+<p><strong>Troubleshooting</strong>:
+- Options not visible? → Clear cache and reload page
+- Prices missing? → Check if the selected product has a price
+- Set does not appear? → Ensure at least one option is active</p>
+<hr />
+<h3 id="how-to-set-up-country-specific-prices">How to: Set Up Country-Specific Prices<a class="headerlink" href="#how-to-set-up-country-specific-prices" title="Permanent link">&para;</a></h3>
+<p><strong>Goal</strong>: Set different prices for options depending on delivery country</p>
+<p><strong>Time Required</strong>: 10-15 minutes</p>
+<p><strong>Prerequisites</strong>:
+- Option set is already created
+- Options are added
+- Multiple countries are enabled in the sales channel</p>
+<p><strong>Steps</strong>:</p>
+<ol>
+<li><strong>Open Option</strong></li>
+<li>Navigate to: <code>Catalogues → Products → [Product] → Additional Options</code></li>
+<li>Open the option set</li>
+<li>
+<p>Click on the option for which you want to set country-specific prices</p>
+</li>
+<li>
+<p><strong>Add Country Configuration</strong></p>
+</li>
+<li>Scroll to the <strong>Country Configuration</strong> section</li>
+<li>
+<p>Click <strong>Add Country</strong></p>
+</li>
+<li>
+<p><strong>Define Country and Price</strong></p>
+</li>
+<li>Select the first country (e.g., <strong>Germany</strong>)</li>
+<li>Enter the price: e.g., €29.90</li>
+<li>
+<p>Click <strong>Save</strong></p>
+</li>
+<li>
+<p><strong>Add More Countries</strong></p>
+</li>
+<li>
+<p>Repeat steps 2-3 for additional countries:</p>
+<ul>
+<li><strong>Austria</strong>: €49.90</li>
+<li><strong>Switzerland</strong>: 59.90 CHF</li>
+<li><strong>Netherlands</strong>: €34.90</li>
+</ul>
+</li>
+<li>
+<p><strong>Keep Default Price</strong></p>
+</li>
+<li>The default product price applies to all countries for which NO country-specific price is defined</li>
+<li>
+<p>If you want the option to be ONLY available in certain countries:</p>
+<ul>
+<li>Enable <strong>Only available in configured countries</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Test</strong></p>
+</li>
+<li>Open the product page in the storefront</li>
+<li>Change the delivery country in the customer account or during checkout</li>
+<li>Check if the option price adjusts accordingly</li>
+</ol>
+<p><strong>Result</strong>: The option automatically displays the correct price based on the customer's delivery country. When changing the delivery country, the price is updated immediately.</p>
+<p><strong>Troubleshooting</strong>:
+- Price does not change? → Clear cache and reload
+- Wrong price? → Check the currency setting of the delivery country
+- Option not available? → "Only in configured countries" is enabled - add the country</p>
+<hr />
+<h3 id="how-to-automatic-assignment-with-product-streams">How to: Automatic Assignment with Product Streams<a class="headerlink" href="#how-to-automatic-assignment-with-product-streams" title="Permanent link">&para;</a></h3>
+<p><strong>Goal</strong>: Automatically assign option set to all products in a category</p>
+<p><strong>Time Required</strong>: 15-20 minutes</p>
+<p><strong>Prerequisites</strong>:
+- Option set is already created
+- Products are categorized
+- You understand the basics of product streams</p>
+<p><strong>Steps</strong>:</p>
+<ol>
+<li><strong>Create Product Stream</strong> (if not already available)</li>
+<li>Navigate to: <code>Catalogues → Dynamic Product Groups</code></li>
+<li>Click <strong>New Dynamic Product Group</strong></li>
+<li>Enter a name: e.g., "Electronics Products over €500"</li>
+<li>Add conditions:<ul>
+<li>Condition 1: Category = "Electronics"</li>
+<li>Condition 2: Price &gt; €500.00</li>
+</ul>
+</li>
+<li>Click <strong>Save</strong></li>
+<li>
+<p>Check the preview to see if the correct products are found</p>
+</li>
+<li>
+<p><strong>Create Option Seeder</strong></p>
+</li>
+<li>Navigate to: <code>Extensions → Option Seeder</code></li>
+<li>
+<p>Click <strong>Add Seeder</strong></p>
+</li>
+<li>
+<p><strong>Configure Seeder</strong></p>
+</li>
+<li><strong>Name</strong>: "Warranty for Electronics"</li>
+<li><strong>Option Set</strong>: Select the desired option set (e.g., "Warranty Extension")</li>
+<li><strong>Product Stream</strong>: Select the stream created in step 1</li>
+<li><strong>Active</strong>: Enable the seeder</li>
+<li><strong>Priority</strong>: 1 (lower number = higher priority)</li>
+<li><strong>Date (From)</strong>: Leave empty or set a start date</li>
+<li><strong>Date (To)</strong>: Leave empty or set an end date for time-limited promotions</li>
+<li>
+<p>Click <strong>Save</strong></p>
+</li>
+<li>
+<p><strong>Start Synchronization</strong></p>
+</li>
+<li><strong>Manual</strong>: Click <strong>Synchronize</strong> in the seeder list for the created seeder</li>
+<li><strong>Automatic</strong>: Wait for the next automatic synchronization (runs hourly)</li>
+<li>
+<p>Status changes to "Processing" and after completion to "Done"</p>
+</li>
+<li>
+<p><strong>Check Result</strong></p>
+</li>
+<li>Open a product that is included in the product stream</li>
+<li>Switch to the <strong>Additional Options</strong> tab</li>
+<li>The option set should now be automatically assigned</li>
+<li>
+<p>Check 2-3 more products to be sure</p>
+</li>
+<li>
+<p><strong>Storefront Test</strong></p>
+</li>
+<li>Open a product in the storefront</li>
+<li>Check if the options are displayed correctly</li>
+<li>Test the functionality</li>
+</ol>
+<p><strong>Result</strong>: The option set is automatically assigned to all products that meet the product stream conditions. New products that later meet the conditions receive the set at the next synchronization.</p>
+<p><strong>Troubleshooting</strong>:
+- Seeder not running? → Check if "Active" is enabled
+- Products do not receive the set? → Check the product stream for correct conditions
+- Synchronization takes long? → Normal for large product catalogs (several thousand products)
+- Set assigned twice? → Check if not assigned both manually AND via seeder</p>
+<hr />
+<h3 id="how-to-create-dependent-options-multi-level">How to: Create Dependent Options (Multi-Level)<a class="headerlink" href="#how-to-create-dependent-options-multi-level" title="Permanent link">&para;</a></h3>
+<p><strong>Goal</strong>: Create options that only appear when a parent option is selected</p>
+<p><strong>Time Required</strong>: 15-20 minutes</p>
+<p><strong>Prerequisites</strong>:
+- Option set is created
+- At least one option is available</p>
+<p><strong>Example Scenario</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Level 1: &quot;Would you like a warranty extension?&quot; (Yes/No)
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  └─ Level 2: &quot;Choose the warranty duration&quot; (2 Years / 3 Years)
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>      └─ Level 3: &quot;With On-Site Service?&quot; (Yes / No)
+</code></pre></div></p>
+<p><strong>Steps</strong>:</p>
+<ol>
+<li><strong>Level 1: Create Main Option</strong></li>
+<li>Navigate to: <code>Catalogues → Products → [Product] → Additional Options</code></li>
+<li>Open the option set</li>
+<li>Click <strong>Add Option</strong></li>
+<li>Select a product: e.g., "Warranty Basic" (Price: €0.00)</li>
+<li><strong>Active</strong>: Enabled</li>
+<li><strong>Auto-Selected</strong>: Disabled</li>
+<li>Note the <strong>ID</strong> of this option (will be needed later)</li>
+<li>
+<p>Click <strong>Save</strong></p>
+</li>
+<li>
+<p><strong>Level 2: Create Dependent Option</strong></p>
+</li>
+<li>Click <strong>Add Option</strong> again</li>
+<li>Select a product: e.g., "2-Year Warranty" (Price: €49.90)</li>
+<li><strong>Active</strong>: Enabled</li>
+<li>Scroll to the <strong>Requirements</strong> section</li>
+<li><strong>Requirement - Parent ID</strong>: Enter the ID from step 1</li>
+<li><strong>Requirement - Active</strong>: Enabled (option must be active)</li>
+<li><strong>Requirement - Selected</strong>: Enabled (parent option must be selected)</li>
+<li>
+<p>Click <strong>Save</strong></p>
+</li>
+<li>
+<p><strong>Add Another Level-2 Option</strong></p>
+</li>
+<li>Repeat step 2 for "3-Year Warranty" (Price: €79.90)</li>
+<li>Use the same Parent ID</li>
+<li>
+<p>Click <strong>Save</strong></p>
+</li>
+<li>
+<p><strong>Level 3: Even Deeper Dependency</strong></p>
+</li>
+<li>Note the ID of "2-Year Warranty" from step 2</li>
+<li>Click <strong>Add Option</strong></li>
+<li>Select a product: e.g., "On-Site Service" (Price: €39.90)</li>
+<li><strong>Active</strong>: Enabled</li>
+<li><strong>Requirement - Parent ID</strong>: Enter the ID of "2-Year Warranty"</li>
+<li><strong>Requirement - Selected</strong>: Enabled</li>
+<li>
+<p>Click <strong>Save</strong></p>
+</li>
+<li>
+<p><strong>Test Logic in Backend</strong></p>
+</li>
+<li>
+<p>The option hierarchy should now look like this:
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Warranty Basic (ID: 123)
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  ├─ 2-Year Warranty (ID: 124) [Parent: 123]
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  │   └─ On-Site Service (ID: 126) [Parent: 124]
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  └─ 3-Year Warranty (ID: 125) [Parent: 123]
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Storefront Test</strong></p>
+</li>
+<li>Open the product page in the storefront</li>
+<li>Initially only "Warranty Basic" should be visible</li>
+<li><strong>Test 1</strong>: Select "Warranty Basic"<ul>
+<li>→ "2-Year Warranty" and "3-Year Warranty" are displayed</li>
+</ul>
+</li>
+<li><strong>Test 2</strong>: Select "2-Year Warranty"<ul>
+<li>→ "On-Site Service" is displayed</li>
+</ul>
+</li>
+<li><strong>Test 3</strong>: Deselect "2-Year Warranty"<ul>
+<li>→ "On-Site Service" disappears again</li>
+</ul>
+</li>
+</ol>
+<p><strong>Result</strong>: Options appear step-by-step based on the customer's selection. This reduces complexity and guides the customer through the selection process.</p>
+<p><strong>Troubleshooting</strong>:
+- Dependent option does not appear? → Check the Parent ID (must match exactly)
+- Option always appears? → "Requirement - Selected" must be enabled
+- Wrong hierarchy? → Note all IDs and check the parent links</p>
+<hr />
+<h3 id="how-to-define-incompatible-options">How to: Define Incompatible Options<a class="headerlink" href="#how-to-define-incompatible-options" title="Permanent link">&para;</a></h3>
+<p><strong>Goal</strong>: Prevent certain options from being selected simultaneously</p>
+<p><strong>Time Required</strong>: 5-10 minutes</p>
+<p><strong>Prerequisites</strong>:
+- Option set with multiple options is available</p>
+<p><strong>Steps</strong>:</p>
+<ol>
+<li><strong>Open First Option</strong></li>
+<li>Navigate to: <code>Catalogues → Products → [Product] → Additional Options</code></li>
+<li>Open the option set (e.g., "Warranty Extension")</li>
+<li>
+<p>Click on the first option (e.g., "2-Year Warranty")</p>
+</li>
+<li>
+<p><strong>Define Incompatible Products</strong></p>
+</li>
+<li>Scroll to the <strong>Incompatible Products</strong> section</li>
+<li>Click <strong>Add Product</strong></li>
+<li>Select the products that should not be selectable simultaneously:<ul>
+<li>e.g., "3-Year Warranty" (ID: xyz)</li>
+</ul>
+</li>
+<li>
+<p>Click <strong>Save</strong></p>
+</li>
+<li>
+<p><strong>Set Up Mutual Incompatibility</strong></p>
+</li>
+<li>Now open the second option (e.g., "3-Year Warranty")</li>
+<li>Scroll to the <strong>Incompatible Products</strong> section</li>
+<li>Click <strong>Add Product</strong></li>
+<li>Select the first option: "2-Year Warranty"</li>
+<li>Click <strong>Save</strong></li>
+<li>
+<p><strong>Important</strong>: Incompatibility must be defined in BOTH directions</p>
+</li>
+<li>
+<p><strong>Adjust Option Set</strong></p>
+</li>
+<li>Ensure the set is set to <strong>Multiple Selection</strong></li>
+<li>
+<p>With single selection (radio buttons), incompatibility is not necessary</p>
+</li>
+<li>
+<p><strong>Test</strong></p>
+</li>
+<li>Open the product page in the storefront</li>
+<li><strong>Test 1</strong>: Select "2-Year Warranty"<ul>
+<li>→ "3-Year Warranty" is grayed out</li>
+</ul>
+</li>
+<li><strong>Test 2</strong>: Remove "2-Year Warranty"<ul>
+<li>→ "3-Year Warranty" becomes selectable again</li>
+</ul>
+</li>
+<li><strong>Test 3</strong>: Select "3-Year Warranty"<ul>
+<li>→ "2-Year Warranty" is grayed out</li>
+</ul>
+</li>
+</ol>
+<p><strong>Result</strong>: Customers can only select one of the incompatible options. When they select one option, the incompatible options are automatically grayed out and cannot be selected.</p>
+<p><strong>Troubleshooting</strong>:
+- Incompatibility only works one-way? → Check if both directions are defined
+- Options are always grayed out? → Check if too many incompatibilities were accidentally defined
+- No effect? → Clear cache and reload page</p>
+<hr />
+<h3 id="how-to-set-up-quantity-based-prices">How to: Set Up Quantity-Based Prices<a class="headerlink" href="#how-to-set-up-quantity-based-prices" title="Permanent link">&para;</a></h3>
+<p><strong>Goal</strong>: Apply discounts for higher quantities of the main product to the options</p>
+<p><strong>Time Required</strong>: 10-15 minutes</p>
+<p><strong>Prerequisites</strong>:
+- Option set with options is available
+- You understand quantity tiering in Shopware</p>
+<p><strong>Example Scenario</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Customer buys 1-5 laptops    → Warranty costs €49.90 per piece
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Customer buys 6-10 laptops   → Warranty costs €44.90 per piece
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>Customer buys 11+ laptops    → Warranty costs €39.90 per piece
+</code></pre></div></p>
+<p><strong>Steps</strong>:</p>
+<ol>
+<li><strong>Open Option</strong></li>
+<li>Navigate to: <code>Catalogues → Products → [Product] → Additional Options</code></li>
+<li>Open the option set</li>
+<li>
+<p>Click on the option for which you want to set tiered pricing</p>
+</li>
+<li>
+<p><strong>Add Price Tiering - Tier 1</strong></p>
+</li>
+<li>Scroll to the <strong>Price Tiering</strong> section</li>
+<li>Click <strong>Add Price</strong></li>
+<li><strong>From Quantity</strong>: 1</li>
+<li><strong>To Quantity</strong>: 5</li>
+<li><strong>Price</strong>: €49.90</li>
+<li>
+<p>Click <strong>Save</strong></p>
+</li>
+<li>
+<p><strong>Add More Tiers - Tier 2</strong></p>
+</li>
+<li>Click <strong>Add Price</strong> again</li>
+<li><strong>From Quantity</strong>: 6</li>
+<li><strong>To Quantity</strong>: 10</li>
+<li><strong>Price</strong>: €44.90</li>
+<li>
+<p>Click <strong>Save</strong></p>
+</li>
+<li>
+<p><strong>Add More Tiers - Tier 3</strong></p>
+</li>
+<li>Click <strong>Add Price</strong> again</li>
+<li><strong>From Quantity</strong>: 11</li>
+<li><strong>To Quantity</strong>: Leave empty (means: from 11 without upper limit)</li>
+<li><strong>Price</strong>: €39.90</li>
+<li>
+<p>Click <strong>Save</strong></p>
+</li>
+<li>
+<p><strong>Check Overview</strong></p>
+</li>
+<li>
+<p>The tiers should now be complete:
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Tier 1:  1-5 pieces   → €49.90
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Tier 2:  6-10 pieces  → €44.90
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Tier 3:  11+ pieces   → €39.90
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Test</strong></p>
+</li>
+<li>Open the product page in the storefront</li>
+<li><strong>Test 1</strong>: Add 3 laptops with warranty to cart<ul>
+<li>→ Price per warranty: €49.90</li>
+</ul>
+</li>
+<li><strong>Test 2</strong>: Increase quantity to 7 laptops<ul>
+<li>→ Price per warranty: €44.90</li>
+</ul>
+</li>
+<li><strong>Test 3</strong>: Increase quantity to 12 laptops<ul>
+<li>→ Price per warranty: €39.90</li>
+</ul>
+</li>
+</ol>
+<p><strong>Result</strong>: Option prices automatically adjust to the quantity of the main product. Customers automatically receive discounts at higher quantities.</p>
+<p><strong>Troubleshooting</strong>:
+- Price does not change? → Clear cache and reload cart
+- Wrong price? → Check quantity ranges for overlaps or gaps
+- Tiers trigger too early/late? → Check "From/To Quantity" values</p>
+<hr />
+<h3 id="how-to-set-up-required-options">How to: Set Up Required Options<a class="headerlink" href="#how-to-set-up-required-options" title="Permanent link">&para;</a></h3>
+<p><strong>Goal</strong>: Force customers to select an option before they can purchase the product</p>
+<p><strong>Time Required</strong>: 5 minutes</p>
+<p><strong>Prerequisites</strong>:
+- Option set is available
+- Set is set to <strong>Single Selection</strong> (not multiple selection)</p>
+<p><strong>Steps</strong>:</p>
+<ol>
+<li><strong>Open Option</strong></li>
+<li>Navigate to: <code>Catalogues → Products → [Product] → Additional Options</code></li>
+<li>Open the option set</li>
+<li>
+<p>Click on the option that should be required</p>
+</li>
+<li>
+<p><strong>Enable Required Field</strong></p>
+</li>
+<li>Enable the checkbox <strong>Required</strong></li>
+<li>Optional: Also enable <strong>Auto-Selected</strong> (recommended)</li>
+<li>
+<p>Click <strong>Save</strong></p>
+</li>
+<li>
+<p><strong>Adjust Set Settings</strong></p>
+</li>
+<li>Open the option set settings</li>
+<li>Enable <strong>Container Open</strong></li>
+<li>This ensures required options are immediately visible</li>
+<li>
+<p>Click <strong>Save</strong></p>
+</li>
+<li>
+<p><strong>Test - Validation</strong></p>
+</li>
+<li>Open the product page in the storefront</li>
+<li>The required option should be pre-selected and grayed out</li>
+<li>Try to add the product to cart WITHOUT selecting another option</li>
+<li>It should work because the required option is already selected</li>
+<li>Select another option (with single selection, the required option is deselected)</li>
+<li>Now try to add the product to cart</li>
+<li>
+<p>An error message should appear: "Please select an option from the set..."</p>
+</li>
+<li>
+<p><strong>Test Cart Validation</strong></p>
+</li>
+<li>Add the product with a selected option to the cart</li>
+<li>Try to remove the option in the cart</li>
+<li>A validation message should appear</li>
+</ol>
+<p><strong>Result</strong>: Customers must select an option from the set before they can purchase the product. This is useful for legally required options or product configurations.</p>
+<p><strong>Troubleshooting</strong>:
+- Validation does not work? → Check if "Required" is really enabled
+- Option can still be deselected? → Check if set is on "Single Selection"
+- Error message does not appear? → Clear cache and test again</p>
+<hr />
+<h2 id="advanced-workflows">Advanced Workflows<a class="headerlink" href="#advanced-workflows" title="Permanent link">&para;</a></h2>
+<h3 id="time-controlled-options-with-seeder">Time-Controlled Options with Seeder<a class="headerlink" href="#time-controlled-options-with-seeder" title="Permanent link">&para;</a></h3>
+<p><strong>Complexity</strong>: Medium</p>
+<p><strong>When to Use</strong>: Seasonal offers or time-limited services (e.g., "Christmas Gift Wrapping only in December")</p>
+<p><strong>Steps</strong>:</p>
+<ol>
+<li>Create an option set with time-limited options</li>
+<li>Create an Option Seeder under <code>Extensions → Option Seeder</code></li>
+<li>Select the option set and a product stream</li>
+<li>Set <strong>Date (From)</strong>: e.g., 01.12.2026</li>
+<li>Set <strong>Date (To)</strong>: e.g., 31.12.2026</li>
+<li>Enable the seeder</li>
+<li>The seeder automatically assigns the options only in the defined period</li>
+<li>After the date expires, the options are automatically removed again</li>
+</ol>
+<p><strong>Note</strong>: Synchronization occurs automatically. Plan the start time in advance.</p>
+<hr />
+<h3 id="rule-based-dynamic-pricing">Rule-Based Dynamic Pricing<a class="headerlink" href="#rule-based-dynamic-pricing" title="Permanent link">&para;</a></h3>
+<p><strong>Complexity</strong>: High</p>
+<p><strong>When to Use</strong>: Customer group-specific prices or cart value-dependent discounts</p>
+<p><strong>Steps</strong>:</p>
+<ol>
+<li>Create a rule under <code>Settings → Shopware → Rules</code>:</li>
+<li>Name: e.g., "Free Service from €1,000 Cart Value"</li>
+<li>Condition: "Cart Value &gt;= €1,000"</li>
+<li>Create a second rule:</li>
+<li>Name: e.g., "Disable Service under €1,000"</li>
+<li>Condition: "Cart Value &lt; €1,000"</li>
+<li>Link the second rule with an option:</li>
+<li>Open the option in edit mode</li>
+<li><strong>Deactivate by Rule</strong>: Select "Disable Service under €1,000"</li>
+<li>Create a promotion for the free service:</li>
+<li><code>Marketing → Promotions</code></li>
+<li>Create new promotion</li>
+<li>Rule: "Free Service from €1,000 Cart Value"</li>
+<li>Discount: 100% on specific product (service option)</li>
+<li>Test with different cart values</li>
+</ol>
+<hr />
+<h2 id="quick-reference">Quick Reference<a class="headerlink" href="#quick-reference" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Key Steps</th>
+<th>Required Settings</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add simple options</td>
+<td>Open product → Additional Options tab → Create set → Add options</td>
+<td>Active, Sorting</td>
+</tr>
+<tr>
+<td>Country-specific prices</td>
+<td>Open option → Country configuration → Add country + price</td>
+<td>Country, Price</td>
+</tr>
+<tr>
+<td>Automatic assignment</td>
+<td>Create product stream → Create seeder → Synchronize</td>
+<td>Active, Product Stream</td>
+</tr>
+<tr>
+<td>Dependent options</td>
+<td>Create parent option → Link child option with Parent ID</td>
+<td>Parent ID, Requirement Selected</td>
+</tr>
+<tr>
+<td>Incompatible options</td>
+<td>Option A → Add incompatibility to B → Option B → Add incompatibility to A</td>
+<td>Incompatible Products (both directions)</td>
+</tr>
+<tr>
+<td>Quantity tier pricing</td>
+<td>Open option → Price tiering → Multiple tiers with From/To quantity</td>
+<td>From/To Quantity, Price</td>
+</tr>
+<tr>
+<td>Required options</td>
+<td>Open option → Enable "Required" → Set "Container Open"</td>
+<td>Required, Container Open</td>
+</tr>
+<tr>
+<td>Shipping restrictions</td>
+<td>Open option → Shipping methods → Select allowed methods</td>
+<td>Shipping Methods</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Clear Naming</strong>: Use meaningful names for sets and options (e.g., "2-Year Warranty Extension" instead of "Option 1")</p>
+</li>
+<li>
+<p><strong>Test Before Going Live</strong>: Thoroughly test all options in the storefront before releasing them to customers</p>
+</li>
+<li>
+<p><strong>Cache Management</strong>: Always clear the cache after changes to options or seeders</p>
+</li>
+<li>
+<p><strong>Use Quantity Tiering Wisely</strong>: Define gapless quantity ranges to avoid price jumps</p>
+</li>
+<li>
+<p><strong>Visual Hierarchy</strong>: Use sorting to display more important options higher up</p>
+</li>
+<li>
+<p><strong>Validate Product Streams</strong>: Check product streams in preview before using them in seeders</p>
+</li>
+<li>
+<p><strong>Document Incompatibilities</strong>: Keep track of which options are mutually exclusive - this helps with future adjustments</p>
+</li>
+<li>
+<p><strong>Use Required Fields Sparingly</strong>: Only use required fields when truly necessary - too many required fields can deter customers</p>
+</li>
+<li>
+<p><strong>Container Opening</strong>: Only enable "Container Open" for important sets (required fields) - too many open containers look cluttered</p>
+</li>
+<li>
+<p><strong>Communicate Shipping Restrictions</strong>: Inform customers in the set description if options are shipping-method-dependent</p>
+</li>
+</ol>
+<h2 id="what-to-avoid">What to Avoid<a class="headerlink" href="#what-to-avoid" title="Permanent link">&para;</a></h2>
+<ul>
+<li>❌ <strong>Too many options per set</strong>: More than 5-7 options become confusing - better split into multiple sets</li>
+<li>❌ <strong>Overlapping quantity tiers</strong>: Avoid gaps or overlaps in quantity ranges (e.g., 1-5 and 4-10)</li>
+<li>❌ <strong>Circular dependencies</strong>: Option A must not depend on Option B if Option B depends on Option A</li>
+<li>❌ <strong>Missing reverse direction for incompatibilities</strong>: If Option A is incompatible with B, B must also be incompatible with A</li>
+<li>❌ <strong>Not clearing cache</strong>: After changes ALWAYS clear the cache, otherwise changes will not be visible</li>
+<li>❌ <strong>Untested product streams</strong>: Always test product streams before using them in seeders - faulty streams can lead to incorrect assignments</li>
+<li>❌ <strong>Price €0.00 for free options without rule</strong>: Better: Create a rule for "free" - this keeps it traceable why the option is free</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2026 Web Labels Webdesign GmbH
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://web-labels.de" target="_blank" rel="noopener" title="Web Labels Website" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://store.shopware.com/web-labels-webdesign-gmbh.html" target="_blank" rel="noopener" title="Shopware Store" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M21.5 181.1 78.3 67.4c10.9-21.7 33-35.4 57.3-35.4h304.9c24.2 0 46.4 13.7 57.2 35.4l56.8 113.7c3.6 7.2 5.5 15.1 5.5 23.2 0 27.3-21.2 49.7-48 51.6V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V256h-96v176c0 26.5-21.5 48-48 48H112c-26.5 0-48-21.5-48-48V255.9c-26.8-1.9-48-24.3-48-51.6 0-8 1.9-16 5.5-23.2M128 256v112c0 8.8 7.2 16 16 16h128c8.8 0 16-7.2 16-16V256z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://web-labels.de/impressum" target="_blank" rel="noopener" title="Impressum" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M384 32h128c17.7 0 32 14.3 32 32s-14.3 32-32 32H398.4c-5.2 25.8-22.9 47.1-46.4 57.3V448h160c17.7 0 32 14.3 32 32s-14.3 32-32 32H128c-17.7 0-32-14.3-32-32s14.3-32 32-32h160V153.3c-23.5-10.3-41.2-31.6-46.4-57.3H128c-17.7 0-32-14.3-32-32s14.3-32 32-32h128c14.6-19.4 37.8-32 64-32s49.4 12.6 64 32m55.6 288h144.8L512 195.8zm72.4 96c-62.9 0-115.2-34-126-78.9-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8L631.3 305c5.7 9.8 9.3 21.1 6.7 32.1-10.8 44.8-63.1 78.9-126 78.9M126.8 195.8 54.4 320h144.9zM.9 337.1c-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8L246.2 305c5.7 9.8 9.3 21.1 6.7 32.1-10.8 44.8-63.1 78.9-126 78.9S11.7 382 .9 337.1"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://web-labels.de/datenschutz" target="_blank" rel="noopener" title="Datenschutz" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M224 248a120 120 0 1 0 0-240 120 120 0 1 0 0 240m-29.7 56C95.8 304 16 383.8 16 482.3c0 16.4 13.3 29.7 29.7 29.7h251.5C261 469.4 240 414.5 240 356.4v-31.1c0-7.3 1-14.5 2.9-21.3zm251 184.5-13.3 6.3V306.7l96 32v19.6c0 55.8-32.2 106.5-82.7 130.3zm-23.4-229-112 37.3c-13.1 4.4-21.9 16.6-21.9 30.4v31.1c0 74.4 43 142.1 110.2 173.7l18.5 8.7c4.8 2.2 10 3.4 15.2 3.4s10.5-1.2 15.2-3.4l18.5-8.7C533 500.3 576 432.6 576 358.2v-31.1c0-13.8-8.8-26-21.9-30.4l-112-37.3c-6.6-2.2-13.7-2.2-20.2 0z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.prune", "navigation.indexes", "navigation.top", "search.highlight", "search.suggest", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../javascripts/plugin-filter.js"></script>
+      
+    
+  </body>
+</html>

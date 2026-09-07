@@ -1,0 +1,3984 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Dokumentation für Web Labels Shopware Plugins">
+      
+      
+      
+        <link rel="canonical" href="https://docs.web-labels.de/plugins/WebLa_CustomerSpecificDiscounts/usage/usage/">
+      
+      
+        <link rel="prev" href="../../configuration/settings/">
+      
+      
+        <link rel="next" href="../../../WebLa_CustomerTaxCountry/">
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="de">
+        
+          <link rel="alternate" href="../../../../en/plugins/WebLa_CustomerSpecificDiscounts/usage/usage/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Nutzungsanleitung - Web Labels Shopware Plugins</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/plugin-cards.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+<!-- Privacy-friendly analytics by Plausible -->
+<script defer data-domain="docs.web-labels.de" src="https://plausible.buildit-consulting.com/js/script.file-downloads.hash.outbound-links.pageview-props.tagged-events.js"></script>
+<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="white">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#nutzungsanleitung" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="../../../.." title="Web Labels Shopware Plugins" class="md-header__button md-logo" aria-label="Web Labels Shopware Plugins" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Web Labels Shopware Plugins
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Nutzungsanleitung
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="white"  aria-label="Dunkelmodus aktivieren"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dunkelmodus aktivieren" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="black"  aria-label="Hellmodus aktivieren"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Hellmodus aktivieren" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Sprache wechseln">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../en/plugins/WebLa_CustomerSpecificDiscounts/usage/usage/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Hauptnavigation" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../BuildIT_ShareCart/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Plugins
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Web Labels Shopware Plugins" class="md-nav__button md-logo" aria-label="Web Labels Shopware Plugins" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    Web Labels Shopware Plugins
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugins
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Plugins
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../BuildIT_ShareCart/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teile deinen Warenkorb
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_AdcellProvisionsfreigabe/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADCELL Provisionsfreigabe
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_AdminProductFilters/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zusatzfelder in der Admin-Produktübersicht
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_BatchManagement/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Charge-Management
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_BeautifiedSearch/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Suche als Overlay
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_Blog/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_CategorieQuickFilter/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kategorie Schnellauswahl
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_CategorySorter/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kategorie-Sortierer
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_ContactFormFileUpload/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kontaktformular – Datei-Upload
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_CurrencyChanger/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Währungsanzeige
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_11" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kundenspezifische Rabatte
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_11" id="__nav_2_11_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_11_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Kundenspezifische Rabatte
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how_to/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anleitungen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../configuration/settings/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_11_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_11_5" id="__nav_2_11_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usage
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_11_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_11_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Usage
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nutzungsanleitung
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nutzungsanleitung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inhaltsverzeichnis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inhaltsverzeichnis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rabattarten-im-uberblick" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rabattarten im Überblick
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#individuelle-kundenrabatte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Individuelle Kundenrabatte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Individuelle Kundenrabatte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#was-sie-bewirken" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Was sie bewirken
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#so-verwenden-sie-sie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        So verwenden Sie sie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wichtige-hinweise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wichtige Hinweise
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipps-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipps &amp; Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kundengruppen-rabatte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kundengruppen-Rabatte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kundengruppen-Rabatte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#was-sie-bewirken_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Was sie bewirken
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#so-verwenden-sie-sie_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        So verwenden Sie sie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unterschied-zu-individuellen-rabatten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unterschied zu individuellen Rabatten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipps-best-practices_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipps &amp; Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#produktspezifische-rabatte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Produktspezifische Rabatte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Produktspezifische Rabatte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#was-sie-bewirken_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Was sie bewirken
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#so-verwenden-sie-sie_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        So verwenden Sie sie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wichtige-hinweise_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wichtige Hinweise
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#globale-kundenrabatte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Globale Kundenrabatte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Globale Kundenrabatte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#was-sie-bewirken_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Was sie bewirken
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#so-verwenden-sie-sie_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        So verwenden Sie sie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anwendungsbeispiel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anwendungsbeispiel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#globale-gruppenrabatte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Globale Gruppenrabatte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Globale Gruppenrabatte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#was-sie-bewirken_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Was sie bewirken
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#so-verwenden-sie-sie_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        So verwenden Sie sie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wichtige-hinweise_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wichtige Hinweise
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gast-rabatte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gast-Rabatte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gast-Rabatte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#was-sie-bewirken_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Was sie bewirken
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#so-verwenden-sie-sie_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        So verwenden Sie sie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#so-funktioniert-es" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        So funktioniert es
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anwendungsbeispiel_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anwendungsbeispiel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wichtige-hinweise_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wichtige Hinweise
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storefront-anzeige" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Storefront-Anzeige
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Storefront-Anzeige">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#produktlisting-und-produktseite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Produktlisting und Produktseite
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warenkorb-und-checkout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Warenkorb und Checkout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gesamtersparnis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gesamtersparnis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fehlerbehebung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fehlerbehebung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fehlerbehebung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rabatt-wird-nicht-angezeigt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rabatt wird nicht angezeigt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#falscher-rabatt-wird-angewendet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Falscher Rabatt wird angewendet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rabatt-erscheint-doppelt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rabatt erscheint doppelt
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verwandte-dokumentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verwandte Dokumentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_CustomerTaxCountry/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Customer Tax Country
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_DeliveryDateSelector/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wunsch-Lieferdatum für Kunden
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_ExportDiscount/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shopping Feed mit einzigartigen Rabatten
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_FlyoutNavigation/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flyout Navigation
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_HomePageControl/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Startseiten Steuerung
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_ImageReviews/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bilder in Produktbewertungen
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_IntelligentCrossSelling/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intelligentes Cross-Selling
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_ManufacturerPages/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Herstellerseiten
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_MediaBooster/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Media Booster
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_ProductSliderAdvanced/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product Slider Advanced
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_Produktberater/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produktberater
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_PropertyNotes/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hinweise zu Eigenschaften
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_SplitComission/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SplitCommission – Aufteilung der Einzelposten in Teile
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_Subscriptions/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Abonnement Plugin
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_TaxCalculatorAndCountrySwitcher/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Steuernachkalkulation und Lieferländer
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_UTMHandler/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UTM-Handler
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_UltimativeBundlePlugin/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ultimative Bundle Plugin
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_Zusatzoptionen/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zusatzoptionen
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inhaltsverzeichnis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inhaltsverzeichnis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rabattarten-im-uberblick" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rabattarten im Überblick
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#individuelle-kundenrabatte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Individuelle Kundenrabatte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Individuelle Kundenrabatte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#was-sie-bewirken" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Was sie bewirken
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#so-verwenden-sie-sie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        So verwenden Sie sie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wichtige-hinweise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wichtige Hinweise
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipps-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipps &amp; Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kundengruppen-rabatte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kundengruppen-Rabatte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kundengruppen-Rabatte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#was-sie-bewirken_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Was sie bewirken
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#so-verwenden-sie-sie_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        So verwenden Sie sie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unterschied-zu-individuellen-rabatten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unterschied zu individuellen Rabatten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipps-best-practices_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipps &amp; Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#produktspezifische-rabatte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Produktspezifische Rabatte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Produktspezifische Rabatte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#was-sie-bewirken_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Was sie bewirken
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#so-verwenden-sie-sie_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        So verwenden Sie sie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wichtige-hinweise_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wichtige Hinweise
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#globale-kundenrabatte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Globale Kundenrabatte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Globale Kundenrabatte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#was-sie-bewirken_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Was sie bewirken
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#so-verwenden-sie-sie_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        So verwenden Sie sie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anwendungsbeispiel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anwendungsbeispiel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#globale-gruppenrabatte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Globale Gruppenrabatte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Globale Gruppenrabatte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#was-sie-bewirken_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Was sie bewirken
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#so-verwenden-sie-sie_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        So verwenden Sie sie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wichtige-hinweise_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wichtige Hinweise
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gast-rabatte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gast-Rabatte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gast-Rabatte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#was-sie-bewirken_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Was sie bewirken
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#so-verwenden-sie-sie_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        So verwenden Sie sie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#so-funktioniert-es" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        So funktioniert es
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anwendungsbeispiel_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anwendungsbeispiel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wichtige-hinweise_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wichtige Hinweise
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storefront-anzeige" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Storefront-Anzeige
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Storefront-Anzeige">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#produktlisting-und-produktseite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Produktlisting und Produktseite
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warenkorb-und-checkout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Warenkorb und Checkout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gesamtersparnis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gesamtersparnis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fehlerbehebung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fehlerbehebung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fehlerbehebung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rabatt-wird-nicht-angezeigt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rabatt wird nicht angezeigt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#falscher-rabatt-wird-angewendet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Falscher Rabatt wird angewendet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rabatt-erscheint-doppelt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rabatt erscheint doppelt
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verwandte-dokumentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verwandte Dokumentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="nutzungsanleitung">Nutzungsanleitung<a class="headerlink" href="#nutzungsanleitung" title="Permanent link">&para;</a></h1>
+<p>Diese Anleitung behandelt alle Funktionen und Möglichkeiten von Kundenspezifische Rabatte.</p>
+<hr />
+<h2 id="inhaltsverzeichnis">Inhaltsverzeichnis<a class="headerlink" href="#inhaltsverzeichnis" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#rabattarten-im-überblick">Rabattarten im Überblick</a></li>
+<li><a href="#individuelle-kundenrabatte">Individuelle Kundenrabatte</a></li>
+<li><a href="#kundengruppen-rabatte">Kundengruppen-Rabatte</a></li>
+<li><a href="#produktspezifische-rabatte">Produktspezifische Rabatte</a></li>
+<li><a href="#globale-kundenrabatte">Globale Kundenrabatte</a></li>
+<li><a href="#globale-gruppenrabatte">Globale Gruppenrabatte</a></li>
+<li><a href="#gast-rabatte">Gast-Rabatte</a></li>
+<li><a href="#storefront-anzeige">Storefront-Anzeige</a></li>
+<li><a href="#fehlerbehebung">Fehlerbehebung</a></li>
+</ul>
+<hr />
+<h2 id="rabattarten-im-uberblick">Rabattarten im Überblick<a class="headerlink" href="#rabattarten-im-uberblick" title="Permanent link">&para;</a></h2>
+<p>Das Plugin bietet fünf verschiedene Rabattebenen, die je nach Konfiguration zusammenwirken:</p>
+<table>
+<thead>
+<tr>
+<th>Rabattart</th>
+<th>Anwendungsbereich</th>
+<th>Verwaltungsort</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Produktrabatt</td>
+<td>Einzelnes Produkt</td>
+<td>Produkt → Weitere Felder</td>
+</tr>
+<tr>
+<td>Individueller Kundenrabatt</td>
+<td>Kategorie oder Produktgruppe pro Kunde</td>
+<td>Kunde → Kundenrabatte</td>
+</tr>
+<tr>
+<td>Globaler Kundenrabatt</td>
+<td>Alle Produkte für einen Kunden</td>
+<td>Kunde → Weitere Felder</td>
+</tr>
+<tr>
+<td>Kundengruppen-Rabatt</td>
+<td>Kategorie oder Produktgruppe für Kundengruppe</td>
+<td>Kundengruppe → Rabatte</td>
+</tr>
+<tr>
+<td>Globaler Gruppenrabatt</td>
+<td>Alle Produkte für Kundengruppe</td>
+<td>Kundengruppe → Weitere Felder</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="individuelle-kundenrabatte">Individuelle Kundenrabatte<a class="headerlink" href="#individuelle-kundenrabatte" title="Permanent link">&para;</a></h2>
+<h3 id="was-sie-bewirken">Was sie bewirken<a class="headerlink" href="#was-sie-bewirken" title="Permanent link">&para;</a></h3>
+<p>Individuelle Kundenrabatte ermöglichen es, einem bestimmten Kunden einen prozentualen Rabatt auf alle Produkte einer Kategorie oder Dynamischen Produktgruppe zu geben.</p>
+<h3 id="so-verwenden-sie-sie">So verwenden Sie sie<a class="headerlink" href="#so-verwenden-sie-sie" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Navigieren Sie zu <strong>Kunden → Übersicht</strong> im Admin</li>
+<li>Öffnen Sie das Kundenprofil durch Klick auf den Kundennamen</li>
+<li>Scrollen Sie nach unten zum Bereich <strong>Kundenrabatte</strong></li>
+<li>Wählen Sie eine <strong>Kategorie</strong> und/oder eine <strong>Dynamische Produktgruppe</strong></li>
+<li>Geben Sie den <strong>Rabatt in Prozent</strong> ein (z.B. 10 für 10%)</li>
+<li>Klicken Sie auf <strong>Rabatt hinzufügen</strong></li>
+<li>Speichern Sie den Kunden über den <strong>Speichern</strong>-Button oben rechts</li>
+</ol>
+<h3 id="wichtige-hinweise">Wichtige Hinweise<a class="headerlink" href="#wichtige-hinweise" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Sie müssen mindestens eine Kategorie ODER eine Dynamische Produktgruppe auswählen</li>
+<li>Wenn Sie beides auswählen, müssen beide Kriterien erfüllt sein (UND-Verknüpfung)</li>
+<li>Der Rabattwert muss zwischen 0 und 100 liegen</li>
+<li>Änderungen werden erst nach dem Speichern des Kundenprofils aktiv</li>
+</ul>
+<h3 id="tipps-best-practices">Tipps &amp; Best Practices<a class="headerlink" href="#tipps-best-practices" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Verwenden Sie Dynamische Produktgruppen für flexible Rabattregeln, die automatisch neue Produkte einschließen</li>
+<li>Nutzen Sie Kategorien für einfache, statische Rabattzuweisungen</li>
+<li>Prüfen Sie die Prioritätseinstellungen, wenn ein Kunde mehrere Rabatte haben soll</li>
+</ul>
+<hr />
+<h2 id="kundengruppen-rabatte">Kundengruppen-Rabatte<a class="headerlink" href="#kundengruppen-rabatte" title="Permanent link">&para;</a></h2>
+<h3 id="was-sie-bewirken_1">Was sie bewirken<a class="headerlink" href="#was-sie-bewirken_1" title="Permanent link">&para;</a></h3>
+<p>Kundengruppen-Rabatte ermöglichen es, allen Mitgliedern einer Kundengruppe automatisch einen Rabatt auf bestimmte Kategorien oder Produktgruppen zu geben. Dies ist ideal für B2B-Staffelpreise oder Händlerrabatte.</p>
+<h3 id="so-verwenden-sie-sie_1">So verwenden Sie sie<a class="headerlink" href="#so-verwenden-sie-sie_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Navigieren Sie zu <strong>Einstellungen → Shop → Kundengruppen</strong></li>
+<li>Öffnen Sie eine Kundengruppe durch Klick auf den Namen</li>
+<li>Scrollen Sie nach unten zum Bereich <strong>Gruppenrabatte</strong></li>
+<li>Wählen Sie eine <strong>Kategorie</strong> und/oder eine <strong>Dynamische Produktgruppe</strong></li>
+<li>Geben Sie den <strong>Rabatt in Prozent</strong> ein</li>
+<li>Klicken Sie auf <strong>Rabatt hinzufügen</strong></li>
+<li>Speichern Sie die Kundengruppe</li>
+</ol>
+<h3 id="unterschied-zu-individuellen-rabatten">Unterschied zu individuellen Rabatten<a class="headerlink" href="#unterschied-zu-individuellen-rabatten" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Kundengruppen-Rabatte gelten automatisch für ALLE Mitglieder der Gruppe</li>
+<li>Sie müssen nicht jeden Kunden einzeln konfigurieren</li>
+<li>Bei der Priorität stehen individuelle Rabatte standardmäßig über Gruppenrabatten</li>
+</ul>
+<h3 id="tipps-best-practices_1">Tipps &amp; Best Practices<a class="headerlink" href="#tipps-best-practices_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Erstellen Sie separate Kundengruppen für verschiedene Rabattstufen (z.B. "Händler Bronze", "Händler Silber", "Händler Gold")</li>
+<li>Kombinieren Sie mit globalen Gruppenrabatten für Basisrabatte plus Kategorierabatte</li>
+</ul>
+<hr />
+<h2 id="produktspezifische-rabatte">Produktspezifische Rabatte<a class="headerlink" href="#produktspezifische-rabatte" title="Permanent link">&para;</a></h2>
+<h3 id="was-sie-bewirken_2">Was sie bewirken<a class="headerlink" href="#was-sie-bewirken_2" title="Permanent link">&para;</a></h3>
+<p>Produktspezifische Rabatte ermöglichen es, einen festen Rabatt auf einzelne Produkte zu setzen - unabhängig vom Kunden.</p>
+<h3 id="so-verwenden-sie-sie_2">So verwenden Sie sie<a class="headerlink" href="#so-verwenden-sie-sie_2" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Navigieren Sie zu <strong>Kataloge → Produkte</strong></li>
+<li>Öffnen Sie ein Produkt</li>
+<li>Wechseln Sie zum Tab <strong>Weitere Felder</strong></li>
+<li>Suchen Sie das Feld <strong>Produktspezifischer Rabatt (%)</strong></li>
+<li>Geben Sie den Rabattwert ein (z.B. 20 für 20%)</li>
+<li>Speichern Sie das Produkt</li>
+</ol>
+<h3 id="wichtige-hinweise_1">Wichtige Hinweise<a class="headerlink" href="#wichtige-hinweise_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Produktrabatte werden nur für eingeloggte Kunden angezeigt</li>
+<li>Diese Rabatte können mit anderen Rabattarten kombiniert werden (je nach Prioritätsmodus)</li>
+<li>Sie können diese Funktion in den Plugin-Einstellungen deaktivieren</li>
+</ul>
+<hr />
+<h2 id="globale-kundenrabatte">Globale Kundenrabatte<a class="headerlink" href="#globale-kundenrabatte" title="Permanent link">&para;</a></h2>
+<h3 id="was-sie-bewirken_3">Was sie bewirken<a class="headerlink" href="#was-sie-bewirken_3" title="Permanent link">&para;</a></h3>
+<p>Ein globaler Kundenrabatt gilt für ALLE Produkte im Shop für einen bestimmten Kunden.</p>
+<h3 id="so-verwenden-sie-sie_3">So verwenden Sie sie<a class="headerlink" href="#so-verwenden-sie-sie_3" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Navigieren Sie zu <strong>Kunden → Übersicht</strong></li>
+<li>Öffnen Sie das Kundenprofil</li>
+<li>Wechseln Sie zum Tab <strong>Weitere Felder</strong></li>
+<li>Suchen Sie das Feld <strong>Globaler Kundenrabatt (%)</strong></li>
+<li>Geben Sie den Rabattwert ein</li>
+<li>Speichern Sie den Kunden</li>
+</ol>
+<h3 id="anwendungsbeispiel">Anwendungsbeispiel<a class="headerlink" href="#anwendungsbeispiel" title="Permanent link">&para;</a></h3>
+<p>Ideal für VIP-Kunden oder langjährige Stammkunden, die einen pauschalen Rabatt auf alles erhalten sollen.</p>
+<hr />
+<h2 id="globale-gruppenrabatte">Globale Gruppenrabatte<a class="headerlink" href="#globale-gruppenrabatte" title="Permanent link">&para;</a></h2>
+<h3 id="was-sie-bewirken_4">Was sie bewirken<a class="headerlink" href="#was-sie-bewirken_4" title="Permanent link">&para;</a></h3>
+<p>Ein globaler Gruppenrabatt gilt für ALLE Produkte im Shop für ALLE Mitglieder einer Kundengruppe.</p>
+<h3 id="so-verwenden-sie-sie_4">So verwenden Sie sie<a class="headerlink" href="#so-verwenden-sie-sie_4" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Navigieren Sie zu <strong>Einstellungen → Shop → Kundengruppen</strong></li>
+<li>Öffnen Sie eine Kundengruppe</li>
+<li>Wechseln Sie zum Tab <strong>Weitere Felder</strong></li>
+<li>Suchen Sie das Feld <strong>Globaler Rabatt (%)</strong></li>
+<li>Geben Sie den Rabattwert ein</li>
+<li>Speichern Sie die Kundengruppe</li>
+</ol>
+<h3 id="wichtige-hinweise_2">Wichtige Hinweise<a class="headerlink" href="#wichtige-hinweise_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Diese Funktion muss in den Plugin-Einstellungen aktiviert sein</li>
+<li>Der Rabatt gilt als Fallback, wenn kein spezifischerer Rabatt existiert</li>
+</ul>
+<hr />
+<h2 id="gast-rabatte">Gast-Rabatte<a class="headerlink" href="#gast-rabatte" title="Permanent link">&para;</a></h2>
+<h3 id="was-sie-bewirken_5">Was sie bewirken<a class="headerlink" href="#was-sie-bewirken_5" title="Permanent link">&para;</a></h3>
+<p>Gast-Rabatte ermöglichen es, den globalen Rabatt der Standard-Kundengruppe für nicht eingeloggte Besucher anzuzeigen. Dies ist nützlich, um Aktionspreise allen Besuchern zu zeigen, ohne dass sie ein Konto erstellen oder sich anmelden müssen.</p>
+<h3 id="so-verwenden-sie-sie_5">So verwenden Sie sie<a class="headerlink" href="#so-verwenden-sie-sie_5" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Navigieren Sie zu <strong>Erweiterungen → Meine Erweiterungen → Kundenspezifische Rabatte → Konfigurieren</strong></li>
+<li>Aktivieren Sie die Option <strong>Standard-Gruppenrabatte für Gäste anwenden</strong></li>
+<li>Stellen Sie sicher, dass Sie einen globalen Rabatt auf Ihre Standard-Kundengruppe gesetzt haben (siehe <a href="#globale-gruppenrabatte">Globale Gruppenrabatte</a>)</li>
+<li>Speichern Sie die Einstellungen und leeren Sie den Cache</li>
+</ol>
+<h3 id="so-funktioniert-es">So funktioniert es<a class="headerlink" href="#so-funktioniert-es" title="Permanent link">&para;</a></h3>
+<p>Wenn aktiviert, prüft das Plugin auf Besucher, die nicht eingeloggt sind, und wendet den globalen Rabatt der Standard-Kundengruppe des Shops an. Das bedeutet:
+- Alle Besucher sehen die gleichen Aktionspreise
+- Keine Kontoerstellung oder Anmeldung erforderlich
+- Der Rabatt wird konsistent in Produktlisten, Produktseiten und im Checkout angewendet</p>
+<h3 id="anwendungsbeispiel_1">Anwendungsbeispiel<a class="headerlink" href="#anwendungsbeispiel_1" title="Permanent link">&para;</a></h3>
+<p><strong>Szenario</strong>: Sie haben eine 10%-Rabattaktion für alle Kunden und möchten, dass jeder die reduzierten Preise sofort sieht.</p>
+<ol>
+<li>Setzen Sie einen 10% globalen Rabatt auf Ihre Standard-Kundengruppe</li>
+<li>Aktivieren Sie "Standard-Gruppenrabatte für Gäste anwenden"</li>
+<li>Alle Besucher sehen nun Preise mit dem 10% Rabatt</li>
+</ol>
+<h3 id="wichtige-hinweise_3">Wichtige Hinweise<a class="headerlink" href="#wichtige-hinweise_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Nur globale Gruppenrabatte der Standard-Kundengruppe werden auf Gäste angewendet</li>
+<li>Kategoriespezifische und individuelle Kundenrabatte erfordern weiterhin eine Anmeldung</li>
+<li>Wenn sich ein Gast anmeldet, haben seine spezifischen Kunden- oder Gruppenrabatte Vorrang</li>
+</ul>
+<hr />
+<h2 id="storefront-anzeige">Storefront-Anzeige<a class="headerlink" href="#storefront-anzeige" title="Permanent link">&para;</a></h2>
+<h3 id="produktlisting-und-produktseite">Produktlisting und Produktseite<a class="headerlink" href="#produktlisting-und-produktseite" title="Permanent link">&para;</a></h3>
+<p>Wenn ein eingeloggter Kunde einen Rabatt hat, sieht er:
+- Den reduzierten Preis als Hauptpreis
+- Den Originalpreis durchgestrichen (falls konfiguriert)
+- Die prozentuale Ersparnis</p>
+<h3 id="warenkorb-und-checkout">Warenkorb und Checkout<a class="headerlink" href="#warenkorb-und-checkout" title="Permanent link">&para;</a></h3>
+<p>Je nach Konfiguration wird der Rabatt angezeigt als:
+- <strong>Separate Rabattposition</strong>: Eine eigene Zeile mit negativem Betrag
+- <strong>Reduzierter Preis</strong>: Der Produktpreis ist bereits reduziert, Originalpreis durchgestrichen</p>
+<h3 id="gesamtersparnis">Gesamtersparnis<a class="headerlink" href="#gesamtersparnis" title="Permanent link">&para;</a></h3>
+<p>Falls aktiviert, erscheint eine "Sie sparen X" Meldung im Warenkorb und Checkout.</p>
+<hr />
+<h2 id="fehlerbehebung">Fehlerbehebung<a class="headerlink" href="#fehlerbehebung" title="Permanent link">&para;</a></h2>
+<h3 id="rabatt-wird-nicht-angezeigt">Rabatt wird nicht angezeigt<a class="headerlink" href="#rabatt-wird-nicht-angezeigt" title="Permanent link">&para;</a></h3>
+<p><strong>Symptom</strong>: Der Kunde sieht den Originalpreis statt den Rabattpreis</p>
+<p><strong>Mögliche Ursachen</strong>:
+1. Der Kunde ist nicht eingeloggt
+2. Die entsprechende Rabattart ist in den Einstellungen deaktiviert
+3. Das Produkt liegt nicht in der rabattberechtigten Kategorie/Produktgruppe
+4. Der Cache wurde nicht geleert</p>
+<p><strong>Lösung</strong>:
+- Prüfen Sie den Login-Status
+- Überprüfen Sie die Plugin-Einstellungen
+- Leeren Sie den Cache unter <strong>Einstellungen → System → Caches &amp; Indizes</strong></p>
+<h3 id="falscher-rabatt-wird-angewendet">Falscher Rabatt wird angewendet<a class="headerlink" href="#falscher-rabatt-wird-angewendet" title="Permanent link">&para;</a></h3>
+<p><strong>Symptom</strong>: Ein anderer Rabatt als erwartet wird angewendet</p>
+<p><strong>Ursache</strong>: Der Prioritätsmodus bestimmt, welcher Rabatt bei Überschneidungen gilt</p>
+<p><strong>Lösung</strong>:
+- Prüfen Sie den Prioritätsmodus in den Plugin-Einstellungen
+- Prüfen Sie alle Rabattquellen für den Kunden (individuell, global, Gruppe)</p>
+<h3 id="rabatt-erscheint-doppelt">Rabatt erscheint doppelt<a class="headerlink" href="#rabatt-erscheint-doppelt" title="Permanent link">&para;</a></h3>
+<p><strong>Symptom</strong>: Ein Produkt wird mehrfach rabattiert</p>
+<p><strong>Ursache</strong>: Die Option "Rabatt nur einmal anwenden" ist deaktiviert</p>
+<p><strong>Lösung</strong>: Aktivieren Sie die Option in den Plugin-Einstellungen</p>
+<hr />
+<h2 id="verwandte-dokumentation">Verwandte Dokumentation<a class="headerlink" href="#verwandte-dokumentation" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../configuration/settings/">Einstellungsreferenz</a></li>
+<li><a href="../../how_to/">Schritt-für-Schritt Anleitungen</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Zurück zum Seitenanfang
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2026 Web Labels Webdesign GmbH
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://web-labels.de" target="_blank" rel="noopener" title="Web Labels Website" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://store.shopware.com/web-labels-webdesign-gmbh.html" target="_blank" rel="noopener" title="Shopware Store" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M21.5 181.1 78.3 67.4c10.9-21.7 33-35.4 57.3-35.4h304.9c24.2 0 46.4 13.7 57.2 35.4l56.8 113.7c3.6 7.2 5.5 15.1 5.5 23.2 0 27.3-21.2 49.7-48 51.6V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V256h-96v176c0 26.5-21.5 48-48 48H112c-26.5 0-48-21.5-48-48V255.9c-26.8-1.9-48-24.3-48-51.6 0-8 1.9-16 5.5-23.2M128 256v112c0 8.8 7.2 16 16 16h128c8.8 0 16-7.2 16-16V256z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://web-labels.de/impressum" target="_blank" rel="noopener" title="Impressum" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M384 32h128c17.7 0 32 14.3 32 32s-14.3 32-32 32H398.4c-5.2 25.8-22.9 47.1-46.4 57.3V448h160c17.7 0 32 14.3 32 32s-14.3 32-32 32H128c-17.7 0-32-14.3-32-32s14.3-32 32-32h160V153.3c-23.5-10.3-41.2-31.6-46.4-57.3H128c-17.7 0-32-14.3-32-32s14.3-32 32-32h128c14.6-19.4 37.8-32 64-32s49.4 12.6 64 32m55.6 288h144.8L512 195.8zm72.4 96c-62.9 0-115.2-34-126-78.9-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8L631.3 305c5.7 9.8 9.3 21.1 6.7 32.1-10.8 44.8-63.1 78.9-126 78.9M126.8 195.8 54.4 320h144.9zM.9 337.1c-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8L246.2 305c5.7 9.8 9.3 21.1 6.7 32.1-10.8 44.8-63.1 78.9-126 78.9S11.7 382 .9 337.1"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://web-labels.de/datenschutz" target="_blank" rel="noopener" title="Datenschutz" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M224 248a120 120 0 1 0 0-240 120 120 0 1 0 0 240m-29.7 56C95.8 304 16 383.8 16 482.3c0 16.4 13.3 29.7 29.7 29.7h251.5C261 469.4 240 414.5 240 356.4v-31.1c0-7.3 1-14.5 2.9-21.3zm251 184.5-13.3 6.3V306.7l96 32v19.6c0 55.8-32.2 106.5-82.7 130.3zm-23.4-229-112 37.3c-13.1 4.4-21.9 16.6-21.9 30.4v31.1c0 74.4 43 142.1 110.2 173.7l18.5 8.7c4.8 2.2 10 3.4 15.2 3.4s10.5-1.2 15.2-3.4l18.5-8.7C533 500.3 576 432.6 576 358.2v-31.1c0-13.8-8.8-26-21.9-30.4l-112-37.3c-6.6-2.2-13.7-2.2-20.2 0z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.prune", "navigation.indexes", "navigation.top", "search.highlight", "search.suggest", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../javascripts/plugin-filter.js"></script>
+      
+    
+  </body>
+</html>

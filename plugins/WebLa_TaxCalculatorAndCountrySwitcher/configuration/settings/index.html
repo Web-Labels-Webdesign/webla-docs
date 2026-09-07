@@ -1,0 +1,4282 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Dokumentation für Web Labels Shopware Plugins">
+      
+      
+      
+        <link rel="canonical" href="https://docs.web-labels.de/plugins/WebLa_TaxCalculatorAndCountrySwitcher/configuration/settings/">
+      
+      
+        <link rel="prev" href="../../how_to/">
+      
+      
+        <link rel="next" href="../../usage/usage/">
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="de">
+        
+          <link rel="alternate" href="../../../../en/plugins/WebLa_TaxCalculatorAndCountrySwitcher/configuration/settings/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Konfigurationseinstellungen - Web Labels Shopware Plugins</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/plugin-cards.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+<!-- Privacy-friendly analytics by Plausible -->
+<script defer data-domain="docs.web-labels.de" src="https://plausible.buildit-consulting.com/js/script.file-downloads.hash.outbound-links.pageview-props.tagged-events.js"></script>
+<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="white">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#konfigurationseinstellungen" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="../../../.." title="Web Labels Shopware Plugins" class="md-header__button md-logo" aria-label="Web Labels Shopware Plugins" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Web Labels Shopware Plugins
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Konfigurationseinstellungen
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="white"  aria-label="Dunkelmodus aktivieren"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dunkelmodus aktivieren" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="black"  aria-label="Hellmodus aktivieren"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Hellmodus aktivieren" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Sprache wechseln">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../en/plugins/WebLa_TaxCalculatorAndCountrySwitcher/configuration/settings/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Hauptnavigation" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../BuildIT_ShareCart/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Plugins
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Web Labels Shopware Plugins" class="md-nav__button md-logo" aria-label="Web Labels Shopware Plugins" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    Web Labels Shopware Plugins
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugins
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Plugins
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../BuildIT_ShareCart/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teile deinen Warenkorb
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_AdcellProvisionsfreigabe/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADCELL Provisionsfreigabe
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_AdminProductFilters/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zusatzfelder in der Admin-Produktübersicht
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_BatchManagement/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Charge-Management
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_BeautifiedSearch/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Suche als Overlay
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_Blog/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_CategorieQuickFilter/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kategorie Schnellauswahl
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_CategorySorter/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kategorie-Sortierer
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_ContactFormFileUpload/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kontaktformular – Datei-Upload
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_CurrencyChanger/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Währungsanzeige
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_CustomerSpecificDiscounts/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kundenspezifische Rabatte
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_CustomerTaxCountry/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Customer Tax Country
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_DeliveryDateSelector/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wunsch-Lieferdatum für Kunden
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_ExportDiscount/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shopping Feed mit einzigartigen Rabatten
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_FlyoutNavigation/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flyout Navigation
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_HomePageControl/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Startseiten Steuerung
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_ImageReviews/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bilder in Produktbewertungen
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_IntelligentCrossSelling/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intelligentes Cross-Selling
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_ManufacturerPages/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Herstellerseiten
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_MediaBooster/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Media Booster
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_ProductSliderAdvanced/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product Slider Advanced
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_Produktberater/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produktberater
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_PropertyNotes/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hinweise zu Eigenschaften
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_SplitComission/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SplitCommission – Aufteilung der Einzelposten in Teile
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_Subscriptions/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Abonnement Plugin
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_26" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Steuernachkalkulation und Lieferländer
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_26" id="__nav_2_26_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_26_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_26">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Steuernachkalkulation und Lieferländer
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how_to/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anleitungen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_26_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_26_4" id="__nav_2_26_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_26_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_26_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Configuration
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Konfigurationseinstellungen
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Konfigurationseinstellungen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basis-konfiguration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basis-Konfiguration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basis-Konfiguration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aktiviere-das-auswahl-dropdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aktiviere das Auswahl-Dropdown
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zeige-flaggen-im-dropdown-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zeige Flaggen im Dropdown Menü
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zeige-lander-als-iso-code-im-dropdown-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zeige Länder als ISO Code im Dropdown Menü
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zeige-label-vor-dem-dropdown-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zeige Label vor dem Dropdown Menü
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#andern-der-wahrung-in-die-lokale-wahrung-des-ausgewahlten-landes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ändern der Währung in die lokale Währung des ausgewählten Landes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#topbar-anzeigemodus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Topbar-Anzeigemodus
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#styling-konfiguration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Styling-Konfiguration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Styling-Konfiguration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#farbe-des-label-vor-dem-dropdown-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Farbe des Label vor dem Dropdown Menü
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textfarbe-des-select-feldes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Textfarbe des Select Feldes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hintergrundfarbe-des-select-feldes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hintergrundfarbe des Select Feldes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#innerer-abstand-des-select-feldes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Innerer Abstand des Select Feldes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breite-des-select-feldes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Breite des Select Feldes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rahmenfarbe-des-select-feldes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rahmenfarbe des Select Feldes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#radius-des-select-feldes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Radius des Select Feldes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dicke-des-rahmens-des-select-feldes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dicke des Rahmens des Select Feldes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#berechnungseinstellungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Berechnungseinstellungen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Berechnungseinstellungen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wahle-lander-aus-fur-die-die-neuberechnung-ubersprungen-werden-soll" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wähle Länder aus, für die die Neuberechnung übersprungen werden soll
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#versandkosten-konfiguration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Versandkosten-Konfiguration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Versandkosten-Konfiguration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#versandkosten-auf-basis-der-nettokosten-anpassen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Versandkosten auf Basis der Nettokosten anpassen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#landerauswahl-popup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Länderauswahl-Popup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Länderauswahl-Popup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#landerauswahl-popup-beim-ersten-besuch-anzeigen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Länderauswahl-Popup beim ersten Besuch anzeigen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gultigkeit-des-lander-cookies-tage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gültigkeit des Länder-Cookies (Tage)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geoip-vorauswahl-aktivieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GeoIP-Vorauswahl aktivieren
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#absoluter-pfad-zur-geolite2-countrymmdb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Absoluter Pfad zur GeoLite2-Country.mmdb
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lieferland-aus-der-storefront-sprache-setzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lieferland aus der Storefront-Sprache setzen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lander-hinweis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Länder-Hinweis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Länder-Hinweis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preis-mwst-hinweis-unter-der-auswahl-anzeigen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preis-/MwSt.-Hinweis unter der Auswahl anzeigen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ausrichtung-des-hinweises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ausrichtung des Hinweises
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verkaufskanal-spezifische-einstellungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verkaufskanal-spezifische Einstellungen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#empfohlene-konfigurationen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Empfohlene Konfigurationen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Empfohlene Konfigurationen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fur-oss-b2c-shop-mit-mehreren-eu-landern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Für OSS-B2C-Shop mit mehreren EU-Ländern
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fur-reinen-landerumschalter-ohne-neuberechnung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Für reinen Länderumschalter ohne Neuberechnung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../usage/usage/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usage
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_UTMHandler/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UTM-Handler
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_UltimativeBundlePlugin/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ultimative Bundle Plugin
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_Zusatzoptionen/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zusatzoptionen
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basis-konfiguration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basis-Konfiguration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basis-Konfiguration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aktiviere-das-auswahl-dropdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aktiviere das Auswahl-Dropdown
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zeige-flaggen-im-dropdown-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zeige Flaggen im Dropdown Menü
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zeige-lander-als-iso-code-im-dropdown-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zeige Länder als ISO Code im Dropdown Menü
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zeige-label-vor-dem-dropdown-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zeige Label vor dem Dropdown Menü
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#andern-der-wahrung-in-die-lokale-wahrung-des-ausgewahlten-landes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ändern der Währung in die lokale Währung des ausgewählten Landes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#topbar-anzeigemodus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Topbar-Anzeigemodus
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#styling-konfiguration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Styling-Konfiguration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Styling-Konfiguration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#farbe-des-label-vor-dem-dropdown-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Farbe des Label vor dem Dropdown Menü
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textfarbe-des-select-feldes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Textfarbe des Select Feldes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hintergrundfarbe-des-select-feldes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hintergrundfarbe des Select Feldes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#innerer-abstand-des-select-feldes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Innerer Abstand des Select Feldes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breite-des-select-feldes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Breite des Select Feldes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rahmenfarbe-des-select-feldes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rahmenfarbe des Select Feldes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#radius-des-select-feldes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Radius des Select Feldes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dicke-des-rahmens-des-select-feldes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dicke des Rahmens des Select Feldes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#berechnungseinstellungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Berechnungseinstellungen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Berechnungseinstellungen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wahle-lander-aus-fur-die-die-neuberechnung-ubersprungen-werden-soll" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wähle Länder aus, für die die Neuberechnung übersprungen werden soll
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#versandkosten-konfiguration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Versandkosten-Konfiguration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Versandkosten-Konfiguration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#versandkosten-auf-basis-der-nettokosten-anpassen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Versandkosten auf Basis der Nettokosten anpassen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#landerauswahl-popup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Länderauswahl-Popup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Länderauswahl-Popup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#landerauswahl-popup-beim-ersten-besuch-anzeigen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Länderauswahl-Popup beim ersten Besuch anzeigen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gultigkeit-des-lander-cookies-tage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gültigkeit des Länder-Cookies (Tage)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geoip-vorauswahl-aktivieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GeoIP-Vorauswahl aktivieren
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#absoluter-pfad-zur-geolite2-countrymmdb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Absoluter Pfad zur GeoLite2-Country.mmdb
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lieferland-aus-der-storefront-sprache-setzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lieferland aus der Storefront-Sprache setzen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lander-hinweis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Länder-Hinweis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Länder-Hinweis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preis-mwst-hinweis-unter-der-auswahl-anzeigen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preis-/MwSt.-Hinweis unter der Auswahl anzeigen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ausrichtung-des-hinweises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ausrichtung des Hinweises
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verkaufskanal-spezifische-einstellungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verkaufskanal-spezifische Einstellungen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#empfohlene-konfigurationen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Empfohlene Konfigurationen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Empfohlene Konfigurationen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fur-oss-b2c-shop-mit-mehreren-eu-landern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Für OSS-B2C-Shop mit mehreren EU-Ländern
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fur-reinen-landerumschalter-ohne-neuberechnung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Für reinen Länderumschalter ohne Neuberechnung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="konfigurationseinstellungen">Konfigurationseinstellungen<a class="headerlink" href="#konfigurationseinstellungen" title="Permanent link">&para;</a></h1>
+<p>Dieses Dokument beschreibt alle verfügbaren Einstellungen für das Plugin <em>Steuernachkalkulation und Lieferländer</em>.</p>
+<p><strong>Navigation</strong>: Erweiterungen → Meine Erweiterungen → Steuernachkalkulation und Lieferländer → Konfigurieren</p>
+<p>Die Einstellungen sind in sechs Karten gruppiert: <strong>Basis-Konfiguration</strong>, <strong>Styling-Konfiguration</strong>, <strong>Berechnungseinstellungen</strong>, <strong>Versandkosten-Konfiguration</strong>, <strong>Länderauswahl-Popup</strong> und <strong>Länder-Hinweis</strong>.</p>
+<hr />
+<h2 id="basis-konfiguration">Basis-Konfiguration<a class="headerlink" href="#basis-konfiguration" title="Permanent link">&para;</a></h2>
+<p>Steuert die Sichtbarkeit und Darstellung des Länderumschalters im Frontend.</p>
+<h3 id="aktiviere-das-auswahl-dropdown">Aktiviere das Auswahl-Dropdown<a class="headerlink" href="#aktiviere-das-auswahl-dropdown" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Schalter</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>Aktiviert</td>
+</tr>
+<tr>
+<td><strong>Erforderlich</strong></td>
+<td>Ja</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beschreibung</strong>: Zentraler Ein-/Aus-Schalter für den Länderumschalter in der Storefront. Wenn deaktiviert, läuft der Shop wie ohne Plugin — die Steuernachkalkulation findet dann nicht statt.</p>
+<p><strong>Anwendungsbeispiel</strong>: Deaktivieren Sie diese Option während der Ersteinrichtung oder für Wartungsarbeiten, ohne das Plugin deinstallieren zu müssen.</p>
+<hr />
+<h3 id="zeige-flaggen-im-dropdown-menu">Zeige Flaggen im Dropdown Menü<a class="headerlink" href="#zeige-flaggen-im-dropdown-menu" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Schalter</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>Aktiviert</td>
+</tr>
+<tr>
+<td><strong>Erforderlich</strong></td>
+<td>Nein</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beschreibung</strong>: Zeigt neben jedem Land im Dropdown die zugehörige SVG-Landesflagge an. Dies erleichtert internationalen Kunden die schnelle Auswahl.</p>
+<p><strong>Anwendungsbeispiel</strong>: In Shops mit internationalen Kunden empfohlen. Deaktivieren, wenn ein sehr minimalistisches Layout gewünscht ist.</p>
+<hr />
+<h3 id="zeige-lander-als-iso-code-im-dropdown-menu">Zeige Länder als ISO Code im Dropdown Menü<a class="headerlink" href="#zeige-lander-als-iso-code-im-dropdown-menu" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Schalter</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>Deaktiviert</td>
+</tr>
+<tr>
+<td><strong>Erforderlich</strong></td>
+<td>Nein</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beschreibung</strong>: Stellt Länder als zweistelligen ISO-Code (z. B. <code>DE</code>, <code>FR</code>, <code>AT</code>) statt mit vollem Landesnamen dar. Spart Platz in der Topbar.</p>
+<p><strong>Anwendungsbeispiel</strong>: Bei kompaktem Theme oder sehr vielen verfügbaren Ländern sinnvoll.</p>
+<hr />
+<h3 id="zeige-label-vor-dem-dropdown-menu">Zeige Label vor dem Dropdown Menü<a class="headerlink" href="#zeige-label-vor-dem-dropdown-menu" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Schalter</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>Deaktiviert</td>
+</tr>
+<tr>
+<td><strong>Erforderlich</strong></td>
+<td>Nein</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beschreibung</strong>: Blendet einen Text-Hinweis (aus den Snippets) vor dem Dropdown ein, z. B. „Liefern nach:".</p>
+<p><strong>Anwendungsbeispiel</strong>: Aktivieren, wenn Besucher den Zweck des Umschalters nicht sofort erkennen.</p>
+<hr />
+<h3 id="andern-der-wahrung-in-die-lokale-wahrung-des-ausgewahlten-landes">Ändern der Währung in die lokale Währung des ausgewählten Landes<a class="headerlink" href="#andern-der-wahrung-in-die-lokale-wahrung-des-ausgewahlten-landes" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Schalter</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>Deaktiviert</td>
+</tr>
+<tr>
+<td><strong>Erforderlich</strong></td>
+<td>Nein</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beschreibung</strong>: Wechselt den Verkaufskanal beim Länderwechsel automatisch auf die Landeswährung (sofern im Verkaufskanal verfügbar).</p>
+<p><strong>Anwendungsbeispiel</strong>: Nur aktivieren, wenn Sie alle relevanten Währungen im Verkaufskanal gepflegt und mit korrektem Umrechnungsfaktor versehen haben.</p>
+<hr />
+<h3 id="topbar-anzeigemodus">Topbar-Anzeigemodus<a class="headerlink" href="#topbar-anzeigemodus" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Auswahl (Einzelauswahl)</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>Topbar ersetzen</td>
+</tr>
+<tr>
+<td><strong>Erforderlich</strong></td>
+<td>Ja</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beschreibung</strong>: Wählen Sie, wie das Plugin mit der Topbar Ihres Themes integriert wird.</p>
+<p><strong>Optionen</strong>:
+- <code>Theme-Topbar erweitern</code>: Der Länderumschalter wird zusätzlich zur bestehenden Theme-Topbar angezeigt
+- <code>Topbar ersetzen</code>: Die gesamte Topbar wird durch den Plugin-Umschalter ersetzt (Standard)
+- <code>Nur Widget (keine Topbar-Änderung)</code>: Das Plugin rendert keine Topbar — Integration erfolgt manuell per Twig-Block</p>
+<p><strong>Anwendungsbeispiel</strong>: Verwenden Sie <code>Theme-Topbar erweitern</code>, wenn Ihr Theme bereits eine Topbar mit wichtigen Informationen (z. B. Kontaktdaten, USPs) hat, die nicht verloren gehen soll.</p>
+<hr />
+<h2 id="styling-konfiguration">Styling-Konfiguration<a class="headerlink" href="#styling-konfiguration" title="Permanent link">&para;</a></h2>
+<p>Passt das Aussehen des Länderumschalters an Ihr Theme an. Alle Werte werden als CSS-Variablen ausgegeben und überschreiben die Plugin-Standardwerte.</p>
+<h3 id="farbe-des-label-vor-dem-dropdown-menu">Farbe des Label vor dem Dropdown Menü<a class="headerlink" href="#farbe-des-label-vor-dem-dropdown-menu" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Farbwähler</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>(leer)</td>
+</tr>
+<tr>
+<td><strong>Erforderlich</strong></td>
+<td>Nein</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beschreibung</strong>: Schriftfarbe des optionalen Labels vor dem Dropdown.</p>
+<hr />
+<h3 id="textfarbe-des-select-feldes">Textfarbe des Select Feldes<a class="headerlink" href="#textfarbe-des-select-feldes" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Farbwähler</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>(leer)</td>
+</tr>
+<tr>
+<td><strong>Erforderlich</strong></td>
+<td>Nein</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beschreibung</strong>: Schriftfarbe des ausgewählten Landes und der Optionen im Dropdown.</p>
+<hr />
+<h3 id="hintergrundfarbe-des-select-feldes">Hintergrundfarbe des Select Feldes<a class="headerlink" href="#hintergrundfarbe-des-select-feldes" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Farbwähler</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>(leer)</td>
+</tr>
+<tr>
+<td><strong>Erforderlich</strong></td>
+<td>Nein</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beschreibung</strong>: Hintergrundfarbe des Dropdown-Feldes.</p>
+<hr />
+<h3 id="innerer-abstand-des-select-feldes">Innerer Abstand des Select Feldes<a class="headerlink" href="#innerer-abstand-des-select-feldes" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Text (CSS)</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>(leer)</td>
+</tr>
+<tr>
+<td><strong>Erforderlich</strong></td>
+<td>Nein</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beschreibung</strong>: CSS-Padding-Wert, z. B. <code>5px 10px</code>.</p>
+<hr />
+<h3 id="breite-des-select-feldes">Breite des Select Feldes<a class="headerlink" href="#breite-des-select-feldes" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Text (CSS)</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>(leer)</td>
+</tr>
+<tr>
+<td><strong>Erforderlich</strong></td>
+<td>Nein</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beschreibung</strong>: CSS-Wert für die Breite, z. B. <code>200px</code> oder <code>auto</code>.</p>
+<hr />
+<h3 id="rahmenfarbe-des-select-feldes">Rahmenfarbe des Select Feldes<a class="headerlink" href="#rahmenfarbe-des-select-feldes" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Farbwähler</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>(leer)</td>
+</tr>
+<tr>
+<td><strong>Erforderlich</strong></td>
+<td>Nein</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beschreibung</strong>: Farbe des Rahmens um das Dropdown-Feld.</p>
+<hr />
+<h3 id="radius-des-select-feldes">Radius des Select Feldes<a class="headerlink" href="#radius-des-select-feldes" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Text (CSS)</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>(leer)</td>
+</tr>
+<tr>
+<td><strong>Erforderlich</strong></td>
+<td>Nein</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beschreibung</strong>: Eckenrundung des Rahmens, z. B. <code>4px</code>.</p>
+<hr />
+<h3 id="dicke-des-rahmens-des-select-feldes">Dicke des Rahmens des Select Feldes<a class="headerlink" href="#dicke-des-rahmens-des-select-feldes" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Text (CSS)</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>(leer)</td>
+</tr>
+<tr>
+<td><strong>Erforderlich</strong></td>
+<td>Nein</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beschreibung</strong>: Rahmenbreite, z. B. <code>1px</code>.</p>
+<hr />
+<h2 id="berechnungseinstellungen">Berechnungseinstellungen<a class="headerlink" href="#berechnungseinstellungen" title="Permanent link">&para;</a></h2>
+<h3 id="wahle-lander-aus-fur-die-die-neuberechnung-ubersprungen-werden-soll">Wähle Länder aus, für die die Neuberechnung übersprungen werden soll<a class="headerlink" href="#wahle-lander-aus-fur-die-die-neuberechnung-ubersprungen-werden-soll" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Länder-Mehrfachauswahl</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>Leer (alle Länder neu berechnen)</td>
+</tr>
+<tr>
+<td><strong>Erforderlich</strong></td>
+<td>Nein</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beschreibung</strong>: Länder, die in dieser Liste ausgewählt sind, werden von der Plugin-Logik komplett ignoriert — es erfolgt weder eine Preis- noch eine Versandkostenneuberechnung. Shopware verwendet in diesem Fall die Standardpreise aus dem Produkt.</p>
+<p><strong>Anwendungsbeispiel</strong>: Tragen Sie hier typischerweise Ihr Heimatland ein, da dort bereits die korrekten Bruttopreise hinterlegt sind und keine Neuberechnung nötig ist. Das spart Rechenzeit beim Seitenaufruf.</p>
+<hr />
+<h2 id="versandkosten-konfiguration">Versandkosten-Konfiguration<a class="headerlink" href="#versandkosten-konfiguration" title="Permanent link">&para;</a></h2>
+<h3 id="versandkosten-auf-basis-der-nettokosten-anpassen">Versandkosten auf Basis der Nettokosten anpassen<a class="headerlink" href="#versandkosten-auf-basis-der-nettokosten-anpassen" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Schalter</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>Deaktiviert</td>
+</tr>
+<tr>
+<td><strong>Erforderlich</strong></td>
+<td>Nein</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beschreibung</strong>: Wenn aktiviert, werden auch die Versandkosten nach dem gleichen Netto-Prinzip neu berechnet wie Produktpreise. Der Netto-Versandkostenbetrag bleibt pro Land konstant, der Bruttobetrag passt sich an den landesspezifischen Steuersatz an.</p>
+<p><strong>Anwendungsbeispiel</strong>: Empfohlen für OSS-konforme Shops, die rechtlich verpflichtet sind, korrekte Bruttoversandkosten je Zielland auszuweisen.</p>
+<hr />
+<h2 id="landerauswahl-popup">Länderauswahl-Popup<a class="headerlink" href="#landerauswahl-popup" title="Permanent link">&para;</a></h2>
+<p>Steuert das Popup zur Länderauswahl beim Erstbesuch, das sicherstellt, dass der angezeigte Bruttopreis dem Preis entspricht, den der Kunde bezahlt — eine gesetzliche Vorgabe der deutschen <em>Preisangabenverordnung</em> (PAngV).</p>
+<h3 id="landerauswahl-popup-beim-ersten-besuch-anzeigen">Länderauswahl-Popup beim ersten Besuch anzeigen<a class="headerlink" href="#landerauswahl-popup-beim-ersten-besuch-anzeigen" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Schalter</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>Aktiviert</td>
+</tr>
+<tr>
+<td><strong>Erforderlich</strong></td>
+<td>Nein</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beschreibung</strong>: Wenn aktiviert, sehen Besucher ohne <code>sw-switch-country</code>-Cookie beim Seitenaufruf ein blockierendes Modal und müssen zuerst ein Lieferland bestätigen, bevor Preise sichtbar angezeigt werden. Nach der Auswahl wird das Cookie gesetzt und die Seite mit der korrekten MwSt. neu geladen.</p>
+<p><strong>Anwendungsbeispiel</strong>: Pflicht für jeden Shop, der mehrere Länder mit unterschiedlichen MwSt.-Sätzen bedient. Ohne diese Einstellung kann der zuerst gerenderte Preis mit der falschen MwSt. angezeigt werden und im Checkout nach oben korrigiert werden — ein PAngV-Verstoß.</p>
+<hr />
+<h3 id="gultigkeit-des-lander-cookies-tage">Gültigkeit des Länder-Cookies (Tage)<a class="headerlink" href="#gultigkeit-des-lander-cookies-tage" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Zahl</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>30</td>
+</tr>
+<tr>
+<td><strong>Erforderlich</strong></td>
+<td>Nein</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beschreibung</strong>: Wie lange das <code>sw-switch-country</code>-Cookie gespeichert bleibt, bevor das Popup erneut erscheint.</p>
+<p><strong>Anwendungsbeispiel</strong>: Auf 365 erhöhen für starke Wiederkehr-UX, auf 7 senken für Shops mit kurzen Sitzungserwartungen.</p>
+<hr />
+<h3 id="geoip-vorauswahl-aktivieren">GeoIP-Vorauswahl aktivieren<a class="headerlink" href="#geoip-vorauswahl-aktivieren" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Schalter</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>Deaktiviert</td>
+</tr>
+<tr>
+<td><strong>Erforderlich</strong></td>
+<td>Nein</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beschreibung</strong>: Wenn aktiviert, schlägt das Plugin die IP des Besuchers in einer vom Händler bereitgestellten MaxMind-GeoLite2-Country-Datenbank nach und wählt das erkannte Land im Popup vor. Fällt stillschweigend auf das Standardland des Sales Channels zurück, wenn GeoIP deaktiviert ist, die Datenbank fehlt/nicht lesbar ist oder das erkannte Land im aktuellen Sales Channel nicht lieferbar ist.</p>
+<p><strong>Anwendungsbeispiel</strong>: Internationale Shops, bei denen die meisten Besucher direkt auf einer Seite mit korrekt vorausgewähltem Land landen — das Popup wird auf einen einzigen Bestätigungsklick reduziert.</p>
+<p><strong>Hinweis</strong>: Der Händler ist verantwortlich für die Aktualisierung der <code>.mmdb</code>-Datei gemäß den MaxMind-Lizenzbedingungen (Updates zweimal wöchentlich, 30-Tage-Aktualitätsregel). Das Plugin lädt die Datenbank nicht selbst herunter oder aktualisiert sie.</p>
+<hr />
+<h3 id="absoluter-pfad-zur-geolite2-countrymmdb">Absoluter Pfad zur GeoLite2-Country.mmdb<a class="headerlink" href="#absoluter-pfad-zur-geolite2-countrymmdb" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Text</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>(leer)</td>
+</tr>
+<tr>
+<td><strong>Erforderlich</strong></td>
+<td>Nur wenn GeoIP-Vorauswahl aktiviert ist</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beschreibung</strong>: Absoluter Dateipfad zur MaxMind-<code>GeoLite2-Country.mmdb</code> auf dem Server, auf dem Shopware läuft. Die Datei muss vom PHP-FPM-Benutzer lesbar sein.</p>
+<p><strong>Anwendungsbeispiel</strong>: <code>/var/www/html/files/geoip/GeoLite2-Country.mmdb</code></p>
+<hr />
+<h3 id="lieferland-aus-der-storefront-sprache-setzen">Lieferland aus der Storefront-Sprache setzen<a class="headerlink" href="#lieferland-aus-der-storefront-sprache-setzen" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Schalter</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>Deaktiviert</td>
+</tr>
+<tr>
+<td><strong>Erforderlich</strong></td>
+<td>Nein</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beschreibung</strong>: Wenn aktiviert, wird das Lieferland anhand der Locale-Region der Storefront-Sprache gesetzt (z.B. wählt die <code>nl-NL</code>-Domain die Niederlande). Das Land muss im Sales Channel aktiv und lieferbar sein; andernfalls fällt das Plugin auf GeoIP oder das Standardland des Sales Channels zurück. Hat Vorrang vor GeoIP. Das gilt ab dem ersten Seitenaufruf für Preise, Steuern und die Vorauswahl im Popup — der Kunde muss nicht erst bestätigen. Eine ausdrückliche Länderwahl des Kunden sowie die Lieferadresse eines eingeloggten Kunden haben immer Vorrang.</p>
+<p><strong>Anwendungsbeispiel</strong>: Ein einzelner Sales Channel mit mehreren Sprach-Domains (z.B. <code>/nl/</code>, <code>/fr/</code>), bei dem jede Sprache standardmäßig ihr passendes Lieferland vorgeben soll, damit Kampagnen-Deeplinks ohne manuelle Auswahl auf der korrekten Preisanzeige landen.</p>
+<hr />
+<h2 id="lander-hinweis">Länder-Hinweis<a class="headerlink" href="#lander-hinweis" title="Permanent link">&para;</a></h2>
+<p>Steuert den kurzen Hinweis unter der Lieferland-Auswahl, z. B. <em>„Preise inkl. MwSt. für Deutschland. Wählen Sie Ihr Lieferland für genaue Preise."</em></p>
+<h3 id="preis-mwst-hinweis-unter-der-auswahl-anzeigen">Preis-/MwSt.-Hinweis unter der Auswahl anzeigen<a class="headerlink" href="#preis-mwst-hinweis-unter-der-auswahl-anzeigen" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Schalter</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>Aktiviert</td>
+</tr>
+<tr>
+<td><strong>Erforderlich</strong></td>
+<td>Nein</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beschreibung</strong>: Blendet den Hinweis ein oder aus. Der Hinweistext selbst ist unter Einstellungen → Textbausteine bearbeitbar (Schlüssel <code>webla.countryHint.text</code>).</p>
+<p><strong>Anwendungsbeispiel</strong>: Deaktivieren, wenn Ihr Theme das aktive Lieferland bereits kommuniziert oder der Hinweis als überflüssig empfunden wird.</p>
+<hr />
+<h3 id="ausrichtung-des-hinweises">Ausrichtung des Hinweises<a class="headerlink" href="#ausrichtung-des-hinweises" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Einfachauswahl</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>Rechts</td>
+</tr>
+<tr>
+<td><strong>Erforderlich</strong></td>
+<td>Nein</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beschreibung</strong>: Richtet den Hinweistext links, zentriert oder rechts aus. Rechts platziert ihn direkt unter der Lieferland-Auswahl in der Topbar.</p>
+<hr />
+<h2 id="verkaufskanal-spezifische-einstellungen">Verkaufskanal-spezifische Einstellungen<a class="headerlink" href="#verkaufskanal-spezifische-einstellungen" title="Permanent link">&para;</a></h2>
+<p>Alle Einstellungen können <strong>pro Verkaufskanal</strong> gepflegt werden. Wählen Sie in der Konfigurationsansicht oben rechts den gewünschten Verkaufskanal aus, um abweichende Werte zu hinterlegen. So können z. B. für den B2C-Shop Steuerneuberechnung aktiviert und für den B2B-Shop deaktiviert sein.</p>
+<hr />
+<h2 id="empfohlene-konfigurationen">Empfohlene Konfigurationen<a class="headerlink" href="#empfohlene-konfigurationen" title="Permanent link">&para;</a></h2>
+<h3 id="fur-oss-b2c-shop-mit-mehreren-eu-landern">Für OSS-B2C-Shop mit mehreren EU-Ländern<a class="headerlink" href="#fur-oss-b2c-shop-mit-mehreren-eu-landern" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Einstellung</th>
+<th>Empfohlener Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aktiviere das Auswahl-Dropdown</td>
+<td>Aktiviert</td>
+</tr>
+<tr>
+<td>Zeige Flaggen im Dropdown Menü</td>
+<td>Aktiviert</td>
+</tr>
+<tr>
+<td>Topbar-Anzeigemodus</td>
+<td>Topbar ersetzen</td>
+</tr>
+<tr>
+<td>Länder ausschließen</td>
+<td>Heimatland (z. B. Deutschland)</td>
+</tr>
+<tr>
+<td>Versandkosten auf Basis der Nettokosten anpassen</td>
+<td>Aktiviert</td>
+</tr>
+<tr>
+<td>Ändern der Währung in die lokale Währung des ausgewählten Landes</td>
+<td>Deaktiviert (außer EUR-Ausland)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fur-reinen-landerumschalter-ohne-neuberechnung">Für reinen Länderumschalter ohne Neuberechnung<a class="headerlink" href="#fur-reinen-landerumschalter-ohne-neuberechnung" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Einstellung</th>
+<th>Empfohlener Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aktiviere das Auswahl-Dropdown</td>
+<td>Aktiviert</td>
+</tr>
+<tr>
+<td>Länder ausschließen</td>
+<td>Alle Länder eintragen</td>
+</tr>
+<tr>
+<td>Versandkosten auf Basis der Nettokosten anpassen</td>
+<td>Deaktiviert</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Zurück zum Seitenanfang
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2026 Web Labels Webdesign GmbH
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://web-labels.de" target="_blank" rel="noopener" title="Web Labels Website" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://store.shopware.com/web-labels-webdesign-gmbh.html" target="_blank" rel="noopener" title="Shopware Store" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M21.5 181.1 78.3 67.4c10.9-21.7 33-35.4 57.3-35.4h304.9c24.2 0 46.4 13.7 57.2 35.4l56.8 113.7c3.6 7.2 5.5 15.1 5.5 23.2 0 27.3-21.2 49.7-48 51.6V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V256h-96v176c0 26.5-21.5 48-48 48H112c-26.5 0-48-21.5-48-48V255.9c-26.8-1.9-48-24.3-48-51.6 0-8 1.9-16 5.5-23.2M128 256v112c0 8.8 7.2 16 16 16h128c8.8 0 16-7.2 16-16V256z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://web-labels.de/impressum" target="_blank" rel="noopener" title="Impressum" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M384 32h128c17.7 0 32 14.3 32 32s-14.3 32-32 32H398.4c-5.2 25.8-22.9 47.1-46.4 57.3V448h160c17.7 0 32 14.3 32 32s-14.3 32-32 32H128c-17.7 0-32-14.3-32-32s14.3-32 32-32h160V153.3c-23.5-10.3-41.2-31.6-46.4-57.3H128c-17.7 0-32-14.3-32-32s14.3-32 32-32h128c14.6-19.4 37.8-32 64-32s49.4 12.6 64 32m55.6 288h144.8L512 195.8zm72.4 96c-62.9 0-115.2-34-126-78.9-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8L631.3 305c5.7 9.8 9.3 21.1 6.7 32.1-10.8 44.8-63.1 78.9-126 78.9M126.8 195.8 54.4 320h144.9zM.9 337.1c-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8L246.2 305c5.7 9.8 9.3 21.1 6.7 32.1-10.8 44.8-63.1 78.9-126 78.9S11.7 382 .9 337.1"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://web-labels.de/datenschutz" target="_blank" rel="noopener" title="Datenschutz" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M224 248a120 120 0 1 0 0-240 120 120 0 1 0 0 240m-29.7 56C95.8 304 16 383.8 16 482.3c0 16.4 13.3 29.7 29.7 29.7h251.5C261 469.4 240 414.5 240 356.4v-31.1c0-7.3 1-14.5 2.9-21.3zm251 184.5-13.3 6.3V306.7l96 32v19.6c0 55.8-32.2 106.5-82.7 130.3zm-23.4-229-112 37.3c-13.1 4.4-21.9 16.6-21.9 30.4v31.1c0 74.4 43 142.1 110.2 173.7l18.5 8.7c4.8 2.2 10 3.4 15.2 3.4s10.5-1.2 15.2-3.4l18.5-8.7C533 500.3 576 432.6 576 358.2v-31.1c0-13.8-8.8-26-21.9-30.4l-112-37.3c-6.6-2.2-13.7-2.2-20.2 0z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.prune", "navigation.indexes", "navigation.top", "search.highlight", "search.suggest", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../javascripts/plugin-filter.js"></script>
+      
+    
+  </body>
+</html>
