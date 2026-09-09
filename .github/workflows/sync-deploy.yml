@@ -61,6 +61,7 @@ jobs:
             ["WebLa_PropertyNotes"]="WebLa_PropertyNotes"
             ["WebLa_CustomerTaxCountry"]="WebLa_CustomerTaxCountry"
             ["WebLa_HomePageControl"]="WebLa_HomePageControl"
+            ["WebLa_AddressValidation"]=WebLaAddressValidation
           )
 
           declare -A PLUGIN_FOLDERS=(
@@ -93,6 +94,7 @@ jobs:
             ["WebLa_PropertyNotes"]="WebLa_PropertyNotes"
             ["WebLa_CustomerTaxCountry"]="WebLa_CustomerTaxCountry"
             ["WebLa_HomePageControl"]="WebLa_HomePageControl"
+            ["WebLa_AddressValidation"]=WebLaAddressValidation
           )
 
           # Supported languages

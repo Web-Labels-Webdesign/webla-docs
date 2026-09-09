@@ -1,4 +1,13 @@
 plugins:
+  - id: WebLaAddressValidation
+    name:
+      de: "Adressvalidierung auf Hausnummer und Sonderzeichen"
+      en: "Address Validation for House Number and Special Characters"
+    short:
+      de: "Adressvalidierung Plugin, welches die Eingabe der Straße und des Ortes auf Sonderzeichen validiert. Zusätzlich wird bei der Staßeneingabe auch noch geprüft, ob eine Hausnr. vorhanden ist."
+      en: "Address Validation Plugin that validates the input of street and city names for special characters. Additionally, it checks whether a house number is present when entering the street name."
+    requirements: Shopware 6.6–6.7, PHP 8.2+
+    version: "1.1.0"
   - id: WebLa_HomePageControl
     name:
       de: Startseiten Steuerung
