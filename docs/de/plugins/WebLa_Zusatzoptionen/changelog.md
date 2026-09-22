@@ -4,6 +4,33 @@ Alle wichtigen Änderungen am Zusatzoptionen Plugin für Endbenutzer.
 
 ---
 
+# 5.9.0
+
+_Veröffentlicht am 2026-09-22_
+
+**Neue Funktionen**
+
+- Optionen mit Mengenauswahl können als **Pauschalpreis** markiert werden: Der Preis wird pro Einheit des Hauptprodukts nur einmal berechnet, unabhängig von der gewählten Optionsmenge. Im Storefront erscheint der Hinweis "Pauschalpreis" unter dem Optionspreis. Die Einstellung steht im Optionsdialog und pro Option im Seeder zur Verfügung.
+- Optionen haben jetzt eine **Mindestmenge** (Standard 1) und eine **Maximalmenge** (Standard 100). Das Mengenfeld im Storefront hält die Grenzen ein, und Mengen außerhalb der Grenzen werden beim Hinzufügen zum Warenkorb oder beim Ändern dort korrigiert. Beide Werte lassen sich auch pro Option im Seeder setzen.
+
+---
+
+# 5.8.0
+
+_Veröffentlicht am 2026-08-25_
+
+**Neue Funktionen**
+
+- Neue Einstellung "Optionen-Sets deaktivierter Seeder ausblenden": Ist sie aktiv, zeigt der Storefront keine Optionen-Sets mehr an, deren Seeder deaktiviert ist. Die Optionen-Sets bleiben erhalten, sodass sie beim Reaktivieren des Seeders unverändert wieder erscheinen. Standardmäßig aus.
+- Neue Einstellung "Optionen-Sets beim Löschen eines Seeders löschen": Ist sie deaktiviert, bleiben die vom Seeder erzeugten Optionen-Sets nach dem Löschen des Seeders auf den Produkten erhalten. Standardmäßig an, wie bisher.
+
+**Fehlerbehebungen**
+
+- Der Seeder übernimmt jetzt das Kennzeichen "Vorausgewählt" in die von ihm erzeugten Optionen.
+- Der vom Seeder gesetzte Status von Optionen-Sets wird jetzt über die Datenschicht gespeichert, sodass Caches und Indizes korrekt aktualisiert werden.
+
+---
+
 # 5.7.4
 
 _Veröffentlicht am 2026-08-21_

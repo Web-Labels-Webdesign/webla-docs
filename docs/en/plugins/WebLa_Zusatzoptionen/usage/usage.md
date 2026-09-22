@@ -389,9 +389,16 @@ You can allow customers to choose the quantity of an option (e.g., 2x warranty e
 - Quantity can be increased or decreased
 - Price is automatically multiplied by the quantity
 
-**Technical Limits**:
-- **Minimum**: Inherited from product setting `minPurchase` (default: 1)
-- **Maximum**: Inherited from product setting `calculatedMaxPurchase`
+**Quantity Limits** (per option, shown once quantity selection is enabled):
+- **Minimum quantity**: Lowest selectable quantity (default: 1). The product's `minPurchase` is respected as well.
+- **Maximum quantity**: Highest selectable quantity (default: 100), capped by the product's `calculatedMaxPurchase`.
+- Values outside the limits are corrected server-side when the option is added or changed.
+
+**Flat Rate** (per option, shown once quantity selection is enabled):
+- Enable **Flat rate** if the option price should be charged once regardless of the selected quantity
+- The storefront shows "Flat rate" next to the option price
+- The flat price is charged once per parent product unit (parent quantity 2 → flat price × 2). In the cart the option keeps the selected quantity; its unit price is spread over that quantity so the line total equals flat price × parent quantity. For quantities that do not divide evenly the total can differ by a few cents due to rounding (e.g. 10.00 / 3 = 3.33 × 3 = 9.99).
+- Both settings are also available per option in the seeder
 
 **Example Use Cases**:
 - Customer buys 3 laptops and wants 3x warranty extension

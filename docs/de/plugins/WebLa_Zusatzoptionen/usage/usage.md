@@ -389,9 +389,16 @@ Sie können Kunden erlauben, die Menge einer Option zu wählen (z.B. 2x Garantie
 - Die Menge kann erhöht oder verringert werden
 - Der Preis wird automatisch mit der Menge multipliziert
 
-**Technische Limits**:
-- **Minimum**: Wird von der Produkteinstellung `minPurchase` übernommen (Standard: 1)
-- **Maximum**: Wird von der Produkteinstellung `calculatedMaxPurchase` übernommen
+**Mengenlimits** (pro Option, sichtbar sobald die Mengenauswahl aktiv ist):
+- **Mindestmenge**: Kleinste wählbare Menge (Standard: 1). Der `minPurchase` des Produkts wird zusätzlich berücksichtigt.
+- **Maximalmenge**: Größte wählbare Menge (Standard: 100), begrenzt durch den `calculatedMaxPurchase` des Produkts.
+- Werte außerhalb der Limits werden beim Hinzufügen oder Ändern der Option serverseitig korrigiert.
+
+**Pauschalpreis** (pro Option, sichtbar sobald die Mengenauswahl aktiv ist):
+- Aktivieren Sie **Pauschalpreis**, wenn der Optionspreis unabhängig von der gewählten Menge nur einmal berechnet werden soll
+- Im Storefront wird "Pauschalpreis" neben dem Optionspreis angezeigt
+- Der Pauschalpreis wird pro Einheit des Hauptprodukts berechnet (Produktmenge 2 → Pauschalpreis × 2). Im Warenkorb behält die Option die gewählte Menge; der Einzelpreis wird auf diese Menge verteilt, sodass die Positionssumme Pauschalpreis × Produktmenge entspricht. Bei Mengen, die nicht glatt teilen, kann die Summe rundungsbedingt um wenige Cent abweichen (z.B. 10,00 / 3 = 3,33 × 3 = 9,99).
+- Beide Einstellungen stehen auch pro Option im Seeder zur Verfügung
 
 **Anwendungsbeispiele**:
 - Kunde kauft 3 Laptops und möchte 3x Garantieverlängerung
