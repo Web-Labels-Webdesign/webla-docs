@@ -4,6 +4,30 @@ All notable changes for end users.
 
 ---
 
+# 1.5.23
+
+_Released 2026-09-23_
+
+**Improvements**
+
+- Removed the temporary log entry added in 1.5.22 for wrongly stored base prices of products with additional options. The cause has been identified; the correction of the price itself stays in place.
+
+---
+
+# 1.5.22
+
+_Released 2026-09-23_
+
+**Bug Fixes**
+
+- **Discount applied twice to products with additional options (WebLa_Zusatzoptionen)**: When an additional option was added to a product that was already discounted in the cart, the order could be charged the discount a second time - a product at 399.00 € with a 30% discount was invoiced at 195.51 € instead of 279.30 €. The additional options plugin stores the product's current, already discounted price as its base price, and that stored value was used as the starting point for the discount whenever Shopware did not reload the product during a cart calculation. The discount is now always calculated from the product's actual price, and a wrongly stored base price is corrected automatically.
+
+**Improvements**
+
+- When a wrongly stored base price is corrected, a warning with the details is written to the shop log. This helps to trace the cause and will be removed in a later version.
+
+---
+
 # 1.5.21
 
 _Released 2026-08-18_

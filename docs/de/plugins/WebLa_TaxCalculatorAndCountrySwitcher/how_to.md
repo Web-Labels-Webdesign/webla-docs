@@ -17,12 +17,12 @@ Dieses Dokument bietet Schritt-für-Schritt-Workflows für häufige Aufgaben mit
                  ↓
 [BaseContextFactoryDecorator überschreibt CountryId im SalesChannelContext]
                  ↓
- ┌──────────────────────────┬──────────────────────────┬──────────────────────────┐
- ↓                          ↓                          ↓                          ↓
-[CustomProductPrice    [CustomCartProcessor     [CustomDelivery       [Checkout / Registrierung
- Calculator             aktualisiert Cart-       Calculator passt      übernimmt vorausgewähltes
- rechnet Bruttos aus    Line-Items auf           Versandkosten an     Lieferland]
- Nettos & Landes-Tax]   neue Preise]             Landes-Tax an]
+ ┌──────────────────────────┬──────────────────────────┐
+ ↓                          ↓                          ↓
+[CustomProductPrice    [CustomDelivery       [Checkout / Registrierung
+ Calculator             Calculator passt      übernimmt vorausgewähltes
+ rechnet Bruttos aus    Versandkosten an     Lieferland]
+ Nettos & Landes-Tax]   Landes-Tax an]
 ```
 
 **Kurzfassung**: Der Umschalter setzt das Lieferland im Context-Objekt. Alle folgenden Preis-, Warenkorb- und Versandberechnungen laufen anschließend mit dem neuen Steuersatz durch — immer vom Netto her gerechnet.

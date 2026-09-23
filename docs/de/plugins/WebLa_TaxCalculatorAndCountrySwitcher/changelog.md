@@ -4,6 +4,14 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 5.3.2
+
+_Veröffentlicht am 2026-09-23_
+
+**Fehlerbehebungen**
+
+- Rabatte wurden im Warenkorb unter Umständen doppelt angewendet. Das Plugin hat den bereits rabattierten Preis eines Produkts als dessen Grundpreis gespeichert. Rabatte anderer Plugins (z.B. kundenspezifische Rabatte) wurden dadurch erneut abgezogen, sobald der Warenkorb neu berechnet wurde, ohne das Produkt neu zu laden, etwa nach dem Hinzufügen einer Produktoption auf der Checkout-Seite. Betroffen waren nur Lieferländer außerhalb der Ausschlussliste bei Bruttopreisen.
+
 # 5.3.1
 
 _Veröffentlicht am 2026-08-26_

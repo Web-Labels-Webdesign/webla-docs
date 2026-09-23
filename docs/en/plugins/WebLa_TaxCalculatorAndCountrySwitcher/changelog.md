@@ -4,6 +4,14 @@ All notable changes for end users.
 
 ---
 
+# 5.3.2
+
+_Released 2026-09-23_
+
+**Bug Fixes**
+
+- Fix discounts being applied twice in the cart. The plugin stored a product's already discounted price as its base price, so discounts from other plugins (such as customer-specific discounts) were applied again whenever the cart was recalculated without reloading the product, for example after adding a product option on the checkout page. Only affected delivery countries not on the skip list, with gross prices.
+
 # 5.3.1
 
 _Released 2026-08-26_

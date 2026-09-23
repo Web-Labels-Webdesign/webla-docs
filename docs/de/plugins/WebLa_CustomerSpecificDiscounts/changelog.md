@@ -4,6 +4,30 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 1.5.23
+
+_Veröffentlicht am 2026-09-23_
+
+**Verbesserungen**
+
+- Den in 1.5.22 ergänzten vorübergehenden Log-Eintrag für falsch gespeicherte Grundpreise bei Produkten mit Zusatzoptionen entfernt. Die Ursache ist gefunden, die Korrektur des Preises selbst bleibt erhalten.
+
+---
+
+# 1.5.22
+
+_Veröffentlicht am 2026-09-23_
+
+**Fehlerbehebungen**
+
+- **Rabatt wurde bei Produkten mit Zusatzoptionen (WebLa_Zusatzoptionen) doppelt abgezogen**: Wurde eine Zusatzoption zu einem Produkt hinzugefügt, das im Warenkorb bereits rabattiert war, konnte die Bestellung den Rabatt ein zweites Mal enthalten - ein Produkt für 399,00 € mit 30% Rabatt wurde mit 195,51 € statt 279,30 € berechnet. Das Zusatzoptionen-Plugin speichert den aktuellen, bereits rabattierten Preis des Produkts als Grundpreis, und dieser gespeicherte Wert diente als Ausgangspunkt für den Rabatt, wenn Shopware das Produkt bei einer Warenkorb-Berechnung nicht neu geladen hat. Der Rabatt wird nun immer vom tatsächlichen Produktpreis berechnet, ein falsch gespeicherter Grundpreis wird automatisch korrigiert.
+
+**Verbesserungen**
+
+- Wird ein falsch gespeicherter Grundpreis korrigiert, schreibt das Plugin eine Warnung mit den Details in das Shop-Log. Das hilft, die Ursache nachzuvollziehen, und wird in einer späteren Version wieder entfernt.
+
+---
+
 # 1.5.21
 
 _Veröffentlicht am 2026-08-18_

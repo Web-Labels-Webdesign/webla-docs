@@ -17,12 +17,12 @@ This document provides step-by-step workflows for common tasks with the *Tax cal
                  ↓
 [BaseContextFactoryDecorator overrides CountryId in SalesChannelContext]
                  ↓
- ┌──────────────────────────┬──────────────────────────┬──────────────────────────┐
- ↓                          ↓                          ↓                          ↓
-[CustomProductPrice    [CustomCartProcessor     [CustomDelivery       [Checkout / registration
- Calculator             updates cart             Calculator adjusts   pre-fills selected
- computes gross from    line items with          shipping costs to    delivery country]
- net & country tax]     new prices]              country tax]
+ ┌──────────────────────────┬──────────────────────────┐
+ ↓                          ↓                          ↓
+[CustomProductPrice    [CustomDelivery       [Checkout / registration
+ Calculator             Calculator adjusts   pre-fills selected
+ computes gross from    shipping costs to    delivery country]
+ net & country tax]     country tax]
 ```
 
 **In short**: The switcher sets the delivery country in the context object. All subsequent price, cart, and shipping calculations then run with the new tax rate — always starting from net.
