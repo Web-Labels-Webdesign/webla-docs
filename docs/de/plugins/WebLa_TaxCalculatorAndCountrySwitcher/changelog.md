@@ -4,6 +4,14 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 5.3.3
+
+_Veröffentlicht am 2026-09-25_
+
+**Fehlerbehebungen**
+
+- Die Einstellung „Preis-/MwSt.-Hinweis unter der Auswahl anzeigen“ hatte keine Wirkung. Der Hinweis unter der Lieferland-Auswahl wurde immer angezeigt, auch wenn die Einstellung deaktiviert war.
+
 # 5.3.2
 
 _Veröffentlicht am 2026-09-23_

@@ -4,6 +4,14 @@ All notable changes for end users.
 
 ---
 
+# 5.3.3
+
+_Released 2026-09-25_
+
+**Bug Fixes**
+
+- Fix the setting "Show price/VAT hint below the selector" having no effect. The hint below the delivery country selector was always shown, even with the setting turned off.
+
 # 5.3.2
 
 _Released 2026-09-23_

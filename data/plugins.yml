@@ -88,7 +88,7 @@ plugins:
       de: Zeigen Sie rabattierte Preise nur Besuchern von Preissuchmaschinen - ideal für Google Shopping, idealo, billiger.de und mehr.
       en: Show discounted prices only to visitors from price comparison sites - ideal for Google Shopping, idealo, billiger.de and more.
     requirements: Shopware 6.5–6.8, PHP 8.1+
-    version: "5.2.3"
+    version: "5.3.0"
   - id: WebLa_ProductSliderAdvanced
     name:
       de: Product Slider Advanced
@@ -178,7 +178,7 @@ plugins:
       de: Berechnet Produktsteuern und Versandkosten für Besucher aus anderen Ländern neu und ergänzt die Storefront um einen Länderumschalter im Header. Unterstützt Shopware 6.6 und 6.7.
       en: Recalculates product taxes and shipping costs for visitors from other countries and adds a storefront country switcher. Unified codebase for SW 6.6 and 6.7.
     requirements: Shopware 6.6–6.7, PHP 8.2+
-    version: "5.3.2"
+    version: "5.3.3"
   - id: WebLa_ImageReviews
     name:
       de: Bilder in Produktbewertungen
