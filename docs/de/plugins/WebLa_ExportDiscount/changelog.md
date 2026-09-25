@@ -4,6 +4,27 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 5.3.0
+
+_Veröffentlicht am 2026-09-22_
+
+**Verbesserungen**
+
+- Neue Einstellung „Keinen Feed-Rabatt auf bereits reduzierte Produkte anwenden". Ist sie aktiviert, erhalten Produkte, die Sie bereits mit einem eigenen Streichpreis reduziert haben, keinen zusätzlichen Rabatt aus dem Preisvergleich-Export – weder im Feed noch im Shop oder im Warenkorb. So wird ein Sale-Preis nicht doppelt rabattiert. Die Einstellung wirkt nur auf den am Produktexport hinterlegten Rabatt; Produkte mit individuellem Export-Preis (Zusatzfeld „Neuer Preis im Export (Brutto)") sind davon ausgenommen. Standardmäßig ist sie deaktiviert, am bisherigen Verhalten ändert sich also nichts.
+
+**Fehlerbehebungen**
+
+- Bei Produkten mit eigenem Streichpreis bleibt dieser jetzt als durchgestrichener Preis stehen. Bisher ersetzte das Plugin ihn durch den bereits reduzierten Verkaufspreis: Bei einem Artikel für 5,99 € mit Streichpreis 9,99 € stand neben dem Feed-Preis nur noch „statt 5,99 €", die ursprünglichen 9,99 € waren verschwunden und die ausgewiesene Ersparnis dadurch viel zu klein.
+- In Produktlisten und Suchergebnissen zeigt die Artikelkachel jetzt ebenfalls den rabattierten Preis – auch beim „ab"-Preis von Varianten. Bisher warb die Kachel mit dem vollen Preis, obwohl die Produktseite den Rabatt bereits auswies.
+- Mit der Option „Rabatt nur bei Einzelkäufen" wird der Rabatt jetzt auf den Preis gerechnet, der für ein Stück tatsächlich gilt. Bei Produkten mit Staffelpreisen zog das Plugin bisher den Grundpreis heran und verlangte dadurch für ein Stück mehr als ein Kunde ohne Feed-Link zahlt: Bei einem Artikel mit Grundpreis 950 € und Staffelpreis 800 € ab dem ersten Stück kostete das Einzelstück 855 € statt 720 €.
+- Mit derselben Option berechnet der Warenkorb ab zwei Stück jetzt die zur Menge passende Staffelstufe. Bisher galt für jede Menge ab zwei derselbe Einzelpreis – bei 12 Stück also 800 € statt der hinterlegten 750 €.
+- Staffelpreise, die an eine Regel gebunden sind (z. B. nur für Händler), fließen nicht mehr in den Feed-Rabatt von Kunden ein, für die diese Regel nicht gilt. Bisher konnte ein Besucher den rabattierten Händlerpreis erhalten und im Warenkorb die Staffeln einer fremden Kundengruppe berechnet bekommen.
+- Nach einem Variantenwechsel auf der Produktseite zeigt die Staffelpreis-Tabelle wieder denselben Aufbau wie beim ersten Laden der Seite. Artikelkacheln im Cross-Selling der Produktseite werben nicht mehr mit dem unrabattierten Mengenpreis.
+- Ohne die Option „Rabatt nur bei Einzelkäufen" berechnet der Warenkorb bei Produkten mit Staffelpreisen jetzt die rabattierte Staffelstufe zur jeweiligen Menge. Bisher galt für jede Menge der rabattierte Grundpreis, der über dem auf der Produktseite angezeigten Preis liegen konnte.
+- Ob ein Produkt bereits reduziert ist, beurteilen Feed und Shop jetzt einheitlich: anhand des Preises, von dem der Rabatt berechnet wird, und nur wenn der Streichpreis über diesem Preis liegt.
+
+---
+
 # 5.2.3
 
 _Veröffentlicht am 2026-08-06_

@@ -52,6 +52,22 @@ Solange die Gültigkeit läuft, werden die Seiten mit dem rabattierten Preis fü
 
 ---
 
+### Keinen Feed-Rabatt auf bereits reduzierte Produkte anwenden
+
+| Eigenschaft      | Wert                  |
+| ---------------- | --------------------- |
+| **Typ**          | Schalter (Ja/Nein)    |
+| **Standard**     | Nein                  |
+| **Erforderlich** | Nein                  |
+
+**Beschreibung**: Wenn aktiviert, erhalten Produkte mit eigenem Streichpreis keinen zusätzlichen Rabatt aus dem Preisvergleich-Export – weder im Feed noch im Shop oder Warenkorb. Im Feed und im Shop erscheint dann der von Ihnen gesetzte reduzierte Preis. Bei Staffelpreisen werden nur die Stufen übersprungen, die selbst einen Streichpreis haben. Die Einstellung kann pro Verkaufskanal gesetzt werden und wird für den Storefront-Verkaufskanal des jeweiligen Exports gelesen.
+
+**Ausnahme**: Produkte mit individuellem Export-Preis (Zusatzfeld „Neuer Preis im Export") sind nicht betroffen. Die Einstellung wirkt nur auf den global am Export hinterlegten Rabatt (prozentual oder absolut).
+
+**Anwendungsbeispiel**: Aktivieren Sie diese Option, wenn Sie Sale-Aktionen mit Streichpreisen fahren und verhindern möchten, dass diese Produkte über den Preisvergleich zusätzlich rabattiert werden.
+
+---
+
 ### API-Sessions löschen (Button)
 
 | Eigenschaft      | Wert                  |
@@ -168,4 +184,5 @@ Die Export-spezifischen Rabatteinstellungen werden direkt am Produktexport konfi
 | Rabatttyp & Rabattwert            | Pro Export      | Jeder Produktexport kann eigene Rabatte haben   |
 | Nur Einzelkäufe                   | Global          | Gilt für alle Verkaufskanäle                    |
 | Mehrere Produkte pro Session      | Global          | Gilt für alle Verkaufskanäle                    |
+| Keine bereits reduzierten Produkte | Pro Verkaufskanal | Gilt für den Storefront-Kanal des Exports     |
 | Artikel-spezifischer Preis        | Pro Produkt     | Überschreibt den Export-Rabatt für das Produkt  |

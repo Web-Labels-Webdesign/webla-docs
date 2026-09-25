@@ -52,6 +52,22 @@ While the validity lasts, the pages showing the discounted price are served unca
 
 ---
 
+### Do not apply the feed discount to products that are already reduced
+
+| Property     | Value           |
+| ------------ | --------------- |
+| **Type**     | Toggle (Yes/No) |
+| **Default**  | No              |
+| **Required** | No              |
+
+**Description**: When enabled, products with their own list price (strike-through price) receive no additional discount from the price comparison export – neither in the feed nor in the shop or cart. The feed and the shop then show the reduced price you set. For graduated prices, only the tiers that carry a list price themselves are skipped. The setting can be configured per sales channel and is read for the storefront sales channel of the respective export.
+
+**Exception**: Products with an individual export price (custom field "New price in export") are not affected. The setting only applies to the discount configured globally on the export (percentage or absolute).
+
+**Example Use Case**: Enable this option if you run sales with strike-through prices and want to prevent those products from being discounted again via the price comparison.
+
+---
+
 ### Delete API Sessions (Button)
 
 | Property     | Value          |
@@ -168,4 +184,5 @@ The export-specific discount settings are configured directly on the product exp
 | Discount Type & Discount Value    | Per Export  | Each product export can have its own discounts   |
 | Single units only                 | Global      | Applies to all sales channels                    |
 | Multiple products per session     | Global      | Applies to all sales channels                    |
+| Skip already reduced products     | Per sales channel | Read for the export's storefront channel   |
 | Item-specific price               | Per Product | Overrides the export discount for the product    |

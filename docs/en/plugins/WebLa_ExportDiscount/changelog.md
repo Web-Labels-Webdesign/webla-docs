@@ -4,6 +4,27 @@ All notable changes for end users.
 
 ---
 
+# 5.3.0
+
+_Released 2026-09-22_
+
+**Improvements**
+
+- New setting "Do not apply the feed discount to products that are already reduced". When enabled, products you have already reduced with your own list price (strike-through price) receive no additional discount from the price comparison export – neither in the feed nor in the shop or cart. This keeps a sale price from being discounted twice. The setting only affects the discount configured on the product export; products with an individual export price (custom field "New price in export (gross)") are not affected. It is off by default, so existing behaviour stays unchanged.
+
+**Bug Fixes**
+
+- On products with their own list price, that price now stays as the strike-through price. The plugin used to replace it with the already reduced sale price: on an item selling for 5.99 with a list price of 9.99, the feed price was shown next to "instead of 5.99", the original 9.99 was gone and the advertised saving far too small.
+- Product listings and search results now show the discounted price on the card as well, including the "from" price of variants. The card used to advertise the full price although the product page already showed the discount.
+- With "Apply discount only for single-unit purchases" enabled, the discount is now calculated from the price that actually applies to one unit. On products with graduated prices the plugin used the base price instead, which charged more for a single unit than a customer without a feed link pays: on an item with a base price of 950 and a 800 tier starting at the first unit, one unit cost 855 instead of 720.
+- With the same option, the cart now charges the graduated price matching the quantity from two units on. Previously every quantity from two upwards was charged the same single-unit price – 800 for 12 units, for example, instead of the configured 750.
+- Graduated prices bound to a rule (for example, dealers only) no longer feed into the discount of customers that rule does not apply to. A visitor could previously get the discounted dealer price and be charged another customer group's tiers in the cart.
+- After switching variants on the product page, the graduated price table has the same structure as on the first page load again. Product cards in the cross-selling on the product page no longer advertise the undiscounted bulk price.
+- Without "Apply discount only for single-unit purchases", the cart now charges the discounted graduated price matching the quantity on products with tiers. Previously every quantity was charged the discounted base price, which could be higher than the price shown on the product page.
+- The feed and the shop now agree on whether a product is already reduced: both judge the price the discount is calculated from, and only a list price above that price counts.
+
+---
+
 # 5.2.3
 
 _Released 2026-08-06_
