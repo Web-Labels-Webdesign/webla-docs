@@ -4,6 +4,14 @@ Alle wichtigen Änderungen am Abonnement Plugin für Mollie für Endbenutzer.
 
 ---
 
+# 1.12.0
+
+_Veröffentlicht am 2026-09-25_
+
+**Neue Funktionen**
+
+- Abo-Optionen lassen sich jetzt in der Mehrfachänderung von Shopware für viele Produkte gleichzeitig ändern (**Kataloge → Produkte → Mehrfachänderung**). Eine neue Karte **Abo-Optionen** ersetzt, ergänzt oder entfernt Intervalle samt Bezeichnung und Rabatt bei allen ausgewählten Produkten. Eine Rabattänderung über Hunderte Produkte ist damit ein einziger Schritt, bestehende Optionen werden dabei aktualisiert statt neu angelegt.
+
 # 1.11.0
 
 _Veröffentlicht am 2026-09-02_

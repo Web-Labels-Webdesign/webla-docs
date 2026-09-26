@@ -45,6 +45,25 @@ If a product should only be available as a subscription:
 
 In the storefront, the one-time purchase option will be hidden and customers can only order the product as a subscription.
 
+### Editing Many Products at Once
+
+If many products share the same subscription options, set them up with Shopware's bulk edit instead of opening each product.
+
+1. Go to **Catalogues → Products** and filter the list, for example by category or manufacturer
+2. Select the products and click **Bulk edit**, then **Start bulk edit**
+3. Scroll to the **Subscription options** card and turn on **Change subscription options**
+4. Pick a **Change type**:
+   - **Replace**: every selected product ends up with exactly the options you enter. Options with the same interval are updated, all others are deleted
+   - **Add missing**: adds only the intervals a product does not have yet and leaves existing options alone
+   - **Remove**: deletes the options with the intervals you enter
+   - **Remove all**: deletes all options. Variants then inherit from their main product again
+5. Add one row per option with interval, label and discount. The order of the rows sets the display order
+6. Click **Apply changes**
+
+To raise the discount on all your subscription products, for example from 6 % to 10 %, run **Replace** with the same intervals and the new discount. Existing options keep their settings and only the discount changes.
+
+Labels are saved in the content language selected at the top of the page. **Replace** and **Add missing** therefore only work while the system default language is selected.
+
 ### Storefront Display
 
 On the product detail page, customers see:

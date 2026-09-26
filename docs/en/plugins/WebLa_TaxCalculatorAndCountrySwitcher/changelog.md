@@ -4,6 +4,14 @@ All notable changes for end users.
 
 ---
 
+# 5.4.0
+
+_Released 2026-09-25_
+
+**New Features**
+
+- Logged-in customers now see their delivery country without the dropdown arrow. Their delivery country comes from the shipping address in their account, so it cannot be changed in the header. Clicking the country shows a short notice with a link to the address page. Guests keep the regular selector. The texts can be edited under Settings > Snippets (keys: webla.countryLocked.text, webla.countryLocked.link).
+
 # 5.3.3
 
 _Released 2026-09-25_

@@ -4,6 +4,14 @@ All notable changes to the Subscription Plugin for Mollie for end users.
 
 ---
 
+# 1.12.0
+
+_Released 2026-09-25_
+
+**New Features**
+
+- Subscription options can now be changed for many products at once in Shopware's bulk edit (**Catalogues → Products → Bulk edit**). A new **Subscription options** card replaces, adds or removes intervals with their labels and discounts on all selected products. Changing a discount across hundreds of products is now a single step, and existing options are updated in place rather than recreated.
+
 # 1.11.0
 
 _Released 2026-09-02_

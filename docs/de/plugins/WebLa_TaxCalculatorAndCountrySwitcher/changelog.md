@@ -4,6 +4,14 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 5.4.0
+
+_Veröffentlicht am 2026-09-25_
+
+**Neue Funktionen**
+
+- Eingeloggte Kunden sehen ihr Lieferland jetzt ohne das Dropdown-Dreieck. Ihr Lieferland ergibt sich aus der Lieferadresse im Kundenkonto und lässt sich deshalb nicht im Header ändern. Ein Klick auf das Land zeigt einen kurzen Hinweis mit einem Link zu den Adressen im Kundenkonto. Gäste sehen weiterhin die normale Auswahl. Die Texte lassen sich unter Einstellungen > Textbausteine anpassen (Schlüssel: webla.countryLocked.text, webla.countryLocked.link).
+
 # 5.3.3
 
 _Veröffentlicht am 2026-09-25_

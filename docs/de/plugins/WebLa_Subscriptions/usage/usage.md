@@ -45,6 +45,25 @@ Wenn ein Produkt ausschließlich als Abonnement verfügbar sein soll:
 
 In der Storefront wird dann die Einzelkauf-Option ausgeblendet und Kunden können das Produkt nur als Abonnement bestellen.
 
+### Viele Produkte auf einmal bearbeiten
+
+Wenn viele Produkte dieselben Abo-Optionen haben, richten Sie diese über die Mehrfachänderung von Shopware ein, statt jedes Produkt einzeln zu öffnen.
+
+1. Öffnen Sie **Kataloge → Produkte** und filtern Sie die Liste, zum Beispiel nach Kategorie oder Hersteller
+2. Wählen Sie die Produkte aus und klicken Sie auf **Mehrfachänderung** und dann auf **Mehrfachänderung starten**
+3. Scrollen Sie zur Karte **Abo-Optionen** und aktivieren Sie **Abo-Optionen ändern**
+4. Wählen Sie die **Art der Änderung**:
+   - **Ersetzen**: Jedes ausgewählte Produkt erhält genau die eingetragenen Optionen. Optionen mit gleichem Intervall werden aktualisiert, alle anderen gelöscht
+   - **Fehlende hinzufügen**: Legt nur die Intervalle an, die ein Produkt noch nicht hat. Bestehende Optionen bleiben unverändert
+   - **Entfernen**: Löscht die Optionen mit den eingetragenen Intervallen
+   - **Alle entfernen**: Löscht alle Optionen. Varianten erben danach wieder vom Hauptprodukt
+5. Legen Sie pro Option eine Zeile mit Intervall, Bezeichnung und Rabatt an. Die Reihenfolge der Zeilen bestimmt die Anzeigereihenfolge
+6. Klicken Sie auf **Änderungen übernehmen**
+
+Um den Rabatt aller Abo-Produkte zu erhöhen, zum Beispiel von 6 % auf 10 %, verwenden Sie **Ersetzen** mit denselben Intervallen und dem neuen Rabatt. Bestehende Optionen behalten ihre Einstellungen, nur der Rabatt ändert sich.
+
+Bezeichnungen werden in der oben auf der Seite gewählten Inhaltssprache gespeichert. **Ersetzen** und **Fehlende hinzufügen** funktionieren deshalb nur, solange die Standardsprache des Systems gewählt ist.
+
 ### Darstellung in der Storefront
 
 Auf der Produktdetailseite sehen Kunden:
