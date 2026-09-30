@@ -4,6 +4,16 @@ All notable changes for end users.
 
 ---
 
+# 1.5.24
+
+_Released 2026-09-30_
+
+**Bug Fixes**
+
+- **Installation failed on MySQL 8.4 and newer**: Installing the plugin aborted with the database error "Missing unique key for constraint ... in the referenced table 'category'". The link between discounts and categories now matches how Shopware itself stores categories, so the plugin installs on all supported databases. Existing shops are converted automatically on update; all discounts are kept. Discounts left behind for categories that no longer exist are removed during the update.
+
+---
+
 # 1.5.23
 
 _Released 2026-09-23_

@@ -4,6 +4,20 @@ Alle wichtigen Änderungen für Endanwender.
 
 ---
 
+# 5.1.3
+
+_Veröffentlicht am 2026-09-30_
+
+**Fehlerbehebungen**
+
+- Das Hinzufügen eines Produkts zu einer PremsWishlist-Merkliste konnte bei aktiver Merklisten-Integration mit einem Fehler abbrechen. Produkte werden jetzt zuverlässig hinzugefügt, bereits vorhandene Produkte werden weiterhin übersprungen.
+
+**Verbesserungen**
+
+- Die Storefront-Skripte verwenden keine von Shopware als veraltet markierten Funktionen mehr. Das bereitet das Plugin auf kommende Shopware-Versionen vor.
+
+---
+
 # 5.1.2
 
 _Veröffentlicht am 2026-06-01_

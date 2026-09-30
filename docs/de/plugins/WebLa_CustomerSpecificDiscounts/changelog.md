@@ -4,6 +4,16 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 1.5.24
+
+_Veröffentlicht am 2026-09-30_
+
+**Fehlerbehebungen**
+
+- **Installation schlug unter MySQL 8.4 und neuer fehl**: Die Installation des Plugins brach mit dem Datenbankfehler "Missing unique key for constraint ... in the referenced table 'category'" ab. Die Verknüpfung zwischen Rabatten und Kategorien entspricht jetzt der Art, wie Shopware selbst Kategorien speichert, sodass sich das Plugin auf allen unterstützten Datenbanken installieren lässt. Bestehende Shops werden beim Update automatisch umgestellt, alle Rabatte bleiben erhalten. Übrig gebliebene Rabatte für nicht mehr vorhandene Kategorien werden beim Update entfernt.
+
+---
+
 # 1.5.23
 
 _Veröffentlicht am 2026-09-23_

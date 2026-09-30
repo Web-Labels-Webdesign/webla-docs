@@ -4,6 +4,20 @@ All notable changes for end users.
 
 ---
 
+# 5.1.3
+
+_Released 2026-09-30_
+
+**Bug Fixes**
+
+- Adding a product to a PremsWishlist wishlist could fail with an error when the wishlist integration was active. Products are now added reliably, and products already on the wishlist are still skipped.
+
+**Improvements**
+
+- The storefront scripts no longer use functions that Shopware has deprecated, which prepares the plugin for upcoming Shopware versions.
+
+---
+
 # 5.1.2
 
 _Released 2026-06-01_
