@@ -214,7 +214,7 @@ plugins:
       de: Erstellt automatisch SEO-optimierte Herstellerseiten mit Übersicht, Detailansicht, Produktfiltern, Sortierung und Sitemap-Integration für Ihren Shopware-Shop.
       en: Automatically creates SEO-optimized manufacturer pages with overview, detail view, product filters, sorting and sitemap integration for your Shopware store.
     requirements: Shopware 6.6–6.8, PHP 8.1+
-    version: "5.0.0"
+    version: "5.1.0"
   - id: WebLa_CategorySorter
     name:
       de: Kategorie-Sortierer

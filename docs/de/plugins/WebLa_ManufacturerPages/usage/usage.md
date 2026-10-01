@@ -60,6 +60,7 @@ Das Plugin registriert einen **CMS-Block** und ein **CMS-Element** mit dem Namen
 
 - Platzieren Sie die Seite über **Shop-Seiten** im Footer oder als eigene Navigations-Einstiegsseite.
 - Die Darstellung lässt sich über die eigenen CSS-Klassen (`webla_manufacturers_wrapper`, `webla_manufacturer`, `webla_manufacturers-key`) weiter anpassen, falls Sie ein individuelles Layout wünschen.
+- Sie pflegen bereits eigene Marken-Kategorieseiten? Mit der Einstellung **„Linkziel in der Herstellerübersicht“** verlinken die Kacheln auf die im Hersteller hinterlegte **Webseite**, sofern diese in Ihren Shop zeigt. Siehe [Einstellungsreferenz](../configuration/settings.md#linkziel-in-der-herstellerübersicht).
 
 ---
 
@@ -154,6 +155,8 @@ Das Plugin legt beim Installieren folgende **Zusatzfelder** auf Hersteller-Ebene
 
 **Was Kunden sehen**: Alphabetisch gruppierte Hersteller-Liste (A–Z plus `0-9`), Buchstaben-Filter, „Alle zurücksetzen"-Button. Optional darüber die markierten Top-Hersteller.
 
+**Wohin die Kacheln verlinken**: Standardmäßig auf die Herstellerseite des Plugins. Mit der Einstellung **„Linkziel in der Herstellerübersicht“** alternativ auf die **Webseite** des Herstellers — aber nur, wenn diese in Ihren Shop zeigt.
+
 **Anpassungsmöglichkeiten**: Über eigene CSS-Klassen im Theme — das Plugin liefert keine eigene Admin-UI für Styling.
 
 ---
@@ -187,6 +190,16 @@ Das Plugin legt beim Installieren folgende **Zusatzfelder** auf Hersteller-Ebene
 **Ursache**: Der Top-Hersteller ist gleichzeitig in der allgemeinen Hersteller-Übersicht ausgeblendet (z. B. durch „Hersteller verstecken" oder Lagerbestand-Filter), oder er hat keine aktiven Produkte.
 
 **Lösung**: Deaktivieren Sie „Hersteller verstecken" und prüfen Sie die Produkt-Zuordnung.
+
+---
+
+### Kachel verlinkt nicht auf die hinterlegte Webseite
+
+**Symptom**: Die Einstellung **„Linkziel in der Herstellerübersicht“** steht auf **Feld „Webseite“ des Herstellers**, die Kachel verlinkt aber weiterhin auf die Herstellerseite des Plugins.
+
+**Ursache**: Das Feld **Webseite** ist leer oder zeigt auf eine fremde Domain (z. B. die offizielle Hersteller-Webseite). Externe Links werden bewusst ignoriert, damit das Produkt-Listing erreichbar bleibt.
+
+**Lösung**: Tragen Sie eine URL Ihres eigenen Shops ein (z. B. `https://ihr-shop.de/marken/acme/` oder `/marken/acme/`) und leeren Sie den Cache.
 
 ---
 

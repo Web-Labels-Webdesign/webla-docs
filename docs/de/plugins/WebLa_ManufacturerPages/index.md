@@ -20,6 +20,7 @@ Die Zielgruppe sind Shop-Betreiber, deren Sortiment stark nach Marken oder Herst
 - **Produkt-Filter & Sortierung**: Auf der Herstellerseite funktionieren alle Standard-Shopware-Filter und Sortierungen wie in der Kategorie-Listing.
 - **Hersteller verbergen**: Einzelne Hersteller lassen sich über ein Checkbox-Feld komplett aus Übersicht und Sitemap ausblenden.
 - **Text-Baustein pro Hersteller**: Zusätzlicher Freitext unterhalb des Produkt-Listings (HTML-fähig) pro Hersteller.
+- **Flexibles Linkziel**: Hersteller-Kacheln können optional auf eigene Marken-Kategorieseiten verlinken (über das Feld „Webseite“ des Herstellers).
 
 ## Voraussetzungen
 

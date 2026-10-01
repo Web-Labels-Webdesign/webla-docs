@@ -6,6 +6,18 @@ A complete technical change history is available in [CHANGELOG.md](../../CHANGEL
 
 ---
 
+## Version 5.1.0
+
+### ✨ New Features
+
+- **Link target in the manufacturer overview**: New setting that lets the manufacturer tiles (overview and featured manufacturers) link to the **Website** stored on the manufacturer — e.g. an existing brand category page. Only links pointing into your own shop are used. External manufacturer websites are ignored so the manufacturer's product listing stays reachable.
+
+### 🔧 Improvements
+
+- **Future-proofing**: Replaced deprecated Shopware calls that will be removed in Shopware 6.8.
+
+---
+
 ## Version 5.0.0
 
 ### ✨ New Features
@@ -41,6 +53,12 @@ For details on versions prior to 5.0.0 see [CHANGELOG.md](../../CHANGELOG.md) in
 
 ## Upgrade Notes
 
+### Upgrading to 5.1.0
+
+1. **Perform the upgrade**: Plugin Manager → Manufacturer Pages → Update.
+2. **Clear the cache** (**Settings → Cache & Indexes**).
+3. Behaviour stays unchanged until you actively switch the new setting **"Link target in the manufacturer overview"**.
+
 ### Upgrading to 5.0.0
 
 1. **Before the upgrade**: Back up your shop database.
@@ -54,7 +72,7 @@ For details on versions prior to 5.0.0 see [CHANGELOG.md](../../CHANGELOG.md) in
 
 | Plugin version | Shopware version | PHP version |
 | -------------- | ---------------- | ----------- |
-| 5.0.x          | 6.6.x, 6.7.x     | 8.2+        |
+| 5.x            | 6.6.x, 6.7.x     | 8.2+        |
 | 4.x            | 6.7.x            | 8.2+        |
 | 3.x            | 6.6.x            | 8.2+        |
 | 2.x            | 6.5.x            | 8.1+        |

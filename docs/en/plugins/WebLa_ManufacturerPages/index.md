@@ -20,6 +20,7 @@ The target audience are shop operators whose assortment is strongly structured b
 - **Product filters & sorting**: All Shopware standard filters and sorting options work on the manufacturer page, just like on a category listing.
 - **Hide manufacturer**: Individual manufacturers can be fully excluded from overview and sitemap via a checkbox field.
 - **Text block per manufacturer**: Additional free-form text below the product listing (HTML-capable) per manufacturer.
+- **Flexible link target**: Manufacturer tiles can optionally link to your own brand category pages (via the manufacturer's "Website" field).
 
 ## Requirements
 

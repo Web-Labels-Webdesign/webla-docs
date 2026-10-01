@@ -6,6 +6,18 @@ Eine vollständige technische Änderungshistorie finden Sie in der Datei [CHANGE
 
 ---
 
+## Version 5.1.0
+
+### ✨ Neue Funktionen
+
+- **Linkziel in der Herstellerübersicht**: Neue Einstellung, mit der die Hersteller-Kacheln (Übersicht und Top-Hersteller) auf die im Hersteller hinterlegte **Webseite** verlinken können — z. B. auf eine bestehende Marken-Kategorieseite. Es werden nur Links verwendet, die in den eigenen Shop zeigen. Externe Hersteller-Webseiten werden ignoriert, damit das Produkt-Listing des Herstellers erreichbar bleibt.
+
+### 🔧 Verbesserungen
+
+- **Zukunftssicherheit**: Veraltete Shopware-Aufrufe ersetzt, die mit Shopware 6.8 entfallen.
+
+---
+
 ## Version 5.0.0
 
 ### ✨ Neue Funktionen
@@ -41,6 +53,12 @@ Für Details zu Versionen vor 5.0.0 siehe [CHANGELOG.md](../../CHANGELOG.md) im 
 
 ## Upgrade-Hinweise
 
+### Upgrade auf 5.1.0
+
+1. **Upgrade durchführen**: Plugin Manager → Hersteller Seiten → Aktualisieren.
+2. **Cache leeren** (**Einstellungen → Cache & Indizes**).
+3. Das Verhalten bleibt unverändert, bis Sie die neue Einstellung **„Linkziel in der Herstellerübersicht“** aktiv umstellen.
+
 ### Upgrade auf 5.0.0
 
 1. **Vor dem Upgrade**: Sichern Sie Ihre Shop-Datenbank.
@@ -54,7 +72,7 @@ Für Details zu Versionen vor 5.0.0 siehe [CHANGELOG.md](../../CHANGELOG.md) im 
 
 | Plugin-Version | Shopware-Version | PHP-Version |
 | -------------- | ---------------- | ----------- |
-| 5.0.x          | 6.6.x, 6.7.x     | 8.2+        |
+| 5.x            | 6.6.x, 6.7.x     | 8.2+        |
 | 4.x            | 6.7.x            | 8.2+        |
 | 3.x            | 6.6.x            | 8.2+        |
 | 2.x            | 6.5.x            | 8.1+        |

@@ -24,6 +24,23 @@ Alle Einstellungen sind **pro Verkaufskanal** konfigurierbar. Wenn Sie kein konk
 
 ---
 
+### Linkziel in der Herstellerübersicht
+
+| Eigenschaft      | Wert                          |
+| ---------------- | ----------------------------- |
+| **Typ**          | Auswahl                       |
+| **Standard**     | Herstellerseite des Plugins   |
+| **Erforderlich** | Nein                          |
+
+**Beschreibung**: Legt fest, wohin die Hersteller-Kacheln (Übersicht und vorgestellte Hersteller) verlinken.
+
+- **Herstellerseite des Plugins**: Jede Kachel verlinkt auf die Herstellerseite des Plugins (z. B. `/hersteller/acme`).
+- **Feld „Webseite“ des Herstellers**: Zeigt das Feld **Webseite** des Herstellers (Kataloge → Hersteller) in diesen Shop — als relativer Pfad wie `/marken/acme-shop/` oder als URL auf der eigenen Shop-Domain —, verlinkt die Kachel auf diese URL. Hersteller ohne Webseite oder mit externer Webseite (z. B. `https://www.acme.de`) verlinken weiterhin auf die Herstellerseite des Plugins, damit ihr Produkt-Listing erreichbar bleibt.
+
+**Anwendungsbeispiel**: Sie pflegen bereits eigene Marken-Kategorieseiten (z. B. `/marken/acme-shop/`). Tragen Sie diese URL im Feld „Webseite“ des Herstellers ein und wählen Sie **Feld „Webseite“ des Herstellers** — die Übersicht verlinkt dann auf Ihre Kategorieseiten statt auf die Plugin-Seiten.
+
+---
+
 ### Aktivieren Sie die SEO-URL-Erzeugung
 
 | Eigenschaft      | Wert           |

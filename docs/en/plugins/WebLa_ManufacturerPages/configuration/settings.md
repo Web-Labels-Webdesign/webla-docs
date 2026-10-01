@@ -24,6 +24,23 @@ All settings are configurable **per sales channel**. If you do not pick a specif
 
 ---
 
+### Link target in the manufacturer overview
+
+| Property         | Value                                        |
+| ---------------- | -------------------------------------------- |
+| **Type**         | Selection                                    |
+| **Default**      | Manufacturer page of the plugin              |
+| **Required**    | No                                           |
+
+**Description**: Defines where the manufacturer tiles (overview and featured manufacturers) link to.
+
+- **Manufacturer page of the plugin**: Every tile links to the plugin's manufacturer page (e.g. `/manufacturer/acme`).
+- **Manufacturer website field**: If the **Website** field of the manufacturer (Catalogues → Manufacturers) points into this shop — a relative path such as `/brands/acme-shop/` or a URL on the shop's own domain — the tile links to that URL. Manufacturers without a website, or with an external website (e.g. `https://www.acme.com`), keep linking to the plugin's manufacturer page, so their product listing stays reachable.
+
+**Use case**: You already maintain your own brand category pages (e.g. `/brands/acme-shop/`). Enter that URL in the manufacturer's website field and select **Manufacturer website field** — the overview then links to your category pages instead of the plugin pages.
+
+---
+
 ### Activate SEO URL generation
 
 | Property         | Value                |

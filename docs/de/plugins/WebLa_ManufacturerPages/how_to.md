@@ -134,6 +134,23 @@ Produkt-Hersteller (Katalog) → Plugin-Logik → Storefront-Seite + CMS-Element
 
 ---
 
+### Übersicht auf bestehende Marken-Kategorieseiten verlinken
+
+**Komplexität**: Niedrig
+
+**Wann zu verwenden**: Sie haben pro Marke bereits eigene Kategorieseiten (z. B. `/marken/acme-shop/`) und möchten, dass die Hersteller-Übersicht dorthin statt auf die Plugin-Herstellerseite verlinkt.
+
+**Schritte**:
+
+1. Hersteller öffnen (**Kataloge → Hersteller**) und im Feld **Webseite** die URL der Kategorieseite eintragen (z. B. `https://ihr-shop.de/marken/acme-shop/` oder `/marken/acme-shop/`).
+2. Konfiguration öffnen (**Erweiterungen → Meine Erweiterungen → Hersteller Seiten → Konfigurieren**).
+3. **Linkziel in der Herstellerübersicht** auf **Feld „Webseite“ des Herstellers** stellen und speichern.
+4. Cache leeren (**Einstellungen → Cache & Indizes**).
+
+**Hinweis**: Nur Links in Ihren eigenen Shop werden verwendet. Hersteller ohne Webseite oder mit externer Webseite verlinken weiterhin auf die Herstellerseite des Plugins.
+
+---
+
 ## Schnellreferenz
 
 | Aufgabe                              | Wichtige Schritte                                                           | Erforderliche Einstellungen |
@@ -143,6 +160,7 @@ Produkt-Hersteller (Katalog) → Plugin-Logik → Storefront-Seite + CMS-Element
 | SEO-URLs manuell erzeugen            | Planner → Task **GenerateSEOUrlTask** → **Jetzt ausführen**                 | Task-Worker läuft           |
 | Hersteller verstecken                | Hersteller öffnen → Zusatzfeld **Hersteller verstecken** aktivieren         | —                           |
 | Top-Hersteller markieren             | Hersteller öffnen → Zusatzfeld **Top-Hersteller** aktivieren                | —                           |
+| Auf eigene Kategorieseiten verlinken | Hersteller → Feld **Webseite** befüllen → Linkziel umstellen                | `linktarget`                |
 
 ---
 

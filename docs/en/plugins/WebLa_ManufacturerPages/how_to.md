@@ -134,6 +134,23 @@ Product manufacturer (catalog) → Plugin logic → Storefront page + CMS elemen
 
 ---
 
+### Link the overview to existing brand category pages
+
+**Complexity**: Low
+
+**When to use**: You already have your own category page per brand (e.g. `/brands/acme-shop/`) and want the manufacturer overview to link there instead of to the plugin's manufacturer page.
+
+**Steps**:
+
+1. Open the manufacturer (**Catalogues → Manufacturers**) and enter the category page URL in the **Website** field (e.g. `https://your-shop.com/brands/acme-shop/` or `/brands/acme-shop/`).
+2. Open the configuration (**Extensions → My Extensions → Manufacturer Pages → Configure**).
+3. Set **Link target in the manufacturer overview** to **Manufacturer website field** and save.
+4. Clear the cache (**Settings → Cache & Indexes**).
+
+**Note**: Only links into your own shop are used. Manufacturers without a website or with an external website keep linking to the plugin's manufacturer page.
+
+---
+
 ## Quick Reference
 
 | Task                                 | Key steps                                                               | Required settings            |
@@ -143,6 +160,7 @@ Product manufacturer (catalog) → Plugin logic → Storefront page + CMS elemen
 | Generate SEO URLs manually           | Scheduled Tasks → **GenerateSEOUrlTask** → **Run now**                 | task worker running          |
 | Hide a manufacturer                  | Open manufacturer → custom field **Hide manufacturer** on              | —                            |
 | Mark featured manufacturers          | Open manufacturer → custom field **Featured manufacturer** on          | —                            |
+| Link to own category pages           | Manufacturer → fill **Website** field → switch link target             | `linktarget`                 |
 
 ---
 

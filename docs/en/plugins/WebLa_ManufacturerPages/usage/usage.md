@@ -60,6 +60,7 @@ The plugin registers a **CMS block** and a **CMS element** named *Manufacturer O
 
 - Link to the page via **Shop pages** in the footer or as a dedicated navigation entry.
 - The display can be further customized via dedicated CSS classes (`webla_manufacturers_wrapper`, `webla_manufacturer`, `webla_manufacturers-key`) if you want individual styling.
+- Already maintaining your own brand category pages? With the setting **"Link target in the manufacturer overview"** the tiles link to the **Website** stored on the manufacturer, as long as it points into your shop. See [Settings reference](../configuration/settings.md#link-target-in-the-manufacturer-overview).
 
 ---
 
@@ -154,6 +155,8 @@ On install, the plugin creates the following **custom fields** at the manufactur
 
 **What customers see**: Alphabetically grouped manufacturer list (A–Z plus `0-9`), letter filter, "Reset all" button. Optionally above it, the marked featured manufacturers.
 
+**Where the tiles link to**: By default to the plugin's manufacturer page. With the setting **"Link target in the manufacturer overview"** alternatively to the manufacturer's **Website** — but only if it points into your shop.
+
 **Customization options**: Via custom CSS classes in the theme — the plugin does not provide a dedicated admin UI for styling.
 
 ---
@@ -187,6 +190,16 @@ On install, the plugin creates the following **custom fields** at the manufactur
 **Cause**: The featured manufacturer is also hidden from the general manufacturer overview (e.g. via "Hide manufacturer" or the stock filter), or it has no active products.
 
 **Solution**: Disable "Hide manufacturer" and check the product assignment.
+
+---
+
+### Tile does not link to the stored website
+
+**Symptom**: The setting **"Link target in the manufacturer overview"** is set to **Manufacturer website field**, but the tile still links to the plugin's manufacturer page.
+
+**Cause**: The **Website** field is empty or points to another domain (e.g. the manufacturer's official website). External links are ignored on purpose so the product listing stays reachable.
+
+**Solution**: Enter a URL of your own shop (e.g. `https://your-shop.com/brands/acme/` or `/brands/acme/`) and clear the cache.
 
 ---
 
