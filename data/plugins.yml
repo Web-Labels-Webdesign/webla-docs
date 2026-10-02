@@ -1,4 +1,13 @@
 plugins:
+  - id: WebLa_PayTRIntegration
+    name:
+      de: PayTR Integration
+      en: PayTR Integration
+    short:
+      de: PayTR Zahlungsanbieter Integration für Shopware 6. Akzeptieren Sie Kredit-, Debitkarten- und Ratenzahlungen von türkischen Kunden über das sichere PayTR-Checkout.
+      en: PayTR payment provider integration for Shopware 6. Accept credit card, debit card, and installment payments from Turkish customers via the secure PayTR checkout.
+    requirements: Shopware 6.7, PHP 8.2+
+    version: "1.0.0"
   - id: WebLaAddressValidation
     name:
       de: "Adressvalidierung auf Hausnummer und Sonderzeichen"
