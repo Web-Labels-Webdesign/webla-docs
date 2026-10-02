@@ -4,6 +4,14 @@ All notable changes for end users.
 
 ---
 
+# 5.4.1
+
+_Released 2026-10-02_
+
+**Bug Fixes**
+
+- Fix storefront and administration failing to load after updating to Shopware 6.7.15.0. The plugin now works with all Shopware 6.7 versions, independent of internal changes in the Shopware core.
+
 # 5.4.0
 
 _Released 2026-09-25_

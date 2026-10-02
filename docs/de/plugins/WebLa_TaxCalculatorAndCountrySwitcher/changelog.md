@@ -4,6 +4,14 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 5.4.1
+
+_Veröffentlicht am 2026-10-02_
+
+**Fehlerbehebungen**
+
+- Nach dem Update auf Shopware 6.7.15.0 ließen sich Storefront und Administration nicht mehr laden. Das Plugin funktioniert jetzt mit allen Shopware-6.7-Versionen, unabhängig von internen Änderungen im Shopware-Core.
+
 # 5.4.0
 
 _Veröffentlicht am 2026-09-25_

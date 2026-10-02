@@ -4,6 +4,16 @@ All notable changes to Media Booster for end users.
 
 ---
 
+# 1.3.9
+
+_Released 2026-10-02_
+
+**Bug Fixes**
+
+- Fixed storefront serving the original image instead of the existing AVIF/WebP version when the file name contains spaces, brackets or umlauts (e.g. "web (5).jpg", "größe.png")
+
+---
+
 # 1.3.8
 
 _Released 2026-07-09_

@@ -4,6 +4,16 @@ Alle wichtigen Änderungen an Media Booster für Endbenutzer.
 
 ---
 
+# 1.3.9
+
+_Veröffentlicht am 2026-10-02_
+
+**Fehlerbehebungen**
+
+- Fehler behoben, durch den im Storefront das Originalbild statt der vorhandenen AVIF/WebP-Version ausgeliefert wurde, wenn der Dateiname Leerzeichen, Klammern oder Umlaute enthält (z. B. "web (5).jpg", "größe.png")
+
+---
+
 # 1.3.8
 
 _Veröffentlicht am 2026-07-09_
