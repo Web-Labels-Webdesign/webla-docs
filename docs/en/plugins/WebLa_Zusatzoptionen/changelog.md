@@ -4,6 +4,17 @@ All notable changes to the Additional Options Plugin for end users.
 
 ---
 
+# 5.9.1
+
+_Released 2026-10-05_
+
+**Bug Fixes**
+
+- Options priced by cart value (e.g. "free from 2,500 EUR") no longer count their own price towards the cart value. Previously such an option could push the cart across its own threshold, so its price switched between the two ranges on every cart update and options added on the product page could appear without their price.
+- Options selected on the product page are no longer lost when the same product is already in the cart without options. The configured product is now added as its own cart item.
+
+---
+
 # 5.9.0
 
 _Released 2026-09-22_

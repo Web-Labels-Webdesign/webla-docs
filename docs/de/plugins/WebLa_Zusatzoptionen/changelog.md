@@ -4,6 +4,17 @@ Alle wichtigen Änderungen am Zusatzoptionen Plugin für Endbenutzer.
 
 ---
 
+# 5.9.1
+
+_Veröffentlicht am 2026-10-05_
+
+**Fehlerbehebungen**
+
+- Optionen mit Preisen nach Warenkorbwert (z. B. "gratis ab 2.500 EUR") zählen ihren eigenen Preis nicht mehr zum Warenkorbwert. Bisher konnte eine solche Option den Warenkorb über ihre eigene Schwelle heben, wodurch ihr Preis bei jeder Aktualisierung des Warenkorbs zwischen beiden Preisstufen wechselte und auf der Produktseite gewählte Optionen ohne Preis im Warenkorb erscheinen konnten.
+- Auf der Produktseite gewählte Optionen gehen nicht mehr verloren, wenn dasselbe Produkt bereits ohne Optionen im Warenkorb liegt. Das konfigurierte Produkt wird jetzt als eigene Warenkorbposition hinzugefügt.
+
+---
+
 # 5.9.0
 
 _Veröffentlicht am 2026-09-22_
