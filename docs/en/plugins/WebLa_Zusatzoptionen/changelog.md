@@ -4,6 +4,16 @@ All notable changes to the Additional Options Plugin for end users.
 
 ---
 
+# 5.9.2
+
+_Released 2026-10-06_
+
+**Bug Fixes**
+
+- Background tasks that add products to a cart without a storefront request (e.g. scheduled abandoned-cart reminders from other plugins) no longer fail with "Call to a member function get() on null".
+
+---
+
 # 5.9.1
 
 _Released 2026-10-05_

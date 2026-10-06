@@ -4,6 +4,16 @@ Alle wichtigen Änderungen am Zusatzoptionen Plugin für Endbenutzer.
 
 ---
 
+# 5.9.2
+
+_Veröffentlicht am 2026-10-06_
+
+**Fehlerbehebungen**
+
+- Hintergrundaufgaben, die Produkte ohne Storefront-Anfrage in einen Warenkorb legen (z. B. geplante Warenkorbabbrecher-Erinnerungen anderer Plugins), schlagen nicht mehr mit "Call to a member function get() on null" fehl.
+
+---
+
 # 5.9.1
 
 _Veröffentlicht am 2026-10-05_
