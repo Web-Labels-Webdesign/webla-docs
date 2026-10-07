@@ -4,6 +4,21 @@ Alle wichtigen Änderungen am Produkt Berater Plugin für Endbenutzer.
 
 ---
 
+# 7.2.4
+
+_Veröffentlicht am 2026-10-07_
+
+**Fehlerbehebungen**
+
+- **Text nach dem Beraterergebnis und Vergleichsoperator wurden nicht gespeichert (Shopware 6.7)**: Das Feld „Text nach dem Beraterergebnis" und die Operator-Auswahl bei Fragen vom Typ „Vergleich" übernahmen in der Administration unter Shopware 6.7 keine Eingaben, sodass die Werte beim Speichern verloren gingen. Beide Felder funktionieren jetzt unter Shopware 6.6 und 6.7.
+- **Zurück zu einer entfernten Frage**: Das Zurückgehen im Berater in der Storefront führt nicht mehr zu einem Fehler, wenn die vorherige Frage nicht mehr existiert; der Berater zeigt stattdessen die Ergebnisseite.
+
+**Verbesserungen**
+
+- Plugin-Code an die aktuellen Shopware-Qualitätsprüfungen angepasst (keine funktionalen Änderungen).
+
+---
+
 # 7.2.2
 
 _Veröffentlicht am 2026-06-10_

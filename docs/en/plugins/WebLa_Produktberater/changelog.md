@@ -4,6 +4,21 @@ All notable changes to the Product Advisor Plugin for end users.
 
 ---
 
+# 7.2.4
+
+_Released 2026-10-07_
+
+**Bug Fixes**
+
+- **Advisor end text and compare operator not saved (Shopware 6.7)**: The "Text after the advisor result" field and the operator selection for "Compare" questions in the administration did not take over input on Shopware 6.7, so the values were lost on save. Both fields now work on Shopware 6.6 and 6.7.
+- **Going back to a removed question**: Navigating back in the storefront advisor no longer causes an error if the previous question no longer exists; the advisor shows the result page instead.
+
+**Improvements**
+
+- Updated the plugin code for the current Shopware code-quality checks (no functional changes).
+
+---
+
 # 7.2.2
 
 _Released 2026-06-10_
