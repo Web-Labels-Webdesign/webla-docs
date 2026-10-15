@@ -4,6 +4,31 @@ All notable changes for end users.
 
 ---
 
+# 1.6.0
+
+_Released 2026-10-14_
+
+**Bug Fixes**
+
+- **Wrong "from" price in listings for variant products**: When a product with variants is shown as its main product in the listing, the "from" price ignored discounts that only apply to the variants (e.g. via a dynamic product group containing the variants). The listing showed the full price while the product page showed the discounted one. The "from" price is now discounted according to the variant it belongs to.
+- **Discounts remained after all discounts were deleted**: Discounts stored by the old WebLa_ProductGroupDiscount plugin were still applied, although they are not visible in the administration. Only discounts managed in this plugin now apply.
+
+**Breaking Changes**
+
+- **Old WebLa_ProductGroupDiscount discounts are no longer applied automatically**: Discounts in the old format only apply after running the migration command `bin/console webla:customer-discounts:migrate`. The command now removes the old values after transferring them, so every active discount is visible and editable in the administration.
+
+---
+
+# 1.5.25
+
+_Released 2026-10-06_
+
+**Bug Fixes**
+
+- **Category discounts not applied in the cart for parent categories**: A discount set on a parent category was shown on the product page but not applied in the cart. Products in a subcategory now receive the discount in the cart as well, consistent with the product page.
+
+---
+
 # 1.5.24
 
 _Released 2026-09-30_

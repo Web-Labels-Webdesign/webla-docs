@@ -4,6 +4,18 @@ Alle wichtigen Änderungen am Zusatzoptionen Plugin für Endbenutzer.
 
 ---
 
+# 5.9.3
+
+_Veröffentlicht am 2026-10-14_
+
+**Fehlerbehebungen**
+
+- Das Plugin lässt sich jetzt unter MySQL 8.4 installieren und aktualisieren. Die Datenbankverknüpfungen zu Produkten berücksichtigen jetzt auch die Produktversion, wie es MySQL 8.4 standardmäßig verlangt. Bestehende Daten werden beim Plugin-Update automatisch übernommen, und beim Löschen eines Produkts werden die zugehörigen Optionsdaten weiterhin entfernt.
+- Ein manueller Lauf der Seeder-Aufgabe (zum Beispiel mit `scheduled-task:run-single webla_zusatzoptionen.seeder_task`) synchronisiert die Seeder jetzt. Bisher taten das nur die geplanten Läufe.
+- Die Verfügbarkeitsprüfung schlägt nicht mehr fehl für Optionen, deren Anzeigezustand nicht ermittelt werden konnte.
+
+---
+
 # 5.9.2
 
 _Veröffentlicht am 2026-10-06_

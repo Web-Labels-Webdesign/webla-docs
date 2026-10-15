@@ -4,6 +4,18 @@ All notable changes to the Additional Options Plugin for end users.
 
 ---
 
+# 5.9.3
+
+_Released 2026-10-14_
+
+**Bug Fixes**
+
+- The plugin now installs and updates on MySQL 8.4. Its database links to products now include the product version, as MySQL 8.4 requires by default. Existing data is migrated automatically during the plugin update, and deleting a product still removes its option data as before.
+- Running the option seeder task manually (for example with `scheduled-task:run-single webla_zusatzoptionen.seeder_task`) now synchronizes the seeders. Before, only the scheduled runs did.
+- Checking option availability no longer fails for options whose display state could not be determined.
+
+---
+
 # 5.9.2
 
 _Released 2026-10-06_

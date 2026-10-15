@@ -4,6 +4,31 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 1.6.0
+
+_Veröffentlicht am 2026-10-14_
+
+**Fehlerbehebungen**
+
+- **Falscher „Ab“-Preis im Listing bei Variantenprodukten**: Wurde ein Produkt mit Varianten im Listing als Hauptprodukt angezeigt, berücksichtigte der „Ab“-Preis keine Rabatte, die nur für die Varianten gelten (z. B. über eine Dynamische Produktgruppe mit den Varianten). Im Listing stand der volle Preis, auf der Produktseite der rabattierte. Der „Ab“-Preis wird jetzt entsprechend der zugehörigen Variante rabattiert.
+- **Rabatte blieben nach dem Löschen aller Rabatte bestehen**: Vom alten Plugin WebLa_ProductGroupDiscount gespeicherte Rabatte wurden weiterhin angewendet, obwohl sie in der Administration nicht sichtbar sind. Es gelten jetzt nur noch Rabatte, die in diesem Plugin gepflegt werden.
+
+**Breaking Changes**
+
+- **Alte WebLa_ProductGroupDiscount-Rabatte werden nicht mehr automatisch angewendet**: Rabatte im alten Format greifen erst nach Ausführen des Migrationsbefehls `bin/console webla:customer-discounts:migrate`. Der Befehl entfernt die alten Werte nach der Übernahme, sodass jeder aktive Rabatt in der Administration sichtbar und bearbeitbar ist.
+
+---
+
+# 1.5.25
+
+_Veröffentlicht am 2026-10-06_
+
+**Fehlerbehebungen**
+
+- **Kategorierabatte im Warenkorb für Oberkategorien nicht angewendet**: Ein Rabatt auf eine Oberkategorie wurde auf der Produktseite angezeigt, im Warenkorb aber nicht berücksichtigt. Produkte in einer Unterkategorie erhalten den Rabatt jetzt auch im Warenkorb, wie auf der Produktseite.
+
+---
+
 # 1.5.24
 
 _Veröffentlicht am 2026-09-30_
