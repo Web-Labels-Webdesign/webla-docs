@@ -4,6 +4,16 @@ All notable changes for end users.
 
 ---
 
+# 1.6.1
+
+_Released 2026-10-15_
+
+**Bug Fixes**
+
+- **Discounts missing in other storefront languages**: Product discounts and customer group discounts maintained in the default language were not shown on the product page and in listings when the storefront was set to another language (e.g. English). These discounts now apply in every language unless a language overrides them.
+
+---
+
 # 1.6.0
 
 _Released 2026-10-14_

@@ -4,6 +4,16 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 1.6.1
+
+_Veröffentlicht am 2026-10-15_
+
+**Fehlerbehebungen**
+
+- **Rabatte fehlten in anderen Storefront-Sprachen**: Produktrabatte und Kundengruppenrabatte, die in der Standardsprache gepflegt sind, wurden auf der Produktseite und im Listing nicht angezeigt, wenn die Storefront auf eine andere Sprache (z. B. Englisch) eingestellt war. Diese Rabatte gelten jetzt in jeder Sprache, sofern eine Sprache sie nicht überschreibt.
+
+---
+
 # 1.6.0
 
 _Veröffentlicht am 2026-10-14_
