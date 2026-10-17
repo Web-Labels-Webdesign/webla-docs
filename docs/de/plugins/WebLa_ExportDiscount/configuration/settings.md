@@ -62,7 +62,7 @@ Solange die Gültigkeit läuft, werden die Seiten mit dem rabattierten Preis fü
 
 **Beschreibung**: Wenn aktiviert, erhalten Produkte mit eigenem Streichpreis keinen zusätzlichen Rabatt aus dem Preisvergleich-Export – weder im Feed noch im Shop oder Warenkorb. Im Feed und im Shop erscheint dann der von Ihnen gesetzte reduzierte Preis. Bei Staffelpreisen werden nur die Stufen übersprungen, die selbst einen Streichpreis haben. Die Einstellung kann pro Verkaufskanal gesetzt werden und wird für den Storefront-Verkaufskanal des jeweiligen Exports gelesen.
 
-**Ausnahme**: Produkte mit individuellem Export-Preis (Zusatzfeld „Neuer Preis im Export") sind nicht betroffen. Die Einstellung wirkt nur auf den global am Export hinterlegten Rabatt (prozentual oder absolut).
+**Ausnahme**: Produkte mit individuellem Export-Preis (Zusatzfeld „Neuer Preis im Export" oder das unter „Exportpreis aus Zusatzfeld" gewählte Zusatzfeld) sind nicht betroffen. Die Einstellung wirkt nur auf den global am Export hinterlegten Rabatt (prozentual oder absolut).
 
 **Anwendungsbeispiel**: Aktivieren Sie diese Option, wenn Sie Sale-Aktionen mit Streichpreisen fahren und verhindern möchten, dass diese Produkte über den Preisvergleich zusätzlich rabattiert werden.
 
@@ -122,6 +122,28 @@ Die Export-spezifischen Rabatteinstellungen werden direkt am Produktexport konfi
 
 ---
 
+### Exportpreis aus Zusatzfeld
+
+| Eigenschaft      | Wert                                               |
+| ---------------- | -------------------------------------------------- |
+| **Typ**          | Auswahl (Produkt-Zusatzfelder vom Typ Zahl)        |
+| **Standard**     | Kein Zusatzfeld                                    |
+| **Erforderlich** | Nein                                               |
+
+**Beschreibung**: Verwendet ein vorhandenes Produkt-Zusatzfeld als Quelle für einen individuellen Bruttopreis in diesem Export. Zur Auswahl stehen alle Zahlen-Zusatzfelder (Dezimal oder Ganzzahl), die Produkten zugeordnet sind. Wie bei „Neuer Preis im Export (Brutto)" wird der Wert 1:1 als neuer Preis im Feed, im Shop und im Warenkorb verwendet.
+
+Der Preis eines Produkts wird in dieser Reihenfolge bestimmt:
+
+1. Zusatzfeld „Neuer Preis im Export (Brutto)" des Plugins, wenn es befüllt und größer als 0 ist
+2. Das hier gewählte Zusatzfeld, wenn es befüllt und größer als 0 ist
+3. Rabatttyp und Rabattwert dieses Exports
+
+Sobald eines der Zusatzfelder einen Preis liefert, wird der Rabatttyp des Exports für dieses Produkt nicht angewendet. Im Shop wird der individuelle Preis nur angezeigt, wenn er niedriger als der reguläre Preis ist.
+
+**Anwendungsbeispiel**: Ihr Repricing-Tool oder ERP schreibt bereits einen Preisvergleichspreis in ein eigenes Zusatzfeld (z.B. `erp_idealo_price`). Wählen Sie dieses Feld hier aus, statt die Werte in „Neuer Preis im Export (Brutto)" zu kopieren. Produkte ohne Wert in diesem Feld erhalten weiterhin den Export-Rabatt.
+
+---
+
 ## Artikel-spezifischer Preis (Produktfeld)
 
 **Navigation**: Kataloge → Produkte → [Produkt bearbeiten] → Spezifikationen → Zusatzfelder
@@ -136,7 +158,7 @@ Die Export-spezifischen Rabatteinstellungen werden direkt am Produktexport konfi
 | **Feldgruppe**   | Shopping Feed mit einzigartigen Rabatten           |
 | **Technischer Name** | `webla_exportdiscount_product_discount`        |
 
-**Beschreibung**: Ein individueller Bruttopreis für dieses Produkt im Export. Dieser Preis überschreibt den globalen Export-Rabatt vollständig. Das Feld wird für die Preisanzeige im Shop und im Export verwendet.
+**Beschreibung**: Ein individueller Bruttopreis für dieses Produkt im Export. Dieser Preis überschreibt den globalen Export-Rabatt vollständig und hat Vorrang vor dem unter „Exportpreis aus Zusatzfeld" gewählten Zusatzfeld. Das Feld wird für die Preisanzeige im Shop und im Export verwendet.
 
 **Anwendungsbeispiel**:
 - Repricing-Tools können dieses Feld per CSV-Import oder API befüllen
@@ -182,6 +204,7 @@ Die Export-spezifischen Rabatteinstellungen werden direkt am Produktexport konfi
 | Einstellung                       | Geltungsbereich | Beschreibung                                    |
 | --------------------------------- | --------------- | ----------------------------------------------- |
 | Rabatttyp & Rabattwert            | Pro Export      | Jeder Produktexport kann eigene Rabatte haben   |
+| Exportpreis aus Zusatzfeld        | Pro Export      | Jeder Produktexport kann ein eigenes Preisfeld lesen |
 | Nur Einzelkäufe                   | Global          | Gilt für alle Verkaufskanäle                    |
 | Mehrere Produkte pro Session      | Global          | Gilt für alle Verkaufskanäle                    |
 | Keine bereits reduzierten Produkte | Pro Verkaufskanal | Gilt für den Storefront-Kanal des Exports     |

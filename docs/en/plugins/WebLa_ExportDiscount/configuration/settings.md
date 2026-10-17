@@ -62,7 +62,7 @@ While the validity lasts, the pages showing the discounted price are served unca
 
 **Description**: When enabled, products with their own list price (strike-through price) receive no additional discount from the price comparison export – neither in the feed nor in the shop or cart. The feed and the shop then show the reduced price you set. For graduated prices, only the tiers that carry a list price themselves are skipped. The setting can be configured per sales channel and is read for the storefront sales channel of the respective export.
 
-**Exception**: Products with an individual export price (custom field "New price in export") are not affected. The setting only applies to the discount configured globally on the export (percentage or absolute).
+**Exception**: Products with an individual export price (custom field "New price in export" or the custom field selected under "Export price from custom field") are not affected. The setting only applies to the discount configured globally on the export (percentage or absolute).
 
 **Example Use Case**: Enable this option if you run sales with strike-through prices and want to prevent those products from being discounted again via the price comparison.
 
@@ -122,6 +122,28 @@ The export-specific discount settings are configured directly on the product exp
 
 ---
 
+### Export price from custom field
+
+| Property     | Value                                         |
+| ------------ | --------------------------------------------- |
+| **Type**     | Select (product custom fields of type number) |
+| **Default**  | No custom field                               |
+| **Required** | No                                            |
+
+**Description**: Uses an existing product custom field as the source for an individual gross price in this export. The selection lists all number custom fields (decimal or integer) assigned to products. Like "New price in export (gross)", the value is used 1:1 as the new price in the feed, the shop and the cart.
+
+The price of a product is determined in this order:
+
+1. Custom field "New price in export (gross)" of the plugin, if it is filled and greater than 0
+2. The custom field selected here, if it is filled and greater than 0
+3. Discount type and discount value of this export
+
+As soon as one of the custom fields provides a price, the discount type of the export is not applied to that product. In the shop, the individual price is only shown when it is lower than the regular price.
+
+**Example Use Case**: Your repricing tool or ERP already writes a price comparison price into its own custom field (e.g. `erp_idealo_price`). Select that field here instead of copying the values into "New price in export (gross)". Products without a value in the field still receive the export discount.
+
+---
+
 ## Item-Specific Price (Product Field)
 
 **Navigation**: Catalogues → Products → [Edit Product] → Specifications → Custom Fields
@@ -136,7 +158,7 @@ The export-specific discount settings are configured directly on the product exp
 | **Field Group**  | Shopping feed with unique discounts      |
 | **Technical Name** | `webla_exportdiscount_product_discount`|
 
-**Description**: An individual gross price for this product in the export. This price completely overrides the global export discount. The field is used for price display in the store and in the export.
+**Description**: An individual gross price for this product in the export. This price completely overrides the global export discount and takes precedence over the custom field selected under "Export price from custom field". The field is used for price display in the store and in the export.
 
 **Example Use Case**:
 - Repricing tools can populate this field via CSV import or API
@@ -182,6 +204,7 @@ The export-specific discount settings are configured directly on the product exp
 | Setting                           | Scope       | Description                                      |
 | --------------------------------- | ----------- | ------------------------------------------------ |
 | Discount Type & Discount Value    | Per Export  | Each product export can have its own discounts   |
+| Export price from custom field    | Per Export  | Each product export can read its own price field |
 | Single units only                 | Global      | Applies to all sales channels                    |
 | Multiple products per session     | Global      | Applies to all sales channels                    |
 | Skip already reduced products     | Per sales channel | Read for the export's storefront channel   |

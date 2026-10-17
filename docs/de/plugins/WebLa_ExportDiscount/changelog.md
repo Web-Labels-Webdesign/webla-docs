@@ -4,6 +4,24 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 5.4.0
+
+_Veröffentlicht am 2026-10-16_
+
+**Neue Funktionen**
+
+- Neue Option „Exportpreis aus Zusatzfeld" am Produktexport (Verkaufskanäle → Ihr Export-Kanal → Produktvergleich). Wählen Sie ein beliebiges Zahlen-Zusatzfeld Ihrer Produkte aus, und dessen Wert wird als individueller Bruttopreis für diesen Export verwendet – im Feed, im Shop und im Warenkorb. So können Sie Preise nutzen, die Ihr ERP oder Repricing-Tool bereits in ein eigenes Zusatzfeld schreibt, ohne sie in „Neuer Preis im Export (Brutto)" zu kopieren. Der Preis wird in dieser Reihenfolge bestimmt: das plugineigene Feld „Neuer Preis im Export (Brutto)", dann das gewählte Zusatzfeld, dann Rabatttyp und Rabattwert des Exports. Produkte ohne Wert im Feld erhalten weiterhin den Export-Rabatt.
+
+**Fehlerbehebungen**
+
+- Produkte mit dem Wert 0 in „Neuer Preis im Export (Brutto)" fehlten im Feed eines Exports ohne Rabatteinstellungen. Sie werden jetzt mit ihrem regulären Preis exportiert.
+
+**Verbesserungen**
+
+- Kompatibilität mit kommenden Shopware-Versionen: von Shopware als veraltet markierte Datenzugriffe ersetzt.
+
+---
+
 # 5.3.0
 
 _Veröffentlicht am 2026-09-22_

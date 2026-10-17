@@ -4,6 +4,24 @@ All notable changes for end users.
 
 ---
 
+# 5.4.0
+
+_Released 2026-10-16_
+
+**New Features**
+
+- New option "Export price from custom field" on the product export (Sales Channels → your export channel → Product Comparison). Select any number custom field of your products, and its value is used as the individual gross price for that export – in the feed, the shop and the cart. This lets you use prices your ERP or repricing tool already writes into its own custom field, without copying them into "New price in export (gross)". The price is chosen in this order: the plugin's own field "New price in export (gross)", then the selected custom field, then the discount type and value of the export. Products without a value in the field keep receiving the export discount.
+
+**Bug Fixes**
+
+- Products with the value 0 in "New price in export (gross)" were missing from the feed of an export without discount settings. They are now exported with their regular price.
+
+**Improvements**
+
+- Compatibility with upcoming Shopware versions: replaced data access calls that Shopware has deprecated.
+
+---
+
 # 5.3.0
 
 _Released 2026-09-22_
