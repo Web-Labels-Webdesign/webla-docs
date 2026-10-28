@@ -251,6 +251,27 @@ Steuert das Popup zur Länderauswahl beim Erstbesuch, das sicherstellt, dass der
 
 ---
 
+### Wann das Popup angezeigt wird
+
+| Eigenschaft      | Wert                         |
+| ---------------- | ---------------------------- |
+| **Typ**          | Einfachauswahl               |
+| **Standard**     | Immer beim ersten Besuch     |
+| **Erforderlich** | Nein                         |
+
+**Beschreibung**: Legt fest, welche Besucher das Popup sehen.
+
+- **Immer beim ersten Besuch**: Jeder Besucher ohne `sw-switch-country`-Cookie sieht das Popup.
+- **Nur bei abweichendem Land (GeoIP vs. Domain)**: Das Popup entfällt, wenn das GeoIP-Land dem Land der Domain-Sprache entspricht (z.B. `nl-NL` auf der `.nl`-Domain → Niederlande) und dieses Land lieferbar ist. Das Land wird dann automatisch gesetzt, als hätte der Besucher es bestätigt. In allen anderen Fällen öffnet sich das Popup mit dem GeoIP-Land vorausgewählt: bei abweichenden Ländern, wenn GeoIP kein Land ermitteln kann oder wenn das Land der Domain nicht lieferbar ist (z.B. `en-GB` auf einer `.com`-Domain ohne Lieferung nach Großbritannien). Bots und Crawler erhalten in diesem Modus nie das Popup und behalten das Standardland bzw. ein per `?country=` übergebenes Land.
+
+Ein vorhandenes Länder-Cookie und die Lieferadresse eines eingeloggten Kunden haben immer Vorrang. Die Entscheidung fällt in einer separaten, nicht gecachten Anfrage und funktioniert daher mit HTTP-Cache und Reverse Proxies wie Varnish.
+
+**Anwendungsbeispiel**: Ein Verkaufskanal mit `.de`-, `.nl`- und `.com`-Domain. Deutsche Besucher auf `.de` und niederländische Besucher auf `.nl` werden nicht gefragt; ein Österreicher auf `.de` wird gefragt, mit Österreich vorausgewählt.
+
+**Hinweis**: Erfordert **GeoIP-Vorauswahl aktivieren**. Ohne GeoIP-Ergebnis sieht jeder Besucher das Popup.
+
+---
+
 ### Gültigkeit des Länder-Cookies (Tage)
 
 | Eigenschaft      | Wert    |

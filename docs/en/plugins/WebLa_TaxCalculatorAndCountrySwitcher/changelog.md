@@ -4,6 +4,19 @@ All notable changes for end users.
 
 ---
 
+# 5.5.0
+
+_Released 2026-10-27_
+
+**New Features**
+
+- New setting "When to show the popup" in the country popup card. With "Only on country mismatch (GeoIP vs. domain)", visitors whose GeoIP country matches the country of the domain's language (for example Dutch visitors on the .nl domain) are no longer asked; their country is set automatically. Everyone else sees the popup with their GeoIP country preselected. Bots and crawlers never get the popup in this mode. Requires GeoIP pre-selection.
+
+**Bug Fixes**
+
+- Fix the GeoIP preselection of the country popup being shared between visitors when the HTTP cache is active. Every visitor now gets their own country preselected.
+- Fix visitors from different countries sharing cached pages, and therefore prices, behind a reverse proxy such as Varnish.
+
 # 5.4.1
 
 _Released 2026-10-02_

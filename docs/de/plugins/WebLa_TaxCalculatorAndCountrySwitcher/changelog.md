@@ -4,6 +4,19 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 5.5.0
+
+_Veröffentlicht am 2026-10-27_
+
+**Neue Funktionen**
+
+- Neue Einstellung „Wann das Popup angezeigt wird" im Bereich Länderauswahl-Popup. Mit „Nur bei abweichendem Land (GeoIP vs. Domain)" werden Besucher, deren GeoIP-Land dem Land der Domain-Sprache entspricht (z.B. Niederländer auf der .nl-Domain), nicht mehr gefragt; ihr Land wird automatisch gesetzt. Alle anderen sehen das Popup mit ihrem GeoIP-Land vorausgewählt. Bots und Crawler erhalten in diesem Modus nie das Popup. Erfordert die GeoIP-Vorauswahl.
+
+**Fehlerbehebungen**
+
+- Bei aktivem HTTP-Cache wurde die GeoIP-Vorauswahl im Länderauswahl-Popup zwischen Besuchern geteilt. Jeder Besucher erhält jetzt sein eigenes Land vorausgewählt.
+- Hinter einem Reverse Proxy wie Varnish teilten sich Besucher aus verschiedenen Ländern gecachte Seiten und damit Preise. Das ist behoben.
+
 # 5.4.1
 
 _Veröffentlicht am 2026-10-02_

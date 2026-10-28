@@ -251,6 +251,27 @@ Controls the first-visit country selection popup that ensures the displayed gros
 
 ---
 
+### When to show the popup
+
+| Property     | Value                    |
+| ------------ | ------------------------ |
+| **Type**     | Single select            |
+| **Default**  | Always on first visit    |
+| **Required** | No                       |
+
+**Description**: Controls which visitors see the popup.
+
+- **Always on first visit**: every visitor without a `sw-switch-country` cookie sees the popup.
+- **Only on country mismatch (GeoIP vs. domain)**: the popup is skipped when the GeoIP country equals the country of the domain's language (for example `nl-NL` on the `.nl` domain → Netherlands) and that country is shipping-available. The country is then set automatically, as if the visitor had confirmed it. In all other cases the popup opens with the GeoIP country preselected: when the countries differ, when GeoIP cannot detect a country, or when the domain's country is not shipping-available (for example `en-GB` on a `.com` domain that does not ship to the UK). Bots and crawlers never get the popup in this mode and keep the default country or a country passed via `?country=`.
+
+An existing country cookie and a logged-in customer's shipping address always take precedence. The decision is made in a separate, uncached request, so it works with the HTTP cache and reverse proxies such as Varnish.
+
+**Example Use Case**: One sales channel with `.de`, `.nl` and `.com` domains. German visitors on `.de` and Dutch visitors on `.nl` are not asked; an Austrian visitor on `.de` is asked, with Austria preselected.
+
+**Note**: Requires **Enable GeoIP pre-selection**. Without a GeoIP result every visitor sees the popup.
+
+---
+
 ### Country cookie lifetime (days)
 
 | Property     | Value     |
