@@ -4,6 +4,16 @@ All notable changes for end users.
 
 ---
 
+# 5.5.1
+
+_Released 2026-10-29_
+
+**Improvements**
+
+- On Shopware 6.7.3 and newer, the country selection cookie is registered in the cookie consent through the cookie API introduced in that version. Older versions keep using the previous mechanism.
+- The country cookie is now always sent with the Secure flag, so browsers only transmit it over HTTPS.
+- Replace Shopware APIs that are deprecated in Shopware 6.7 with their supported successors. No change in behavior.
+
 # 5.5.0
 
 _Released 2026-10-27_

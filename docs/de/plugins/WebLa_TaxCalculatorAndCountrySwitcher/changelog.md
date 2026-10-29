@@ -4,6 +4,16 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 5.5.1
+
+_Veröffentlicht am 2026-10-29_
+
+**Verbesserungen**
+
+- Ab Shopware 6.7.3 wird das Cookie der Länderauswahl über die dort eingeführte Cookie-Schnittstelle im Cookie-Hinweis registriert. Ältere Versionen nutzen weiterhin den bisherigen Mechanismus.
+- Das Länder-Cookie wird jetzt immer mit dem Secure-Flag gesetzt und von Browsern nur noch über HTTPS übertragen.
+- In Shopware 6.7 als veraltet markierte Shopware-Schnittstellen wurden durch ihre unterstützten Nachfolger ersetzt. Das Verhalten ändert sich nicht.
+
 # 5.5.0
 
 _Veröffentlicht am 2026-10-27_

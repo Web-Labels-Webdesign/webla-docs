@@ -4,6 +4,17 @@ Alle wichtigen Änderungen am Zusatzoptionen Plugin für Endbenutzer.
 
 ---
 
+# 5.9.4
+
+_Veröffentlicht am 2026-10-29_
+
+**Fehlerbehebungen**
+
+- Änderungen an Options-Sets, Optionen und Optionspreisen erscheinen jetzt sofort auf der Produktseite. Bisher konnte eine zwischengespeicherte Produktseite eine deaktivierte Option weiter anzeigen, bis der Cache ablief oder das Produkt selbst gespeichert wurde.
+- Wird ein Seeder deaktiviert, während seine geplante Synchronisierung noch läuft, legt diese keine neuen, aktiven Options-Sets mehr für Produkte an, die sie noch nicht erreicht hatte.
+
+---
+
 # 5.9.3
 
 _Veröffentlicht am 2026-10-14_

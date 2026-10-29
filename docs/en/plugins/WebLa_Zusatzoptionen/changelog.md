@@ -4,6 +4,17 @@ All notable changes to the Additional Options Plugin for end users.
 
 ---
 
+# 5.9.4
+
+_Released 2026-10-29_
+
+**Bug Fixes**
+
+- Changes to option sets, options and option prices now show on the product page right away. Before, a cached product page could keep showing a deactivated option until the cache expired or the product itself was saved.
+- Deactivating a seeder while its scheduled synchronization is still running no longer creates new, active option sets for products the synchronization had not reached yet.
+
+---
+
 # 5.9.3
 
 _Released 2026-10-14_
