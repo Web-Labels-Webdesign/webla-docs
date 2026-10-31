@@ -15,7 +15,7 @@ Das Plugin ermöglicht es Ihnen, beliebig viele Produktberater zu erstellen, die
 - **Live-Aktualisierung**: Kunden sehen nach jeder Antwort sofort die passenden Produkte.
 - **Herstellerpriorisierung**: Bevorzugen Sie bestimmte Marken in den Ergebnissen.
 - **Bedingte Fragenlogik**: Überspringen Sie Fragen automatisch, wenn sie durch vorherige Antworten irrelevant werden.
-- **Mehrsprachigkeit**: Übersetzen Sie Fragen und Antworten direkt im Berater – kein separater Berater pro Sprache nötig.
+- **Mehrsprachigkeit**: Übersetzen Sie Fragen und Antworten direkt im Berater – kein separater Berater pro Sprache nötig. Die Plugin-Oberfläche (Storefront und Administration) ist auf Deutsch, Englisch, Niederländisch, Französisch, Italienisch, Spanisch, Polnisch, Tschechisch, Dänisch und Schwedisch verfügbar.
 - **Varianten-Unterstützung**: Der Suchalgorithmus berücksichtigt auch Variantenoptionen.
 - **Flexible Frageformate**: Buttons, Dropdowns, Bereichsauswahl oder Texteingabe.
 - **CMS-Integration**: Einfache Einbindung in jede Erlebniswelt per Block.

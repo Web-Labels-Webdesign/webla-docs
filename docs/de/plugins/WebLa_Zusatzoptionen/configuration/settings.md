@@ -2,7 +2,7 @@
 
 Dieses Dokument beschreibt alle verfügbaren Einstellungen für das Zusatzoptionen Plugin.
 
-**Navigation**: Erweiterungen → Meine Erweiterungen → Produkt Zusatzoptionen Plugin → Konfigurieren
+**Navigation**: Erweiterungen → Meine Erweiterungen → Produkt-Zusatzoptionen & Zubehör → Konfigurieren
 
 ---
 
@@ -209,7 +209,7 @@ läuft im Hintergrund ohne Verkaufskanal-Kontext, daher wird ausschliesslich der
 
 **So konfigurieren Sie verkaufskanalspezifische Einstellungen**:
 
-1. Navigieren Sie zu `Erweiterungen → Meine Erweiterungen → Produkt Zusatzoptionen Plugin → Konfigurieren`
+1. Navigieren Sie zu `Erweiterungen → Meine Erweiterungen → Produkt-Zusatzoptionen & Zubehör → Konfigurieren`
 2. Wählen Sie oben rechts den gewünschten Verkaufskanal aus (statt "Alle Verkaufskanäle")
 3. Passen Sie die Einstellungen für diesen Verkaufskanal an
 4. Klicken Sie auf "Speichern"

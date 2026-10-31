@@ -4,6 +4,21 @@ All notable changes to the Product Advisor Plugin for end users.
 
 ---
 
+# 7.3.0
+
+_Released 2026-10-30_
+
+**New Features**
+
+- **Eight new interface languages**: The storefront texts and the administration of the advisor are now available in Dutch, French, Italian, Spanish, Polish, Czech, Danish and Swedish, in addition to German and English.
+
+**Bug Fixes**
+
+- The German save confirmation in the administration shows the advisor name again.
+- Fixed a typo in the English storefront text shown when no products match.
+
+---
+
 # 7.2.4
 
 _Released 2026-10-07_

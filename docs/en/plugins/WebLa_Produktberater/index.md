@@ -15,7 +15,7 @@ The plugin allows you to create any number of product advisors that can be flexi
 - **Live Updates**: Customers see matching products instantly after each answer.
 - **Manufacturer Prioritisation**: Prefer certain brands in results.
 - **Conditional Question Logic**: Skip questions automatically when previous answers make them irrelevant.
-- **Multi-Language Support**: Translate questions and answers directly in the advisor – no separate advisor per language needed.
+- **Multi-Language Support**: Translate questions and answers directly in the advisor – no separate advisor per language needed. The plugin interface (storefront and administration) is available in German, English, Dutch, French, Italian, Spanish, Polish, Czech, Danish and Swedish.
 - **Variant Support**: The search algorithm also considers variant options.
 - **Flexible Question Formats**: Buttons, dropdowns, range sliders or text input.
 - **CMS Integration**: Easy integration into any Shopping Experience via block.

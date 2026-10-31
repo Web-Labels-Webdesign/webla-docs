@@ -4,6 +4,25 @@ Alle wichtigen Änderungen am Zusatzoptionen Plugin für Endbenutzer.
 
 ---
 
+# 5.10.0
+
+_Veröffentlicht am 2026-10-30_
+
+**Neue Funktionen**
+
+- Storefront, Administration und Plugin-Konfiguration sind jetzt auch auf Niederländisch, Französisch, Italienisch, Spanisch, Polnisch, Tschechisch, Dänisch und Schwedisch verfügbar.
+
+**Fehlerbehebungen**
+
+- Unteroptionen verwenden jetzt immer ihren eigenen Preis. Bisher wurde einer Unteroption einer Option mit Preisstaffeln nach Warenkorbwert der Staffelpreis der übergeordneten Option berechnet. Wenn Ihre Unteroptionspreise nur durch diese Vererbung korrekt waren, prüfen Sie sie nach dem Update.
+- Optionen, die mit einer bereits gewählten Option nicht kombinierbar sind, lassen sich auf der Warenkorbseite nicht mehr auswählen, und die Produktseite aktiviert sie beim Aktualisieren der Verfügbarkeit nicht mehr wieder. Das Abwählen einer kollidierenden Option im Warenkorb aktualisiert jetzt auch den Warenkorb.
+- Der Herstellername neben einer Option wird jetzt in der Sprache der Storefront angezeigt.
+- Ein Seeder ohne ausgeschlossene Produkte zeigt in der Administration nicht mehr alle Produkte als ausgeschlossen an.
+- Die Seeder-Liste und das Options-Modal in der Administration zeigen jetzt übersetzte Schaltflächen und Auswahlzähler.
+- Deutsche Bezeichnungen in der Administration wurden vereinheitlicht (z. B. „Optionsgruppe“ statt „Optionssatz“ bzw. „Options-Set“).
+
+---
+
 # 5.9.4
 
 _Veröffentlicht am 2026-10-29_

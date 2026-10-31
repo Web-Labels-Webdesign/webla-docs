@@ -689,7 +689,7 @@ In der Bestellübersicht sehen Kunden:
 
 **Lösung**:
 - Erwartetes Verhalten bei Einstellung "Aufteilen"
-- Ändern Sie die Einstellung zu "Zusammenfassen" unter `Erweiterungen → Meine Erweiterungen → Produkt Zusatzoptionen Plugin → Konfigurieren → Zahlungs-Einstellungen`
+- Ändern Sie die Einstellung zu "Zusammenfassen" unter `Erweiterungen → Meine Erweiterungen → Produkt-Zusatzoptionen & Zubehör → Konfigurieren → Zahlungs-Einstellungen`
 
 ### Weitere Hilfe
 

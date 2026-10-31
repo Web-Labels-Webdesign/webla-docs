@@ -37,7 +37,7 @@ Ideal für Shop-Betreiber, die ihre Produkte um Zusatzleistungen ergänzen möch
 
 1. Installieren Sie das Plugin über den Plugin Manager oder Composer
 2. Aktivieren Sie das Plugin unter **Erweiterungen → Meine Erweiterungen**
-3. Konfigurieren Sie die Grundeinstellungen unter **Erweiterungen → Meine Erweiterungen → Produkt Zusatzoptionen Plugin → Konfigurieren**
+3. Konfigurieren Sie die Grundeinstellungen unter **Erweiterungen → Meine Erweiterungen → Produkt-Zusatzoptionen & Zubehör → Konfigurieren**
 4. Erstellen Sie Ihr erstes Optionen-Set: Navigieren Sie zu **Kataloge → Produkte**, wählen Sie ein Produkt aus und wechseln Sie zum Tab **Zusatzoptionen**
 5. Fügen Sie Optionen hinzu und legen Sie Preise, Versandbeschränkungen und Abhängigkeiten fest
 6. Optional: Nutzen Sie den **Optionen Seeder** unter **Erweiterungen → Optionen Seeder** für automatische Zuweisung über dynamische Produktgruppen

@@ -4,6 +4,21 @@ Alle wichtigen Änderungen am Produkt Berater Plugin für Endbenutzer.
 
 ---
 
+# 7.3.0
+
+_Veröffentlicht am 2026-10-30_
+
+**Neue Funktionen**
+
+- **Acht neue Oberflächensprachen**: Die Storefront-Texte und die Administration des Beraters sind jetzt zusätzlich zu Deutsch und Englisch auf Niederländisch, Französisch, Italienisch, Spanisch, Polnisch, Tschechisch, Dänisch und Schwedisch verfügbar.
+
+**Fehlerbehebungen**
+
+- Die deutsche Speicherbestätigung in der Administration zeigt wieder den Namen des Beraters an.
+- Tippfehler im englischen Storefront-Text behoben, der angezeigt wird, wenn keine Produkte passen.
+
+---
+
 # 7.2.4
 
 _Veröffentlicht am 2026-10-07_
@@ -185,7 +200,7 @@ _Veröffentlicht am 2026-01-13_
 
 **Breaking Changes**
 
-- **CMS-Block-Neukonfiguration erforderlich**: Aufgrund interner Komponentennamen-Korrekturen werden bestehende Produktberater-Blöcke in Erlebniswelten nicht mehr angezeigt. Sie müssen den Produktberater-Block in jeder betroffenen Erlebniswelt entfernen und erneut hinzufügen. Ihre Berater-Konfigurationen (Fragen, Antworten, Einstellungen) bleiben erhalten.
+- **CMS-Block-Neukonfiguration erforderlich**: Aufgrund interner Komponentennamen-Korrekturen werden bestehende Produktberater-Blöcke in Erlebniswelten nicht mehr angezeigt. Du musst den Produktberater-Block in jeder betroffenen Erlebniswelt entfernen und erneut hinzufügen. Deine Berater-Konfigurationen (Fragen, Antworten, Einstellungen) bleiben erhalten.
 
 ---
 

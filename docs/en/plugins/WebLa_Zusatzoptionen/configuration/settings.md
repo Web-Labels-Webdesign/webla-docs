@@ -2,7 +2,7 @@
 
 This document describes all available settings for the Additional Options Plugin.
 
-**Navigation**: Extensions → My Extensions → Product Additional Options Plugin → Configure
+**Navigation**: Extensions → My Extensions → Product Add-ons & Extras → Configure
 
 ---
 
@@ -208,7 +208,7 @@ without a sales channel context, so only the value set for "All Sales Channels" 
 
 **How to configure sales channel-specific settings**:
 
-1. Navigate to `Extensions → My Extensions → Product Additional Options Plugin → Configure`
+1. Navigate to `Extensions → My Extensions → Product Add-ons & Extras → Configure`
 2. Select the desired sales channel in the top right (instead of "All Sales Channels")
 3. Adjust the settings for this sales channel
 4. Click "Save"

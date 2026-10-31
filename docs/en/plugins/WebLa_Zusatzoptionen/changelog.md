@@ -4,6 +4,24 @@ All notable changes to the Additional Options Plugin for end users.
 
 ---
 
+# 5.10.0
+
+_Released 2026-10-30_
+
+**New Features**
+
+- The storefront, the administration and the plugin configuration are now available in Dutch, French, Italian, Spanish, Polish, Czech, Danish and Swedish.
+
+**Bug Fixes**
+
+- Sub-options now always use their own price. Before, a sub-option of an option with cart-value price tiers was charged the parent option's tier price. If your sub-option prices were only correct because of that inheritance, check them after the update.
+- Options that are incompatible with an already selected option can no longer be selected on the cart page, and the product page no longer re-enables them when it refreshes option availability. Unchecking a conflicting option in the cart now also updates the cart.
+- The manufacturer name shown next to an option is now displayed in the storefront language.
+- A seeder without excluded products no longer lists every product as excluded in the administration.
+- The seeder list and the option modal in the administration now show translated button labels and selection counts.
+
+---
+
 # 5.9.4
 
 _Released 2026-10-29_

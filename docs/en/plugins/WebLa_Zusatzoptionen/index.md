@@ -37,7 +37,7 @@ Ideal for shop operators who want to supplement their products with additional s
 
 1. Install the plugin via Plugin Manager or Composer
 2. Activate the plugin in **Extensions → My Extensions**
-3. Configure basic settings in **Extensions → My Extensions → Product Additional Options Plugin → Configure**
+3. Configure basic settings in **Extensions → My Extensions → Product Add-ons & Extras → Configure**
 4. Create your first option set: Navigate to **Catalogues → Products**, select a product and switch to the **Additional Options** tab
 5. Add options and define prices, shipping restrictions, and dependencies
 6. Optional: Use the **Option Seeder** under **Extensions → Option Seeder** for automatic assignment via product streams

@@ -689,7 +689,7 @@ In the order overview, customers see:
 
 **Solution**:
 - Expected behavior with "Split" setting
-- Change the setting to "Merge" under `Extensions → My Extensions → Product Additional Options Plugin → Configure → Payment Settings`
+- Change the setting to "Merge" under `Extensions → My Extensions → Product Add-ons & Extras → Configure → Payment Settings`
 
 ### Further Help
 
