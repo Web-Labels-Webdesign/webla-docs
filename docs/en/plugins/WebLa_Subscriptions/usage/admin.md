@@ -173,6 +173,15 @@ In the customer profile (**Customers → [Customer]**), an additional **Subscrip
 
 On the product page (**Catalogues → Products → [Product]**), the plugin adds a **Subscription Options** card at the bottom of the **General** tab, where you configure the available subscription options and the *Subscription only* mode for this product.
 
+### Orders
+
+Orders paid via Mollie carry the custom field set **Subscription payment (Mollie)**, shown in the order detail view (**Orders → [Order]**):
+
+- **Mollie transaction ID**: The Mollie payment ID (tr_...). Set as soon as the payment is created, for the first order and every renewal.
+- **Mollie payment reference**: Added once Mollie confirms the payment — the PayPal transaction ID for PayPal, the bank statement reference for SEPA direct debit. Credit card payments have no reference.
+
+Order exports can read both values from the order's custom fields (`webla_mollie_payment_id`, `webla_mollie_payment_reference`), for example to match orders with Mollie settlements in accounting.
+
 ---
 
 ## Permissions

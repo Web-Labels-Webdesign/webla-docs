@@ -4,6 +4,16 @@ All notable changes to the Subscription Plugin for Mollie for end users.
 
 ---
 
+# 1.13.0
+
+_Released 2026-11-02_
+
+**New Features**
+
+- Subscription orders paid via Mollie now carry the Mollie transaction ID (tr_...) as an order custom field, together with the payment reference. Order exports and accounting can use it to match each order to its Mollie payment. The fields appear in the new custom field set **Subscription payment (Mollie)** on the order.
+- The payment reference is added as soon as Mollie confirms the payment: the PayPal transaction ID for PayPal and the bank statement reference for SEPA direct debit. Mollie issues no reference for credit card payments.
+- On update, existing subscription orders automatically receive their Mollie transaction ID. The payment reference is only recorded for payments confirmed from this version on.
+
 # 1.12.0
 
 _Released 2026-09-25_

@@ -4,6 +4,16 @@ Alle wichtigen Änderungen am Abonnement Plugin für Mollie für Endbenutzer.
 
 ---
 
+# 1.13.0
+
+_Veröffentlicht am 2026-11-02_
+
+**Neue Funktionen**
+
+- Über Mollie bezahlte Abo-Bestellungen enthalten jetzt die Mollie-Transaktions-ID (tr_...) als Zusatzfeld der Bestellung, zusammen mit der Zahlungsreferenz. Bestellexporte und Buchhaltung können damit jede Bestellung eindeutig der Mollie-Zahlung zuordnen. Die Felder erscheinen im neuen Zusatzfeld-Set **Abo-Zahlung (Mollie)** an der Bestellung.
+- Die Zahlungsreferenz wird ergänzt, sobald Mollie die Zahlung bestätigt: bei PayPal die PayPal-Transaktions-ID, bei SEPA-Lastschrift die Referenz auf dem Kontoauszug. Für Kreditkartenzahlungen vergibt Mollie keine Referenz.
+- Beim Update erhalten bestehende Abo-Bestellungen ihre Mollie-Transaktions-ID automatisch. Die Zahlungsreferenz wird erst für Zahlungen erfasst, die ab dieser Version bestätigt werden.
+
 # 1.12.0
 
 _Veröffentlicht am 2026-09-25_

@@ -173,6 +173,15 @@ Im Kundenprofil (**Kunden → [Kunde]**) wird eine zusätzliche Karte **Abonneme
 
 Auf der Produktseite (**Kataloge → Produkte → [Produkt]**) ergänzt das Plugin am Ende des Tabs **Allgemein** die Karte **Abonnement-Optionen**, in der Sie die verfügbaren Abonnement-Optionen und den Modus *Nur als Abonnement* für dieses Produkt konfigurieren.
 
+### Bestellungen
+
+Über Mollie bezahlte Bestellungen enthalten das Zusatzfeld-Set **Abo-Zahlung (Mollie)**, sichtbar in der Bestelldetailansicht (**Bestellungen → [Bestellung]**):
+
+- **Mollie-Transaktions-ID**: Die Mollie-Zahlungs-ID (tr_...). Wird gesetzt, sobald die Zahlung angelegt ist, für die Erstbestellung und jede Verlängerung.
+- **Mollie-Zahlungsreferenz**: Wird ergänzt, sobald Mollie die Zahlung bestätigt — bei PayPal die PayPal-Transaktions-ID, bei SEPA-Lastschrift die Referenz auf dem Kontoauszug. Kreditkartenzahlungen haben keine Referenz.
+
+Bestellexporte können beide Werte aus den Zusatzfeldern der Bestellung lesen (`webla_mollie_payment_id`, `webla_mollie_payment_reference`), etwa um Bestellungen in der Buchhaltung den Mollie-Auszahlungen zuzuordnen.
+
 ---
 
 ## Berechtigungen
