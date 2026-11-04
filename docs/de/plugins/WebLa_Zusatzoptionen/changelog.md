@@ -4,6 +4,21 @@ Alle wichtigen Änderungen am Zusatzoptionen Plugin für Endbenutzer.
 
 ---
 
+# 5.11.0
+
+_Veröffentlicht am 2026-11-04_
+
+**Neue Funktionen**
+
+- Ein neuer Konsolenbefehl stellt die fehlenden Steuerdaten bestehender Bestellungen wieder her. Standardmäßig zeigt er nur an und schreibt erst mit `--apply`. Der Befehl ist in der Dokumentation der Einstellungen beschrieben.
+
+**Fehlerbehebungen**
+
+- Bestellungen mit Zusatzoptionen behalten unter Shopware 6.7 jetzt den Steuersatz des Hauptprodukts. Er fehlte in der Administration und auf Rechnungen, und E-Rechnungen (ZUGFeRD/XRechnung) wiesen das Hauptprodukt mit 0 % und falschen Summen aus.
+- Der Preis des Hauptprodukts in der Bestellung folgt jetzt späteren Änderungen im Warenkorb. Bisher konnte eine geänderte Menge oder ein geändertes Lieferland einen veralteten Preis an der Bestellposition hinterlassen.
+
+---
+
 # 5.10.0
 
 _Veröffentlicht am 2026-10-30_

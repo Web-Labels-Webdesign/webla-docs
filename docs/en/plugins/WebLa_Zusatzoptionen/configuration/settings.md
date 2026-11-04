@@ -256,6 +256,32 @@ without a sales channel context, so only the value set for "All Sales Channels" 
 
 ---
 
+## Repairing Orders Without Tax Data
+
+On Shopware 6.7, orders with additional options could be stored without a tax rate on the main product. This affects e-invoices (ZUGFeRD/XRechnung) in particular: the main product appears with 0 % and the totals are wrong. New orders are correct from version 5.11.0. Existing orders can be repaired with a console command:
+
+```bash
+# Show which orders are affected, changes nothing
+bin/console webla:options:repair-order-taxes
+
+# Check a single order
+bin/console webla:options:repair-order-taxes --order-number=10000
+
+# Write the repairs
+bin/console webla:options:repair-order-taxes --apply
+```
+
+**Behavior**:
+
+- Without `--apply`, the command only reports what it would repair
+- Tax-free orders and orders that already have tax data are left unchanged
+- Running the command again is safe
+- Line items whose stored price no longer matches the order are not changed. They are listed under "Skipped, needs a manual check" and have to be checked by hand
+
+**Note**: Back up your database before using `--apply`. Documents that have already been created do not change. To get a corrected invoice, create a new document for the order, and ask your tax advisor how to handle invoices that have already been issued.
+
+---
+
 ## Frequently Asked Questions
 
 **Q: What happens if I change the discount setting later?**

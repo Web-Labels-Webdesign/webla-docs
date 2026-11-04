@@ -257,6 +257,32 @@ läuft im Hintergrund ohne Verkaufskanal-Kontext, daher wird ausschliesslich der
 
 ---
 
+## Bestellungen ohne Steuerdaten reparieren
+
+Unter Shopware 6.7 konnten Bestellungen mit Zusatzoptionen ohne Steuersatz am Hauptprodukt gespeichert werden. Das betrifft vor allem E-Rechnungen (ZUGFeRD/XRechnung): Das Hauptprodukt erscheint dort mit 0 %, und die Summen stimmen nicht. Neue Bestellungen sind ab Version 5.11.0 korrekt. Bestehende Bestellungen lassen sich mit einem Konsolenbefehl reparieren:
+
+```bash
+# Zeigt betroffene Bestellungen an, ändert nichts
+bin/console webla:options:repair-order-taxes
+
+# Prüft eine einzelne Bestellung
+bin/console webla:options:repair-order-taxes --order-number=10000
+
+# Schreibt die Korrekturen
+bin/console webla:options:repair-order-taxes --apply
+```
+
+**Verhalten**:
+
+- Ohne `--apply` zeigt der Befehl nur an, was er korrigieren würde
+- Steuerfreie Bestellungen und Bestellungen mit vorhandenen Steuerdaten bleiben unverändert
+- Der Befehl kann gefahrlos mehrfach ausgeführt werden
+- Positionen, deren gespeicherter Preis nicht mehr zur Bestellung passt, werden nicht geändert. Sie erscheinen unter „Skipped, needs a manual check“ und müssen von Hand geprüft werden
+
+**Hinweis**: Erstellen Sie vor dem Einsatz von `--apply` eine Datenbanksicherung. Bereits erstellte Dokumente ändern sich nicht. Für eine korrigierte Rechnung erstellen Sie ein neues Dokument zur Bestellung und klären Sie mit Ihrem Steuerberater, wie mit bereits versendeten Rechnungen umzugehen ist.
+
+---
+
 ## Häufige Fragen
 
 **F: Was passiert, wenn ich die Rabatt-Einstellung nachträglich ändere?**

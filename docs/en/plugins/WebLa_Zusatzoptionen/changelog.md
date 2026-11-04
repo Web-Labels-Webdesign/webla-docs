@@ -4,6 +4,21 @@ All notable changes to the Additional Options Plugin for end users.
 
 ---
 
+# 5.11.0
+
+_Released 2026-11-04_
+
+**New Features**
+
+- A new console command restores the missing tax data of existing orders. It only reports by default and writes with `--apply`. The command is described in the settings documentation.
+
+**Bug Fixes**
+
+- Orders with additional options on Shopware 6.7 now keep the tax rate of the main product. It was missing in the administration and on invoices, and e-invoices (ZUGFeRD/XRechnung) showed the main product at 0 % with wrong totals.
+- The main product's price in the order now follows later changes in the cart. Before, a changed quantity or shipping country could leave an outdated price on the order item.
+
+---
+
 # 5.10.0
 
 _Released 2026-10-30_
