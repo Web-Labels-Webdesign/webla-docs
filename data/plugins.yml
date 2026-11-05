@@ -1,4 +1,13 @@
 plugins:
+  - id: WebLaInvisibleSpamProtection
+    name:
+      de: Spam Schutz Easy Mode
+      en: Invisible Spam Protection (Easy Mode)
+    short:
+      de: "Stoppt Spam in Registrierung, Newsletter und Kontaktformular ohne Captcha: IP-Limits, Schriftfilter, Namens- und Adressprüfung, E-Mail-Sperren und Honeypot."
+      en: "Stops spam in registration, newsletter and contact form without captchas: IP limits, script filter, name and address checks, e-mail blocklists and honeypot."
+    requirements: Shopware 6.7.9–6.7, PHP 8.2+
+    version: "1.0.0"
   - id: WebLa_PayTRIntegration
     name:
       de: PayTR Integration

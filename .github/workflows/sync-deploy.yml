@@ -61,6 +61,7 @@ jobs:
             ["WebLa_PropertyNotes"]="WebLa_PropertyNotes"
             ["WebLa_CustomerTaxCountry"]="WebLa_CustomerTaxCountry"
             ["WebLa_PayTRIntegration"]="WebLa_PayTRIntegration"
+            ["WebLaInvisibleSpamProtection"]="WebLaInvisibleSpamProtection"
             ["WebLa_HomePageControl"]="WebLa_HomePageControl"
             ["WebLa_AddressValidation"]=WebLaAddressValidation
           )
@@ -95,6 +96,7 @@ jobs:
             ["WebLa_PropertyNotes"]="WebLa_PropertyNotes"
             ["WebLa_CustomerTaxCountry"]="WebLa_CustomerTaxCountry"
             ["WebLa_PayTRIntegration"]="WebLa_PayTRIntegration"
+            ["WebLaInvisibleSpamProtection"]="WebLaInvisibleSpamProtection"
             ["WebLa_HomePageControl"]="WebLa_HomePageControl"
             ["WebLa_AddressValidation"]=WebLaAddressValidation
           )
