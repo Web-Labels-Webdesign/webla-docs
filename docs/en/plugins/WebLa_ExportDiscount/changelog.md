@@ -4,6 +4,26 @@ All notable changes for end users.
 
 ---
 
+# 5.4.2
+
+_Released 2026-11-09_
+
+**Bug Fixes**
+
+- Product exports failed with an error when another plugin that changes the product export rendering, such as "Social Shopping", was installed at the same time. Both plugins now work together.
+
+---
+
+# 5.4.1
+
+_Released 2026-11-09_
+
+**Bug Fixes**
+
+- The sales channel detail page of a product export could not be opened in the administration (error "this.getInlineSnippet is not a function"). The selection "Export price from custom field" is shown again.
+
+---
+
 # 5.4.0
 
 _Released 2026-10-16_

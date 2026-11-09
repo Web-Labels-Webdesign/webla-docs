@@ -4,6 +4,26 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 5.4.2
+
+_Veröffentlicht am 2026-11-09_
+
+**Fehlerbehebungen**
+
+- Produktexporte brachen mit einem Fehler ab, wenn gleichzeitig ein anderes Plugin installiert war, das die Darstellung des Produktexports verändert, z. B. „Social Shopping". Beide Plugins funktionieren jetzt zusammen.
+
+---
+
+# 5.4.1
+
+_Veröffentlicht am 2026-11-09_
+
+**Fehlerbehebungen**
+
+- Die Detailseite eines Produktexport-Verkaufskanals ließ sich in der Administration nicht öffnen (Fehler „this.getInlineSnippet is not a function"). Die Auswahl „Exportpreis aus Zusatzfeld" wird wieder angezeigt.
+
+---
+
 # 5.4.0
 
 _Veröffentlicht am 2026-10-16_
