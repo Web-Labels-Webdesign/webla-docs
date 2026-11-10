@@ -54,7 +54,7 @@ Manage your ADCELL credentials here. The plugin supports multiple accounts.
 3. Enter your ADCELL **username** and **password**
 4. Click **Save**
 
-The password is stored encrypted in the database (AES-256-GCM).
+The password is stored encrypted in the database (AES-256-GCM). The key is derived from the shop's `APP_SECRET`: if `APP_SECRET` changes, all stored passwords become unreadable and must be re-entered.
 
 ### Testing the Connection
 

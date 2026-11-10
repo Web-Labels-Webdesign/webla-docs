@@ -18,14 +18,16 @@ ADCELL-API (offene Provisionen) → Plugin (Abgleich mit Shopware-Bestellungen) 
 2. Für jede Provision wird die zugehörige Shopware-Bestellung gesucht (über die Bestellnummer im Feld „reference")
 3. Der Entscheidungsalgorithmus prüft in dieser Reihenfolge:
    - Ist ein Programm-Mapping vorhanden? → Wenn nein: **Nicht zugeordnet**
-   - Existiert die Bestellung in Shopware? → Wenn nein: **Stornieren**
+   - Existiert die Bestellung in Shopware? → Wenn nein: **Stornieren** (automatische Freigabe: **Überspringen**)
+   - Existiert die Bestellnummer in mehreren Verkaufskanälen und das Mapping hat keinen Verkaufskanal? → **Überspringen**
    - Ist die Bestellung storniert/fehlgeschlagen? → **Stornieren**
    - Wurde die Lieferung komplett retourniert? → **Stornieren**
    - Wurde die Zahlung komplett erstattet? → **Stornieren**
-   - Ist die Zahlung offen/ausstehend? → **Stornieren**
+   - Ist die Zahlung offen/ausstehend/gemahnt? → **Stornieren**
    - Ist die Zahlung fehlgeschlagen? → **Stornieren**
-   - Wurde noch nicht versendet? → **Stornieren**
-   - Liegt eine Teilerstattung vor? → **Korrigieren**
+   - Ist die Zahlung nur teilweise bezahlt? → **Überspringen**
+   - Wurde noch nicht versendet? → **Stornieren** (automatische Freigabe: **Überspringen**)
+   - Liegt eine Teilerstattung vor? → **Korrigieren** ohne Wert — der korrigierte Warenkorbwert muss vor dem Senden manuell eingetragen werden; die automatische Freigabe sendet diese Einträge nie
    - Weicht der Warenkorbwert ab (über Toleranz)? → **Korrigieren**
    - Alles in Ordnung? → **Freigeben**
 4. Die Entscheidungen werden als Batch gespeichert (Status: „Vorbereitet")

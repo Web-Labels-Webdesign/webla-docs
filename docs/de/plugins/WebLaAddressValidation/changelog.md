@@ -26,6 +26,7 @@ Erste Version des Plugins.
 - **Sonderzeichen-Prüfung**: Sie legen je Feld fest, welche Sonderzeichen in Straße und Ort erlaubt sind. Ziffern sind im Ortsfeld grundsätzlich nicht zulässig.
 - **Hausnummern-Prüfung**: Das Straßenfeld muss mindestens eine Ziffer enthalten. Die Prüfung lässt sich abschalten, wenn Sie auch Adressen ohne Hausnummer annehmen.
 - **Mindestlänge**: Für Straße und Ort lässt sich eine Mindestanzahl an Zeichen festlegen, um Kurzeingaben wie `ab 1` abzufangen.
+- **Leerzeichen bereinigen**: Leerzeichen am Anfang und Ende werden entfernt, mehrfache Leerzeichen auf eines reduziert (`Muster  str. 5` wird zu `Muster str. 5`).
 - **Automatisches Leerzeichen vor der Hausnummer**: Aus `Musterstr.1` wird beim Absenden `Musterstr. 1`.
 - **Konfiguration pro Verkaufskanal**: Jeder Verkaufskanal kann eigene Regeln haben.
 

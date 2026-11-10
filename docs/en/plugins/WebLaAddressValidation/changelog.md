@@ -26,6 +26,7 @@ First version of the plugin.
 - **Special character check**: You define per field which special characters are allowed in street and city. Digits are never permitted in the city field.
 - **House number check**: The street field must contain at least one digit. The check can be switched off if you also accept addresses without a house number.
 - **Minimum length**: You can define a minimum number of characters for street and city to catch short entries such as `ab 1`.
+- **Space cleanup**: Leading and trailing spaces are removed and multiple spaces are reduced to one (`Example  str. 5` becomes `Example str. 5`).
 - **Automatic space before the house number**: On submit, `Examplestr.1` becomes `Examplestr. 1`.
 - **Configuration per sales channel**: Every sales channel can have its own rules.
 

@@ -60,6 +60,19 @@ Dieses Dokument beschreibt alle verfügbaren Einstellungen für ADCELL Provision
 
 **Anwendungsbeispiel**: Setzen Sie den Wert auf 14, um Provisionen erst nach Ablauf der typischen Widerrufsfrist freizugeben. So haben Kunden Zeit für Retouren und Stornierungen, bevor die Provision endgültig bestätigt wird.
 
+
+### ADCELL-Rückblick in Tagen
+
+| Eigenschaft      | Wert  |
+| ---------------- | ----- |
+| **Typ**          | Zahl  |
+| **Standard**     | 90    |
+| **Erforderlich** | Nein  |
+
+**Beschreibung**: ADCELL kann Provisionen nur nach Erstellungsdatum filtern, das Plugin wählt sie aber nach Auto-Accept-Datum aus. Diese Einstellung legt fest, wie viele Tage vor dem gewählten Zeitraum Provisionen bei ADCELL abgefragt werden.
+
+**Anwendungsbeispiel**: Hat eines Ihrer Programme eine Auto-Accept-Frist von 120 Tagen, setzen Sie den Wert auf mindestens 120 — sonst werden diese Provisionen nie abgeglichen.
+
 ---
 
 ## Betrags-Toleranz

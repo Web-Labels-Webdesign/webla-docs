@@ -16,7 +16,7 @@ You decide how strict the validation is: every rule can be switched on and off i
 - **House number check**: The street field must contain at least one digit. If it does not, the input is rejected.
 - **Minimum length**: You can enforce a minimum number of characters for street and city.
 - **Protection against typical input errors**: Consecutive special characters (`Muster..strasse`) and special characters at the beginning or end (`- Example Street`) are blocked.
-- **Automatic correction**: A missing space before the house number is added on submit, turning `Examplestr.1` into `Examplestr. 1`.
+- **Automatic correction**: On submit, superfluous spaces are removed and a missing space before the house number is added, turning `Examplestr.1` into `Examplestr. 1`.
 - **Clear error messages**: Every rule has its own, understandable message. If an input violates several rules, all messages appear at once.
 - **Configurable per sales channel**: Every sales channel can have its own rules.
 

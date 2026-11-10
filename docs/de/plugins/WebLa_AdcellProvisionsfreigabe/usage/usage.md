@@ -54,7 +54,7 @@ Hier verwalten Sie Ihre ADCELL-Zugangsdaten. Das Plugin unterstützt mehrere Kon
 3. Tragen Sie Ihren ADCELL **Benutzernamen** und **Passwort** ein
 4. Klicken Sie auf **Speichern**
 
-Das Passwort wird verschlüsselt in der Datenbank gespeichert (AES-256-GCM).
+Das Passwort wird verschlüsselt in der Datenbank gespeichert (AES-256-GCM). Der Schlüssel wird aus dem `APP_SECRET` des Shops abgeleitet: Ändert sich `APP_SECRET`, sind alle gespeicherten Passwörter unlesbar und müssen neu eingegeben werden.
 
 ### Verbindung testen
 

@@ -1,13 +1,40 @@
-# Changelog
+**Changelog**
 
-## 1.2.0 — 2026-04-02
+# 1.3.0
 
-### :sparkles: Neue Funktionen
+_Veröffentlicht am 2026-11-10_
+
+**Neue Funktionen**
+
+- Neue Einstellung „ADCELL-Rückblick in Tagen" (Standard 90): legt fest, wie weit zurück Provisionen bei ADCELL abgefragt werden – für Programme mit Auto-Accept-Fristen über 90 Tage
+- Zugriffsrechte: Das ADCELL-Modul hat eigene Admin-Berechtigungen (Ansehen, Bearbeiten, Anlegen, Löschen) und lässt sich pro Benutzerrolle freigeben
+
+**Fehlerbehebungen**
+
+- Teilerstattete Bestellungen werden jetzt erkannt und zur Prüfung zurückgehalten (Korrektur ohne Wert), statt mit dem vollen Warenkorbwert freigegeben zu werden
+- Teilweise versandte Bestellungen gelten jetzt als versendet und werden nicht mehr storniert
+- Korrekturen ohne eingetragenen Warenkorbwert werden nicht mehr gesendet; der Wert muss zuerst manuell eingetragen werden. Die automatische Freigabe überspringt sie
+- Existiert eine Bestellnummer in mehreren Verkaufskanälen und das Mapping hat keinen Verkaufskanal, wird die Provision übersprungen statt einer beliebigen Bestellung zugeordnet
+- Der Zahlungsstatus wird jetzt aus der neuesten Transaktion ermittelt
+- ADCELL-Fehlermeldungen enthalten in Logs keine Passwörter oder Tokens mehr
+
+**Verbesserungen**
+
+- Die automatische Freigabe storniert Provisionen für fehlende oder noch nicht versendete Bestellungen nicht mehr, sondern überspringt sie zur manuellen Prüfung
+- Teilweise bezahlte Bestellungen werden zur manuellen Prüfung übersprungen; gemahnte Zahlungen gelten als unbezahlt
+- Ein Batch kann nicht mehr gleichzeitig doppelt gesendet werden
+- Bereits an ADCELL gesendete Entscheidungen können nicht mehr geändert werden
+
+# 1.2.0
+
+_Veröffentlicht am 2026-04-02_
+
+**Neue Funktionen**
 
 - Mindest-Bestellalter: Provisionen werden erst freigegeben, wenn die Bestellung mindestens X Tage alt ist — gibt Zeit für Retouren und Stornierungen
 - Vollständiger Shopware-Store-Eintrag mit Beschreibungen, Installationsanleitung, Screenshots, FAQ und Dokumentations-Link
 
-### :recycle: Verbesserungen
+**Verbesserungen**
 
 - Logging im ReconciliationService für Batch-Vorbereitung und Sende-Ergebnisse hinzugefügt
 - Plugin-Icon auf 112x112 px verkleinert (Store-Konformität)
@@ -15,58 +42,74 @@
 - Ungenutzte Benachrichtigungs-E-Mail-Einstellung entfernt
 - Vollständige Plugin-Dokumentation (Übersicht, Einstellungen, Nutzung, Anleitungen) in DE und EN hinzugefügt
 
-## 1.1.1 — 2026-04-02
+# 1.1.1
 
-### :bug: Fehlerbehebungen
+_Veröffentlicht am 2026-04-02_
+
+**Fehlerbehebungen**
 
 - Batch-Tabellenzeilen waren nicht klickbar — nicht funktionales `@row-click` durch Kontextmenü und klickbaren Datums-Link ersetzt
 - Dashboard-Statistik „Letzte 30 Tage" zählte Duplikate bei mehrfachem Abgleich desselben Zeitraums (jetzt werden nur gesendete Positionen gezählt)
 
-## 1.1.0 — 2026-04-02
+# 1.1.0
 
-### :sparkles: Neue Funktionen
+_Veröffentlicht am 2026-04-02_
+
+**Neue Funktionen**
 
 - Batch-Detailansicht: Klick auf eine Zeile in der „Letzte Abgleiche"-Tabelle im Dashboard öffnet vorbereitete Batches zum Prüfen und Senden
 
-### :bug: Fehlerbehebungen
+**Fehlerbehebungen**
 
 - Vollständige Zweisprachigkeit für Begründungscodes über Snippets, verbliebene Umlaut-Probleme behoben
 
-## 1.0.5 — 2026-04-02
+# 1.0.5
 
-### :bug: Fehlerbehebungen
+_Veröffentlicht am 2026-04-02_
+
+**Fehlerbehebungen**
 
 - Entscheidungsspalte in zwei separate Spalten aufgeteilt: „Entscheidung" (Badge) und „Überschreiben" (Select) für bessere Lesbarkeit
 - Filter-Checkboxen vertikal zentriert (Standard-margin-bottom entfernt)
 - Deutsche Umlaute (ä, ö, ü) in allen Snippets, Fehlermeldungen und Changelogs korrigiert
 
-## 1.0.4 — 2026-04-02
+# 1.0.4
 
-### :bug: Fehlerbehebungen
+_Veröffentlicht am 2026-04-02_
+
+**Fehlerbehebungen**
 
 - Ergebnis-Card und Entscheidungsspalte verbreitert, damit das Überschreiben-Dropdown vollständig sichtbar ist und kein horizontales Scrollen nötig ist
 
-## 1.0.3 — 2026-04-02
+# 1.0.3
 
-### :bug: Fehlerbehebungen
+_Veröffentlicht am 2026-04-02_
+
+**Fehlerbehebungen**
 
 - TypeError im Ergebnis-Grid des Abgleichs behoben: API-Antwort lieferte Items als JSON-Objekt statt Array, da Shopware-Entity-IDs als Schlüssel verwendet wurden
 
-## 1.0.2 — 2026-04-02
+# 1.0.2
 
-### :bug: Fehlerbehebungen
+_Veröffentlicht am 2026-04-02_
+
+**Fehlerbehebungen**
 
 - Abgleich lieferte weiterhin keine Ergebnisse: dateTo wurde um Mitternacht (00:00:00) statt zum Tagesende verglichen, wodurch alle Provisionen des letzten Tages ausgeschlossen wurden; Datums-Presets schauen jetzt vorwärts (nächste N Tage) statt rückwärts; API-endDate an Marketing-Plattform-Baseline angeglichen
 
-## 1.0.1 — 2026-04-02
+# 1.0.1
 
-### :bug: Fehlerbehebungen
+_Veröffentlicht am 2026-04-02_
+
+**Fehlerbehebungen**
 
 - Abgleich lieferte keine Ergebnisse (0 Positionen): Adcell-API wird jetzt mit einem 90-Tage-Rückblick abgefragt — Provisionen haben ein 30–45-tägiges Auto-Accept-Fenster, weshalb Erstellungs- und autoAcceptTime-Datumsbereich unterschiedlich sein müssen
 
-## 1.0.0 — 2026-04-01
+# 1.0.0
 
-### :sparkles: Neue Funktionen
+_Veröffentlicht am 2026-04-01_
+
+**Neue Funktionen**
 
 - Automatischer Abgleich und Freigabe von ADCELL Affiliate-Provisionen direkt im Shopware Admin
 - Manuelle Stapelprüfung mit Überschreibungsmöglichkeit pro Position

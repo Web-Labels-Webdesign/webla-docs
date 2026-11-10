@@ -60,6 +60,19 @@ This document describes all available settings for ADCELL Commission Approval.
 
 **Example Use Case**: Set the value to 14 to only approve commissions after the typical return/cancellation period has passed. This gives customers time for returns and cancellations before the commission is confirmed.
 
+
+### ADCELL lookback in days
+
+| Property     | Value  |
+| ------------ | ------ |
+| **Type**     | Number |
+| **Default**  | 90     |
+| **Required** | No     |
+
+**Description**: ADCELL can only filter commissions by creation date, while the plugin selects them by auto-accept date. This setting defines how many days before the selected range commissions are requested from ADCELL.
+
+**Example Use Case**: If one of your programs has an auto-accept period of 120 days, set this value to at least 120 — otherwise those commissions are never reconciled.
+
 ---
 
 ## Amount Tolerance

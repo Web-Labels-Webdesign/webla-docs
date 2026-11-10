@@ -16,7 +16,7 @@ Sie entscheiden selbst, wie streng geprüft wird: Alle Regeln lassen sich einzel
 - **Hausnummern-Prüfung**: Das Straßenfeld muss mindestens eine Ziffer enthalten. Fehlt sie, wird die Eingabe abgelehnt.
 - **Mindestlänge**: Für Straße und Ort lässt sich eine Mindestanzahl an Zeichen erzwingen.
 - **Schutz vor typischen Fehleingaben**: Aufeinanderfolgende Sonderzeichen (`Muster..straße`) und Sonderzeichen am Anfang oder Ende (`- Musterstraße`) werden blockiert.
-- **Automatische Korrektur**: Vor der Hausnummer wird beim Absenden ein fehlendes Leerzeichen ergänzt, aus `Musterstr.1` wird `Musterstr. 1`.
+- **Automatische Korrektur**: Beim Absenden werden überflüssige Leerzeichen entfernt und vor der Hausnummer ein fehlendes Leerzeichen ergänzt, aus `Musterstr.1` wird `Musterstr. 1`.
 - **Klare Fehlermeldungen**: Jede Regel hat einen eigenen, verständlichen Hinweistext. Verstößt eine Eingabe gegen mehrere Regeln, erscheinen alle Hinweise gleichzeitig.
 - **Pro Verkaufskanal konfigurierbar**: Jeder Verkaufskanal kann eigene Regeln haben.
 
