@@ -4,6 +4,16 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 5.5.2
+
+_Veröffentlicht am 2026-11-11_
+
+**Fehlerbehebungen**
+
+- Bei aktivem „Währung wechseln“ wird beim Wechsel in ein Land ohne passende Währung im Verkaufskanal die Währung jetzt auf die Standardwährung der Domain zurückgesetzt, statt die zuvor gewählte beizubehalten.
+- Länder wie Norwegen oder die USA lassen sich wieder auswählen, auch wenn ihre Währung im Shop angelegt, aber dem Verkaufskanal nicht zugewiesen ist. Es werden nur noch Währungen verwendet, die dem Verkaufskanal zugewiesen sind.
+- Slowakei, Kroatien, Zypern, Estland, Lettland, Litauen, Malta und Bulgarien sind jetzt dem Euro statt ihrer früheren Landeswährungen zugeordnet.
+
 # 5.5.1
 
 _Veröffentlicht am 2026-10-29_

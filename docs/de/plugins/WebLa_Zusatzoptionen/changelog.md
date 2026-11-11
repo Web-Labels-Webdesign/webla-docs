@@ -4,6 +4,16 @@ Alle wichtigen Änderungen am Zusatzoptionen Plugin für Endbenutzer.
 
 ---
 
+# 5.11.1
+
+_Veröffentlicht am 2026-11-11_
+
+**Fehlerbehebungen**
+
+- Klarna erhält Zusatzoptionen jetzt als eigene Bestellpositionen mit Artikelnummer, Preis und Steuersatz. Bisher wurde an Klarna nur das Hauptprodukt ohne Optionen übertragen, sodass die Positionen nicht zur Bestellsumme passten und Klarna sie als ungültig ablehnte.
+
+---
+
 # 5.11.0
 
 _Veröffentlicht am 2026-11-04_

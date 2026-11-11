@@ -4,6 +4,16 @@ All notable changes for end users.
 
 ---
 
+# 5.5.2
+
+_Released 2026-11-11_
+
+**Bug Fixes**
+
+- With "Change currency" enabled, switching to a country without a matching currency in the sales channel now resets the currency to the domain's default currency instead of keeping the previously selected one.
+- Fix countries such as Norway or the USA not being selectable when their currency exists in the shop but is not assigned to the sales channel. Only currencies assigned to the sales channel are used now.
+- Slovakia, Croatia, Cyprus, Estonia, Latvia, Lithuania, Malta and Bulgaria are now mapped to the euro instead of their former national currencies.
+
 # 5.5.1
 
 _Released 2026-10-29_

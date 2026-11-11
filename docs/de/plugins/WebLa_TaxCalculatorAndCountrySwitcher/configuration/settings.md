@@ -76,7 +76,7 @@ Steuert die Sichtbarkeit und Darstellung des Länderumschalters im Frontend.
 | **Standard**     | Deaktiviert |
 | **Erforderlich** | Nein        |
 
-**Beschreibung**: Wechselt den Verkaufskanal beim Länderwechsel automatisch auf die Landeswährung (sofern im Verkaufskanal verfügbar).
+**Beschreibung**: Wechselt den Verkaufskanal beim Länderwechsel automatisch auf die Landeswährung (sofern im Verkaufskanal verfügbar). Ist im Verkaufskanal keine passende Währung vorhanden, wird die Standardwährung der Domain verwendet.
 
 **Anwendungsbeispiel**: Nur aktivieren, wenn Sie alle relevanten Währungen im Verkaufskanal gepflegt und mit korrektem Umrechnungsfaktor versehen haben.
 

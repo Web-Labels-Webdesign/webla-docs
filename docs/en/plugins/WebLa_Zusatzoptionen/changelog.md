@@ -4,6 +4,16 @@ All notable changes to the Additional Options Plugin for end users.
 
 ---
 
+# 5.11.1
+
+_Released 2026-11-11_
+
+**Bug Fixes**
+
+- Klarna now receives additional options as order lines of their own, with article number, price and tax rate. Before, Klarna only received the main product without its options, so the order lines did not add up to the order total and Klarna rejected them as invalid.
+
+---
+
 # 5.11.0
 
 _Released 2026-11-04_

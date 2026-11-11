@@ -76,7 +76,7 @@ Controls the visibility and appearance of the country switcher in the frontend.
 | **Default**  | Disabled   |
 | **Required** | No         |
 
-**Description**: When a country is selected, automatically switches the sales channel to the country's local currency (if available in the sales channel).
+**Description**: When a country is selected, automatically switches the sales channel to the country's local currency (if available in the sales channel). If the sales channel has no matching currency, the domain's default currency is used.
 
 **Example Use Case**: Only enable if you have maintained all relevant currencies in the sales channel with correct conversion factors.
 
