@@ -1,27 +1,43 @@
-# Changelog
+**Changelog — Address Validation**
 
 All notable changes to the address validation for end-users.
 
 ---
 
-## [1.1.0]
+# 1.2.0
 
-### ✨ New Features
+_Released 2026-11-10_
+
+**New Features**
+
+- **Clean up invisible characters**: Addresses copied from an email, a PDF or a web page often contain invisible characters (e.g. zero-width spaces or soft hyphens) or non-breaking spaces. These are now removed or replaced by a regular space right when pasting into street and city, and once more on submit. Shopware itself stores these characters unchanged.
+
+**Improvements**
+
+- Shorter, clearer plugin description in the extension overview.
+
+---
+
+# 1.1.0
+
+_Released 2026-09-09_
+
+**New Features**
 
 - **Block consecutive special characters**: Prevents entries such as `Muster..strasse 5` or `--City`. The rule applies to street and city and can be switched off individually.
 - **Block leading/trailing special characters**: Prevents entries such as `- Example Street 5` or `Example Street 5 -`. A trailing period or closing bracket stays allowed so that `Examplestr.` and `Frankfurt (Oder)` keep working.
 
-### 🔧 Improvements
+**Improvements**
 
 - **Combined messages**: If an input violates several rules, all messages now appear at once. Your customers do not have to submit repeatedly to find all problems.
 
 ---
 
-## [1.0.0]
+# 1.0.0
 
 First version of the plugin.
 
-### ✨ New Features
+**New Features**
 
 - **Special character check**: You define per field which special characters are allowed in street and city. Digits are never permitted in the city field.
 - **House number check**: The street field must contain at least one digit. The check can be switched off if you also accept addresses without a house number.
@@ -34,10 +50,11 @@ First version of the plugin.
 
 ## Version Overview
 
-| Version | Release | Highlights                                                                                           |
-| ------- | ------- | ---------------------------------------------------------------------------------------------------- |
-| 1.1.0   | pending | Two new rules against typical special character input errors                                         |
-| 1.0.0   | pending | First version: validation of street and city for special characters, house number and minimum length |
+| Version | Release    | Highlights                                                                                           |
+| ------- | ---------- | ---------------------------------------------------------------------------------------------------- |
+| 1.2.0   | 2026-11-10 | Invisible characters from copy & paste are cleaned up automatically                                  |
+| 1.1.0   | 2026-09-09 | Two new rules against typical special character input errors                                         |
+| 1.0.0   | —          | First version: validation of street and city for special characters, house number and minimum length |
 
 ---
 
@@ -52,6 +69,10 @@ After installation the plugin is **inactive**. Enable it per sales channel via t
 | Plugin version | Shopware version |
 | -------------- | ---------------- |
 | 1.x            | 6.6.x, 6.7.x     |
+
+### Upgrading to 1.2.0
+
+No action required. The cleanup of invisible characters is always active as soon as the plugin is enabled for a sales channel. It only removes characters that are not visible anyway.
 
 ### Upgrading to 1.1.0
 

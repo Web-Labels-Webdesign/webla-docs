@@ -120,8 +120,12 @@ When the form is submitted, the plugin quietly cleans up the input without showi
 | Leading and trailing spaces           | `  Hamburg  `      | `Hamburg`          |
 | Multiple spaces                       | `Muster  str. 5`   | `Muster str. 5`    |
 | Missing space before the house number | `Examplestr.1`     | `Examplestr. 1`    |
+| Invisible characters from copy & paste | `Example[ZWSP]street 5` | `Examplestreet 5` |
+| Non-breaking spaces                   | `Example[NBSP]street 5` | `Example street 5` |
 
-The last correction applies to the street field only. It produces consistent address data that is easier to evaluate and to hand over to shipping providers later on.
+`[ZWSP]` stands for an invisible zero-width space, `[NBSP]` for a non-breaking space. Both look inconspicuous in the input field, but often appear when customers copy an address from an email, a PDF or a web page. They are cleaned up right when pasting, not only on submit.
+
+Adding the space before the house number applies to the street field only. It produces consistent address data that is easier to evaluate and to hand over to shipping providers later on.
 
 ---
 

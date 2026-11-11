@@ -120,8 +120,12 @@ Beim Absenden des Formulars bereinigt das Plugin die Eingaben still, ohne eine F
 | Leerzeichen am Anfang und Ende    | `  Hamburg  `     | `Hamburg`          |
 | Mehrfache Leerzeichen             | `Muster  str. 5`  | `Muster str. 5`    |
 | Fehlendes Leerzeichen vor der Hausnummer | `Musterstr.1` | `Musterstr. 1`  |
+| Unsichtbare Zeichen aus Copy & Paste | `Muster[ZWSP]straße 5` | `Musterstraße 5` |
+| Geschützte Leerzeichen | `Muster[NBSP]straße 5` | `Muster straße 5` |
 
-Die letzte Korrektur gilt nur für das Straßenfeld. Sie sorgt für einheitliche Adressdaten, die sich später leichter auswerten und an Versanddienstleister übergeben lassen.
+`[ZWSP]` steht für ein unsichtbares Zero-Width-Space-Zeichen, `[NBSP]` für ein geschütztes Leerzeichen. Beide sehen im Eingabefeld unauffällig aus, entstehen aber oft, wenn Kunden eine Adresse aus einer E-Mail, einem PDF oder einer Webseite kopieren. Sie werden direkt beim Einfügen bereinigt, nicht erst beim Absenden.
+
+Das Ergänzen des Leerzeichens vor der Hausnummer gilt nur für das Straßenfeld. Es sorgt für einheitliche Adressdaten, die sich später leichter auswerten und an Versanddienstleister übergeben lassen.
 
 ---
 

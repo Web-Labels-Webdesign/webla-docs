@@ -1,27 +1,43 @@
-# Änderungsprotokoll
+**Änderungsprotokoll — Adressvalidierung**
 
 Alle wichtigen Änderungen an der Adressvalidierung für Endbenutzer.
 
 ---
 
-## [1.1.0]
+# 1.2.0
 
-### ✨ Neue Funktionen
+_Veröffentlicht am 2026-11-10_
+
+**Neue Funktionen**
+
+- **Unsichtbare Zeichen bereinigen**: Adressen, die aus einer E-Mail, einem PDF oder einer Webseite kopiert werden, enthalten oft unsichtbare Zeichen (z.B. Zero-Width-Space oder weiche Trennzeichen) oder geschützte Leerzeichen. Diese werden jetzt direkt beim Einfügen in Straße und Ort entfernt bzw. durch ein normales Leerzeichen ersetzt, und beim Absenden noch einmal. Shopware selbst speichert diese Zeichen unverändert.
+
+**Verbesserungen**
+
+- Kürzere, klarere Plugin-Beschreibung in der Erweiterungsübersicht.
+
+---
+
+# 1.1.0
+
+_Veröffentlicht am 2026-09-09_
+
+**Neue Funktionen**
 
 - **Aufeinanderfolgende Sonderzeichen blockieren**: Verhindert Eingaben wie `Muster..straße 5` oder `--Ort`. Die Regel gilt für Straße und Ort und lässt sich einzeln abschalten.
 - **Sonderzeichen am Anfang/Ende blockieren**: Verhindert Eingaben wie `- Musterstraße 5` oder `Musterstraße 5 -`. Ein abschließender Punkt oder eine schließende Klammer bleiben erlaubt, damit `Musterstr.` und `Frankfurt (Oder)` weiterhin funktionieren.
 
-### 🔧 Verbesserungen
+**Verbesserungen**
 
 - **Sammelanzeige der Hinweise**: Verstößt eine Eingabe gegen mehrere Regeln, erscheinen jetzt alle Hinweise gleichzeitig. Ihre Kunden müssen nicht mehrfach absenden, um alle Probleme zu finden.
 
 ---
 
-## [1.0.0]
+# 1.0.0
 
 Erste Version des Plugins.
 
-### ✨ Neue Funktionen
+**Neue Funktionen**
 
 - **Sonderzeichen-Prüfung**: Sie legen je Feld fest, welche Sonderzeichen in Straße und Ort erlaubt sind. Ziffern sind im Ortsfeld grundsätzlich nicht zulässig.
 - **Hausnummern-Prüfung**: Das Straßenfeld muss mindestens eine Ziffer enthalten. Die Prüfung lässt sich abschalten, wenn Sie auch Adressen ohne Hausnummer annehmen.
@@ -36,8 +52,9 @@ Erste Version des Plugins.
 
 | Version | Veröffentlichung | Highlights                                                                               |
 | ------- | ---------------- | ---------------------------------------------------------------------------------------- |
-| 1.1.0   | noch offen       | Zwei neue Regeln gegen typische Fehleingaben mit Sonderzeichen                            |
-| 1.0.0   | noch offen       | Erste Version: Prüfung von Straße und Ort auf Sonderzeichen, Hausnummer und Mindestlänge |
+| 1.2.0   | 2026-11-10       | Unsichtbare Zeichen aus Copy & Paste werden automatisch bereinigt                         |
+| 1.1.0   | 2026-09-09       | Zwei neue Regeln gegen typische Fehleingaben mit Sonderzeichen                            |
+| 1.0.0   | —                | Erste Version: Prüfung von Straße und Ort auf Sonderzeichen, Hausnummer und Mindestlänge |
 
 ---
 
@@ -52,6 +69,10 @@ Das Plugin ist nach der Installation zunächst **inaktiv**. Aktivieren Sie es je
 | Plugin-Version | Shopware-Version |
 | -------------- | ---------------- |
 | 1.x            | 6.6.x, 6.7.x     |
+
+### Update auf 1.2.0
+
+Keine Schritte nötig. Die Bereinigung unsichtbarer Zeichen ist immer aktiv, sobald das Plugin für einen Verkaufskanal eingeschaltet ist. Sie entfernt nur Zeichen, die ohnehin nicht sichtbar sind.
 
 ### Update auf 1.1.0
 
