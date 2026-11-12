@@ -4,6 +4,16 @@ Alle wichtigen Änderungen am Plugin für Endbenutzer.
 
 ---
 
+# 4.0.4
+
+_Veröffentlicht am 2026-11-12_
+
+**Fehlerbehebungen**
+
+- Die automatische Feiertagsaktualisierung schreibt keine Logmeldungen mehr in die Fehlerausgabe des Servers (stderr). Die Meldungen landen jetzt im regulären Shopware-Log.
+
+---
+
 # 4.0.3
 
 _Veröffentlicht am 2026-06-02_

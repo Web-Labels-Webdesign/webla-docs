@@ -4,6 +4,16 @@ All notable changes to the plugin for end users.
 
 ---
 
+# 4.0.4
+
+_Released 2026-11-12_
+
+**Bug Fixes**
+
+- The automatic holiday update no longer writes log messages to the server's error output (stderr). Messages now go to the regular Shopware log.
+
+---
+
 # 4.0.3
 
 _Released 2026-06-02_
