@@ -124,7 +124,7 @@ After reconciliation, you see a results table with all commissions:
 | Shop value | The actual net order value (excluding shipping) |
 | Difference | Deviation between ADCELL and shop value |
 | Decision | The automatically determined decision (badge) |
-| Override | Dropdown to manually change the decision |
+| Override | Dropdown to manually change the decision; for **Adjust**, also a field for the corrected cart value |
 | Reason | Explanation for the decision |
 
 #### Overriding Decisions
@@ -132,8 +132,20 @@ After reconciliation, you see a results table with all commissions:
 You can manually change any decision before sending:
 
 - Select a different decision from the **Override** dropdown
-- For **Adjust**, you can also modify the adjusted amount
+- For **Adjust**, enter the corrected cart value in the field next to the dropdown (net, excluding shipping). For amount deviations it is pre-filled with the shop value; for partial refunds it is empty and must be filled in
 - Overridden entries are marked as such
+
+#### Partial Refunds
+
+Commissions whose order has the payment status "Refunded partially" are set to **Adjust** with the reason "Cart corrected (partial refund)". The difference is often 0.00, because Shopware does not reduce the order total when a refund is made, so the shop value still shows the original amount. The refunded amount is not known to the plugin, so the corrected value field stays empty.
+
+For each of these commissions:
+
+1. Look up the refund in the order or with your payment provider
+2. Enter the remaining net cart value (excluding shipping) in the field next to the dropdown, or
+3. Change the decision to **Approve** if the refund does not affect the commission (e.g. only shipping costs were refunded)
+
+The batch cannot be sent while an **Adjust** entry has no value. The automatic approval never sends these entries.
 
 #### Using Filters
 

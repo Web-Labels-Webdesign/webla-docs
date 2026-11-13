@@ -1,5 +1,13 @@
 **Changelog**
 
+# 1.5.2
+
+_Veröffentlicht am 2026-11-13_
+
+**Fehlerbehebungen**
+
+- In den Abgleichsergebnissen stehen die Auswahl der Entscheidung und das Feld für den korrigierten Wert in der Spalte „Überschreiben" jetzt nebeneinander in der Zeile und werden nicht mehr abgeschnitten
+
 # 1.5.1
 
 _Veröffentlicht am 2026-11-12_

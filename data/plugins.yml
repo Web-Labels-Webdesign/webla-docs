@@ -187,7 +187,7 @@ plugins:
       de: Automatischer Abgleich und Freigabe von ADCELL Affiliate-Provisionen in Shopware 6.
       en: Automatic matching and approval of ADCELL affiliate commissions in Shopware 6.
     requirements: Shopware 6.6–6.8, PHP 8.1+
-    version: "1.5.1"
+    version: "1.5.2"
   - id: WebLa_TaxCalculatorAndCountrySwitcher
     name:
       de: Steuernachkalkulation und Lieferländer

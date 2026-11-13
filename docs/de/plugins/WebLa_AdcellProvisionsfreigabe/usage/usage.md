@@ -124,7 +124,7 @@ Nach dem Abgleich sehen Sie eine Ergebnistabelle mit allen Provisionen:
 | Shop-Wert | Der tatsächliche Netto-Bestellwert (ohne Versand) |
 | Differenz | Abweichung zwischen ADCELL- und Shop-Wert |
 | Entscheidung | Die automatisch getroffene Entscheidung (Badge) |
-| Überschreiben | Dropdown zum manuellen Ändern der Entscheidung |
+| Überschreiben | Dropdown zum manuellen Ändern der Entscheidung; bei **Korrigieren** zusätzlich ein Feld für den korrigierten Warenkorbwert |
 | Grund | Begründung für die Entscheidung |
 
 #### Entscheidungen überschreiben
@@ -132,8 +132,20 @@ Nach dem Abgleich sehen Sie eine Ergebnistabelle mit allen Provisionen:
 Sie können jede Entscheidung vor dem Senden manuell ändern:
 
 - Wählen Sie im **Überschreiben**-Dropdown eine andere Entscheidung
-- Bei **Korrigieren** können Sie zusätzlich den korrigierten Betrag anpassen
+- Bei **Korrigieren** tragen Sie den korrigierten Warenkorbwert im Feld neben dem Dropdown ein (netto, ohne Versand). Bei Betragsabweichungen ist der Shop-Wert vorausgefüllt, bei Teilerstattungen ist das Feld leer und muss ausgefüllt werden
 - Überschriebene Einträge werden als solche markiert
+
+#### Teilerstattungen
+
+Provisionen, deren Bestellung den Zahlungsstatus „Teilweise erstattet" hat, erhalten die Entscheidung **Korrigieren** mit dem Grund „Warenkorb korrigiert (Teilerstattung)". Die Differenz ist dabei oft 0,00, weil Shopware den Bestellwert bei einer Erstattung nicht reduziert und der Shop-Wert daher noch den ursprünglichen Betrag zeigt. Den erstatteten Betrag kennt das Plugin nicht, deshalb bleibt das Feld für den korrigierten Wert leer.
+
+Für jede dieser Provisionen:
+
+1. Prüfen Sie die Erstattung in der Bestellung oder bei Ihrem Zahlungsanbieter
+2. Tragen Sie den verbleibenden Netto-Warenkorbwert (ohne Versand) im Feld neben dem Dropdown ein, oder
+3. Ändern Sie die Entscheidung auf **Freigeben**, wenn die Erstattung die Provision nicht betrifft (z.B. wenn nur Versandkosten erstattet wurden)
+
+Solange ein **Korrigieren**-Eintrag keinen Wert hat, kann der Abgleich nicht gesendet werden. Die automatische Freigabe sendet diese Einträge nie.
 
 #### Filter verwenden
 

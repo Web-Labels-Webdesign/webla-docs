@@ -1,5 +1,13 @@
 **Changelog**
 
+# 1.5.2
+
+_Released 2026-11-13_
+
+**Bug Fixes**
+
+- In the reconciliation results, the decision selection and the corrected value field in the "Override" column now sit side by side in the row instead of being cut off
+
 # 1.5.1
 
 _Released 2026-11-12_
