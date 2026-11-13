@@ -4,6 +4,16 @@ Alle wichtigen Änderungen am Ultimativen Bundle Plugin für Endbenutzer.
 
 ---
 
+# 5.2.0
+
+_Veröffentlicht am 2026-11-12_
+
+**Neue Funktionen**
+
+- Bundles können jetzt statt eines Prozentsatzes einen festen Betrag als Rabatt gewähren. Wählen Sie im Bundle die neue Rabattart "Fester Betrag" und geben Sie den Rabatt pro Bundle in der Standardwährung ein. Bei Kundengruppen mit Nettopreisen wird der Betrag netto abgezogen, andere Währungen werden über den Währungsfaktor umgerechnet, und der Rabatt übersteigt nie den Preis der rabattierten Positionen.
+
+---
+
 # 5.1.11
 
 _Veröffentlicht am 2026-08-26_

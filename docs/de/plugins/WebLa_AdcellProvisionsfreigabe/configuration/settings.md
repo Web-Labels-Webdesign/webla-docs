@@ -60,6 +60,18 @@ Dieses Dokument beschreibt alle verfügbaren Einstellungen für ADCELL Provision
 
 **Anwendungsbeispiel**: Setzen Sie den Wert auf 14, um Provisionen erst nach Ablauf der typischen Widerrufsfrist freizugeben. So haben Kunden Zeit für Retouren und Stornierungen, bevor die Provision endgültig bestätigt wird.
 
+### Bestandene Provisionen überspringen
+
+| Eigenschaft      | Wert                |
+| ---------------- | ------------------- |
+| **Typ**          | Schalter (An/Aus)   |
+| **Standard**     | Aus                 |
+| **Erforderlich** | Nein                |
+
+**Beschreibung**: Wenn aktiviert, werden Provisionen, die alle Prüfungen bestehen, auf „Überspringen" (Grund: „Alle Prüfungen bestanden – ADCELL gibt automatisch frei") statt „Freigeben" gesetzt und nicht an ADCELL gesendet. ADCELL gibt offene Provisionen nach Ablauf der Auto-Accept-Frist automatisch frei. Stornierungen und Korrekturen werden weiterhin vorgeschlagen und gesendet. Gilt für manuelle Abgleiche und die automatische Freigabe. Einzelne Provisionen lassen sich in der Spalte „Überschreiben" weiterhin auf „Freigeben" setzen.
+
+**Anwendungsbeispiel**: Sie möchten nur problematische Provisionen beanstanden (stornierte, retournierte oder unbezahlte Bestellungen bzw. zu hohe Warenkorbwerte) und alle übrigen nach Ablauf der Auto-Accept-Frist von ADCELL automatisch freigeben lassen.
+
 
 ### ADCELL-Rückblick in Tagen
 

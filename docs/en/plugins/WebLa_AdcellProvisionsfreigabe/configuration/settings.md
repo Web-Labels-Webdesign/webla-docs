@@ -60,6 +60,18 @@ This document describes all available settings for ADCELL Commission Approval.
 
 **Example Use Case**: Set the value to 14 to only approve commissions after the typical return/cancellation period has passed. This gives customers time for returns and cancellations before the commission is confirmed.
 
+### Skip commissions that pass all checks
+
+| Property     | Value           |
+| ------------ | --------------- |
+| **Type**     | Switch (On/Off) |
+| **Default**  | Off             |
+| **Required** | No              |
+
+**Description**: When enabled, commissions that pass all checks are set to "Skip" (reason: "All checks passed – ADCELL accepts automatically") instead of "Approve" and are not sent to ADCELL. ADCELL accepts open commissions automatically once their auto-accept period ends. Cancellations and adjustments are still proposed and sent. Applies to manual reconciliations and the automatic approval. You can still switch individual commissions to "Approve" in the "Override" column.
+
+**Example Use Case**: You only want to contest problematic commissions (cancelled, returned, unpaid orders or too high cart values) and let ADCELL approve everything else on its own after the auto-accept period.
+
 
 ### ADCELL lookback in days
 

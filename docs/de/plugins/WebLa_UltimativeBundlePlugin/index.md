@@ -15,7 +15,7 @@ Das Plugin eignet sich ideal für Cross-Selling-Strategien, Aktionsbundles oder 
 - **Optionale Gruppen**: Ermöglichen Sie Kunden, einzelne Gruppen eines Bundles abzuwählen
 - **Mengenauswahl pro Gruppe**: Kunden können die Menge pro Bundle-Gruppe individuell festlegen (mit konfigurierbarer Maximalmenge)
 - **Automatische Bundle-Erstellung**: Bundles werden optional automatisch zusammengestellt, wenn passende Produkte im Warenkorb liegen
-- **Flexible Rabattkonfiguration**: Prozentuale Rabatte mit verschiedenen Berechnungsmodi und Darstellungsoptionen
+- **Flexible Rabattkonfiguration**: Prozentuale Rabatte oder feste Beträge mit verschiedenen Berechnungsmodi und Darstellungsoptionen
 - **Mobiloptimierte Darstellung**: Separate, für Mobilgeräte optimierte Ansicht der Bundle-Auswahl
 - **Produktverfügbarkeitsprüfung**: Nicht verfügbare Produkte können automatisch ausgeblendet werden
 - **Bundle-Index**: Schnelle Darstellung durch vorberechneten Index für Bundle-Produkt-Zuordnungen

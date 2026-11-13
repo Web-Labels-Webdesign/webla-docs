@@ -4,6 +4,16 @@ All notable changes to the Ultimate Bundle Plugin for end users.
 
 ---
 
+# 5.2.0
+
+_Released 2026-11-12_
+
+**New Features**
+
+- Bundles can now grant a fixed amount instead of a percentage. Choose the new discount type "Fixed amount" in the bundle and enter the discount per bundle in the default currency. Customer groups with net prices get the amount deducted net, other currencies are converted via the currency factor, and the discount never exceeds the price of the discounted items.
+
+---
+
 # 5.1.11
 
 _Released 2026-08-26_

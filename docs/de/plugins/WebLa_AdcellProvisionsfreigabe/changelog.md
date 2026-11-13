@@ -1,5 +1,43 @@
 **Changelog**
 
+# 1.5.1
+
+_Veröffentlicht am 2026-11-12_
+
+**Verbesserungen**
+
+- Die Ergebnisse eines Abgleichs werden jetzt seitenweise angezeigt (25, 50, 100 oder 250 Zeilen pro Seite), sodass die Seite auch bei tausenden Provisionen flüssig bleibt. Filter, Zählungen und das Senden umfassen weiterhin alle Provisionen des Abgleichs
+
+# 1.5.0
+
+_Veröffentlicht am 2026-11-12_
+
+**Verbesserungen**
+
+- Abgleiche laufen jetzt in mehreren kurzen Schritten: Provisionen werden seitenweise mit Fortschrittsanzeige von ADCELL geladen und anschließend ausgewertet. Große Zeiträume (z.B. 90 Tage) bei Konten mit vielen Provisionen brechen nicht mehr mit einem Timeout ab
+- Die Begrenzung auf 2000 Provisionen pro Abgleich entfällt
+- Entscheidungen werden in Blöcken von 50 an ADCELL gesendet, sodass auch große Abgleiche ohne Timeout gesendet werden können
+- Abgleiche, die nicht vollständig geladen werden konnten, erhalten den Status „Fehlgeschlagen" und können nicht gesendet werden
+
+# 1.4.0
+
+_Veröffentlicht am 2026-11-12_
+
+**Neue Funktionen**
+
+- Neue Einstellung „Bestandene Provisionen überspringen": Provisionen, die alle Prüfungen bestehen, werden auf „Überspringen" statt „Freigeben" gesetzt und nicht an ADCELL gesendet – ADCELL gibt sie nach Ablauf der Auto-Accept-Frist automatisch frei. Stornierungen und Korrekturen werden weiterhin vorgeschlagen und gesendet
+
+**Fehlerbehebungen**
+
+- Eine geänderte Entscheidung in der Spalte „Überschreiben" springt nicht mehr auf die ursprüngliche Entscheidung zurück
+- Neue Programm-Mappings speichern jetzt den Programmnamen, Programme werden dadurch mit Namen statt ID angezeigt
+- Abgleiche für Konten mit vielen Provisionen brechen nicht mehr nach 30 Sekunden ab („timeout of 30000ms exceeded")
+- Die Schnellauswahl verwendet jetzt das lokale Datum; kurz nach Mitternacht war der Zeitraum um einen Tag nach hinten verschoben
+
+**Verbesserungen**
+
+- Im Zeitraum lassen sich keine vergangenen Daten mehr auswählen; ein Hinweis erklärt, dass sich der Zeitraum auf das Auto-Accept-Datum bei ADCELL bezieht, nicht auf das Bestelldatum
+
 # 1.3.0
 
 _Veröffentlicht am 2026-11-10_

@@ -29,7 +29,9 @@ You can create product bundles that are displayed on the product detail pages of
 3. Fill in the basic settings:
    - **Title**: Enter a descriptive name for the bundle (e.g. "Complete Smartphone Set")
    - **Active**: Enable the bundle for display in the storefront
-   - **Discount percentage**: Set the percentage discount (e.g. 10 for 10%)
+   - **Discount type**: Choose between **Percentage (%)** and **Fixed amount**
+   - **Discount percentage**: Set the percentage discount (e.g. 10 for 10%). Shown for the discount type "Percentage".
+   - **Discount (fixed amount)**: Set a fixed discount per bundle in the default currency (e.g. 10.00). Shown for the discount type "Fixed amount".
 4. Choose the **bundle type**:
    - **Products**: Manually select the main products on which the bundle should be displayed
    - **Product stream**: Select a product stream whose products automatically serve as bundle triggers
@@ -40,6 +42,15 @@ You can create product bundles that are displayed on the product detail pages of
 - **Apply discount to parent product**: When enabled, the discount is calculated on the total price (main product + group products). When disabled, the discount applies only to the group products.
 - **No discount**: Completely disables the discount for this bundle. Useful for promotional bundles without price reduction.
 - **Hide products without stock**: Automatically hides products that are out of stock.
+
+### Fixed Amount Discount
+
+With the discount type **Fixed amount**, the bundle grants a fixed discount instead of a percentage:
+
+- The amount applies once per bundle. If a customer adds the bundle twice, the discount is doubled (e.g. 10.00 becomes 20.00).
+- The amount is deducted the way the customer group sees prices: gross for gross customers, net for net customers (e.g. B2B).
+- Other currencies are converted via the currency factor.
+- The discount never exceeds the price of the discounted items. Whether the main product counts as a discounted item depends on **Apply discount to parent product**.
 
 ---
 
@@ -170,7 +181,7 @@ php bin/console wl-bundles:index
 **Symptom**: The bundle is displayed but no discount is applied.
 
 **Possible Causes and Solutions**:
-1. **Discount set to 0%**: Check the discount percentage in the bundle
+1. **Discount set to 0**: Check the discount percentage or the fixed amount in the bundle, depending on the discount type
 2. **"No discount" enabled**: Check that the "No discount" option in the bundle is disabled
 3. **Incomplete bundle**: Ensure all required groups have a product selected (if "Allow incomplete bundles" is disabled)
 

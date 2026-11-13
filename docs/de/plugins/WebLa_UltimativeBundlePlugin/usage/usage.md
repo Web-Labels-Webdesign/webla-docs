@@ -29,7 +29,9 @@ Sie können Produktbundles erstellen, die auf den Produktdetailseiten der enthal
 3. Füllen Sie die Grundeinstellungen aus:
    - **Titel**: Geben Sie einen aussagekräftigen Namen für das Bundle ein (z.B. "Komplett-Set Smartphone")
    - **Aktiv**: Aktivieren Sie das Bundle für die Anzeige in der Storefront
-   - **Rabatt in Prozent**: Legen Sie den prozentualen Rabatt fest (z.B. 10 für 10%)
+   - **Rabattart**: Wählen Sie zwischen **Prozentual (%)** und **Fester Betrag**
+   - **Rabatt in Prozent**: Legen Sie den prozentualen Rabatt fest (z.B. 10 für 10%). Wird bei der Rabattart "Prozentual" angezeigt.
+   - **Rabatt (fester Betrag)**: Legen Sie einen festen Rabatt pro Bundle in der Standardwährung fest (z.B. 10,00). Wird bei der Rabattart "Fester Betrag" angezeigt.
 4. Wählen Sie den **Bundle-Typ**:
    - **Produkte**: Wählen Sie manuell die Hauptprodukte aus, bei denen das Bundle angezeigt werden soll
    - **Produktstream**: Wählen Sie einen Produktstream, dessen Produkte automatisch als Bundle-Trigger dienen
@@ -40,6 +42,15 @@ Sie können Produktbundles erstellen, die auf den Produktdetailseiten der enthal
 - **Rabatt auf Hauptprodukt anwenden**: Wenn aktiviert, wird der Rabatt auf den Gesamtpreis (Hauptprodukt + Gruppenprodukte) berechnet. Wenn deaktiviert, gilt der Rabatt nur für die Gruppenprodukte.
 - **Kein Rabatt**: Deaktiviert den Rabatt komplett für dieses Bundle. Nützlich für Werbe-Bundles ohne Preisnachlass.
 - **Produkte ohne Bestand ausblenden**: Blendet Produkte automatisch aus, die nicht auf Lager sind.
+
+### Rabatt als fester Betrag
+
+Mit der Rabattart **Fester Betrag** gewährt das Bundle statt eines Prozentsatzes einen festen Rabatt:
+
+- Der Betrag gilt einmal pro Bundle. Legt ein Kunde das Bundle zweimal in den Warenkorb, verdoppelt sich der Rabatt (z.B. 10,00 wird zu 20,00).
+- Der Betrag wird so abgezogen, wie die Kundengruppe Preise sieht: bei Brutto-Kunden brutto, bei Netto-Kunden (z.B. B2B) netto.
+- Andere Währungen werden über den Währungsfaktor umgerechnet.
+- Der Rabatt übersteigt nie den Preis der rabattierten Positionen. Ob das Hauptprodukt dazugehört, legt **Rabatt auf Hauptprodukt anwenden** fest.
 
 ---
 
@@ -170,7 +181,7 @@ php bin/console wl-bundles:index
 **Symptom**: Das Bundle wird angezeigt, aber es wird kein Rabatt abgezogen.
 
 **Mögliche Ursachen und Lösungen**:
-1. **Rabatt auf 0% gesetzt**: Prüfen Sie den Rabattprozentsatz im Bundle
+1. **Rabatt auf 0 gesetzt**: Prüfen Sie je nach Rabattart den Rabattprozentsatz oder den festen Betrag im Bundle
 2. **"Kein Rabatt" aktiviert**: Prüfen Sie, ob die Option "Kein Rabatt" im Bundle deaktiviert ist
 3. **Unvollständiges Bundle**: Stellen Sie sicher, dass alle Pflichtgruppen ein Produkt ausgewählt haben (sofern "Unvollständige Bundles erlauben" deaktiviert ist)
 

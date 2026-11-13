@@ -15,7 +15,7 @@ The plugin is ideal for cross-selling strategies, promotional bundles or complet
 - **Optional groups**: Allow customers to deselect individual groups of a bundle
 - **Quantity selection per group**: Customers can set the quantity per bundle group individually (with configurable maximum)
 - **Automatic bundle creation**: Bundles are optionally assembled automatically when matching products are in the cart
-- **Flexible discount configuration**: Percentage discounts with various calculation modes and display options
+- **Flexible discount configuration**: Percentage or fixed amount discounts with various calculation modes and display options
 - **Mobile-optimized display**: Separate, mobile-optimized view of the bundle selection
 - **Product availability check**: Unavailable products can be automatically hidden
 - **Bundle index**: Fast display through pre-calculated index for bundle-product assignments

@@ -1,5 +1,43 @@
 **Changelog**
 
+# 1.5.1
+
+_Released 2026-11-12_
+
+**Improvements**
+
+- The reconciliation results are now shown in pages (25, 50, 100 or 250 rows per page), so the page stays responsive with thousands of commissions. Filters, counts and sending still cover all commissions of the batch
+
+# 1.5.0
+
+_Released 2026-11-12_
+
+**Improvements**
+
+- Reconciliations now run in several short steps: commissions are loaded from ADCELL page by page with a progress display, then evaluated. Large date ranges (e.g. 90 days) on accounts with many commissions no longer abort with a timeout
+- The limit of 2000 commissions per reconciliation has been removed
+- Decisions are sent to ADCELL in blocks of 50, so large batches can be sent without a timeout
+- Batches that could not be loaded completely are shown with the status "Failed" and cannot be sent
+
+# 1.4.0
+
+_Released 2026-11-12_
+
+**New Features**
+
+- New setting "Skip commissions that pass all checks": commissions that pass all checks are set to "Skip" instead of "Approve" and are not sent to ADCELL, which accepts them automatically once the auto-accept period ends. Cancellations and adjustments are still proposed and sent
+
+**Bug Fixes**
+
+- Changing a decision in the "Override" column no longer jumps back to the original decision
+- New program mappings now save the program name, so programs are shown by name instead of ID
+- Reconciliations of accounts with many commissions no longer abort after 30 seconds ("timeout of 30000ms exceeded")
+- The quick select buttons now use the local date; shortly after midnight the range was shifted back by one day
+
+**Improvements**
+
+- Past dates can no longer be selected in the date range, and a hint explains that the range refers to the auto-accept date at ADCELL, not the order date
+
 # 1.3.0
 
 _Released 2026-11-10_

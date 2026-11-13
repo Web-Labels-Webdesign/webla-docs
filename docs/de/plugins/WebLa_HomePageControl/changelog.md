@@ -4,6 +4,18 @@ Alle wichtigen Änderungen für Shopbetreiber und Administratoren.
 
 ---
 
+# 4.1.2
+
+_Veröffentlicht am 2026-11-12_
+
+**Fehlerbehebungen**
+
+- Kompatibel mit MySQL 8.4. Die Verknüpfung zur Erlebniswelt nutzt jetzt deren vollständigen Schlüssel. Dadurch schlagen die Installation des Plugins und der Import eines Datenbank-Backups unter MySQL 8.4 nicht mehr fehl, und bin/console dal:validate meldet die Fremdschlüssel des Plugins nicht mehr. Bestehende Konfigurationen bleiben beim Update erhalten.
+
+**Verbesserungen**
+
+- Die konfigurierte Startseite hängt nicht mehr von einem Cache-Event ab, das Shopware mit 6.8 entfernt. Unter Shopware 6.6 kommt eine konfigurierte Startseite nie aus dem Store-API-Cache, eine Aktion erscheint dadurch sofort mit Beginn ihres Zeitfensters.
+
 # 4.1.1
 
 _Veröffentlicht am 2026-09-01_
