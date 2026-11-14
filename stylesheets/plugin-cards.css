@@ -1,0 +1,116 @@
+/* Plugin search input */
+.plugin-search {
+  width: 100%;
+  padding: .6rem 1rem;
+  font-size: .9rem;
+  font-family: inherit;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: .3rem;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  outline: none;
+  transition: border-color .2s;
+  margin-bottom: 1.5rem;
+  box-sizing: border-box;
+}
+
+.plugin-search:focus {
+  border-color: var(--md-accent-fg-color, #448aff);
+}
+
+.plugin-search::placeholder {
+  color: var(--md-default-fg-color--light);
+}
+
+/* Card grid */
+.plugin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Individual card */
+.plugin-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: .3rem;
+  padding: 1rem 1.2rem;
+  text-decoration: none;
+  color: var(--md-default-fg-color);
+  background: var(--md-default-bg-color);
+  transition: box-shadow .2s, transform .2s;
+}
+
+.plugin-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+  transform: translateY(-2px);
+}
+
+.plugin-card[hidden] {
+  display: none;
+}
+
+/* Card title */
+.plugin-card__title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: .4rem;
+  color: var(--md-typeset-a-color, #448aff);
+}
+
+/* Card description */
+.plugin-card__description {
+  font-size: .82rem;
+  line-height: 1.5;
+  color: var(--md-default-fg-color--light);
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: .8rem;
+}
+
+/* Card meta row */
+.plugin-card__meta {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.plugin-card__version {
+  font-size: .72rem;
+  font-weight: 600;
+  padding: .15rem .55rem;
+  border-radius: 2em;
+  background: var(--md-accent-fg-color, #448aff);
+  color: #fff;
+  white-space: nowrap;
+}
+
+.plugin-card__req {
+  font-size: .72rem;
+  color: var(--md-default-fg-color--lighter);
+  white-space: nowrap;
+}
+
+/* No results message */
+.plugin-no-results {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--md-default-fg-color--light);
+  font-size: .9rem;
+}
+
+.plugin-no-results[hidden] {
+  display: none;
+}
+
+/* Dark mode adjustments */
+[data-md-color-scheme="slate"] .plugin-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
+}
