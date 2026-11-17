@@ -4,6 +4,20 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 5.6.0
+
+_Veröffentlicht am 2026-11-17_
+
+**Neue Funktionen**
+
+- Neue Einstellung „Popup erst nach Bestätigung des Cookie-Banners anzeigen": Das Länder-Popup wartet, bis der Besucher Cookies akzeptiert oder abgelehnt hat. Funktioniert mit dem Shopware-Cookie-Banner und kompatiblen Bannern wie Acris Cookie Consent.
+- Neue Einstellung „Popup nur auf diesen Domains anzeigen": Beschränkt das Länder-Popup auf ausgewählte Domains des Verkaufskanals.
+- Die Storefront-Texte gibt es jetzt auch auf Französisch, Niederländisch, Spanisch, Tschechisch und Italienisch.
+
+**Fehlerbehebungen**
+
+- GeoIP-Einstellungen, die nur für einen Verkaufskanal konfiguriert sind, werden jetzt angewendet. Bisher war GeoIP nur aktiv, wenn es zusätzlich in der globalen Konfiguration („Alle Verkaufskanäle") aktiviert war. Dadurch sah im Modus „Nur bei abweichendem Land" jeder Besucher das Popup.
+
 # 5.5.2
 
 _Veröffentlicht am 2026-11-11_

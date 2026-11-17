@@ -4,6 +4,20 @@ All notable changes for end users.
 
 ---
 
+# 5.6.0
+
+_Released 2026-11-17_
+
+**New Features**
+
+- New setting "Show popup only after the cookie banner was answered": the country popup waits until the visitor has accepted or declined cookies. Works with the Shopware cookie banner and compatible banners such as Acris Cookie Consent.
+- New setting "Show popup only on these domains": limits the country popup to selected domains of the sales channel.
+- Storefront texts are now also available in French, Dutch, Spanish, Czech and Italian.
+
+**Bug Fixes**
+
+- GeoIP settings that are configured only for a sales channel are now applied. Previously, GeoIP was only active when it was also enabled in the global configuration ("All sales channels"), so every visitor saw the popup in the "Only on country mismatch" mode.
+
 # 5.5.2
 
 _Released 2026-11-11_

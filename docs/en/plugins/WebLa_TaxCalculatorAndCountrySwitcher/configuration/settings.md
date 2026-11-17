@@ -272,6 +272,36 @@ An existing country cookie and a logged-in customer's shipping address always ta
 
 ---
 
+### Show popup only after the cookie banner was answered
+
+| Property     | Value     |
+| ------------ | --------- |
+| **Type**     | Switch    |
+| **Default**  | Disabled  |
+| **Required** | No        |
+
+**Description**: When enabled, the popup waits until the visitor has accepted or declined cookies, so the cookie banner and the country popup never appear at the same time. Works with the Shopware cookie banner and with banners that set the `cookie-preference` cookie, such as Acris Cookie Consent. If no such banner is on the page, or the visitor answered it on an earlier visit, the popup opens as usual.
+
+**Example Use Case**: A shop whose cookie banner is a modal. Without this setting the visitor has to deal with two overlapping dialogs on the first page view.
+
+**Note**: In the **Always on first visit** mode, prices are visible while the cookie banner is open.
+
+---
+
+### Show popup only on these domains
+
+| Property     | Value                 |
+| ------------ | --------------------- |
+| **Type**     | Multi select (domains) |
+| **Default**  | Empty (all domains)   |
+| **Required** | No                    |
+
+**Description**: Limits the popup to the selected domains of the sales channel. On all other domains the popup is not shown and no country is set automatically. Leave empty to show the popup on every domain. Select domains of the sales channel chosen at the top of the configuration page; domains of other sales channels have no effect.
+
+**Example Use Case**: A sales channel with the language domains `/`, `/en`, `/fr` and `/nl`, where only international visitors on `/en` should be asked for their delivery country.
+
+---
+
 ### Country cookie lifetime (days)
 
 | Property     | Value     |

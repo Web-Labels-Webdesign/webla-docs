@@ -272,6 +272,36 @@ Ein vorhandenes Länder-Cookie und die Lieferadresse eines eingeloggten Kunden h
 
 ---
 
+### Popup erst nach Bestätigung des Cookie-Banners anzeigen
+
+| Eigenschaft      | Wert        |
+| ---------------- | ----------- |
+| **Typ**          | Schalter    |
+| **Standard**     | Deaktiviert |
+| **Erforderlich** | Nein        |
+
+**Beschreibung**: Wenn aktiviert, wartet das Popup, bis der Besucher Cookies akzeptiert oder abgelehnt hat. Cookie-Banner und Länder-Popup erscheinen so nie gleichzeitig. Funktioniert mit dem Shopware-Cookie-Banner und mit Bannern, die das Cookie `cookie-preference` setzen, z.B. Acris Cookie Consent. Ist kein solches Banner auf der Seite oder hat der Besucher es bei einem früheren Besuch bereits beantwortet, öffnet sich das Popup wie gewohnt.
+
+**Anwendungsbeispiel**: Ein Shop, dessen Cookie-Banner als Modal erscheint. Ohne diese Einstellung muss der Besucher beim ersten Seitenaufruf zwei überlagerte Fenster bedienen.
+
+**Hinweis**: Im Modus **Immer beim ersten Besuch** sind die Preise sichtbar, solange das Cookie-Banner offen ist.
+
+---
+
+### Popup nur auf diesen Domains anzeigen
+
+| Eigenschaft      | Wert                       |
+| ---------------- | -------------------------- |
+| **Typ**          | Mehrfachauswahl (Domains)  |
+| **Standard**     | Leer (alle Domains)        |
+| **Erforderlich** | Nein                       |
+
+**Beschreibung**: Beschränkt das Popup auf die ausgewählten Domains des Verkaufskanals. Auf allen anderen Domains erscheint kein Popup und es wird kein Land automatisch gesetzt. Leer lassen, um das Popup auf allen Domains anzuzeigen. Wählen Sie Domains des oben auf der Konfigurationsseite gewählten Verkaufskanals; Domains anderer Verkaufskanäle haben keine Wirkung.
+
+**Anwendungsbeispiel**: Ein Verkaufskanal mit den Sprachdomains `/`, `/en`, `/fr` und `/nl`, bei dem nur internationale Besucher auf `/en` nach ihrem Lieferland gefragt werden sollen.
+
+---
+
 ### Gültigkeit des Länder-Cookies (Tage)
 
 | Eigenschaft      | Wert    |
