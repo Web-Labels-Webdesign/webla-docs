@@ -241,7 +241,7 @@ plugins:
       de: Sortiert die direkten Unterkategorien einer Kategorie alphanumerisch im Shopware-Admin – mit rekursivem Modus, optionaler Mehrfachauswahl und automatischer geplanter Sortierung.
       en: Alphanumerically sorts a category's direct subcategories in the Shopware admin — with a recursive mode, optional multi-category selection and automatic scheduled sorting.
     requirements: Shopware 6.6–6.7, PHP 8.2+
-    version: "1.0.0"
+    version: "1.0.1"
   - id: WebLa_AdminProductFilters
     name:
       de: Zusatzfelder in der Admin-Produktübersicht
@@ -268,7 +268,7 @@ plugins:
       de: Vollwertiges Blog-System mit Beiträgen, Kategorien, Inline-Content-Builder, CMS-Bausteinen, Produkt-Slider, SEO-URLs und Theming.
       en: Full blog system with posts, categories, inline content builder, CMS blocks, product slider, SEO URLs and theming.
     requirements: Shopware 6.6–6.7, PHP 8.2+
-    version: "1.0.0"
+    version: "1.0.1"
   - id: WebLa_CurrencyChanger
     name:
       de: Währungsanzeige
