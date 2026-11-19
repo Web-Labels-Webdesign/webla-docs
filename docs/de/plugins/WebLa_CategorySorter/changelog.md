@@ -1,6 +1,16 @@
 **Changelog**
 
-Alle wesentlichen Änderungen am Kategorie-Sortierer für Endanwender.
+Alle wesentlichen Änderungen am Kategorie Sortierer für Endanwender.
+
+---
+
+# 1.0.2
+
+_Veröffentlicht am 2026-11-18_
+
+**Verbesserungen**
+
+- Der deutsche Pluginname lautet jetzt "Kategorie Sortierer", in der Administration und im Shopware Store.
 
 ---
 
@@ -43,6 +53,7 @@ _Veröffentlicht am 2026-07-01_
 
 | Version | Highlights                                                     |
 | ------- | -------------------------------------------------------------- |
+| 1.0.2   | Deutscher Pluginname "Kategorie Sortierer"                     |
 | 1.0.1   | In-App-Käufe sind kaufbar und werden freigeschaltet            |
 | 1.0.0   | Erstveröffentlichung mit manueller, rekursiver und geplanter Sortierung |
 
@@ -52,5 +63,6 @@ _Veröffentlicht am 2026-07-01_
 
 | Plugin-Version | Shopware-Version | PHP-Version |
 | -------------- | ---------------- | ----------- |
+| 1.0.2          | 6.6 – 6.7        | 8.2+        |
 | 1.0.1          | 6.6 – 6.7        | 8.2+        |
 | 1.0.0          | 6.6 – 6.7        | 8.2+        |

@@ -25,7 +25,7 @@ Before you can use the plugin, ensure that:
 
 ### Activating the Plugin
 
-1. Navigate to `Extensions → Intelligent Cross Selling`
+1. Navigate to `Settings → Extensions → Intelligent Cross Selling`
 2. Enable the **"Active"** switch
 3. Click **"Save Settings"**
 
@@ -47,7 +47,7 @@ Weights are the heart of the plugin. They determine which product properties are
 
 ### Creating a New Weight
 
-1. Navigate to `Extensions → Intelligent Cross Selling`
+1. Navigate to `Settings → Extensions → Intelligent Cross Selling`
 2. Click **"Add weight rule"**
 3. Select a **Property** from the dropdown list (e.g., "Color")
 4. Enter a **Weight** between 1 and 100
@@ -83,7 +83,7 @@ The plugin supports multilingual titles for the cross-selling section.
 
 ### Maintaining Titles in Different Languages
 
-1. Navigate to `Extensions → Intelligent Cross Selling`
+1. Navigate to `Settings → Extensions → Intelligent Cross Selling`
 2. Click on the **language switcher** in the upper right corner
 3. Select the desired language (e.g., "Deutsch")
 4. Enter the title in this language (e.g., "Das könnte Ihnen auch gefallen")

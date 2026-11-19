@@ -1,10 +1,10 @@
-# Kategorie-Sortierer
+# Kategorie Sortierer
 
 > Sortiert die direkten Unterkategorien einer gewählten Kategorie alphanumerisch – direkt in der Administration.
 
 ## Überblick
 
-Der Kategorie-Sortierer ergänzt die Shopware-Administration um eine Seite, mit der Sie
+Der Kategorie Sortierer ergänzt die Shopware-Administration um eine Seite, mit der Sie
 die Unterkategorien einer Kategorie per Klick in eine natürliche, alphanumerische
 Reihenfolge (A–Z) bringen. Das manuelle Ziehen von Kategorien in die richtige Reihenfolge
 entfällt.
@@ -47,7 +47,7 @@ Das Plugin unterstützt mehrere Shopware-Versionen aus einer einzigen Codebasis:
 
 1. Plugin unter **Erweiterungen → Meine Erweiterungen** installieren und aktivieren.
 2. Bei Aufforderung den Cache leeren.
-3. **Einstellungen → Plugins → Kategorie-Sortierer** öffnen.
+3. **Einstellungen → Plugins → Kategorie Sortierer** öffnen.
 4. Eine Kategorie aus dem Baum wählen und **Unterkategorien sortieren** klicken.
 
 ## Bedienung

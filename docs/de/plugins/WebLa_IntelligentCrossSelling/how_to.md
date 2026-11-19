@@ -47,7 +47,7 @@ Top-N Produkte werden als Empfehlungen angezeigt
 **Schritte**:
 
 1. **Plugin-Bereich öffnen**
-   - Navigieren Sie zu: `Erweiterungen → Intelligentes Cross Selling`
+   - Navigieren Sie zu: `Einstellungen → Erweiterungen → Intelligentes Cross Selling`
 
 2. **Grundeinstellungen konfigurieren**
    - Setzen Sie "Anzahl der anzuzeigenden Produkte" auf **6**
@@ -102,7 +102,7 @@ Top-N Produkte werden als Empfehlungen angezeigt
    - Welche Eigenschaft führt zu unpassenden Empfehlungen?
 
 3. **Gewichtungen anpassen**
-   - Navigieren Sie zu: `Erweiterungen → Intelligentes Cross Selling`
+   - Navigieren Sie zu: `Einstellungen → Erweiterungen → Intelligentes Cross Selling`
    - Doppelklicken Sie auf die Gewichtung, die Sie ändern möchten
    - **Erhöhen** Sie die Gewichtung für Eigenschaften, die gute Matches liefern
    - **Reduzieren** Sie die Gewichtung für Eigenschaften, die irrelevante Produkte liefern
@@ -134,7 +134,7 @@ Top-N Produkte werden als Empfehlungen angezeigt
 **Schritte**:
 
 1. **Deutsche Version pflegen**
-   - Navigieren Sie zu: `Erweiterungen → Intelligentes Cross Selling`
+   - Navigieren Sie zu: `Einstellungen → Erweiterungen → Intelligentes Cross Selling`
    - Stellen Sie sicher, dass "Deutsch" im Sprachumschalter ausgewählt ist
    - Geben Sie bei "Titel" ein: **"Das könnte Ihnen auch gefallen"**
    - Aktivieren Sie **"Titel anzeigen"**
@@ -166,7 +166,7 @@ Top-N Produkte werden als Empfehlungen angezeigt
 **Schritte**:
 
 1. **Grundeinstellungen**
-   - Navigieren Sie zu: `Erweiterungen → Intelligentes Cross Selling`
+   - Navigieren Sie zu: `Einstellungen → Erweiterungen → Intelligentes Cross Selling`
    - Anzahl Produkte: **8**
    - Aktivieren: **"Aktiv"**
    - Aktivieren: **"Nur Produkte aus derselben Kategorie"**
@@ -199,7 +199,7 @@ Top-N Produkte werden als Empfehlungen angezeigt
 **Schritte**:
 
 1. **Grundeinstellungen**
-   - Navigieren Sie zu: `Erweiterungen → Intelligentes Cross Selling`
+   - Navigieren Sie zu: `Einstellungen → Erweiterungen → Intelligentes Cross Selling`
    - Anzahl Produkte: **6**
    - Aktivieren: **"Aktiv"**
    - **Deaktivieren**: "Nur Produkte aus derselben Kategorie" (Zubehör aus anderen Kategorien empfehlen)
@@ -229,8 +229,8 @@ Top-N Produkte werden als Empfehlungen angezeigt
 
 | Aufgabe | Wichtige Schritte | Erforderliche Einstellungen |
 |---------|-------------------|----------------------------|
-| Plugin aktivieren | Erweiterungen → Intelligentes Cross Selling → "Aktiv" aktivieren | Aktiv |
-| Gewichtung anlegen | "Gewichtung anlegen" → Eigenschaft wählen → Wert eingeben | Mindestens eine Gewichtung |
+| Konfiguration aktivieren | Einstellungen → Erweiterungen → Intelligentes Cross Selling → "Konfiguration hinzufügen" → "Aktiv" aktivieren | Aktiv |
+| Gewichtung anlegen | Konfiguration öffnen → "Gewichtung hinzufügen" → Eigenschaft wählen → Wert eingeben | Mindestens eine Gewichtung |
 | Titel mehrsprachig | Sprachumschalter → Sprache wählen → Titel eingeben → Speichern | Titel, Titel anzeigen |
 | Cache leeren | Einstellungen → System → Caches & Indizes → Alle löschen | - |
 

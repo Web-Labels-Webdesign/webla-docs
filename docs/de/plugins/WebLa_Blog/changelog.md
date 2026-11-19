@@ -4,6 +4,14 @@ Alle wesentlichen Änderungen an WebLa Blog für Endanwender.
 
 ---
 
+# 1.0.2
+
+_Veröffentlicht am 2026-11-18_
+
+- Behoben: Unter Shopware 6.6 blieben die Seiten zum Anlegen und Bearbeiten von Blogbeiträgen und Blogkategorien leer, und der Sprachwechsel in den Beitrags- und Kategorielisten hatte keine Wirkung. Beides funktioniert jetzt unter Shopware 6.6 und 6.7.
+
+---
+
 # 1.0.1
 
 _Veröffentlicht am 2026-11-18_

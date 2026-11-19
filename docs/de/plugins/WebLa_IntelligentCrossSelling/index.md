@@ -33,7 +33,7 @@ Je mehr Eigenschaften ein Produkt mit einem anderen teilt und je höher die Gewi
 
 1. Installieren Sie das Plugin über den Plugin Manager oder Composer
 2. Aktivieren Sie das Plugin unter **Erweiterungen → Meine Erweiterungen**
-3. Öffnen Sie die Plugin-Konfiguration unter **Erweiterungen → Intelligentes Cross Selling**
+3. Öffnen Sie die Plugin-Konfiguration unter **Einstellungen → Erweiterungen → Intelligentes Cross Selling**
 4. Aktivieren Sie das Plugin über den Schalter "Aktiv"
 5. Fügen Sie mindestens eine Eigenschaftsgewichtung hinzu (z.B. "Farbe" mit 80%)
 6. Speichern Sie die Einstellungen

@@ -47,7 +47,7 @@ Top-N products are displayed as recommendations
 **Steps**:
 
 1. **Open plugin area**
-   - Navigate to: `Extensions → Intelligent Cross Selling`
+   - Navigate to: `Settings → Extensions → Intelligent Cross Selling`
 
 2. **Configure basic settings**
    - Set "Max products to show" to **6**
@@ -102,7 +102,7 @@ Top-N products are displayed as recommendations
    - Which property leads to irrelevant recommendations?
 
 3. **Adjust weights**
-   - Navigate to: `Extensions → Intelligent Cross Selling`
+   - Navigate to: `Settings → Extensions → Intelligent Cross Selling`
    - Double-click on the weight you want to change
    - **Increase** the weight for properties that deliver good matches
    - **Reduce** the weight for properties that deliver irrelevant products
@@ -134,7 +134,7 @@ Top-N products are displayed as recommendations
 **Steps**:
 
 1. **Maintain English version**
-   - Navigate to: `Extensions → Intelligent Cross Selling`
+   - Navigate to: `Settings → Extensions → Intelligent Cross Selling`
    - Ensure "English" is selected in the language switcher
    - Enter in "Title": **"You might also like"**
    - Enable **"Show title"**
@@ -166,7 +166,7 @@ Top-N products are displayed as recommendations
 **Steps**:
 
 1. **Basic settings**
-   - Navigate to: `Extensions → Intelligent Cross Selling`
+   - Navigate to: `Settings → Extensions → Intelligent Cross Selling`
    - Number of products: **8**
    - Enable: **"Active"**
    - Enable: **"Only show products from same category"**
@@ -199,7 +199,7 @@ Top-N products are displayed as recommendations
 **Steps**:
 
 1. **Basic settings**
-   - Navigate to: `Extensions → Intelligent Cross Selling`
+   - Navigate to: `Settings → Extensions → Intelligent Cross Selling`
    - Number of products: **6**
    - Enable: **"Active"**
    - **Disable**: "Only show products from same category" (recommend accessories from other categories)
@@ -229,8 +229,8 @@ Top-N products are displayed as recommendations
 
 | Task | Key Steps | Required Settings |
 |------|-----------|-------------------|
-| Activate plugin | Extensions → Intelligent Cross Selling → Enable "Active" | Active |
-| Create weight | "Add weight rule" → Select property → Enter value | At least one weight |
+| Activate configuration | Settings → Extensions → Intelligent Cross Selling → "Add configuration" → Enable "Active" | Active |
+| Create weight | Open configuration → "Add weight rule" → Select property → Enter value | At least one weight |
 | Multilingual title | Language switcher → Select language → Enter title → Save | Title, Show title |
 | Clear cache | Settings → System → Caches & Indices → Clear all | - |
 

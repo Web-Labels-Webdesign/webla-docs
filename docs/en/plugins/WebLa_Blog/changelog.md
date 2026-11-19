@@ -4,6 +4,14 @@ All notable changes to WebLa Blog for end users.
 
 ---
 
+# 1.0.2
+
+_Released 2026-11-18_
+
+- Fixed: on Shopware 6.6 the create and edit pages of blog posts and blog categories stayed empty, and the language switch in the post and category lists had no effect. Both now work on Shopware 6.6 and 6.7.
+
+---
+
 # 1.0.1
 
 _Released 2026-11-18_

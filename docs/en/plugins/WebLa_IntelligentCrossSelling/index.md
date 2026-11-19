@@ -33,7 +33,7 @@ The more properties a product shares with another and the higher the weighting o
 
 1. Install the plugin via Plugin Manager or Composer
 2. Activate the plugin in **Extensions → My Extensions**
-3. Open the plugin configuration at **Extensions → Intelligent Cross Selling**
+3. Open the plugin configuration at **Settings → Extensions → Intelligent Cross Selling**
 4. Enable the plugin using the "Active" switch
 5. Add at least one property weight (e.g., "Color" with 80%)
 6. Save the settings

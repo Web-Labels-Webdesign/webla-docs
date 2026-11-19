@@ -1,7 +1,7 @@
 # How-To-Leitfaden
 
 Dieser Leitfaden zeigt Schritt-für-Schritt-Abläufe für die häufigsten Aufgaben mit dem
-Kategorie-Sortierer.
+Kategorie Sortierer.
 
 ---
 
@@ -27,7 +27,7 @@ Kategorie im Baum wählen → Sortierung anwenden → Unterkategorien in A–Z-R
 **Schritte**:
 
 1. **Plugin-Seite öffnen**
-   - Navigieren zu: `Einstellungen → Plugins → Kategorie-Sortierer`
+   - Navigieren zu: `Einstellungen → Plugins → Kategorie Sortierer`
 2. **Kategorie wählen**
    - Im Feld **Kategorie** den Baum aufklappen und die gewünschte Kategorie anklicken.
 3. **Sortierung starten**

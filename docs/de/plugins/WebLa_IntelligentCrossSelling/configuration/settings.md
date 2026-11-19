@@ -38,7 +38,7 @@ Dies sind globale Plugin-Einstellungen, die alle Cross-Selling-Konfigurationen b
 
 ## Cross-Selling-Konfigurationen
 
-**Navigation**: Erweiterungen → Intelligentes Cross Selling
+**Navigation**: Einstellungen → Erweiterungen → Intelligentes Cross Selling
 
 Ab Version 5.1.0 können Sie mehrere Cross-Selling-Konfigurationen erstellen, jede mit eigenen Einstellungen, Eigenschaftsgewichtungen und Zuweisungsregeln.
 

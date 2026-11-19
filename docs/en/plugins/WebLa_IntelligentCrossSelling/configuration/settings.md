@@ -38,7 +38,7 @@ These are global plugin settings that affect all cross-selling configurations.
 
 ## Cross-Selling Configurations
 
-**Navigation**: Extensions → Intelligent Cross Selling
+**Navigation**: Settings → Extensions → Intelligent Cross Selling
 
 Starting with version 5.1.0, you can create multiple cross-selling configurations, each with its own settings, property weights, and assignment rules.
 

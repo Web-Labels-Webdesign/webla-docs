@@ -25,7 +25,7 @@ Bevor Sie das Plugin nutzen können, stellen Sie sicher, dass:
 
 ### Plugin aktivieren
 
-1. Navigieren Sie zu `Erweiterungen → Intelligentes Cross Selling`
+1. Navigieren Sie zu `Einstellungen → Erweiterungen → Intelligentes Cross Selling`
 2. Aktivieren Sie den Schalter **"Aktiv"**
 3. Klicken Sie auf **"Einstellungen speichern"**
 
@@ -47,7 +47,7 @@ Die Gewichtungen sind das Herzstück des Plugins. Sie bestimmen, welche Produkte
 
 ### Neue Gewichtung anlegen
 
-1. Navigieren Sie zu `Erweiterungen → Intelligentes Cross Selling`
+1. Navigieren Sie zu `Einstellungen → Erweiterungen → Intelligentes Cross Selling`
 2. Klicken Sie auf **"Gewichtung anlegen"**
 3. Wählen Sie eine **Eigenschaft** aus der Dropdown-Liste (z.B. "Farbe")
 4. Geben Sie eine **Gewichtung** zwischen 1 und 100 ein
@@ -83,7 +83,7 @@ Das Plugin unterstützt mehrsprachige Titel für die Cross-Selling-Sektion.
 
 ### Titel in verschiedenen Sprachen pflegen
 
-1. Navigieren Sie zu `Erweiterungen → Intelligentes Cross Selling`
+1. Navigieren Sie zu `Einstellungen → Erweiterungen → Intelligentes Cross Selling`
 2. Klicken Sie oben rechts auf den **Sprachumschalter**
 3. Wählen Sie die gewünschte Sprache (z.B. "English")
 4. Geben Sie den Titel in dieser Sprache ein (z.B. "You might also like")
