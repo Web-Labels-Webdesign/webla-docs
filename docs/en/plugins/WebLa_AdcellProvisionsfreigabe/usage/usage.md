@@ -77,13 +77,14 @@ Program mapping links your ADCELL programs to Shopware sales channels. Commissio
 1. Select an **account** from the dropdown
 2. Click **Load programs** — the plugin queries available programs from the ADCELL API
 3. Click **Create mapping**
-4. Select the **ADCELL program** and the corresponding **Sales Channel**
+4. Select the **ADCELL program** and optionally one or more **sales channels**. Without a selection, orders from all sales channels are matched
 5. Enable the **Active** switch
 6. Save the mapping
 
 ### Tips
 
-- Each ADCELL program should be mapped to exactly one sales channel
+- Only select sales channels if commissions should apply exclusively to orders from those channels. Orders from other channels then get the reason "Order belongs to a different sales channel than the mapping"
+- If ADCELL also tracks orders from other channels (e.g. dealer or marketplace), select them as well or leave the field empty
 - Deactivate mappings for programs you no longer use
 - Programs without a mapping result in the "Not mapped" (NOT_MAPPED) decision
 

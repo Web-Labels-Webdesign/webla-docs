@@ -1,5 +1,27 @@
 **Changelog**
 
+# 1.6.1
+
+_Veröffentlicht am 2026-11-19_
+
+**Fehlerbehebungen**
+
+- Beim Bearbeiten eines Programm-Mappings wird das ADCELL-Programm wieder angezeigt, ohne dass die Programme zuerst von ADCELL geladen werden müssen
+
+# 1.6.0
+
+_Veröffentlicht am 2026-11-19_
+
+**Neue Funktionen**
+
+- Ein Programm-Mapping kann jetzt mehreren Verkaufskanälen zugeordnet werden. Bestellungen aus allen gewählten Verkaufskanälen werden zugeordnet, z. B. wenn ADCELL auch Bestellungen aus einem Händler- oder Marktplatz-Verkaufskanal erfasst. Ist kein Verkaufskanal gewählt, werden Bestellungen aus allen Verkaufskanälen zugeordnet. Bestehende Mappings behalten ihren Verkaufskanal
+- Bestellungen, die in Shopware existieren, aber zu einem im Mapping nicht gewählten Verkaufskanal gehören, erhalten jetzt den Grund „Bestellung in anderem Verkaufskanal als im Mapping" statt „Bestellung nicht gefunden"
+
+**Fehlerbehebungen**
+
+- Noch nicht versendete Bestellungen werden jetzt immer auf „Überspringen" statt „Stornieren" gesetzt, da sie bis zum Auto-Accept-Datum noch versendet werden können
+- Änderungen an bestehenden Programm-Mappings lassen sich wieder speichern
+
 # 1.5.2
 
 _Veröffentlicht am 2026-11-13_

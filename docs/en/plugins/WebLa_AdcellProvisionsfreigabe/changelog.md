@@ -1,5 +1,27 @@
 **Changelog**
 
+# 1.6.1
+
+_Released 2026-11-19_
+
+**Bug Fixes**
+
+- When editing a program mapping, the ADCELL program is shown again without loading the programs from ADCELL first
+
+# 1.6.0
+
+_Released 2026-11-19_
+
+**New Features**
+
+- A program mapping can now be assigned to several sales channels. Orders from all selected sales channels are matched, for example when ADCELL also tracks orders from a dealer or marketplace sales channel. If no sales channel is selected, orders from all sales channels are matched. Existing mappings keep their sales channel
+- Orders that exist in Shopware but belong to a sales channel not selected in the mapping now get the reason "Order belongs to a different sales channel than the mapping" instead of "Order not found"
+
+**Bug Fixes**
+
+- Orders that have not been shipped yet are now always set to "Skip" instead of "Cancel", because they may still ship before the auto-accept date
+- Editing an existing program mapping can be saved again
+
 # 1.5.2
 
 _Released 2026-11-13_

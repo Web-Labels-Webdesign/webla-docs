@@ -77,13 +77,14 @@ Das Programm-Mapping verknüpft Ihre ADCELL-Programme mit Shopware-Verkaufskanä
 1. Wählen Sie ein **Konto** aus der Dropdown-Liste
 2. Klicken Sie auf **Programme laden** — das Plugin fragt die verfügbaren Programme von der ADCELL-API ab
 3. Klicken Sie auf **Mapping anlegen**
-4. Wählen Sie das **ADCELL-Programm** und den zugehörigen **Sales Channel**
+4. Wählen Sie das **ADCELL-Programm** und optional einen oder mehrere **Verkaufskanäle**. Ohne Auswahl werden Bestellungen aus allen Verkaufskanälen zugeordnet
 5. Aktivieren Sie den Schalter **Aktiv**
 6. Speichern Sie das Mapping
 
 ### Tipps
 
-- Jedes ADCELL-Programm sollte genau einem Verkaufskanal zugeordnet werden
+- Wählen Sie Verkaufskanäle nur, wenn Provisionen ausschließlich für Bestellungen aus diesen Kanälen gelten sollen. Bestellungen aus anderen Kanälen erhalten dann den Grund „Bestellung in anderem Verkaufskanal als im Mapping"
+- Erfasst ADCELL auch Bestellungen aus weiteren Kanälen (z. B. Händler oder Marktplatz), wählen Sie diese zusätzlich aus oder lassen Sie das Feld leer
 - Deaktivieren Sie Mappings für Programme, die Sie nicht mehr nutzen
 - Programme ohne Mapping führen zu der Entscheidung „Nicht zugeordnet" (NOT_MAPPED)
 

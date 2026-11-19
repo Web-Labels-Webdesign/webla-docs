@@ -19,14 +19,15 @@ ADCELL API (open commissions) → Plugin (reconciliation with Shopware orders) �
 3. The decision algorithm checks in this order:
    - Is there a program mapping? → If no: **Not mapped**
    - Does the order exist in Shopware? → If no: **Cancel** (automatic approval: **Skip**)
-   - Does the order number exist in several sales channels and the mapping has no sales channel? → **Skip**
+   - Does the order belong to none of the mapping's sales channels? → **Cancel** (automatic approval: **Skip**), reason "Order belongs to a different sales channel than the mapping"
+   - Does the order number exist in several of the allowed sales channels? → **Skip**
    - Is the order cancelled/failed? → **Cancel**
    - Was the delivery fully returned? → **Cancel**
    - Was the payment fully refunded? → **Cancel**
    - Is the payment open/pending/reminded? → **Cancel**
    - Did the payment fail? → **Cancel**
    - Is the payment only partially paid? → **Skip**
-   - Has it not been shipped yet? → **Cancel** (automatic approval: **Skip**)
+   - Has it not been shipped yet? → **Skip**
    - Is there a partial refund? → **Adjust** without a value — you must enter the corrected cart value manually before sending; automatic approval never sends these
    - Does the cart value deviate (beyond tolerance)? → **Adjust**
    - Everything OK? → **Approve**
