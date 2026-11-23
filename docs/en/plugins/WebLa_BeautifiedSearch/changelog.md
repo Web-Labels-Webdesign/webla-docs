@@ -4,6 +4,26 @@ All notable changes to the plugin for end users.
 
 ---
 
+# 4.4.0
+
+_Released 2026-11-23_
+
+**Breaking Changes**
+
+- Shopware 6.5 is no longer supported. The plugin now requires Shopware 6.6 or 6.7 and PHP 8.2 or higher. Shops on Shopware 6.5 can keep using version 4.3.0
+
+**Bug Fixes**
+
+- The search overlay is no longer replaced by the suggest layout of other extensions such as Shopware Commercial Advanced Search. Previously, depending on the installation order of the extensions, the plain two-column suggest list could appear instead of the overlay
+- The plugin's storefront script is now loaded on Shopware 6.6 and 6.7
+- Default values for the number of product columns and the overlay width are applied correctly when the settings are empty
+
+**Improvements**
+
+- Search tabs now use the shop's primary brand color instead of the warning color
+
+---
+
 # 4.3.0
 
 _Released 2026-05-27_

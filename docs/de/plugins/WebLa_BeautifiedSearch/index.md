@@ -18,12 +18,12 @@ Zusätzlich bietet das Plugin eine intelligente Produktnummersuche, die direkt n
 - **Herstellersuche**: Zeigt passende Hersteller an (bei Nutzung von Shopware Commercial Advanced Search)
 - **Produktnummersuche**: Direkte Suche nach EAN, Artikelnummer oder Herstellernummer
 - **Flexible Darstellung**: Anpassbare Overlay-Breite, Spaltenanzahl und Produktbox-Layout
-- **Multi-Version-Support**: Unterstützt Shopware 6.5, 6.6 und 6.7 mit einer einheitlichen Codebasis
+- **Multi-Version-Support**: Unterstützt Shopware 6.6 und 6.7 mit einer einheitlichen Codebasis
 
 ## Voraussetzungen
 
-- Shopware Version: 6.5.0 oder höher (bis 6.7.x)
-- PHP Version: 8.1 oder höher
+- Shopware Version: 6.6.0 oder höher (bis 6.7.x)
+- PHP Version: 8.2 oder höher
 
 ### Optionale Integrationen
 
