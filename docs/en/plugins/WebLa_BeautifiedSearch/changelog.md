@@ -4,6 +4,22 @@ All notable changes to the plugin for end users.
 
 ---
 
+# 4.5.0
+
+_Released 2026-11-24_
+
+**New Features**
+
+- The number of products in the suggest overlay is now a free number from 1 to 50 instead of a fixed choice of 10, 20, 30 or 50. Choose a multiple of the products per row so the last row is filled, e.g. 8 for 4 per row. Existing settings are kept
+- New option of 5 products per row
+- The setting "Number of products per column" is now called "Number of products per row", which matches what it does
+
+**Improvements**
+
+- The product grid in the overlay uses Bootstrap row-cols classes. If your theme overrides the plugin's suggest templates and uses the variable boxLgCount, switch it to boxCount
+
+---
+
 # 4.4.0
 
 _Released 2026-11-23_

@@ -145,7 +145,7 @@ Display results in Tabbed Overlay
    - Example values: `500px`, `600px`, `70%`, `80vw`
 
 2. **Choose product layout**
-   - Select "Number of Products per Column" (2, 3, 4, or 6)
+   - Select "Number of Products per Row" (2, 3, 4, 5, or 6)
    - Select "Box Layout":
      - `Search`: Compact, optimized for overview
      - `Standard`: Shopware standard with all details
@@ -200,7 +200,7 @@ Display results in Tabbed Overlay
 | Enable blog search             | Install blog plugin → Enable switch               | Activate Blog Search                  |
 | Set up product number search   | Enable unique search + select fields              | Activate Search for Unique Products   |
 | Widen overlay                  | Change value in "Width" (e.g., 800px)             | Width of the Search Overlay           |
-| More products per row          | Increase column count (4 or 6)                    | Number of Products per Column         |
+| More products per row          | Increase column count (4 or 6)                    | Number of Products per Row         |
 | Larger product images          | Set Box Layout to "Big Image"                     | Box Layout                            |
 
 ---

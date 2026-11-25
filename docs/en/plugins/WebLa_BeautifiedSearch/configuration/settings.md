@@ -81,7 +81,7 @@ These settings control the appearance of the search overlay and which content ty
 
 ---
 
-### Number of Products per Column
+### Number of Products per Row
 
 | Property     | Value  |
 | ------------ | ------ |
@@ -95,6 +95,7 @@ These settings control the appearance of the search overlay and which content ty
 - `2`: Two products per row - larger product display
 - `3`: Three products per row - balanced layout (recommended)
 - `4`: Four products per row - compact display
+- `5`: Five products per row - compact display for wide overlays
 - `6`: Six products per row - very compact display
 
 **Example Use Case**: Choose 2 or 3 for products where images are important (e.g., fashion). Choose 4 or 6 for technical products where text is more important.
@@ -105,15 +106,17 @@ These settings control the appearance of the search overlay and which content ty
 
 | Property     | Value  |
 | ------------ | ------ |
-| **Type**     | Select |
+| **Type**     | Number |
 | **Default**  | 10     |
 | **Required** | No     |
 
 **Description**: Maximum number of products loaded into the suggest overlay. Whenever the search has more matches than this limit, a "Show all results" button appears below the product grid that links to the full search results page.
 
-**Options**: `10`, `20`, `30`, `50`
+**Allowed values**: 1 to 50
 
-**Example Use Case**: Keep the default of 10 if you want a compact, fast overlay. Raise to 20 or 30 if your customers benefit from seeing more matches directly without leaving the overlay. Higher limits slightly increase the search query load — for high-traffic shops, stay close to the default.
+Use a multiple of the products per row so the last row is filled, e.g. 8 or 12 for 4 per row, 9 for 3 per row, 10 for 5 per row. The mobile view always shows 2 products per row, so an even number also fills the last row there.
+
+**Example Use Case**: Keep the default of 10 if you want a compact, fast overlay. Raise it to 20 or 30 if your customers benefit from seeing more matches directly without leaving the overlay. Higher limits slightly increase the search query load — for high-traffic shops, stay close to the default.
 
 ---
 
@@ -249,7 +252,7 @@ All settings can be configured individually per sales channel.
 | Activate Category Search             | Per Sales Channel |
 | Activate Blog Search                 | Per Sales Channel |
 | Width of the Search Overlay          | Per Sales Channel |
-| Number of Products per Column        | Per Sales Channel |
+| Number of Products per Row        | Per Sales Channel |
 | Number of Products in Suggest Overlay| Per Sales Channel |
 | Box Layout                           | Per Sales Channel |
 | Show Category Images                 | Per Sales Channel |
@@ -273,7 +276,7 @@ All settings can be configured individually per sales channel.
 | Activate Category Search           | On                  |
 | Activate Blog Search               | On (if blog exists) |
 | Width of the Search Overlay        | 600px               |
-| Number of Products per Column      | 3                   |
+| Number of Products per Row      | 3                   |
 | Box Layout                         | Big Image           |
 | Show Category Images               | On                  |
 | Activate Search for Unique Products | Off                |
@@ -286,7 +289,7 @@ All settings can be configured individually per sales channel.
 | Activate Category Search            | On                |
 | Activate Blog Search                | Off               |
 | Width of the Search Overlay         | 700px             |
-| Number of Products per Column       | 4                 |
+| Number of Products per Row       | 4                 |
 | Box Layout                          | Minimal           |
 | Activate Search for Unique Products | On                |
 | Specifically Search by              | All Options       |

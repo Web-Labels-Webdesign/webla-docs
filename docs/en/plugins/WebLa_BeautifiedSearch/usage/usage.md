@@ -50,7 +50,7 @@ Product search is the core function and shows products matching the search term.
 ### Display of Results
 
 - Products are displayed in a grid
-- The number of columns depends on the "Number of Products per Column" setting
+- The number of columns depends on the "Number of Products per Row" setting
 - When no results are found, an appropriate message is displayed
 
 ### Tips & Best Practices

@@ -81,7 +81,7 @@ Diese Einstellungen steuern das Erscheinungsbild des Such-Overlays und welche In
 
 ---
 
-### Anzahl Produkte pro Spalte
+### Anzahl Produkte pro Zeile
 
 | Eigenschaft      | Wert    |
 | ---------------- | ------- |
@@ -95,6 +95,7 @@ Diese Einstellungen steuern das Erscheinungsbild des Such-Overlays und welche In
 - `2`: Zwei Produkte pro Zeile - größere Produktdarstellung
 - `3`: Drei Produkte pro Zeile - ausgewogenes Layout (empfohlen)
 - `4`: Vier Produkte pro Zeile - kompakte Darstellung
+- `5`: Fünf Produkte pro Zeile - kompakte Darstellung für breite Overlays
 - `6`: Sechs Produkte pro Zeile - sehr kompakte Darstellung
 
 **Anwendungsbeispiel**: Wählen Sie 2 oder 3 für Produkte, bei denen Bilder wichtig sind (z.B. Mode). Wählen Sie 4 oder 6 für technische Produkte, bei denen Text wichtiger ist.
@@ -105,13 +106,15 @@ Diese Einstellungen steuern das Erscheinungsbild des Such-Overlays und welche In
 
 | Eigenschaft      | Wert    |
 | ---------------- | ------- |
-| **Typ**          | Auswahl |
+| **Typ**          | Zahl    |
 | **Standard**     | 10      |
 | **Erforderlich** | Nein    |
 
 **Beschreibung**: Maximale Anzahl der im Suggest-Overlay geladenen Produkte. Sobald die Suche mehr Treffer hat als dieses Limit, erscheint unter dem Produktraster ein "Alle Ergebnisse anzeigen"-Button, der zur vollständigen Suchergebnisseite verlinkt.
 
-**Optionen**: `10`, `20`, `30`, `50`
+**Erlaubte Werte**: 1 bis 50
+
+Wählen Sie ein Vielfaches der Produkte pro Zeile, damit die letzte Zeile gefüllt ist, z. B. 8 oder 12 bei 4 pro Zeile, 9 bei 3 pro Zeile, 10 bei 5 pro Zeile. Die mobile Ansicht zeigt immer 2 Produkte pro Zeile, eine gerade Zahl füllt dort also ebenfalls die letzte Zeile.
 
 **Anwendungsbeispiel**: Belassen Sie den Standard 10 für ein kompaktes, schnelles Overlay. Erhöhen Sie auf 20 oder 30, wenn Ihre Kunden direkt mehr Treffer sehen sollen, ohne das Overlay verlassen zu müssen. Höhere Limits erhöhen die Suchabfragelast leicht — für stark frequentierte Shops nahe am Standard bleiben.
 
@@ -249,7 +252,7 @@ Alle Einstellungen können pro Verkaufskanal individuell konfiguriert werden.
 | Kategorie Suche aktivieren                | Pro Verkaufskanal  |
 | Blog Suche aktivieren                     | Pro Verkaufskanal  |
 | Breite des Suche-Overlays                 | Pro Verkaufskanal  |
-| Anzahl Produkte pro Spalte                | Pro Verkaufskanal  |
+| Anzahl Produkte pro Zeile                | Pro Verkaufskanal  |
 | Anzahl Produkte im Suggest-Overlay        | Pro Verkaufskanal  |
 | Box-Layout                                | Pro Verkaufskanal  |
 | Zeige Kategoriebilder                     | Pro Verkaufskanal  |
@@ -273,7 +276,7 @@ Alle Einstellungen können pro Verkaufskanal individuell konfiguriert werden.
 | Kategorie Suche aktivieren     | An               |
 | Blog Suche aktivieren          | An (falls Blog)  |
 | Breite des Suche-Overlays      | 600px            |
-| Anzahl Produkte pro Spalte     | 3                |
+| Anzahl Produkte pro Zeile     | 3                |
 | Box-Layout                     | Großes Bild      |
 | Zeige Kategoriebilder          | An               |
 | Suche nach eindeutigen Produkten | Aus            |
@@ -286,7 +289,7 @@ Alle Einstellungen können pro Verkaufskanal individuell konfiguriert werden.
 | Kategorie Suche aktivieren       | An                   |
 | Blog Suche aktivieren            | Aus                  |
 | Breite des Suche-Overlays        | 700px                |
-| Anzahl Produkte pro Spalte       | 4                    |
+| Anzahl Produkte pro Zeile       | 4                    |
 | Box-Layout                       | Minimal              |
 | Suche nach eindeutigen Produkten | An                   |
 | Spezifisch suchen nach           | Alle Optionen        |

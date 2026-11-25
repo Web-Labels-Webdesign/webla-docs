@@ -145,7 +145,7 @@ Ergebnisse im Tabbed Overlay anzeigen
    - Beispielwerte: `500px`, `600px`, `70%`, `80vw`
 
 2. **Produktlayout wählen**
-   - "Anzahl Produkte pro Spalte" wählen (2, 3, 4 oder 6)
+   - "Anzahl Produkte pro Zeile" wählen (2, 3, 4, 5 oder 6)
    - "Box-Layout" wählen:
      - `Suche`: Kompakt, optimiert für Übersicht
      - `Standard`: Shopware-Standard mit allen Details
@@ -200,7 +200,7 @@ Ergebnisse im Tabbed Overlay anzeigen
 | Blog-Suche aktivieren            | Blog-Plugin installieren → Schalter aktivieren         | Blog Suche aktivieren                  |
 | Produktnummersuche einrichten    | Eindeutige Suche + Felder auswählen                    | Suche nach eindeutigen Produkten       |
 | Overlay verbreitern              | Wert in "Breite" ändern (z.B. 800px)                   | Breite des Suche-Overlays              |
-| Mehr Produkte pro Zeile          | Spaltenanzahl erhöhen (4 oder 6)                       | Anzahl Produkte pro Spalte             |
+| Mehr Produkte pro Zeile          | Spaltenanzahl erhöhen (4 oder 6)                       | Anzahl Produkte pro Zeile             |
 | Produktbilder größer             | Box-Layout auf "Großes Bild"                           | Box-Layout                             |
 
 ---

@@ -4,6 +4,22 @@ Alle wichtigen Änderungen am Plugin für Endbenutzer.
 
 ---
 
+# 4.5.0
+
+_Veröffentlicht am 2026-11-24_
+
+**Neue Funktionen**
+
+- Die Anzahl der Produkte im Suggest-Overlay ist jetzt eine freie Zahl von 1 bis 50 statt einer festen Auswahl aus 10, 20, 30 oder 50. Wählen Sie ein Vielfaches der Produkte pro Zeile, damit die letzte Zeile gefüllt ist, z. B. 8 bei 4 pro Zeile. Bestehende Einstellungen bleiben erhalten
+- Neue Option mit 5 Produkten pro Zeile
+- Die Einstellung "Anzahl Produkte pro Spalte" heißt jetzt "Anzahl Produkte pro Zeile", was ihrer Wirkung entspricht
+
+**Verbesserungen**
+
+- Das Produktraster im Overlay verwendet Bootstrap-row-cols-Klassen. Wenn Ihr Theme die Suggest-Templates des Plugins überschreibt und die Variable boxLgCount verwendet, stellen Sie sie auf boxCount um
+
+---
+
 # 4.4.0
 
 _Veröffentlicht am 2026-11-23_

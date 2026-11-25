@@ -50,7 +50,7 @@ Die Produktsuche ist die Kernfunktion und zeigt Produkte, die zum Suchbegriff pa
 ### Anzeige der Ergebnisse
 
 - Produkte werden in einem Raster angezeigt
-- Die Anzahl der Spalten hängt von der Einstellung "Anzahl Produkte pro Spalte" ab
+- Die Anzahl der Spalten hängt von der Einstellung "Anzahl Produkte pro Zeile" ab
 - Bei keinen Ergebnissen wird eine entsprechende Meldung angezeigt
 
 ### Tipps & Best Practices
