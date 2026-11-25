@@ -63,6 +63,7 @@ jobs:
             ["WebLa_PayTRIntegration"]="WebLa_PayTRIntegration"
             ["WebLaInvisibleSpamProtection"]="WebLaInvisibleSpamProtection"
             ["WebLa_HomePageControl"]="WebLa_HomePageControl"
+            ["WebLa_PlytixConnector"]="WebLa_PlytixConnector"
             ["WebLa_AddressValidation"]=WebLaAddressValidation
           )
 
@@ -98,6 +99,7 @@ jobs:
             ["WebLa_PayTRIntegration"]="WebLa_PayTRIntegration"
             ["WebLaInvisibleSpamProtection"]="WebLaInvisibleSpamProtection"
             ["WebLa_HomePageControl"]="WebLa_HomePageControl"
+            ["WebLa_PlytixConnector"]="WebLa_PlytixConnector"
             ["WebLa_AddressValidation"]=WebLaAddressValidation
           )
 

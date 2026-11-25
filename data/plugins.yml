@@ -1,4 +1,13 @@
 plugins:
+  - id: WebLa_PlytixConnector
+    name:
+      de: Plytix Connector
+      en: Plytix Connector
+    short:
+      de: Synchronisiert Produkte, Varianten, Übersetzungen, Kategorien, Eigenschaften, Medien und Cross-Selling aus Plytix-Channels nach Shopware, mit Zeitplan, Webhook und Monitoring.
+      en: Syncs products, variants, translations, categories, properties, media and cross-selling from Plytix channel feeds to Shopware, with scheduled runs, webhook and monitoring.
+    requirements: Shopware 6.5.7–6.7, PHP 8.1+
+    version: "1.0.0"
   - id: WebLaInvisibleSpamProtection
     name:
       de: Spam Schutz Easy Mode
