@@ -4,6 +4,25 @@ All notable changes for end users.
 
 ---
 
+# 5.6.2
+
+_Released 2026-11-25_
+
+**Bug Fixes**
+
+- Shopware 6.6: pages opened with the country parameter (for example ?country=AT) no longer fail with an error. The same error affected storefront pages when "Set delivery country from storefront language" was enabled.
+- Shopware 6.6 before 6.6.10: the country selector and the price/VAT hint are now displayed in the header.
+- Shopware 6.6 before 6.6.10: the theme now compiles when styling settings of the plugin are left empty. Empty settings now use the default values.
+- Shopware 6.6.0: fix a PHP error in the shipping cost calculation when a shipping method cannot be found.
+
+# 5.6.1
+
+_Released 2026-11-25_
+
+**Improvements**
+
+- GeoIP problems that make the country popup open for every visitor are now written to the Shopware log (search for "WebLa GeoIP"): a wrong database edition (for example City instead of Country), an empty, wrong or unreadable database path, and a private visitor IP caused by a proxy that is not configured as trusted. Previously these cases were not logged, or not logged in production mode.
+
 # 5.6.0
 
 _Released 2026-11-17_
@@ -49,7 +68,7 @@ _Released 2026-10-27_
 **Bug Fixes**
 
 - Fix the GeoIP preselection of the country popup being shared between visitors when the HTTP cache is active. Every visitor now gets their own country preselected.
-- Fix visitors from different countries sharing cached pages, and therefore prices, behind a reverse proxy such as Varnish.
+- Shopware 6.7: fix visitors from different countries sharing cached pages, and therefore prices, behind a reverse proxy such as Varnish. On Shopware 6.6, a reverse proxy must include the sw-switch-country cookie in its cache key.
 
 # 5.4.1
 

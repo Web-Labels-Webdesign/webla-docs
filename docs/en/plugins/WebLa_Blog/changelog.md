@@ -4,6 +4,20 @@ All notable changes to WebLa Blog for end users.
 
 ---
 
+# 1.1.0
+
+_Released 2026-11-25_
+
+**New Features**
+
+- The blog overview page now outputs hreflang links (one per language domain plus x-default), so search engines connect its language versions. Blog posts and blog categories already had them.
+
+**Improvements**
+
+- Code formatted to the current Shopware coding standard. No change in behaviour.
+
+---
+
 # 1.0.2
 
 _Released 2026-11-18_

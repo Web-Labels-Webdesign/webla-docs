@@ -324,11 +324,15 @@ Ein vorhandenes Länder-Cookie und die Lieferadresse eines eingeloggten Kunden h
 | **Standard**     | Deaktiviert |
 | **Erforderlich** | Nein        |
 
-**Beschreibung**: Wenn aktiviert, schlägt das Plugin die IP des Besuchers in einer vom Händler bereitgestellten MaxMind-GeoLite2-Country-Datenbank nach und wählt das erkannte Land im Popup vor. Fällt stillschweigend auf das Standardland des Sales Channels zurück, wenn GeoIP deaktiviert ist, die Datenbank fehlt/nicht lesbar ist oder das erkannte Land im aktuellen Sales Channel nicht lieferbar ist.
+**Beschreibung**: Wenn aktiviert, schlägt das Plugin die IP des Besuchers in einer vom Händler bereitgestellten MaxMind-GeoLite2-Country-Datenbank nach und wählt das erkannte Land im Popup vor. Fällt auf das Standardland des Sales Channels zurück, wenn GeoIP deaktiviert ist, die Datenbank fehlt/nicht lesbar ist oder das erkannte Land im aktuellen Sales Channel nicht lieferbar ist.
 
 **Anwendungsbeispiel**: Internationale Shops, bei denen die meisten Besucher direkt auf einer Seite mit korrekt vorausgewähltem Land landen — das Popup wird auf einen einzigen Bestätigungsklick reduziert.
 
 **Hinweis**: Der Händler ist verantwortlich für die Aktualisierung der `.mmdb`-Datei gemäß den MaxMind-Lizenzbedingungen (Updates zweimal wöchentlich, 30-Tage-Aktualitätsregel). Das Plugin lädt die Datenbank nicht selbst herunter oder aktualisiert sie.
+
+**Hinweis**: Shopware muss die echte IP des Besuchers sehen. Hinter einem Proxy, Load Balancer oder CDN muss dieser in Shopware als vertrauenswürdiger Proxy konfiguriert sein; sonst verwendet die Abfrage die IP des Proxys und findet kein oder das falsche Land.
+
+**Fehlersuche**: Konfigurationsprobleme (falsche Datenbank-Edition, nicht lesbare Datei, private Besucher-IP) stehen im Shopware-Log unter `var/log`. Suchen Sie nach `WebLa GeoIP`.
 
 ---
 
@@ -340,7 +344,7 @@ Ein vorhandenes Länder-Cookie und die Lieferadresse eines eingeloggten Kunden h
 | **Standard**     | (leer)  |
 | **Erforderlich** | Nur wenn GeoIP-Vorauswahl aktiviert ist |
 
-**Beschreibung**: Absoluter Dateipfad zur MaxMind-`GeoLite2-Country.mmdb` auf dem Server, auf dem Shopware läuft. Die Datei muss vom PHP-FPM-Benutzer lesbar sein.
+**Beschreibung**: Absoluter Dateipfad zur MaxMind-`GeoLite2-Country.mmdb` auf dem Server, auf dem Shopware läuft. Die Datei muss vom PHP-FPM-Benutzer lesbar sein. Verwenden Sie die Country-Edition; City- und ASN-Datenbanken funktionieren nicht.
 
 **Anwendungsbeispiel**: `/var/www/html/files/geoip/GeoLite2-Country.mmdb`
 

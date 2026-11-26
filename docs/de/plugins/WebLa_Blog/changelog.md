@@ -4,6 +4,20 @@ Alle wesentlichen Änderungen an WebLa Blog für Endanwender.
 
 ---
 
+# 1.1.0
+
+_Veröffentlicht am 2026-11-25_
+
+**Neue Funktionen**
+
+- Die Blog-Übersichtsseite gibt jetzt hreflang-Verweise aus (einer pro Sprach-Domain plus x-default), damit Suchmaschinen ihre Sprachversionen miteinander verknüpfen. Blogbeiträge und Blogkategorien hatten diese bereits.
+
+**Verbesserungen**
+
+- Code an den aktuellen Shopware-Coding-Standard angepasst. Keine Änderung am Verhalten.
+
+---
+
 # 1.0.2
 
 _Veröffentlicht am 2026-11-18_

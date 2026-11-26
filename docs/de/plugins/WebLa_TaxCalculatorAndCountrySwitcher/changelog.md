@@ -4,6 +4,25 @@ Alle wichtigen Änderungen für Endbenutzer.
 
 ---
 
+# 5.6.2
+
+_Veröffentlicht am 2026-11-25_
+
+**Fehlerbehebungen**
+
+- Shopware 6.6: Seiten mit Länder-Parameter (z.B. ?country=AT) brechen nicht mehr mit einem Fehler ab. Derselbe Fehler betraf Storefront-Seiten, wenn „Lieferland aus der Storefront-Sprache setzen“ aktiviert war.
+- Shopware 6.6 vor 6.6.10: Die Länderauswahl und der Preis-/MwSt.-Hinweis werden jetzt im Header angezeigt.
+- Shopware 6.6 vor 6.6.10: Das Theme lässt sich jetzt kompilieren, wenn Styling-Einstellungen des Plugins leer sind. Für leere Einstellungen gelten jetzt die Standardwerte.
+- Shopware 6.6.0: Ein PHP-Fehler in der Versandkostenberechnung wurde behoben, der auftrat, wenn eine Versandart nicht gefunden wird.
+
+# 5.6.1
+
+_Veröffentlicht am 2026-11-25_
+
+**Verbesserungen**
+
+- GeoIP-Probleme, durch die das Länder-Popup bei jedem Besucher erscheint, stehen jetzt im Shopware-Log (Suche nach „WebLa GeoIP“): eine falsche Datenbank-Edition (z.B. City statt Country), ein leerer, falscher oder nicht lesbarer Datenbankpfad sowie eine private Besucher-IP durch einen Proxy, der nicht als vertrauenswürdig konfiguriert ist. Bisher wurden diese Fälle nicht oder im Produktivmodus nicht protokolliert.
+
 # 5.6.0
 
 _Veröffentlicht am 2026-11-17_
@@ -49,7 +68,7 @@ _Veröffentlicht am 2026-10-27_
 **Fehlerbehebungen**
 
 - Bei aktivem HTTP-Cache wurde die GeoIP-Vorauswahl im Länderauswahl-Popup zwischen Besuchern geteilt. Jeder Besucher erhält jetzt sein eigenes Land vorausgewählt.
-- Hinter einem Reverse Proxy wie Varnish teilten sich Besucher aus verschiedenen Ländern gecachte Seiten und damit Preise. Das ist behoben.
+- Shopware 6.7: Hinter einem Reverse Proxy wie Varnish teilten sich Besucher aus verschiedenen Ländern gecachte Seiten und damit Preise. Das ist behoben. Unter Shopware 6.6 muss ein Reverse Proxy das Cookie sw-switch-country in den Cache-Key aufnehmen.
 
 # 5.4.1
 
