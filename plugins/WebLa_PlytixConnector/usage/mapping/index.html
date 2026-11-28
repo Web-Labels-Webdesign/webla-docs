@@ -1,0 +1,3965 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Dokumentation für Web Labels Shopware Plugins">
+      
+      
+      
+        <link rel="canonical" href="https://docs.web-labels.de/plugins/WebLa_PlytixConnector/usage/mapping/">
+      
+      
+        <link rel="prev" href="../issues/">
+      
+      
+        <link rel="next" href="../usage/">
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="de">
+        
+          <link rel="alternate" href="../../../../en/plugins/WebLa_PlytixConnector/usage/mapping/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Feldzuordnung und Varianten - Web Labels Shopware Plugins</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/plugin-cards.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+<!-- Privacy-friendly analytics by Plausible -->
+<script defer data-domain="docs.web-labels.de" src="https://plausible.buildit-consulting.com/js/script.file-downloads.hash.outbound-links.pageview-props.tagged-events.js"></script>
+<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="white">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#feldzuordnung-und-varianten" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="../../../.." title="Web Labels Shopware Plugins" class="md-header__button md-logo" aria-label="Web Labels Shopware Plugins" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Web Labels Shopware Plugins
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Feldzuordnung und Varianten
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="white"  aria-label="Dunkelmodus aktivieren"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dunkelmodus aktivieren" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="black"  aria-label="Hellmodus aktivieren"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Hellmodus aktivieren" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Sprache wechseln">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../en/plugins/WebLa_PlytixConnector/usage/mapping/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Hauptnavigation" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../BuildIT_ShareCart/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Plugins
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Web Labels Shopware Plugins" class="md-nav__button md-logo" aria-label="Web Labels Shopware Plugins" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    Web Labels Shopware Plugins
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugins
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Plugins
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../BuildIT_ShareCart/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teile deinen Warenkorb
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLaAddressValidation/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adressvalidierung auf Hausnummer und Sonderzeichen
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLaInvisibleSpamProtection/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spam Schutz Easy Mode
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_AdcellProvisionsfreigabe/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADCELL Provisionsfreigabe
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_AdminProductFilters/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zusatzfelder in der Admin-Produktübersicht
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_BatchManagement/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Charge-Management
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_BeautifiedSearch/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Suche als Overlay
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_Blog/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_CategorieQuickFilter/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kategorie Schnellauswahl
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_CategorySorter/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kategorie-Sortierer
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_ContactFormFileUpload/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kontaktformular – Datei-Upload
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_CurrencyChanger/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Währungsanzeige
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_CustomerSpecificDiscounts/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kundenspezifische Rabatte
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_CustomerTaxCountry/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Customer Tax Country
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_DeliveryDateSelector/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wunsch-Lieferdatum für Kunden
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_ExportDiscount/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shopping Feed mit einzigartigen Rabatten
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_FlyoutNavigation/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flyout Navigation
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_HomePageControl/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Startseiten Steuerung
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_ImageReviews/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bilder in Produktbewertungen
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_IntelligentCrossSelling/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intelligentes Cross-Selling
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_ManufacturerPages/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Herstellerseiten
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_MediaBooster/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Media Booster
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_PayTRIntegration/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PayTR Integration
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_24" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plytix Connector
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_24" id="__nav_2_24_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_24_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_24">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Plytix Connector
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how_to/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anleitungen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../configuration/settings/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_24_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_24_5" id="__nav_2_24_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usage
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_24_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_24_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Usage
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Läufe und Problemcodes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Feldzuordnung und Varianten
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Feldzuordnung und Varianten
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ubersicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Übersicht
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regeln" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regeln
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#die-felder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Die Felder
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Die Felder">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preise
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kurzbeschreibung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kurzbeschreibung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bilder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bilder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cross-selling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cross-Selling
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variantenoptionen-und-eigenschaften" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variantenoptionen und Eigenschaften
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variantenoptionen und Eigenschaften">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#der-ablauf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Der Ablauf
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#die-liste" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Die Liste
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variantenoptionen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variantenoptionen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eigenschaften" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eigenschaften
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#produktfelder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Produktfelder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zusatzfelder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zusatzfelder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steuersatz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steuersatz
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubersetzungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Übersetzungen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wie-varianten-entstehen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wie Varianten entstehen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wie Varianten entstehen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vererbung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vererbung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mehrere-werte-in-einer-variantenoption" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mehrere Werte in einer Variantenoption
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#varianten-ohne-hauptprodukt-im-feed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Varianten ohne Hauptprodukt im Feed
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAQ
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nutzungsanleitung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_ProductSliderAdvanced/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product Slider Advanced
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_Produktberater/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produktberater
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_PropertyNotes/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hinweise zu Eigenschaften
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_SplitComission/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SplitCommission – Aufteilung der Einzelposten in Teile
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_Subscriptions/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Abonnement Plugin
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_TaxCalculatorAndCountrySwitcher/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Steuernachkalkulation und Lieferländer
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_UTMHandler/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UTM-Handler
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_UltimativeBundlePlugin/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ultimative Bundle Plugin
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebLa_Zusatzoptionen/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zusatzoptionen
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ubersicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Übersicht
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regeln" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regeln
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#die-felder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Die Felder
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Die Felder">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preise
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kurzbeschreibung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kurzbeschreibung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bilder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bilder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cross-selling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cross-Selling
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variantenoptionen-und-eigenschaften" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variantenoptionen und Eigenschaften
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variantenoptionen und Eigenschaften">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#der-ablauf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Der Ablauf
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#die-liste" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Die Liste
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variantenoptionen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variantenoptionen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eigenschaften" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eigenschaften
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#produktfelder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Produktfelder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zusatzfelder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zusatzfelder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steuersatz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steuersatz
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubersetzungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Übersetzungen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wie-varianten-entstehen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wie Varianten entstehen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wie Varianten entstehen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vererbung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vererbung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mehrere-werte-in-einer-variantenoption" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mehrere Werte in einer Variantenoption
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#varianten-ohne-hauptprodukt-im-feed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Varianten ohne Hauptprodukt im Feed
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAQ
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="feldzuordnung-und-varianten">Feldzuordnung und Varianten<a class="headerlink" href="#feldzuordnung-und-varianten" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>Teil des Plytix Connectors. <a href="../usage/">Zur Nutzungsanleitung</a></p>
+</blockquote>
+<h2 id="ubersicht">Übersicht<a class="headerlink" href="#ubersicht" title="Permanent link">&para;</a></h2>
+<p>In Plytix vergeben Sie für jedes Attribut im Channel eine Ausgabe-Bezeichnung, zum Beispiel <code>Product Title</code> oder <code>Price (€)</code>. Genau diese Bezeichnungen stehen im Feed. Das Plugin kann deshalb nicht wissen, wie Ihre Felder heißen, und Sie legen es in der Karte <strong>Feldzuordnung</strong> fest.</p>
+<p><strong>Ort</strong>: Kataloge → Plytix Connector → Channel öffnen → Karte <strong>Feldzuordnung</strong></p>
+<p>Die Standardwerte sind die Bezeichnungen, die Plytix für die Felder verwendet, die jeder Channel-Export hat. Unter jedem Feld zeigt ein Hinweis den Standard an. Variantenoptionen, Eigenschaften, weitere Produktfelder und Übersetzungen haben keinen Standard: Variantenoptionen, Eigenschaften und Produktfelder wie Abmessungen oder Tags ordnen Sie auf der <a href="#variantenoptionen-und-eigenschaften">Zuordnungsseite</a> aus den Bezeichnungen zu, die ein Synchronisationslauf in Ihrem Feed gefunden hat, Übersetzungen in der Liste <strong>Übersetzungen</strong>. <strong>Zuordnung auf Standard zurücksetzen</strong> stellt die Standardwerte der Felder wieder her und leert die Übersetzungen; Variantenoptionen und Eigenschaften bleiben. Die Änderung wird erst mit <strong>Speichern</strong> übernommen.</p>
+<h2 id="regeln">Regeln<a class="headerlink" href="#regeln" title="Permanent link">&para;</a></h2>
+<p><strong>Bezeichnungen aus der Liste wählen.</strong> Jedes Feld bietet die Bezeichnungen des letzten Synchronisationslaufs an, eine entfernte Bezeichnung lässt sich also wieder auswählen. Vor dem ersten Lauf oder für eine Bezeichnung, die noch kein Lauf gefunden hat, tippen Sie sie ein. Groß- und Kleinschreibung, Leerzeichen und Sonderzeichen müssen genau so eingetragen werden wie in Plytix. Benennen Sie in Plytix eine Ausgabe-Bezeichnung um, müssen Sie die Zuordnung anpassen.</p>
+<p><strong>Mehrere Bezeichnungen: die erste mit Wert gewinnt.</strong> Sie können pro Feld mehrere Bezeichnungen wählen. Das Plugin nimmt die erste, die beim jeweiligen Produkt einen Wert hat. Beim Namen ist der Standard <code>Product Title, Label</code>: Hat ein Produkt keinen Product Title, wird das Label verwendet.</p>
+<p><strong>Leeres Feld: Shopware-Daten bleiben unberührt.</strong> Ist ein Feld in der Zuordnung leer, schreibt das Plugin es nie. Was Sie in Shopware eintragen, bleibt erhalten. Das gilt für <strong>Name</strong>, <strong>Beschreibung</strong>, <strong>Kurzbeschreibung</strong>, <strong>Preis</strong>, <strong>EAN / GTIN</strong>, <strong>Status</strong>, <strong>Maximale Bestellmenge</strong>, <strong>Hersteller</strong>, <strong>Kategorien</strong>, <strong>Cross-Selling</strong>, die <strong>Eigenschaften</strong> und für jedes Feld jeder Übersetzung einzeln. Bei den Bildern müssen <strong>Vorschaubild</strong> und <strong>Bilder</strong> beide leer sein. Ist eins davon belegt, verwaltet das Plugin die Bilder.</p>
+<p>Dabei gibt es Grenzen:</p>
+<ul>
+<li><strong>SKU (Produktnummer)</strong> darf nicht leer sein.</li>
+<li>Shopware braucht für ein neues Produkt einen Namen und einen Preis. Ist <strong>Name</strong> oder <strong>Preis</strong> leer, aktualisiert das Plugin vorhandene Produkte weiter, neue Produkte scheitern aber mit <code>PRODUCT_WRITE_FAILED</code>.</li>
+<li><strong>Variantenoptionen</strong> verwaltet das Plugin immer.</li>
+</ul>
+<p><strong>Zugeordnet, aber ohne Wert: Der Wert wird geleert.</strong> Ist ein Feld zugeordnet und hat ein Produkt im Feed keinen Wert dafür, leert das Plugin das Feld in Shopware, denn Plytix ist die Quelle. Ausnahmen: Ein fehlender Status bedeutet aktiv, und ein Hauptprodukt ohne Name oder Preis wird samt Varianten übersprungen (<code>MAPPING_NAME_MISSING</code>, <code>MAPPING_PRICE_MISSING</code>). Bei einer Variante heißt ein leerer Wert, dass sie den Wert ihres Hauptprodukts erbt.</p>
+<h2 id="die-felder">Die Felder<a class="headerlink" href="#die-felder" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feld in der Administration</th>
+<th>Standard</th>
+<th>Ziel in Shopware</th>
+<th>Hinweise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SKU (Produktnummer)</td>
+<td><code>SKU</code></td>
+<td>Produktnummer</td>
+<td>Erkennungsmerkmal. Vorhandene Shopware-Produkte mit gleicher Produktnummer werden übernommen statt doppelt angelegt.</td>
+</tr>
+<tr>
+<td>SKU des Hauptprodukts</td>
+<td><code>Variant of</code></td>
+<td>Hauptprodukt einer Variante</td>
+<td>Maßgeblich für die Variantenstruktur.</td>
+</tr>
+<tr>
+<td>SKUs der Varianten</td>
+<td><code>Variants</code></td>
+<td>nur zur Kontrolle</td>
+<td>Widersprüche zu „Variant of“ werden als Warnung gemeldet.</td>
+</tr>
+<tr>
+<td>Name</td>
+<td><code>Product Title</code>, <code>Label</code></td>
+<td>Name</td>
+<td>Pflicht für Hauptprodukte.</td>
+</tr>
+<tr>
+<td>Beschreibung</td>
+<td><code>Long Description</code></td>
+<td>Beschreibung</td>
+<td>Zeilenumbrüche bleiben als Zeilenumbrüche erhalten.</td>
+</tr>
+<tr>
+<td>Kurzbeschreibung</td>
+<td><code>Short Description</code></td>
+<td>Zusatzfeld „Kurzbeschreibung“ im Set „Plytix“</td>
+<td>Siehe unten.</td>
+</tr>
+<tr>
+<td>Preis</td>
+<td><code>Price (€)</code></td>
+<td>Preis</td>
+<td>Siehe unten.</td>
+</tr>
+<tr>
+<td>EAN / GTIN</td>
+<td><code>GTIN</code></td>
+<td>EAN</td>
+<td></td>
+</tr>
+<tr>
+<td>Hersteller</td>
+<td><code>Brand</code></td>
+<td>Hersteller</td>
+<td>Wird über den Namen gefunden oder neu angelegt.</td>
+</tr>
+<tr>
+<td>Kategorien</td>
+<td><code>Categories</code></td>
+<td>Kategorien</td>
+<td>Pfade wie <code>Wurzel&gt;Kleidung&gt;T-Shirts</code>, siehe <a href="../../configuration/settings/#kategorie-wurzel-im-feed">Kategorie-Wurzel</a>.</td>
+</tr>
+<tr>
+<td>Vorschaubild</td>
+<td><code>Main Image</code>, <code>Thumbnail</code></td>
+<td>Vorschaubild</td>
+<td>Ist immer auch Teil der Galerie.</td>
+</tr>
+<tr>
+<td>Bilder</td>
+<td><code>Assets</code></td>
+<td>Bildergalerie</td>
+<td>Werden im Hintergrund heruntergeladen.</td>
+</tr>
+<tr>
+<td>Status</td>
+<td><code>Status</code></td>
+<td>Aktiv</td>
+<td>Siehe <a href="../../configuration/settings/#statuswerte-für-aktive-produkte">Statuswerte für aktive Produkte</a>.</td>
+</tr>
+<tr>
+<td>Maximale Bestellmenge</td>
+<td><code>Maximum Order Quantity</code></td>
+<td>Maximale Bestellmenge</td>
+<td>Muss eine ganze Zahl größer 0 sein.</td>
+</tr>
+<tr>
+<td>Cross-Selling</td>
+<td><code>Cross-sell</code></td>
+<td>Cross-Selling</td>
+<td>Werte im Format <code>SKU#Menge</code>, die Menge wird ignoriert.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="preise">Preise<a class="headerlink" href="#preise" title="Permanent link">&para;</a></h3>
+<p>Der Preis muss eine einfache Zahl mit Punkt als Dezimaltrenner sein, also <code>29.99</code> oder <code>30</code>. Werte wie <code>29,99</code>, <code>1.299,00</code> oder <code>29.99 €</code> werden abgelehnt (<code>MAPPING_PRICE_INVALID</code>).</p>
+<p>Jeder Lauf ersetzt den Preis eines geänderten Produkts komplett. Preise in weiteren Währungen, die Sie in Shopware von Hand ergänzt haben, gehen dabei verloren. In welcher Währung die Feed-Preise stehen und ob es Brutto- oder Nettopreise sind, stellen Sie im Channel ein.</p>
+<h3 id="kurzbeschreibung">Kurzbeschreibung<a class="headerlink" href="#kurzbeschreibung" title="Permanent link">&para;</a></h3>
+<p>Shopware hat kein eigenes Feld für eine Kurzbeschreibung. Das Plugin legt deshalb ein übersetzbares Zusatzfeld an: Set „Plytix“, Feld „Kurzbeschreibung“. Sie sehen es am Produkt bei den Zusatzfeldern. Im Storefront erscheint es nicht von selbst, Ihr Theme muss es ausgeben.</p>
+<h3 id="bilder">Bilder<a class="headerlink" href="#bilder" title="Permanent link">&para;</a></h3>
+<p>Bilder lädt das Plugin im Hintergrund über die Warteschlange <code>low_priority</code>. Jede Bild-URL wird nur einmal heruntergeladen und dann bei allen Produkten wiederverwendet, die sie enthalten. Die Bilder landen in der Medienverwaltung in einem Ordner „Plytix“ unterhalb des Ordners für Produktmedien und nutzen dessen Thumbnail-Größen. Eine Datei darf höchstens 50 MB groß sein.</p>
+<p>Bis die Downloads fertig sind, kann ein Produkt ohne oder mit unvollständiger Galerie im Shop stehen. Bei 184 Bildern hat das in unseren Tests etwa anderthalb Minuten gedauert.</p>
+<h3 id="cross-selling">Cross-Selling<a class="headerlink" href="#cross-selling" title="Permanent link">&para;</a></h3>
+<p>Das Plugin schreibt Cross-Selling erst, wenn alle Produkte eines Laufs angelegt sind. Pro Produkt entsteht ein Cross-Selling vom Typ Produktliste mit dem Namen aus den <a href="../../configuration/settings/#name-des-cross-sellings">Import-Einstellungen</a>. Cross-Sellings, die Sie selbst in Shopware anlegen, bleiben unberührt.</p>
+<p>Ziele müssen von demselben Channel importiert sein. Andere werden mit <code>CROSS_SELLING_TARGET_UNKNOWN</code> übersprungen. Verweist ein Eintrag auf eine Zwischenstufe einer dreistufigen Hierarchie, zeigt das Cross-Selling auf das zugehörige Hauptprodukt, weil Zwischenstufen in Shopware nicht existieren.</p>
+<h2 id="variantenoptionen-und-eigenschaften">Variantenoptionen und Eigenschaften<a class="headerlink" href="#variantenoptionen-und-eigenschaften" title="Permanent link">&para;</a></h2>
+<p>Variantenoptionen und Eigenschaften ordnen Sie auf einer eigenen Seite zu, weil ein Feed oft 40 Bezeichnungen und mehr hat. Sie listet die Bezeichnungen auf, die der letzte Synchronisationslauf in Ihrem Feed gefunden hat.</p>
+<p><strong>Ort</strong>: Channel öffnen → Karte <strong>Feldzuordnung</strong> → <strong>Feed-Bezeichnungen zuordnen</strong></p>
+<h3 id="der-ablauf">Der Ablauf<a class="headerlink" href="#der-ablauf" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Erste Synchronisation</strong>: Speichern Sie den Channel und starten Sie eine Synchronisation. Sie importiert die Produkte ohne Variantenoptionen und Eigenschaften und sammelt die Bezeichnungen des Feeds. Solange kein Lauf sie gesammelt hat, zeigt die Seite <strong>Noch keine Feed-Bezeichnungen</strong> mit der Schaltfläche <strong>Jetzt synchronisieren</strong>. Ist der Lauf fertig, erscheinen die Bezeichnungen, ohne dass Sie die Seite neu laden.</li>
+<li><strong>Bezeichnungen zuordnen</strong>: Legen Sie für jede Bezeichnung fest, was sie in Shopware wird, siehe unten.</li>
+<li><strong>Speichern und synchronisieren</strong>: Das Plugin speichert die Zuordnung und startet sofort eine Synchronisation. Weil sich die Zuordnung geändert hat, schreibt dieser Lauf alle Produkte des Channels mit den neuen Variantenoptionen und Eigenschaften neu. Läuft bereits eine Synchronisation, startet die neue direkt nach deren Ende. Eine Meldung zeigt, welcher der beiden Fälle eingetreten ist, und die Karte <strong>Läufe</strong> unten auf der Seite zeigt den Fortschritt. <strong>Speichern</strong> allein sichert die Zuordnung ohne Synchronisation; die nächste zeitgesteuerte, per Webhook oder manuell gestartete Synchronisation wendet sie an.</li>
+</ol>
+<h3 id="die-liste">Die Liste<a class="headerlink" href="#die-liste" title="Permanent link">&para;</a></h3>
+<p>Jede Zeile ist eine Feed-Bezeichnung:</p>
+<ul>
+<li><strong>Feed-Bezeichnung</strong>: die Bezeichnung, ihre Werteart (<strong>Einzelwert</strong> oder <strong>Liste</strong>) und bis zu fünf Beispielwerte</li>
+<li><strong>Datensätze</strong>: wie viele Produkte einen Wert haben, und wie viele davon Varianten sind</li>
+<li><strong>Verwenden als</strong>: <strong>Nicht zugeordnet</strong>, <strong>Variantenoption</strong>, <strong>Eigenschaft</strong>, <strong>Produktfeld</strong>, <strong>Zusatzfeld</strong> oder <strong>Ignorieren</strong></li>
+<li><strong>Ziel in Shopware</strong>: die Eigenschaftsgruppe, das Produktfeld oder das Zusatzfeld, in das die Werte gehen</li>
+</ul>
+<p>Zuerst stehen die Bezeichnungen, die Sie schon zugeordnet haben, danach alphabetisch alle, die noch kein Feld, keine Übersetzung, keine Variantenoption und keine Eigenschaft verwendet. Bezeichnungen der festen Felder und Übersetzungen aus der Karte <strong>Feldzuordnung</strong> erscheinen nicht.</p>
+<p>Suchfeld und Filter (<strong>Alle</strong>, <strong>Nicht zugeordnet</strong>, <strong>Zugeordnet</strong>, <strong>Ignoriert</strong>, jeweils mit Anzahl) helfen bei langen Listen. Um viele Bezeichnungen auf einmal zu ignorieren, haken Sie ihre Zeilen an und klicken auf <strong>Auswahl ignorieren</strong>. Geänderte Zeilen sind mit <strong>Geändert</strong> markiert, und erst <strong>Speichern</strong> oder <strong>Speichern und synchronisieren</strong> übernimmt die Änderungen.</p>
+<p><strong>Vorschläge</strong>: Unter der Auswahl schlägt die Seite eine Verwendung vor. Eine Bezeichnung mit kurzen Werten, die sich bei mehreren Produkten wiederholen, wird als Variantenoption vorgeschlagen, wenn sich ihre Werte zwischen den Varianten eines Hauptprodukts unterscheiden, sonst als Eigenschaft. Kennungen, Zahlen, Links und lange Texte bekommen keinen Vorschlag. Solange der Channel noch keine Variantenoption hat, sind die vorgeschlagenen Variantenoptionen bereits ausgewählt. Prüfen Sie sie vor dem Speichern.</p>
+<p><strong>Eigenschaftsgruppe</strong>: Wählen Sie eine <strong>Bestehende Gruppe</strong>, landen die Werte genau in dieser Gruppe, egal wie sie heißt. Andernfalls tragen Sie einen Namen ein: Das Plugin verwendet die Gruppe mit diesem Namen oder legt sie an. Leer bedeutet: wie die Feed-Bezeichnung. Jede Gruppe darf nur einmal für Variantenoptionen und einmal für Eigenschaften verwendet werden. Ausprägungen werden innerhalb ihrer Gruppe über den Namen gefunden oder angelegt. Benennen Sie eine vom Plugin angelegte Gruppe oder Ausprägung in Shopware um, bleibt Ihr Name erhalten.</p>
+<p>Wird eine gewählte bestehende Gruppe später gelöscht, meldet jeder Lauf <code>PROPERTY_GROUP_MISSING</code> und importiert für diese Bezeichnung nichts. Wählen Sie auf der Zuordnungsseite eine andere Gruppe.</p>
+<p><strong>Ignorieren</strong>: Eine ignorierte Bezeichnung erscheint nicht mehr als nicht zugeordnet, auch nicht nach späteren Läufen. Ignorieren ändert nichts im Shop, die Produkte werden deshalb nicht neu geschrieben. Um sie wieder zu sehen, setzen Sie sie zurück auf <strong>Nicht zugeordnet</strong>.</p>
+<h3 id="variantenoptionen">Variantenoptionen<a class="headerlink" href="#variantenoptionen" title="Permanent link">&para;</a></h3>
+<p><strong>Variantenoptionen</strong> sind die Merkmale, nach denen sich Varianten unterscheiden, etwa Farbe und Größe. Daraus baut das Plugin die Variantenauswahl auf der Produktseite. Eine Variante ohne Wert für irgendeine Variantenoption kann im Storefront nicht ausgewählt werden und wird mit <code>MAPPING_VARIANT_OPTIONS_MISSING</code> gemeldet. Variantenoptionen verwaltet das Plugin immer, auch wenn keine zugeordnet sind.</p>
+<blockquote>
+<p><strong>Produkte, die es in Ihrem Shop schon gibt</strong>: Übernimmt der Channel Produkte, die in Shopware bereits Variantenoptionen haben, entfernt die erste Synchronisation diese Optionen, weil noch keine zugeordnet sind. Die Synchronisation nach dem Speichern der Zuordnung weist sie wieder zu. Führen Sie die erste Synchronisation aus, bevor Kunden die Produkte sehen, oder zu einer ruhigen Zeit.</p>
+<p><strong>Alles als Eigenschaft zuordnen</strong>: Eine Bezeichnung ist entweder Variantenoption oder Eigenschaft. Ist keine Bezeichnung eine Variantenoption, entfernt die nächste Synchronisation vorhandene Variantenoptionen und die Variantenauswahl, und neue Varianten entstehen ohne Optionen, sodass Kunden sie nicht wählen können. Die Zuordnungsseite warnt davor, und jeder Lauf meldet <code>MAPPING_VARIANT_OPTIONS_UNMAPPED</code>. Auch die Werte von Variantenoptionen lassen sich im Storefront filtern, sie brauchen also keine zusätzliche Eigenschaft.</p>
+</blockquote>
+<h3 id="eigenschaften">Eigenschaften<a class="headerlink" href="#eigenschaften" title="Permanent link">&para;</a></h3>
+<p><strong>Eigenschaften</strong> sind filterbare Produktmerkmale wie Material oder Geschlecht. Mehrere Werte eines Attributs werden zu mehreren Ausprägungen. Entfernen Sie eine Eigenschaft, löscht der nächste Lauf die Zuordnungen dieser Gruppe an den Produkten. Ist keine Eigenschaft zugeordnet, fasst das Plugin keine Eigenschaften an.</p>
+<p>Die Labels von Plytix wie <code>Option 1 Name - Size</code> taugen nicht als Variantenoption. Im Demo-Feed stehen darin vertauschte Werte. Ordnen Sie deshalb immer die Attribute mit den eigentlichen Werten zu.</p>
+<h3 id="produktfelder">Produktfelder<a class="headerlink" href="#produktfelder" title="Permanent link">&para;</a></h3>
+<p><strong>Produktfeld</strong> schreibt den Wert einer Bezeichnung in ein normales Produktfeld von Shopware. Das Feld wählen Sie unter <strong>Ziel in Shopware</strong>. Jedes Feld nimmt eine Bezeichnung auf.</p>
+<table>
+<thead>
+<tr>
+<th>Produktfeld</th>
+<th>Wert im Feed</th>
+<th>Hinweise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Breite, Höhe, Länge</td>
+<td>Zahl</td>
+<td>Wählen Sie die Einheit der Feed-Werte: mm, cm oder m. Shopware speichert Millimeter.</td>
+</tr>
+<tr>
+<td>Gewicht</td>
+<td>Zahl</td>
+<td>Wählen Sie kg oder g. Shopware speichert Kilogramm.</td>
+</tr>
+<tr>
+<td>Hersteller-Produktnummer</td>
+<td>Text</td>
+<td></td>
+</tr>
+<tr>
+<td>Mindestabnahme, Staffelung</td>
+<td>Ganze Zahl ab 1</td>
+<td></td>
+</tr>
+<tr>
+<td>Verkaufseinheit, Grundeinheit</td>
+<td>Zahl</td>
+<td></td>
+</tr>
+<tr>
+<td>Verpackungseinheit, Verpackungseinheit-Mehrzahl, Meta-Titel, Meta-Beschreibung</td>
+<td>Text bis 255 Zeichen</td>
+<td>Übersetztes Feld, siehe unten</td>
+</tr>
+<tr>
+<td>Schlüsselwörter</td>
+<td>Text</td>
+<td>Übersetztes Feld; eine Liste wird mit Kommas verbunden</td>
+</tr>
+<tr>
+<td>Such-Schlagwörter</td>
+<td>Text oder Liste</td>
+<td>Übersetztes Feld; jeder Listeneintrag wird ein Schlagwort</td>
+</tr>
+<tr>
+<td>Erscheinungsdatum</td>
+<td>Datum wie <code>2026-10-30</code></td>
+<td>Auch mit Uhrzeit, etwa <code>2026-10-30T10:00:00+02:00</code></td>
+</tr>
+<tr>
+<td>Versandkostenfrei, Produkt hervorheben, Abverkauf</td>
+<td>Ja/Nein</td>
+<td><code>true</code>/<code>false</code>, <code>yes</code>/<code>no</code>, <code>1</code>/<code>0</code>, Groß- oder Kleinschreibung egal</td>
+</tr>
+<tr>
+<td>Tags</td>
+<td>Text oder Liste</td>
+<td>Jeder Listeneintrag wird ein Tag. Tags werden per Name gefunden oder angelegt. Von Hand zugewiesene Tags entfernt das Plugin beim nächsten Schreiben, solange Tags zugeordnet ist.</td>
+</tr>
+<tr>
+<td>Steuersatz</td>
+<td>Text oder Zahl</td>
+<td>Ordnen Sie jedem Feed-Wert einen Shopware-Steuersatz zu, siehe <a href="#steuersatz">Steuersatz</a></td>
+</tr>
+</tbody>
+</table>
+<p>Zahlen dürfen Punkt oder Komma als Dezimaltrennzeichen haben, etwa <code>12.5</code> oder <code>12,5</code>, aber keine Einheit und kein Tausendertrennzeichen. Einen Wert, den das Plugin nicht lesen kann, oder einen zu langen Text meldet es mit <code>MAPPING_FIELD_INVALID</code> und importiert ihn nicht; der Rest des Produkts wird importiert.</p>
+<p>Es gelten die üblichen Regeln: Ein nicht zugeordnetes Feld bleibt unberührt, ein zugeordnetes Feld ohne Wert wird geleert, und eine Variante mit demselben Wert wie ihr Hauptprodukt erbt ihn. <strong>Mindestabnahme</strong>, <strong>Staffelung</strong> und die Ja/Nein-Felder können bei einem Hauptprodukt nicht leer sein; ohne Wert bekommen sie den Standard von Shopware (1 bzw. Nein).</p>
+<p>Die übersetzten Felder erhalten den Feed-Wert nur für die Basissprache des Channels und, falls das eine andere ist, für die Standardsprache des Systems. Übersetzungen dieser Felder in weiteren Sprachen werden noch nicht importiert; was Shopware dort hat, bleibt.</p>
+<h3 id="zusatzfelder">Zusatzfelder<a class="headerlink" href="#zusatzfelder" title="Permanent link">&para;</a></h3>
+<p><strong>Zusatzfeld</strong> schreibt den Wert einer Bezeichnung in ein Zusatzfeld, das es in Ihrem Shop schon gibt. Zur Auswahl stehen die aktiven Zusatzfelder aller Sets, die Produkten zugeordnet sind (Einstellungen → System → Zusatzfelder). Jedes Zusatzfeld nimmt eine Bezeichnung auf.</p>
+<table>
+<thead>
+<tr>
+<th>Typ des Zusatzfelds</th>
+<th>Wert im Feed</th>
+<th>Hinweise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Text, Farbe</td>
+<td>Text, Zahl oder Liste</td>
+<td>Eine Liste wird mit Kommas verbunden. Shopware entfernt HTML-Tags aus Textfeldern.</td>
+</tr>
+<tr>
+<td>Texteditor</td>
+<td>Text oder HTML</td>
+<td>Zeilenumbrüche werden zu <code>&lt;br&gt;</code></td>
+</tr>
+<tr>
+<td>Zahl</td>
+<td>Zahl</td>
+<td>Punkt oder Komma als Dezimaltrennzeichen, negative Zahlen sind erlaubt. Ein Feld für ganze Zahlen nimmt nur ganze Zahlen.</td>
+</tr>
+<tr>
+<td>Checkbox, Schalter</td>
+<td>Ja/Nein</td>
+<td><code>true</code>/<code>false</code>, <code>yes</code>/<code>no</code>, <code>1</code>/<code>0</code></td>
+</tr>
+<tr>
+<td>Datum</td>
+<td>Datum wie <code>2026-10-30</code></td>
+<td>Auch mit Uhrzeit</td>
+</tr>
+<tr>
+<td>Auswahl</td>
+<td>Text</td>
+<td>Muss dem Wert oder einer Beschriftung einer Option entsprechen, Groß- oder Kleinschreibung egal. Optionen werden nie angelegt.</td>
+</tr>
+<tr>
+<td>Mehrfachauswahl</td>
+<td>Text oder Liste</td>
+<td>Wie oben; passende Optionen werden importiert, auch wenn andere nicht passen</td>
+</tr>
+</tbody>
+</table>
+<p>Medien-, Entitäts- und Preisfelder lassen sich nicht zuordnen. Das eigene Kurzbeschreibungsfeld des Plugins füllt <strong>Kurzbeschreibung</strong> in der Karte <strong>Feldzuordnung</strong>.</p>
+<p>Es gelten die üblichen Regeln: Ein nicht zugeordnetes Zusatzfeld bleibt unberührt, ein zugeordnetes ohne Wert wird geleert, und eine Variante mit demselben Wert wie ihr Hauptprodukt erbt ihn. Wie die übersetzten Produktfelder erhalten Zusatzfelder den Feed-Wert nur für die Basissprache und die Standardsprache des Systems. Entfernen Sie die Zuordnung, bleiben die Werte stehen.</p>
+<p>Ein Wert, der nicht passt, wird mit <code>MAPPING_CUSTOM_FIELD_INVALID</code> gemeldet. Wird ein zugeordnetes Zusatzfeld gelöscht oder deaktiviert, meldet jeder Lauf <code>CUSTOM_FIELD_MISSING</code> und importiert für diese Bezeichnung nichts.</p>
+<blockquote>
+<p><strong>Benutzerrollen</strong>: Damit Benutzer ohne Administratorrechte die Zusatzfelder sehen, müssen die Rechte des Plugins in ihrer Rolle einmal neu gespeichert werden.</p>
+</blockquote>
+<h3 id="steuersatz">Steuersatz<a class="headerlink" href="#steuersatz" title="Permanent link">&para;</a></h3>
+<p>Ordnen Sie <strong>Steuersatz</strong> zu, wenn ein Katalog Produkte mit verschiedenen Steuersätzen enthält, etwa Merchandise und Lebensmittel. Das Plugin listet bis zu fünf Werte auf, die die letzte Synchronisation für die Bezeichnung gefunden hat. Wählen Sie für jeden einen Shopware-Steuersatz; mit <strong>Feed-Wert hinzufügen</strong> tragen Sie weitere Werte ein. Groß- und Kleinschreibung spielt keine Rolle. Die Namen in Plytix und Shopware müssen nicht übereinstimmen.</p>
+<ul>
+<li>Ein Produkt ohne Wert bekommt den Steuersatz des Channels. Ein Wert ohne Steuersatz ebenfalls, er wird mit <code>MAPPING_TAX_UNMAPPED</code> gemeldet.</li>
+<li>Eine Variante ohne Wert erbt den Steuersatz ihres Hauptprodukts. Eine Variante mit einem anderen Steuersatz als ihr Hauptprodukt bekommt ihren eigenen.</li>
+<li>Brutto- und Nettopreise werden mit dem Steuersatz des Produkts berechnet.</li>
+</ul>
+<h2 id="ubersetzungen">Übersetzungen<a class="headerlink" href="#ubersetzungen" title="Permanent link">&para;</a></h2>
+<p>Plytix kennt keine Sprachen im Feed. Jede Sprache ist ein eigenes Attribut, etwa <code>Spanish Product Title</code>. In der Liste <strong>Übersetzungen</strong> ordnen Sie diese Attribute einer Sprache zu:</p>
+<ol>
+<li>Klicken Sie auf <strong>Locale hinzufügen</strong>.</li>
+<li>Tragen Sie bei <strong>Locale</strong> den Sprachcode ein, wie Shopware ihn verwendet, zum Beispiel <code>es-ES</code> oder <code>fr-FR</code>.</li>
+<li>Wählen Sie die Feed-Bezeichnungen für <strong>Name</strong>, <strong>Beschreibung</strong> und <strong>Kurzbeschreibung</strong>. Felder ohne Eintrag schreibt das Plugin in dieser Sprache nicht, was dort in Shopware steht, bleibt. Ist ein Feld zugeordnet, hat aber beim Produkt keinen Wert, wird die Übersetzung geleert, und Shopware zeigt den Text der Standardsprache.</li>
+</ol>
+<p>Übersetzt werden nur diese drei Felder. Die Sprache muss in Shopware angelegt sein, sonst überspringt das Plugin sie mit <code>TRANSLATION_LANGUAGE_MISSING</code>. Die Standardzuordnung enthält keine Übersetzungen. Channels, die vor Version 1.0.0 angelegt wurden, behalten ihre Zeile <code>es-ES</code>. Bieten Sie kein Spanisch an, entfernen Sie sie, damit die Warnung nicht bei jedem Lauf erscheint.</p>
+<h2 id="wie-varianten-entstehen">Wie Varianten entstehen<a class="headerlink" href="#wie-varianten-entstehen" title="Permanent link">&para;</a></h2>
+<p>Shopware kennt zwei Ebenen: ein Hauptprodukt und seine Varianten. Plytix erlaubt drei, zum Beispiel <code>TSH-11470</code> → <code>TSH-11470-W</code> (Farbe) → <code>TSH-11470-W-XL</code> (Größe). Das Plugin macht daraus zwei Ebenen:</p>
+<ul>
+<li>Die oberste Ebene wird das Hauptprodukt.</li>
+<li>Die unterste Ebene wird zu Varianten.</li>
+<li>Die mittlere Ebene wird nicht als Produkt angelegt. Ihre Werte gehen an die Varianten darunter: Ist ein Feld bei der Variante leer, nimmt das Plugin den Wert der Zwischenstufe.</li>
+</ul>
+<p>Ein Produkt ohne Varianten wird ein normales Einzelprodukt.</p>
+<h3 id="vererbung">Vererbung<a class="headerlink" href="#vererbung" title="Permanent link">&para;</a></h3>
+<p>Hat eine Variante denselben Wert wie ihr Hauptprodukt, schreibt das Plugin den Wert bei der Variante leer. Shopware erbt ihn dann vom Hauptprodukt, wie bei Varianten üblich. Das gilt für Texte, Preis, EAN, Status, maximale Bestellmenge, Produktfelder, Hersteller, Kategorien, Eigenschaften, Bilder und Cross-Selling. Ist ein Feld bei der Variante leer, erbt sie ebenfalls. Ändern Sie später den Wert am Hauptprodukt in Plytix, ändert er sich bei allen erbenden Varianten mit.</p>
+<p>Der Name einer Variante wird deshalb nur gesetzt, wenn er sich vom Namen des Hauptprodukts unterscheidet.</p>
+<h3 id="mehrere-werte-in-einer-variantenoption">Mehrere Werte in einer Variantenoption<a class="headerlink" href="#mehrere-werte-in-einer-variantenoption" title="Permanent link">&para;</a></h3>
+<p>Eine Variante kann in Shopware pro Gruppe nur eine Ausprägung haben. Plytix erlaubt aber zum Beispiel zwei Farben an einer Variante. Das Plugin verbindet die Werte dann zu einer Ausprägung: aus <code>Multicolor</code> und <code>White</code> wird <code>Multicolor / White</code>.</p>
+<h3 id="varianten-ohne-hauptprodukt-im-feed">Varianten ohne Hauptprodukt im Feed<a class="headerlink" href="#varianten-ohne-hauptprodukt-im-feed" title="Permanent link">&para;</a></h3>
+<p>Fehlt das Hauptprodukt im Feed, hängt das Plugin die Variante an ihr bisheriges Hauptprodukt, falls dieser Channel sie schon importiert hat, sonst an das bereits importierte Produkt mit der SKU aus „Variant of“. Gibt es keins von beiden, wird die Variante mit <code>HIERARCHY_PARENT_NOT_IN_FEED</code> übersprungen. Aktivieren Sie deshalb in Plytix den Export der übergeordneten Ebenen, siehe <a href="../../how_to/#anleitung-plytix-channel-einrichten">Plytix-Channel einrichten</a>.</p>
+<h2 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
+<p><strong>F: Ich habe ein Attribut in Plytix umbenannt, und jetzt fehlen Daten.</strong>
+A: Der Feed enthält jetzt die neue Bezeichnung. Tragen Sie sie in der Feldzuordnung ein und speichern Sie. Der nächste Lauf schreibt alle Produkte neu.</p>
+<p><strong>F: Kann ich die Beschreibung in Shopware pflegen statt in Plytix?</strong>
+A: Ja. Leeren Sie die Zuordnung <strong>Beschreibung</strong> und speichern Sie. Danach schreibt das Plugin keine Beschreibung mehr, und Ihre Texte in Shopware bleiben. Übersetzte Beschreibungen schreibt es weiter, solange sie unter <strong>Übersetzungen</strong> zugeordnet sind. Das funktioniert genauso für jedes andere Feld.</p>
+<p><strong>F: Wie importiere ich die Farben in die Farbgruppe, die mein Shop schon hat?</strong>
+A: Setzen Sie auf der Zuordnungsseite die Farb-Bezeichnung auf <strong>Variantenoption</strong> und wählen Sie Ihre Gruppe unter <strong>Bestehende Gruppe</strong>. Das Plugin verwendet dann genau diese Gruppe, egal wie sie heißt, und ergänzt fehlende Ausprägungen.</p>
+<p><strong>F: Eine Bezeichnung, die ich nicht brauche, taucht auf der Zuordnungsseite immer wieder auf.</strong>
+A: Setzen Sie sie auf <strong>Ignorieren</strong> und speichern Sie. Ignorierte Bezeichnungen stehen nur noch unter dem Filter <strong>Ignoriert</strong> und lösen kein Neuschreiben der Produkte aus.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Zurück zum Seitenanfang
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2026 Web Labels Webdesign GmbH
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://web-labels.de" target="_blank" rel="noopener" title="Web Labels Website" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://store.shopware.com/web-labels-webdesign-gmbh.html" target="_blank" rel="noopener" title="Shopware Store" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M21.5 181.1 78.3 67.4c10.9-21.7 33-35.4 57.3-35.4h304.9c24.2 0 46.4 13.7 57.2 35.4l56.8 113.7c3.6 7.2 5.5 15.1 5.5 23.2 0 27.3-21.2 49.7-48 51.6V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V256h-96v176c0 26.5-21.5 48-48 48H112c-26.5 0-48-21.5-48-48V255.9c-26.8-1.9-48-24.3-48-51.6 0-8 1.9-16 5.5-23.2M128 256v112c0 8.8 7.2 16 16 16h128c8.8 0 16-7.2 16-16V256z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://web-labels.de/impressum" target="_blank" rel="noopener" title="Impressum" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M384 32h128c17.7 0 32 14.3 32 32s-14.3 32-32 32H398.4c-5.2 25.8-22.9 47.1-46.4 57.3V448h160c17.7 0 32 14.3 32 32s-14.3 32-32 32H128c-17.7 0-32-14.3-32-32s14.3-32 32-32h160V153.3c-23.5-10.3-41.2-31.6-46.4-57.3H128c-17.7 0-32-14.3-32-32s14.3-32 32-32h128c14.6-19.4 37.8-32 64-32s49.4 12.6 64 32m55.6 288h144.8L512 195.8zm72.4 96c-62.9 0-115.2-34-126-78.9-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8L631.3 305c5.7 9.8 9.3 21.1 6.7 32.1-10.8 44.8-63.1 78.9-126 78.9M126.8 195.8 54.4 320h144.9zM.9 337.1c-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8L246.2 305c5.7 9.8 9.3 21.1 6.7 32.1-10.8 44.8-63.1 78.9-126 78.9S11.7 382 .9 337.1"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://web-labels.de/datenschutz" target="_blank" rel="noopener" title="Datenschutz" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M224 248a120 120 0 1 0 0-240 120 120 0 1 0 0 240m-29.7 56C95.8 304 16 383.8 16 482.3c0 16.4 13.3 29.7 29.7 29.7h251.5C261 469.4 240 414.5 240 356.4v-31.1c0-7.3 1-14.5 2.9-21.3zm251 184.5-13.3 6.3V306.7l96 32v19.6c0 55.8-32.2 106.5-82.7 130.3zm-23.4-229-112 37.3c-13.1 4.4-21.9 16.6-21.9 30.4v31.1c0 74.4 43 142.1 110.2 173.7l18.5 8.7c4.8 2.2 10 3.4 15.2 3.4s10.5-1.2 15.2-3.4l18.5-8.7C533 500.3 576 432.6 576 358.2v-31.1c0-13.8-8.8-26-21.9-30.4l-112-37.3c-6.6-2.2-13.7-2.2-20.2 0z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.prune", "navigation.indexes", "navigation.top", "search.highlight", "search.suggest", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../javascripts/plugin-filter.js"></script>
+      
+    
+  </body>
+</html>
